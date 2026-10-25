@@ -1,0 +1,2 @@
+# waywey
+The Ambassador Magic
