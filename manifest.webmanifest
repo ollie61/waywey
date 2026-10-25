@@ -1,0 +1,9 @@
+{
+  "name": "WayWey — JGH Ambassador Wayfinding",
+  "short_name": "WayWey",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f7f8",
+  "theme_color": "#173f4b",
+  "description": "Unofficial multilingual JGH ambassador wayfinding tool"
+}
