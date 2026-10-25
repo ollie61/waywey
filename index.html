@@ -11,7 +11,7 @@
     :root{--ink:#16333a;--teal:#176879;--teal2:#0f5362;--bg:#f3f7f8;--card:#fff;--line:#d6e1e4;--muted:#64777d;--warn:#fff7d6;--shadow:0 8px 26px rgba(22,51,58,.08)}
     *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
     header{background:linear-gradient(135deg,var(--teal2),var(--teal));color:#fff;padding:18px 16px 16px;position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(0,0,0,.12)}
-    .wrap{max-width:860px;margin:auto}.brand{display:flex;align-items:end;gap:10px}.brand h1{margin:0;font-size:2rem;letter-spacing:-.03em}.brand span{font-size:.88rem;opacity:.92;padding-bottom:4px}
+    .wrap{max-width:860px;margin:auto}.brand{display:flex;align-items:end;gap:10px}.brand h1{margin:0;font-size:2rem;letter-spacing:-.03em}.brand span{font-size:.88rem;opacity:.92;padding-bottom:4px}.brand-copy{flex:1}.app-lang{width:auto;min-width:118px;border:1px solid rgba(255,255,255,.5);background:#fff;color:var(--ink);border-radius:10px;padding:8px 10px;font-weight:750}
     main{padding:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);margin-bottom:14px}
     h2{font-size:1.05rem;margin:0 0 10px}label{font-weight:750;font-size:.93rem;display:block;margin-bottom:6px}
     select,input,button{font:inherit}.field{width:100%;border:1.5px solid #b8c9ce;border-radius:12px;background:#fff;padding:13px 14px;color:var(--ink);outline:none}
@@ -28,29 +28,29 @@
     .visitor{padding:20px}.visitor-head{display:flex;gap:10px;align-items:center;justify-content:space-between}.visitor h2{font-size:1.8rem;margin:12px 0 4px}
     .visitor .bigwhere{font-size:1.35rem;font-weight:900;color:var(--teal2);margin-bottom:16px}.visitor ol{font-size:1.3rem;line-height:1.55;padding-left:1.4em}.visitor[dir="rtl"] ol{padding-left:0;padding-right:1.4em}
     .visitor-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.closex{font-size:1.2rem;width:42px;height:42px;padding:0}
-    @media(max-width:540px){.brand{display:block}.brand span{display:block;margin-top:2px}.row{grid-template-columns:1fr}.row .btn{width:100%}.visitor ol{font-size:1.16rem}.visitor h2{font-size:1.55rem}}
+    @media(max-width:540px){.brand{align-items:center}.brand-copy{flex:1}.brand span{display:block;margin-top:2px}.app-lang{min-width:106px}.row{grid-template-columns:1fr}.row .btn{width:100%}.visitor ol{font-size:1.16rem}.visitor h2{font-size:1.55rem}}
   </style>
 </head>
 <body>
-<header><div class="wrap brand"><h1>WayWey</h1><span>JGH Ambassador Wayfinding Tool · Unofficial</span></div></header>
+<header><div class="wrap brand"><div class="brand-copy"><h1>WayWey</h1><span id="brandSubtitle">JGH Ambassador Wayfinding Tool · Unofficial</span></div><select id="appLang" class="app-lang" aria-label="Application language"><option value="en">English</option><option value="fr">Français</option></select></div></header>
 <main class="wrap">
   <section class="card">
-    <h2>1. Your ambassador station</h2>
-    <label for="station">Starting point</label>
+    <h2 id="stationHeading">1. Your ambassador station</h2>
+    <label id="stationLabel" for="station">Starting point</label>
     <select id="station" class="field">
-      <option value="B">Main Entrance — 3755 Côte-Sainte-Catherine</option>
-      <option value="A">Pavilion A entrance — 5750 Côte-des-Neiges</option>
-      <option value="E">Pavilion E / Légaré entrance — 5757 Légaré</option>
-      <option value="H">Pavilion H entrance — 5790 Côte-des-Neiges</option>
-      <option value="K">Pavilion K entrance — 5767 Légaré</option>
-      <option value="K">Emergency entrance — 5777 Légaré</option>
+      <option value="B" data-en="Main Entrance — 3755 Côte-Sainte-Catherine" data-fr="Entrée principale — 3755, chemin de la Côte-Sainte-Catherine">Main Entrance — 3755 Côte-Sainte-Catherine</option>
+      <option value="A" data-en="Pavilion A entrance — 5750 Côte-des-Neiges" data-fr="Entrée du pavillon A — 5750, chemin de la Côte-des-Neiges">Pavilion A entrance — 5750 Côte-des-Neiges</option>
+      <option value="E" data-en="Pavilion E / Légaré entrance — 5757 Légaré" data-fr="Entrée du pavillon E / Légaré — 5757, rue Légaré">Pavilion E / Légaré entrance — 5757 Légaré</option>
+      <option value="H" data-en="Pavilion H entrance — 5790 Côte-des-Neiges" data-fr="Entrée du pavillon H — 5790, chemin de la Côte-des-Neiges">Pavilion H entrance — 5790 Côte-des-Neiges</option>
+      <option value="K" data-en="Pavilion K entrance — 5767 Légaré" data-fr="Entrée du pavillon K — 5767, rue Légaré">Pavilion K entrance — 5767 Légaré</option>
+      <option value="K" data-en="Emergency entrance — 5777 Légaré" data-fr="Entrée de l’Urgence — 5777, rue Légaré">Emergency entrance — 5777 Légaré</option>
     </select>
-    <div class="status">Your selection is remembered on this device.</div>
+    <div id="stationStatus" class="status">Your selection is remembered on this device.</div>
   </section>
 
   <section class="card">
-    <h2>2. Search for a department or service</h2>
-    <label for="q">English or French</label>
+    <h2 id="searchHeading">2. Search for a department or service</h2>
+    <label id="searchLabel" for="q">English or French</label>
     <div class="row">
       <input id="q" class="field" autocomplete="off" placeholder="e.g. urology, cancer, dentiste, MRI, accouchement">
       <button id="clear" class="btn secondary" type="button">Clear</button>
@@ -59,7 +59,7 @@
   </section>
 
   <section id="route" class="card route" aria-live="polite">
-    <h2>3. Check the result</h2>
+    <h2 id="resultHeading">3. Check the result</h2>
     <h3 id="destName"></h3>
     <div id="destWhere"></div>
     <div id="pills"></div>
@@ -71,7 +71,7 @@
     </div>
   </section>
 
-  <div class="disclaimer">Prototype reference for ambassadors. Verify appointment paperwork or current JGH signage when an exact room is uncertain.</div>
+  <div id="disclaimer" class="disclaimer">Prototype reference for ambassadors. Verify appointment paperwork or current JGH signage when an exact room is uncertain.</div>
 </main>
 
 <dialog id="visitorDialog">
@@ -162,11 +162,70 @@ sw:{to:"Nenda",room:"Chumba",floor:"Ghorofa",from:"Kutoka",stay:"Baki katika",el
 bg:{to:"Отидете до",room:"Стая",floor:"Етаж",from:"От",stay:"Останете в",elev:"Използвайте асансьора до",follow:"Следвайте вътрешните указателни табели през",hk1:"Вземете асансьора в павилион H до 3-тия етаж.",hk2:"Използвайте вътрешната връзка H–K до фоайето на павилион K.",kh1:"От фоайето на павилион K използвайте връзката H–K до павилион H, 3-ти етаж.",final:"След това следвайте табелите към",listen:"Слушай",back:"Назад към посланика"}
 };
 
+const APP_UI={
+en:{
+ brand:"JGH Ambassador Wayfinding Tool · Unofficial",
+ stationHeading:"1. Your ambassador station",stationLabel:"Starting point",stationStatus:"Your selection is remembered on this device.",
+ searchHeading:"2. Search for a department or service",searchLabel:"English or French",placeholder:"e.g. urology, cancer, dentiste, MRI, accouchement",clear:"Clear",
+ resultHeading:"3. Check the result",showVisitor:"Show Visitor",newSearch:"New Search",
+ noMatch:"No match found. Try a shorter term, French/English equivalent, or room number.",
+ disclaimer:"Prototype reference for ambassadors. Verify appointment paperwork or current JGH signage when an exact room is uncertain.",
+ pavilion:"Pavilion",remain:"Remain in",appropriate:"Use the appropriate elevator or level access for",followRoom:"Follow signs to room",followDest:"Follow signs to",
+ indoor:"Follow the indoor signs:",hToK1:"Take the Pavilion H elevators to the 3rd floor.",hToK2:"Use the indoor H–K connector to the Pavilion K lobby.",kToH:"From the Pavilion K lobby, use the indoor H–K connector to Pavilion H, 3rd floor."
+},
+fr:{
+ brand:"Outil d’orientation des ambassadeurs de l’HGJ · Non officiel",
+ stationHeading:"1. Votre poste d’ambassadeur",stationLabel:"Point de départ",stationStatus:"Votre sélection est mémorisée sur cet appareil.",
+ searchHeading:"2. Rechercher un service ou un département",searchLabel:"Anglais ou français",placeholder:"p. ex. urologie, cancer, dentiste, IRM, accouchement",clear:"Effacer",
+ resultHeading:"3. Vérifier le résultat",showVisitor:"Montrer au visiteur",newSearch:"Nouvelle recherche",
+ noMatch:"Aucun résultat. Essayez un terme plus court, l’équivalent français/anglais ou un numéro de local.",
+ disclaimer:"Outil de référence prototype pour les ambassadeurs. Vérifiez les documents de rendez-vous ou la signalisation actuelle de l’HGJ lorsqu’un local précis est incertain.",
+ pavilion:"Pavillon",remain:"Restez dans",appropriate:"Utilisez l’ascenseur ou l’accès de niveau approprié pour",followRoom:"Suivez les indications jusqu’au local",followDest:"Suivez les indications vers",
+ indoor:"Suivez les indications intérieures :",hToK1:"Prenez les ascenseurs du pavillon H jusqu’au 3e étage.",hToK2:"Empruntez le passage intérieur H–K jusqu’au hall du pavillon K.",kToH:"Depuis le hall du pavillon K, empruntez le passage intérieur H–K jusqu’au pavillon H, 3e étage."
+}
+};
+const PAV_LABELS={
+ en:{A:"Pavilion A",B:"central corridor / Pavilion B",C:"Pavilion C",D:"Pavilion D",E:"Pavilion E",G:"Pavilion G",H:"Pavilion H",K:"Pavilion K"},
+ fr:{A:"Pavillon A",B:"corridor central / Pavillon B",C:"Pavillon C",D:"Pavillon D",E:"Pavillon E",G:"Pavillon G",H:"Pavillon H",K:"Pavillon K"}
+};
+const NOTE_FR={
+ "Urology":"Les renseignements actuels du service sont considérés comme la référence. Un document plus ancien indiquait E-941; utilisez E-959 sauf indication contraire sur les documents de rendez-vous.",
+ "Segal Cancer Centre / Oncology":"Le local de référence actuel est E-776.4; un ancien répertoire affiché indiquait E-776.",
+ "Gastroenterology":"La liste actuelle de la clinique indique E-110; un ancien répertoire affiché indiquait E-110.1.",
+ "Vascular Lab / Vascular Surgery":"Le dossier de référence indique B-268. Un répertoire affiché semblait indiquer B-368; vérifiez les documents de rendez-vous s’ils diffèrent.",
+ "General Ultrasound":"Le dossier de référence indique B-240; un ancien répertoire affiché indiquait D-240.",
+ "Test Centre":"Le dossier de référence indique E-102; un ancien répertoire affiché indiquait E-109.",
+ "Goldman Herzl Family Practice Centre":"Situé au pavillon H, 2e étage. Les consultations de spécialistes en pédiatrie sont offertes aux patients inscrits à Herzl.",
+ "Postpartum":"Pavillons C/D, 8e étage, selon le répertoire affiché. Vérifiez si l’accès exact est important."
+};
 const $=id=>document.getElementById(id);
 let selected=null;
+let appLang="en";
+
+function floorFor(f,lang){
+ if(!f||lang!=="fr")return f;
+ const map={"1st floor":"1er étage","2nd floor":"2e étage","3rd floor":"3e étage","4th floor":"4e étage","5th floor":"5e étage","6th floor":"6e étage","7th floor":"7e étage","8th floor":"8e étage","9th floor":"9e étage","10th floor":"10e étage","8th or 9th floor":"8e ou 9e étage"};
+ return map[f]||f;
+}
+function pavilionFor(p,lang){return (lang==="fr"?"Pavillon ":"Pavilion ")+p}
+function noteFor(d){return appLang==="fr"?(NOTE_FR[d.en]||d.note||""):(d.note||"")}
+function setAppLanguage(lang){
+ appLang=lang==="fr"?"fr":"en";
+ document.documentElement.lang=appLang;
+ const t=APP_UI[appLang];
+ $("brandSubtitle").textContent=t.brand;
+ $("stationHeading").textContent=t.stationHeading;$("stationLabel").textContent=t.stationLabel;$("stationStatus").textContent=t.stationStatus;
+ $("searchHeading").textContent=t.searchHeading;$("searchLabel").textContent=t.searchLabel;$("q").placeholder=t.placeholder;$("clear").textContent=t.clear;
+ $("resultHeading").textContent=t.resultHeading;$("showVisitor").textContent=t.showVisitor;$("newSearch").textContent=t.newSearch;$("disclaimer").textContent=t.disclaimer;
+ [...$("station").options].forEach(o=>o.textContent=o.dataset[appLang]||o.textContent);
+ $("appLang").value=appLang;
+ try{localStorage.setItem("waywey.appLang",appLang)}catch(e){}
+ if($("q").value.trim())search();
+ if(selected)choose(selected,false);
+}
 
 function norm(s){return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9\u0400-\u04ff\u0590-\u05ff\u0600-\u06ff]+/g," ").trim()}
-function displayWhere(d){return ["Pavilion "+d.p,d.room,d.floor].filter(Boolean).join(" · ")}
+function displayWhere(d,lang=appLang){return [pavilionFor(d.p,lang),d.room,floorFor(d.floor,lang)].filter(Boolean).join(" · ")}
 function bfs(a,b){
  if(a===b)return[a];
  let q=[[a]],seen=new Set([a]);
@@ -175,23 +234,23 @@ function bfs(a,b){
 }
 function targetNode(d){return d.p.includes("/")?d.p.split("/")[0]:d.p}
 function ambassadorSteps(d){
- const start=$("station").value,target=targetNode(d),path=bfs(start,target),out=[];
- if(start==="H"&&target==="K"){out.push("Take the Pavilion H elevators to the 3rd floor.");out.push("Use the indoor H–K connector to the Pavilion K lobby.");}
- else if(start==="K"&&target==="H"){out.push("From the Pavilion K lobby, use the indoor H–K connector to Pavilion H, 3rd floor.");}
- else if(start===target){out.push("Remain in "+LABELS[target]+".");}
- else{out.push("Follow the indoor signs: "+path.map(x=>LABELS[x]).join(" → ")+".");}
- if(d.floor)out.push("Use the appropriate elevator or level access for "+d.floor+".");
- if(d.room)out.push("Follow signs to room "+d.room+".");
- else out.push("Follow signs to "+d.en+".");
+ const t=APP_UI[appLang],start=$("station").value,target=targetNode(d),path=bfs(start,target),out=[],labels=PAV_LABELS[appLang];
+ if(start==="H"&&target==="K"){out.push(t.hToK1);out.push(t.hToK2);}
+ else if(start==="K"&&target==="H"){out.push(t.kToH);}
+ else if(start===target){out.push(t.remain+" "+labels[target]+".");}
+ else{out.push(t.indoor+" "+path.map(x=>labels[x]).join(" → ")+".");}
+ if(d.floor)out.push(t.appropriate+" "+floorFor(d.floor,appLang)+".");
+ if(d.room)out.push(t.followRoom+" "+d.room+".");
+ else out.push(t.followDest+" "+(appLang==="fr"?d.fr:d.en)+".");
  return out;
 }
 function localizedSteps(d,lang){
  const t=I18N[lang]||I18N.en,start=$("station").value,target=targetNode(d),path=bfs(start,target),out=[];
  if(start==="H"&&target==="K"){out.push(t.hk1);out.push(t.hk2);}
  else if(start==="K"&&target==="H"){out.push(t.kh1);}
- else if(start===target){out.push(t.stay+" "+LABELS[target]+".");}
- else{out.push(t.follow+" "+path.map(x=>LABELS[x]).join(" → ")+".");}
- if(d.floor)out.push(t.elev+" "+d.floor+".");
+ else if(start===target){out.push(t.stay+" "+((PAV_LABELS[lang]||PAV_LABELS.en)[target])+".");}
+ else{out.push(t.follow+" "+path.map(x=>(PAV_LABELS[lang]||PAV_LABELS.en)[x]).join(" → ")+".");}
+ if(d.floor)out.push(t.elev+" "+floorFor(d.floor,lang)+".");
  if(d.room)out.push(t.final+" "+d.room+"."); else out.push(t.final+" "+(lang==="fr"?d.fr:d.en)+".");
  return out;
 }
@@ -206,15 +265,16 @@ function search(){
  const q=$("q").value.trim(),box=$("results");box.innerHTML="";
  if(!q)return;
  const hits=DATA.map(d=>[d,score(d,q)]).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]).slice(0,12);
- if(!hits.length){box.innerHTML='<div class="status">No match found. Try a shorter term, French/English equivalent, or room number.</div>';return}
- hits.forEach(([d])=>{const el=document.createElement("div");el.className="result";el.innerHTML="<strong>"+d.en+"</strong><small>"+d.fr+"</small><div class='where'>"+displayWhere(d)+"</div>";el.onclick=()=>choose(d);box.appendChild(el)});
+ if(!hits.length){box.innerHTML='<div class="status">'+APP_UI[appLang].noMatch+'</div>';return}
+ hits.forEach(([d])=>{const el=document.createElement("div");el.className="result";const primary=appLang==="fr"?d.fr:d.en,secondary=appLang==="fr"?d.en:d.fr;el.innerHTML="<strong>"+primary+"</strong><small>"+secondary+"</small><div class='where'>"+displayWhere(d)+"</div>";el.onclick=()=>choose(d);box.appendChild(el)});
 }
-function choose(d){
- selected=d;$("destName").textContent=d.en+" / "+d.fr;$("destWhere").textContent=displayWhere(d);
- $("pills").innerHTML="<span class='pill'>Pavilion "+d.p+"</span>"+(d.room?"<span class='pill'>"+d.room+"</span>":"")+(d.floor?"<span class='pill'>"+d.floor+"</span>":"");
+function choose(d,scroll=true){
+ selected=d;const primary=appLang==="fr"?d.fr:d.en,secondary=appLang==="fr"?d.en:d.fr;
+ $("destName").textContent=primary+" / "+secondary;$("destWhere").textContent=displayWhere(d);
+ $("pills").innerHTML="<span class='pill'>"+pavilionFor(d.p,appLang)+"</span>"+(d.room?"<span class='pill'>"+d.room+"</span>":"")+(d.floor?"<span class='pill'>"+floorFor(d.floor,appLang)+"</span>":"");
  $("steps").innerHTML=ambassadorSteps(d).map(s=>"<li>"+s+"</li>").join("");
- $("note").style.display=d.note?"block":"none";$("note").textContent=d.note||"";
- $("route").classList.add("active");$("route").scrollIntoView({behavior:"smooth",block:"start"});
+ const note=noteFor(d);$("note").style.display=note?"block":"none";$("note").textContent=note;
+ $("route").classList.add("active");if(scroll)$("route").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function showVisitor(){
  if(!selected)return;$("visitorDialog").showModal();renderVisitor();
@@ -223,18 +283,21 @@ function renderVisitor(){
  const lang=$("visitorLang").value,t=I18N[lang]||I18N.en,p=$("visitorPanel");
  p.dir=(lang==="ar"||lang==="he")?"rtl":"ltr";
  $("vName").textContent=(lang==="fr"?selected.fr:selected.en);
- $("vWhere").textContent=displayWhere(selected);
+ $("vWhere").textContent=displayWhere(selected,lang);
  $("vSteps").innerHTML=localizedSteps(selected,lang).map(s=>"<li>"+s+"</li>").join("");
  $("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
 }
+$("appLang").onchange=()=>setAppLanguage($("appLang").value);
 $("q").addEventListener("input",search);
 $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
 $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");$("q").focus();window.scrollTo({top:0,behavior:"smooth"})};
 $("showVisitor").onclick=showVisitor;$("visitorLang").onchange=renderVisitor;
 $("closeVisitor").onclick=()=>$("visitorDialog").close();$("back").onclick=()=>$("visitorDialog").close();
 $("listen").onclick=()=>{if(!selected||!("speechSynthesis" in window))return; speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(localizedSteps(selected,$("visitorLang").value).join(" "));u.lang=$("visitorLang").value;u.rate=0.78;u.pitch=1;speechSynthesis.speak(u)};
-const saved=localStorage.getItem("waywey.station");if(saved&&[...$("station").options].some(o=>o.value===saved))$("station").value=saved;
-$("station").onchange=()=>{localStorage.setItem("waywey.station",$("station").value);if(selected)choose(selected)};
+let saved=null,savedLang=null;try{saved=localStorage.getItem("waywey.station");savedLang=localStorage.getItem("waywey.appLang")}catch(e){}
+if(saved&&[...$("station").options].some(o=>o.value===saved))$("station").value=saved;
+setAppLanguage(savedLang==="fr"?"fr":"en");
+$("station").onchange=()=>{try{localStorage.setItem("waywey.station",$("station").value)}catch(e){};if(selected)choose(selected,false)};
 if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(()=>{}));
 </script>
 </body>
