@@ -139,6 +139,7 @@ const DATA = [
 {en:"Cardiovascular Unit / CVICU",fr:"Unité cardiovasculaire / soins intensifs cardiovasculaires",p:"K",room:"",floor:"2nd floor",aliases:["cvu","cvicu","cardiovascular","cardiovasculaire"]},
 {en:"Medicine — Inpatient",fr:"Médecine — hospitalisation",p:"K",room:"",floor:"6th or 7th floor",aliases:["medicine inpatient","médecine hospitalisation"]},
 {en:"Surgical Short Stay",fr:"Court séjour chirurgical",p:"D",room:"",floor:"5th floor",aliases:["short stay","court séjour"]},
+{en:"Goldman Herzl Family Practice Centre",fr:"Centre de médecine familiale Goldman Herzl",p:"H",room:"",floor:"2nd floor",aliases:["herzl","goldman herzl","family practice","family medicine","family doctor","pediatrics","pediatric","paediatrics","pédiatrie","pediatrie","médecine familiale","medecine familiale","child doctor","children's doctor"],note:"Located in Pavilion H on the 2nd floor. Pediatric specialist consultations are available for registered Herzl patients."},
 {en:"Family Medicine Care Unit",fr:"Unité de soins de médecine familiale",p:"C",room:"",floor:"3rd floor",aliases:["family medicine unit","médecine familiale"]},
 {en:"Medicine C5",fr:"Médecine C5",p:"C",room:"",floor:"5th floor",aliases:["c5","medicine c5"]},
 {en:"Psychiatry High & Intermediate Care",fr:"Psychiatrie — soins intensifs et intermédiaires",p:"B",room:"",floor:"3rd floor",aliases:["psychiatry inpatient","psychiatrie hospitalisation"]},
@@ -231,7 +232,7 @@ $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()
 $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");$("q").focus();window.scrollTo({top:0,behavior:"smooth"})};
 $("showVisitor").onclick=showVisitor;$("visitorLang").onchange=renderVisitor;
 $("closeVisitor").onclick=()=>$("visitorDialog").close();$("back").onclick=()=>$("visitorDialog").close();
-$("listen").onclick=()=>{if(!selected||!("speechSynthesis" in window))return; speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(localizedSteps(selected,$("visitorLang").value).join(" "));u.lang=$("visitorLang").value;speechSynthesis.speak(u)};
+$("listen").onclick=()=>{if(!selected||!("speechSynthesis" in window))return; speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(localizedSteps(selected,$("visitorLang").value).join(" "));u.lang=$("visitorLang").value;u.rate=0.78;u.pitch=1;speechSynthesis.speak(u)};
 const saved=localStorage.getItem("waywey.station");if(saved&&[...$("station").options].some(o=>o.value===saved))$("station").value=saved;
 $("station").onchange=()=>{localStorage.setItem("waywey.station",$("station").value);if(selected)choose(selected)};
 if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(()=>{}));
