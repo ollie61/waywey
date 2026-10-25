@@ -88,13 +88,30 @@
     <div id="vWhere" class="bigwhere"></div>
     <ol id="vSteps"></ol>
     <div class="visitor-actions">
-      <button id="listen" class="btn primary">🔊 Listen</button>
+      <button id="showQr" class="btn primary">▦ Show QR</button>
+      <button id="listen" class="btn secondary">🔊 Listen</button>
       <button id="shareVisitor" class="btn secondary">↗ Share / Envoyer</button>
       <button id="back" class="btn ghost">Back to Ambassador</button>
     </div>
   </div>
 </dialog>
 
+<dialog id="qrDialog">
+  <div class="visitor" style="text-align:center">
+    <div class="visitor-head">
+      <strong id="qrTitle" style="font-size:1.15rem">Scan for directions</strong>
+      <button id="closeQr" class="btn ghost closex" aria-label="Close">×</button>
+    </div>
+    <p id="qrInstruction" style="font-size:1.05rem;line-height:1.45;margin:16px auto;max-width:520px">Scan this QR code with your phone to open these directions.</p>
+    <div id="qrCode" style="display:flex;justify-content:center;align-items:center;background:white;padding:16px;border-radius:14px;min-height:280px"></div>
+    <div id="qrDestination" style="font-weight:800;margin-top:12px"></div>
+    <div class="visitor-actions" style="justify-content:center">
+      <button id="qrBack" class="btn ghost">Back to directions</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="./qrcode.min.js"></script>
 <script>
 const DATA = [
 {en:"Urology",fr:"Urologie",p:"E",room:"E-959",floor:"9th floor",aliases:["urologue","urologie","urinary"],note:"Current dedicated service information is treated as canonical. Older material listed E-941; use E-959 unless appointment paperwork says otherwise."},
@@ -161,6 +178,19 @@ ru:{to:"Идите в",room:"Кабинет",floor:"Этаж",from:"От",stay:"
 vi:{to:"Đi đến",room:"Phòng",floor:"Tầng",from:"Từ",stay:"Ở lại",elev:"Dùng thang máy để đến",follow:"Đi theo biển chỉ dẫn bên trong qua",hk1:"Đi thang máy của Khu H lên tầng 3.",hk2:"Dùng lối nối trong nhà H–K để đến sảnh Khu K.",kh1:"Từ sảnh Khu K, dùng lối nối trong nhà H–K đến Khu H, tầng 3.",final:"Sau đó đi theo biển chỉ dẫn đến",listen:"Nghe",back:"Quay lại tình nguyện viên"},
 sw:{to:"Nenda",room:"Chumba",floor:"Ghorofa",from:"Kutoka",stay:"Baki katika",elev:"Tumia lifti kufika",follow:"Fuata alama za ndani kupitia",hk1:"Tumia lifti za Jengo H hadi ghorofa ya 3.",hk2:"Tumia njia ya ndani ya H–K hadi ukumbi wa Jengo K.",kh1:"Kutoka ukumbi wa Jengo K, tumia njia ya ndani ya H–K hadi Jengo H, ghorofa ya 3.",final:"Kisha fuata alama kuelekea",listen:"Sikiliza",back:"Rudi kwa balozi"},
 bg:{to:"Отидете до",room:"Стая",floor:"Етаж",from:"От",stay:"Останете в",elev:"Използвайте асансьора до",follow:"Следвайте вътрешните указателни табели през",hk1:"Вземете асансьора в павилион H до 3-тия етаж.",hk2:"Използвайте вътрешната връзка H–K до фоайето на павилион K.",kh1:"От фоайето на павилион K използвайте връзката H–K до павилион H, 3-ти етаж.",final:"След това следвайте табелите към",listen:"Слушай",back:"Назад към посланика"}
+};
+
+const QR_UI={
+en:{button:"Show QR",title:"Scan for directions",instruction:"Scan this QR code with your phone to open these directions.",back:"Back to directions"},
+fr:{button:"Afficher le QR",title:"Scanner pour obtenir les directions",instruction:"Scannez ce code QR avec votre téléphone pour ouvrir ces directions.",back:"Retour aux directions"},
+ar:{button:"إظهار رمز QR",title:"امسح للحصول على الاتجاهات",instruction:"امسح رمز QR هذا بهاتفك لفتح هذه الاتجاهات.",back:"العودة إلى الاتجاهات"},
+he:{button:"הצג קוד QR",title:"סרקו לקבלת הוראות",instruction:"סרקו את קוד ה-QR בטלפון כדי לפתוח את ההוראות.",back:"חזרה להוראות"},
+es:{button:"Mostrar QR",title:"Escanee para ver las indicaciones",instruction:"Escanee este código QR con su teléfono para abrir estas indicaciones.",back:"Volver a las indicaciones"},
+pt:{button:"Mostrar QR",title:"Escaneie para ver as direções",instruction:"Escaneie este código QR com o seu telefone para abrir estas direções.",back:"Voltar às direções"},
+ru:{button:"Показать QR",title:"Сканируйте для маршрута",instruction:"Отсканируйте этот QR-код телефоном, чтобы открыть эти указания.",back:"Назад к указаниям"},
+vi:{button:"Hiện mã QR",title:"Quét để xem chỉ đường",instruction:"Quét mã QR này bằng điện thoại để mở các chỉ dẫn này.",back:"Quay lại chỉ dẫn"},
+sw:{button:"Onyesha QR",title:"Changanua kupata maelekezo",instruction:"Changanua msimbo huu wa QR kwa simu yako ili kufungua maelekezo haya.",back:"Rudi kwenye maelekezo"},
+bg:{button:"Покажи QR",title:"Сканирайте за указания",instruction:"Сканирайте този QR код с телефона си, за да отворите указанията.",back:"Назад към указанията"}
 };
 
 const APP_UI={
@@ -288,6 +318,24 @@ function makeVisitorUrl(){
  u.searchParams.set("lang",$("visitorLang").value);
  return u.toString();
 }
+function showVisitorQr(){
+ if(!selected)return;
+ const lang=$("visitorLang").value,qrt=QR_UI[lang]||QR_UI.en,url=makeVisitorUrl();
+ $("qrTitle").textContent=qrt.title;
+ $("qrInstruction").textContent=qrt.instruction;
+ $("qrBack").textContent=qrt.back;
+ $("qrDestination").textContent=(lang==="fr"?selected.fr:selected.en)+" · "+displayWhere(selected,lang);
+ $("qrCode").innerHTML="";
+ try{new QRCode($("qrCode"),{text:url,width:250,height:250,correctLevel:QRCode.CorrectLevel.M});}
+ catch(e){$("qrCode").textContent=url;}
+ $("visitorDialog").close();
+ $("qrDialog").showModal();
+}
+function closeVisitorQr(){
+ $("qrDialog").close();
+ try{$("visitorDialog").showModal();renderVisitor();}catch(e){}
+}
+
 async function shareVisitorDirections(){
  if(!selected)return;
  const lang=$("visitorLang").value;
@@ -314,13 +362,13 @@ function renderVisitor(){
  $("vName").textContent=(lang==="fr"?selected.fr:selected.en);
  $("vWhere").textContent=displayWhere(selected,lang);
  $("vSteps").innerHTML=localizedSteps(selected,lang).map(s=>"<li>"+s+"</li>").join("");
- $("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
+ const qrt=QR_UI[lang]||QR_UI.en;$("showQr").textContent="▦ "+qrt.button;$("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
 }
 $("appLang").onchange=()=>setAppLanguage($("appLang").value);
 $("q").addEventListener("input",search);
 $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
 $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");$("q").focus();window.scrollTo({top:0,behavior:"smooth"})};
-$("showVisitor").onclick=showVisitor;$("visitorLang").onchange=renderVisitor;$("shareVisitor").onclick=shareVisitorDirections;
+$("showVisitor").onclick=showVisitor;$("visitorLang").onchange=renderVisitor;$("showQr").onclick=showVisitorQr;$("shareVisitor").onclick=shareVisitorDirections;$("closeQr").onclick=closeVisitorQr;$("qrBack").onclick=closeVisitorQr;
 $("closeVisitor").onclick=()=>$("visitorDialog").close();$("back").onclick=()=>$("visitorDialog").close();
 $("listen").onclick=()=>{if(!selected||!("speechSynthesis" in window))return; speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(localizedSteps(selected,$("visitorLang").value).join(" "));u.lang=$("visitorLang").value;u.rate=0.78;u.pitch=1;speechSynthesis.speak(u)};
 let saved=null,savedLang=null;try{saved=localStorage.getItem("waywey.station");savedLang=localStorage.getItem("waywey.appLang")}catch(e){}
