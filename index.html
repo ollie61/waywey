@@ -89,6 +89,7 @@
     <ol id="vSteps"></ol>
     <div class="visitor-actions">
       <button id="listen" class="btn primary">🔊 Listen</button>
+      <button id="shareVisitor" class="btn secondary">↗ Share / Envoyer</button>
       <button id="back" class="btn ghost">Back to Ambassador</button>
     </div>
   </div>
@@ -276,6 +277,34 @@ function choose(d,scroll=true){
  const note=noteFor(d);$("note").style.display=note?"block":"none";$("note").textContent=note;
  $("route").classList.add("active");if(scroll)$("route").scrollIntoView({behavior:"smooth",block:"start"});
 }
+function slugFor(d){return norm(d.en).replace(/ /g,"-")}
+function makeVisitorUrl(){
+ if(!selected)return window.location.href;
+ const u=new URL(window.location.href);
+ u.search="";u.hash="";
+ u.searchParams.set("visitor","1");
+ u.searchParams.set("dest",slugFor(selected));
+ u.searchParams.set("from",$("station").value);
+ u.searchParams.set("lang",$("visitorLang").value);
+ return u.toString();
+}
+async function shareVisitorDirections(){
+ if(!selected)return;
+ const lang=$("visitorLang").value;
+ const title=(lang==="fr"?selected.fr:selected.en)+" — WayWey";
+ const url=makeVisitorUrl();
+ try{
+   if(navigator.share){await navigator.share({title:title,text:title,url:url});return;}
+ }catch(e){if(e&&e.name==="AbortError")return;}
+ try{
+   await navigator.clipboard.writeText(url);
+   const b=$("shareVisitor"),old=b.textContent;
+   b.textContent="✓ Link copied / Lien copié";
+   setTimeout(()=>b.textContent=old,1800);
+ }catch(e){
+   window.prompt("Copy this link / Copiez ce lien :",url);
+ }
+}
 function showVisitor(){
  if(!selected)return;$("visitorDialog").showModal();renderVisitor();
 }
@@ -291,13 +320,26 @@ $("appLang").onchange=()=>setAppLanguage($("appLang").value);
 $("q").addEventListener("input",search);
 $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
 $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");$("q").focus();window.scrollTo({top:0,behavior:"smooth"})};
-$("showVisitor").onclick=showVisitor;$("visitorLang").onchange=renderVisitor;
+$("showVisitor").onclick=showVisitor;$("visitorLang").onchange=renderVisitor;$("shareVisitor").onclick=shareVisitorDirections;
 $("closeVisitor").onclick=()=>$("visitorDialog").close();$("back").onclick=()=>$("visitorDialog").close();
 $("listen").onclick=()=>{if(!selected||!("speechSynthesis" in window))return; speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(localizedSteps(selected,$("visitorLang").value).join(" "));u.lang=$("visitorLang").value;u.rate=0.78;u.pitch=1;speechSynthesis.speak(u)};
 let saved=null,savedLang=null;try{saved=localStorage.getItem("waywey.station");savedLang=localStorage.getItem("waywey.appLang")}catch(e){}
 if(saved&&[...$("station").options].some(o=>o.value===saved))$("station").value=saved;
 setAppLanguage(savedLang==="fr"?"fr":"en");
 $("station").onchange=()=>{try{localStorage.setItem("waywey.station",$("station").value)}catch(e){};if(selected)choose(selected,false)};
+
+(function openVisitorLink(){
+ const p=new URLSearchParams(window.location.search);
+ if(p.get("visitor")!=="1")return;
+ const from=p.get("from"),lang=p.get("lang")||"en",dest=p.get("dest");
+ if(from&&[...$("station").options].some(o=>o.value===from))$("station").value=from;
+ if([...$("visitorLang").options].some(o=>o.value===lang))$("visitorLang").value=lang;
+ const d=DATA.find(x=>slugFor(x)===dest);
+ if(!d)return;
+ selected=d;
+ setTimeout(()=>{try{$("visitorDialog").showModal();renderVisitor();}catch(e){}},60);
+})();
+
 if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(()=>{}));
 </script>
 </body>
