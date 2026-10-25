@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#173f4b">
+  <meta name="description" content="WayWey — unofficial multilingual JGH ambassador wayfinding tool">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <title>WayWey — JGH Ambassador Wayfinding</title>
+  <style>
+    :root{--ink:#16333a;--teal:#176879;--teal2:#0f5362;--bg:#f3f7f8;--card:#fff;--line:#d6e1e4;--muted:#64777d;--warn:#fff7d6;--shadow:0 8px 26px rgba(22,51,58,.08)}
+    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    header{background:linear-gradient(135deg,var(--teal2),var(--teal));color:#fff;padding:18px 16px 16px;position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+    .wrap{max-width:860px;margin:auto}.brand{display:flex;align-items:end;gap:10px}.brand h1{margin:0;font-size:2rem;letter-spacing:-.03em}.brand span{font-size:.88rem;opacity:.92;padding-bottom:4px}
+    main{padding:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);margin-bottom:14px}
+    h2{font-size:1.05rem;margin:0 0 10px}label{font-weight:750;font-size:.93rem;display:block;margin-bottom:6px}
+    select,input,button{font:inherit}.field{width:100%;border:1.5px solid #b8c9ce;border-radius:12px;background:#fff;padding:13px 14px;color:var(--ink);outline:none}
+    .field:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(23,104,121,.12)}
+    .row{display:grid;grid-template-columns:1fr auto;gap:10px}.btn{border:0;border-radius:12px;padding:12px 14px;font-weight:800;cursor:pointer}
+    .primary{background:var(--teal);color:#fff}.secondary{background:#e9f2f4;color:var(--teal2)}.ghost{background:#fff;border:1px solid var(--line);color:var(--ink)}
+    .status{font-size:.88rem;color:var(--muted);margin-top:8px}.results{display:grid;gap:10px;margin-top:12px}
+    .result{border:1px solid var(--line);border-radius:14px;padding:13px;background:#fff;cursor:pointer}.result:hover{border-color:#8fb2ba}
+    .result strong{display:block;font-size:1rem}.result .where{margin-top:4px;font-weight:800;color:var(--teal2)}.result small{display:block;color:var(--muted);margin-top:4px}
+    .route{display:none}.route.active{display:block}.route h3{margin:0 0 6px;font-size:1.2rem}.pill{display:inline-block;background:#e6f1f3;color:var(--teal2);font-weight:800;border-radius:999px;padding:5px 9px;font-size:.8rem;margin:4px 4px 0 0}
+    .steps{margin:12px 0 0;padding-left:20px;line-height:1.55}.note{background:var(--warn);border:1px solid #eadca0;border-radius:12px;padding:10px 12px;margin-top:12px;font-size:.88rem}
+    .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.disclaimer{text-align:center;color:var(--muted);font-size:.78rem;padding:4px 12px 24px}
+    dialog{border:0;border-radius:18px;padding:0;width:min(94vw,720px);box-shadow:0 22px 70px rgba(0,0,0,.28)}dialog::backdrop{background:rgba(6,24,29,.6)}
+    .visitor{padding:20px}.visitor-head{display:flex;gap:10px;align-items:center;justify-content:space-between}.visitor h2{font-size:1.8rem;margin:12px 0 4px}
+    .visitor .bigwhere{font-size:1.35rem;font-weight:900;color:var(--teal2);margin-bottom:16px}.visitor ol{font-size:1.3rem;line-height:1.55;padding-left:1.4em}.visitor[dir="rtl"] ol{padding-left:0;padding-right:1.4em}
+    .visitor-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.closex{font-size:1.2rem;width:42px;height:42px;padding:0}
+    @media(max-width:540px){.brand{display:block}.brand span{display:block;margin-top:2px}.row{grid-template-columns:1fr}.row .btn{width:100%}.visitor ol{font-size:1.16rem}.visitor h2{font-size:1.55rem}}
+  </style>
+</head>
+<body>
+<header><div class="wrap brand"><h1>WayWey</h1><span>JGH Ambassador Wayfinding Tool · Unofficial</span></div></header>
+<main class="wrap">
+  <section class="card">
+    <h2>1. Your ambassador station</h2>
+    <label for="station">Starting point</label>
+    <select id="station" class="field">
+      <option value="B">Main Entrance — 3755 Côte-Sainte-Catherine</option>
+      <option value="A">Pavilion A entrance — 5750 Côte-des-Neiges</option>
+      <option value="E">Pavilion E / Légaré entrance — 5757 Légaré</option>
+      <option value="H">Pavilion H entrance — 5790 Côte-des-Neiges</option>
+      <option value="K">Pavilion K entrance — 5767 Légaré</option>
+      <option value="K">Emergency entrance — 5777 Légaré</option>
+    </select>
+    <div class="status">Your selection is remembered on this device.</div>
+  </section>
+
+  <section class="card">
+    <h2>2. Search for a department or service</h2>
+    <label for="q">English or French</label>
+    <div class="row">
+      <input id="q" class="field" autocomplete="off" placeholder="e.g. urology, cancer, dentiste, MRI, accouchement">
+      <button id="clear" class="btn secondary" type="button">Clear</button>
+    </div>
+    <div id="results" class="results"></div>
+  </section>
+
+  <section id="route" class="card route" aria-live="polite">
+    <h2>3. Check the result</h2>
+    <h3 id="destName"></h3>
+    <div id="destWhere"></div>
+    <div id="pills"></div>
+    <ol id="steps" class="steps"></ol>
+    <div id="note" class="note" style="display:none"></div>
+    <div class="actions">
+      <button id="showVisitor" class="btn primary" type="button">Show Visitor</button>
+      <button id="newSearch" class="btn ghost" type="button">New Search</button>
+    </div>
+  </section>
+
+  <div class="disclaimer">Prototype reference for ambassadors. Verify appointment paperwork or current JGH signage when an exact room is uncertain.</div>
+</main>
+
+<dialog id="visitorDialog">
+  <div id="visitorPanel" class="visitor">
+    <div class="visitor-head">
+      <select id="visitorLang" class="field" style="max-width:230px">
+        <option value="en">English</option><option value="fr">Français</option><option value="ar">العربية</option><option value="he">עברית</option>
+        <option value="es">Español</option><option value="pt">Português</option><option value="ru">Русский</option><option value="vi">Tiếng Việt</option>
+        <option value="sw">Kiswahili</option><option value="bg">Български</option>
+      </select>
+      <button id="closeVisitor" class="btn ghost closex" aria-label="Close">×</button>
+    </div>
+    <h2 id="vName"></h2>
+    <div id="vWhere" class="bigwhere"></div>
+    <ol id="vSteps"></ol>
+    <div class="visitor-actions">
+      <button id="listen" class="btn primary">🔊 Listen</button>
+      <button id="back" class="btn ghost">Back to Ambassador</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const DATA = [
+{en:"Urology",fr:"Urologie",p:"E",room:"E-959",floor:"9th floor",aliases:["urologue","urologie","urinary"],note:"Current dedicated service information is treated as canonical. Older material listed E-941; use E-959 unless appointment paperwork says otherwise."},
+{en:"Family Birthing Centre",fr:"Centre familial des naissances",p:"K",room:"",floor:"3rd floor",aliases:["birthing","birth","labour","labor","delivery","having a baby","wife is having a baby","accouchement","naissance","maternité"]},
+{en:"Obstetrics and Gynecology / Women's Health",fr:"Obstétrique et gynécologie / Santé des femmes",p:"H",room:"",floor:"3rd floor",aliases:["obgyn","gynécologie","gynecology","women's health","santé des femmes"]},
+{en:"Obstetrical Ultrasound",fr:"Échographie obstétricale",p:"H",room:"H-318",floor:"3rd floor",aliases:["pregnancy ultrasound","échographie grossesse"]},
+{en:"Cardiology",fr:"Cardiologie",p:"E",room:"E-206",floor:"2nd floor",aliases:["heart","coeur","cœur"]},
+{en:"Geriatrics — Outpatient",fr:"Gériatrie — consultation externe",p:"E",room:"E-0012",floor:"",aliases:["geriatrics","gériatrie"]},
+{en:"Acute Geriatrics — Inpatient",fr:"Gériatrie aiguë — hospitalisation",p:"C",room:"",floor:"6th floor",aliases:["acute geriatrics","gériatrie aiguë"]},
+{en:"Breast Centre",fr:"Centre du sein",p:"E",room:"E-1004",floor:"10th floor",aliases:["breast","sein","mammary"]},
+{en:"Dentistry",fr:"Dentisterie",p:"A",room:"A-024",floor:"",aliases:["dentist","dental","dentiste"]},
+{en:"Segal Cancer Centre / Oncology",fr:"Centre du cancer Segal / Oncologie",p:"E",room:"E-776.4",floor:"7th floor",aliases:["cancer","oncology","oncologie","segal"],note:"Current canonical room is E-776.4; an older posted directory showed E-776."},
+{en:"Orthopedics Clinic",fr:"Clinique d'orthopédie",p:"E",room:"E-003",floor:"",aliases:["orthopedic","orthopaedic","orthopédie","bones"]},
+{en:"Orthopedics — Inpatient",fr:"Orthopédie — hospitalisation",p:"C",room:"",floor:"4th floor",aliases:["orthopedics inpatient","orthopédie hospitalisation"]},
+{en:"MRI",fr:"IRM",p:"D",room:"D-205",floor:"2nd floor",aliases:["magnetic resonance","imagerie par résonance magnétique","irm"]},
+{en:"Emergency Department",fr:"Urgence",p:"K",room:"",floor:"S2",aliases:["emergency","ER","urgence"]},
+{en:"Medical Day Hospital",fr:"Hôpital de jour médical",p:"K",room:"S1-101",floor:"S1",aliases:["day hospital","hôpital de jour"]},
+{en:"Gastroenterology",fr:"Gastroentérologie",p:"E",room:"E-110",floor:"",aliases:["gastro","gastroentérologie"],note:"Current clinic listing uses E-110; older posted material showed E-110.1."},
+{en:"Internal Medicine",fr:"Médecine interne",p:"G",room:"G-050",floor:"",aliases:["internal med","médecine interne"]},
+{en:"Endocrinology / Diabetes",fr:"Endocrinologie / Diabète",p:"E",room:"E-104",floor:"",aliases:["diabetes","diabète","endocrinology","endocrinologie"]},
+{en:"Neurology",fr:"Neurologie",p:"E",room:"E-005",floor:"",aliases:["neuro","neurologie"]},
+{en:"Ophthalmology",fr:"Ophtalmologie",p:"E",room:"E-008",floor:"",aliases:["eyes","eye","ophtalmologie","yeux"]},
+{en:"ENT",fr:"ORL",p:"E",room:"E-903",floor:"9th floor",aliases:["ear nose throat","otorhinolaryngology","orl","oreille nez gorge"]},
+{en:"Rheumatology",fr:"Rhumatologie",p:"A",room:"A-725",floor:"7th floor",aliases:["rheumatology","rhumatologie"]},
+{en:"Ombudsman",fr:"Commissaire aux plaintes / Ombudsman",p:"A",room:"A-440",floor:"4th floor",aliases:["complaint","plaintes","ombudsman"]},
+{en:"Breastfeeding Clinic",fr:"Clinique d'allaitement",p:"B",room:"B-556",floor:"5th floor",aliases:["breastfeeding","lactation","allaitement"]},
+{en:"Colposcopy",fr:"Colposcopie",p:"H",room:"H-334.1",floor:"3rd floor",aliases:["colposcopy","colposcopie"]},
+{en:"Cancer Nutrition Rehabilitation Program",fr:"Programme de réadaptation nutritionnelle en oncologie",p:"E",room:"E-809",floor:"8th floor",aliases:["cancer nutrition","nutrition cancer"]},
+{en:"Cancer Prevention Centre",fr:"Centre de prévention du cancer",p:"E",room:"E-740",floor:"7th floor",aliases:["cancer prevention","prévention cancer"]},
+{en:"Radiation Oncology Clinic",fr:"Clinique de radio-oncologie",p:"G",room:"G-002",floor:"",aliases:["radiation oncology","radio-oncologie"]},
+{en:"Radiation Oncology Treatments",fr:"Traitements de radio-oncologie",p:"G",room:"G-18",floor:"",aliases:["radiation treatment","radiotherapy","radiothérapie"]},
+{en:"Surgery Clinic",fr:"Clinique de chirurgie",p:"A",room:"A-500",floor:"5th floor",aliases:["surgery","chirurgie"]},
+{en:"Plastic / Reconstructive Surgery",fr:"Chirurgie plastique / reconstructive",p:"A",room:"A-500",floor:"5th floor",aliases:["plastic surgery","reconstructive","chirurgie plastique"]},
+{en:"Vascular Lab / Vascular Surgery",fr:"Laboratoire vasculaire / Chirurgie vasculaire",p:"B",room:"B-268",floor:"2nd floor",aliases:["vascular","vasculaire"],note:"Canonical record uses B-268. A posted directory appeared to show B-368; verify appointment paperwork if it differs."},
+{en:"General Ultrasound",fr:"Échographie générale",p:"B",room:"B-240",floor:"2nd floor",aliases:["ultrasound","échographie"],note:"Canonical record uses B-240; an older posted directory showed D-240."},
+{en:"Test Centre",fr:"Centre de prélèvements / tests",p:"E",room:"E-102",floor:"",aliases:["test center","blood test","prise de sang","prélèvement"],note:"Canonical record uses E-102; an older posted directory showed E-109."},
+{en:"Palliative Care — Inpatient",fr:"Soins palliatifs — hospitalisation",p:"B",room:"",floor:"4th floor",aliases:["palliative","palliatif","soins palliatifs"]},
+{en:"Mental Health & Addiction Unit",fr:"Unité de santé mentale et dépendance",p:"B",room:"",floor:"3rd floor",aliases:["mental health","psychiatry","psychiatrie","addiction","dépendance"]},
+{en:"NICU",fr:"Soins intensifs néonatals",p:"K",room:"",floor:"5th floor",aliases:["nicu","neonatal","néonatal"]},
+{en:"Neurosciences — Inpatient",fr:"Neurosciences — hospitalisation",p:"K",room:"",floor:"10th floor",aliases:["neurosciences","neuro inpatient"]},
+{en:"Surgery — Inpatient",fr:"Chirurgie — hospitalisation",p:"K",room:"",floor:"8th or 9th floor",aliases:["surgery inpatient","chirurgie hospitalisation"]},
+{en:"Medical & Surgical Intensive Care Unit (ICU)",fr:"Soins intensifs médicaux et chirurgicaux",p:"K",room:"",floor:"1st floor",aliases:["icu","msicu","intensive care","soins intensifs"]},
+{en:"Cardiovascular Unit / CVICU",fr:"Unité cardiovasculaire / soins intensifs cardiovasculaires",p:"K",room:"",floor:"2nd floor",aliases:["cvu","cvicu","cardiovascular","cardiovasculaire"]},
+{en:"Medicine — Inpatient",fr:"Médecine — hospitalisation",p:"K",room:"",floor:"6th or 7th floor",aliases:["medicine inpatient","médecine hospitalisation"]},
+{en:"Surgical Short Stay",fr:"Court séjour chirurgical",p:"D",room:"",floor:"5th floor",aliases:["short stay","court séjour"]},
+{en:"Family Medicine Care Unit",fr:"Unité de soins de médecine familiale",p:"C",room:"",floor:"3rd floor",aliases:["family medicine unit","médecine familiale"]},
+{en:"Medicine C5",fr:"Médecine C5",p:"C",room:"",floor:"5th floor",aliases:["c5","medicine c5"]},
+{en:"Psychiatry High & Intermediate Care",fr:"Psychiatrie — soins intensifs et intermédiaires",p:"B",room:"",floor:"3rd floor",aliases:["psychiatry inpatient","psychiatrie hospitalisation"]},
+{en:"Postpartum",fr:"Post-partum",p:"C/D",room:"",floor:"8th floor",aliases:["postpartum","post-partum"],note:"Pavilion C/D, 8th floor is based on the posted directory and should be verified if exact access matters."}
+];
+
+const GRAPH={A:["B"],B:["A","C","D","G","K"],C:["B","D","G"],D:["B","C","E"],E:["D","K"],G:["B","C"],H:["K"],K:["B","E","H"]};
+const LABELS={A:"Pavilion A",B:"central corridor / Pavilion B",C:"Pavilion C",D:"Pavilion D",E:"Pavilion E",G:"Pavilion G",H:"Pavilion H",K:"Pavilion K"};
+
+const I18N={
+en:{to:"Go to",room:"Room",floor:"Floor",from:"From",stay:"Stay in",elev:"Use the elevators to reach",follow:"Follow the indoor signs through",hk1:"Take the Pavilion H elevators to the 3rd floor.",hk2:"Use the indoor H–K connector to the Pavilion K lobby.",kh1:"From the Pavilion K lobby, use the indoor H–K connector to Pavilion H, 3rd floor.",final:"Then follow signs to",listen:"Listen",back:"Back to Ambassador"},
+fr:{to:"Rendez-vous à",room:"Salle",floor:"Étage",from:"À partir de",stay:"Restez dans",elev:"Prenez les ascenseurs jusqu'à",follow:"Suivez les indications intérieures en passant par",hk1:"Prenez les ascenseurs du pavillon H jusqu'au 3e étage.",hk2:"Empruntez le passage intérieur H–K jusqu'au hall du pavillon K.",kh1:"Depuis le hall du pavillon K, empruntez le passage intérieur H–K jusqu'au pavillon H, 3e étage.",final:"Suivez ensuite les indications vers",listen:"Écouter",back:"Retour à l'ambassadeur"},
+es:{to:"Vaya a",room:"Sala",floor:"Piso",from:"Desde",stay:"Permanezca en",elev:"Use los ascensores para llegar a",follow:"Siga las señales interiores pasando por",hk1:"Tome los ascensores del Pabellón H hasta el 3.er piso.",hk2:"Use el pasillo interior H–K hasta el vestíbulo del Pabellón K.",kh1:"Desde el vestíbulo del Pabellón K, use el pasillo interior H–K hasta el Pabellón H, 3.er piso.",final:"Luego siga las señales hacia",listen:"Escuchar",back:"Volver al embajador"},
+pt:{to:"Vá para",room:"Sala",floor:"Andar",from:"A partir de",stay:"Permaneça no",elev:"Use os elevadores para chegar ao",follow:"Siga as placas internas passando por",hk1:"Pegue os elevadores do Pavilhão H até o 3º andar.",hk2:"Use a passagem interna H–K até o saguão do Pavilhão K.",kh1:"Do saguão do Pavilhão K, use a passagem interna H–K até o Pavilhão H, 3º andar.",final:"Depois, siga as placas para",listen:"Ouvir",back:"Voltar ao embaixador"},
+ar:{to:"اذهب إلى",room:"الغرفة",floor:"الطابق",from:"من",stay:"ابقَ في",elev:"استخدم المصاعد للوصول إلى",follow:"اتبع اللافتات الداخلية مروراً بـ",hk1:"استخدم مصاعد الجناح H إلى الطابق الثالث.",hk2:"استخدم الممر الداخلي H–K للوصول إلى بهو الجناح K.",kh1:"من بهو الجناح K، استخدم الممر الداخلي H–K إلى الجناح H، الطابق الثالث.",final:"ثم اتبع اللافتات إلى",listen:"استمع",back:"العودة إلى السفير"},
+he:{to:"גשו אל",room:"חדר",floor:"קומה",from:"מ־",stay:"הישארו ב",elev:"השתמשו במעליות כדי להגיע אל",follow:"עקבו אחר השילוט הפנימי דרך",hk1:"עלו במעליות של בניין H לקומה 3.",hk2:"השתמשו במעבר הפנימי H–K אל הלובי של בניין K.",kh1:"מהלובי של בניין K השתמשו במעבר הפנימי H–K אל בניין H, קומה 3.",final:"לאחר מכן עקבו אחר השילוט אל",listen:"האזנה",back:"חזרה לשגריר"},
+ru:{to:"Идите в",room:"Кабинет",floor:"Этаж",from:"От",stay:"Оставайтесь в",elev:"Поднимитесь на лифте на",follow:"Следуйте указателям внутри здания через",hk1:"Поднимитесь на лифте павильона H на 3-й этаж.",hk2:"По внутреннему переходу H–K пройдите в вестибюль павильона K.",kh1:"Из вестибюля павильона K по переходу H–K пройдите в павильон H, на 3-й этаж.",final:"Затем следуйте указателям к",listen:"Прослушать",back:"Назад к волонтёру"},
+vi:{to:"Đi đến",room:"Phòng",floor:"Tầng",from:"Từ",stay:"Ở lại",elev:"Dùng thang máy để đến",follow:"Đi theo biển chỉ dẫn bên trong qua",hk1:"Đi thang máy của Khu H lên tầng 3.",hk2:"Dùng lối nối trong nhà H–K để đến sảnh Khu K.",kh1:"Từ sảnh Khu K, dùng lối nối trong nhà H–K đến Khu H, tầng 3.",final:"Sau đó đi theo biển chỉ dẫn đến",listen:"Nghe",back:"Quay lại tình nguyện viên"},
+sw:{to:"Nenda",room:"Chumba",floor:"Ghorofa",from:"Kutoka",stay:"Baki katika",elev:"Tumia lifti kufika",follow:"Fuata alama za ndani kupitia",hk1:"Tumia lifti za Jengo H hadi ghorofa ya 3.",hk2:"Tumia njia ya ndani ya H–K hadi ukumbi wa Jengo K.",kh1:"Kutoka ukumbi wa Jengo K, tumia njia ya ndani ya H–K hadi Jengo H, ghorofa ya 3.",final:"Kisha fuata alama kuelekea",listen:"Sikiliza",back:"Rudi kwa balozi"},
+bg:{to:"Отидете до",room:"Стая",floor:"Етаж",from:"От",stay:"Останете в",elev:"Използвайте асансьора до",follow:"Следвайте вътрешните указателни табели през",hk1:"Вземете асансьора в павилион H до 3-тия етаж.",hk2:"Използвайте вътрешната връзка H–K до фоайето на павилион K.",kh1:"От фоайето на павилион K използвайте връзката H–K до павилион H, 3-ти етаж.",final:"След това следвайте табелите към",listen:"Слушай",back:"Назад към посланика"}
+};
+
+const $=id=>document.getElementById(id);
+let selected=null;
+
+function norm(s){return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9\u0400-\u04ff\u0590-\u05ff\u0600-\u06ff]+/g," ").trim()}
+function displayWhere(d){return ["Pavilion "+d.p,d.room,d.floor].filter(Boolean).join(" · ")}
+function bfs(a,b){
+ if(a===b)return[a];
+ let q=[[a]],seen=new Set([a]);
+ while(q.length){let path=q.shift(),n=path[path.length-1];for(const x of (GRAPH[n]||[])){if(seen.has(x))continue;let p=[...path,x];if(x===b)return p;seen.add(x);q.push(p)}}
+ return[a,b];
+}
+function targetNode(d){return d.p.includes("/")?d.p.split("/")[0]:d.p}
+function ambassadorSteps(d){
+ const start=$("station").value,target=targetNode(d),path=bfs(start,target),out=[];
+ if(start==="H"&&target==="K"){out.push("Take the Pavilion H elevators to the 3rd floor.");out.push("Use the indoor H–K connector to the Pavilion K lobby.");}
+ else if(start==="K"&&target==="H"){out.push("From the Pavilion K lobby, use the indoor H–K connector to Pavilion H, 3rd floor.");}
+ else if(start===target){out.push("Remain in "+LABELS[target]+".");}
+ else{out.push("Follow the indoor signs: "+path.map(x=>LABELS[x]).join(" → ")+".");}
+ if(d.floor)out.push("Use the appropriate elevator or level access for "+d.floor+".");
+ if(d.room)out.push("Follow signs to room "+d.room+".");
+ else out.push("Follow signs to "+d.en+".");
+ return out;
+}
+function localizedSteps(d,lang){
+ const t=I18N[lang]||I18N.en,start=$("station").value,target=targetNode(d),path=bfs(start,target),out=[];
+ if(start==="H"&&target==="K"){out.push(t.hk1);out.push(t.hk2);}
+ else if(start==="K"&&target==="H"){out.push(t.kh1);}
+ else if(start===target){out.push(t.stay+" "+LABELS[target]+".");}
+ else{out.push(t.follow+" "+path.map(x=>LABELS[x]).join(" → ")+".");}
+ if(d.floor)out.push(t.elev+" "+d.floor+".");
+ if(d.room)out.push(t.final+" "+d.room+"."); else out.push(t.final+" "+(lang==="fr"?d.fr:d.en)+".");
+ return out;
+}
+function score(d,q){
+ const n=norm(q); if(!n)return 0;
+ const fields=[d.en,d.fr,d.room,d.floor,...d.aliases].map(norm);
+ let s=0; for(const f of fields){if(f===n)s=Math.max(s,100);else if(f.startsWith(n))s=Math.max(s,70);else if(f.includes(n))s=Math.max(s,45);}
+ for(const part of n.split(" ")){if(part.length>2&&fields.some(f=>f.includes(part)))s+=5}
+ return s;
+}
+function search(){
+ const q=$("q").value.trim(),box=$("results");box.innerHTML="";
+ if(!q)return;
+ const hits=DATA.map(d=>[d,score(d,q)]).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]).slice(0,12);
+ if(!hits.length){box.innerHTML='<div class="status">No match found. Try a shorter term, French/English equivalent, or room number.</div>';return}
+ hits.forEach(([d])=>{const el=document.createElement("div");el.className="result";el.innerHTML="<strong>"+d.en+"</strong><small>"+d.fr+"</small><div class='where'>"+displayWhere(d)+"</div>";el.onclick=()=>choose(d);box.appendChild(el)});
+}
+function choose(d){
+ selected=d;$("destName").textContent=d.en+" / "+d.fr;$("destWhere").textContent=displayWhere(d);
+ $("pills").innerHTML="<span class='pill'>Pavilion "+d.p+"</span>"+(d.room?"<span class='pill'>"+d.room+"</span>":"")+(d.floor?"<span class='pill'>"+d.floor+"</span>":"");
+ $("steps").innerHTML=ambassadorSteps(d).map(s=>"<li>"+s+"</li>").join("");
+ $("note").style.display=d.note?"block":"none";$("note").textContent=d.note||"";
+ $("route").classList.add("active");$("route").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function showVisitor(){
+ if(!selected)return;$("visitorDialog").showModal();renderVisitor();
+}
+function renderVisitor(){
+ const lang=$("visitorLang").value,t=I18N[lang]||I18N.en,p=$("visitorPanel");
+ p.dir=(lang==="ar"||lang==="he")?"rtl":"ltr";
+ $("vName").textContent=(lang==="fr"?selected.fr:selected.en);
+ $("vWhere").textContent=displayWhere(selected);
+ $("vSteps").innerHTML=localizedSteps(selected,lang).map(s=>"<li>"+s+"</li>").join("");
+ $("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
+}
+$("q").addEventListener("input",search);
+$("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
+$("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");$("q").focus();window.scrollTo({top:0,behavior:"smooth"})};
+$("showVisitor").onclick=showVisitor;$("visitorLang").onchange=renderVisitor;
+$("closeVisitor").onclick=()=>$("visitorDialog").close();$("back").onclick=()=>$("visitorDialog").close();
+$("listen").onclick=()=>{if(!selected||!("speechSynthesis" in window))return; speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(localizedSteps(selected,$("visitorLang").value).join(" "));u.lang=$("visitorLang").value;speechSynthesis.speak(u)};
+const saved=localStorage.getItem("waywey.station");if(saved&&[...$("station").options].some(o=>o.value===saved))$("station").value=saved;
+$("station").onchange=()=>{localStorage.setItem("waywey.station",$("station").value);if(selected)choose(selected)};
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(()=>{}));
+</script>
+</body>
+</html>
