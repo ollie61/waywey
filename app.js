@@ -1,4 +1,4 @@
-const APP_VERSION="0.5.0";
+const APP_VERSION="0.6.0";
 let HOSPITAL={};
 let DATA=[];
 let GRAPH={};
@@ -66,6 +66,12 @@ function hospitalIdFromUrl(){
  if(p.get("visitor")==="1")return "jgh";
  return null;
 }
+function strengthBadge(level,labelFr,labelEn){
+ const n=Math.max(1,Math.min(4,Number(level)||1));
+ let bars="";
+ for(let i=1;i<=4;i++)bars+='<span class="strength-bar '+(i<=n?'on':'')+'"></span>';
+ return '<div class="dataset-strength" aria-label="Force du jeu de données : '+labelFr+' / Dataset strength: '+labelEn+'"><span class="strength-icon" aria-hidden="true">'+bars+'</span><span><strong>'+labelFr+'</strong><small>'+labelEn+'</small></span></div>';
+}
 function showHospitalLanding(){
  document.documentElement.lang="fr";
  document.title="WayWey — Choisir un hôpital / Select a hospital";
@@ -91,27 +97,36 @@ function showHospitalLanding(){
        <span class="hospital-code">HGJ · JGH</span>
        <strong>Hôpital général juif</strong>
        <span>Jewish General Hospital</span>
+       ${strengthBadge(4,"Très forte","Very strong")}
        <small>Montréal</small>
      </a>
      <a class="hospital-card" href="./chum/">
        <span class="hospital-code">CHUM</span>
        <strong>Centre hospitalier de l’Université de Montréal</strong>
        <span>Centre hospitalier de l’Université de Montréal</span>
+       ${strengthBadge(3,"Forte","Strong")}
        <small>Montréal</small>
      </a>
      <a class="hospital-card" href="./glen/">
        <span class="hospital-code">CUSM · MUHC</span>
        <strong>Site Glen</strong>
        <span>Glen site</span>
+       ${strengthBadge(3,"Forte","Strong")}
        <small>Montréal</small>
      </a>
      <a class="hospital-card" href="./verdun/">
        <span class="hospital-code">VERDUN</span>
        <strong>Hôpital de Verdun</strong>
        <span>Verdun Hospital</span>
+       ${strengthBadge(2,"En développement","Developing")}
        <small>Montréal</small>
      </a>
    </section>
+   <div class="strength-legend">
+     <span><strong>Force du jeu de données / Dataset strength</strong></span>
+     <span>▮ = initial · ▮▮ = en développement · ▮▮▮ = forte · ▮▮▮▮ = très forte</span>
+     <small>Indique la couverture, le niveau de vérification et la maturité du routage — pas une garantie absolue d’exactitude.</small>
+   </div>
    <div class="landing-note">WayWey est actuellement un outil non officiel de soutien à l’orientation. / WayWey is currently an unofficial wayfinding support tool.</div>
  </main>`;
 }
