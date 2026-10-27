@@ -1,0 +1,46 @@
+{
+  "graph": {
+    "C": [
+      "D"
+    ],
+    "D": [
+      "C",
+      "R"
+    ],
+    "R": [
+      "D"
+    ]
+  },
+  "pavilionLabels": {
+    "en": {
+      "A": "Pavilion A",
+      "B": "Pavilion B",
+      "C": "Pavilion C",
+      "D": "Pavilion D",
+      "E": "Pavilion E",
+      "F": "Pavilion F",
+      "R": "Pavilion R",
+      "S": "Pavilion S"
+    },
+    "fr": {
+      "A": "Pavillon A",
+      "B": "Pavillon B",
+      "C": "Pavillon C",
+      "D": "Pavillon D",
+      "E": "Pavillon E",
+      "F": "Pavillon F",
+      "R": "Pavillon R",
+      "S": "Pavillon S"
+    }
+  },
+  "noteTranslations": {
+    "fr": {}
+  },
+  "specialRoutes": {},
+  "routingNotes": {
+    "C-D": "CHUM January 2026 guide states public circulation between Pavilions C and D is available at the 1st, 2nd and 8th floors.",
+    "D-R": "CHUM January 2026 guide states the underground passage at basement level 1 between Pavilions D and R is accessible to all and provides access to Champ-de-Mars métro.",
+    "C-F": "Not included in public graph: the 5th-floor walkway is staff-only and the basement-2 passage is staff/physician/logistics only.",
+    "E-F": "Not included in public graph: the underground passage is staff/physician and escorted-patient only."
+  }
+}
