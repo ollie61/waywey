@@ -1,0 +1,43 @@
+{
+  "graph": {
+    "A": [
+      "B"
+    ],
+    "B": [
+      "A"
+    ],
+    "C": [
+      "D"
+    ],
+    "D": [
+      "C"
+    ],
+    "E": []
+  },
+  "pavilionLabels": {
+    "en": {
+      "A": "Block A — Montreal Children's Hospital",
+      "B": "Block B — Montreal Children's Hospital",
+      "C": "Block C — Royal Victoria Hospital",
+      "D": "Block D — Royal Victoria / Cedars / Montreal Chest Institute",
+      "E": "Block E — Research Institute"
+    },
+    "fr": {
+      "A": "Bloc A — Hôpital de Montréal pour enfants",
+      "B": "Bloc B — Hôpital de Montréal pour enfants",
+      "C": "Bloc C — Hôpital Royal Victoria",
+      "D": "Bloc D — Hôpital Royal Victoria / Cèdres / Institut thoracique",
+      "E": "Bloc E — Institut de recherche"
+    }
+  },
+  "noteTranslations": {
+    "fr": {}
+  },
+  "specialRoutes": {},
+  "routingNotes": {
+    "A-B": "Blocks A and B form the Montreal Children's Hospital sector in the official MUHC Glen wayfinding directory.",
+    "C-D": "Blocks C and D form the Royal Victoria Hospital adult sector; Block D also contains Cedars Cancer Centre and Montreal Chest Institute.",
+    "cross-sector": "WayWey does not yet infer a public indoor route between the A/B and C/D sectors. Current signage should be followed.",
+    "E": "Research Institute public routing is not yet encoded."
+  }
+}
