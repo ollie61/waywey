@@ -1,7 +1,8 @@
-const CACHE="waywey-v0.12";
+const CACHE="waywey-v0.13";
 const ASSETS=[
  "./","./index.html","./manifest.webmanifest","./qrcode.min.js","./styles.css","./app.js",
- "./hospitals/jgh/config.json","./hospitals/jgh/destinations.json","./hospitals/jgh/routes.json","./hospitals/jgh/guide.json"
+ "./hospitals/jgh/config.json","./hospitals/jgh/destinations.json","./hospitals/jgh/routes.json","./hospitals/jgh/guide.json",
+ "./hospitals/chum/config.json","./hospitals/chum/destinations.json","./hospitals/chum/routes.json","./hospitals/chum/guide.json"
 ];
 self.addEventListener("install",e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
