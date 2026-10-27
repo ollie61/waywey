@@ -39,3 +39,15 @@ dialog{border:0;border-radius:18px;padding:0;width:min(94vw,720px);box-shadow:0 
 .landing-note{margin-top:22px;padding-top:15px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;line-height:1.5}
 @media(hover:hover) and (pointer:fine){.hospital-card:hover{border-color:#8fb2ba;transform:translateY(-1px)}}
 @media(max-width:620px){.hospital-grid{grid-template-columns:1fr}.hospital-card{min-height:132px}.landing-brand{font-size:2.2rem}.landing-main{padding-top:22px}}
+
+.dataset-strength{display:flex;align-items:center;gap:9px;margin-top:13px;padding-top:11px;border-top:1px solid var(--line)}
+.dataset-strength>span:last-child{display:flex;flex-direction:column;line-height:1.15}
+.dataset-strength strong{font-size:.82rem;color:var(--ink)}
+.dataset-strength small{margin-top:2px;font-size:.72rem;color:var(--muted);font-weight:700}
+.strength-icon{display:inline-flex;align-items:flex-end;gap:2px;height:20px;width:29px}
+.strength-bar{display:block;width:5px;border-radius:2px;background:#d4dee1}
+.strength-bar:nth-child(1){height:7px}.strength-bar:nth-child(2){height:11px}.strength-bar:nth-child(3){height:15px}.strength-bar:nth-child(4){height:19px}
+.strength-bar.on{background:var(--teal)}
+.strength-legend{margin-top:20px;background:#eef5f6;border:1px solid var(--line);border-radius:14px;padding:12px 14px;color:var(--ink);display:grid;gap:4px;font-size:.8rem;line-height:1.4}
+.strength-legend>span:nth-child(2){font-weight:800;color:var(--teal2);letter-spacing:.01em}
+.strength-legend small{color:var(--muted);font-size:.76rem}
