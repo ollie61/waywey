@@ -47,5 +47,13 @@
   ],
   "nodeAliases": {},
   "specialPavilionLabels": {},
-  "defaultVisitorLanguage": "fr"
+  "defaultVisitorLanguage": "fr",
+  "datasetStrength": {
+    "level": 3,
+    "label": {
+      "fr": "Forte",
+      "en": "Strong"
+    },
+    "basis": "119 destinations; strong current official coverage, but not yet the full 202-entry directory."
+  }
 }
