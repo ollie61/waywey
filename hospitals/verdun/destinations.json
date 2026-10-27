@@ -1,0 +1,632 @@
+[
+  {
+    "en": "Clinical Access / Accueil clinique",
+    "fr": "Accueil clinique",
+    "p": "N",
+    "loc": "N1 612",
+    "aliases": [
+      "clinical access",
+      "accueil clinique",
+      "semi urgent clinic"
+    ],
+    "status": "official",
+    "note": "Current Accueil clinique page: Black Block, N1 612. Door 26 is recommended for direct access.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "External Clinics",
+    "fr": "Cliniques externes",
+    "p": "N",
+    "loc": "N1 612",
+    "aliases": [
+      "specialty clinics",
+      "outpatient clinics",
+      "cliniques spécialisées",
+      "cliniques externes"
+    ],
+    "status": "official",
+    "note": "Current specialty pages identify the external-clinic registration area at N1 612, counters A, B, C or D.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Internal Medicine — Clinic",
+    "fr": "Médecine interne — Clinique",
+    "p": "N",
+    "loc": "N1 612",
+    "aliases": [
+      "internal medicine",
+      "médecine interne"
+    ],
+    "status": "official",
+    "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Endocrinology — Clinic",
+    "fr": "Endocrinologie — Clinique",
+    "p": "N",
+    "loc": "N1 612",
+    "aliases": [
+      "endocrinology",
+      "endocrinologie",
+      "hormones",
+      "diabetes",
+      "diabète"
+    ],
+    "status": "official",
+    "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Gynecology — Clinic",
+    "fr": "Gynécologie — Clinique",
+    "p": "N",
+    "loc": "N1 612",
+    "aliases": [
+      "gynecology",
+      "gynécologie",
+      "gyno"
+    ],
+    "status": "official",
+    "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Neurology — Clinic",
+    "fr": "Neurologie — Clinique",
+    "p": "N",
+    "loc": "N1 612",
+    "aliases": [
+      "neurology",
+      "neurologie",
+      "brain",
+      "cerveau"
+    ],
+    "status": "official",
+    "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "ENT / Otolaryngology — Clinic",
+    "fr": "ORL / Oto-rhino-laryngologie — Clinique",
+    "p": "N",
+    "loc": "N1 612",
+    "aliases": [
+      "ENT",
+      "ORL",
+      "otolaryngology",
+      "oto-rhino-laryngologie",
+      "ear nose throat"
+    ],
+    "status": "official",
+    "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Pulmonology — Clinic",
+    "fr": "Pneumologie — Clinique",
+    "p": "N",
+    "loc": "N1 612",
+    "aliases": [
+      "pulmonology",
+      "pneumologie",
+      "lung clinic",
+      "lungs",
+      "poumons"
+    ],
+    "status": "official",
+    "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "General and Vascular Surgery — Clinic",
+    "fr": "Chirurgie générale et vasculaire — Clinique",
+    "p": "N",
+    "loc": "N1 612",
+    "aliases": [
+      "general surgery",
+      "vascular surgery",
+      "chirurgie générale",
+      "chirurgie vasculaire"
+    ],
+    "status": "official",
+    "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Day Medicine",
+    "fr": "Médecine de jour",
+    "p": "N",
+    "loc": "N1 638.1 / N1 638.2",
+    "aliases": [
+      "day medicine",
+      "médecine de jour",
+      "day hospital"
+    ],
+    "status": "official",
+    "note": "Current Hôpital de Verdun Day Medicine page: Black Block, N1 638.1 and N1 638.2.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Microbiology — Day Medicine",
+    "fr": "Microbiologie — Médecine de jour",
+    "p": "N",
+    "loc": "N1 638.1 / N1 638.2",
+    "aliases": [
+      "microbiology",
+      "microbiologie",
+      "infectious disease clinic"
+    ],
+    "status": "official",
+    "note": "Current Hôpital de Verdun Microbiology page lists the Day Medicine service in the Black Block at N1 638.1 and N1 638.2.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Nuclear Medicine",
+    "fr": "Médecine nucléaire",
+    "p": "N",
+    "loc": "N1-661",
+    "aliases": [
+      "nuclear medicine",
+      "médecine nucléaire",
+      "MIBI",
+      "scintigraphy",
+      "scintigraphie"
+    ],
+    "status": "official",
+    "note": "Current medical imaging page: Black Block, N1-661, direct access through Door 26.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Surgery Inpatient Unit — Black Block",
+    "fr": "Unité de soins de chirurgie — Bloc Noir",
+    "p": "N",
+    "loc": "N5",
+    "aliases": [
+      "surgery unit",
+      "chirurgie hospitalisation",
+      "N5"
+    ],
+    "status": "official",
+    "note": "CCSMTL announced the surgery inpatient unit moved into the new Black Block; the current unit is identified as N5.",
+    "source": "CCSMTL news, 24 February 2026"
+  },
+  {
+    "en": "Appointment Centre",
+    "fr": "Centre de rendez-vous",
+    "p": "J",
+    "loc": "J1 354",
+    "aliases": [
+      "appointments",
+      "rendez-vous",
+      "centre rendez vous",
+      "booking"
+    ],
+    "status": "official",
+    "note": "Current specialty pages list the Appointment Centre at J1 354 in the Yellow Block, near Emergency.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Medical Imaging / Radiology / X-ray",
+    "fr": "Imagerie médicale / Radiologie / Rayons X",
+    "p": "B",
+    "loc": "B1-404",
+    "aliases": [
+      "radiology",
+      "radiologie",
+      "x-ray",
+      "xray",
+      "rayons x",
+      "medical imaging",
+      "imagerie médicale"
+    ],
+    "status": "official",
+    "note": "Current medical imaging page: B1-404, ground floor.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Physiotherapy",
+    "fr": "Physiothérapie",
+    "p": "V",
+    "loc": "V4-264",
+    "aliases": [
+      "physio",
+      "physiotherapy",
+      "physical therapy",
+      "physiothérapie"
+    ],
+    "status": "official",
+    "note": "Current Physiotherapy page: Green Block, 4th floor, V4-264; use elevator 4.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Occupational Therapy",
+    "fr": "Ergothérapie",
+    "p": "V",
+    "loc": "V4-261",
+    "aliases": [
+      "occupational therapy",
+      "ergothérapie",
+      "OT"
+    ],
+    "status": "official",
+    "note": "Current Occupational Therapy page: Green Block, 4th floor, V4-261.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Clinical Nutrition",
+    "fr": "Nutrition clinique",
+    "p": "V",
+    "loc": "V4-264",
+    "aliases": [
+      "nutrition",
+      "nutrition clinique",
+      "dietitian",
+      "nutritionist"
+    ],
+    "status": "official",
+    "note": "Current Nutrition page: Green Block, V4-264.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Preoperative Clinic",
+    "fr": "Clinique préopératoire",
+    "p": "MAIN",
+    "loc": "Ground floor near 4000 boulevard LaSalle entrance",
+    "aliases": [
+      "preop",
+      "pre-op",
+      "preoperative",
+      "préopératoire"
+    ],
+    "status": "official",
+    "note": "Hospital modernization page states the preoperative clinic is on the ground floor near the 4000 boulevard LaSalle entrance.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Patient Accounts / Cashier",
+    "fr": "Perception des comptes / Comptes patients",
+    "p": "MAIN",
+    "loc": "Ground floor near 4000 boulevard LaSalle entrance",
+    "aliases": [
+      "patient accounts",
+      "billing",
+      "cashier",
+      "comptes patients",
+      "perception des comptes"
+    ],
+    "status": "official",
+    "note": "Hospital modernization page states Patient Accounts is on the ground floor near the 4000 boulevard LaSalle entrance.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Day Surgery",
+    "fr": "Chirurgie d’un jour",
+    "p": "MAIN",
+    "loc": "Existing hospital — renovated area; exact room to verify",
+    "aliases": [
+      "day surgery",
+      "same day surgery",
+      "chirurgie d'un jour"
+    ],
+    "status": "verify",
+    "note": "The modernization project confirms a renovated Day Surgery area in the existing hospital; current exact room is not stated on the public project page.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Emergency Department",
+    "fr": "Urgence",
+    "p": "J",
+    "loc": "Emergency entrance — boulevard Gaétan-Laberge",
+    "aliases": [
+      "emergency",
+      "ER",
+      "urgence",
+      "urgences"
+    ],
+    "status": "official",
+    "note": "Current hospital access information identifies the Emergency entrance on boulevard Gaétan-Laberge.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Blood Collection / Test Centre",
+    "fr": "Centre de prélèvements",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "blood test",
+      "blood work",
+      "blood draw",
+      "prise de sang",
+      "prélèvement",
+      "centre de prélèvements"
+    ],
+    "status": "verify",
+    "note": "The current CCSMTL blood collection page confirms the service at Hôpital de Verdun but does not state a room number.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Spiritual Care",
+    "fr": "Soins spirituels",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact room to verify",
+    "aliases": [
+      "spiritual care",
+      "soins spirituels",
+      "chapel",
+      "chapelle",
+      "prayer",
+      "prière"
+    ],
+    "status": "verify",
+    "note": "Current CCSMTL Spiritual Care page confirms the service at Hôpital de Verdun but does not publish a room number.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Cardiology — Clinic",
+    "fr": "Cardiologie — Clinique",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "cardiology",
+      "cardiologie",
+      "heart",
+      "coeur"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Plastic Surgery — Clinic",
+    "fr": "Chirurgie plastique — Clinique",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "plastic surgery",
+      "chirurgie plastie",
+      "chirurgie plastique"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Dermatology — Clinic",
+    "fr": "Dermatologie — Clinique",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "dermatology",
+      "dermatologie",
+      "skin",
+      "peau"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Gastroenterology — Clinic",
+    "fr": "Gastroentérologie — Clinique",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "gastroenterology",
+      "gastroentérologie",
+      "gastro",
+      "digestive"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Nephrology — Clinic",
+    "fr": "Néphrologie — Clinique",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "nephrology",
+      "néphrologie",
+      "kidney",
+      "rein"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Ophthalmology — Clinic",
+    "fr": "Ophtalmologie — Clinique",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "ophthalmology",
+      "ophtalmologie",
+      "eyes",
+      "yeux"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Orthopedics — Clinic",
+    "fr": "Orthopédie — Clinique",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "orthopedics",
+      "orthopaedics",
+      "orthopédie",
+      "bones",
+      "os"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Respiratory Physiology",
+    "fr": "Physiologie respiratoire",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "respiratory physiology",
+      "physiologie respiratoire",
+      "lung function",
+      "spirometry",
+      "spirométrie"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Urology — Clinic",
+    "fr": "Urologie — Clinique",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "urology",
+      "urologie",
+      "urinary",
+      "prostate"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Nutrition — other hospital services",
+    "fr": "Nutrition — autres services",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "nutrition"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Medical Electrophysiology",
+    "fr": "Électrophysiologie médicale",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "electrophysiology",
+      "électrophysiologie",
+      "EEG",
+      "EMG"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Palliative Care",
+    "fr": "Soins palliatifs",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "palliative care",
+      "soins palliatifs"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Hemato-Oncology",
+    "fr": "Hémato-oncologie",
+    "p": "",
+    "loc": "Hôpital de Verdun — exact current room to verify",
+    "aliases": [
+      "hematology oncology",
+      "hémato-oncologie",
+      "cancer",
+      "oncology",
+      "oncologie"
+    ],
+    "status": "verify",
+    "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Former External Clinic Counter — Mauve Block",
+    "fr": "Ancien comptoir des cliniques externes — Bloc Mauve",
+    "p": "M",
+    "loc": "M1-252",
+    "aliases": [
+      "M1-252",
+      "mauve",
+      "purple block"
+    ],
+    "status": "verify",
+    "note": "Some specialty pages still mention an external-clinic counter at M1-252 (Mauve Block), while newer pages direct patients to N1 612 in the Black Block. Treat M1-252 as transition information until audited.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Main Entrance — 4000 boulevard LaSalle",
+    "fr": "Entrée principale — 4000, boulevard LaSalle",
+    "p": "MAIN",
+    "loc": "4000 boulevard LaSalle",
+    "aliases": [
+      "main entrance",
+      "entrée principale",
+      "4000 lasalle"
+    ],
+    "status": "official",
+    "note": "Current October 2026 information identifies 4000 boulevard LaSalle as the main entrance.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "New Pavilion Entrance — Door 26",
+    "fr": "Entrée du nouveau pavillon — Porte 26",
+    "p": "N",
+    "loc": "Boulevard LaSalle at rue de l’Église",
+    "aliases": [
+      "door 26",
+      "porte 26",
+      "new pavilion",
+      "nouveau pavillon",
+      "black block",
+      "bloc noir"
+    ],
+    "status": "official",
+    "note": "Door 26 is the Black Block / new pavilion entrance on boulevard LaSalle at rue de l’Église.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "Emergency Entrance",
+    "fr": "Entrée de l’Urgence",
+    "p": "J",
+    "loc": "Boulevard Gaétan-Laberge",
+    "aliases": [
+      "emergency entrance",
+      "entrée urgence",
+      "gaétan-laberge"
+    ],
+    "status": "official",
+    "note": "Current hospital instructions identify the Emergency entrance on boulevard Gaétan-Laberge.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  },
+  {
+    "en": "GMF-U / 3950 Entrance",
+    "fr": "Entrée 3950 / GMF-U",
+    "p": "O",
+    "loc": "3950 boulevard LaSalle — Door 4",
+    "aliases": [
+      "3950",
+      "door 4",
+      "porte 4",
+      "GMF-U",
+      "GMFU"
+    ],
+    "status": "verify",
+    "note": "Door 4 at 3950 boulevard LaSalle was used as an alternate entrance during construction. Confirm its current public-access role before relying on it.",
+    "source": "CCSMTL / Hôpital de Verdun current public information"
+  }
+]
