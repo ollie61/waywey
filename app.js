@@ -1,4 +1,4 @@
-const APP_VERSION="0.6.0";
+const APP_VERSION="0.1.0";
 let HOSPITAL={};
 let DATA=[];
 let GRAPH={};
