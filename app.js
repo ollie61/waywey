@@ -271,7 +271,10 @@ async function shareVisitorDirections(){
  }
 }
 function showVisitor(){
- if(!selected)return;$("visitorDialog").showModal();renderVisitor();
+ if(!selected)return;
+ const preferred=HOSPITAL.defaultVisitorLanguage||HOSPITAL.defaultAppLanguage||"en";
+ if([...$("visitorLang").options].some(o=>o.value===preferred))$("visitorLang").value=preferred;
+ $("visitorDialog").showModal();renderVisitor();
 }
 function renderVisitor(){
  const lang=$("visitorLang").value,t=I18N[lang]||I18N.en,p=$("visitorPanel");
