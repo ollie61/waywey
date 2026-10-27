@@ -1,4 +1,4 @@
-const APP_VERSION="0.4.0";
+const APP_VERSION="0.5.0";
 let HOSPITAL={};
 let DATA=[];
 let GRAPH={};
@@ -59,8 +59,61 @@ let selected=null;
 let appLang="en";
 
 function hospitalIdFromUrl(){
- const q=new URLSearchParams(window.location.search).get("hospital");
- return q&&/^[a-z0-9-]+$/i.test(q)?q.toLowerCase():"jgh";
+ const p=new URLSearchParams(window.location.search);
+ const q=p.get("hospital");
+ if(q&&/^[a-z0-9-]+$/i.test(q))return q.toLowerCase();
+ // Backward compatibility for older JGH visitor links created before hospital datasets.
+ if(p.get("visitor")==="1")return "jgh";
+ return null;
+}
+function showHospitalLanding(){
+ document.documentElement.lang="fr";
+ document.title="WayWey — Choisir un hôpital / Select a hospital";
+ const meta=document.querySelector('meta[name="description"]');
+ if(meta)meta.content="WayWey — choisissez un hôpital / select a hospital";
+ document.body.innerHTML=`
+ <header class="landing-header">
+   <div class="landing-wrap">
+     <div>
+       <div class="landing-brand">WayWey</div>
+       <div class="landing-kicker">Orientation hospitalière · Hospital wayfinding · v${APP_VERSION}</div>
+     </div>
+   </div>
+ </header>
+ <main class="landing-wrap landing-main">
+   <section class="landing-intro">
+     <h1>Choisir un hôpital</h1>
+     <p class="landing-en">Select a hospital</p>
+     <p>Sélectionnez l’établissement où vous travaillez. / Select the hospital where you are working.</p>
+   </section>
+   <section class="hospital-grid" aria-label="Hôpitaux disponibles / Available hospitals">
+     <a class="hospital-card" href="./jgh/">
+       <span class="hospital-code">HGJ · JGH</span>
+       <strong>Hôpital général juif</strong>
+       <span>Jewish General Hospital</span>
+       <small>Montréal</small>
+     </a>
+     <a class="hospital-card" href="./chum/">
+       <span class="hospital-code">CHUM</span>
+       <strong>Centre hospitalier de l’Université de Montréal</strong>
+       <span>Centre hospitalier de l’Université de Montréal</span>
+       <small>Montréal</small>
+     </a>
+     <a class="hospital-card" href="./glen/">
+       <span class="hospital-code">CUSM · MUHC</span>
+       <strong>Site Glen</strong>
+       <span>Glen site</span>
+       <small>Montréal</small>
+     </a>
+     <a class="hospital-card" href="./verdun/">
+       <span class="hospital-code">VERDUN</span>
+       <strong>Hôpital de Verdun</strong>
+       <span>Verdun Hospital</span>
+       <small>Montréal</small>
+     </a>
+   </section>
+   <div class="landing-note">WayWey est actuellement un outil non officiel de soutien à l’orientation. / WayWey is currently an unofficial wayfinding support tool.</div>
+ </main>`;
 }
 function storageKey(name){return "waywey."+(HOSPITAL.id||hospitalIdFromUrl())+"."+name}
 async function fetchJson(url){
@@ -291,6 +344,12 @@ function renderVisitor(){
  const qrt=QR_UI[lang]||QR_UI.en;$("showQr").textContent="▦ "+qrt.button;$("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
 }
 async function bootstrap(){
+ const requestedHospital=hospitalIdFromUrl();
+ if(!requestedHospital){
+   showHospitalLanding();
+   if("serviceWorker" in navigator)navigator.serviceWorker.register("./service-worker.js").catch(()=>{});
+   return;
+ }
  try{
    await loadHospital();
  }catch(e){
