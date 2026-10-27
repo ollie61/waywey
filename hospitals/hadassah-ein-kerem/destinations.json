@@ -1,0 +1,899 @@
+[
+  {
+    "en": "Emergency Department",
+    "he": "המחלקה לרפואה דחופה",
+    "ar": "قسم الطوارئ",
+    "p": "ER",
+    "loc": "Emergency Medicine Center",
+    "aliases": [
+      "emergency",
+      "ER",
+      "מיון",
+      "חדר מיון",
+      "طوارئ",
+      "قسم الطوارئ",
+      "trauma"
+    ],
+    "status": "official",
+    "source": "Hadassah — Division of Emergency Medicine, Ein Kerem"
+  },
+  {
+    "en": "Adult Emergency Unit",
+    "he": "מיון מבוגרים",
+    "ar": "طوارئ البالغين",
+    "p": "ER",
+    "loc": "Emergency Medicine Center",
+    "aliases": [
+      "adult emergency",
+      "מיון מבוגרים",
+      "طوارئ بالغين"
+    ],
+    "status": "official",
+    "source": "Hadassah — Division of Emergency Medicine, Ein Kerem"
+  },
+  {
+    "en": "Pediatric Emergency Unit",
+    "he": "מיון ילדים",
+    "ar": "طوارئ الأطفال",
+    "p": "ER",
+    "loc": "Emergency Medicine Center",
+    "aliases": [
+      "pediatric emergency",
+      "children emergency",
+      "מיון ילדים",
+      "طوارئ الأطفال"
+    ],
+    "status": "official",
+    "source": "Hadassah — Division of Emergency Medicine, Ein Kerem"
+  },
+  {
+    "en": "Heart Institute / Cardiology",
+    "he": "מכון הלב / קרדיולוגיה",
+    "ar": "معهد القلب / أمراض القلب",
+    "p": "DAVIDSON",
+    "loc": "Floor 3",
+    "aliases": [
+      "cardiology",
+      "heart",
+      "cardio",
+      "קרדיולוגיה",
+      "לב",
+      "قلب",
+      "أمراض القلب"
+    ],
+    "status": "official",
+    "source": "Hadassah — Cardiology, The Heart Institute"
+  },
+  {
+    "en": "Intensive Coronary Care Unit (ICCU)",
+    "he": "היחידה לטיפול נמרץ לב",
+    "ar": "وحدة العناية القلبية المركزة",
+    "p": "DAVIDSON",
+    "loc": "Floor 3",
+    "aliases": [
+      "ICCU",
+      "coronary care",
+      "טיפול נמרץ לב",
+      "عناية قلبية"
+    ],
+    "status": "official",
+    "source": "Hadassah — Intensive Coronary Care Unit"
+  },
+  {
+    "en": "General Surgery",
+    "he": "כירורגיה כללית",
+    "ar": "الجراحة العامة",
+    "p": "DAVIDSON",
+    "loc": "Floor 6",
+    "aliases": [
+      "general surgery",
+      "surgery",
+      "כירורגיה",
+      "جراحة"
+    ],
+    "status": "official",
+    "source": "Hadassah — Department of General Surgery Ein Kerem"
+  },
+  {
+    "en": "Cardiothoracic Surgery",
+    "he": "כירורגיית לב וחזה",
+    "ar": "جراحة القلب والصدر",
+    "p": "DAVIDSON",
+    "loc": "Floor 12",
+    "aliases": [
+      "cardiothoracic surgery",
+      "heart surgery",
+      "ניתוחי לב",
+      "جراحة القلب"
+    ],
+    "status": "official",
+    "source": "Hadassah — Department of Cardiothoracic Surgery"
+  },
+  {
+    "en": "Neurosurgery — Inpatient Department",
+    "he": "נוירוכירורגיה — אשפוז",
+    "ar": "جراحة الأعصاب — قسم التنويم",
+    "p": "DAVIDSON",
+    "loc": "Floor 12",
+    "aliases": [
+      "neurosurgery",
+      "נוירוכירורגיה",
+      "جراحة الأعصاب"
+    ],
+    "status": "official",
+    "source": "Hadassah — Department of Neurosurgery"
+  },
+  {
+    "en": "Neurosurgery — Outpatient Clinic",
+    "he": "נוירוכירורגיה — מרפאה",
+    "ar": "جراحة الأعصاب — العيادة",
+    "p": "MAIN",
+    "loc": "Outpatient wing, Floor 3",
+    "aliases": [
+      "neurosurgery clinic",
+      "מרפאת נוירוכירורגיה",
+      "عيادة جراحة الأعصاب"
+    ],
+    "status": "official",
+    "source": "Hadassah — Department of Neurosurgery"
+  },
+  {
+    "en": "Orthopedics",
+    "he": "אורתופדיה",
+    "ar": "العظام",
+    "p": "DAVIDSON",
+    "loc": "Floor 5",
+    "aliases": [
+      "orthopedics",
+      "orthopaedics",
+      "ortho",
+      "אורתופדיה",
+      "عظام"
+    ],
+    "status": "official",
+    "source": "Hadassah — Orthopedic Surgery"
+  },
+  {
+    "en": "Urology",
+    "he": "אורולוגיה",
+    "ar": "المسالك البولية",
+    "p": "DAVIDSON",
+    "loc": "Floor 5",
+    "aliases": [
+      "urology",
+      "אורולוגיה",
+      "مسالك بولية",
+      "prostate",
+      "ערמונית",
+      "بروستاتا"
+    ],
+    "status": "official",
+    "source": "Hadassah — Urology Department"
+  },
+  {
+    "en": "Neurology — Inpatient Department",
+    "he": "נוירולוגיה — אשפוז",
+    "ar": "طب الأعصاب — قسم التنويم",
+    "p": "DAVIDSON",
+    "loc": "Floor 9",
+    "aliases": [
+      "neurology",
+      "נוירולוגיה",
+      "أعصاب"
+    ],
+    "status": "verify",
+    "source": "Hadassah — Department of Neurology; older patient-information page conflict",
+    "notes": {
+      "he": "דף המחלקה הנוכחי מציין מגדל דוידסון, קומה 9. דף מידע ישן יותר למטופלים מציין קומה 6; יש לאמת מול שילוט עדכני.",
+      "en": "The current department page lists Davidson Building, Floor 9. An older patient-information page says Floor 6; verify against current signage.",
+      "ar": "تذكر صفحة القسم الحالية برج ديفيدسون، الطابق 9، بينما تذكر صفحة أقدم للمرضى الطابق 6. يُرجى التحقق من اللافتات الحالية."
+    }
+  },
+  {
+    "en": "Neurology — Outpatient Clinic",
+    "he": "נוירולוגיה — מרפאת חוץ",
+    "ar": "طب الأعصاب — العيادة الخارجية",
+    "p": "CLINICS",
+    "loc": "Floor 6",
+    "aliases": [
+      "neurology clinic",
+      "מרפאת נוירולוגיה",
+      "عيادة الأعصاب",
+      "MS clinic",
+      "epilepsy"
+    ],
+    "status": "official",
+    "source": "Hadassah — Neurology Outpatient Clinic"
+  },
+  {
+    "en": "Neurological Diagnostic Laboratories",
+    "he": "מעבדות אבחון נוירולוגיות",
+    "ar": "مختبرات تشخيص الأعصاب",
+    "p": "CLINICS",
+    "loc": "Floor 6",
+    "aliases": [
+      "EEG",
+      "EMG",
+      "NCV",
+      "VEP",
+      "BERA",
+      "TCD",
+      "נוירופיזיולוגיה",
+      "تخطيط الدماغ",
+      "تخطيط العضلات"
+    ],
+    "status": "official",
+    "source": "Hadassah — Diagnostic Laboratories and Services, Neurology"
+  },
+  {
+    "en": "Nephrology and Hypertension",
+    "he": "נפרולוגיה ויתר לחץ דם",
+    "ar": "أمراض الكلى وارتفاع ضغط الدم",
+    "p": "MAIN",
+    "loc": "Floor 6",
+    "aliases": [
+      "nephrology",
+      "kidney",
+      "נפרולוגיה",
+      "כליות",
+      "كلى",
+      "ضغط الدم"
+    ],
+    "status": "official",
+    "source": "Hadassah — Nephrology and Hypertension"
+  },
+  {
+    "en": "Endocrinology, Metabolism and Diabetes",
+    "he": "אנדוקרינולוגיה, מטבוליזם וסוכרת",
+    "ar": "الغدد الصماء والأيض والسكري",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "endocrinology",
+      "diabetes",
+      "אנדוקרינולוגיה",
+      "סוכרת",
+      "غدد صماء",
+      "سكري"
+    ],
+    "status": "official",
+    "source": "Hadassah — Endocrinology, Metabolism and Diabetes"
+  },
+  {
+    "en": "General Endocrinology Clinic",
+    "he": "המרפאה לאנדוקרינולוגיה כללית",
+    "ar": "عيادة الغدد الصماء العامة",
+    "p": "CLINICS",
+    "loc": "Floor 8",
+    "aliases": [
+      "general endocrinology",
+      "thyroid clinic",
+      "מרפאת אנדוקרינולוגיה",
+      "בלוטת התריס",
+      "عيادة الغدد",
+      "الغدة الدرقية"
+    ],
+    "status": "official",
+    "source": "Hadassah — General Endocrinology Clinic"
+  },
+  {
+    "en": "Gastroenterology and Liver Institute",
+    "he": "המכון לגסטרואנטרולוגיה ומחלות כבד",
+    "ar": "معهد الجهاز الهضمي وأمراض الكبد",
+    "p": "SHARETT",
+    "loc": "Floor 1",
+    "aliases": [
+      "gastroenterology",
+      "gastro",
+      "liver",
+      "גסטרו",
+      "כבד",
+      "جهاز هضمي",
+      "كبد",
+      "colonoscopy",
+      "endoscopy"
+    ],
+    "status": "official",
+    "source": "Hadassah — Gastroenterology / Gastrology Institute"
+  },
+  {
+    "en": "Gastroenterology Laboratory",
+    "he": "מעבדת גסטרו",
+    "ar": "مختبر الجهاز الهضمي",
+    "p": "CLINICS",
+    "loc": "Floor 4",
+    "aliases": [
+      "gastro lab",
+      "manometry",
+      "breath test",
+      "מעבדת גסטרו",
+      "مختبر الهضم"
+    ],
+    "status": "official",
+    "source": "Hadassah — Gastro Laboratory"
+  },
+  {
+    "en": "Medical Imaging Division",
+    "he": "אגף הדימות",
+    "ar": "قسم التصوير الطبي",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "medical imaging",
+      "imaging",
+      "radiology",
+      "דימות",
+      "רדיולוגיה",
+      "تصوير طبي",
+      "أشعة"
+    ],
+    "status": "official",
+    "source": "Hadassah — Imaging Division"
+  },
+  {
+    "en": "MRI Center",
+    "he": "מרכז MRI",
+    "ar": "مركز الرنين المغناطيسي MRI",
+    "p": "CLINICS",
+    "loc": "Floor -1",
+    "aliases": [
+      "MRI",
+      "MRI center",
+      "אם אר איי",
+      "אמ אר איי",
+      "רצ",
+      "تصوير بالرنين المغناطيسي",
+      "رنين"
+    ],
+    "status": "official",
+    "source": "Hadassah — MRI Center"
+  },
+  {
+    "en": "General Radiology / X-ray",
+    "he": "רדיולוגיה כללית / רנטגן",
+    "ar": "الأشعة العامة / الأشعة السينية",
+    "p": "MAIN",
+    "loc": "Floor 2",
+    "aliases": [
+      "x-ray",
+      "xray",
+      "radiology",
+      "רנטגן",
+      "רדיולוגיה",
+      "أشعة سينية"
+    ],
+    "status": "official",
+    "source": "Hadassah — General Radiology Unit"
+  },
+  {
+    "en": "Vascular and Interventional Radiology",
+    "he": "רדיולוגיה פולשנית וכלי דם",
+    "ar": "الأشعة التداخلية والأوعية الدموية",
+    "p": "MAIN",
+    "loc": "Floor 2",
+    "aliases": [
+      "interventional radiology",
+      "vascular radiology",
+      "רדיולוגיה פולשנית",
+      "أشعة تداخلية"
+    ],
+    "status": "official",
+    "source": "Hadassah — Vascular and Interventional Radiology"
+  },
+  {
+    "en": "Invasive Neuro-Radiology",
+    "he": "נוירורדיולוגיה פולשנית",
+    "ar": "الأشعة العصبية التداخلية",
+    "p": "MAIN",
+    "loc": "Floor 2",
+    "aliases": [
+      "neuro radiology",
+      "neuroradiology",
+      "נוירורדיולוגיה",
+      "أشعة عصبية تداخلية"
+    ],
+    "status": "official",
+    "source": "Hadassah — Invasive Neuro-Radiology Unit"
+  },
+  {
+    "en": "Ophthalmology",
+    "he": "רפואת עיניים",
+    "ar": "طب العيون",
+    "p": "MAIN",
+    "loc": "Mezzanine floor",
+    "aliases": [
+      "ophthalmology",
+      "eye clinic",
+      "עיניים",
+      "רפואת עיניים",
+      "عيون"
+    ],
+    "status": "official",
+    "source": "Hadassah — Ophthalmology Division"
+  },
+  {
+    "en": "ENT / Otolaryngology — Inpatient Department",
+    "he": "אף אוזן גרון / אא״ג — אשפוז",
+    "ar": "الأنف والأذن والحنجرة — قسم التنويم",
+    "p": "DAVIDSON",
+    "loc": "Floor 7",
+    "aliases": [
+      "ENT",
+      "otolaryngology",
+      "אף אוזן גרון",
+      "אאג",
+      "أنف أذن حنجرة"
+    ],
+    "status": "official",
+    "source": "Hadassah — Otolaryngology / Head and Neck Surgery"
+  },
+  {
+    "en": "ENT / Otolaryngology — Clinic",
+    "he": "אף אוזן גרון / אא״ג — מרפאה",
+    "ar": "الأنف والأذن والحنجرة — العيادة",
+    "p": "DENTAL",
+    "loc": "Entrance floor",
+    "aliases": [
+      "ENT clinic",
+      "אאג מרפאה",
+      "מרפאת אף אוזן גרון",
+      "عيادة الأنف والأذن والحنجرة"
+    ],
+    "status": "official",
+    "source": "Hadassah — Otolaryngology / Head and Neck Surgery"
+  },
+  {
+    "en": "Oral Medicine / Dental Clinics",
+    "he": "רפואת הפה / מרפאות שיניים",
+    "ar": "طب الفم / عيادات الأسنان",
+    "p": "DENTAL",
+    "loc": "School of Dental Medicine",
+    "aliases": [
+      "dentist",
+      "dental",
+      "oral medicine",
+      "שיניים",
+      "רפואת הפה",
+      "أسنان",
+      "طب الفم"
+    ],
+    "status": "official",
+    "source": "Hadassah — Department of Oral Medicine"
+  },
+  {
+    "en": "Sharett Institute of Oncology",
+    "he": "מכון שרת לאונקולוגיה",
+    "ar": "معهد شاريت للأورام",
+    "p": "SHARETT",
+    "loc": "Floor -3",
+    "aliases": [
+      "oncology",
+      "cancer",
+      "אונקולוגיה",
+      "סרטן",
+      "أورام",
+      "سرطان",
+      "Sharett",
+      "שרת",
+      "شاريت"
+    ],
+    "status": "official",
+    "source": "Hadassah — Sharett Institute of Oncology"
+  },
+  {
+    "en": "Oncology Day Care — Admissions",
+    "he": "אשפוז יום אונקולוגי — קבלה",
+    "ar": "العلاج النهاري للأورام — القبول",
+    "p": "SHARETT",
+    "loc": "Floor -2",
+    "aliases": [
+      "oncology day care",
+      "oncology admissions",
+      "אשפוז יום אונקולוגי",
+      "علاج نهاري أورام"
+    ],
+    "status": "official",
+    "source": "Hadassah — Ein Kerem Hospital Admissions"
+  },
+  {
+    "en": "Hematology",
+    "he": "המטולוגיה",
+    "ar": "أمراض الدم",
+    "p": "SHARETT",
+    "loc": "Floor 2",
+    "aliases": [
+      "hematology",
+      "המטולוגיה",
+      "أمراض الدم",
+      "blood diseases"
+    ],
+    "status": "official",
+    "source": "Hadassah — Division of Hematology"
+  },
+  {
+    "en": "Hematology Day Care — Admissions",
+    "he": "אשפוז יום המטולוגי — קבלה",
+    "ar": "العلاج النهاري لأمراض الدم — القبول",
+    "p": "SHARETT",
+    "loc": "Floor 2",
+    "aliases": [
+      "hematology day care",
+      "אשפוז יום המטולוגיה",
+      "علاج نهاري أمراض الدم"
+    ],
+    "status": "official",
+    "source": "Hadassah — Ein Kerem Hospital Admissions"
+  },
+  {
+    "en": "Bone Marrow Transplantation and Cancer Immunotherapy",
+    "he": "השתלת מח עצם ואימונותרפיה לסרטן",
+    "ar": "زراعة نخاع العظم والعلاج المناعي للسرطان",
+    "p": "SHARETT",
+    "loc": "Ground floor",
+    "aliases": [
+      "bone marrow transplant",
+      "BMT",
+      "מח עצם",
+      "השתלת מח עצם",
+      "زراعة نخاع",
+      "زرع نخاع"
+    ],
+    "status": "official",
+    "source": "Hadassah — Bone Marrow Transplantation and Cancer Immunotherapy"
+  },
+  {
+    "en": "Delivery Rooms / Labor and Delivery",
+    "he": "חדרי לידה",
+    "ar": "غرف الولادة",
+    "p": "MC",
+    "loc": "Floor -1",
+    "aliases": [
+      "delivery room",
+      "labor",
+      "labour",
+      "birth",
+      "maternity",
+      "חדר לידה",
+      "לידה",
+      "יולדות",
+      "غرفة ولادة",
+      "ولادة"
+    ],
+    "status": "official",
+    "source": "Hadassah — Obstetrics and Gynecology, How to Get Here"
+  },
+  {
+    "en": "High-Risk Pregnancy Clinic",
+    "he": "מרפאת הריון בסיכון גבוה",
+    "ar": "عيادة الحمل عالي الخطورة",
+    "p": "MC",
+    "loc": "Floor -1, near Delivery Rooms",
+    "aliases": [
+      "high risk pregnancy",
+      "הריון בסיכון",
+      "حمل عالي الخطورة"
+    ],
+    "status": "official",
+    "source": "Hadassah — High Risk Pregnancy Clinic"
+  },
+  {
+    "en": "Obstetric and Gynecologic Ultrasound",
+    "he": "אולטרסאונד מיילדות וגינקולוגיה",
+    "ar": "ألتراساوند النساء والتوليد",
+    "p": "MC",
+    "loc": "Ground floor, right of the elevators",
+    "aliases": [
+      "ultrasound",
+      "pregnancy ultrasound",
+      "אולטרסאונד",
+      "אולטרה סאונד",
+      "سونار",
+      "ألتراساوند"
+    ],
+    "status": "official",
+    "source": "Hadassah — Obstetrics and Gynecology, How to Get Here"
+  },
+  {
+    "en": "Women's Health Center",
+    "he": "המרכז לבריאות האישה",
+    "ar": "مركز صحة المرأة",
+    "p": "MAIN",
+    "loc": "Ground floor",
+    "aliases": [
+      "women's health",
+      "בריאות האישה",
+      "صحة المرأة",
+      "gynecology clinic"
+    ],
+    "status": "official",
+    "source": "Hadassah — Obstetrics and Gynecology contact/how-to pages"
+  },
+  {
+    "en": "IVF / Fertility Clinic",
+    "he": "IVF / מרפאת פוריות",
+    "ar": "IVF / عيادة الخصوبة",
+    "p": "MAIN",
+    "loc": "Ground / entrance floor",
+    "aliases": [
+      "IVF",
+      "fertility",
+      "in vitro fertilization",
+      "פוריות",
+      "הפריה חוץ גופית",
+      "خصوبة",
+      "أطفال الأنابيب"
+    ],
+    "status": "official",
+    "source": "Hadassah — Obstetrics and Gynecology contact page"
+  },
+  {
+    "en": "Sperm Bank",
+    "he": "בנק הזרע",
+    "ar": "بنك الحيوانات المنوية",
+    "p": "MAIN",
+    "loc": "Floor 3",
+    "aliases": [
+      "sperm bank",
+      "בנק זרע",
+      "بنك النطف",
+      "بنك الحيوانات المنوية"
+    ],
+    "status": "official",
+    "source": "Hadassah — Obstetrics and Gynecology, How to Get Here"
+  },
+  {
+    "en": "Maternity Wards A and B",
+    "he": "מחלקות יולדות א׳ וב׳",
+    "ar": "قسما الولادة أ و ب",
+    "p": "MC",
+    "loc": "Mezzanine floor (B)",
+    "aliases": [
+      "maternity A",
+      "maternity B",
+      "יולדות א",
+      "יולדות ב",
+      "قسم الولادة"
+    ],
+    "status": "official",
+    "source": "Hadassah — Maternity and Infant Departments"
+  },
+  {
+    "en": "Maternity Ward C",
+    "he": "מחלקת יולדות ג׳",
+    "ar": "قسم الولادة ج",
+    "p": "MC",
+    "loc": "Floor 6",
+    "aliases": [
+      "maternity C",
+      "יולדות ג",
+      "قسم الولادة ج"
+    ],
+    "status": "official",
+    "source": "Hadassah — Maternity and Infant Departments"
+  },
+  {
+    "en": "Neonatology / NICU",
+    "he": "יילודים / טיפול נמרץ יילודים",
+    "ar": "حديثو الولادة / العناية المركزة لحديثي الولادة",
+    "p": "MC",
+    "loc": "Floor 6",
+    "aliases": [
+      "NICU",
+      "neonatal",
+      "neonatology",
+      "פגיה",
+      "יילודים",
+      "טיפול נמרץ יילודים",
+      "خدج",
+      "حديثي الولادة"
+    ],
+    "status": "official",
+    "source": "Hadassah — Neonatology Department Ein Kerem"
+  },
+  {
+    "en": "Pediatrics — Inpatient Department",
+    "he": "מחלקת ילדים",
+    "ar": "قسم الأطفال",
+    "p": "MC",
+    "loc": "Floor 3",
+    "aliases": [
+      "pediatrics",
+      "children",
+      "ילדים",
+      "מחלקת ילדים",
+      "أطفال"
+    ],
+    "status": "official",
+    "source": "Hadassah — Pediatrics Ein Kerem"
+  },
+  {
+    "en": "Pediatric Surgery",
+    "he": "כירורגיית ילדים",
+    "ar": "جراحة الأطفال",
+    "p": "MC",
+    "loc": "Floor 4",
+    "aliases": [
+      "pediatric surgery",
+      "כירורגיית ילדים",
+      "جراحة أطفال"
+    ],
+    "status": "official",
+    "source": "Hadassah — Mother and Child Center / Pediatric Surgery"
+  },
+  {
+    "en": "Pediatric Hematology-Oncology",
+    "he": "המטולוגיה-אונקולוגיה ילדים",
+    "ar": "أمراض الدم والأورام للأطفال",
+    "p": "MC",
+    "loc": "Floor 5",
+    "aliases": [
+      "pediatric oncology",
+      "pediatric hematology",
+      "סרטן ילדים",
+      "המטולוגיה ילדים",
+      "أورام أطفال"
+    ],
+    "status": "official",
+    "source": "Hadassah — Pediatric Hemato-Oncology"
+  },
+  {
+    "en": "Pediatric and Adolescent Psychiatry",
+    "he": "פסיכיאטריה של הילד והמתבגר",
+    "ar": "الطب النفسي للأطفال والمراهقين",
+    "p": "MC",
+    "loc": "Floor 7",
+    "aliases": [
+      "pediatric psychiatry",
+      "child psychiatry",
+      "פסיכיאטריה ילדים",
+      "طب نفسي أطفال"
+    ],
+    "status": "official",
+    "source": "Hadassah — Mother and Child Center"
+  },
+  {
+    "en": "Pediatric Cardiology",
+    "he": "קרדיולוגיית ילדים",
+    "ar": "أمراض قلب الأطفال",
+    "p": "MC",
+    "loc": "Floor 1",
+    "aliases": [
+      "pediatric cardiology",
+      "לב ילדים",
+      "קרדיולוגיה ילדים",
+      "قلب الأطفال"
+    ],
+    "status": "official",
+    "source": "Hadassah — Pediatric Cardiology"
+  },
+  {
+    "en": "Pediatric Clinics",
+    "he": "מרפאות ילדים",
+    "ar": "عيادات الأطفال",
+    "p": "MC",
+    "loc": "Floor 1",
+    "aliases": [
+      "pediatric clinics",
+      "מרפאות ילדים",
+      "عيادات الأطفال"
+    ],
+    "status": "official",
+    "source": "Hadassah — About Hadassah Ein Kerem / Mother and Child Center"
+  },
+  {
+    "en": "Pediatric Day Care — Admissions",
+    "he": "אשפוז יום ילדים — קבלה",
+    "ar": "العلاج النهاري للأطفال — القبول",
+    "p": "MC",
+    "loc": "Entrance floor",
+    "aliases": [
+      "pediatric day care",
+      "אשפוז יום ילדים",
+      "علاج نهاري أطفال"
+    ],
+    "status": "official",
+    "source": "Hadassah — Ein Kerem Hospital Admissions"
+  },
+  {
+    "en": "Pediatric Gastroenterology Clinic",
+    "he": "גסטרואנטרולוגיה ילדים",
+    "ar": "عيادة الجهاز الهضمي للأطفال",
+    "p": "MC",
+    "loc": "Ground floor",
+    "aliases": [
+      "pediatric gastro",
+      "גסטרו ילדים",
+      "جهاز هضمي أطفال"
+    ],
+    "status": "official",
+    "source": "Hadassah — Pediatric Gastroenterology Clinics"
+  },
+  {
+    "en": "Internal Medicine A",
+    "he": "פנימית א׳",
+    "ar": "الطب الباطني أ",
+    "p": "DAVIDSON",
+    "loc": "Floor 9",
+    "aliases": [
+      "medicine A",
+      "internal medicine",
+      "פנימית א",
+      "باطنية أ"
+    ],
+    "status": "official",
+    "source": "Hadassah — Internal Medicine A"
+  },
+  {
+    "en": "Internal Medicine B",
+    "he": "פנימית ב׳",
+    "ar": "الطب الباطني ب",
+    "p": "DAVIDSON",
+    "loc": "Floor 10",
+    "aliases": [
+      "medicine B",
+      "פנימית ב",
+      "باطنية ب"
+    ],
+    "status": "official",
+    "source": "Hadassah — Internal Medicine B"
+  },
+  {
+    "en": "Blood Bank / Blood Donation",
+    "he": "בנק הדם / תרומת דם",
+    "ar": "بنك الدم / التبرع بالدم",
+    "p": "",
+    "loc": "Ground floor — building not specified on current page",
+    "aliases": [
+      "blood bank",
+      "blood donation",
+      "בנק הדם",
+      "תרומת דם",
+      "بنك الدم",
+      "تبرع بالدم"
+    ],
+    "status": "verify",
+    "source": "Hadassah — Blood Bank",
+    "notes": {
+      "he": "הדף הרשמי מציין קומת קרקע בעין כרם, אך אינו מציין את שם הבניין.",
+      "en": "The official page says ground floor at Ein Kerem but does not identify the building.",
+      "ar": "تذكر الصفحة الرسمية الطابق الأرضي في عين كارم لكنها لا تحدد اسم المبنى."
+    }
+  },
+  {
+    "en": "Sharap / Private Medical Service Office",
+    "he": "שר״פ / שירות רפואי פרטי",
+    "ar": "شاراب / الخدمة الطبية الخاصة",
+    "p": "MAIN",
+    "loc": "Hospital main floor",
+    "aliases": [
+      "Sharap",
+      "private medicine",
+      "שרפ",
+      "שירות רפואי פרטי",
+      "شاراب"
+    ],
+    "status": "official",
+    "source": "Hadassah — Sharap General Information"
+  },
+  {
+    "en": "Chagall Synagogue",
+    "he": "בית הכנסת שאגאל",
+    "ar": "كنيس شاغال",
+    "p": "",
+    "loc": "Middle floor, next to elevators — exact building to verify",
+    "aliases": [
+      "synagogue",
+      "Chagall",
+      "בית כנסת",
+      "שאגאל",
+      "كنيس"
+    ],
+    "status": "verify",
+    "source": "Hadassah — Religion Services",
+    "notes": {
+      "he": "הדף הרשמי מציין 'קומת ביניים ליד המעליות' אך אינו מציין בבירור את שם הבניין.",
+      "en": "The official page says 'middle floor next to the elevators' but does not clearly identify the building.",
+      "ar": "تذكر الصفحة الرسمية «الطابق الأوسط بجانب المصاعد» لكنها لا تحدد اسم المبنى بوضوح."
+    }
+  }
+]
