@@ -55,5 +55,9 @@
       "en": "Strong"
     },
     "basis": "119 destinations; strong current official coverage, but not yet the full 202-entry directory."
-  }
+  },
+  "ambassadorLanguages": [
+    "fr",
+    "en"
+  ]
 }
