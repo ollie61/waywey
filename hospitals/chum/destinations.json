@@ -1,0 +1,1684 @@
+[
+  {
+    "en": "Reception / Admission / Archives",
+    "fr": "Accueil - Admission - Archives",
+    "p": "D",
+    "loc": "D 01",
+    "aliases": [
+      "admission",
+      "archives",
+      "accueil",
+      "registration",
+      "inscription"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Therapeutic Apheresis",
+    "fr": "Aphérèse thérapeutique",
+    "p": "D",
+    "loc": "D 14",
+    "aliases": [
+      "apheresis",
+      "aphérèse"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Audiology",
+    "fr": "Audiologie",
+    "p": "C",
+    "loc": "C 09",
+    "aliases": [
+      "hearing",
+      "audition",
+      "audiology"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Cardiology and Cardiac Surgery — Clinic",
+    "fr": "Cardiologie et chirurgie cardiaque — Clinique",
+    "p": "C",
+    "loc": "C 08",
+    "aliases": [
+      "cardiology",
+      "cardiologie",
+      "heart clinic",
+      "cardiac surgery",
+      "chirurgie cardiaque"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Preventive Cardiology Centre",
+    "fr": "Centre de cardiologie préventive",
+    "p": "C",
+    "loc": "C 08",
+    "aliases": [
+      "preventive cardiology",
+      "cardiologie préventive",
+      "heart prevention"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Test Centre / Blood Collection",
+    "fr": "Centre de prélèvements",
+    "p": "D",
+    "loc": "D.01.4100",
+    "aliases": [
+      "blood test",
+      "blood work",
+      "blood draw",
+      "prise de sang",
+      "prises de sang",
+      "laboratoire",
+      "test centre",
+      "centre de prélèvement"
+    ],
+    "status": "official",
+    "note": "Official CHUM Test Centre page: Pavilion D, 1st floor, D.01.4100.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Integrated Cancer Centre (CICC)",
+    "fr": "Centre intégré de cancérologie (CICC)",
+    "p": "C",
+    "loc": "C 14-15",
+    "aliases": [
+      "cancer",
+      "oncology",
+      "oncologie",
+      "cicc",
+      "cancer centre",
+      "centre cancer"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Day Surgery",
+    "fr": "Chirurgie d’un jour",
+    "p": "C",
+    "loc": "C 04",
+    "aliases": [
+      "day surgery",
+      "same day surgery",
+      "chirurgie jour"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Oncologic, Digestive, Hepatobiliary and Pancreatic Surgery",
+    "fr": "Chirurgie oncologique, digestive, hépatobiliaire et pancréatique",
+    "p": "C",
+    "loc": "C 12",
+    "aliases": [
+      "digestive surgery",
+      "chirurgie digestive",
+      "pancreatic surgery",
+      "chirurgie pancréatique",
+      "hepatobiliary"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Thoracic Surgery — Clinic",
+    "fr": "Chirurgie thoracique — Clinique",
+    "p": "C",
+    "loc": "C 03",
+    "aliases": [
+      "thoracic surgery",
+      "chirurgie thoracique",
+      "lung surgery"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Vascular Surgery — Clinic",
+    "fr": "Chirurgie vasculaire — Clinique",
+    "p": "C",
+    "loc": "C 03",
+    "aliases": [
+      "vascular surgery",
+      "chirurgie vasculaire"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Pain Clinic",
+    "fr": "Clinique de la douleur",
+    "p": "C",
+    "loc": "C 05",
+    "aliases": [
+      "pain clinic",
+      "douleur",
+      "chronic pain",
+      "douleur chronique"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Dental Clinic",
+    "fr": "Clinique dentaire",
+    "p": "C",
+    "loc": "C0362",
+    "aliases": [
+      "dentist",
+      "dentiste",
+      "dental",
+      "dentaire"
+    ],
+    "status": "official",
+    "note": "Official CHUM Dental Clinic page: Pavilion C, 3rd floor, C0362.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Dermatology Clinic",
+    "fr": "Clinique de dermatologie",
+    "p": "D",
+    "loc": "D 02",
+    "aliases": [
+      "dermatology",
+      "dermatologie",
+      "skin clinic",
+      "peau"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Preoperative Clinic",
+    "fr": "Clinique préopératoire",
+    "p": "D",
+    "loc": "D 01",
+    "aliases": [
+      "pre-op",
+      "preop",
+      "preoperative",
+      "préopératoire"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Dialysis",
+    "fr": "Dialyse",
+    "p": "C",
+    "loc": "C 10",
+    "aliases": [
+      "dialysis",
+      "dialyse",
+      "kidney dialysis"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Cardiac Electrophysiology",
+    "fr": "Électrophysiologie cardiaque",
+    "p": "C",
+    "loc": "C 08",
+    "aliases": [
+      "electrophysiology",
+      "électrophysiologie",
+      "cardiac EP"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Neurological Electrophysiology",
+    "fr": "Électrophysiologie neurologique",
+    "p": "C",
+    "loc": "C 13",
+    "aliases": [
+      "EEG",
+      "EMG",
+      "neurological electrophysiology",
+      "électrophysiologie neurologique"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Endocrinology",
+    "fr": "Endocrinologie",
+    "p": "C",
+    "loc": "C 10",
+    "aliases": [
+      "endocrine",
+      "diabetes",
+      "diabète",
+      "endocrinologie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Endoscopy",
+    "fr": "Endoscopie",
+    "p": "D",
+    "loc": "D 02",
+    "aliases": [
+      "endoscopy",
+      "endoscopie",
+      "scope"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Occupational Therapy",
+    "fr": "Ergothérapie",
+    "p": "C",
+    "loc": "C 05",
+    "aliases": [
+      "occupational therapy",
+      "ergotherapy",
+      "ergothérapie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Fertility Clinic",
+    "fr": "Clinique de fertilité",
+    "p": "R",
+    "loc": "R 07",
+    "aliases": [
+      "fertility",
+      "fertilité",
+      "IVF",
+      "FIV"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Cystic Fibrosis",
+    "fr": "Fibrose kystique",
+    "p": "C",
+    "loc": "C 12",
+    "aliases": [
+      "cystic fibrosis",
+      "CF",
+      "fibrose kystique"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Gastroenterology — Clinic",
+    "fr": "Gastroentérologie — Clinique",
+    "p": "C",
+    "loc": "C 02",
+    "aliases": [
+      "gastro",
+      "gastroenterology",
+      "gastroentérologie",
+      "digestive"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Geriatrics — Clinic",
+    "fr": "Gériatrie — Clinique",
+    "p": "C",
+    "loc": "C 12",
+    "aliases": [
+      "geriatrics",
+      "gériatrie",
+      "geriatric"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Gynecology and Colposcopy",
+    "fr": "Gynécologie et colposcopie",
+    "p": "C",
+    "loc": "C 02",
+    "aliases": [
+      "gynecology",
+      "gynécologie",
+      "colposcopy",
+      "colposcopie",
+      "gyno"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Hemodynamics and Invasive Cardiac Electrophysiology",
+    "fr": "Hémodynamie et électrophysiologie cardiaque invasive",
+    "p": "D",
+    "loc": "D 08",
+    "aliases": [
+      "hemodynamics",
+      "hémodynamie",
+      "cardiac catheterization",
+      "cath lab"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Immunology / Allergy",
+    "fr": "Immuno-allergie",
+    "p": "C",
+    "loc": "C 04",
+    "aliases": [
+      "allergy",
+      "allergie",
+      "immunology",
+      "immunologie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Chronic Viral Infectious Diseases",
+    "fr": "Infectiologie virale chronique",
+    "p": "C",
+    "loc": "C 11",
+    "aliases": [
+      "infectious disease",
+      "infectiologie",
+      "viral clinic",
+      "VIH",
+      "HIV",
+      "hepatitis"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Sleep Laboratory",
+    "fr": "Laboratoire du sommeil",
+    "p": "C",
+    "loc": "C 12",
+    "aliases": [
+      "sleep lab",
+      "sleep clinic",
+      "sommeil",
+      "apnea",
+      "apnée"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Day Medicine",
+    "fr": "Médecine de jour",
+    "p": "C",
+    "loc": "C 04",
+    "aliases": [
+      "day medicine",
+      "médecine de jour"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Addiction Medicine",
+    "fr": "Médecine des toxicomanies",
+    "p": "C",
+    "loc": "C 11",
+    "aliases": [
+      "addiction",
+      "toxicomanie",
+      "toxicomanies",
+      "substance use"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Occupational and Environmental Medicine",
+    "fr": "Médecine du travail et de l’environnement",
+    "p": "C",
+    "loc": "C 12",
+    "aliases": [
+      "occupational medicine",
+      "médecine du travail",
+      "environmental medicine"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Gene Medicine Clinic",
+    "fr": "Médecine génique",
+    "p": "C",
+    "loc": "C 05",
+    "aliases": [
+      "gene medicine",
+      "genetic medicine",
+      "médecine génique"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Internal Medicine and Infectious Diseases — Clinic",
+    "fr": "Médecine interne et infectiologie — Clinique",
+    "p": "C",
+    "loc": "C 03",
+    "aliases": [
+      "internal medicine",
+      "médecine interne",
+      "infectious diseases",
+      "infectiologie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Nuclear Medicine",
+    "fr": "Médecine nucléaire",
+    "p": "C",
+    "loc": "C 08",
+    "aliases": [
+      "nuclear medicine",
+      "médecine nucléaire",
+      "PET",
+      "TEP"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Nephrology — Clinic",
+    "fr": "Néphrologie — Clinique",
+    "p": "C",
+    "loc": "C 10",
+    "aliases": [
+      "nephrology",
+      "néphrologie",
+      "kidney",
+      "rein"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Neurology and Neurosurgery — Clinic",
+    "fr": "Neurologie et neurochirurgie — Clinique",
+    "p": "C",
+    "loc": "C 13",
+    "aliases": [
+      "neurology",
+      "neurologie",
+      "neurosurgery",
+      "neurochirurgie",
+      "brain"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Obstetrics",
+    "fr": "Obstétrique",
+    "p": "D",
+    "loc": "D 09",
+    "aliases": [
+      "obstetrics",
+      "obstétrique",
+      "pregnancy",
+      "grossesse"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Ophthalmology",
+    "fr": "Ophtalmologie",
+    "p": "D",
+    "loc": "D0120",
+    "aliases": [
+      "ophthalmology",
+      "ophtalmologie",
+      "eye clinic",
+      "yeux"
+    ],
+    "status": "official",
+    "note": "Official CHUM Ophthalmology page: Pavilion D, 1st floor, D0120.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "ENT / Otolaryngology — Clinic",
+    "fr": "ORL — Clinique",
+    "p": "C",
+    "loc": "C 09",
+    "aliases": [
+      "ENT",
+      "ORL",
+      "ear nose throat",
+      "oto-rhino-laryngologie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Orthopedics — Clinic",
+    "fr": "Orthopédie — Clinique",
+    "p": "C",
+    "loc": "C 03",
+    "aliases": [
+      "orthopedics",
+      "orthopaedics",
+      "orthopédie",
+      "bones"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Speech Therapy and SAL-PAC",
+    "fr": "Orthophonie et SAL-PAC",
+    "p": "C",
+    "loc": "C 09",
+    "aliases": [
+      "speech therapy",
+      "orthophonie",
+      "SAL-PAC"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Respiratory Physiology",
+    "fr": "Physiologie respiratoire",
+    "p": "C",
+    "loc": "C 12",
+    "aliases": [
+      "respiratory physiology",
+      "physiologie respiratoire",
+      "lung function",
+      "spirometry"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Physiotherapy",
+    "fr": "Physiothérapie",
+    "p": "C",
+    "loc": "C0562",
+    "aliases": [
+      "physio",
+      "physical therapy",
+      "physiotherapy",
+      "physiothérapie"
+    ],
+    "status": "official",
+    "note": "Official CHUM Physiotherapy page: Pavilion C, 5th floor, C0562.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Plastic Surgery, Burn Centre and Hand Centre — Clinic",
+    "fr": "Plastie, grands brûlés et Centre de la main — Clinique",
+    "p": "C",
+    "loc": "C 05",
+    "aliases": [
+      "plastic surgery",
+      "plastie",
+      "burn centre",
+      "grands brûlés",
+      "hand centre",
+      "centre de la main"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Pulmonology — Clinic",
+    "fr": "Pneumologie — Clinique",
+    "p": "C",
+    "loc": "C 12",
+    "aliases": [
+      "pulmonology",
+      "pneumology",
+      "pneumologie",
+      "lung clinic",
+      "lungs"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Post-Exposure Prophylaxis (PEP)",
+    "fr": "Prophylaxie post-exposition (PPE)",
+    "p": "C",
+    "loc": "C 12",
+    "aliases": [
+      "PEP",
+      "PPE",
+      "post exposure",
+      "post-exposition"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Radiology",
+    "fr": "Radiologie",
+    "p": "C",
+    "loc": "C 03",
+    "aliases": [
+      "radiology",
+      "radiologie",
+      "x-ray",
+      "xray",
+      "radiographie",
+      "imaging",
+      "imagerie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Radiation Oncology",
+    "fr": "Radio-oncologie",
+    "p": "C",
+    "loc": "C S3-S4",
+    "aliases": [
+      "radiation oncology",
+      "radio-oncology",
+      "radio-oncologie",
+      "radiotherapy",
+      "radiothérapie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Rheumatology",
+    "fr": "Rhumatologie",
+    "p": "C",
+    "loc": "C 05",
+    "aliases": [
+      "rheumatology",
+      "rhumatologie",
+      "arthritis",
+      "arthrite"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Mental Health and Concurrent Disorders — Clinic",
+    "fr": "Santé mentale et troubles concomitants — Clinique",
+    "p": "C",
+    "loc": "C 11",
+    "aliases": [
+      "mental health",
+      "santé mentale",
+      "psychiatry clinic",
+      "psychiatrie",
+      "concurrent disorders"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Stomatology and Maxillofacial Prosthodontics",
+    "fr": "Stomatologie et prosthodontie maxillo-faciale",
+    "p": "C",
+    "loc": "C 03",
+    "aliases": [
+      "stomatology",
+      "stomatologie",
+      "maxillofacial",
+      "prosthodontics"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Stomatherapy",
+    "fr": "Stomothérapie",
+    "p": "C",
+    "loc": "C 12",
+    "aliases": [
+      "stoma",
+      "ostomy",
+      "stomatherapy",
+      "stomothérapie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Transplantation and Hepatology — Clinic",
+    "fr": "Transplantation et hépatologie — Clinique",
+    "p": "C",
+    "loc": "C 04",
+    "aliases": [
+      "transplant",
+      "transplantation",
+      "hepatology",
+      "hépatologie",
+      "liver"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Movement Disorders",
+    "fr": "Troubles du mouvement",
+    "p": "C",
+    "loc": "C 13",
+    "aliases": [
+      "movement disorders",
+      "troubles du mouvement",
+      "Parkinson",
+      "parkinson"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Urology — Clinic",
+    "fr": "Urologie — Clinique",
+    "p": "C",
+    "loc": "C0261",
+    "aliases": [
+      "urology",
+      "urologie",
+      "urinary",
+      "prostate"
+    ],
+    "status": "official",
+    "note": "Official CHUM Urology page: Pavilion C, 2nd floor, C0261.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Emergency Department",
+    "fr": "Urgence",
+    "p": "D",
+    "loc": "RC20",
+    "aliases": [
+      "emergency",
+      "ER",
+      "ED",
+      "urgence",
+      "urgences"
+    ],
+    "status": "official",
+    "note": "Official CHUM Emergency page: Pavilion D, ground floor, RC20; emergency entrance at 1001 rue Sanguinet.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Dining Areas",
+    "fr": "Aires de repas",
+    "p": "D",
+    "loc": "D 01-02",
+    "aliases": [
+      "food area",
+      "meal area",
+      "aire de repas"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Volunteer, Recreation and Leisure Service",
+    "fr": "Bénévolat - animation et loisirs",
+    "p": "D",
+    "loc": "D 01",
+    "aliases": [
+      "volunteer",
+      "bénévolat",
+      "recreation",
+      "loisirs"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Library",
+    "fr": "Bibliothèque",
+    "p": "B",
+    "loc": "B.01.8006",
+    "aliases": [
+      "library",
+      "bibliothèque",
+      "biblio"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 guide: Pavilion B, 1st floor, B.01.8006.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Access Management Office",
+    "fr": "Bureau de gestion des accès",
+    "p": "C",
+    "loc": "C.01.6123",
+    "aliases": [
+      "access office",
+      "gestion des accès",
+      "badge"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Parking Office",
+    "fr": "Bureau de stationnement",
+    "p": "C",
+    "loc": "C 01",
+    "aliases": [
+      "parking office",
+      "stationnement",
+      "parking"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Cafeteria",
+    "fr": "Cafétéria",
+    "p": "D",
+    "loc": "D0240",
+    "aliases": [
+      "cafeteria",
+      "cafétéria",
+      "food",
+      "restaurant"
+    ],
+    "status": "official",
+    "note": "Official CHUM directory: Pavilion D, 2nd floor, D0240.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Users' Committee",
+    "fr": "Comité des usagers",
+    "p": "C",
+    "loc": "C 01",
+    "aliases": [
+      "users committee",
+      "comité des usagers"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Service Quality and Complaints Commissioner",
+    "fr": "Commissaire aux plaintes et à la qualité des services",
+    "p": "C",
+    "loc": "C 01",
+    "aliases": [
+      "complaints",
+      "plainte",
+      "plaintes",
+      "ombudsman"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Patient Accounts",
+    "fr": "Compte-clients",
+    "p": "D",
+    "loc": "D 01",
+    "aliases": [
+      "patient accounts",
+      "billing",
+      "compte clients",
+      "facturation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Main Entrance",
+    "fr": "Entrée principale",
+    "p": "C",
+    "loc": "C 01",
+    "aliases": [
+      "main entrance",
+      "entrée principale",
+      "1000 Saint-Denis"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "CHUM Foundation",
+    "fr": "Fondation du CHUM",
+    "p": "D",
+    "loc": "D 01",
+    "aliases": [
+      "foundation",
+      "fondation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Pharmacy",
+    "fr": "Pharmacie",
+    "p": "D",
+    "loc": "DRC3213",
+    "aliases": [
+      "pharmacy",
+      "pharmacie",
+      "drugstore"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 guide: Pavilion D, ground floor, DRC3213.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Restaurants and Shops",
+    "fr": "Restaurants et commerces",
+    "p": "C/D",
+    "loc": "C 01 / D RC-01",
+    "aliases": [
+      "restaurants",
+      "shops",
+      "commerces",
+      "food"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Breastfeeding Room",
+    "fr": "Salle d’allaitement",
+    "p": "D",
+    "loc": "D 02",
+    "aliases": [
+      "breastfeeding",
+      "nursing room",
+      "allaitement"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Arrival and Departure Lounge",
+    "fr": "Salon des arrivées et départs",
+    "p": "C",
+    "loc": "C 01",
+    "aliases": [
+      "arrival lounge",
+      "departure lounge",
+      "arrivées",
+      "départs"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Security",
+    "fr": "Sécurité",
+    "p": "C/D",
+    "loc": "C-D 01",
+    "aliases": [
+      "security",
+      "sécurité"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Public Parking Access",
+    "fr": "Stationnement public",
+    "p": "C/D",
+    "loc": "Accès C-D 01",
+    "aliases": [
+      "parking",
+      "stationnement public",
+      "garage"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Reflection / Prayer Room",
+    "fr": "Salle de recueillement",
+    "p": "D",
+    "loc": "D 02",
+    "aliases": [
+      "prayer room",
+      "chapel",
+      "quiet room",
+      "recueillement",
+      "spiritual care"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Cultural Display",
+    "fr": "Vitrine culturelle",
+    "p": "B",
+    "loc": "B 01",
+    "aliases": [
+      "cultural display",
+      "vitrine culturelle"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Cardiology — Inpatient Unit",
+    "fr": "Cardiologie — Unité de soins",
+    "p": "D",
+    "loc": "D17 Nord",
+    "aliases": [
+      "cardiology unit",
+      "cardiologie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Cardiac Surgery — Inpatient Unit",
+    "fr": "Chirurgie cardiaque — Unité de soins",
+    "p": "D",
+    "loc": "D17 Nord / Sud",
+    "aliases": [
+      "cardiac surgery unit",
+      "chirurgie cardiaque hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Digestive Surgery — Inpatient Unit",
+    "fr": "Chirurgie digestive — Unité de soins",
+    "p": "D",
+    "loc": "D11 Sud",
+    "aliases": [
+      "digestive surgery unit",
+      "chirurgie digestive hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Hepatobiliary Surgery — Inpatient Unit",
+    "fr": "Chirurgie hépatobiliaire — Unité de soins",
+    "p": "D",
+    "loc": "D14 Sud",
+    "aliases": [
+      "hepatobiliary surgery unit"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Oncologic Surgery — Inpatient Unit",
+    "fr": "Chirurgie oncologique — Unité de soins",
+    "p": "D",
+    "loc": "D14 Nord",
+    "aliases": [
+      "oncologic surgery unit",
+      "chirurgie oncologique hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Plastic Surgery — Inpatient Unit",
+    "fr": "Chirurgie plastique — Unité de soins",
+    "p": "D",
+    "loc": "D15 Sud",
+    "aliases": [
+      "plastic surgery unit",
+      "chirurgie plastique hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Thoracic Surgery — Inpatient Unit",
+    "fr": "Chirurgie thoracique — Unité de soins",
+    "p": "D",
+    "loc": "D15 Sud",
+    "aliases": [
+      "thoracic surgery unit"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Vascular Surgery — Inpatient Unit",
+    "fr": "Chirurgie vasculaire — Unité de soins",
+    "p": "D",
+    "loc": "D17 Sud",
+    "aliases": [
+      "vascular surgery unit"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Gastroenterology — Inpatient Unit",
+    "fr": "Gastroentérologie — Unité de soins",
+    "p": "D",
+    "loc": "D12 Nord",
+    "aliases": [
+      "gastro unit",
+      "gastroentérologie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Geriatrics — Inpatient Unit",
+    "fr": "Gériatrie — Unité de soins",
+    "p": "D",
+    "loc": "D12 Nord",
+    "aliases": [
+      "geriatrics unit",
+      "gériatrie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Burn Unit",
+    "fr": "Grands brûlés — Unité de soins",
+    "p": "D",
+    "loc": "D09 Nord",
+    "aliases": [
+      "burn unit",
+      "burns",
+      "grands brûlés"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Gynecology — Inpatient Unit",
+    "fr": "Gynécologie — Unité de soins",
+    "p": "D",
+    "loc": "D12 Sud",
+    "aliases": [
+      "gynecology unit",
+      "gynécologie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Gynecologic Oncology — Inpatient Unit",
+    "fr": "Gynéco-oncologie — Unité de soins",
+    "p": "D",
+    "loc": "D12 Sud",
+    "aliases": [
+      "gyn onc",
+      "gynéco-oncologie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Hematology-Oncology — Inpatient Unit",
+    "fr": "Hémato-oncologie — Unité de soins",
+    "p": "D",
+    "loc": "D14 Nord",
+    "aliases": [
+      "hematology oncology",
+      "hémato-oncologie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Hepatology — Inpatient Unit",
+    "fr": "Hépatologie — Unité de soins",
+    "p": "D",
+    "loc": "D18 Sud",
+    "aliases": [
+      "hepatology unit",
+      "hépatologie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Epilepsy Laboratory — Inpatient",
+    "fr": "Laboratoire d’épilepsie — Hospitalisation",
+    "p": "D",
+    "loc": "D13 Nord",
+    "aliases": [
+      "epilepsy lab",
+      "laboratoire épilepsie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Addiction Medicine — Inpatient Unit",
+    "fr": "Médecine des toxicomanies — Unité de soins",
+    "p": "D",
+    "loc": "D11 Nord",
+    "aliases": [
+      "addiction unit",
+      "toxicomanie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Internal Medicine — Inpatient Unit",
+    "fr": "Médecine interne — Unité de soins",
+    "p": "D",
+    "loc": "D18 Nord / D19 Nord",
+    "aliases": [
+      "internal medicine unit",
+      "médecine interne hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Birth Centre / Mother-Child Unit",
+    "fr": "Centre des naissances (Mère-enfant)",
+    "p": "D",
+    "loc": "D09 Sud",
+    "aliases": [
+      "birth centre",
+      "birthing",
+      "delivery",
+      "labour",
+      "labor",
+      "maternity",
+      "accouchement",
+      "accoucher",
+      "maternité",
+      "salle d'accouchement"
+    ],
+    "status": "official",
+    "note": "Official CHUM Birth Centre page: Pavilion D, 9th floor South. Patients in labour are directed to the parking entrance at 1115 rue Sanguinet.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Neonatology / NICU",
+    "fr": "Néonatalogie",
+    "p": "D",
+    "loc": "D09 Sud",
+    "aliases": [
+      "NICU",
+      "neonatal",
+      "neonatology",
+      "néonatalogie"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Nephrology — Inpatient Unit",
+    "fr": "Néphrologie — Unité de soins",
+    "p": "D",
+    "loc": "D18 Sud",
+    "aliases": [
+      "nephrology unit",
+      "néphrologie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Neurosurgery — Inpatient Unit",
+    "fr": "Neurochirurgie — Unité de soins",
+    "p": "D",
+    "loc": "D13 Sud",
+    "aliases": [
+      "neurosurgery unit",
+      "neurochirurgie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Neurology — Inpatient Unit",
+    "fr": "Neurologie — Unité de soins",
+    "p": "D",
+    "loc": "D13 Nord",
+    "aliases": [
+      "neurology unit",
+      "neurologie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "ENT — Inpatient Unit",
+    "fr": "ORL — Unité de soins",
+    "p": "D",
+    "loc": "D16 Sud",
+    "aliases": [
+      "ENT unit",
+      "ORL hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Orthopedics — Inpatient Unit",
+    "fr": "Orthopédie — Unité de soins",
+    "p": "D",
+    "loc": "D16 Nord",
+    "aliases": [
+      "orthopedics unit",
+      "orthopédie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Pulmonology — Inpatient Unit",
+    "fr": "Pneumologie — Unité de soins",
+    "p": "D",
+    "loc": "D19 Sud",
+    "aliases": [
+      "pulmonology unit",
+      "pneumologie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Psychiatry — Inpatient Unit",
+    "fr": "Psychiatrie — Unité de soins",
+    "p": "D",
+    "loc": "D11 Nord",
+    "aliases": [
+      "psychiatry unit",
+      "psychiatrie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Mental Health — Inpatient Unit",
+    "fr": "Santé mentale — Unité de soins",
+    "p": "D",
+    "loc": "D11 Nord",
+    "aliases": [
+      "mental health unit",
+      "santé mentale hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Intensive Care Unit (ICU)",
+    "fr": "Soins intensifs",
+    "p": "D",
+    "loc": "D10 Nord / Sud",
+    "aliases": [
+      "ICU",
+      "intensive care",
+      "critical care",
+      "soins intensifs"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Cardiac Intensive Care Unit",
+    "fr": "Soins intensifs cardiaques",
+    "p": "D",
+    "loc": "D08 Nord",
+    "aliases": [
+      "cardiac ICU",
+      "CCU",
+      "soins intensifs cardiaques"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Palliative Care Unit",
+    "fr": "Soins palliatifs",
+    "p": "D",
+    "loc": "D08 Sud",
+    "aliases": [
+      "palliative care",
+      "soins palliatifs"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Transplantation — Inpatient Unit",
+    "fr": "Transplantation — Unité de soins",
+    "p": "D",
+    "loc": "D15 Nord",
+    "aliases": [
+      "transplant unit",
+      "transplantation hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM January 2026 services/resources guide.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Urology — Inpatient Unit",
+    "fr": "Urologie — Unité de soins",
+    "p": "D",
+    "loc": "D16 Nord / Sud",
+    "aliases": [
+      "urology unit",
+      "urologie hospitalisation"
+    ],
+    "status": "official",
+    "note": "Official CHUM Urology inpatient page: Pavilion D, 16th floor North and South.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Epilepsy Clinic",
+    "fr": "Clinique d’épilepsie",
+    "p": "C",
+    "loc": "C 13",
+    "aliases": [
+      "epilepsy",
+      "épilepsie",
+      "seizure clinic"
+    ],
+    "status": "official",
+    "note": "Official CHUM Epilepsy Clinic page: Pavilion C, 13th floor.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Tuberous Sclerosis Clinic",
+    "fr": "Clinique de sclérose tubéreuse de Bourneville",
+    "p": "C",
+    "loc": "C 13",
+    "aliases": [
+      "tuberous sclerosis",
+      "sclérose tubéreuse",
+      "STB",
+      "TSC"
+    ],
+    "status": "official",
+    "note": "Official CHUM clinic page: Pavilion C, 13th floor.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Interstitial Lung Disease Clinic",
+    "fr": "Clinique des maladies interstitielles pulmonaires",
+    "p": "C",
+    "loc": "C 12",
+    "aliases": [
+      "interstitial lung disease",
+      "ILD",
+      "fibrose pulmonaire",
+      "maladies interstitielles"
+    ],
+    "status": "official",
+    "note": "Official CHUM clinic page: Pavilion C, 12th floor.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Scleroderma Clinic",
+    "fr": "Clinique de sclérodermie",
+    "p": "C",
+    "loc": "C 05",
+    "aliases": [
+      "scleroderma",
+      "sclérodermie"
+    ],
+    "status": "official",
+    "note": "Official CHUM clinic page: Pavilion C, 5th floor.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Sarcoidosis Clinic",
+    "fr": "Clinique de sarcoïdose",
+    "p": "C",
+    "loc": "C 05 / C 12",
+    "aliases": [
+      "sarcoidosis",
+      "sarcoïdose"
+    ],
+    "status": "official",
+    "note": "Official CHUM clinic page: Pavilion C, 5th and 12th floors.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Psychiatry Department",
+    "fr": "Département de psychiatrie",
+    "p": "C/D",
+    "loc": "C 11 (cliniques) / D 11 (hospitalisation)",
+    "aliases": [
+      "psychiatry department",
+      "département psychiatrie",
+      "psychiatrie"
+    ],
+    "status": "official",
+    "note": "Official CHUM Psychiatry page: outpatient clinics in Pavilion C, 11th floor; inpatient unit in Pavilion D, 11th floor.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "Pregnancy and Disability Clinic",
+    "fr": "Clinique grossesse en situation de handicap",
+    "p": "D",
+    "loc": "D 09",
+    "aliases": [
+      "pregnancy disability",
+      "grossesse handicap"
+    ],
+    "status": "official",
+    "note": "Official CHUM clinic page: Pavilion D, 9th floor.",
+    "source": "CHUM Guide des services et des ressources — janvier 2026"
+  }
+]
