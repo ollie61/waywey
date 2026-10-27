@@ -599,7 +599,7 @@
     "en": "ENT / Otolaryngology — Clinic",
     "fr": "ORL — Clinique",
     "p": "C",
-    "loc": "C 09",
+    "loc": "C0961",
     "aliases": [
       "ENT",
       "ORL",
@@ -607,7 +607,7 @@
       "oto-rhino-laryngologie"
     ],
     "status": "official",
-    "note": "Official CHUM January 2026 services/resources guide.",
+    "note": "Official CHUM ENT page: Pavilion C, 9th floor, C0961.",
     "source": "CHUM Guide des services et des ressources — janvier 2026"
   },
   {
@@ -720,8 +720,8 @@
   {
     "en": "Radiology",
     "fr": "Radiologie",
-    "p": "C",
-    "loc": "C 03",
+    "p": "D",
+    "loc": "D0350",
     "aliases": [
       "radiology",
       "radiologie",
@@ -729,10 +729,16 @@
       "xray",
       "radiographie",
       "imaging",
-      "imagerie"
+      "imagerie",
+      "MRI",
+      "IRM",
+      "CT",
+      "scanner",
+      "medical imaging",
+      "imagerie médicale"
     ],
     "status": "official",
-    "note": "Official CHUM January 2026 services/resources guide.",
+    "note": "Official CHUM Radiology page: Pavilion D, 3rd floor, D0350. CHUM instructs visitors to access Radiology through Pavilion C because Pavilion D elevators do not provide access.",
     "source": "CHUM Guide des services et des ressources — janvier 2026"
   },
   {
@@ -1680,5 +1686,38 @@
     "status": "official",
     "note": "Official CHUM clinic page: Pavilion D, 9th floor.",
     "source": "CHUM Guide des services et des ressources — janvier 2026"
+  },
+  {
+    "en": "MRI / Magnetic Resonance Imaging",
+    "fr": "IRM / Imagerie par résonance magnétique",
+    "p": "D",
+    "loc": "D0350",
+    "aliases": [
+      "MRI",
+      "IRM",
+      "magnetic resonance",
+      "résonance magnétique",
+      "imaging",
+      "imagerie"
+    ],
+    "status": "official",
+    "note": "Current CHUM MRI patient information directs patients to Radiology, Pavilion D, 3rd floor, room 350 (D0350). Access is through Pavilion C.",
+    "source": "CHUM MRI patient information — revised March 2025; current Radiology directory"
+  },
+  {
+    "en": "Pre-admission",
+    "fr": "Préadmission",
+    "p": "D",
+    "loc": "D0140",
+    "aliases": [
+      "preadmission",
+      "pre-admission",
+      "préadmission",
+      "before surgery",
+      "avant chirurgie"
+    ],
+    "status": "official",
+    "note": "Official CHUM Pre-admission directory page: Pavilion D, 1st floor, D0140.",
+    "source": "CHUM directory"
   }
 ]
