@@ -1,0 +1,2488 @@
+[
+  {
+    "en": "Emergency Department",
+    "fr": "Urgence",
+    "p": "K",
+    "loc": "S2",
+    "aliases": [
+      "ER",
+      "Emergency",
+      "urgence",
+      "urgences",
+      "Urgence"
+    ],
+    "status": "official",
+    "note": "Official JGH Emergency page: Pavilion K, level S2; Emergency entrance is 5777 Légaré."
+  },
+  {
+    "en": "Care Unit (Acute Geriatrics)",
+    "fr": "Unité de soins — Gériatrie aiguë",
+    "p": "C",
+    "loc": "6th floor",
+    "aliases": [
+      "Geriatrics inpatient",
+      "Unité de soins — Gériatrie aiguë"
+    ],
+    "status": "verify",
+    "note": "JGH Department List says one C6 geriatrics unit relocated to Hôtel-Dieu (HD-6) and also lists Geriatrics D6 in C-6. Confirm the patient's unit before routing."
+  },
+  {
+    "en": "Care Unit (Antepartum / High Risk)",
+    "fr": "Unité de soins — Grossesse à risque / antépartum",
+    "p": "K",
+    "loc": "3rd floor",
+    "aliases": [
+      "High-risk pregnancy",
+      "Antepartum",
+      "Unité de soins — Grossesse à risque / antépartum"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Cardiovascular - CVU)",
+    "fr": "Unité de soins cardiovasculaires (CVU)",
+    "p": "K",
+    "loc": "2nd floor",
+    "aliases": [
+      "CVU",
+      "Cardiac unit",
+      "Unité de soins cardiovasculaires (CVU)"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Cardiovascular Intensive Care - CVICU)",
+    "fr": "Soins intensifs cardiovasculaires (CVICU)",
+    "p": "K",
+    "loc": "2nd floor",
+    "aliases": [
+      "CVICU",
+      "CCU",
+      "cardiac intensive care",
+      "Soins intensifs cardiovasculaires (CVICU)"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Family Medicine CJ)",
+    "fr": "Unité de soins de médecine familiale",
+    "p": "C",
+    "loc": "3rd floor",
+    "aliases": [
+      "Family Medicine inpatient",
+      "Unité de soins de médecine familiale"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Medicine C5)",
+    "fr": "Unité de soins — Médecine C5",
+    "p": "C",
+    "loc": "5th floor",
+    "aliases": [
+      "C5",
+      "Unité de soins — Médecine C5"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Medical and Surgical Intensive Care - MSICU)",
+    "fr": "Soins intensifs médicaux et chirurgicaux",
+    "p": "K",
+    "loc": "1st floor",
+    "aliases": [
+      "MSICU",
+      "ICU",
+      "intensive care",
+      "Soins intensifs médicaux et chirurgicaux"
+    ],
+    "status": "official",
+    "note": "Current Department List lists the Intensive Care Unit in Pavilion K, 1st floor."
+  },
+  {
+    "en": "Care Unit (Medicine)",
+    "fr": "Unité de soins — Médecine",
+    "p": "K",
+    "loc": "6th floor",
+    "aliases": [
+      "Medicine inpatient",
+      "Unité de soins — Médecine"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Medicine)",
+    "fr": "Unité de soins — Médecine",
+    "p": "K",
+    "loc": "7th floor",
+    "aliases": [
+      "Medicine inpatient",
+      "Unité de soins — Médecine"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Mental Health and Addiction Unit)",
+    "fr": "Unité de santé mentale et dépendance",
+    "p": "B",
+    "loc": "3rd floor",
+    "aliases": [
+      "Mental health",
+      "addiction",
+      "Unité de santé mentale et dépendance"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Neonatal Intensive Care - NICU)",
+    "fr": "Soins intensifs néonatals (USIN)",
+    "p": "K",
+    "loc": "5th floor",
+    "aliases": [
+      "NICU",
+      "neonatal ICU",
+      "Soins intensifs néonatals (USIN)"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Neurosciences)",
+    "fr": "Unité de soins — Neurosciences",
+    "p": "K",
+    "loc": "10th floor",
+    "aliases": [
+      "Neurosciences inpatient",
+      "Unité de soins — Neurosciences"
+    ],
+    "status": "verify",
+    "note": "Photo baseline says K, 10th floor; the current Department List separately lists Neuroscience at 4C. Confirm whether the visitor needs the inpatient unit or the department."
+  },
+  {
+    "en": "Care Unit (Orthopedics)",
+    "fr": "Unité de soins — Orthopédie",
+    "p": "C",
+    "loc": "4th floor",
+    "aliases": [
+      "Orthopedic inpatient",
+      "Unité de soins — Orthopédie"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Palliative Care)",
+    "fr": "Unité de soins palliatifs",
+    "p": "B",
+    "loc": "4th floor",
+    "aliases": [
+      "Palliative inpatient",
+      "Unité de soins palliatifs"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Postpartum)",
+    "fr": "Unité de soins post-partum",
+    "p": "C/D",
+    "loc": "8th floor",
+    "aliases": [
+      "Postpartum",
+      "maternity after delivery",
+      "Unité de soins post-partum"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Psychiatry High and Intermediate Care Units)",
+    "fr": "Psychiatrie — soins intensifs et intermédiaires",
+    "p": "B",
+    "loc": "3rd floor",
+    "aliases": [
+      "Psychiatry inpatient",
+      "Psychiatrie — soins intensifs et intermédiaires"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Care Unit (Surgery)",
+    "fr": "Unité de soins — Chirurgie",
+    "p": "K",
+    "loc": "8th and 9th floors",
+    "aliases": [
+      "Surgery inpatient",
+      "Unité de soins — Chirurgie"
+    ],
+    "status": "official",
+    "note": "Current Department List lists Surgery in Pavilion K, 8th and 9th floors."
+  },
+  {
+    "en": "Care Unit (Surgical Short Stay)",
+    "fr": "Court séjour chirurgical",
+    "p": "D",
+    "loc": "5th floor",
+    "aliases": [
+      "Short stay surgery",
+      "Court séjour chirurgical"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Admitting Office and Patient Accounts",
+    "fr": "Admissions et comptes des patients",
+    "p": "B",
+    "loc": "B-114",
+    "aliases": [
+      "Admissions",
+      "Patient Accounts",
+      "Admissions et comptes des patients"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Allergy and Immunology",
+    "fr": "Allergie et immunologie",
+    "p": "C",
+    "loc": "C-204",
+    "aliases": [
+      "Allergy",
+      "Immunology",
+      "allergie",
+      "immunologie",
+      "Allergie et immunologie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Anna & Peter Brojde Lung Cancer Centre",
+    "fr": "Centre du cancer du poumon Anna & Peter Brojde",
+    "p": "E",
+    "loc": "7th floor",
+    "aliases": [
+      "Lung cancer",
+      "Brojde",
+      "Centre du cancer du poumon Anna & Peter Brojde"
+    ],
+    "status": "official",
+    "note": "Current JGH Department List places the Peter Brojde Lung Cancer Centre in Pavilion E, 7th floor."
+  },
+  {
+    "en": "Arthritis Clinic",
+    "fr": "Clinique d’arthrite",
+    "p": "C",
+    "loc": "C-003.10",
+    "aliases": [
+      "Arthritis",
+      "arthrite",
+      "Clinique d’arthrite"
+    ],
+    "status": "official",
+    "note": "Current JGH Clinics and Testing page lists Arthritis at C-003.10."
+  },
+  {
+    "en": "Audiology",
+    "fr": "Audiologie",
+    "p": "E",
+    "loc": "E-932",
+    "aliases": [
+      "Hearing",
+      "audiologie",
+      "audition",
+      "Audiologie"
+    ],
+    "status": "official",
+    "note": "Dedicated Audiology and Speech Pathology page: Audiology is E-932."
+  },
+  {
+    "en": "Auditorium",
+    "fr": "Auditorium",
+    "p": "A",
+    "loc": "A-102",
+    "aliases": [
+      "Auditorium"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Auxiliary Office",
+    "fr": "Bureau de l’Auxiliaire",
+    "p": "A",
+    "loc": "A-018",
+    "aliases": [
+      "Auxiliary",
+      "Bureau de l’Auxiliaire"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Breast Centre",
+    "fr": "Centre du sein",
+    "p": "E",
+    "loc": "E-1004 (10th floor)",
+    "aliases": [
+      "Breast",
+      "breast clinic",
+      "sein",
+      "mammographie",
+      "Centre du sein"
+    ],
+    "status": "official",
+    "note": "Current JGH Department List lists CRID Radiologie / breast imaging at E-1004, 10th floor."
+  },
+  {
+    "en": "Breastfeeding Clinic",
+    "fr": "Clinique d'allaitement",
+    "p": "B",
+    "loc": "B-556",
+    "aliases": [
+      "Breastfeeding",
+      "lactation",
+      "allaitement",
+      "Clinique d'allaitement"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "C.T. Scan (Computed Tomography)",
+    "fr": "Tomodensitométrie (TDM / CT)",
+    "p": "D",
+    "loc": "D-205",
+    "aliases": [
+      "CT",
+      "CAT scan",
+      "computed tomography",
+      "Tomodensitométrie (TDM / CT)"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Cancer Information Centre",
+    "fr": "Centre d’information sur le cancer",
+    "p": "E",
+    "loc": "E-771",
+    "aliases": [
+      "Cancer information",
+      "Centre d’information sur le cancer"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Cancer Nutrition Rehabilitation Program (CNR)",
+    "fr": "Programme de réadaptation nutritionnelle en oncologie",
+    "p": "E",
+    "loc": "E-809",
+    "aliases": [
+      "CNR",
+      "cancer nutrition",
+      "Programme de réadaptation nutritionnelle en oncologie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Cancer Prevention Centre",
+    "fr": "Centre de prévention du cancer",
+    "p": "E",
+    "loc": "E-740",
+    "aliases": [
+      "Cancer prevention",
+      "Centre de prévention du cancer"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Cardiac Surgery",
+    "fr": "Chirurgie cardiaque",
+    "p": "A",
+    "loc": "5th floor",
+    "aliases": [
+      "Heart surgery",
+      "Chirurgie cardiaque"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Cardiology",
+    "fr": "Cardiologie",
+    "p": "E",
+    "loc": "E-206",
+    "aliases": [
+      "Heart",
+      "Cardiology testing",
+      "ECG",
+      "Holter",
+      "cardiologie",
+      "coeur",
+      "cœur",
+      "Cardiologie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Cardiovascular Prevention Centre",
+    "fr": "Centre de prévention cardiovasculaire",
+    "p": "H",
+    "loc": "H-132",
+    "aliases": [
+      "Cardiovascular prevention",
+      "CVPC",
+      "Centre de prévention cardiovasculaire"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Centre for Child Development and Mental Health",
+    "fr": "Centre de développement de l’enfant et de santé mentale",
+    "p": "M",
+    "loc": "",
+    "aliases": [
+      "Child development",
+      "child mental health",
+      "Centre de développement de l’enfant et de santé mentale"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Centre of Excellence in Thrombosis and Anticoagulation Care (CETAC)",
+    "fr": "Centre d’excellence en thrombose et anticoagulation (CETAC)",
+    "p": "B",
+    "loc": "B-304",
+    "aliases": [
+      "CETAC",
+      "thrombosis",
+      "anticoagulation",
+      "Centre d’excellence en thrombose et anticoagulation (CETAC)"
+    ],
+    "status": "official",
+    "note": "Current JGH Clinics and Testing page lists thrombosis/coagulation-anticoagulant services at B-304."
+  },
+  {
+    "en": "Clinical Research Unit - Pavilion E",
+    "fr": "Unité de recherche clinique — Pavillon E",
+    "p": "E",
+    "loc": "6th floor",
+    "aliases": [
+      "Clinical research",
+      "Unité de recherche clinique — Pavillon E"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Colonoscopy",
+    "fr": "Coloscopie",
+    "p": "G",
+    "loc": "G-304",
+    "aliases": [
+      "Colonoscopy",
+      "coloscopie",
+      "Coloscopie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Colorectal Surgery",
+    "fr": "Chirurgie colorectale",
+    "p": "G",
+    "loc": "G-300",
+    "aliases": [
+      "Colorectal",
+      "chirurgie colorectale",
+      "Chirurgie colorectale"
+    ],
+    "status": "official",
+    "note": "Dedicated Colorectal Surgery page and current Clinics page list G-300; Department List shows G-304."
+  },
+  {
+    "en": "Colposcopy",
+    "fr": "Colposcopie",
+    "p": "H",
+    "loc": "H-334.1",
+    "aliases": [
+      "Colposcopy",
+      "Colposcopie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Communications and Media Relations",
+    "fr": "Communications et relations médias",
+    "p": "A",
+    "loc": "A-811",
+    "aliases": [
+      "Communications",
+      "Media relations",
+      "Communications et relations médias"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Cystoscopy",
+    "fr": "Cystoscopie",
+    "p": "E",
+    "loc": "E-959.1",
+    "aliases": [
+      "Cystoscopy",
+      "Cystoscopie"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Dentistry",
+    "fr": "Dentisterie",
+    "p": "A",
+    "loc": "A-024",
+    "aliases": [
+      "Dental",
+      "dentist",
+      "dentiste",
+      "dentaire",
+      "Dentisterie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Dermatology",
+    "fr": "Dermatologie",
+    "p": "G",
+    "loc": "G-026",
+    "aliases": [
+      "Skin",
+      "dermatology",
+      "dermatologie",
+      "peau",
+      "Dermatologie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Dermatology Oncology",
+    "fr": "Dermato-oncologie",
+    "p": "E",
+    "loc": "E-1085",
+    "aliases": [
+      "Dermato-oncology",
+      "skin cancer",
+      "Dermato-oncologie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Diagnostic and Therapeutic Clinic",
+    "fr": "Clinique diagnostique et thérapeutique",
+    "p": "G",
+    "loc": "G-050",
+    "aliases": [
+      "DTC",
+      "diagnostic therapeutic clinic",
+      "Clinique diagnostique et thérapeutique"
+    ],
+    "status": "official",
+    "note": "Dedicated current JGH Diagnostic and Therapeutic Clinic page lists Pavilion G, room G-050."
+  },
+  {
+    "en": "Diagnostic Medicine and Core Lab",
+    "fr": "Médecine diagnostique et laboratoire central",
+    "p": "D",
+    "loc": "D-123",
+    "aliases": [
+      "Core lab",
+      "diagnostic medicine",
+      "Médecine diagnostique et laboratoire central"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Dietetics",
+    "fr": "Diététique",
+    "p": "B",
+    "loc": "B-001.1",
+    "aliases": [
+      "Dietitian",
+      "nutrition",
+      "Diététique"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Ear, Nose and Throat (ENT)",
+    "fr": "Oto-rhino-laryngologie (ORL)",
+    "p": "E",
+    "loc": "E-903",
+    "aliases": [
+      "ENT",
+      "ORL",
+      "otolaryngology",
+      "Oto-rhino-laryngologie (ORL)"
+    ],
+    "status": "official",
+    "note": "Dedicated ENT page: General ENT is E-903; Head & Neck Oncology is E-904."
+  },
+  {
+    "en": "Elspeth McConnell Mental Health and Wellness Centre",
+    "fr": "Centre de santé mentale et de mieux-être Elspeth McConnell",
+    "p": "B",
+    "loc": "6th floor",
+    "aliases": [
+      "Mental health wellness",
+      "Centre de santé mentale et de mieux-être Elspeth McConnell"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Endocrinology / Diabetes",
+    "fr": "Endocrinologie / Diabète",
+    "p": "E",
+    "loc": "E-104",
+    "aliases": [
+      "Endocrinology",
+      "diabetes",
+      "endocrinologie",
+      "diabète",
+      "diabete",
+      "Endocrinologie / Diabète"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Endoscopy",
+    "fr": "Endoscopie",
+    "p": "G",
+    "loc": "G-304",
+    "aliases": [
+      "Endoscopy",
+      "Endoscopie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Enterostomal Therapy Clinic",
+    "fr": "Clinique de stomothérapie",
+    "p": "E",
+    "loc": "E-102.1",
+    "aliases": [
+      "Enterostomal",
+      "ostomy",
+      "Clinique de stomothérapie"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Epidemiology",
+    "fr": "Épidémiologie",
+    "p": "H",
+    "loc": "H-485",
+    "aliases": [
+      "Epidemiology",
+      "Épidémiologie"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Food Court (Carrefour Lea Polansky)",
+    "fr": "Aire de restauration (Carrefour Lea Polansky)",
+    "p": "K",
+    "loc": "1st floor",
+    "aliases": [
+      "Food",
+      "cafeteria",
+      "Carrefour",
+      "Aire de restauration (Carrefour Lea Polansky)"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Foundation",
+    "fr": "Fondation",
+    "p": "A",
+    "loc": "A-107",
+    "aliases": [
+      "Foundation",
+      "Fondation"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Foundation - Satellite Office",
+    "fr": "Fondation — bureau satellite",
+    "p": "K",
+    "loc": "Floor S1",
+    "aliases": [
+      "Foundation satellite",
+      "Fondation — bureau satellite"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Gastroenterology",
+    "fr": "Gastroentérologie",
+    "p": "E",
+    "loc": "E-110",
+    "aliases": [
+      "GI",
+      "gastro",
+      "gastroentérologie",
+      "gastroenterologie",
+      "Gastroentérologie"
+    ],
+    "status": "official",
+    "note": "Current Clinics and Testing page lists E-110; Department List shows E-110.1."
+  },
+  {
+    "en": "Genetics / Medical Genetics",
+    "fr": "Génétique / Génétique médicale",
+    "p": "A",
+    "loc": "A-805",
+    "aliases": [
+      "Genetics",
+      "génétique",
+      "genetique",
+      "Génétique / Génétique médicale"
+    ],
+    "status": "official",
+    "note": "Dedicated Genetics page lists A-805; Department List shows A-802."
+  },
+  {
+    "en": "Geriatrics",
+    "fr": "Gériatrie",
+    "p": "E",
+    "loc": "E-0012",
+    "aliases": [
+      "Geriatrics",
+      "gériatrie",
+      "geriatrie",
+      "Gériatrie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Goldman Herzl Family Practice Centre",
+    "fr": "Centre de médecine familiale Goldman Herzl",
+    "p": "H",
+    "loc": "2nd floor",
+    "aliases": [
+      "Herzl",
+      "family medicine",
+      "Centre de médecine familiale Goldman Herzl"
+    ],
+    "status": "official",
+    "note": "Current Clinics and Testing page places Herzl Family Practice Centre in Pavilion H, 2nd floor. Department List says B, 2nd floor."
+  },
+  {
+    "en": "Head and Neck Surgery / Oncology",
+    "fr": "Chirurgie / oncologie de la tête et du cou",
+    "p": "E",
+    "loc": "E-904",
+    "aliases": [
+      "Head and neck",
+      "oncology",
+      "Chirurgie / oncologie de la tête et du cou"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Heart Function Clinic",
+    "fr": "Clinique de fonction cardiaque",
+    "p": "E",
+    "loc": "E-208",
+    "aliases": [
+      "Heart failure",
+      "heart function",
+      "Clinique de fonction cardiaque"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Hematology",
+    "fr": "Hématologie",
+    "p": "E",
+    "loc": "E-103",
+    "aliases": [
+      "Hematology",
+      "blood",
+      "hématologie",
+      "hematologie",
+      "Hématologie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Hemodialysis",
+    "fr": "Hémodialyse",
+    "p": "D",
+    "loc": "D-001",
+    "aliases": [
+      "Dialysis",
+      "hemodialysis",
+      "Hémodialyse"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Hemodynamic Laboratory",
+    "fr": "Laboratoire d’hémodynamie",
+    "p": "K",
+    "loc": "K-2400",
+    "aliases": [
+      "Hemodynamics",
+      "cath lab",
+      "Laboratoire d’hémodynamie"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Hope & Cope (Main Office)",
+    "fr": "L’Espoir, c’est la vie (bureau principal)",
+    "p": "E",
+    "loc": "E-730.1",
+    "aliases": [
+      "Hope and Cope",
+      "L’Espoir, c’est la vie (bureau principal)"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Hospital Cards",
+    "fr": "Cartes d’hôpital",
+    "p": "E",
+    "loc": "E-0014 (S1)",
+    "aliases": [
+      "Hospital card",
+      "registration card",
+      "Cartes d’hôpital"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Human Resources",
+    "fr": "Ressources humaines",
+    "p": "A",
+    "loc": "A-112",
+    "aliases": [
+      "HR",
+      "Human Resources",
+      "Ressources humaines"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Infectious Diseases",
+    "fr": "Maladies infectieuses",
+    "p": "G",
+    "loc": "G-200",
+    "aliases": [
+      "Infectious disease",
+      "maladies infectieuses",
+      "Maladies infectieuses"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Infection Prevention and Control",
+    "fr": "Prévention et contrôle des infections",
+    "p": "G",
+    "loc": "G-070",
+    "aliases": [
+      "Infection control",
+      "Prévention et contrôle des infections"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Institute of Community & Family Psychiatry (ICFP)",
+    "fr": "Institut de psychiatrie communautaire et familiale (IPCF)",
+    "p": "ICFP",
+    "loc": "",
+    "aliases": [
+      "ICFP",
+      "psychiatry institute",
+      "Institut de psychiatrie communautaire et familiale (IPCF)"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Internal Medicine",
+    "fr": "Médecine interne",
+    "p": "G",
+    "loc": "G-050",
+    "aliases": [
+      "Internal medicine",
+      "médecine interne",
+      "medecine interne",
+      "Médecine interne"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Interventional Radiology",
+    "fr": "Radiologie interventionnelle",
+    "p": "G",
+    "loc": "G-018",
+    "aliases": [
+      "IR",
+      "interventional radiology",
+      "Radiologie interventionnelle"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Library, Health Sciences Library",
+    "fr": "Bibliothèque des sciences de la santé",
+    "p": "I",
+    "loc": "I-202",
+    "aliases": [
+      "Library",
+      "Bibliothèque des sciences de la santé"
+    ],
+    "status": "official",
+    "note": "Current Department List places the CCOMTL library at I-202."
+  },
+  {
+    "en": "Long COVID Clinic",
+    "fr": "Clinique COVID longue",
+    "p": "H",
+    "loc": "H-132",
+    "aliases": [
+      "Long COVID",
+      "Clinique COVID longue"
+    ],
+    "status": "verify",
+    "note": "Current Clinics and Testing page confirms a Long COVID referral clinic but does not state a room; H-132 is retained from the hospital directory baseline and should be verified."
+  },
+  {
+    "en": "M.R.I. (Magnetic Resonance Imaging)",
+    "fr": "IRM (imagerie par résonance magnétique)",
+    "p": "D",
+    "loc": "D-205",
+    "aliases": [
+      "MRI",
+      "magnetic resonance",
+      "irm",
+      "IRM (imagerie par résonance magnétique)"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Medical Day Hospital",
+    "fr": "Hôpital de jour médical",
+    "p": "K",
+    "loc": "KS1-101",
+    "aliases": [
+      "MDH",
+      "day hospital",
+      "Hôpital de jour médical"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Medical Devices Reprocessing Unit (MDR)",
+    "fr": "Unité de retraitement des dispositifs médicaux",
+    "p": "K",
+    "loc": "S4400",
+    "aliases": [
+      "MDR",
+      "sterile processing",
+      "Unité de retraitement des dispositifs médicaux"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Medical Records",
+    "fr": "Archives médicales",
+    "p": "C",
+    "loc": "C-110",
+    "aliases": [
+      "Medical records",
+      "archives médicales",
+      "dossier médical",
+      "Archives médicales"
+    ],
+    "status": "verify",
+    "note": "Current JGH Department List includes Medical Records but does not state a room; C-110 is retained from the posted hospital directory baseline."
+  },
+  {
+    "en": "Memory Clinic",
+    "fr": "Clinique de la mémoire",
+    "p": "E",
+    "loc": "E-S1100",
+    "aliases": [
+      "Memory",
+      "cognition",
+      "mémoire",
+      "memoire",
+      "Clinique de la mémoire"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Methadone Maintenance Program",
+    "fr": "Programme de maintien à la méthadone",
+    "p": "H",
+    "loc": "H-234",
+    "aliases": [
+      "Methadone",
+      "Programme de maintien à la méthadone"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Microbiology Laboratory",
+    "fr": "Laboratoire de microbiologie",
+    "p": "C",
+    "loc": "C-111",
+    "aliases": [
+      "Microbiology lab",
+      "Laboratoire de microbiologie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Multi-Faith Room",
+    "fr": "Salle multiconfessionnelle",
+    "p": "E",
+    "loc": "E-0006 (S1)",
+    "aliases": [
+      "Prayer room",
+      "chapel",
+      "multi-faith",
+      "Salle multiconfessionnelle"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Neonatal Follow-Up Clinic",
+    "fr": "Clinique de suivi néonatal",
+    "p": "A",
+    "loc": "A-209",
+    "aliases": [
+      "Neonatal follow-up",
+      "Clinique de suivi néonatal"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Nephrology",
+    "fr": "Néphrologie",
+    "p": "D",
+    "loc": "D-070 (main floor/RC)",
+    "aliases": [
+      "Kidney",
+      "renal",
+      "nephrology",
+      "néphrologie",
+      "nephrologie",
+      "rein",
+      "Néphrologie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Neurology",
+    "fr": "Neurologie",
+    "p": "E",
+    "loc": "E-005",
+    "aliases": [
+      "Neurology",
+      "neurologie",
+      "Neurologie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Neurophysiology",
+    "fr": "Neurophysiologie",
+    "p": "E",
+    "loc": "E-221",
+    "aliases": [
+      "Neurophysiology",
+      "Neurophysiologie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Neurosurgery",
+    "fr": "Neurochirurgie",
+    "p": "E",
+    "loc": "E-931 / E-929",
+    "aliases": [
+      "Neurosurgery",
+      "Neurochirurgie"
+    ],
+    "status": "official",
+    "note": "Current JGH Department List lists Neurosurgery at E-931 and E-929; Clinics and Testing summarizes it as E-9."
+  },
+  {
+    "en": "Nuclear Medicine",
+    "fr": "Médecine nucléaire",
+    "p": "G",
+    "loc": "G-19 (S1)",
+    "aliases": [
+      "Nuclear medicine",
+      "médecine nucléaire",
+      "medecine nucleaire",
+      "Médecine nucléaire"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Nurses Lecture Hall",
+    "fr": "Nurses Lecture Hall",
+    "p": "A",
+    "loc": "A-119",
+    "aliases": [
+      "Nurses hall",
+      "lecture hall"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Antepartum",
+    "fr": "Antépartum",
+    "p": "K",
+    "loc": "3rd floor",
+    "aliases": [
+      "Antepartum",
+      "pregnancy",
+      "Antépartum"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Family Birthing Centre (FBC)",
+    "fr": "Centre familial des naissances",
+    "p": "K",
+    "loc": "3rd floor",
+    "aliases": [
+      "FBC",
+      "birthing",
+      "birth",
+      "labour",
+      "labor",
+      "delivery",
+      "maternity",
+      "case room",
+      "having a baby",
+      "wife is having a baby",
+      "accouchement",
+      "accoucher",
+      "salle d’accouchement",
+      "maternité",
+      "Centre familial des naissances"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Obstetrical Ultrasound",
+    "fr": "Échographie obstétricale",
+    "p": "H",
+    "loc": "H-318 (3rd floor)",
+    "aliases": [
+      "Pregnancy ultrasound",
+      "obstetric ultrasound",
+      "Échographie obstétricale"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Obstetrics and Gynecology",
+    "fr": "Obstétrique et gynécologie",
+    "p": "H",
+    "loc": "3rd floor",
+    "aliases": [
+      "OBGYN",
+      "OB/GYN",
+      "women's health",
+      "gynecology",
+      "obstetrics",
+      "obstétrique",
+      "gynécologie",
+      "gynecologie",
+      "Obstétrique et gynécologie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Perinatal Centre",
+    "fr": "Centre périnatal",
+    "p": "H",
+    "loc": "H-308",
+    "aliases": [
+      "Perinatal",
+      "Centre périnatal"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Postpartum Care Unit",
+    "fr": "Unité de soins post-partum",
+    "p": "C/D",
+    "loc": "8th floor",
+    "aliases": [
+      "Postpartum",
+      "maternity ward",
+      "Unité de soins post-partum"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Women's Health Centre",
+    "fr": "Centre de santé des femmes",
+    "p": "H",
+    "loc": "3rd floor",
+    "aliases": [
+      "Women's health",
+      "gynecology",
+      "Centre de santé des femmes"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Occupational Therapy",
+    "fr": "Ergothérapie",
+    "p": "D",
+    "loc": "D-0002 (S1)",
+    "aliases": [
+      "OT",
+      "occupational therapy",
+      "ergothérapie",
+      "ergotherapie",
+      "Ergothérapie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Ombudsman",
+    "fr": "Commissaire aux plaintes / Ombudsman",
+    "p": "A",
+    "loc": "A-440",
+    "aliases": [
+      "Complaints",
+      "ombudsman",
+      "Commissaire aux plaintes / Ombudsman"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Oncology / Segal Cancer Centre",
+    "fr": "Oncologie / Centre du cancer Segal",
+    "p": "E",
+    "loc": "E-776.4",
+    "aliases": [
+      "Oncology",
+      "cancer",
+      "Segal",
+      "Oncologie / Centre du cancer Segal"
+    ],
+    "status": "official",
+    "note": "Current Department List lists Segal Cancer Centre at E-776.4; other oncology listings may show E-776."
+  },
+  {
+    "en": "Ophthalmology",
+    "fr": "Ophtalmologie",
+    "p": "E",
+    "loc": "E-008",
+    "aliases": [
+      "Eye",
+      "ophthalmology",
+      "ophtalmologie",
+      "yeux",
+      "Ophtalmologie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "OROT",
+    "fr": "OROT",
+    "p": "A",
+    "loc": "A-200",
+    "aliases": [
+      "OROT"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Orthopedics",
+    "fr": "Orthopédie",
+    "p": "E",
+    "loc": "E-003",
+    "aliases": [
+      "Orthopedic clinic",
+      "bones",
+      "orthopédie",
+      "orthopedie",
+      "Orthopédie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Osteoporosis Clinic",
+    "fr": "Clinique d’ostéoporose",
+    "p": "G / E",
+    "loc": "G-050 / E-104",
+    "aliases": [
+      "Osteoporosis",
+      "Clinique d’ostéoporose"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "P.A.C.U. (Post-Anesthesia Care Unit)",
+    "fr": "Unité de soins post-anesthésiques (USPA)",
+    "p": "K",
+    "loc": "S1801",
+    "aliases": [
+      "PACU",
+      "recovery room",
+      "Unité de soins post-anesthésiques (USPA)"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Pacemaker Clinic",
+    "fr": "Clinique de stimulateurs cardiaques",
+    "p": "E",
+    "loc": "E-206",
+    "aliases": [
+      "Pacemaker",
+      "Clinique de stimulateurs cardiaques"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Pastoral Services",
+    "fr": "Services spirituels",
+    "p": "B",
+    "loc": "B-151.9",
+    "aliases": [
+      "Pastoral",
+      "spiritual services",
+      "Services spirituels"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Pathology",
+    "fr": "Pathologie",
+    "p": "G",
+    "loc": "G-102",
+    "aliases": [
+      "Pathology",
+      "pathologie",
+      "Pathologie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Perioperative Unit",
+    "fr": "Unité périopératoire",
+    "p": "K",
+    "loc": "K-1601",
+    "aliases": [
+      "Perioperative",
+      "Unité périopératoire"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Peritoneal Dialysis",
+    "fr": "Dialyse péritonéale",
+    "p": "D",
+    "loc": "D-070",
+    "aliases": [
+      "Dialysis",
+      "peritoneal",
+      "Dialyse péritonéale"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Pharmacy",
+    "fr": "Pharmacie",
+    "p": "C",
+    "loc": "C-005",
+    "aliases": [
+      "Pharmacy",
+      "pharmacie",
+      "Pharmacie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Physiotherapy",
+    "fr": "Physiothérapie",
+    "p": "D",
+    "loc": "D-0002 (S1)",
+    "aliases": [
+      "PT",
+      "physiotherapy",
+      "physical therapy",
+      "physio",
+      "physiothérapie",
+      "physiotherapie",
+      "thérapie physique",
+      "Physiothérapie"
+    ],
+    "status": "official",
+    "note": "Dedicated Physiotherapy page: Pavilion D, basement level S1, room D-0002."
+  },
+  {
+    "en": "Plastic and Reconstructive Surgery",
+    "fr": "Chirurgie plastique et reconstructive",
+    "p": "A",
+    "loc": "A-500",
+    "aliases": [
+      "Plastic surgery",
+      "reconstructive",
+      "Chirurgie plastique et reconstructive"
+    ],
+    "status": "official",
+    "note": "Dedicated Plastic and Reconstructive Surgery page lists A-500; Clinics and Testing has a separate 'Surgery, Plastic' listing at A-509."
+  },
+  {
+    "en": "Presurgical Screening Clinic (PSS)",
+    "fr": "Clinique d’évaluation préchirurgicale",
+    "p": "A",
+    "loc": "6th floor / A-600 area",
+    "aliases": [
+      "PSS",
+      "pre-op",
+      "presurgical",
+      "Clinique d’évaluation préchirurgicale"
+    ],
+    "status": "official",
+    "note": "Current Surgery page places final pre-surgery testing/instructions at Pavilion A-600; Clinics and Testing describes PSS as Pavilion A, 6th floor."
+  },
+  {
+    "en": "Professional Services",
+    "fr": "Services professionnels",
+    "p": "A",
+    "loc": "A-142",
+    "aliases": [
+      "Professional services",
+      "Services professionnels"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Psychiatry (Main Office)",
+    "fr": "Psychiatrie (bureau principal)",
+    "p": "A",
+    "loc": "A-529",
+    "aliases": [
+      "Psychiatry office",
+      "Psychiatrie (bureau principal)"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Psychogeriatrics",
+    "fr": "Psychogériatrie",
+    "p": "ICFP",
+    "loc": "ICFP-152",
+    "aliases": [
+      "Psychogeriatrics",
+      "psychogériatrie",
+      "psychogeriatrie",
+      "Psychogériatrie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Pulmonary",
+    "fr": "Pneumologie",
+    "p": "G",
+    "loc": "G-203",
+    "aliases": [
+      "Pulmonary",
+      "lung",
+      "respiratory",
+      "pneumologie",
+      "poumon",
+      "Pneumologie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Pulmonary Hypertension",
+    "fr": "Hypertension pulmonaire",
+    "p": "E",
+    "loc": "E-206",
+    "aliases": [
+      "Pulmonary hypertension",
+      "Hypertension pulmonaire"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Quality, Innovation, Evaluation, Performance and Ethics Directorate",
+    "fr": "Quality, Innovation, Evaluation, Performance and Ethics Directorate",
+    "p": "A",
+    "loc": "A-909",
+    "aliases": [
+      "Quality",
+      "ethics",
+      "performance"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Radiation Oncology (Clinic)",
+    "fr": "Radio-oncologie (clinique)",
+    "p": "G",
+    "loc": "G-002",
+    "aliases": [
+      "Radiation oncology",
+      "Radio-oncologie (clinique)"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Radiation Oncology (Treatments)",
+    "fr": "Radio-oncologie (traitements)",
+    "p": "G",
+    "loc": "G-18",
+    "aliases": [
+      "Radiation therapy",
+      "treatments",
+      "Radio-oncologie (traitements)"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Radiology (general)",
+    "fr": "Radiologie",
+    "p": "C",
+    "loc": "C-202",
+    "aliases": [
+      "Radiology",
+      "x-ray",
+      "radiologie",
+      "rayons x",
+      "Radiologie"
+    ],
+    "status": "verify",
+    "note": "Current JGH Department List includes Radiology but does not state a general reception room; C-202 is retained from the posted hospital directory baseline."
+  },
+  {
+    "en": "Rheumatology",
+    "fr": "Rhumatologie",
+    "p": "A",
+    "loc": "A-725",
+    "aliases": [
+      "Rheumatology",
+      "rhumatologie",
+      "Rhumatologie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Social Services",
+    "fr": "Services sociaux",
+    "p": "A",
+    "loc": "A-300",
+    "aliases": [
+      "Social worker",
+      "social services",
+      "services sociaux",
+      "travailleur social",
+      "Services sociaux"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Speech Pathology",
+    "fr": "Orthophonie",
+    "p": "A",
+    "loc": "A-730",
+    "aliases": [
+      "Speech pathology",
+      "speech therapy",
+      "orthophonie",
+      "orthophoniste",
+      "Orthophonie"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Surgery Clinic",
+    "fr": "Clinique de chirurgie",
+    "p": "A",
+    "loc": "A-500",
+    "aliases": [
+      "General surgery clinic",
+      "Clinique de chirurgie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Surgical Suites",
+    "fr": "Salles d’opération",
+    "p": "K",
+    "loc": "S1314",
+    "aliases": [
+      "Operating rooms",
+      "surgery suites",
+      "Salles d’opération"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Test Centre",
+    "fr": "Centre de prélèvements / tests",
+    "p": "E",
+    "loc": "E-109 (1st floor)",
+    "aliases": [
+      "Lab testing",
+      "test center",
+      "blood tests",
+      "prise de sang",
+      "prélèvement",
+      "prelevement",
+      "centre de tests",
+      "Centre de prélèvements / tests"
+    ],
+    "status": "official",
+    "note": "Current Clinics and Testing page (May 2026) lists the Test Centre at E-109. Department List (July 2025) lists E-102."
+  },
+  {
+    "en": "Thoracic Surgery",
+    "fr": "Chirurgie thoracique",
+    "p": "E",
+    "loc": "E-1055",
+    "aliases": [
+      "Thoracic",
+      "chest surgery",
+      "Chirurgie thoracique"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline lists E-1055. Current JGH Department List lists Pulmonary Oncology at E-1055; confirm whether the visitor needs Thoracic Surgery or Pulmonary Oncology."
+  },
+  {
+    "en": "Transfusion Service",
+    "fr": "Service de transfusion",
+    "p": "K",
+    "loc": "K1-101",
+    "aliases": [
+      "Transfusion",
+      "blood bank",
+      "Service de transfusion"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Ultrasound (general)",
+    "fr": "Échographie générale",
+    "p": "B",
+    "loc": "B-240",
+    "aliases": [
+      "Ultrasound",
+      "sonography",
+      "échographie",
+      "echographie",
+      "Échographie générale"
+    ],
+    "status": "official",
+    "note": "Posted sign appears to list D-240; official Department List search result lists B-240. Use B-240 unless appointment paperwork says otherwise."
+  },
+  {
+    "en": "Urology",
+    "fr": "Urologie",
+    "p": "E",
+    "loc": "E-959 (9th floor)",
+    "aliases": [
+      "Urology",
+      "urinary",
+      "prostate",
+      "bladder",
+      "kidney surgery",
+      "urologie",
+      "Urologie"
+    ],
+    "status": "official",
+    "note": "Dedicated Urology page (updated Jan 2026) and Clinics and Testing list E-959; older Department List shows E-941."
+  },
+  {
+    "en": "Users' Committee",
+    "fr": "Comité des usagers",
+    "p": "A",
+    "loc": "A-418",
+    "aliases": [
+      "Users committee",
+      "patients committee",
+      "Comité des usagers"
+    ],
+    "status": "verify",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Vascular Lab and Vascular Surgery Clinics",
+    "fr": "Laboratoire vasculaire et cliniques de chirurgie vasculaire",
+    "p": "B",
+    "loc": "B-268",
+    "aliases": [
+      "Vascular",
+      "vascular lab",
+      "vasculaire",
+      "chirurgie vasculaire",
+      "Laboratoire vasculaire et cliniques de chirurgie vasculaire"
+    ],
+    "status": "official",
+    "note": "Posted sign appears to list B-368; official Department List search result lists B-268. Use B-268 unless appointment paperwork says otherwise."
+  },
+  {
+    "en": "Volunteer Department",
+    "fr": "Service des bénévoles",
+    "p": "B",
+    "loc": "B-151",
+    "aliases": [
+      "Volunteer services",
+      "Service des bénévoles"
+    ],
+    "status": "official",
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+  },
+  {
+    "en": "Main Entrance",
+    "fr": "Entrée principale",
+    "p": "MAIN",
+    "loc": "3755 Côte-Sainte-Catherine Road",
+    "aliases": [
+      "Main entrance",
+      "3755",
+      "Entrée principale"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Pavilion A Entrance",
+    "fr": "Entrée du pavillon A",
+    "p": "A",
+    "loc": "5750 Côte-des-Neiges",
+    "aliases": [
+      "Côte-des-Neiges entrance",
+      "5750",
+      "Entrée du pavillon A"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Pavilion E / Légaré Entrance",
+    "fr": "Entrée du pavillon E / Légaré",
+    "p": "E",
+    "loc": "5757 Légaré",
+    "aliases": [
+      "Légaré entrance",
+      "5757",
+      "Entrée du pavillon E / Légaré"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Pavilion K Entrance",
+    "fr": "Entrée du pavillon K",
+    "p": "K",
+    "loc": "5767 Légaré",
+    "aliases": [
+      "K entrance",
+      "5767",
+      "Entrée du pavillon K"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Emergency Entrance",
+    "fr": "Entrée de l’Urgence",
+    "p": "ER",
+    "loc": "5777 Légaré",
+    "aliases": [
+      "Emergency entrance",
+      "ER entrance",
+      "5777",
+      "Entrée de l’Urgence"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Pavilion H Entrance",
+    "fr": "Entrée du pavillon H",
+    "p": "H",
+    "loc": "5790 Côte-des-Neiges",
+    "aliases": [
+      "H entrance",
+      "5790",
+      "Entrée du pavillon H"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Institute of Community & Family Psychiatry (ICFP) Entrance",
+    "fr": "Entrée de l’Institut de psychiatrie communautaire et familiale",
+    "p": "ICFP",
+    "loc": "4333 Côte-Sainte-Catherine",
+    "aliases": [
+      "ICFP entrance",
+      "4333",
+      "Entrée de l’Institut de psychiatrie communautaire et familiale"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Centre for Child Development and Mental Health Entrance",
+    "fr": "Entrée du Centre de développement de l’enfant et de santé mentale",
+    "p": "M",
+    "loc": "4335 Côte-Sainte-Catherine",
+    "aliases": [
+      "Pavilion M",
+      "4335",
+      "Entrée du Centre de développement de l’enfant et de santé mentale"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Lady Davis Institute for Medical Research",
+    "fr": "Institut Lady Davis de recherches médicales",
+    "p": "F",
+    "loc": "3999 Côte-Sainte-Catherine",
+    "aliases": [
+      "LDI",
+      "Pavilion F",
+      "3999",
+      "Institut Lady Davis de recherches médicales"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Hope & Cope Cancer Wellness Centre",
+    "fr": "Centre de mieux-être du cancer L’Espoir, c’est la vie",
+    "p": "",
+    "loc": "4635 Côte-Sainte-Catherine",
+    "aliases": [
+      "Hope & Cope wellness",
+      "4635",
+      "Centre de mieux-être du cancer L’Espoir, c’est la vie"
+    ],
+    "status": "verify",
+    "note": "Posted hospital directory baseline lists 4635 Côte-Sainte-Catherine; verify current appointment details if exact location is critical."
+  },
+  {
+    "en": "Herzl CRIU Walk-in Centre",
+    "fr": "Centre sans rendez-vous Herzl CRIU",
+    "p": "",
+    "loc": "5858 Côte-des-Neiges, 5th floor",
+    "aliases": [
+      "Herzl CRIU",
+      "walk-in",
+      "5858",
+      "Centre sans rendez-vous Herzl CRIU"
+    ],
+    "status": "official",
+    "note": "Current Clinics and Testing page lists the Herzl Walk-In Centre at 5858 Côte-des-Neiges, 5th floor."
+  },
+  {
+    "en": "Airways Centre",
+    "fr": "Centre des voies respiratoires",
+    "p": "G",
+    "loc": "G-203",
+    "aliases": [
+      "airways",
+      "respiratory",
+      "voies respiratoires",
+      "Centre des voies respiratoires"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Anesthesia",
+    "fr": "Anesthésie",
+    "p": "K",
+    "loc": "K1-400",
+    "aliases": [
+      "anaesthesia",
+      "anesthésie",
+      "Anesthésie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Audiology and Speech Pathology",
+    "fr": "Audiologie et orthophonie",
+    "p": "E / A",
+    "loc": "Audiology E-932 / Speech Pathology A-730",
+    "aliases": [
+      "audiology",
+      "speech pathology",
+      "orthophonie",
+      "audiologie",
+      "Audiologie et orthophonie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Behavioural Psychotherapy and Research Unit",
+    "fr": "Unité de psychothérapie comportementale et de recherche",
+    "p": "ICFP",
+    "loc": "ICFP-B-09",
+    "aliases": [
+      "behavioural psychotherapy",
+      "psychotherapy",
+      "psychothérapie",
+      "Unité de psychothérapie comportementale et de recherche"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Biochemistry",
+    "fr": "Biochimie",
+    "p": "D",
+    "loc": "D-136",
+    "aliases": [
+      "biochemistry",
+      "biochimie",
+      "Biochimie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Child Psychiatry",
+    "fr": "Psychiatrie de l’enfant",
+    "p": "M",
+    "loc": "M-011",
+    "aliases": [
+      "child psychiatry",
+      "pediatric psychiatry",
+      "psychiatrie enfant",
+      "Psychiatrie de l’enfant"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Couple and Family Therapy Training Program",
+    "fr": "Programme de formation en thérapie conjugale et familiale",
+    "p": "ICFP",
+    "loc": "ICFP",
+    "aliases": [
+      "couple therapy",
+      "family therapy",
+      "thérapie familiale",
+      "Programme de formation en thérapie conjugale et familiale"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "CRID Radiologie / Breast Imaging",
+    "fr": "CRID Radiologie / Imagerie du sein",
+    "p": "E",
+    "loc": "E-1004 (10th floor)",
+    "aliases": [
+      "crid",
+      "breast imaging",
+      "mammography",
+      "imagerie du sein",
+      "mammographie",
+      "CRID Radiologie / Imagerie du sein"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Ethics",
+    "fr": "Éthique",
+    "p": "A",
+    "loc": "A-910",
+    "aliases": [
+      "ethics",
+      "éthique",
+      "Éthique"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Library — Patient and Family Resource Centre",
+    "fr": "Bibliothèque — Centre de ressources pour les patients et les familles",
+    "p": "A",
+    "loc": "A-200.1",
+    "aliases": [
+      "patient library",
+      "family resource centre",
+      "bibliothèque patients",
+      "Bibliothèque — Centre de ressources pour les patients et les familles"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Medicine — Department Office",
+    "fr": "Médecine — bureau du département",
+    "p": "B",
+    "loc": "B-127",
+    "aliases": [
+      "medicine department",
+      "department of medicine",
+      "médecine",
+      "Médecine — bureau du département"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Microbiology / Infectious Diseases / Tuberculosis Clinic",
+    "fr": "Microbiologie / Maladies infectieuses / Clinique de tuberculose",
+    "p": "G",
+    "loc": "G-200",
+    "aliases": [
+      "tuberculosis",
+      "tb clinic",
+      "tuberculose",
+      "Microbiologie / Maladies infectieuses / Clinique de tuberculose"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Music Therapy",
+    "fr": "Musicothérapie",
+    "p": "",
+    "loc": "",
+    "aliases": [
+      "music therapy",
+      "musicothérapie",
+      "Musicothérapie"
+    ],
+    "status": "verify",
+    "note": "Current JGH Department List includes Music Therapy but does not provide a room."
+  },
+  {
+    "en": "Neonatology",
+    "fr": "Néonatologie",
+    "p": "K",
+    "loc": "3rd floor",
+    "aliases": [
+      "neonatology",
+      "newborn",
+      "néonatologie",
+      "Néonatologie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Nursing",
+    "fr": "Soins infirmiers",
+    "p": "B",
+    "loc": "B-109",
+    "aliases": [
+      "nursing",
+      "soins infirmiers",
+      "Soins infirmiers"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Occupational Therapy — Mental Health",
+    "fr": "Ergothérapie — santé mentale",
+    "p": "ICFP",
+    "loc": "ICFP",
+    "aliases": [
+      "occupational therapy mental health",
+      "ergothérapie santé mentale",
+      "Ergothérapie — santé mentale"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Psychiatry — Outpatients",
+    "fr": "Psychiatrie — consultation externe",
+    "p": "ICFP",
+    "loc": "ICFP",
+    "aliases": [
+      "outpatient psychiatry",
+      "psychiatry clinic",
+      "psychiatrie externe",
+      "Psychiatrie — consultation externe"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Psychology",
+    "fr": "Psychologie",
+    "p": "ICFP",
+    "loc": "",
+    "aliases": [
+      "psychology",
+      "psychologist",
+      "psychologie",
+      "psychologue",
+      "Psychologie"
+    ],
+    "status": "verify",
+    "note": "Current JGH Department List includes Psychology under ICFP services but does not specify a room."
+  },
+  {
+    "en": "Pulmonary Oncology",
+    "fr": "Oncologie pulmonaire",
+    "p": "E",
+    "loc": "E-1055",
+    "aliases": [
+      "lung oncology",
+      "pulmonary oncology",
+      "oncologie pulmonaire",
+      "Oncologie pulmonaire"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Respiratory Physiology",
+    "fr": "Physiologie respiratoire",
+    "p": "G",
+    "loc": "G-207",
+    "aliases": [
+      "respiratory physiology",
+      "pulmonary function",
+      "physiologie respiratoire",
+      "Physiologie respiratoire"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Respiratory Therapy",
+    "fr": "Inhalothérapie",
+    "p": "K",
+    "loc": "K-1314",
+    "aliases": [
+      "respiratory therapy",
+      "inhalotherapy",
+      "inhalothérapie",
+      "Inhalothérapie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Security",
+    "fr": "Sécurité",
+    "p": "B / K",
+    "loc": "Main Entrance / Pavilion K Légaré entrance",
+    "aliases": [
+      "security",
+      "sécurité",
+      "Sécurité"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Angiogram / Cardiac Catheterization",
+    "fr": "Angiographie / Cathétérisme cardiaque",
+    "p": "D",
+    "loc": "D-215",
+    "aliases": [
+      "angiogram",
+      "angiography",
+      "cardiac catheterization",
+      "angiographie",
+      "Angiographie / Cathétérisme cardiaque"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Echocardiography Laboratory",
+    "fr": "Laboratoire d’échocardiographie",
+    "p": "E",
+    "loc": "E-206",
+    "aliases": [
+      "echo",
+      "echocardiogram",
+      "échocardiographie",
+      "Laboratoire d’échocardiographie"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Holter Monitoring",
+    "fr": "Monitorage Holter",
+    "p": "E",
+    "loc": "E-206",
+    "aliases": [
+      "holter",
+      "Monitorage Holter"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Cardiovascular Laboratory",
+    "fr": "Laboratoire cardiovasculaire",
+    "p": "D",
+    "loc": "D-226",
+    "aliases": [
+      "cardiovascular lab",
+      "laboratoire cardiovasculaire",
+      "Laboratoire cardiovasculaire"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Congestive Heart Failure Clinic",
+    "fr": "Clinique d’insuffisance cardiaque",
+    "p": "E",
+    "loc": "E-208",
+    "aliases": [
+      "heart failure",
+      "CHF",
+      "insuffisance cardiaque",
+      "Clinique d’insuffisance cardiaque"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Electrocardiography Laboratory (ECG/EKG)",
+    "fr": "Laboratoire d’électrocardiographie (ECG)",
+    "p": "E",
+    "loc": "E-206",
+    "aliases": [
+      "ecg",
+      "ekg",
+      "electrocardiogram",
+      "électrocardiogramme",
+      "Laboratoire d’électrocardiographie (ECG)"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Stress Test Laboratory",
+    "fr": "Laboratoire d’épreuve d’effort",
+    "p": "E",
+    "loc": "E-206",
+    "aliases": [
+      "stress test",
+      "exercise test",
+      "épreuve d'effort",
+      "Laboratoire d’épreuve d’effort"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Coronary Care Unit (CCU)",
+    "fr": "Unité de soins coronariens",
+    "p": "B",
+    "loc": "B-268",
+    "aliases": [
+      "ccu",
+      "coronary care",
+      "soins coronariens",
+      "Unité de soins coronariens"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Coagulation / Anticoagulant Clinic",
+    "fr": "Clinique de coagulation / anticoagulants",
+    "p": "B",
+    "loc": "B-304",
+    "aliases": [
+      "coagulation",
+      "anticoagulant",
+      "anticoagulation",
+      "Clinique de coagulation / anticoagulants"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Family Planning",
+    "fr": "Planification familiale",
+    "p": "A",
+    "loc": "A-619",
+    "aliases": [
+      "family planning",
+      "contraception",
+      "planification familiale",
+      "Planification familiale"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Kidney Treatment Centre",
+    "fr": "Centre de traitement rénal",
+    "p": "D",
+    "loc": "D-070",
+    "aliases": [
+      "kidney treatment",
+      "renal",
+      "rein",
+      "Centre de traitement rénal"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Pain Clinic",
+    "fr": "Clinique de la douleur",
+    "p": "A",
+    "loc": "A-420",
+    "aliases": [
+      "pain clinic",
+      "douleur",
+      "Clinique de la douleur"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Parkinson Clinic",
+    "fr": "Clinique Parkinson",
+    "p": "E",
+    "loc": "E-005",
+    "aliases": [
+      "parkinson",
+      "Clinique Parkinson"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Registration",
+    "fr": "Inscription",
+    "p": "E",
+    "loc": "E-0014",
+    "aliases": [
+      "registration",
+      "hospital card",
+      "inscription",
+      "carte d'hôpital",
+      "Inscription"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Renal Clinic",
+    "fr": "Clinique rénale",
+    "p": "G",
+    "loc": "G-225",
+    "aliases": [
+      "renal clinic",
+      "kidney clinic",
+      "clinique rénale",
+      "Clinique rénale"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Rhogam",
+    "fr": "Rhogam",
+    "p": "H",
+    "loc": "H-308",
+    "aliases": [
+      "rhogam",
+      "Rhogam"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Minor Surgery",
+    "fr": "Chirurgie mineure",
+    "p": "G",
+    "loc": "G-300",
+    "aliases": [
+      "minor surgery",
+      "chirurgie mineure",
+      "Chirurgie mineure"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Thrombosis Clinic",
+    "fr": "Clinique de thrombose",
+    "p": "B",
+    "loc": "B-304",
+    "aliases": [
+      "thrombosis",
+      "thrombose",
+      "Clinique de thrombose"
+    ],
+    "status": "official"
+  },
+  {
+    "en": "Blood Oncology Clinic",
+    "fr": "Clinique d’oncologie hématologique",
+    "p": "E",
+    "loc": "7th floor",
+    "aliases": [
+      "blood oncology",
+      "hematologic oncology",
+      "oncologie hématologique",
+      "Clinique d’oncologie hématologique"
+    ],
+    "status": "official"
+  }
+]
