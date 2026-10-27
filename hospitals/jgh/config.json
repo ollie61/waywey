@@ -95,5 +95,13 @@
       "fr": "IPCF"
     }
   },
-  "defaultVisitorLanguage": "en"
+  "defaultVisitorLanguage": "en",
+  "datasetStrength": {
+    "level": 4,
+    "label": {
+      "fr": "Très forte",
+      "en": "Very strong"
+    },
+    "basis": "190 destinations; extensively audited current JGH data and established routing."
+  }
 }
