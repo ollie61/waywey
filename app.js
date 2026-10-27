@@ -1,3 +1,4 @@
+const APP_VERSION="0.4.0";
 let HOSPITAL={};
 let DATA=[];
 let GRAPH={};
@@ -144,7 +145,7 @@ function setAppLanguage(lang){
  appLang=lang==="fr"?"fr":"en";
  document.documentElement.lang=appLang;
  const t=APP_UI[appLang];
- $("brandSubtitle").textContent=t.brand+" · "+DATA.length+" destinations";$("quickGuideBtn").textContent=t.quickGuide;
+ $("brandSubtitle").textContent=t.brand+" · "+DATA.length+" destinations · v"+APP_VERSION;$("quickGuideBtn").textContent=t.quickGuide;
  $("stationHeading").textContent=t.stationHeading;$("stationLabel").textContent=t.stationLabel;$("stationStatus").textContent=t.stationStatus;
  $("searchHeading").textContent=t.searchHeading;$("searchLabel").textContent=t.searchLabel;$("q").placeholder=t.placeholder;$("clear").textContent=t.clear;
  $("resultHeading").textContent=t.resultHeading;$("showVisitor").textContent=t.showVisitor;$("newSearch").textContent=t.newSearch;$("disclaimer").textContent=t.disclaimer;
