@@ -1,0 +1,128 @@
+{
+  "graph": {
+    "N": [
+      "J"
+    ],
+    "J": [
+      "N"
+    ],
+    "M": [],
+    "V": [],
+    "B": [],
+    "O": []
+  },
+  "pavilionLabels": {
+    "en": {
+      "N": "Black Block",
+      "J": "Yellow Block",
+      "M": "Mauve Block",
+      "V": "Green Block",
+      "B": "B Block",
+      "O": "Orange Block"
+    },
+    "fr": {
+      "N": "Bloc Noir",
+      "J": "Bloc Jaune",
+      "M": "Bloc Mauve",
+      "V": "Bloc Vert",
+      "B": "Bloc B",
+      "O": "Bloc Orange"
+    }
+  },
+  "noteTranslations": {
+    "fr": {}
+  },
+  "specialRoutes": {
+    "J>N": {
+      "en": [
+        "Follow the existing-hospital corridor through the Yellow Block (J1).",
+        "Continue to the Black Block (N1) and follow the room signs."
+      ],
+      "fr": [
+        "Suivez le corridor de l’hôpital existant dans le bloc Jaune (J1).",
+        "Continuez vers le bloc Noir (N1), puis suivez la signalisation des locaux."
+      ],
+      "es": [
+        "Siga el pasillo del hospital existente por el bloque Amarillo (J1).",
+        "Continúe hacia el bloque Negro (N1) y siga las señales de las salas."
+      ],
+      "pt": [
+        "Siga o corredor do hospital existente pelo bloco Amarelo (J1).",
+        "Continue até o bloco Preto (N1) e siga as placas das salas."
+      ],
+      "ar": [
+        "اتبع ممر المستشفى الحالي عبر المبنى الأصفر (J1).",
+        "تابع إلى المبنى الأسود (N1) واتبع لافتات الغرف."
+      ],
+      "he": [
+        "עקבו אחר המסדרון בבית החולים הקיים דרך האגף הצהוב (J1).",
+        "המשיכו לאגף השחור (N1) ועקבו אחר שילוט החדרים."
+      ],
+      "ru": [
+        "Следуйте по коридору существующего корпуса через жёлтый блок (J1).",
+        "Продолжайте в чёрный блок (N1) и следуйте указателям помещений."
+      ],
+      "vi": [
+        "Đi theo hành lang của bệnh viện hiện hữu qua Khối Vàng (J1).",
+        "Tiếp tục đến Khối Đen (N1) và đi theo biển chỉ dẫn phòng."
+      ],
+      "sw": [
+        "Fuata korido ya hospitali ya zamani kupitia Jengo la Njano (J1).",
+        "Endelea hadi Jengo Jeusi (N1) na ufuate alama za vyumba."
+      ],
+      "bg": [
+        "Следвайте коридора на съществуващата болница през Жълтия блок (J1).",
+        "Продължете към Черния блок (N1) и следвайте табелите за стаите."
+      ]
+    },
+    "N>J": {
+      "en": [
+        "Follow the public corridor from the Black Block (N1) toward the Yellow Block (J1).",
+        "Then follow current hospital signage to the destination."
+      ],
+      "fr": [
+        "Suivez le corridor public du bloc Noir (N1) vers le bloc Jaune (J1).",
+        "Suivez ensuite la signalisation actuelle de l’hôpital jusqu’à la destination."
+      ],
+      "es": [
+        "Siga el pasillo público desde el bloque Negro (N1) hacia el bloque Amarillo (J1).",
+        "Luego siga la señalización actual del hospital hasta su destino."
+      ],
+      "pt": [
+        "Siga o corredor público do bloco Preto (N1) em direção ao bloco Amarelo (J1).",
+        "Depois, siga a sinalização atual do hospital até o destino."
+      ],
+      "ar": [
+        "اتبع الممر العام من المبنى الأسود (N1) باتجاه المبنى الأصفر (J1).",
+        "ثم اتبع لافتات المستشفى الحالية إلى الوجهة."
+      ],
+      "he": [
+        "עקבו אחר המסדרון הציבורי מהאגף השחור (N1) לכיוון האגף הצהוב (J1).",
+        "לאחר מכן עקבו אחר השילוט העדכני בבית החולים אל היעד."
+      ],
+      "ru": [
+        "Следуйте по общественному коридору из чёрного блока (N1) к жёлтому блоку (J1).",
+        "Затем следуйте действующим указателям больницы к месту назначения."
+      ],
+      "vi": [
+        "Đi theo hành lang công cộng từ Khối Đen (N1) về phía Khối Vàng (J1).",
+        "Sau đó đi theo biển chỉ dẫn hiện tại của bệnh viện đến điểm đến."
+      ],
+      "sw": [
+        "Fuata korido ya umma kutoka Jengo Jeusi (N1) kuelekea Jengo la Njano (J1).",
+        "Kisha fuata alama za sasa za hospitali hadi unakoenda."
+      ],
+      "bg": [
+        "Следвайте обществения коридор от Черния блок (N1) към Жълтия блок (J1).",
+        "След това следвайте актуалните указателни табели на болницата до дестинацията."
+      ]
+    }
+  },
+  "routingNotes": {
+    "J-N": "Current Accueil clinique instructions explicitly direct people entering from Emergency to walk through the Yellow Block corridor (J1) and follow signs to N1. The reverse public corridor is therefore encoded conservatively.",
+    "N1": "The new Black Block ground floor contains external clinics, Day Medicine and Nuclear Medicine.",
+    "N2-N5": "The new pavilion contains inpatient units on N2 to N5. Only Surgery N5 is currently assigned to a specific unit in this initial dataset.",
+    "passerelle": "The modernization project states that the new pavilion walkway connects to the existing building at every level, but individual public wayfinding paths beyond J1↔N1 are not yet encoded.",
+    "other-blocks": "Mauve, Green, B and Orange blocks are included as destination identifiers, but cross-block routing is withheld until current public paths are verified."
+  }
+}
