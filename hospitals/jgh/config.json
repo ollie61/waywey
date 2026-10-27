@@ -94,5 +94,6 @@
       "en": "ICFP",
       "fr": "IPCF"
     }
-  }
+  },
+  "defaultVisitorLanguage": "en"
 }
