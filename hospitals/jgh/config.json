@@ -103,5 +103,9 @@
       "en": "Very strong"
     },
     "basis": "190 destinations; extensively audited current JGH data and established routing."
-  }
+  },
+  "ambassadorLanguages": [
+    "en",
+    "fr"
+  ]
 }
