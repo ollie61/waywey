@@ -1,0 +1,150 @@
+{
+  "graph": {
+    "A": [
+      "B"
+    ],
+    "B": [
+      "A",
+      "C",
+      "D",
+      "G",
+      "K"
+    ],
+    "C": [
+      "B",
+      "D",
+      "G"
+    ],
+    "D": [
+      "B",
+      "C",
+      "E"
+    ],
+    "E": [
+      "D",
+      "K"
+    ],
+    "G": [
+      "B",
+      "C"
+    ],
+    "H": [
+      "K"
+    ],
+    "K": [
+      "B",
+      "E",
+      "H"
+    ]
+  },
+  "pavilionLabels": {
+    "en": {
+      "A": "Pavilion A",
+      "B": "central corridor / Pavilion B",
+      "C": "Pavilion C",
+      "D": "Pavilion D",
+      "E": "Pavilion E",
+      "G": "Pavilion G",
+      "H": "Pavilion H",
+      "K": "Pavilion K"
+    },
+    "fr": {
+      "A": "Pavillon A",
+      "B": "corridor central / Pavillon B",
+      "C": "Pavillon C",
+      "D": "Pavillon D",
+      "E": "Pavillon E",
+      "G": "Pavillon G",
+      "H": "Pavillon H",
+      "K": "Pavillon K"
+    }
+  },
+  "noteTranslations": {
+    "fr": {
+      "Urology": "Les renseignements actuels du service sont considérés comme la référence. Un document plus ancien indiquait E-941; utilisez E-959 sauf indication contraire sur les documents de rendez-vous.",
+      "Segal Cancer Centre / Oncology": "Le local de référence actuel est E-776.4; un ancien répertoire affiché indiquait E-776.",
+      "Gastroenterology": "La liste actuelle de la clinique indique E-110; un ancien répertoire affiché indiquait E-110.1.",
+      "Vascular Lab / Vascular Surgery": "Le dossier de référence indique B-268. Un répertoire affiché semblait indiquer B-368; vérifiez les documents de rendez-vous s’ils diffèrent.",
+      "General Ultrasound": "Le dossier de référence indique B-240; un ancien répertoire affiché indiquait D-240.",
+      "Test Centre": "Le dossier de référence indique E-102; un ancien répertoire affiché indiquait E-109.",
+      "Goldman Herzl Family Practice Centre": "Situé au pavillon H, 2e étage. Les consultations de spécialistes en pédiatrie sont offertes aux patients inscrits à Herzl.",
+      "Postpartum": "Pavillons C/D, 8e étage, selon le répertoire affiché. Vérifiez si l’accès exact est important."
+    }
+  },
+  "specialRoutes": {
+    "H>K": {
+      "en": [
+        "Take the Pavilion H elevators to the 3rd floor.",
+        "Use the indoor H–K connector to the Pavilion K lobby."
+      ],
+      "fr": [
+        "Prenez les ascenseurs du pavillon H jusqu'au 3e étage.",
+        "Empruntez le passage intérieur H–K jusqu'au hall du pavillon K."
+      ],
+      "es": [
+        "Tome los ascensores del Pabellón H hasta el 3.er piso.",
+        "Use el pasillo interior H–K hasta el vestíbulo del Pabellón K."
+      ],
+      "pt": [
+        "Pegue os elevadores do Pavilhão H até o 3º andar.",
+        "Use a passagem interna H–K até o saguão do Pavilhão K."
+      ],
+      "ar": [
+        "استخدم مصاعد الجناح H إلى الطابق الثالث.",
+        "استخدم الممر الداخلي H–K للوصول إلى بهو الجناح K."
+      ],
+      "he": [
+        "עלו במעליות של בניין H לקומה 3.",
+        "השתמשו במעבר הפנימי H–K אל הלובי של בניין K."
+      ],
+      "ru": [
+        "Поднимитесь на лифте павильона H на 3-й этаж.",
+        "По внутреннему переходу H–K пройдите в вестибюль павильона K."
+      ],
+      "vi": [
+        "Đi thang máy của Khu H lên tầng 3.",
+        "Dùng lối nối trong nhà H–K để đến sảnh Khu K."
+      ],
+      "sw": [
+        "Tumia lifti za Jengo H hadi ghorofa ya 3.",
+        "Tumia njia ya ndani ya H–K hadi ukumbi wa Jengo K."
+      ],
+      "bg": [
+        "Вземете асансьора в павилион H до 3-тия етаж.",
+        "Използвайте вътрешната връзка H–K до фоайето на павилион K."
+      ]
+    },
+    "K>H": {
+      "en": [
+        "From the Pavilion K lobby, use the indoor H–K connector to Pavilion H, 3rd floor."
+      ],
+      "fr": [
+        "Depuis le hall du pavillon K, empruntez le passage intérieur H–K jusqu'au pavillon H, 3e étage."
+      ],
+      "es": [
+        "Desde el vestíbulo del Pabellón K, use el pasillo interior H–K hasta el Pabellón H, 3.er piso."
+      ],
+      "pt": [
+        "Do saguão do Pavilhão K, use a passagem interna H–K até o Pavilhão H, 3º andar."
+      ],
+      "ar": [
+        "من بهو الجناح K، استخدم الممر الداخلي H–K إلى الجناح H، الطابق الثالث."
+      ],
+      "he": [
+        "מהלובי של בניין K השתמשו במעבר הפנימי H–K אל בניין H, קומה 3."
+      ],
+      "ru": [
+        "Из вестибюля павильона K по переходу H–K пройдите в павильон H, на 3-й этаж."
+      ],
+      "vi": [
+        "Từ sảnh Khu K, dùng lối nối trong nhà H–K đến Khu H, tầng 3."
+      ],
+      "sw": [
+        "Kutoka ukumbi wa Jengo K, tumia njia ya ndani ya H–K hadi Jengo H, ghorofa ya 3."
+      ],
+      "bg": [
+        "От фоайето на павилион K използвайте връзката H–K до павилион H, 3-ти етаж."
+      ]
+    }
+  }
+}
