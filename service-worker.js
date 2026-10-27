@@ -1,4 +1,4 @@
-const CACHE="waywey-v0.14";
+const CACHE="waywey-v0.15";
 const ASSETS=[
  "./","./index.html","./manifest.webmanifest","./qrcode.min.js","./styles.css","./app.js",
  "./hospitals/jgh/config.json","./hospitals/jgh/destinations.json","./hospitals/jgh/routes.json","./hospitals/jgh/guide.json",
