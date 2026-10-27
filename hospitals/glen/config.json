@@ -1,0 +1,90 @@
+{
+  "id": "glen",
+  "name": {
+    "en": "MUHC Glen site",
+    "fr": "Site Glen du CUSM"
+  },
+  "shortName": {
+    "en": "Glen",
+    "fr": "Glen"
+  },
+  "defaultAppLanguage": "fr",
+  "defaultVisitorLanguage": "fr",
+  "pageTitle": {
+    "en": "WayWey — MUHC Glen Wayfinding",
+    "fr": "WayWey — Orientation au site Glen du CUSM"
+  },
+  "description": {
+    "en": "WayWey — unofficial multilingual ambassador wayfinding tool for the MUHC Glen site",
+    "fr": "WayWey — outil multilingue non officiel d’orientation pour le site Glen du CUSM"
+  },
+  "ui": {
+    "en": {
+      "brand": "MUHC Glen Ambassador Wayfinding Tool · Unofficial",
+      "disclaimer": "Prototype reference for ambassadors. Verify appointment paperwork or current MUHC signage when an exact room or public route is uncertain."
+    },
+    "fr": {
+      "brand": "Outil d’orientation des ambassadeurs — site Glen du CUSM · Non officiel",
+      "disclaimer": "Outil de référence prototype pour les ambassadeurs. Vérifiez les documents de rendez-vous ou la signalisation actuelle du CUSM lorsqu’un local ou un itinéraire public précis est incertain."
+    }
+  },
+  "entrances": [
+    {
+      "id": "rvh-main",
+      "node": "C",
+      "labels": {
+        "en": "Royal Victoria Hospital main entrance — Block C",
+        "fr": "Entrée principale de l’Hôpital Royal Victoria — Bloc C"
+      }
+    },
+    {
+      "id": "mch-main",
+      "node": "A",
+      "labels": {
+        "en": "Montreal Children's Hospital main entrance — Blocks A/B",
+        "fr": "Entrée principale de l’Hôpital de Montréal pour enfants — Blocs A/B"
+      }
+    },
+    {
+      "id": "cedars-main",
+      "node": "D",
+      "labels": {
+        "en": "Cedars Cancer Centre entrance — Block D",
+        "fr": "Entrée du Centre du cancer des Cèdres — Bloc D"
+      }
+    },
+    {
+      "id": "vendome",
+      "node": "C",
+      "labels": {
+        "en": "Vendôme metro / hospital tunnel — S1",
+        "fr": "Métro Vendôme / tunnel vers l’hôpital — S1"
+      }
+    },
+    {
+      "id": "adult-er",
+      "node": "C",
+      "labels": {
+        "en": "Adult Emergency entrance — Block C, S1",
+        "fr": "Entrée de l’Urgence adulte — Bloc C, S1"
+      }
+    },
+    {
+      "id": "peds-er",
+      "node": "B",
+      "labels": {
+        "en": "Pediatric Emergency entrance — Block B, S1",
+        "fr": "Entrée de l’Urgence pédiatrique — Bloc B, S1"
+      }
+    }
+  ],
+  "nodeAliases": {
+    "OPH": null
+  },
+  "specialPavilionLabels": {
+    "OPH": {
+      "en": "Off-site — McGill Academic Eye Centre",
+      "fr": "Hors site — Centre académique de santé de l’œil de McGill"
+    }
+  }
+}
