@@ -1,0 +1,74 @@
+{
+  "id": "verdun",
+  "name": {
+    "en": "Verdun Hospital",
+    "fr": "Hôpital de Verdun"
+  },
+  "shortName": {
+    "en": "Verdun",
+    "fr": "Verdun"
+  },
+  "defaultAppLanguage": "fr",
+  "defaultVisitorLanguage": "fr",
+  "pageTitle": {
+    "en": "WayWey — Verdun Hospital Wayfinding",
+    "fr": "WayWey — Orientation à l’Hôpital de Verdun"
+  },
+  "description": {
+    "en": "WayWey — unofficial multilingual ambassador wayfinding tool for Verdun Hospital",
+    "fr": "WayWey — outil multilingue non officiel d’orientation pour l’Hôpital de Verdun"
+  },
+  "ui": {
+    "en": {
+      "brand": "Verdun Hospital Ambassador Wayfinding Tool · Unofficial",
+      "disclaimer": "Prototype reference for ambassadors. Verdun Hospital is in an active post-expansion transition; verify current signage and appointment paperwork when a room is marked Verify."
+    },
+    "fr": {
+      "brand": "Outil d’orientation des ambassadeurs — Hôpital de Verdun · Non officiel",
+      "disclaimer": "Outil de référence prototype pour les ambassadeurs. L’Hôpital de Verdun est en transition après son agrandissement; vérifiez la signalisation actuelle et les documents de rendez-vous lorsqu’un local est marqué À vérifier."
+    }
+  },
+  "entrances": [
+    {
+      "id": "door26",
+      "node": "N",
+      "labels": {
+        "en": "New pavilion / Door 26 — boulevard LaSalle at rue de l’Église",
+        "fr": "Nouveau pavillon / Porte 26 — boulevard LaSalle au coin de la rue de l’Église"
+      }
+    },
+    {
+      "id": "main4000",
+      "node": "J",
+      "labels": {
+        "en": "Main entrance — 4000 boulevard LaSalle",
+        "fr": "Entrée principale — 4000, boulevard LaSalle"
+      }
+    },
+    {
+      "id": "emergency",
+      "node": "J",
+      "labels": {
+        "en": "Emergency entrance — boulevard Gaétan-Laberge",
+        "fr": "Entrée de l’Urgence — boulevard Gaétan-Laberge"
+      }
+    },
+    {
+      "id": "door4",
+      "node": "O",
+      "labels": {
+        "en": "3950 boulevard LaSalle / Door 4 (verify current role)",
+        "fr": "3950, boulevard LaSalle / Porte 4 (rôle actuel à vérifier)"
+      }
+    }
+  ],
+  "nodeAliases": {
+    "MAIN": "J"
+  },
+  "specialPavilionLabels": {
+    "MAIN": {
+      "en": "Main entrance / existing hospital",
+      "fr": "Entrée principale / hôpital existant"
+    }
+  }
+}
