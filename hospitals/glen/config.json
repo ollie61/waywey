@@ -94,5 +94,9 @@
       "en": "Strong"
     },
     "basis": "105 destinations; broad official MUHC coverage with conservative routing and several current-source conflict resolutions."
-  }
+  },
+  "ambassadorLanguages": [
+    "fr",
+    "en"
+  ]
 }
