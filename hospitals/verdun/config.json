@@ -78,5 +78,9 @@
       "en": "Developing"
     },
     "basis": "Initial post-expansion 2026 package; overnight completeness audit pending."
-  }
+  },
+  "ambassadorLanguages": [
+    "fr",
+    "en"
+  ]
 }
