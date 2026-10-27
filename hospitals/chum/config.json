@@ -1,0 +1,50 @@
+{
+  "id": "chum",
+  "name": {
+    "en": "Centre hospitalier de l’Université de Montréal",
+    "fr": "Centre hospitalier de l’Université de Montréal"
+  },
+  "shortName": {
+    "en": "CHUM",
+    "fr": "CHUM"
+  },
+  "defaultAppLanguage": "fr",
+  "pageTitle": {
+    "en": "WayWey — CHUM Ambassador Wayfinding",
+    "fr": "WayWey — Orientation des ambassadeurs du CHUM"
+  },
+  "description": {
+    "en": "WayWey — unofficial multilingual CHUM ambassador wayfinding tool",
+    "fr": "WayWey — outil multilingue non officiel d’orientation des ambassadeurs du CHUM"
+  },
+  "ui": {
+    "en": {
+      "brand": "CHUM Ambassador Wayfinding Tool · Unofficial",
+      "disclaimer": "Prototype reference for ambassadors. Verify appointment paperwork or current CHUM signage when an exact room is uncertain."
+    },
+    "fr": {
+      "brand": "Outil d’orientation des ambassadeurs du CHUM · Non officiel",
+      "disclaimer": "Outil de référence prototype pour les ambassadeurs. Vérifiez les documents de rendez-vous ou la signalisation actuelle du CHUM lorsqu’un local précis est incertain."
+    }
+  },
+  "entrances": [
+    {
+      "id": "main",
+      "node": "C",
+      "labels": {
+        "en": "Main entrance — 1000 Saint-Denis",
+        "fr": "Entrée principale — 1000, rue Saint-Denis"
+      }
+    },
+    {
+      "id": "emergency",
+      "node": "D",
+      "labels": {
+        "en": "Emergency entrance — 1001 Sanguinet",
+        "fr": "Entrée de l’Urgence — 1001, rue Sanguinet"
+      }
+    }
+  ],
+  "nodeAliases": {},
+  "specialPavilionLabels": {}
+}
