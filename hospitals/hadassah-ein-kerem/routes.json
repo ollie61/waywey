@@ -1,0 +1,76 @@
+{
+  "graph": {
+    "MAIN": [
+      "MC"
+    ],
+    "MC": [
+      "MAIN"
+    ],
+    "ER": [],
+    "DAVIDSON": [],
+    "SHARETT": [],
+    "CLINICS": [],
+    "DENTAL": []
+  },
+  "pavilionLabels": {
+    "he": {
+      "MAIN": "הבניין הראשי",
+      "MC": "בניין אם וילד",
+      "ER": "מרכז לרפואה דחופה",
+      "DAVIDSON": "מגדל דוידסון",
+      "SHARETT": "מכון שרת",
+      "CLINICS": "בניין המרפאות",
+      "DENTAL": "בית הספר לרפואת שיניים"
+    },
+    "en": {
+      "MAIN": "Main Building",
+      "MC": "Mother and Child Building",
+      "ER": "Emergency Medicine Center",
+      "DAVIDSON": "Davidson Tower",
+      "SHARETT": "Sharett Institute",
+      "CLINICS": "Clinics Building",
+      "DENTAL": "School of Dental Medicine"
+    },
+    "ar": {
+      "MAIN": "المبنى الرئيسي",
+      "MC": "مبنى الأم والطفل",
+      "ER": "مركز طب الطوارئ",
+      "DAVIDSON": "برج ديفيدسون",
+      "SHARETT": "معهد شاريت",
+      "CLINICS": "مبنى العيادات",
+      "DENTAL": "كلية طب الأسنان"
+    }
+  },
+  "noteTranslations": {},
+  "specialRoutes": {
+    "MAIN>MC": {
+      "he": [
+        "לאחר הבידוק הביטחוני בכניסה הראשית, פנו ימינה לכיוון בניין אם וילד.",
+        "המשיכו לפי השילוט בתוך בניין אם וילד."
+      ],
+      "en": [
+        "After security at the main hospital entrance, turn right toward the Mother and Child Building.",
+        "Continue by following the signs inside the Mother and Child Building."
+      ],
+      "ar": [
+        "بعد التفتيش الأمني عند المدخل الرئيسي للمستشفى، انعطف يميناً باتجاه مبنى الأم والطفل.",
+        "تابع باتباع اللافتات داخل مبنى الأم والطفل."
+      ]
+    },
+    "MC>MAIN": {
+      "he": [
+        "מבניין אם וילד, עקבו אחר השילוט הציבורי חזרה לכיוון הכניסה הראשית והבניין הראשי."
+      ],
+      "en": [
+        "From the Mother and Child Building, follow the public signs back toward the main entrance and Main Building."
+      ],
+      "ar": [
+        "من مبنى الأم والطفل، اتبع اللافتات العامة عائداً باتجاه المدخل الرئيسي والمبنى الرئيسي."
+      ]
+    }
+  },
+  "routingNotes": {
+    "MAIN-MC": "Official Hadassah obstetrics directions state that from the main entrance, after security, visitors turn right toward the Mother and Child Building.",
+    "cross-building": "No other cross-building public connector is inferred in the initial package. Hadassah Ein Kerem has more than 28 buildings; current signage should be used until a route is verified."
+  }
+}
