@@ -4,9 +4,11 @@
       "B"
     ],
     "B": [
-      "A"
+      "A",
+      "C"
     ],
     "C": [
+      "B",
       "D"
     ],
     "D": [
@@ -33,11 +35,348 @@
   "noteTranslations": {
     "fr": {}
   },
-  "specialRoutes": {},
+  "specialRoutes": {
+    "C>A": {
+      "en": [
+        "Take the elevators to Level 2.",
+        "Follow the public circulation signs toward the Montreal Children's Hospital (Blocks B/A)."
+      ],
+      "fr": [
+        "Prenez les ascenseurs jusqu’au niveau 2.",
+        "Suivez la circulation publique vers l’Hôpital de Montréal pour enfants (blocs B/A)."
+      ],
+      "es": [
+        "Tome los ascensores hasta el nivel 2.",
+        "Siga las señales de circulación pública hacia el Hospital Infantil de Montreal (bloques B/A)."
+      ],
+      "pt": [
+        "Pegue os elevadores até o nível 2.",
+        "Siga as placas de circulação pública em direção ao Hospital Infantil de Montreal (blocos B/A)."
+      ],
+      "ar": [
+        "استخدم المصاعد للوصول إلى الطابق 2.",
+        "اتبع لافتات الممر العام باتجاه مستشفى مونتريال للأطفال (المبنيان B/A)."
+      ],
+      "he": [
+        "עלו במעליות לקומה 2.",
+        "עקבו אחר השילוט למעבר הציבורי לכיוון בית החולים לילדים של מונטריאול (בניינים B/A)."
+      ],
+      "ru": [
+        "Поднимитесь на лифте на 2-й этаж.",
+        "Следуйте указателям общественного прохода к Монреальской детской больнице (блоки B/A)."
+      ],
+      "vi": [
+        "Đi thang máy lên tầng 2.",
+        "Đi theo biển chỉ dẫn lối đi công cộng về phía Bệnh viện Nhi Montreal (khối B/A)."
+      ],
+      "sw": [
+        "Tumia lifti hadi ghorofa ya 2.",
+        "Fuata alama za njia ya umma kuelekea Hospitali ya Watoto ya Montreal (Majengo B/A)."
+      ],
+      "bg": [
+        "Вземете асансьора до ниво 2.",
+        "Следвайте указателните табели за обществено движение към Детската болница в Монреал (блокове B/A)."
+      ]
+    },
+    "C>B": {
+      "en": [
+        "Take the elevators to Level 2.",
+        "Follow the public circulation signs toward the Montreal Children's Hospital (Blocks B/A)."
+      ],
+      "fr": [
+        "Prenez les ascenseurs jusqu’au niveau 2.",
+        "Suivez la circulation publique vers l’Hôpital de Montréal pour enfants (blocs B/A)."
+      ],
+      "es": [
+        "Tome los ascensores hasta el nivel 2.",
+        "Siga las señales de circulación pública hacia el Hospital Infantil de Montreal (bloques B/A)."
+      ],
+      "pt": [
+        "Pegue os elevadores até o nível 2.",
+        "Siga as placas de circulação pública em direção ao Hospital Infantil de Montreal (blocos B/A)."
+      ],
+      "ar": [
+        "استخدم المصاعد للوصول إلى الطابق 2.",
+        "اتبع لافتات الممر العام باتجاه مستشفى مونتريال للأطفال (المبنيان B/A)."
+      ],
+      "he": [
+        "עלו במעליות לקומה 2.",
+        "עקבו אחר השילוט למעבר הציבורי לכיוון בית החולים לילדים של מונטריאול (בניינים B/A)."
+      ],
+      "ru": [
+        "Поднимитесь на лифте на 2-й этаж.",
+        "Следуйте указателям общественного прохода к Монреальской детской больнице (блоки B/A)."
+      ],
+      "vi": [
+        "Đi thang máy lên tầng 2.",
+        "Đi theo biển chỉ dẫn lối đi công cộng về phía Bệnh viện Nhi Montreal (khối B/A)."
+      ],
+      "sw": [
+        "Tumia lifti hadi ghorofa ya 2.",
+        "Fuata alama za njia ya umma kuelekea Hospitali ya Watoto ya Montreal (Majengo B/A)."
+      ],
+      "bg": [
+        "Вземете асансьора до ниво 2.",
+        "Следвайте указателните табели за обществено движение към Детската болница в Монреал (блокове B/A)."
+      ]
+    },
+    "D>A": {
+      "en": [
+        "Take the elevators to Level 2.",
+        "Follow the public circulation signs toward the Montreal Children's Hospital (Blocks B/A)."
+      ],
+      "fr": [
+        "Prenez les ascenseurs jusqu’au niveau 2.",
+        "Suivez la circulation publique vers l’Hôpital de Montréal pour enfants (blocs B/A)."
+      ],
+      "es": [
+        "Tome los ascensores hasta el nivel 2.",
+        "Siga las señales de circulación pública hacia el Hospital Infantil de Montreal (bloques B/A)."
+      ],
+      "pt": [
+        "Pegue os elevadores até o nível 2.",
+        "Siga as placas de circulação pública em direção ao Hospital Infantil de Montreal (blocos B/A)."
+      ],
+      "ar": [
+        "استخدم المصاعد للوصول إلى الطابق 2.",
+        "اتبع لافتات الممر العام باتجاه مستشفى مونتريال للأطفال (المبنيان B/A)."
+      ],
+      "he": [
+        "עלו במעליות לקומה 2.",
+        "עקבו אחר השילוט למעבר הציבורי לכיוון בית החולים לילדים של מונטריאול (בניינים B/A)."
+      ],
+      "ru": [
+        "Поднимитесь на лифте на 2-й этаж.",
+        "Следуйте указателям общественного прохода к Монреальской детской больнице (блоки B/A)."
+      ],
+      "vi": [
+        "Đi thang máy lên tầng 2.",
+        "Đi theo biển chỉ dẫn lối đi công cộng về phía Bệnh viện Nhi Montreal (khối B/A)."
+      ],
+      "sw": [
+        "Tumia lifti hadi ghorofa ya 2.",
+        "Fuata alama za njia ya umma kuelekea Hospitali ya Watoto ya Montreal (Majengo B/A)."
+      ],
+      "bg": [
+        "Вземете асансьора до ниво 2.",
+        "Следвайте указателните табели за обществено движение към Детската болница в Монреал (блокове B/A)."
+      ]
+    },
+    "D>B": {
+      "en": [
+        "Take the elevators to Level 2.",
+        "Follow the public circulation signs toward the Montreal Children's Hospital (Blocks B/A)."
+      ],
+      "fr": [
+        "Prenez les ascenseurs jusqu’au niveau 2.",
+        "Suivez la circulation publique vers l’Hôpital de Montréal pour enfants (blocs B/A)."
+      ],
+      "es": [
+        "Tome los ascensores hasta el nivel 2.",
+        "Siga las señales de circulación pública hacia el Hospital Infantil de Montreal (bloques B/A)."
+      ],
+      "pt": [
+        "Pegue os elevadores até o nível 2.",
+        "Siga as placas de circulação pública em direção ao Hospital Infantil de Montreal (blocos B/A)."
+      ],
+      "ar": [
+        "استخدم المصاعد للوصول إلى الطابق 2.",
+        "اتبع لافتات الممر العام باتجاه مستشفى مونتريال للأطفال (المبنيان B/A)."
+      ],
+      "he": [
+        "עלו במעליות לקומה 2.",
+        "עקבו אחר השילוט למעבר הציבורי לכיוון בית החולים לילדים של מונטריאול (בניינים B/A)."
+      ],
+      "ru": [
+        "Поднимитесь на лифте на 2-й этаж.",
+        "Следуйте указателям общественного прохода к Монреальской детской больнице (блоки B/A)."
+      ],
+      "vi": [
+        "Đi thang máy lên tầng 2.",
+        "Đi theo biển chỉ dẫn lối đi công cộng về phía Bệnh viện Nhi Montreal (khối B/A)."
+      ],
+      "sw": [
+        "Tumia lifti hadi ghorofa ya 2.",
+        "Fuata alama za njia ya umma kuelekea Hospitali ya Watoto ya Montreal (Majengo B/A)."
+      ],
+      "bg": [
+        "Вземете асансьора до ниво 2.",
+        "Следвайте указателните табели за обществено движение към Детската болница в Монреал (блокове B/A)."
+      ]
+    },
+    "A>C": {
+      "en": [
+        "Take the elevators to Level 2.",
+        "Follow the public circulation signs toward the Royal Victoria Hospital / Cedars sector (Blocks C/D)."
+      ],
+      "fr": [
+        "Prenez les ascenseurs jusqu’au niveau 2.",
+        "Suivez la circulation publique vers l’Hôpital Royal Victoria / le secteur des Cèdres (blocs C/D)."
+      ],
+      "es": [
+        "Tome los ascensores hasta el nivel 2.",
+        "Siga las señales de circulación pública hacia el Hospital Royal Victoria / sector Cedars (bloques C/D)."
+      ],
+      "pt": [
+        "Pegue os elevadores até o nível 2.",
+        "Siga as placas de circulação pública em direção ao Hospital Royal Victoria / setor Cedars (blocos C/D)."
+      ],
+      "ar": [
+        "استخدم المصاعد للوصول إلى الطابق 2.",
+        "اتبع لافتات الممر العام باتجاه مستشفى رويال فيكتوريا / منطقة سيدرز (المبنيان C/D)."
+      ],
+      "he": [
+        "עלו במעליות לקומה 2.",
+        "עקבו אחר השילוט למעבר הציבורי לכיוון בית החולים רויאל ויקטוריה / אזור סידרס (בניינים C/D)."
+      ],
+      "ru": [
+        "Поднимитесь на лифте на 2-й этаж.",
+        "Следуйте указателям общественного прохода к больнице Royal Victoria / сектору Cedars (блоки C/D)."
+      ],
+      "vi": [
+        "Đi thang máy lên tầng 2.",
+        "Đi theo biển chỉ dẫn lối đi công cộng về phía Bệnh viện Royal Victoria / khu Cedars (khối C/D)."
+      ],
+      "sw": [
+        "Tumia lifti hadi ghorofa ya 2.",
+        "Fuata alama za njia ya umma kuelekea Hospitali ya Royal Victoria / eneo la Cedars (Majengo C/D)."
+      ],
+      "bg": [
+        "Вземете асансьора до ниво 2.",
+        "Следвайте указателните табели за обществено движение към болница Royal Victoria / сектора Cedars (блокове C/D)."
+      ]
+    },
+    "A>D": {
+      "en": [
+        "Take the elevators to Level 2.",
+        "Follow the public circulation signs toward the Royal Victoria Hospital / Cedars sector (Blocks C/D)."
+      ],
+      "fr": [
+        "Prenez les ascenseurs jusqu’au niveau 2.",
+        "Suivez la circulation publique vers l’Hôpital Royal Victoria / le secteur des Cèdres (blocs C/D)."
+      ],
+      "es": [
+        "Tome los ascensores hasta el nivel 2.",
+        "Siga las señales de circulación pública hacia el Hospital Royal Victoria / sector Cedars (bloques C/D)."
+      ],
+      "pt": [
+        "Pegue os elevadores até o nível 2.",
+        "Siga as placas de circulação pública em direção ao Hospital Royal Victoria / setor Cedars (blocos C/D)."
+      ],
+      "ar": [
+        "استخدم المصاعد للوصول إلى الطابق 2.",
+        "اتبع لافتات الممر العام باتجاه مستشفى رويال فيكتوريا / منطقة سيدرز (المبنيان C/D)."
+      ],
+      "he": [
+        "עלו במעליות לקומה 2.",
+        "עקבו אחר השילוט למעבר הציבורי לכיוון בית החולים רויאל ויקטוריה / אזור סידרס (בניינים C/D)."
+      ],
+      "ru": [
+        "Поднимитесь на лифте на 2-й этаж.",
+        "Следуйте указателям общественного прохода к больнице Royal Victoria / сектору Cedars (блоки C/D)."
+      ],
+      "vi": [
+        "Đi thang máy lên tầng 2.",
+        "Đi theo biển chỉ dẫn lối đi công cộng về phía Bệnh viện Royal Victoria / khu Cedars (khối C/D)."
+      ],
+      "sw": [
+        "Tumia lifti hadi ghorofa ya 2.",
+        "Fuata alama za njia ya umma kuelekea Hospitali ya Royal Victoria / eneo la Cedars (Majengo C/D)."
+      ],
+      "bg": [
+        "Вземете асансьора до ниво 2.",
+        "Следвайте указателните табели за обществено движение към болница Royal Victoria / сектора Cedars (блокове C/D)."
+      ]
+    },
+    "B>C": {
+      "en": [
+        "Take the elevators to Level 2.",
+        "Follow the public circulation signs toward the Royal Victoria Hospital / Cedars sector (Blocks C/D)."
+      ],
+      "fr": [
+        "Prenez les ascenseurs jusqu’au niveau 2.",
+        "Suivez la circulation publique vers l’Hôpital Royal Victoria / le secteur des Cèdres (blocs C/D)."
+      ],
+      "es": [
+        "Tome los ascensores hasta el nivel 2.",
+        "Siga las señales de circulación pública hacia el Hospital Royal Victoria / sector Cedars (bloques C/D)."
+      ],
+      "pt": [
+        "Pegue os elevadores até o nível 2.",
+        "Siga as placas de circulação pública em direção ao Hospital Royal Victoria / setor Cedars (blocos C/D)."
+      ],
+      "ar": [
+        "استخدم المصاعد للوصول إلى الطابق 2.",
+        "اتبع لافتات الممر العام باتجاه مستشفى رويال فيكتوريا / منطقة سيدرز (المبنيان C/D)."
+      ],
+      "he": [
+        "עלו במעליות לקומה 2.",
+        "עקבו אחר השילוט למעבר הציבורי לכיוון בית החולים רויאל ויקטוריה / אזור סידרס (בניינים C/D)."
+      ],
+      "ru": [
+        "Поднимитесь на лифте на 2-й этаж.",
+        "Следуйте указателям общественного прохода к больнице Royal Victoria / сектору Cedars (блоки C/D)."
+      ],
+      "vi": [
+        "Đi thang máy lên tầng 2.",
+        "Đi theo biển chỉ dẫn lối đi công cộng về phía Bệnh viện Royal Victoria / khu Cedars (khối C/D)."
+      ],
+      "sw": [
+        "Tumia lifti hadi ghorofa ya 2.",
+        "Fuata alama za njia ya umma kuelekea Hospitali ya Royal Victoria / eneo la Cedars (Majengo C/D)."
+      ],
+      "bg": [
+        "Вземете асансьора до ниво 2.",
+        "Следвайте указателните табели за обществено движение към болница Royal Victoria / сектора Cedars (блокове C/D)."
+      ]
+    },
+    "B>D": {
+      "en": [
+        "Take the elevators to Level 2.",
+        "Follow the public circulation signs toward the Royal Victoria Hospital / Cedars sector (Blocks C/D)."
+      ],
+      "fr": [
+        "Prenez les ascenseurs jusqu’au niveau 2.",
+        "Suivez la circulation publique vers l’Hôpital Royal Victoria / le secteur des Cèdres (blocs C/D)."
+      ],
+      "es": [
+        "Tome los ascensores hasta el nivel 2.",
+        "Siga las señales de circulación pública hacia el Hospital Royal Victoria / sector Cedars (bloques C/D)."
+      ],
+      "pt": [
+        "Pegue os elevadores até o nível 2.",
+        "Siga as placas de circulação pública em direção ao Hospital Royal Victoria / setor Cedars (blocos C/D)."
+      ],
+      "ar": [
+        "استخدم المصاعد للوصول إلى الطابق 2.",
+        "اتبع لافتات الممر العام باتجاه مستشفى رويال فيكتوريا / منطقة سيدرز (المبنيان C/D)."
+      ],
+      "he": [
+        "עלו במעליות לקומה 2.",
+        "עקבו אחר השילוט למעבר הציבורי לכיוון בית החולים רויאל ויקטוריה / אזור סידרס (בניינים C/D)."
+      ],
+      "ru": [
+        "Поднимитесь на лифте на 2-й этаж.",
+        "Следуйте указателям общественного прохода к больнице Royal Victoria / сектору Cedars (блоки C/D)."
+      ],
+      "vi": [
+        "Đi thang máy lên tầng 2.",
+        "Đi theo biển chỉ dẫn lối đi công cộng về phía Bệnh viện Royal Victoria / khu Cedars (khối C/D)."
+      ],
+      "sw": [
+        "Tumia lifti hadi ghorofa ya 2.",
+        "Fuata alama za njia ya umma kuelekea Hospitali ya Royal Victoria / eneo la Cedars (Majengo C/D)."
+      ],
+      "bg": [
+        "Вземете асансьора до ниво 2.",
+        "Следвайте указателните табели за обществено движение към болница Royal Victoria / сектора Cedars (блокове C/D)."
+      ]
+    }
+  },
   "routingNotes": {
     "A-B": "Blocks A and B form the Montreal Children's Hospital sector in the official MUHC Glen wayfinding directory.",
     "C-D": "Blocks C and D form the Royal Victoria Hospital adult sector; Block D also contains Cedars Cancer Centre and Montreal Chest Institute.",
-    "cross-sector": "WayWey does not yet infer a public indoor route between the A/B and C/D sectors. Current signage should be followed.",
+    "cross-sector": "The official MUHC Glen wayfinding map identifies public circulation across Blocks A/B/C/D on Level 2. WayWey uses Level 2 as the validated public cross-sector route between the Montreal Children's Hospital and Royal Victoria/Cedars sectors.",
     "E": "Research Institute public routing is not yet encoded."
   }
 }
