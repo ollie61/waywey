@@ -86,5 +86,13 @@
       "en": "Off-site — McGill Academic Eye Centre",
       "fr": "Hors site — Centre académique de santé de l’œil de McGill"
     }
+  },
+  "datasetStrength": {
+    "level": 3,
+    "label": {
+      "fr": "Forte",
+      "en": "Strong"
+    },
+    "basis": "105 destinations; broad official MUHC coverage with conservative routing and several current-source conflict resolutions."
   }
 }
