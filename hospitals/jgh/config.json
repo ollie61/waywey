@@ -1,0 +1,98 @@
+{
+  "id": "jgh",
+  "name": {
+    "en": "Jewish General Hospital",
+    "fr": "Hôpital général juif"
+  },
+  "shortName": {
+    "en": "JGH",
+    "fr": "HGJ"
+  },
+  "defaultAppLanguage": "en",
+  "pageTitle": {
+    "en": "WayWey — JGH Ambassador Wayfinding",
+    "fr": "WayWey — Orientation des ambassadeurs de l’HGJ"
+  },
+  "description": {
+    "en": "WayWey — unofficial multilingual JGH ambassador wayfinding tool",
+    "fr": "WayWey — outil multilingue non officiel d’orientation des ambassadeurs de l’HGJ"
+  },
+  "ui": {
+    "en": {
+      "brand": "JGH Ambassador Wayfinding Tool · Unofficial",
+      "disclaimer": "Prototype reference for ambassadors. Verify appointment paperwork or current JGH signage when an exact room is uncertain."
+    },
+    "fr": {
+      "brand": "Outil d’orientation des ambassadeurs de l’HGJ · Non officiel",
+      "disclaimer": "Outil de référence prototype pour les ambassadeurs. Vérifiez les documents de rendez-vous ou la signalisation actuelle de l’HGJ lorsqu’un local précis est incertain."
+    }
+  },
+  "entrances": [
+    {
+      "id": "main",
+      "node": "B",
+      "labels": {
+        "en": "Main Entrance — 3755 Côte-Sainte-Catherine",
+        "fr": "Entrée principale — 3755, chemin de la Côte-Sainte-Catherine"
+      }
+    },
+    {
+      "id": "a",
+      "node": "A",
+      "labels": {
+        "en": "Pavilion A entrance — 5750 Côte-des-Neiges",
+        "fr": "Entrée du pavillon A — 5750, chemin de la Côte-des-Neiges"
+      }
+    },
+    {
+      "id": "e",
+      "node": "E",
+      "labels": {
+        "en": "Pavilion E / Légaré entrance — 5757 Légaré",
+        "fr": "Entrée du pavillon E / Légaré — 5757, rue Légaré"
+      }
+    },
+    {
+      "id": "h",
+      "node": "H",
+      "labels": {
+        "en": "Pavilion H entrance — 5790 Côte-des-Neiges",
+        "fr": "Entrée du pavillon H — 5790, chemin de la Côte-des-Neiges"
+      }
+    },
+    {
+      "id": "k",
+      "node": "K",
+      "labels": {
+        "en": "Pavilion K entrance — 5767 Légaré",
+        "fr": "Entrée du pavillon K — 5767, rue Légaré"
+      }
+    },
+    {
+      "id": "emergency",
+      "node": "K",
+      "labels": {
+        "en": "Emergency entrance — 5777 Légaré",
+        "fr": "Entrée de l’Urgence — 5777, rue Légaré"
+      }
+    }
+  ],
+  "nodeAliases": {
+    "MAIN": "B",
+    "ER": "K"
+  },
+  "specialPavilionLabels": {
+    "MAIN": {
+      "en": "Main Entrance",
+      "fr": "Entrée principale"
+    },
+    "ER": {
+      "en": "Emergency Entrance",
+      "fr": "Entrée de l’Urgence"
+    },
+    "ICFP": {
+      "en": "ICFP",
+      "fr": "IPCF"
+    }
+  }
+}
