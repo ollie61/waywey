@@ -162,7 +162,7 @@ function bfs(a,b){
  if(a===b)return[a];
  let q=[[a]],seen=new Set([a]);
  while(q.length){let path=q.shift(),n=path[path.length-1];for(const x of (GRAPH[n]||[])){if(seen.has(x))continue;let p=[...path,x];if(x===b)return p;seen.add(x);q.push(p)}}
- return[a,b];
+ return null;
 }
 function targetNode(d){
  const p=(d.p||"").trim();
@@ -182,7 +182,8 @@ function ambassadorSteps(d){
  const path=bfs(start,target),special=specialRouteSteps(start,target,appLang);
  if(special&&special.length){out.push(...special);}
  else if(start===target){out.push(t.remain+" "+(labels[target]||pavilionFor(target,appLang))+".");}
- else{out.push(t.indoor+" "+path.map(x=>labels[x]||pavilionFor(x,appLang)).join(" → ")+".");}
+ else if(path){out.push(t.indoor+" "+path.map(x=>labels[x]||pavilionFor(x,appLang)).join(" → ")+".");}
+ else{out.push(appLang==="fr"?"Aucun itinéraire intérieur public n’est encore validé dans WayWey entre ce point de départ et cette destination. Suivez la signalisation actuelle de l’hôpital.":"WayWey does not yet have a validated public indoor route between this starting point and destination. Follow current hospital signage.");}
  if(d.loc)out.push((appLang==="fr"?"Suivez ensuite les indications vers ":"Then follow signs to ")+d.loc+".");
  else out.push(t.followDest+" "+(appLang==="fr"?d.fr:d.en)+".");
  return out;
@@ -197,7 +198,11 @@ function localizedSteps(d,lang){
  const path=bfs(start,target),labels=PAV_LABELS[lang]||PAV_LABELS.en||{},special=specialRouteSteps(start,target,lang);
  if(special&&special.length){out.push(...special);}
  else if(start===target){out.push(t.stay+" "+(labels[target]||pavilionFor(target,lang))+".");}
- else{out.push(t.follow+" "+path.map(x=>labels[x]||pavilionFor(x,lang)).join(" → ")+".");}
+ else if(path){out.push(t.follow+" "+path.map(x=>labels[x]||pavilionFor(x,lang)).join(" → ")+".");}
+ else{
+   const msg=lang==="fr"?"Aucun itinéraire intérieur public n’est encore validé dans WayWey entre ce point de départ et cette destination. Suivez la signalisation actuelle de l’hôpital.":"WayWey does not yet have a validated public indoor route between this starting point and destination. Follow current hospital signage.";
+   out.push(msg);
+ }
  if(d.loc)out.push(t.final+" "+d.loc+"."); else out.push(t.final+" "+(lang==="fr"?d.fr:d.en)+".");
  return out;
 }
