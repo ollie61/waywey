@@ -1,0 +1,120 @@
+{
+  "id": "hadassah-ein-kerem",
+  "name": {
+    "he": "המרכז הרפואי הדסה עין כרם",
+    "en": "Hadassah Ein Kerem Medical Center",
+    "ar": "المركز الطبي هداسا عين كارم"
+  },
+  "shortName": {
+    "he": "הדסה עין כרם",
+    "en": "Hadassah Ein Kerem",
+    "ar": "هداسا عين كارم"
+  },
+  "ambassadorLanguages": [
+    "he",
+    "en",
+    "ar"
+  ],
+  "defaultAppLanguage": "he",
+  "defaultVisitorLanguage": "he",
+  "pageTitle": {
+    "he": "WayWey — הדסה עין כרם",
+    "en": "WayWey — Hadassah Ein Kerem Wayfinding",
+    "ar": "WayWey — هداسا عين كارم"
+  },
+  "description": {
+    "he": "WayWey — כלי הכוונה רב-לשוני לא רשמי להדסה עין כרם",
+    "en": "WayWey — unofficial multilingual ambassador wayfinding for Hadassah Ein Kerem",
+    "ar": "WayWey — أداة إرشاد متعددة اللغات وغير رسمية لهداسا عين كارم"
+  },
+  "ui": {
+    "he": {
+      "brand": "הדסה עין כרם · כלי הכוונה לשגרירים · לא רשמי",
+      "disclaimer": "אב-טיפוס לשגרירי הכוונה. הקמפוס כולל יותר מ-28 מבנים; יש לאמת שילוט עדכני כאשר מסלול בין מבנים טרם אומת."
+    },
+    "en": {
+      "brand": "Hadassah Ein Kerem Ambassador Wayfinding · Unofficial",
+      "searchLabel": "Hebrew, English or Arabic",
+      "placeholder": "e.g. מיון, cardiology, MRI, أطفال, oncology",
+      "disclaimer": "Prototype reference for ambassadors. The campus has more than 28 buildings; verify current signage when a cross-building route has not yet been validated."
+    },
+    "ar": {
+      "brand": "هداسا عين كارم · أداة إرشاد السفراء · غير رسمية",
+      "disclaimer": "أداة تجريبية لسفراء الإرشاد. يضم الحرم أكثر من 28 مبنى؛ تحقّق من اللافتات الحالية عندما لا يكون المسار بين المباني موثقاً بعد."
+    }
+  },
+  "entrances": [
+    {
+      "id": "main",
+      "node": "MAIN",
+      "labels": {
+        "he": "הכניסה הראשית / הבניין הראשי",
+        "en": "Main entrance / Main Building",
+        "ar": "المدخل الرئيسي / المبنى الرئيسي"
+      }
+    },
+    {
+      "id": "emergency",
+      "node": "ER",
+      "labels": {
+        "he": "הכניסה למיון",
+        "en": "Emergency entrance",
+        "ar": "مدخل الطوارئ"
+      }
+    },
+    {
+      "id": "mother-child",
+      "node": "MC",
+      "labels": {
+        "he": "כניסת בניין אם וילד",
+        "en": "Mother and Child Building entrance",
+        "ar": "مدخل مبنى الأم والطفل"
+      }
+    },
+    {
+      "id": "davidson",
+      "node": "DAVIDSON",
+      "labels": {
+        "he": "לובי מגדל דוידסון",
+        "en": "Davidson Tower lobby",
+        "ar": "ردهة برج ديفيدسون"
+      }
+    },
+    {
+      "id": "sharett",
+      "node": "SHARETT",
+      "labels": {
+        "he": "כניסת מכון שרת",
+        "en": "Sharett Institute entrance",
+        "ar": "مدخل معهد شاريت"
+      }
+    },
+    {
+      "id": "clinics",
+      "node": "CLINICS",
+      "labels": {
+        "he": "כניסת בניין המרפאות",
+        "en": "Clinics Building entrance",
+        "ar": "مدخل مبنى العيادات"
+      }
+    },
+    {
+      "id": "dental",
+      "node": "DENTAL",
+      "labels": {
+        "he": "כניסת בית הספר לרפואת שיניים",
+        "en": "School of Dental Medicine entrance",
+        "ar": "مدخل كلية طب الأسنان"
+      }
+    }
+  ],
+  "datasetStrength": {
+    "level": 2,
+    "label": {
+      "he": "בפיתוח",
+      "en": "Developing",
+      "ar": "قيد التطوير"
+    },
+    "basis": "Initial official-source package for a 28+ building, 130+ department/clinic campus. Cross-building routing remains deliberately conservative."
+  }
+}
