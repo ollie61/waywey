@@ -1,0 +1,1529 @@
+[
+  {
+    "en": "Admitting — Montreal Children's Hospital",
+    "fr": "Admission — Hôpital de Montréal pour enfants",
+    "p": "C",
+    "loc": "C RC.0036",
+    "aliases": [
+      "admitting",
+      "admission",
+      "registration",
+      "inscription",
+      "hospital card",
+      "carte d'hôpital"
+    ],
+    "status": "official",
+    "note": "Current MUHC Admitting Office page lists the Montreal Children's Hospital admitting office at C RC.0036.",
+    "source": "MUHC Admitting Office"
+  },
+  {
+    "en": "Pediatric Emergency",
+    "fr": "Urgence pédiatrique",
+    "p": "B",
+    "loc": "B S1.3300",
+    "aliases": [
+      "pediatric emergency",
+      "children emergency",
+      "child emergency",
+      "urgence enfant",
+      "urgence pédiatrique",
+      "ER child"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Audiology — Montreal Children's Hospital",
+    "fr": "Audiologie — Hôpital de Montréal pour enfants",
+    "p": "A",
+    "loc": "A RC.4227",
+    "aliases": [
+      "audiology",
+      "audiologie",
+      "hearing",
+      "audition"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Interventional Cardiology — Pediatric",
+    "fr": "Cardiologie interventionnelle — Pédiatrie",
+    "p": "B",
+    "loc": "B 03.7200",
+    "aliases": [
+      "interventional cardiology",
+      "cardiologie interventionnelle",
+      "pediatric cardiology"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Cardiology Centre — Pediatric",
+    "fr": "Centre de cardiologie — Pédiatrie",
+    "p": "B",
+    "loc": "B RC.3219",
+    "aliases": [
+      "cardiology",
+      "cardiologie",
+      "heart clinic",
+      "coeur"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Surgery and Intervention Centre — Pediatric",
+    "fr": "Centre de chirurgie et d’intervention — Pédiatrie",
+    "p": "B",
+    "loc": "B 03.3103",
+    "aliases": [
+      "surgery centre",
+      "chirurgie",
+      "intervention centre"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Hematology-Oncology Day Treatment — Pediatric",
+    "fr": "Centre de jour hématologie-oncologie — Pédiatrie",
+    "p": "B",
+    "loc": "B 07.5350",
+    "aliases": [
+      "hematology oncology",
+      "hématologie oncologie",
+      "cancer child",
+      "oncology child"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Complex Care Service — Pediatric",
+    "fr": "Service de soins complexes — Pédiatrie",
+    "p": "B",
+    "loc": "B RC.2238",
+    "aliases": [
+      "complex care",
+      "soins complexes"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Test Centre — Pediatric",
+    "fr": "Centre de prélèvements — Pédiatrie",
+    "p": "B",
+    "loc": "B 02.5118",
+    "aliases": [
+      "pediatric blood test",
+      "blood test child",
+      "prise de sang enfant",
+      "centre de prélèvements pédiatrique",
+      "lab child"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Patient-Family Resource Centre",
+    "fr": "Centre de ressources patients-familles",
+    "p": "B",
+    "loc": "B RC.0078",
+    "aliases": [
+      "family resource centre",
+      "resource centre",
+      "centre de ressources famille",
+      "parents"
+    ],
+    "status": "official",
+    "note": "Current MUHC Patient Resource Centres page lists the Patient Resource Centre at B RC.0078.",
+    "source": "MUHC Patient Resource Centres"
+  },
+  {
+    "en": "Brain, Development and Behaviour",
+    "fr": "Cerveau, développement et comportement",
+    "p": "A",
+    "loc": "A 03.3138 / A 04.3140",
+    "aliases": [
+      "brain development",
+      "development behaviour",
+      "cerveau développement comportement"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Chapel — Montreal Children's Hospital",
+    "fr": "Chapelle — Hôpital de Montréal pour enfants",
+    "p": "A",
+    "loc": "A 02.0045",
+    "aliases": [
+      "chapel",
+      "chapelle",
+      "prayer",
+      "prière"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Clinics — North (Pediatric)",
+    "fr": "Cliniques — Nord (Pédiatrie)",
+    "p": "A",
+    "loc": "A RC.3334 / A 02.3343",
+    "aliases": [
+      "clinics north",
+      "cliniques nord"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Clinics — South (Pediatric)",
+    "fr": "Cliniques — Sud (Pédiatrie)",
+    "p": "A",
+    "loc": "A 02.2227",
+    "aliases": [
+      "clinics south",
+      "cliniques sud"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Neuro Diagnostics — Pediatric",
+    "fr": "Diagnostic neurologique — Pédiatrie",
+    "p": "B",
+    "loc": "B 02.3227",
+    "aliases": [
+      "neuro diagnostics",
+      "diagnostic neurologique",
+      "EEG child"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Occupational Therapy — Pediatric",
+    "fr": "Ergothérapie — Pédiatrie",
+    "p": "A",
+    "loc": "A 03.3138",
+    "aliases": [
+      "occupational therapy",
+      "ergothérapie",
+      "OT child"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Medical Genetics — Pediatric",
+    "fr": "Génétique médicale — Pédiatrie",
+    "p": "A",
+    "loc": "A 04.3140",
+    "aliases": [
+      "medical genetics",
+      "génétique médicale",
+      "genetics"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Medical Imaging — Pediatric",
+    "fr": "Imagerie médicale — Pédiatrie",
+    "p": "B",
+    "loc": "B 02.2018",
+    "aliases": [
+      "medical imaging",
+      "imagerie médicale",
+      "xray child",
+      "radiology child"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Centre for Innovative Medicine — Pediatric",
+    "fr": "Centre de médecine innovatrice — Pédiatrie",
+    "p": "B",
+    "loc": "B 04.3310",
+    "aliases": [
+      "centre for innovative medicine",
+      "centre médecine innovatrice",
+      "CIM"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Sleep Lab — Pediatric",
+    "fr": "Laboratoire du sommeil — Pédiatrie",
+    "p": "A",
+    "loc": "A S1.2335",
+    "aliases": [
+      "sleep lab",
+      "laboratoire sommeil",
+      "sleep study child"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Clinical Nutrition — Pediatric",
+    "fr": "Nutrition clinique — Pédiatrie",
+    "p": "B",
+    "loc": "B S1.2238",
+    "aliases": [
+      "nutrition",
+      "nutrition clinique",
+      "dietitian child"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Speech Language Pathology — Pediatric",
+    "fr": "Orthophonie — Pédiatrie",
+    "p": "A",
+    "loc": "A 04.3140",
+    "aliases": [
+      "speech therapy",
+      "speech language pathology",
+      "orthophonie"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Otolaryngology / ENT — Pediatric",
+    "fr": "Oto-rhino-laryngologie / ORL — Pédiatrie",
+    "p": "A",
+    "loc": "A RC.4221",
+    "aliases": [
+      "ENT",
+      "ORL",
+      "otolaryngology",
+      "oto-rhino-laryngologie",
+      "ear nose throat"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Physiotherapy — Pediatric",
+    "fr": "Physiothérapie — Pédiatrie",
+    "p": "A",
+    "loc": "A 03.3138",
+    "aliases": [
+      "physio child",
+      "physiotherapy child",
+      "physiothérapie enfant"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Psychology — Pediatric",
+    "fr": "Psychologie — Pédiatrie",
+    "p": "A",
+    "loc": "A 03.3138",
+    "aliases": [
+      "psychology",
+      "psychologie",
+      "child psychologist"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Interventional Radiology — Pediatric",
+    "fr": "Radiologie interventionnelle — Pédiatrie",
+    "p": "B",
+    "loc": "B 03.7200",
+    "aliases": [
+      "interventional radiology",
+      "radiologie interventionnelle"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Social Service — Pediatric",
+    "fr": "Service social — Pédiatrie",
+    "p": "B",
+    "loc": "B S1.2018",
+    "aliases": [
+      "social work",
+      "social service",
+      "service social"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Child Life Services",
+    "fr": "Services éducatifs / Child Life",
+    "p": "B",
+    "loc": "B S1.2707",
+    "aliases": [
+      "child life",
+      "services éducatifs",
+      "child life services"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Respiratory Services — Pediatric",
+    "fr": "Services respiratoires — Pédiatrie",
+    "p": "A",
+    "loc": "A S1.3333",
+    "aliases": [
+      "respiratory services",
+      "services respiratoires",
+      "breathing"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Spiritual Care — Pediatric",
+    "fr": "Soins spirituels — Pédiatrie",
+    "p": "A",
+    "loc": "A 02.0045",
+    "aliases": [
+      "spiritual care",
+      "soins spirituels",
+      "prayer room",
+      "salle de prière"
+    ],
+    "status": "official",
+    "note": "Current MUHC Spiritual Care page lists pediatric spiritual care / prayer space at A 02.0045.",
+    "source": "MUHC Spiritual Care"
+  },
+  {
+    "en": "Child Psychiatry Unit",
+    "fr": "Unité de pédopsychiatrie",
+    "p": "B",
+    "loc": "B 07.2006",
+    "aliases": [
+      "child psychiatry",
+      "pédopsychiatrie",
+      "psychiatry child"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Inpatient Unit B8",
+    "fr": "Unité de soins B8",
+    "p": "B",
+    "loc": "B 08.1100",
+    "aliases": [
+      "B8",
+      "unit B8",
+      "unité B8"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Inpatient Unit B9",
+    "fr": "Unité de soins B9",
+    "p": "B",
+    "loc": "B 09.1100",
+    "aliases": [
+      "B9",
+      "unit B9",
+      "unité B9"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Hematology-Oncology & Transplant — Pediatric Inpatient",
+    "fr": "Hématologie-oncologie et transplantation — Unité pédiatrique",
+    "p": "B",
+    "loc": "B 07.3528",
+    "aliases": [
+      "hematology oncology transplant",
+      "hématologie oncologie transplantation"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Neonatal Intensive Care Unit (NICU)",
+    "fr": "Unité de soins intensifs néonatals (USIN)",
+    "p": "B",
+    "loc": "B 06.1124",
+    "aliases": [
+      "NICU",
+      "neonatal ICU",
+      "néonatal",
+      "USIN"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Pediatric Intensive Care Unit (PICU)",
+    "fr": "Unité de soins intensifs pédiatriques (USIP)",
+    "p": "B",
+    "loc": "B 06.3718",
+    "aliases": [
+      "PICU",
+      "pediatric ICU",
+      "soins intensifs pédiatriques",
+      "USIP"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Admitting — Adult Glen",
+    "fr": "Admission — Services adultes du Glen",
+    "p": "C",
+    "loc": "C RC.0046",
+    "aliases": [
+      "admitting",
+      "admission",
+      "registration",
+      "inscription",
+      "hospital card",
+      "carte d'hôpital"
+    ],
+    "status": "official",
+    "note": "Current MUHC Admitting Office page: adult Glen admitting near the Royal Victoria main entrance, C RC.0046.",
+    "source": "MUHC Admitting Office"
+  },
+  {
+    "en": "Medical Records / Access to Health Information",
+    "fr": "Archives médicales / Accès à l’information",
+    "p": "C",
+    "loc": "C RC.7121",
+    "aliases": [
+      "medical records",
+      "archives médicales",
+      "health information",
+      "dossier médical"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Audiology — Adult",
+    "fr": "Audiologie — Adultes",
+    "p": "D",
+    "loc": "D 04.7510",
+    "aliases": [
+      "audiology adult",
+      "audiologie adulte",
+      "hearing"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Non-invasive Cardiology",
+    "fr": "Cardiologie non invasive",
+    "p": "C",
+    "loc": "C RC.3418",
+    "aliases": [
+      "cardiology",
+      "cardiologie",
+      "non invasive cardiology",
+      "heart"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Surgery and Intervention Centre — Adult",
+    "fr": "Centre de chirurgie et d’intervention — Adultes",
+    "p": "C",
+    "loc": "C 03.7158",
+    "aliases": [
+      "surgery intervention",
+      "chirurgie intervention"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Test Centre / Blood Collection — Adult",
+    "fr": "Centre de prélèvements — Adultes",
+    "p": "D",
+    "loc": "D 02.2307",
+    "aliases": [
+      "blood test",
+      "blood work",
+      "blood draw",
+      "prise de sang",
+      "centre de prélèvements",
+      "lab"
+    ],
+    "status": "official",
+    "note": "Current MUHC Test Centres page lists the adult Glen Test Centre at D 02.2307 (Block D, Level 2 South).",
+    "source": "MUHC Test Centres"
+  },
+  {
+    "en": "McConnell Resource Centre",
+    "fr": "Centre de ressources McConnell",
+    "p": "B",
+    "loc": "B RC.0000",
+    "aliases": [
+      "McConnell",
+      "resource centre",
+      "centre de ressources"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Birthing Centre",
+    "fr": "Centre des naissances",
+    "p": "C",
+    "loc": "C 06.2143",
+    "aliases": [
+      "birthing centre",
+      "birth",
+      "delivery",
+      "labour",
+      "labor",
+      "accouchement",
+      "accoucher",
+      "maternité",
+      "naissance"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Breast Centre",
+    "fr": "Centre du sein",
+    "p": "C",
+    "loc": "C 06.3155",
+    "aliases": [
+      "breast centre",
+      "centre du sein",
+      "breast clinic",
+      "sein"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Gynecology Clinic",
+    "fr": "Clinique de gynécologie",
+    "p": "C",
+    "loc": "C 06.4152",
+    "aliases": [
+      "gynecology",
+      "gynécologie",
+      "gyno"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Obstetrics Clinic",
+    "fr": "Clinique d’obstétrique",
+    "p": "C",
+    "loc": "C 06.5218",
+    "aliases": [
+      "obstetrics",
+      "obstétrique",
+      "pregnancy",
+      "grossesse"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Pre-operative Clinic",
+    "fr": "Clinique préopératoire",
+    "p": "C",
+    "loc": "C S1.2428",
+    "aliases": [
+      "preop",
+      "pre-operative",
+      "préopératoire",
+      "before surgery"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Cardiovascular Clinics",
+    "fr": "Cliniques cardiovasculaires",
+    "p": "C",
+    "loc": "C RC.2017",
+    "aliases": [
+      "cardiovascular",
+      "cardio clinics",
+      "cliniques cardiovasculaires"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Surgical Clinics — North",
+    "fr": "Cliniques chirurgicales — Nord",
+    "p": "D",
+    "loc": "D S1.3310",
+    "aliases": [
+      "surgical clinics north",
+      "cliniques chirurgicales nord"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Surgical Clinics — South",
+    "fr": "Cliniques chirurgicales — Sud",
+    "p": "C",
+    "loc": "C S1.2833",
+    "aliases": [
+      "surgical clinics south",
+      "cliniques chirurgicales sud"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Medical Clinics",
+    "fr": "Cliniques de médecine",
+    "p": "D",
+    "loc": "D 02.3312",
+    "aliases": [
+      "medical clinics",
+      "cliniques médecine",
+      "medicine clinic"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Dialysis",
+    "fr": "Dialyse",
+    "p": "D",
+    "loc": "D 04.4332",
+    "aliases": [
+      "dialysis",
+      "dialyse",
+      "kidney dialysis"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Obstetrics and Gynecology Ultrasound",
+    "fr": "Échographie obstétricale et gynécologique",
+    "p": "C",
+    "loc": "C 06.4351",
+    "aliases": [
+      "obstetric ultrasound",
+      "gynecology ultrasound",
+      "échographie obstétricale",
+      "échographie gynécologique"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Occupational Therapy — Adult",
+    "fr": "Ergothérapie — Adultes",
+    "p": "D",
+    "loc": "D RC.4108",
+    "aliases": [
+      "occupational therapy",
+      "ergothérapie",
+      "OT adult"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Medical Day Hospital and CVIS",
+    "fr": "Hôpital de jour médical et SMVC",
+    "p": "D",
+    "loc": "D 02.4306",
+    "aliases": [
+      "medical day hospital",
+      "hôpital de jour",
+      "CVIS",
+      "SMVC"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Centre for Innovative Medicine — Adult",
+    "fr": "Centre de médecine innovatrice — Adultes",
+    "p": "C",
+    "loc": "C 04.0119",
+    "aliases": [
+      "centre innovative medicine",
+      "centre médecine innovatrice",
+      "CIM"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Sleep Laboratory — Adult",
+    "fr": "Laboratoire du sommeil — Adultes",
+    "p": "C",
+    "loc": "C RC.4208",
+    "aliases": [
+      "sleep laboratory",
+      "sleep lab",
+      "laboratoire du sommeil",
+      "sleep study"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Nuclear Medicine",
+    "fr": "Médecine nucléaire",
+    "p": "C",
+    "loc": "C 02.8711",
+    "aliases": [
+      "nuclear medicine",
+      "médecine nucléaire",
+      "PET",
+      "TEP"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Clinical Nutrition — Adult",
+    "fr": "Nutrition clinique — Adultes",
+    "p": "C",
+    "loc": "C RC.8521",
+    "aliases": [
+      "nutrition",
+      "clinical nutrition",
+      "nutrition clinique",
+      "dietitian"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Speech Language Pathology — Adult",
+    "fr": "Orthophonie — Adultes",
+    "p": "D",
+    "loc": "D 04.7510",
+    "aliases": [
+      "speech language pathology",
+      "speech therapy",
+      "orthophonie"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Central Pharmacy",
+    "fr": "Pharmacie centrale",
+    "p": "C",
+    "loc": "C RC.6004",
+    "aliases": [
+      "central pharmacy",
+      "pharmacie centrale"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Physiotherapy — Adult",
+    "fr": "Physiothérapie — Adultes",
+    "p": "D",
+    "loc": "D RC.4108",
+    "aliases": [
+      "physio",
+      "physiotherapy",
+      "physiothérapie",
+      "physical therapy"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Radiology — Ultrasound",
+    "fr": "Radiologie — Échographie",
+    "p": "C",
+    "loc": "C 02.5022.1",
+    "aliases": [
+      "radiology",
+      "radiologie",
+      "ultrasound",
+      "échographie",
+      "imaging"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Occupational Health and Safety",
+    "fr": "Santé et sécurité du travail",
+    "p": "D",
+    "loc": "D 04.6011",
+    "aliases": [
+      "occupational health",
+      "health safety",
+      "santé sécurité travail"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Chronic Viral Illness Service",
+    "fr": "Service des maladies virales chroniques",
+    "p": "D",
+    "loc": "D 02.4110",
+    "aliases": [
+      "chronic viral illness",
+      "maladies virales chroniques",
+      "HIV",
+      "VIH",
+      "hepatitis"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Social Service — Adult",
+    "fr": "Service social — Adultes",
+    "p": "C",
+    "loc": "C RC.8448",
+    "aliases": [
+      "social service",
+      "social work",
+      "service social"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Spiritual Care / Prayer and Meditation — Adult",
+    "fr": "Soins spirituels / Salle de prière et méditation — Adultes",
+    "p": "C",
+    "loc": "C 02.0310.4",
+    "aliases": [
+      "spiritual care",
+      "soins spirituels",
+      "prayer room",
+      "meditation room",
+      "salle de prière",
+      "recueillement"
+    ],
+    "status": "official",
+    "note": "Current MUHC Spiritual Care page lists adult Glen spiritual care at C 02.0310.4.",
+    "source": "MUHC Spiritual Care"
+  },
+  {
+    "en": "Coronary Care Unit",
+    "fr": "Unité de soins coronariens",
+    "p": "C",
+    "loc": "C 07.4612",
+    "aliases": [
+      "CCU",
+      "coronary care",
+      "soins coronariens"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Inpatient Unit C7",
+    "fr": "Unité de soins C7",
+    "p": "C",
+    "loc": "C 07.1200",
+    "aliases": [
+      "C7",
+      "unit C7",
+      "unité C7"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Inpatient Unit C8",
+    "fr": "Unité de soins C8",
+    "p": "C",
+    "loc": "C 08.1200",
+    "aliases": [
+      "C8",
+      "unit C8",
+      "unité C8"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Inpatient Unit C9",
+    "fr": "Unité de soins C9",
+    "p": "C",
+    "loc": "C 09.1200",
+    "aliases": [
+      "C9",
+      "unit C9",
+      "unité C9"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Inpatient Unit C10",
+    "fr": "Unité de soins C10",
+    "p": "C",
+    "loc": "C 10.1200",
+    "aliases": [
+      "C10",
+      "unit C10",
+      "unité C10"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Maternity Care Unit D6",
+    "fr": "Unité de soins D6 — Maternité",
+    "p": "D",
+    "loc": "D 06.1100",
+    "aliases": [
+      "maternity unit",
+      "maternité",
+      "postpartum",
+      "post-partum",
+      "D6"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Inpatient Unit D7",
+    "fr": "Unité de soins D7",
+    "p": "D",
+    "loc": "D 07.1100",
+    "aliases": [
+      "D7",
+      "unit D7",
+      "unité D7"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Inpatient Unit D9",
+    "fr": "Unité de soins D9",
+    "p": "D",
+    "loc": "D 09.1100",
+    "aliases": [
+      "D9",
+      "unit D9",
+      "unité D9"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Hematology-Oncology Inpatient Unit D10",
+    "fr": "Unité de soins D10 — Hématologie-oncologie",
+    "p": "D",
+    "loc": "D 10.1100",
+    "aliases": [
+      "D10",
+      "hematology oncology inpatient",
+      "hématologie oncologie"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Intensive Care Unit — Adult",
+    "fr": "Unité de soins intensifs — Adultes",
+    "p": "D",
+    "loc": "D 03.7036",
+    "aliases": [
+      "ICU",
+      "intensive care",
+      "soins intensifs",
+      "critical care"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Palliative Care Unit",
+    "fr": "Unité de soins palliatifs",
+    "p": "D",
+    "loc": "D 09.3000",
+    "aliases": [
+      "palliative care",
+      "soins palliatifs"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Adult Emergency Department",
+    "fr": "Urgence — Adultes",
+    "p": "C",
+    "loc": "C S1.3300",
+    "aliases": [
+      "emergency",
+      "ER",
+      "urgence",
+      "adult emergency",
+      "urgence adulte"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Cedars Cancer Centre — Administration",
+    "fr": "Centre du cancer des Cèdres — Administration",
+    "p": "D",
+    "loc": "D S1.4500 / D 02.8100",
+    "aliases": [
+      "Cedars administration",
+      "administration cancer"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Cedars Test Centre",
+    "fr": "Centre de prélèvements des Cèdres",
+    "p": "D",
+    "loc": "D RC.1306",
+    "aliases": [
+      "cancer blood test",
+      "Cedars test centre",
+      "prise de sang cancer",
+      "centre prélèvements cèdres"
+    ],
+    "status": "official",
+    "note": "Current Cedars Cancer Centre page lists its dedicated Test Centre at D RC.1306.",
+    "source": "MUHC Cedars Cancer Centre"
+  },
+  {
+    "en": "Cedars CanSupport Resource Centre",
+    "fr": "Centre de ressources CanSupport des Cèdres",
+    "p": "D",
+    "loc": "D RC.1329",
+    "aliases": [
+      "CanSupport",
+      "resource centre cancer",
+      "ressources cancer"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Cedars Urgent Care Centre",
+    "fr": "Centre de soins d’urgence des Cèdres",
+    "p": "D",
+    "loc": "D RC.6100",
+    "aliases": [
+      "urgent care cancer",
+      "soins urgence cancer",
+      "Cedars urgent"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Cedars Treatment Centre",
+    "fr": "Centre de traitement des Cèdres",
+    "p": "D",
+    "loc": "D RC.8013",
+    "aliases": [
+      "treatment centre",
+      "centre traitement",
+      "cancer treatment"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Cancer Care Clinics — Cedars",
+    "fr": "Cliniques de cancérologie — Cèdres",
+    "p": "D",
+    "loc": "D RC.9019 / D RC.9031 / D RC.9043",
+    "aliases": [
+      "cancer clinic",
+      "oncology clinic",
+      "cancérologie",
+      "oncologie",
+      "Cedars clinic"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Oncology Supportive Care Clinics",
+    "fr": "Cliniques des services de soutien en oncologie",
+    "p": "D",
+    "loc": "D 02.9005",
+    "aliases": [
+      "supportive care oncology",
+      "soutien oncologie"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Oncology Pharmacy — Cedars",
+    "fr": "Pharmacie d’oncologie — Cèdres",
+    "p": "D",
+    "loc": "D RC.8019",
+    "aliases": [
+      "oncology pharmacy",
+      "pharmacie oncologie"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Medical Physics — Cedars",
+    "fr": "Physique médicale — Cèdres",
+    "p": "D",
+    "loc": "D S1.7000",
+    "aliases": [
+      "medical physics",
+      "physique médicale"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Radiation Oncology — Cedars",
+    "fr": "Radio-oncologie — Cèdres",
+    "p": "D",
+    "loc": "D S1.1620",
+    "aliases": [
+      "radiation oncology",
+      "radio-oncology",
+      "radio-oncologie",
+      "radiotherapy",
+      "radiothérapie"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Psychosocial Oncology",
+    "fr": "Oncologie psychosociale",
+    "p": "D",
+    "loc": "D 02.9005",
+    "aliases": [
+      "psychosocial oncology",
+      "oncologie psychosociale"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Montreal Chest Institute Clinics",
+    "fr": "Cliniques de l’Institut thoracique de Montréal",
+    "p": "D",
+    "loc": "D RC.3314",
+    "aliases": [
+      "MCI clinic",
+      "ITM cliniques",
+      "chest institute",
+      "institut thoracique"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Montreal Chest Institute Sleep Laboratory",
+    "fr": "Laboratoire du sommeil — Institut thoracique",
+    "p": "D",
+    "loc": "D 04.3302",
+    "aliases": [
+      "MCI sleep",
+      "ITM sommeil",
+      "sleep lab chest"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Montreal Chest Institute Inpatient Unit D8",
+    "fr": "Unité de soins D8 — Institut thoracique",
+    "p": "D",
+    "loc": "D 08.3036",
+    "aliases": [
+      "MCI D8",
+      "ITM D8",
+      "chest inpatient"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Montreal Chest Institute Day Hospital",
+    "fr": "Hôpital de jour — Institut thoracique",
+    "p": "D",
+    "loc": "D RC.3315",
+    "aliases": [
+      "MCI day hospital",
+      "ITM hôpital de jour"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Pulmonary Function — Montreal Chest Institute",
+    "fr": "Fonction pulmonaire — Institut thoracique",
+    "p": "D",
+    "loc": "D RC.2110",
+    "aliases": [
+      "pulmonary function",
+      "fonction pulmonaire",
+      "lung function",
+      "spirometry",
+      "spirométrie"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Intensive Care and Weaning — Montreal Chest Institute",
+    "fr": "Soins intensifs et sevrage — Institut thoracique",
+    "p": "D",
+    "loc": "D 08.4133",
+    "aliases": [
+      "weaning unit",
+      "sevrage",
+      "MCI ICU",
+      "ITM soins intensifs"
+    ],
+    "status": "official",
+    "note": "Current official MUHC Glen wayfinding information.",
+    "source": "MUHC current Glen wayfinding directory"
+  },
+  {
+    "en": "Glen Cafeteria",
+    "fr": "Cafétéria du Glen",
+    "p": "C",
+    "loc": "Level S1 / Niveau S1",
+    "aliases": [
+      "cafeteria",
+      "cafétéria",
+      "food",
+      "restaurant",
+      "eat"
+    ],
+    "status": "official",
+    "note": "Current MUHC Food Services page: Glen cafeteria is on Level S1 in Block C.",
+    "source": "MUHC Food Services"
+  },
+  {
+    "en": "Retail Pharmacy / La Petite Pharma",
+    "fr": "Pharmacie de détail / La Petite Pharma",
+    "p": "B",
+    "loc": "B01.0044",
+    "aliases": [
+      "pharmacy",
+      "pharmacie",
+      "drugstore",
+      "La Petite Pharma"
+    ],
+    "status": "official",
+    "note": "Current MUHC Commercial Venues page lists La Petite Pharma at B01.0044.",
+    "source": "MUHC Commercial Venues"
+  },
+  {
+    "en": "Presse Café — Children's side",
+    "fr": "Presse Café — secteur enfants",
+    "p": "A",
+    "loc": "AS1.0000.1",
+    "aliases": [
+      "Presse Café",
+      "coffee",
+      "café"
+    ],
+    "status": "official",
+    "note": "Current MUHC Commercial Venues page.",
+    "source": "MUHC Commercial Venues"
+  },
+  {
+    "en": "Presse Café — Research Institute",
+    "fr": "Presse Café — Institut de recherche",
+    "p": "E",
+    "loc": "ES1.0040",
+    "aliases": [
+      "Presse Café",
+      "coffee",
+      "café research"
+    ],
+    "status": "official",
+    "note": "Current MUHC Commercial Venues page.",
+    "source": "MUHC Commercial Venues"
+  },
+  {
+    "en": "ATM / RBC Bank Machine",
+    "fr": "Guichet automatique / RBC",
+    "p": "C",
+    "loc": "C01.0122 / AS1.0100.2 / CS1.0100.1",
+    "aliases": [
+      "ATM",
+      "bank machine",
+      "GAB",
+      "guichet automatique",
+      "RBC"
+    ],
+    "status": "official",
+    "note": "Current MUHC Commercial Venues page lists RBC ATMs at several Glen locations.",
+    "source": "MUHC Commercial Venues"
+  },
+  {
+    "en": "Subway",
+    "fr": "Subway",
+    "p": "D",
+    "loc": "DS1.8064",
+    "aliases": [
+      "Subway",
+      "sandwich",
+      "restaurant"
+    ],
+    "status": "official",
+    "note": "Current MUHC Commercial Venues page.",
+    "source": "MUHC Commercial Venues"
+  },
+  {
+    "en": "Vendôme Metro / Hospital Tunnel",
+    "fr": "Métro Vendôme / Tunnel vers l’hôpital",
+    "p": "C",
+    "loc": "Level S1 / Niveau S1",
+    "aliases": [
+      "Vendôme",
+      "metro",
+      "métro",
+      "tunnel",
+      "train",
+      "gare"
+    ],
+    "status": "official",
+    "note": "Current MUHC access information confirms Vendôme station is directly connected to the Glen by an accessible tunnel.",
+    "source": "MUHC How to get to the Glen"
+  },
+  {
+    "en": "Adult Ophthalmology Clinic — Off-site",
+    "fr": "Clinique d’ophtalmologie pour adultes — Hors site",
+    "p": "OPH",
+    "loc": "5252 boul. de Maisonneuve Ouest",
+    "aliases": [
+      "ophthalmology",
+      "ophtalmologie",
+      "eye clinic",
+      "yeux",
+      "5252 de Maisonneuve"
+    ],
+    "status": "official",
+    "note": "MUHC lists the adult ophthalmology clinic at 5252 boul. de Maisonneuve Ouest, outside the Glen hospital building.",
+    "source": "MUHC Glen site / McGill Academic Eye Centre"
+  }
+]
