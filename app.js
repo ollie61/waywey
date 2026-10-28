@@ -259,8 +259,12 @@ function noteFor(d){
 }
 function renderQuickGuide(){
  const g=QUICK_GUIDE[appLang]||QUICK_GUIDE.en;
+ const langs=hospitalLanguages().filter(l=>QUICK_GUIDE[l]);
+ $("guideDialog").dir=appIsRtl(appLang)?"rtl":"ltr";
  $("guideTitle").textContent=g.title;
- $("guideContent").innerHTML=g.html;
+ const nav=langs.length>1?'<div class="guide-lang-nav" aria-label="Guide language">'+langs.map(l=>'<button type="button" class="guide-lang-btn'+(l===appLang?' active':'')+'" data-guide-lang="'+l+'">'+(LANGUAGE_NAMES[l]||l)+'</button>').join("")+'</div>':"";
+ $("guideContent").innerHTML=nav+g.html;
+ [...$("guideContent").querySelectorAll("[data-guide-lang]")].forEach(b=>b.onclick=()=>setAppLanguage(b.dataset.guideLang));
  $("closeGuide").setAttribute("aria-label",(APP_UI[appLang]&&APP_UI[appLang].close)||"Close");
 }
 function openQuickGuide(){renderQuickGuide();$("guideDialog").showModal();}
@@ -499,10 +503,13 @@ async function bootstrap(){
    const legacy=(HOSPITAL.entrances||[]).find(x=>x.node===saved);
    if(legacy)$("station").value=legacy.id;
  }
- setAppLanguage(hospitalLanguages().includes(savedLang)?savedLang:(HOSPITAL.defaultAppLanguage||hospitalLanguages()[0]||"en"));
+ const urlParams=new URLSearchParams(window.location.search);
+ const requestedGuideLang=urlParams.get("guide");
+ setAppLanguage(hospitalLanguages().includes(requestedGuideLang)?requestedGuideLang:(hospitalLanguages().includes(savedLang)?savedLang:(HOSPITAL.defaultAppLanguage||hospitalLanguages()[0]||"en")));
  $("station").onchange=()=>{try{localStorage.setItem(storageKey("station"),$("station").value)}catch(e){};if(selected)choose(selected,false)};
+ if(requestedGuideLang&&QUICK_GUIDE[appLang])setTimeout(()=>{try{openQuickGuide()}catch(e){}},60);
 
- const p=new URLSearchParams(window.location.search);
+ const p=urlParams;
  if(p.get("visitor")==="1"){
    const from=p.get("from"),lang=p.get("lang")||"en",dest=p.get("dest");
    if(from&&[...$("station").options].some(o=>o.value===from))$("station").value=from;
