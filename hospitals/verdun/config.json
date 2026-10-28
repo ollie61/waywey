@@ -39,7 +39,7 @@
     },
     {
       "id": "main4000",
-      "node": "J",
+      "node": "MAIN",
       "labels": {
         "en": "Main entrance — 4000 boulevard LaSalle",
         "fr": "Entrée principale — 4000, boulevard LaSalle"
@@ -63,7 +63,7 @@
     }
   ],
   "nodeAliases": {
-    "MAIN": "J"
+    "MAIN": "MAIN"
   },
   "specialPavilionLabels": {
     "MAIN": {
@@ -77,10 +77,11 @@
       "fr": "En développement",
       "en": "Developing"
     },
-    "basis": "Initial post-expansion 2026 package; overnight completeness audit pending."
+    "basis": "October 2026 official-source audit: inpatient N2–N5, imaging, clinic registration, exact Green/Yellow/Black rooms, parking and amenities. Several old-clinic conflicts and cross-block routes remain unverified."
   },
   "ambassadorLanguages": [
     "fr",
     "en"
-  ]
+  ],
+  "lastSourceAudit": "2026-10-28"
 }
