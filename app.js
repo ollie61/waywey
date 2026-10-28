@@ -93,6 +93,7 @@ function populateAppLanguages(){
 }
 const $=id=>document.getElementById(id);
 let selected=null;
+let selectedQueryLang=null;
 let appLang="en";
 
 function hospitalIdFromUrl(){
@@ -282,6 +283,49 @@ function setAppLanguage(lang){
 }
 
 function norm(s){return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9\u0400-\u04ff\u0590-\u05ff\u0600-\u06ff]+/g," ").trim()}
+function fieldMatchScore(value,q){
+ const f=norm(value),n=norm(q);if(!f||!n)return 0;
+ if(f===n)return 100;if(f.startsWith(n))return 70;if(f.includes(n))return 45;return 0;
+}
+function queryLanguage(q,d){
+ if(/[\u0590-\u05ff]/.test(q))return "he";
+ if(/[\u0600-\u06ff]/.test(q))return "ar";
+ const langs=hospitalLanguages();
+ // In Israeli datasets, Latin-script queries are English by definition.
+ if(langs.includes("he")&&langs.includes("ar")&&langs.includes("en"))return "en";
+ if(/[àâçéèêëîïôûùüÿœæ]/i.test(q)&&langs.includes("fr"))return "fr";
+ if(d&&langs.includes("fr")&&langs.includes("en")){
+   const fr=fieldMatchScore(d.fr,q),en=fieldMatchScore(d.en,q);
+   if(fr>en)return "fr";if(en>fr)return "en";
+ }
+ return langs.includes(appLang)?appLang:(langs[0]||"en");
+}
+function routeNoticeText(key,lang){
+ const table={
+   en:{
+     outsideMapped:"Destination is outside the mapped indoor route. Address / location: ",
+     unknownLocation:"The current source does not state an exact location. Check appointment paperwork or signage.",
+     noRoute:"WayWey does not yet have a validated public indoor route between this starting point and destination. Follow current hospital signage."
+   },
+   fr:{
+     outsideMapped:"Destination hors du parcours intérieur cartographié. Adresse / emplacement : ",
+     unknownLocation:"Le site exact n’est pas indiqué dans la source actuelle. Vérifiez les documents du rendez-vous ou la signalisation.",
+     noRoute:"Aucun itinéraire intérieur public n’est encore validé dans WayWey entre ce point de départ et cette destination. Suivez la signalisation actuelle de l’hôpital."
+   },
+   he:{
+     outsideMapped:"היעד נמצא מחוץ למסלול הפנימי שמופה. כתובת / מיקום: ",
+     unknownLocation:"המיקום המדויק אינו מצוין במקור הנוכחי. בדקו את מסמכי התור או את השילוט.",
+     noRoute:"ב-WayWey עדיין אין מסלול פנימי ציבורי מאומת בין נקודת ההתחלה ליעד. עקבו אחר השילוט העדכני בבית החולים."
+   },
+   ar:{
+     outsideMapped:"الوجهة خارج المسار الداخلي المرسوم. العنوان / الموقع: ",
+     unknownLocation:"الموقع الدقيق غير مذكور في المصدر الحالي. تحقّق من مستندات الموعد أو اللافتات.",
+     noRoute:"لا يوجد في WayWey حتى الآن مسار داخلي عام موثّق بين نقطة البداية والوجهة. اتبع لافتات المستشفى الحالية."
+   }
+ };
+ const set=table[lang]||table.en;
+ return set[key]||table.en[key];
+}
 function displayWhere(d,lang=appLang){return [d.p?pavilionFor(d.p,lang):"",d.loc||""].filter(Boolean).join(" · ")}
 function bfs(a,b){
  if(a===b)return[a];
@@ -299,16 +343,17 @@ function targetNode(d){
 }
 function ambassadorSteps(d){
  const t=APP_UI[appLang]||APP_UI.en,start=stationNode(),target=targetNode(d),out=[],labels=PAV_LABELS[appLang]||PAV_LABELS.en||{};
+ const noticeLang=selectedQueryLang||appLang;
  if(!target){
-   if(d.loc)out.push((t.outsideMapped||APP_UI.en.outsideMapped)+d.loc+".");
-   else out.push(t.unknownLocation||APP_UI.en.unknownLocation);
+   if(d.loc)out.push(routeNoticeText("outsideMapped",noticeLang)+d.loc+".");
+   else out.push(routeNoticeText("unknownLocation",noticeLang));
    return out;
  }
  const path=bfs(start,target),special=specialRouteSteps(start,target,appLang);
  if(special&&special.length){out.push(...special);}
  else if(start===target){out.push(t.remain+" "+(labels[target]||pavilionFor(target,appLang))+".");}
  else if(path){out.push(t.indoor+" "+path.map(x=>labels[x]||pavilionFor(x,appLang)).join(" → ")+".");}
- else{out.push(t.noRoute||APP_UI.en.noRoute);}
+ else{out.push(routeNoticeText("noRoute",noticeLang));}
  if(d.loc)out.push(t.followDest+" "+d.loc+".");
  else out.push(t.followDest+" "+destinationName(d,appLang)+".");
  return out;
@@ -343,13 +388,13 @@ function search(){
  if(!q)return;
  const hits=DATA.map(d=>[d,score(d,q)]).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]).slice(0,12);
  if(!hits.length){box.innerHTML='<div class="status">'+APP_UI[appLang].noMatch+'</div>';return}
- hits.forEach(([d])=>{const el=document.createElement("div");el.className="result";const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);el.innerHTML="<strong>"+primary+"</strong>"+(secondary?"<small>"+secondary+"</small>":"")+"<div class='where'>"+displayWhere(d)+"</div>";el.onclick=()=>choose(d);box.appendChild(el)});
+ hits.forEach(([d])=>{const el=document.createElement("div");el.className="result";const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);el.innerHTML="<strong>"+primary+"</strong>"+(secondary?"<small>"+secondary+"</small>":"")+"<div class='where'>"+displayWhere(d)+"</div>";el.onclick=()=>choose(d,true,queryLanguage(q,d));box.appendChild(el)});
 }
-function choose(d,scroll=true){
- selected=d;const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
+function choose(d,scroll=true,queryLang=null){
+ selected=d;if(queryLang)selectedQueryLang=queryLang;const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
  $("destName").textContent=primary+(secondary&&secondary!==primary?" / "+secondary:"");$("destWhere").textContent=displayWhere(d);
  $("pills").innerHTML=(d.p?"<span class='pill'>"+pavilionFor(d.p,appLang)+"</span>":"")+(d.loc?"<span class='pill'>"+d.loc+"</span>":"")+(d.status==="verify"?"<span class='pill'>"+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"");
- $("steps").innerHTML=ambassadorSteps(d).map(s=>"<li>"+s+"</li>").join("");
+ $("steps").innerHTML=ambassadorSteps(d).map(s=>"<li dir=\"auto\">"+s+"</li>").join("");
  const note=noteFor(d);$("note").style.display=note?"block":"none";$("note").textContent=note;
  $("route").classList.add("active");if(scroll)$("route").scrollIntoView({behavior:"smooth",block:"start"});
 }
@@ -435,7 +480,7 @@ async function bootstrap(){
  $("closeGuide").onclick=()=>$("guideDialog").close();
  $("q").addEventListener("input",search);
  $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
- $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");$("q").focus();window.scrollTo({top:0,behavior:"smooth"})};
+ $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");selectedQueryLang=null;$("q").focus();window.scrollTo({top:0,behavior:"smooth"})};
  $("showVisitor").onclick=showVisitor;
  $("visitorLang").onchange=renderVisitor;
  $("showQr").onclick=showVisitorQr;
