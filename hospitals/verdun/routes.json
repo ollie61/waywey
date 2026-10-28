@@ -9,7 +9,8 @@
     "M": [],
     "V": [],
     "B": [],
-    "O": []
+    "O": [],
+    "MAIN": []
   },
   "pavilionLabels": {
     "en": {
@@ -121,8 +122,10 @@
   "routingNotes": {
     "J-N": "Current Accueil clinique instructions explicitly direct people entering from Emergency to walk through the Yellow Block corridor (J1) and follow signs to N1. The reverse public corridor is therefore encoded conservatively.",
     "N1": "The new Black Block ground floor contains external clinics, Day Medicine and Nuclear Medicine.",
-    "N2-N5": "The new pavilion contains inpatient units on N2 to N5. Only Surgery N5 is currently assigned to a specific unit in this initial dataset.",
-    "passerelle": "The modernization project states that the new pavilion walkway connects to the existing building at every level, but individual public wayfinding paths beyond J1↔N1 are not yet encoded.",
-    "other-blocks": "Mauve, Green, B and Orange blocks are included as destination identifiers, but cross-block routing is withheld until current public paths are verified."
+    "N2-N5": "Official project maps N2 to Internal Medicine, N3 to Clinical Teaching Unit and Palliative Care, N4 to Geriatric Medicine, and N5 to Surgery. October 2026 work notice confirms hospitalized patients in N2–N5. No floor-to-floor public connector or individual room is inferred.",
+    "passerelle": "Project describes a bridge linked to the existing building at every level, but does not establish visitor permission, exact floor access points, or directions. No extra graph edges were added.",
+    "other-blocks": "Mauve (M), Green (V), B and Orange (O) are recognized but remain disconnected because public cross-block routes have not been confirmed. V4-242 is the dedicated urology clinic; V2 corridor is respiratory physiology; V1-277 is patient accounts.",
+    "main-vs-emergency": "Main 4000 boulevard LaSalle and Emergency boulevard Gaétan-Laberge are separate public entrances. Only Emergency/J1→N1 has a published corridor instruction. MAIN is intentionally disconnected until a specific public route is verified.",
+    "door26": "Door 26 was closed only 13 October 2026, 08:00–12:00, according to the 9 October 2026 official notice. Main entrance at 4000 boulevard LaSalle was the alternate. No permanent closure was inferred."
   }
 }
