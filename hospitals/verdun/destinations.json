@@ -176,11 +176,9 @@
     "aliases": [
       "nuclear medicine",
       "médecine nucléaire",
-      "MIBI",
       "scintigraphy",
       "scintigraphie",
       "N1-661",
-      "mibi cardiaque",
       "gamma camera"
     ],
     "status": "official",
@@ -636,19 +634,20 @@
     "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique"
   },
   {
-    "en": "GMF-U / 3950 Entrance",
-    "fr": "Entrée 3950 / GMF-U",
+    "en": "3950 Boulevard LaSalle / Door 4 — Current Role Unverified",
+    "fr": "3950, boulevard LaSalle / Porte 4 — Rôle actuel non confirmé",
     "p": "O",
     "loc": "3950 boulevard LaSalle — Door 4",
     "aliases": [
       "3950",
       "door 4",
       "porte 4",
-      "GMF-U",
-      "GMFU"
+      "entrée 3950",
+      "bloc orange",
+      "orange block"
     ],
     "status": "verify",
-    "note": "Door 4 / 3950 boulevard LaSalle had a temporary construction-era role. The current official directory places the Clinique universitaire de médecine de famille - GMF de Verdun at 55 rue de l’Église, off the hospital campus. Verify whether Door 4 is still a public hospital entrance; do not direct GMF visitors to Door 4.",
+    "note": "Former construction-era hospital entrance at 3950 boulevard LaSalle. Current public use has not been established. The GMF de Verdun is listed separately at 55 rue de l’Église, not at this entrance.",
     "source": "https://ciusss-centresudmtl.gouv.qc.ca/adresses-et-coordonnees"
   },
   {
@@ -1038,7 +1037,11 @@
       "médecine familiale",
       "clinique universitaire de médecine de famille",
       "family medicine",
-      "55 rue de l eglise"
+      "55 rue de l eglise",
+      "CUMF",
+      "CUMF-GMF",
+      "GMF de Verdun",
+      "clinique de médecine familiale"
     ],
     "status": "official",
     "note": "Current official address directory lists the CUMF-GMF de Verdun at 55 rue de l’Église. Do NOT direct visitors to the historical 3950 boulevard LaSalle / Door 4 hospital entrance.",
