@@ -408,8 +408,14 @@
       "רפואת עיניים",
       "عيون"
     ],
-    "status": "official",
-    "source": "Hadassah — Ophthalmology Division"
+    "status": "verify",
+    "source": "Hadassah — Ophthalmology Division",
+    "sourceUrl": "https://www.hadassah.org.il/en/ophthalmology_division/",
+    "notes": {
+      "en": "English division page says Main Building, mezzanine. Hebrew clinical-services page says old building, Floor 0. These may use different floor/building conventions; confirm current signage.",
+      "he": "דף האגף באנגלית מציין בניין ראשי, קומת ביניים; דף השירותים בעברית מציין בניין ישן, קומה 0. יש לאמת שילוט.",
+      "ar": "تذكر صفحة القسم الإنجليزية المبنى الرئيسي، الطابق النصفي؛ وتذكر صفحة الخدمات العبرية المبنى القديم، الطابق 0. يرجى التحقق من اللافتات."
+    }
   },
   {
     "en": "ENT / Otolaryngology — Inpatient Department",
@@ -597,23 +603,29 @@
     "en": "Women's Health Center",
     "he": "המרכז לבריאות האישה",
     "ar": "مركز صحة المرأة",
-    "p": "MAIN",
-    "loc": "Ground floor",
+    "p": "CLINICS",
+    "loc": "Entrance / ground floor",
     "aliases": [
       "women's health",
       "בריאות האישה",
       "صحة المرأة",
       "gynecology clinic"
     ],
-    "status": "official",
-    "source": "Hadassah — Obstetrics and Gynecology contact/how-to pages"
+    "status": "verify",
+    "source": "Hadassah — Obstetrics and Gynecology contact/how-to pages",
+    "sourceUrl": "https://www.hadassah.org.il/en/women_health_center_ein_karem/",
+    "notes": {
+      "en": "The dedicated Women's Health Center page places it in the Outpatient Clinics, entrance floor. An older obstetrics directions page calls it the Main Building, ground floor. Confirm the building at the appointment desk.",
+      "he": "דף המרכז הייעודי מציין בניין המרפאות, קומת כניסה. דף הוראות ישן מציין את הבניין הראשי, קומת קרקע. יש לאמת לפני הכוונה.",
+      "ar": "تحدد صفحة مركز صحة المرأة مبنى العيادات، طابق المدخل؛ بينما تذكر صفحة اتجاهات أقدم المبنى الرئيسي، الطابق الأرضي. يرجى التأكد قبل التوجيه."
+    }
   },
   {
     "en": "IVF / Fertility Clinic",
     "he": "IVF / מרפאת פוריות",
     "ar": "IVF / عيادة الخصوبة",
-    "p": "MAIN",
-    "loc": "Ground / entrance floor",
+    "p": "CLINICS",
+    "loc": "Ground floor — Fleischman Women's Health Center",
     "aliases": [
       "IVF",
       "fertility",
@@ -623,8 +635,14 @@
       "خصوبة",
       "أطفال الأنابيب"
     ],
-    "status": "official",
-    "source": "Hadassah — Obstetrics and Gynecology contact page"
+    "status": "verify",
+    "source": "Hadassah — Obstetrics and Gynecology contact page",
+    "sourceUrl": "https://www.hadassah.org.il/en/ivf-clinic_womens_health/",
+    "notes": {
+      "en": "The dedicated IVF page identifies the Clinics Building, ground floor. An older obstetrics directions page says the Main Building, entrance level. Confirm on the appointment notice.",
+      "he": "דף ה-IVF הייעודי מציין בניין המרפאות, קומת קרקע; דף הכוונה ישן מציין בניין ראשי, קומת כניסה. יש לאמת במסמכי התור.",
+      "ar": "تذكر صفحة الإخصاب المخبري مبنى العيادات، الطابق الأرضي؛ وتذكر صفحة اتجاهات أقدم المبنى الرئيسي، طابق المدخل. يرجى التحقق من إشعار الموعد."
+    }
   },
   {
     "en": "Sperm Bank",
@@ -646,7 +664,7 @@
     "he": "מחלקות יולדות א׳ וב׳",
     "ar": "قسما الولادة أ و ب",
     "p": "MC",
-    "loc": "Mezzanine floor (B)",
+    "loc": "Floor B (elevator designation)",
     "aliases": [
       "maternity A",
       "maternity B",
@@ -655,7 +673,8 @@
       "قسم الولادة"
     ],
     "status": "official",
-    "source": "Hadassah — Maternity and Infant Departments"
+    "source": "Hadassah — Maternity and Infant Departments",
+    "sourceUrl": "https://www.hadassah.org.il/en/how_to_get_here_obstetrics-and_gynecology/"
   },
   {
     "en": "Maternity Ward C",
@@ -854,10 +873,11 @@
     "status": "verify",
     "source": "Hadassah — Blood Bank",
     "notes": {
-      "he": "הדף הרשמי מציין קומת קרקע בעין כרם, אך אינו מציין את שם הבניין.",
-      "en": "The official page says ground floor at Ein Kerem but does not identify the building.",
-      "ar": "تذكر الصفحة الرسمية الطابق الأرضي في عين كارم لكنها لا تحدد اسم المبنى."
-    }
+      "en": "The Blood Bank page specifies Ein Kerem ground floor without a building. A 2017 hematology patient booklet identifies the donors' room as Main Building, Floor 1 (ground). Current location requires confirmation.",
+      "he": "דף בנק הדם מציין קומת קרקע ללא בניין; חוברת המטולוגיה מ-2017 מציינת חדר תורמים בבניין הראשי, קומה 1 (קרקע). יש לאמת מיקום עדכני.",
+      "ar": "تحدد صفحة بنك الدم الطابق الأرضي دون مبنى؛ ويحدد كتيب أمراض الدم لعام 2017 غرفة المتبرعين في المبنى الرئيسي، الطابق 1 (الأرضي). يلزم التأكد."
+    },
+    "sourceUrl": "https://www.hadassah.org.il/en/blood_bank/"
   },
   {
     "en": "Sharap / Private Medical Service Office",
@@ -894,6 +914,1664 @@
       "he": "הדף הרשמי מציין 'קומת ביניים ליד המעליות' אך אינו מציין בבירור את שם הבניין.",
       "en": "The official page says 'middle floor next to the elevators' but does not clearly identify the building.",
       "ar": "تذكر الصفحة الرسمية «الطابق الأوسط بجانب المصاعد» لكنها لا تحدد اسم المبنى بوضوح."
+    }
+  },
+  {
+    "en": "General Diabetes Clinic — Ein Kerem",
+    "he": "מרפאת סוכרת כללית — עין כרם",
+    "ar": "عيادة السكري العامة — عين كارم",
+    "p": "CLINICS",
+    "loc": "Floor 8",
+    "aliases": [
+      "diabetes clinic",
+      "diabetology",
+      "מרפאת סוכרת",
+      "عيادة السكري"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/general_diabetes_clinic_ein_kerem/",
+    "sourceUrl": "https://www.hadassah.org.il/en/general_diabetes_clinic_ein_kerem/"
+  },
+  {
+    "en": "Rheumatology Clinic",
+    "he": "מרפאת ראומטולוגיה",
+    "ar": "عيادة أمراض الروماتيزم",
+    "p": "CLINICS",
+    "loc": "Floor 8",
+    "aliases": [
+      "rheumatology",
+      "arthritis clinic",
+      "ראומטולוגיה",
+      "דלקת מפרקים",
+      "الروماتيزم",
+      "التهاب المفاصل"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/internalmed_rheumatology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/internalmed_rheumatology/"
+  },
+  {
+    "en": "Clinical Immunology and Allergy Center",
+    "he": "מרכז לאימונולוגיה קלינית ואלרגיה",
+    "ar": "مركز المناعة السريرية والحساسية",
+    "p": "CLINICS",
+    "loc": "Floor 8",
+    "aliases": [
+      "allergy",
+      "immunology",
+      "allergy clinic",
+      "אלרגיה",
+      "אימונולוגיה",
+      "حساسية",
+      "مناعة"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/the_center_for_clinical_immunology_rheumatology_and_allergy/",
+    "sourceUrl": "https://www.hadassah.org.il/en/the_center_for_clinical_immunology_rheumatology_and_allergy/"
+  },
+  {
+    "en": "Proctology Clinic",
+    "he": "מרפאת פרוקטולוגיה",
+    "ar": "عيادة أمراض المستقيم",
+    "p": "SHARETT",
+    "loc": "Floor 1 — Gastroenterology Service",
+    "aliases": [
+      "proctology",
+      "hemorrhoids",
+      "rectal clinic",
+      "פרוקטולוגיה",
+      "טחורים",
+      "البواسير",
+      "المستقيم"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/proctology_clinic/",
+    "sourceUrl": "https://www.hadassah.org.il/en/proctology_clinic/"
+  },
+  {
+    "en": "Pain Clinic",
+    "he": "מרפאת כאב",
+    "ar": "عيادة الألم",
+    "p": "SHARETT",
+    "loc": "Middle floor",
+    "aliases": [
+      "pain management",
+      "chronic pain",
+      "מרפאת כאב",
+      "טיפול בכאב",
+      "عيادة علاج الألم"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/pain_clinic/",
+    "sourceUrl": "https://www.hadassah.org.il/en/pain_clinic/"
+  },
+  {
+    "en": "Pulmonology Institute",
+    "he": "מכון ריאות",
+    "ar": "معهد أمراض الرئة",
+    "p": "MAIN",
+    "loc": "Floor 5",
+    "aliases": [
+      "pulmonology",
+      "respiratory medicine",
+      "lung clinic",
+      "מכון ריאות",
+      "ריאות",
+      "أمراض الرئة",
+      "صدرية"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/pulmonology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/pulmonology/"
+  },
+  {
+    "en": "COPD Center",
+    "he": "מרכז לטיפול ב-COPD",
+    "ar": "مركز علاج الانسداد الرئوي المزمن",
+    "p": "MAIN",
+    "loc": "Floor 5",
+    "aliases": [
+      "COPD",
+      "emphysema",
+      "chronic obstructive pulmonary disease",
+      "מחלת ריאות חסימתית",
+      "انسداد رئوي مزمن"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/center_for_copd/",
+    "sourceUrl": "https://www.hadassah.org.il/en/center_for_copd/"
+  },
+  {
+    "en": "Vascular Surgery Department",
+    "he": "מחלקת כירורגיית כלי דם",
+    "ar": "قسم جراحة الأوعية الدموية",
+    "p": "DAVIDSON",
+    "loc": "Floor 13",
+    "aliases": [
+      "vascular surgery",
+      "blood vessel surgery",
+      "כירורגיית כלי דם",
+      "جراحة الأوعية"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/department_of_vascular_surgery/",
+    "sourceUrl": "https://www.hadassah.org.il/en/department_of_vascular_surgery/"
+  },
+  {
+    "en": "Cardiogenetics Center — Old Building",
+    "he": "מרכז קרדיוגנטיקה — בניין ישן",
+    "ar": "مركز الوراثة القلبية — المبنى القديم",
+    "p": "OLD",
+    "loc": "Floor 7",
+    "aliases": [
+      "cardiogenetics",
+      "genetic heart diseases",
+      "קרדיוגנטיקה",
+      "גנטיקה של הלב",
+      "الوراثة القلبية"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/center_fo_rcardiogenetics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/center_fo_rcardiogenetics/"
+  },
+  {
+    "en": "Adult Psychiatry Department",
+    "he": "מחלקת פסיכיאטריה למבוגרים",
+    "ar": "قسم الطب النفسي للبالغين",
+    "p": "MAIN",
+    "loc": "Floor 4",
+    "aliases": [
+      "psychiatry",
+      "mental health",
+      "פסיכיאטריה",
+      "בריאות הנפש",
+      "الطب النفسي"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/department_of_psychiatry/",
+    "sourceUrl": "https://www.hadassah.org.il/en/department_of_psychiatry/"
+  },
+  {
+    "en": "Adult Intensive Care Unit",
+    "he": "יחידה לטיפול נמרץ כללי",
+    "ar": "وحدة العناية المركزة للبالغين",
+    "p": "MAIN",
+    "loc": "Floor 8",
+    "aliases": [
+      "ICU",
+      "intensive care",
+      "טיפול נמרץ",
+      "العناية المركزة"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/intensive_care_inpatient_departments/",
+    "sourceUrl": "https://www.hadassah.org.il/en/intensive_care_inpatient_departments/"
+  },
+  {
+    "en": "Speech and Hearing Disorders Institute",
+    "he": "המכון להפרעות שמיעה ודיבור",
+    "ar": "معهد اضطرابات السمع والنطق",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "audiology",
+      "hearing test",
+      "speech therapy",
+      "speech and hearing",
+      "קלינאות תקשורת",
+      "בדיקת שמיעה",
+      "שמיעה",
+      "فحص السمع",
+      "النطق"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/institute_for_speech_and_hearing_disorders/",
+    "sourceUrl": "https://www.hadassah.org.il/en/institute_for_speech_and_hearing_disorders/"
+  },
+  {
+    "en": "Infectious Diseases and Clinical Microbiology",
+    "he": "מחלות זיהומיות ומיקרוביולוגיה קלינית",
+    "ar": "الأمراض المعدية والأحياء الدقيقة السريرية",
+    "p": "CLINICS",
+    "loc": "Floor 8",
+    "aliases": [
+      "infectious diseases",
+      "microbiology",
+      "HIV clinic",
+      "מחלות זיהומיות",
+      "מיקרוביולוגיה",
+      "الأمراض المعدية",
+      "الأحياء الدقيقة"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/clinical_microbiology_and_infectious_diseases/",
+    "sourceUrl": "https://www.hadassah.org.il/en/clinical_microbiology_and_infectious_diseases/"
+  },
+  {
+    "en": "Diagnostic Ultrasound — Radiology",
+    "he": "אולטרסאונד אבחנתי — רדיולוגיה",
+    "ar": "التصوير بالموجات فوق الصوتية — الأشعة",
+    "p": "MAIN",
+    "loc": "Floor 2",
+    "aliases": [
+      "ultrasound radiology",
+      "abdominal ultrasound",
+      "sonography",
+      "אולטרסאונד רדיולוגיה",
+      "סונר",
+      "سونار البطن",
+      "ألتراساوند"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/ultrasound_unit_ein_karem/",
+    "sourceUrl": "https://www.hadassah.org.il/en/ultrasound_unit_ein_karem/"
+  },
+  {
+    "en": "Genetics and Metabolic Diseases Department",
+    "he": "המחלקה לגנטיקה ומחלות מטבוליות",
+    "ar": "قسم الوراثة والأمراض الاستقلابية",
+    "p": "OLD",
+    "loc": "Floor 5",
+    "aliases": [
+      "genetics",
+      "genetic counseling",
+      "genetic testing",
+      "גנטיקה",
+      "ייעוץ גנטי",
+      "وراثة",
+      "استشارة وراثية"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/division_for_genetics_and_metabolic_diseases/",
+    "sourceUrl": "https://www.hadassah.org.il/en/division_for_genetics_and_metabolic_diseases/"
+  },
+  {
+    "en": "Clinical Virology Laboratory",
+    "he": "המעבדה לווירולוגיה קלינית",
+    "ar": "مختبر علم الفيروسات السريري",
+    "p": "LABS",
+    "loc": "Floor 1 — Laboratories facility",
+    "aliases": [
+      "virology",
+      "viral testing",
+      "מעבדת וירולוגיה",
+      "וירוסים",
+      "مختبر الفيروسات"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/the_clinical_virology_laboratory/",
+    "sourceUrl": "https://www.hadassah.org.il/en/the_clinical_virology_laboratory/"
+  },
+  {
+    "en": "Radiotherapy / Radiation Therapy",
+    "he": "רדיותרפיה / טיפול בקרינה",
+    "ar": "العلاج الإشعاعي",
+    "p": "SHARETT",
+    "loc": "Floor -4",
+    "aliases": [
+      "radiotherapy",
+      "radiation oncology",
+      "radiation therapy",
+      "רדיותרפיה",
+      "הקרנות",
+      "علاج إشعاعي",
+      "أشعة علاجية"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/sharett_radiation_therapy/",
+    "sourceUrl": "https://www.hadassah.org.il/en/sharett_radiation_therapy/"
+  },
+  {
+    "en": "Therapeutic Hemapheresis Unit",
+    "he": "היחידה לאפרזיס טיפולי",
+    "ar": "وحدة فصادة الدم العلاجية",
+    "p": "SHARETT",
+    "loc": "Floor -2",
+    "aliases": [
+      "apheresis",
+      "hemapheresis",
+      "plasma exchange",
+      "פלזמהפרזיס",
+      "אפרזיס",
+      "فصادة البلازما"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/therapeutic_hemapheresis/",
+    "sourceUrl": "https://www.hadassah.org.il/en/therapeutic_hemapheresis/"
+  },
+  {
+    "en": "Atherosclerosis and Lipid Clinic",
+    "he": "המרכז לטרשת עורקים ושומני דם",
+    "ar": "مركز تصلب الشرايين والدهون",
+    "p": "CLINICS",
+    "loc": "Floor 8",
+    "aliases": [
+      "cholesterol clinic",
+      "lipids",
+      "atherosclerosis",
+      "כולסטרול",
+      "שומני דם",
+      "טרשת עורקים",
+      "الكوليسترول",
+      "تصلب الشرايين"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/internal_med_%20services_and_units/the_center_for_atherosclerosis/",
+    "sourceUrl": "https://www.hadassah.org.il/en/internal_med_%20services_and_units/the_center_for_atherosclerosis/"
+  },
+  {
+    "en": "Autoimmune Diseases in Pregnancy Clinic",
+    "he": "מרפאת מחלות אוטואימוניות בהריון",
+    "ar": "عيادة أمراض المناعة الذاتية أثناء الحمل",
+    "p": "CLINICS",
+    "loc": "Floor 8",
+    "aliases": [
+      "lupus pregnancy",
+      "APS pregnancy",
+      "מחלות אוטואימוניות בהריון",
+      "לופוס בהריון",
+      "المناعة الذاتية في الحمل",
+      "الذئبة"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/autoimmune_diseases_in_pregnancy/",
+    "sourceUrl": "https://www.hadassah.org.il/en/autoimmune_diseases_in_pregnancy/"
+  },
+  {
+    "en": "Gynecology Inpatient Department",
+    "he": "מחלקת נשים וגינקולוגיה — אשפוז",
+    "ar": "قسم أمراض النساء — التنويم",
+    "p": "DAVIDSON",
+    "loc": "Floor 7",
+    "aliases": [
+      "gynecology ward",
+      "gynecology inpatient",
+      "מחלקת נשים",
+      "גינקולוגיה אשפוז",
+      "قسم النساء"
+    ],
+    "status": "official",
+    "source": "https://he.hadassah.org.il/women/er-women-gynecology-department/",
+    "sourceUrl": "https://he.hadassah.org.il/women/er-women-gynecology-department/"
+  },
+  {
+    "en": "Gynecology Emergency Service — verify reception",
+    "he": "מיון נשים — מיקום קבלה לאימות",
+    "ar": "طوارئ النساء — موقع الاستقبال بحاجة للتحقق",
+    "p": "DAVIDSON",
+    "loc": "Building confirmed; exact emergency reception floor not verified",
+    "aliases": [
+      "gynecology emergency",
+      "women's emergency",
+      "מיון נשים",
+      "طوارئ نسائية"
+    ],
+    "status": "verify",
+    "source": "https://he.hadassah.org.il/women/er-women-gynecology-department/",
+    "sourceUrl": "https://he.hadassah.org.il/women/er-women-gynecology-department/",
+    "notes": {
+      "en": "The current Hebrew department page confirms gynecology emergency operates in Davidson Building but does not explicitly give the emergency reception floor. Do not assume it is Floor 7.",
+      "he": "הדף העדכני מציין שמיון נשים פועל בבניין דוידסון, אך אינו מציין במפורש את קומת קבלת המיון. אין להניח שזו קומה 7.",
+      "ar": "تؤكد الصفحة العبرية أن طوارئ النساء في مبنى ديفيدسون، لكنها لا تحدد طابق الاستقبال. لا تفترض أنه الطابق 7."
+    }
+  },
+  {
+    "en": "Obstetric Ultrasound Institute — Delivery Rooms",
+    "he": "מכון אולטרסאונד מיילדותי — ליד חדרי לידה",
+    "ar": "معهد تصوير الحمل — قرب غرف الولادة",
+    "p": "MC",
+    "loc": "Floor -1 — next to Delivery Rooms",
+    "aliases": [
+      "obstetric ultrasound institute",
+      "fetal ultrasound",
+      "מכון אולטרסאונד הריון",
+      "סקירת מערכות",
+      "سونار الحمل",
+      "فحص الجنين"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/ultrasound_institute/",
+    "sourceUrl": "https://www.hadassah.org.il/en/ultrasound_institute/"
+  },
+  {
+    "en": "Ophthalmic Imaging Unit",
+    "he": "יחידת דימות עיניים",
+    "ar": "وحدة تصوير العيون",
+    "p": "MAIN",
+    "loc": "Mezzanine floor",
+    "aliases": [
+      "OCT",
+      "retinal imaging",
+      "צילום עיניים",
+      "דימות עיניים",
+      "تصوير شبكية العين",
+      "OCT عيون"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/ophthalmic_imaging/",
+    "sourceUrl": "https://www.hadassah.org.il/en/ophthalmic_imaging/"
+  },
+  {
+    "en": "Oculoplastics Clinic",
+    "he": "מרפאת אוקולופלסטיקה",
+    "ar": "عيادة تجميل وترميم الجفون",
+    "p": "CLINICS",
+    "loc": "Mezzanine floor",
+    "aliases": [
+      "oculoplastics",
+      "eyelid clinic",
+      "אוקולופלסטיקה",
+      "עפעפיים",
+      "جراحة الجفون"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/oculoplastics_ophthalmology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/oculoplastics_ophthalmology/"
+  },
+  {
+    "en": "Neuro-Ophthalmology Clinic",
+    "he": "מרפאת נוירואופתלמולוגיה",
+    "ar": "عيادة طب العيون العصبي",
+    "p": "CLINICS",
+    "loc": "Mezzanine floor",
+    "aliases": [
+      "neuro ophthalmology",
+      "נוירואופתלמולוגיה",
+      "عيون عصبية"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/neuro_ophthalmology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/neuro_ophthalmology/"
+  },
+  {
+    "en": "Ocular Oncology Clinic",
+    "he": "מרפאת גידולי עיניים",
+    "ar": "عيادة أورام العين",
+    "p": "CLINICS",
+    "loc": "Mezzanine floor",
+    "aliases": [
+      "ocular oncology",
+      "eye tumors",
+      "גידולי עיניים",
+      "أورام العين"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/ocular_oncology_ophthalmology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/ocular_oncology_ophthalmology/"
+  },
+  {
+    "en": "Orthopedic Outpatient Clinics",
+    "he": "מרפאות חוץ אורתופדיות",
+    "ar": "عيادات العظام الخارجية",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "orthopedic outpatient",
+      "orthopaedic clinics",
+      "מרפאות אורתופדיה",
+      "عيادات العظام"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Orthopedic Sports Injuries Clinic",
+    "he": "מרפאת פציעות ספורט אורתופדית",
+    "ar": "عيادة إصابات الرياضة والعظام",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "sports injury",
+      "sports medicine orthopedics",
+      "פציעות ספורט",
+      "إصابات رياضية"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Back and Spine Orthopedic Clinic",
+    "he": "מרפאת גב ועמוד שדרה",
+    "ar": "عيادة الظهر والعمود الفقري",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "spine clinic",
+      "back pain",
+      "מרפאת גב",
+      "עמוד שדרה",
+      "العمود الفقري",
+      "آلام الظهر"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Skeletal Tumors / Orthopedic Oncology Clinic",
+    "he": "מרפאת גידולי עצם ואונקולוגיה אורתופדית",
+    "ar": "عيادة أورام العظام",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "bone tumors",
+      "orthopedic oncology",
+      "גידולי עצם",
+      "אונקולוגיה אורתופדית",
+      "أورام العظام"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Orthopedic Trauma Clinic",
+    "he": "מרפאת טראומה אורתופדית",
+    "ar": "عيادة إصابات العظام والكسور",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "fracture clinic",
+      "orthopedic trauma",
+      "מרפאת שברים",
+      "טראומה אורתופדית",
+      "عيادة الكسور"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Hand and Wrist Orthopedic Clinic",
+    "he": "מרפאת כף יד ושורש כף יד",
+    "ar": "عيادة اليد والرسغ",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "hand clinic",
+      "wrist clinic",
+      "כף יד",
+      "מרפאת יד",
+      "اليد والرسغ"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Foot and Ankle Orthopedic Clinic",
+    "he": "מרפאת כף רגל וקרסול",
+    "ar": "عيادة القدم والكاحل",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "foot and ankle",
+      "ankle clinic",
+      "כף רגל",
+      "קרסול",
+      "القدم والكاحل"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Shoulder Orthopedic Clinic",
+    "he": "מרפאת כתף",
+    "ar": "عيادة الكتف",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "shoulder clinic",
+      "כתף",
+      "מרפאת כתף",
+      "الكتف"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Diabetic Foot and Amputation Clinic",
+    "he": "מרפאת כף רגל סוכרתית וקטיעות",
+    "ar": "عيادة القدم السكرية والبتر",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "diabetic foot",
+      "amputation",
+      "כף רגל סוכרתית",
+      "קטיעות",
+      "القدم السكرية",
+      "بتر"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Pediatric Orthopedics Outpatient Clinic",
+    "he": "מרפאת אורתופדיית ילדים",
+    "ar": "عيادة عظام الأطفال",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "pediatric orthopedics",
+      "children orthopedics",
+      "אורתופדיה ילדים",
+      "عظام الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Ilizarov / Limb Lengthening Clinic",
+    "he": "מרפאת איליזרוב והארכת גפיים",
+    "ar": "عيادة إليزاروف وإطالة الأطراف",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "Ilizarov",
+      "limb lengthening",
+      "איליזרוב",
+      "הארכת גפיים",
+      "إطالة الأطراف"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Orthopedic Post-Hospitalization Follow-up Clinic",
+    "he": "מרפאת מעקב לאחר אשפוז אורתופדי",
+    "ar": "عيادة متابعة العظام بعد التنويم",
+    "p": "CLINICS",
+    "loc": "Floor 2",
+    "aliases": [
+      "post surgery orthopedic",
+      "fracture follow up",
+      "מעקב לאחר אשפוז",
+      "متابعة بعد الجراحة"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/outpatient_procedures_ein_karem_clinics/"
+  },
+  {
+    "en": "Fertility Consultation Clinic",
+    "he": "מרפאת פריון — ייעוץ",
+    "ar": "عيادة الخصوبة — الاستشارة",
+    "p": "CLINICS",
+    "loc": "Ground floor — Fleischman Women's Health Center",
+    "aliases": [
+      "fertility consultation",
+      "infertility clinic",
+      "מרפאת פריון",
+      "בירור פוריות",
+      "عيادة العقم",
+      "استشارة الخصوبة"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/clinic_operating_hours_fertility_clinic/",
+    "sourceUrl": "https://www.hadassah.org.il/en/clinic_operating_hours_fertility_clinic/"
+  },
+  {
+    "en": "Pelvic Floor / Urogynecology Clinic",
+    "he": "מרפאת רצפת אגן ואורוגינקולוגיה",
+    "ar": "عيادة قاع الحوض والمسالك البولية النسائية",
+    "p": "CLINICS",
+    "loc": "Ground floor — Fleischman Women's Health Center",
+    "aliases": [
+      "urogynecology",
+      "pelvic floor",
+      "incontinence",
+      "רצפת אגן",
+      "אורוגינקולוגיה",
+      "سلس البول",
+      "قاع الحوض"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/pelvic_floor_clinic/",
+    "sourceUrl": "https://www.hadassah.org.il/en/pelvic_floor_clinic/"
+  },
+  {
+    "en": "Golden Age Women's Clinic",
+    "he": "מרפאת גיל הזהב לנשים",
+    "ar": "عيادة العمر الذهبي للنساء",
+    "p": "CLINICS",
+    "loc": "Ground floor — Fleischman Women's Health Center",
+    "aliases": [
+      "golden age clinic",
+      "senior women clinic",
+      "גיל הזהב נשים",
+      "عيادة النساء المسنات"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/the_golden_age/",
+    "sourceUrl": "https://www.hadassah.org.il/en/the_golden_age/"
+  },
+  {
+    "en": "Dermatology in Pregnancy Clinic",
+    "he": "מרפאת עור בהריון",
+    "ar": "عيادة الأمراض الجلدية أثناء الحمل",
+    "p": "CLINICS",
+    "loc": "Ground floor — Fleischman Women's Health Center",
+    "aliases": [
+      "skin in pregnancy",
+      "pregnancy dermatology",
+      "עור בהריון",
+      "جلدية الحمل"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/dermatology_in_pregnancy_clinic/",
+    "sourceUrl": "https://www.hadassah.org.il/en/dermatology_in_pregnancy_clinic/"
+  },
+  {
+    "en": "Cervical / Colposcopy Clinic",
+    "he": "מרפאת צוואר הרחם וקולפוסקופיה",
+    "ar": "عيادة عنق الرحم والتنظير المهبلي",
+    "p": "CLINICS",
+    "loc": "Ground floor — Fleischman Women's Health Center",
+    "aliases": [
+      "cervical clinic",
+      "colposcopy",
+      "pap smear clinic",
+      "צוואר הרחם",
+      "קולפוסקופיה",
+      "عنق الرحم",
+      "تنظير عنق الرحم"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/cervical_clinic/",
+    "sourceUrl": "https://www.hadassah.org.il/en/cervical_clinic/"
+  },
+  {
+    "en": "Polycystic Ovary Syndrome (PCOS) Clinic",
+    "he": "מרפאת שחלות פוליציסטיות (PCOS)",
+    "ar": "عيادة تكيس المبايض (PCOS)",
+    "p": "CLINICS",
+    "loc": "Ground floor — Fleischman Women's Health Center",
+    "aliases": [
+      "PCOS",
+      "polycystic ovaries",
+      "שחלות פוליציסטיות",
+      "تكيس المبايض"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/polycystic_ovary_syndrome_%28pcos%29_clinic/",
+    "sourceUrl": "https://www.hadassah.org.il/en/polycystic_ovary_syndrome_%28pcos%29_clinic/"
+  },
+  {
+    "en": "Teenage Girls' Health Center",
+    "he": "המרכז לבריאות נערות",
+    "ar": "مركز صحة الفتيات المراهقات",
+    "p": "CLINICS",
+    "loc": "Ground floor — Fleischman Women's Health Center",
+    "aliases": [
+      "adolescent gynecology",
+      "teenage girl clinic",
+      "נערות",
+      "מרפאת מתבגרות",
+      "صحة المراهقات"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/center_for_the_teenage_girl/",
+    "sourceUrl": "https://www.hadassah.org.il/en/center_for_the_teenage_girl/"
+  },
+  {
+    "en": "Coagulation and Immunology in Pregnancy Clinic",
+    "he": "מרפאת קרישה ואימונולוגיה בהריון",
+    "ar": "عيادة التخثر والمناعة أثناء الحمل",
+    "p": "CLINICS",
+    "loc": "Ground floor — Fleischman Women's Health Center",
+    "aliases": [
+      "pregnancy coagulation",
+      "anticoagulation pregnancy",
+      "קרישה בהריון",
+      "تخثر الحمل"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/immunization_and_coagulation_in_pregnancy_clinic/",
+    "sourceUrl": "https://www.hadassah.org.il/en/immunization_and_coagulation_in_pregnancy_clinic/"
+  },
+  {
+    "en": "Anesthesia Counseling Before Birth",
+    "he": "ייעוץ הרדמה לפני לידה",
+    "ar": "استشارة التخدير قبل الولادة",
+    "p": "CLINICS",
+    "loc": "Ground floor — Fleischman Women's Health Center",
+    "aliases": [
+      "obstetric anesthesia",
+      "epidural consultation",
+      "הרדמה לפני לידה",
+      "אפידורל",
+      "استشارة التخدير للولادة"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/counseling_for_anesthesia_before_birth/",
+    "sourceUrl": "https://www.hadassah.org.il/en/counseling_for_anesthesia_before_birth/"
+  },
+  {
+    "en": "Gestational Diabetes Clinic",
+    "he": "מרפאת סוכרת הריון",
+    "ar": "عيادة سكري الحمل",
+    "p": "MC",
+    "loc": "Floor 1",
+    "aliases": [
+      "gestational diabetes",
+      "pregnancy diabetes",
+      "סוכרת הריון",
+      "سكري الحمل"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/gestational_diabetes_clinic/",
+    "sourceUrl": "https://www.hadassah.org.il/en/gestational_diabetes_clinic/"
+  },
+  {
+    "en": "Women's Health Ultrasound Clinic",
+    "he": "מרפאת אולטרסאונד לבריאות האישה",
+    "ar": "عيادة الموجات فوق الصوتية لصحة المرأة",
+    "p": "CLINICS",
+    "loc": "Ground floor — Fleischman Women's Health Center",
+    "aliases": [
+      "women ultrasound clinic",
+      "gynecologic ultrasound clinic",
+      "אולטרסאונד נשים",
+      "سونار نسائي"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/ultrasound_womens_health/",
+    "sourceUrl": "https://www.hadassah.org.il/en/ultrasound_womens_health/"
+  },
+  {
+    "en": "Endometriosis Physiotherapy Clinic",
+    "he": "מרפאת פיזיותרפיה ואנדומטריוזיס",
+    "ar": "عيادة العلاج الطبيعي للانتباذ البطاني الرحمي",
+    "p": "CLINICS",
+    "loc": "Floor 1",
+    "aliases": [
+      "endometriosis physiotherapy",
+      "pelvic physiotherapy",
+      "פיזיותרפיה אנדומטריוזיס",
+      "פיזיותרפיה רצפת אגן",
+      "علاج طبيعي لبطانة الرحم المهاجرة"
+    ],
+    "status": "official",
+    "source": "https://he.hadassah.org.il/women/physiotherapy-endometriosis/",
+    "sourceUrl": "https://he.hadassah.org.il/women/physiotherapy-endometriosis/"
+  },
+  {
+    "en": "Endometriosis Multidisciplinary Center",
+    "he": "המרכז הרב תחומי לאנדומטריוזיס",
+    "ar": "المركز متعدد التخصصات لعلاج بطانة الرحم المهاجرة",
+    "p": "",
+    "loc": "Ein Kerem campus — exact reception/building not specified",
+    "aliases": [
+      "endometriosis",
+      "אנדומטריוזיס",
+      "بطانة الرحم المهاجرة",
+      "الانتباذ البطاني الرحمي"
+    ],
+    "status": "verify",
+    "source": "https://he.hadassah.org.il/women/endometriosis-center/",
+    "sourceUrl": "https://he.hadassah.org.il/women/endometriosis-center/",
+    "notes": {
+      "en": "The current Hebrew center page confirms the Ein Kerem campus and named subclinics but does not specify one common reception floor. Check the appointment notice.",
+      "he": "העמוד הרשמי מאשר שהמרכז בעין כרם אך אינו מציין קומת קבלה אחת לכל תתי-המרפאות. יש לבדוק את מסמכי התור.",
+      "ar": "تؤكد الصفحة الرسمية وجود المركز في عين كارم دون تحديد طابق استقبال موحد للعيادات الفرعية. تحقق من إشعار الموعد."
+    }
+  },
+  {
+    "en": "Pediatric Pulmonology Clinic",
+    "he": "מרפאת ריאות ילדים",
+    "ar": "عيادة أمراض رئة الأطفال",
+    "p": "MAIN",
+    "loc": "Floor 5 — Pulmonology Unit",
+    "aliases": [
+      "pediatric pulmonology",
+      "child asthma clinic",
+      "ריאות ילדים",
+      "אסתמה ילדים",
+      "صدرية أطفال",
+      "ربو الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_pulmonology_clinic/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_pulmonology_clinic/"
+  },
+  {
+    "en": "Pediatric Endocrinology Clinic — Clinics Building",
+    "he": "מרפאת אנדוקרינולוגיה ילדים — בניין המרפאות",
+    "ar": "عيادة غدد الأطفال — مبنى العيادات",
+    "p": "CLINICS",
+    "loc": "Floor 8 (conflicting official location)",
+    "aliases": [
+      "pediatric endocrinology",
+      "growth clinic",
+      "אנדוקרינולוגיה ילדים",
+      "גדילה",
+      "غدد الأطفال",
+      "النمو"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_endocrinology_clinic/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_endocrinology_clinic/",
+    "notes": {
+      "en": "This official pediatric endocrinology page says Clinics Building, Floor 8; a separate pediatric diabetes/endocrinology page says Mother and Child, ground floor. Confirm which clinic your appointment uses.",
+      "he": "דף אנדוקרינולוגיית ילדים מציין בניין המרפאות, קומה 8; דף סוכרת ואנדוקרינולוגיה ילדים מציין אם וילד, קומת קרקע. יש לאמת לפי התור.",
+      "ar": "تذكر صفحة غدد الأطفال مبنى العيادات، الطابق 8؛ بينما تذكر صفحة أخرى مبنى الأم والطفل، الطابق الأرضي. تحقق من موقع موعدك."
+    }
+  },
+  {
+    "en": "Pediatric Diabetes and Endocrinology — Mother and Child",
+    "he": "מרפאת סוכרת ואנדוקרינולוגיה ילדים — אם וילד",
+    "ar": "عيادة سكري وغدد الأطفال — الأم والطفل",
+    "p": "MC",
+    "loc": "Ground floor (conflicting official location)",
+    "aliases": [
+      "juvenile diabetes",
+      "type 1 diabetes child",
+      "סוכרת ילדים",
+      "סוכרת נעורים",
+      "سكري الأطفال"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/pediatric_diabetes_and_endocrinology_clinic_ein_kerem/",
+    "sourceUrl": "https://www.hadassah.org.il/en/pediatric_diabetes_and_endocrinology_clinic_ein_kerem/",
+    "notes": {
+      "en": "This page identifies Mother and Child, ground floor; the pediatric endocrinology overview identifies Clinics Building, Floor 8. Verify appointment-specific destination.",
+      "he": "הדף מציין אם וילד, קומת קרקע; דף אנדוקרינולוגיה ילדים מציין בניין המרפאות, קומה 8. יש לאמת לפי התור.",
+      "ar": "تحدد هذه الصفحة مبنى الأم والطفل، الطابق الأرضي؛ بينما تحدد صفحة غدد الأطفال مبنى العيادات، الطابق 8. يلزم التأكد."
+    }
+  },
+  {
+    "en": "Pediatric Allergy and Immunology Clinic",
+    "he": "מרפאת אלרגיה ואימונולוגיה ילדים",
+    "ar": "عيادة حساسية ومناعة الأطفال",
+    "p": "CLINICS",
+    "loc": "Floor 8",
+    "aliases": [
+      "pediatric allergy",
+      "child immunology",
+      "אלרגיה ילדים",
+      "אימונולוגיה ילדים",
+      "حساسية الأطفال",
+      "مناعة الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_allergy_and_diseases_of_the_immune_system/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_allergy_and_diseases_of_the_immune_system/"
+  },
+  {
+    "en": "Pediatric Rheumatology Clinic",
+    "he": "מרפאת ראומטולוגיה ילדים",
+    "ar": "عيادة روماتيزم الأطفال",
+    "p": "CLINICS",
+    "loc": "Floor 8",
+    "aliases": [
+      "pediatric rheumatology",
+      "FMF children",
+      "ראומטולוגיה ילדים",
+      "קדחת ים תיכונית",
+      "روماتيزم الأطفال",
+      "حمى البحر المتوسط"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassah_children_allergy_immunology_and_rheumatology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassah_children_allergy_immunology_and_rheumatology/"
+  },
+  {
+    "en": "Pediatric Dermatology Clinic",
+    "he": "מרפאת עור ילדים",
+    "ar": "عيادة جلدية الأطفال",
+    "p": "MC",
+    "loc": "Ground floor",
+    "aliases": [
+      "pediatric dermatology",
+      "skin children",
+      "עור ילדים",
+      "דרמטולוגיה ילדים",
+      "جلدية الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_dermatology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_dermatology/"
+  },
+  {
+    "en": "Pediatric Nephrology Clinic",
+    "he": "מרפאת נפרולוגיה ילדים",
+    "ar": "عيادة كلى الأطفال",
+    "p": "MC",
+    "loc": "Ground floor",
+    "aliases": [
+      "pediatric nephrology",
+      "kidney children",
+      "נפרולוגיה ילדים",
+      "כליות ילדים",
+      "كلى الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_nephrology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_nephrology/"
+  },
+  {
+    "en": "Pediatric Genetics Clinic",
+    "he": "מרפאת גנטיקה ילדים",
+    "ar": "عيادة الوراثة للأطفال",
+    "p": "MC",
+    "loc": "Ground floor",
+    "aliases": [
+      "pediatric genetics",
+      "genetics children",
+      "גנטיקה ילדים",
+      "وراثة الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_genetics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_genetics/"
+  },
+  {
+    "en": "Prenatal Genetics Clinic",
+    "he": "מרפאת גנטיקה טרום לידתית",
+    "ar": "عيادة الوراثة قبل الولادة",
+    "p": "CLINICS",
+    "loc": "Floor 7 — Genetics Clinic",
+    "aliases": [
+      "prenatal genetics",
+      "genetic counseling pregnancy",
+      "גנטיקה טרום לידתית",
+      "ייעוץ גנטי בהריון",
+      "الوراثة قبل الولادة"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_genetics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_genetics/"
+  },
+  {
+    "en": "Pediatric Neurosurgery Unit",
+    "he": "היחידה לנוירוכירורגיה ילדים",
+    "ar": "وحدة جراحة أعصاب الأطفال",
+    "p": "MC",
+    "loc": "Floor 4B",
+    "aliases": [
+      "pediatric neurosurgery",
+      "child brain surgery",
+      "נוירוכירורגיה ילדים",
+      "جراحة أعصاب الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_neurosurgery/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_neurosurgery/"
+  },
+  {
+    "en": "Pediatric Cardiothoracic Surgery",
+    "he": "ניתוחי לב וחזה ילדים",
+    "ar": "جراحة قلب وصدر الأطفال",
+    "p": "MC",
+    "loc": "Floor 4",
+    "aliases": [
+      "pediatric cardiac surgery",
+      "heart surgery children",
+      "ניתוחי לב ילדים",
+      "جراحة قلب الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_cardiothoracic_surgery/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_cardiothoracic_surgery/"
+  },
+  {
+    "en": "Pediatric Ophthalmology Clinic",
+    "he": "מרפאת עיניים ילדים",
+    "ar": "عيادة عيون الأطفال",
+    "p": "MC",
+    "loc": "Floor 1½ (as published)",
+    "aliases": [
+      "pediatric ophthalmology",
+      "children eye clinic",
+      "עיניים ילדים",
+      "عيون الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_ophthalmology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_ophthalmology/"
+  },
+  {
+    "en": "Pediatric ENT Clinic",
+    "he": "מרפאת אף אוזן גרון ילדים",
+    "ar": "عيادة أنف وأذن وحنجرة الأطفال",
+    "p": "MAIN",
+    "loc": "Floor 2 — adult ENT clinic",
+    "aliases": [
+      "pediatric ENT",
+      "ear nose throat children",
+      "אא״ג ילדים",
+      "אף אוזן גרון ילדים",
+      "أنف أذن حنجرة الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_otolaryngology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_otolaryngology/"
+  },
+  {
+    "en": "Pediatric Liver Diseases Clinic",
+    "he": "מרפאת מחלות כבד ילדים",
+    "ar": "عيادة أمراض كبد الأطفال",
+    "p": "MAIN",
+    "loc": "Floor 4 — Liver Unit",
+    "aliases": [
+      "pediatric liver",
+      "child hepatology",
+      "כבד ילדים",
+      "מחלות כבד ילדים",
+      "كبد الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_center_for_pediatric_liver_diseases/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_center_for_pediatric_liver_diseases/"
+  },
+  {
+    "en": "Pediatric Day Treatment Clinic",
+    "he": "מרפאת אשפוז יום ילדים",
+    "ar": "عيادة العلاج النهاري للأطفال",
+    "p": "MC",
+    "loc": "Ground floor",
+    "aliases": [
+      "pediatric day treatment",
+      "pediatric outpatient daycare",
+      "אשפוז יום ילדים",
+      "علاج نهاري أطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassah_children_outpatient_clinics_ein_kerem/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassah_children_outpatient_clinics_ein_kerem/"
+  },
+  {
+    "en": "Pediatric Hematology Outpatient Clinic",
+    "he": "מרפאת המטולוגיה ילדים — חוץ",
+    "ar": "عيادة أمراض دم الأطفال الخارجية",
+    "p": "MC",
+    "loc": "Floor 5",
+    "aliases": [
+      "pediatric hematology clinic",
+      "child blood diseases",
+      "מרפאת המטולוגיה ילדים",
+      "عيادة دم الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_hematology_center/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_hematology_center/"
+  },
+  {
+    "en": "Pediatric Ophthalmology Surgery Admission",
+    "he": "אשפוז ניתוחי עיניים ילדים",
+    "ar": "تنويم جراحة عيون الأطفال",
+    "p": "MC",
+    "loc": "Floor 4",
+    "aliases": [
+      "children eye surgery",
+      "pediatric eye surgery",
+      "ניתוחי עיניים ילדים",
+      "جراحة عيون الأطفال"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_ophthalmology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_ophthalmology/"
+  },
+  {
+    "en": "Prosthodontics / Oral Rehabilitation",
+    "he": "המחלקה לשיקום הפה",
+    "ar": "قسم تعويضات الأسنان وتأهيل الفم",
+    "p": "DENTAL",
+    "loc": "Floor 2",
+    "aliases": [
+      "prosthodontics",
+      "crowns",
+      "oral rehabilitation",
+      "שיקום הפה",
+      "כתרים",
+      "تركيبات الأسنان",
+      "تعويضات الأسنان"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/prosthodontics/",
+    "sourceUrl": "https://www.hadassah.org.il/en/prosthodontics/"
+  },
+  {
+    "en": "Dental Implant Center",
+    "he": "המרכז להשתלות שיניים",
+    "ar": "مركز زراعة الأسنان",
+    "p": "DENTAL",
+    "loc": "Floor 3",
+    "aliases": [
+      "dental implants",
+      "implantology",
+      "השתלות שיניים",
+      "שתלים",
+      "زراعة الأسنان"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/oral_implant_cente/",
+    "sourceUrl": "https://www.hadassah.org.il/en/oral_implant_cente/"
+  },
+  {
+    "en": "Orthodontics Department",
+    "he": "המחלקה ליישור שיניים",
+    "ar": "قسم تقويم الأسنان",
+    "p": "DENTAL",
+    "loc": "Floor 1",
+    "aliases": [
+      "orthodontics",
+      "braces",
+      "יישור שיניים",
+      "אורתודונטיה",
+      "تقويم الأسنان"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/orthodontics_department/",
+    "sourceUrl": "https://www.hadassah.org.il/en/orthodontics_department/"
+  },
+  {
+    "en": "Endodontics / Root Canal Department",
+    "he": "המחלקה לטיפולי שורש",
+    "ar": "قسم علاج جذور الأسنان",
+    "p": "DENTAL",
+    "loc": "Floor 2",
+    "aliases": [
+      "endodontics",
+      "root canal",
+      "טיפול שורש",
+      "אנדודונטיה",
+      "علاج العصب",
+      "علاج الجذور"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/endodontics_dentistry/",
+    "sourceUrl": "https://www.hadassah.org.il/en/endodontics_dentistry/"
+  },
+  {
+    "en": "Periodontics / Gum Disease Clinic",
+    "he": "המחלקה למחלות חניכיים",
+    "ar": "قسم أمراض اللثة",
+    "p": "DENTAL",
+    "loc": "Floor 2",
+    "aliases": [
+      "periodontics",
+      "gum clinic",
+      "מחלות חניכיים",
+      "פריודונטיה",
+      "أمراض اللثة"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/periodontics_dentistry/",
+    "sourceUrl": "https://www.hadassah.org.il/en/periodontics_dentistry/"
+  },
+  {
+    "en": "Pediatric Dentistry Clinic",
+    "he": "מרפאת שיניים לילדים",
+    "ar": "عيادة أسنان الأطفال",
+    "p": "DENTAL",
+    "loc": "Entrance floor (clinic); department also lists Floor 5",
+    "aliases": [
+      "pediatric dentistry",
+      "children dentist",
+      "שיניים ילדים",
+      "רפואת שיניים לילדים",
+      "أسنان الأطفال"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/pediatric_dentistry/",
+    "sourceUrl": "https://www.hadassah.org.il/en/pediatric_dentistry/",
+    "notes": {
+      "en": "Official page says Department on Floor 5 but explicitly says the pediatric dental clinic is on the entrance floor. Verify whether the appointment is for the clinic or department.",
+      "he": "הדף הרשמי מציין מחלקה בקומה 5 אך מבהיר שהמרפאה בקומת הכניסה. יש לבדוק לאיזו יחידה נקבע התור.",
+      "ar": "تذكر الصفحة القسم في الطابق 5 لكنها تحدد العيادة في طابق المدخل. تأكد من نوع الموعد."
+    }
+  },
+  {
+    "en": "Aesthetic Dentistry Center",
+    "he": "המרכז לאסתטיקה דנטלית",
+    "ar": "مركز تجميل الأسنان",
+    "p": "DENTAL",
+    "loc": "Floor 4",
+    "aliases": [
+      "cosmetic dentistry",
+      "aesthetic dental",
+      "אסתטיקה דנטלית",
+      "הלבנת שיניים",
+      "تجميل الأسنان"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/goldstein_research_cente/",
+    "sourceUrl": "https://www.hadassah.org.il/en/goldstein_research_cente/"
+  },
+  {
+    "en": "Yisphro Shopping Center / Hospital Mall",
+    "he": "קניון ישפרו / מרכז מסחרי",
+    "ar": "مركز يسفرو التجاري / مجمع المستشفى",
+    "p": "MALL",
+    "loc": "Ein Kerem campus mall",
+    "aliases": [
+      "mall",
+      "shopping center",
+      "food court",
+      "shops",
+      "קניון",
+      "ישפרו",
+      "בתי קפה",
+      "קפה",
+      "مول",
+      "مجمع تجاري",
+      "مطاعم"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/childrensite_parents_shopping_and_commerce/",
+    "sourceUrl": "https://www.hadassah.org.il/en/childrensite_parents_shopping_and_commerce/",
+    "notes": {
+      "en": "Hadassah's shopping guide lists the mall, but tenant and operating information may be dated; confirm current signage.",
+      "he": "מדריך הקניות של הדסה מציין את הקניון, אך רשימת החנויות ושעות הפעילות עשויות להיות ישנות. יש לבדוק שילוט עדכני.",
+      "ar": "يذكر دليل هداسا المركز التجاري، لكن المتاجر وساعات العمل قد تكون قديمة. تحقق من اللافتات الحالية."
+    }
+  },
+  {
+    "en": "Super-Pharm — Hospital Mall",
+    "he": "סופר-פארם — קניון ישפרו",
+    "ar": "سوبر فارم — مجمع يسفرو",
+    "p": "MALL",
+    "loc": "Mall — exact unit to verify",
+    "aliases": [
+      "pharmacy retail",
+      "super pharm",
+      "סופר פארם",
+      "בית מרקחת קניון",
+      "صيدلية",
+      "سوبر فارم"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/childrensite_parents_shopping_and_commerce/",
+    "sourceUrl": "https://www.hadassah.org.il/en/childrensite_parents_shopping_and_commerce/",
+    "notes": {
+      "en": "Listed in the official shopping guide; current tenancy and opening hours have not been independently confirmed.",
+      "he": "מופיע במדריך המסחר הרשמי; נוכחות החנות ושעות הפעילות לא אומתו מחדש.",
+      "ar": "مدرج في دليل التسوق الرسمي؛ لم يتم التأكد من وجود المتجر وساعات العمل حالياً."
+    }
+  },
+  {
+    "en": "ATM — Clinics Building",
+    "he": "כספומט — בניין המרפאות",
+    "ar": "صراف آلي — مبنى العيادات",
+    "p": "CLINICS",
+    "loc": "Entrance hall",
+    "aliases": [
+      "ATM",
+      "cash machine",
+      "כספומט",
+      "בנקומט",
+      "صراف آلي"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/childrensite_parents_shopping_and_commerce/",
+    "sourceUrl": "https://www.hadassah.org.il/en/childrensite_parents_shopping_and_commerce/",
+    "notes": {
+      "en": "An official shopping guide lists an ATM in the Clinics Building entrance hall; confirm current operation.",
+      "he": "המדריך הרשמי מציין כספומט בכניסת בניין המרפאות; יש לוודא שהוא פעיל.",
+      "ar": "يذكر الدليل الرسمي صرافاً آلياً عند مدخل مبنى العيادات؛ تحقق من عمله."
+    }
+  },
+  {
+    "en": "Children's Library — Mother and Child",
+    "he": "ספריית ילדים — בניין אם וילד",
+    "ar": "مكتبة الأطفال — مبنى الأم والطفل",
+    "p": "MC",
+    "loc": "Entrance floor",
+    "aliases": [
+      "children library",
+      "kids library",
+      "ספריית ילדים",
+      "مكتبة الأطفال"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/childrensite_parents_patient_rights/",
+    "sourceUrl": "https://www.hadassah.org.il/en/childrensite_parents_patient_rights/",
+    "notes": {
+      "en": "The official patient-welfare guide lists a children's library at the Mother and Child entrance; confirm current hours.",
+      "he": "מדריך הרווחה מציין ספריית ילדים בקומת הכניסה; יש לאמת שעות פעילות.",
+      "ar": "يذكر دليل رفاه المرضى مكتبة للأطفال عند المدخل؛ تحقق من ساعات العمل."
+    }
+  },
+  {
+    "en": "Yael Volunteer Service",
+    "he": "יע״ל — יד עזר לחולה",
+    "ar": "خدمة المتطوعين ياعيل",
+    "p": "MAIN",
+    "loc": "Floor ת1 (hospital signage code)",
+    "aliases": [
+      "Yael volunteers",
+      "יד עזר לחולה",
+      "יעל",
+      "متطوعون",
+      "ياعيل"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/childrensite_parents_shopping_and_commerce/",
+    "sourceUrl": "https://www.hadassah.org.il/en/childrensite_parents_shopping_and_commerce/",
+    "notes": {
+      "en": "Older official guide gives Main Building, Floor ת1; confirm current office and floor notation.",
+      "he": "מדריך רשמי ישן מציין בניין ראשי, קומה ת1; יש לוודא מיקום וסימון קומה עדכניים.",
+      "ar": "يذكر دليل رسمي قديم المبنى الرئيسي، الطابق ת1؛ يلزم التحقق من الموقع."
+    }
+  },
+  {
+    "en": "Kivunim Patient Rights Information Center",
+    "he": "כיוונים — מרכז מידע לזכויות חולים",
+    "ar": "كيفونيم — مركز معلومات حقوق المرضى",
+    "p": "DAVIDSON",
+    "loc": "Lobby (2017 patient booklet); other official guide says middle floor",
+    "aliases": [
+      "Kivunim",
+      "patient rights",
+      "information center",
+      "כיוונים",
+      "זכויות חולה",
+      "حقوق المرضى",
+      "مركز المعلومات"
+    ],
+    "status": "verify",
+    "source": "https://he.hadassah.org.il/patient-information/patient-instruction-booklet-hematology-department/",
+    "sourceUrl": "https://he.hadassah.org.il/patient-information/patient-instruction-booklet-hematology-department/",
+    "notes": {
+      "en": "2017 hematology booklet places Kivunim in Davidson lobby; a separate official shopping guide says middle floor near elevators. Confirm current reception.",
+      "he": "חוברת המטולוגיה מ-2017 מציינת לובי דוידסון; מדריך אחר מציין קומת ביניים ליד מעליות. יש לאמת מיקום עדכני.",
+      "ar": "يذكر كتيب أمراض الدم لعام 2017 بهو ديفيدسون؛ ويذكر دليل آخر الطابق النصفي قرب المصاعد. تحقق من الموقع الحالي."
+    }
+  },
+  {
+    "en": "Yad Sarah Medical Equipment Lending",
+    "he": "יד שרה — השאלת ציוד רפואי",
+    "ar": "ياد سارة — إعارة المعدات الطبية",
+    "p": "",
+    "loc": "Floor ת1 — building not identified in current guide",
+    "aliases": [
+      "Yad Sarah",
+      "medical equipment loan",
+      "יד שרה",
+      "השאלת ציוד",
+      "ياد سارة",
+      "إعارة معدات"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/childrensite_parents_shopping_and_commerce/",
+    "sourceUrl": "https://www.hadassah.org.il/en/childrensite_parents_shopping_and_commerce/",
+    "notes": {
+      "en": "Official guide specifies Floor ת1 but does not clearly identify the Ein Kerem building; confirm before sending a visitor.",
+      "he": "המדריך מציין קומה ת1 ללא זיהוי ברור של הבניין בעין כרם; יש לאמת לפני הכוונה.",
+      "ar": "يحدد الدليل الطابق ת1 دون مبنى واضح في عين كارم؛ يلزم التحقق قبل التوجيه."
+    }
+  },
+  {
+    "en": "Patient Ombudsman / Public Complaints",
+    "he": "נציב פניות הציבור",
+    "ar": "مكتب شكاوى الجمهور",
+    "p": "MAIN",
+    "loc": "Middle floor — near synagogue and Tenenbaum Hall",
+    "aliases": [
+      "ombudsman",
+      "patient complaints",
+      "public complaints",
+      "פניות הציבור",
+      "נציב תלונות",
+      "شكاوى المرضى"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/childrensite_parents_patient_rights/",
+    "sourceUrl": "https://www.hadassah.org.il/en/childrensite_parents_patient_rights/",
+    "notes": {
+      "en": "Official patient-rights guide gives the middle floor near the synagogue; the office location and hours may have changed.",
+      "he": "המדריך הרשמי מציין קומת ביניים ליד בית הכנסת ואולם טננבאום; יש לוודא מיקום ושעות עדכניים.",
+      "ar": "يذكر الدليل الرسمي الطابق النصفي قرب الكنيس وقاعة تننباوم؛ تحقق من الموقع والساعات."
+    }
+  },
+  {
+    "en": "Blood Donor Room — Historical Main Building Location",
+    "he": "חדר תורמי דם — מיקום ישן בבניין הראשי",
+    "ar": "غرفة التبرع بالدم — موقع تاريخي بالمبنى الرئيسي",
+    "p": "",
+    "loc": "Main Building, Floor 1 / ground (2017 booklet; verify)",
+    "aliases": [
+      "blood donors",
+      "blood donation room",
+      "חדר תורמי דם",
+      "תרומת דם",
+      "غرفة التبرع بالدم"
+    ],
+    "status": "verify",
+    "source": "https://he.hadassah.org.il/patient-information/patient-instruction-booklet-hematology-department/",
+    "sourceUrl": "https://he.hadassah.org.il/patient-information/patient-instruction-booklet-hematology-department/",
+    "notes": {
+      "en": "A 2017 official patient booklet places blood donors on Main Building Floor 1/ground; the current Blood Bank page gives only Ein Kerem ground floor. Confirm before directing donors.",
+      "he": "חוברת רשמית מ-2017 מציינת בניין ראשי, קומה 1/קרקע; דף בנק הדם מציין רק קומת קרקע. יש לאמת.",
+      "ar": "يذكر كتيب رسمي لعام 2017 المبنى الرئيسي، الطابق 1/الأرضي؛ بينما تحدد صفحة بنك الدم الطابق الأرضي فقط. يلزم التأكد."
+    }
+  },
+  {
+    "en": "Complex Nutrition / TPN Clinic",
+    "he": "מרפאת תזונה מורכבת / TPN",
+    "ar": "عيادة التغذية المعقدة / التغذية الوريدية",
+    "p": "SHARETT",
+    "loc": "Floor -1",
+    "aliases": [
+      "TPN",
+      "parenteral nutrition",
+      "complex nutrition",
+      "הזנה תוך ורידית",
+      "מרפאת תזונה מורכבת",
+      "تغذية وريدية"
+    ],
+    "status": "official",
+    "source": "https://he.hadassah.org.il/patient-information/total-parenteral-nutrition/",
+    "sourceUrl": "https://he.hadassah.org.il/patient-information/total-parenteral-nutrition/"
+  },
+  {
+    "en": "Hadassah Medical Screening — Davidson Lobby",
+    "he": "הדסה מדיקל — בדיקות סקר בלובי דוידסון",
+    "ar": "هداسا ميديكال — فحوصات شاملة في بهو ديفيدسون",
+    "p": "DAVIDSON",
+    "loc": "Lobby",
+    "aliases": [
+      "medical screening",
+      "executive checkup",
+      "בדיקות סקר",
+      "הדסה מדיקל",
+      "فحوصات شاملة"
+    ],
+    "status": "official",
+    "source": "https://he.hadassah.org.il/hadassah-medical/hadassah-medical-jerusalem/",
+    "sourceUrl": "https://he.hadassah.org.il/hadassah-medical/hadassah-medical-jerusalem/"
+  },
+  {
+    "en": "Automated External Defibrillator — Davidson Entrance",
+    "he": "דפיברילטור — כניסת דוידסון",
+    "ar": "جهاز إزالة الرجفان — مدخل ديفيدسون",
+    "p": "DAVIDSON",
+    "loc": "Floor 0 — main entrance by security",
+    "aliases": [
+      "AED Davidson",
+      "defibrillator Davidson",
+      "דפיברילטור דוידסון",
+      "مزيل الرجفان ديفيدسون"
+    ],
+    "status": "verify",
+    "source": "https://he.hadassah.org.il/news-and-events/defi-event-page22/",
+    "sourceUrl": "https://he.hadassah.org.il/news-and-events/defi-event-page22/",
+    "notes": {
+      "en": "Official AED list identifies this placement; emergency equipment can be moved. Follow current signs and alert staff in an emergency.",
+      "he": "הרשימה הרשמית מציינת מיקום זה; ציוד חירום עשוי לעבור. יש לפעול לפי שילוט עדכני ולפנות לצוות במקרה חירום.",
+      "ar": "تحدد القائمة الرسمية هذا الموقع؛ قد تُنقل معدات الطوارئ. اتبع اللافتات الحالية وأبلغ الطاقم عند الطوارئ."
+    }
+  },
+  {
+    "en": "Automated External Defibrillator — Emergency Building",
+    "he": "דפיברילטור — בניין המיון",
+    "ar": "جهاز إزالة الرجفان — مبنى الطوارئ",
+    "p": "ER",
+    "loc": "Floor 0 — by elevator opposite School of Nursing",
+    "aliases": [
+      "AED emergency",
+      "defibrillator ER",
+      "דפיברילטור מיון",
+      "مزيل الرجفان الطوارئ"
+    ],
+    "status": "verify",
+    "source": "https://he.hadassah.org.il/news-and-events/defi-event-page22/",
+    "sourceUrl": "https://he.hadassah.org.il/news-and-events/defi-event-page22/",
+    "notes": {
+      "en": "Official AED list identifies this location; emergency equipment can be moved. Follow signs and alert staff.",
+      "he": "הרשימה הרשמית מציינת מיקום זה; ציוד חירום עשוי לעבור. יש לפעול לפי השילוט ולפנות לצוות.",
+      "ar": "تحدد القائمة الرسمية هذا الموقع؛ قد تُنقل معدات الطوارئ. اتبع اللافتات وأبلغ الطاقم."
+    }
+  },
+  {
+    "en": "Automated External Defibrillator — Mall",
+    "he": "דפיברילטור — קניון ישפרו",
+    "ar": "جهاز إزالة الرجفان — مجمع يسفرو",
+    "p": "MALL",
+    "loc": "Floor 1 — by elevator near Super-Pharm",
+    "aliases": [
+      "AED mall",
+      "defibrillator mall",
+      "דפיברילטור קניון",
+      "مزيل الرجفان المول"
+    ],
+    "status": "verify",
+    "source": "https://he.hadassah.org.il/news-and-events/defi-event-page22/",
+    "sourceUrl": "https://he.hadassah.org.il/news-and-events/defi-event-page22/",
+    "notes": {
+      "en": "Official AED list identifies this location; emergency equipment can be moved. Follow current signs.",
+      "he": "הרשימה הרשמית מציינת מיקום זה; ציוד חירום עשוי לעבור. יש לבדוק שילוט עדכני.",
+      "ar": "تحدد القائمة الرسمية هذا الموقع؛ قد تُنقل معدات الطوارئ. تحقق من اللافتات الحالية."
+    }
+  },
+  {
+    "en": "Automated External Defibrillator — Berman Building",
+    "he": "דפיברילטור — בניין ברמן",
+    "ar": "جهاز إزالة الرجفان — مبنى بيرمان",
+    "p": "BERMAN",
+    "loc": "Floor 0 — entrance to Berman A",
+    "aliases": [
+      "AED Berman",
+      "defibrillator Berman",
+      "דפיברילטור ברמן",
+      "مزيل الرجفان بيرمان"
+    ],
+    "status": "verify",
+    "source": "https://he.hadassah.org.il/news-and-events/defi-event-page22/",
+    "sourceUrl": "https://he.hadassah.org.il/news-and-events/defi-event-page22/",
+    "notes": {
+      "en": "Official AED list identifies this location; emergency equipment can be moved. Follow current signs.",
+      "he": "הרשימה הרשמית מציינת מיקום זה; ציוד חירום עשוי לעבור. יש לבדוק שילוט עדכני.",
+      "ar": "تحدد القائمة الرسمية هذا الموقع؛ قد تُنقل معدات الطوارئ. تحقق من اللافتات الحالية."
     }
   }
 ]
