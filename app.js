@@ -330,7 +330,20 @@ function routeNoticeText(key,lang){
  const set=table[lang]||table.en;
  return set[key]||table.en[key];
 }
-function displayWhere(d,lang=appLang){return [d.p?pavilionFor(d.p,lang):"",d.loc||""].filter(Boolean).join(" · ")}
+function locationFor(d,lang){
+ const key="loc"+lang.charAt(0).toUpperCase()+lang.slice(1);
+ if(d[key])return d[key];
+ let s=d.loc||"";
+ if(lang==="he"||lang==="ar"){
+   const words=lang==="he"?{floor:"קומה",ground:"קומת קרקע",entrance:"קומת כניסה",mezzanine:"קומת ביניים",middle:"קומת ביניים",lobby:"לובי"}:{floor:"الطابق",ground:"الطابق الأرضي",entrance:"طابق المدخل",mezzanine:"الطابق النصفي",middle:"الطابق النصفي",lobby:"البهو"};
+   s=s.replace(/\bGround floor\b/gi,words.ground).replace(/\bEntrance floor\b/gi,words.entrance)
+      .replace(/\bMezzanine floor\b/gi,words.mezzanine).replace(/\bMiddle floor\b/gi,words.middle)
+      .replace(/\bFloor\s+(-?\d+[A-Za-z½]?|B)\b/gi,(_,n)=>words.floor+" "+n)
+      .replace(/^Lobby\b/i,words.lobby);
+ }
+ return s;
+}
+function displayWhere(d,lang=appLang){return [d.p?pavilionFor(d.p,lang):"",locationFor(d,lang)].filter(Boolean).join(" · ")}
 function bfs(a,b){
  if(a===b)return[a];
  let q=[[a]],seen=new Set([a]);
@@ -349,7 +362,7 @@ function ambassadorSteps(d){
  const t=APP_UI[appLang]||APP_UI.en,start=stationNode(),target=targetNode(d),out=[],labels=PAV_LABELS[appLang]||PAV_LABELS.en||{};
  const noticeLang=selectedQueryLang||appLang;
  if(!target){
-   if(d.loc)out.push(routeNoticeText("outsideMapped",noticeLang)+d.loc+".");
+   if(d.loc)out.push(routeNoticeText("outsideMapped",noticeLang)+locationFor(d,noticeLang)+".");
    else out.push(routeNoticeText("unknownLocation",noticeLang));
    return out;
  }
@@ -358,26 +371,28 @@ function ambassadorSteps(d){
  else if(start===target){out.push(t.remain+" "+(labels[target]||pavilionFor(target,appLang))+".");}
  else if(path){out.push(t.indoor+" "+path.map(x=>labels[x]||pavilionFor(x,appLang)).join(" → ")+".");}
  else{out.push(routeNoticeText("noRoute",noticeLang));}
- if(d.loc)out.push(t.followDest+" "+d.loc+".");
+ if(d.loc)out.push(t.followDest+" "+locationFor(d,appLang)+".");
  else out.push(t.followDest+" "+destinationName(d,appLang)+".");
  return out;
 }
 function localizedSteps(d,lang){
  const t=I18N[lang]||I18N.en,start=stationNode(),target=targetNode(d),out=[];
+ if(d.status==="verify"){
+   const label=(APP_UI[lang]&&APP_UI[lang].verify)||APP_UI.en.verify;
+   const message=(d.notes&&(d.notes[lang]||d.notes.en))||routeNoticeText("unknownLocation",lang);
+   out.push(label+": "+message);
+ }
  if(!target){
-   if(d.loc)out.push((lang==="fr"?"Adresse / emplacement : ":"Location: ")+d.loc+".");
-   else out.push(lang==="fr"?"Vérifiez les documents du rendez-vous ou la signalisation pour l’emplacement exact.":"Check appointment paperwork or signage for the exact location.");
+   if(d.loc)out.push(routeNoticeText("outsideMapped",lang)+locationFor(d,lang)+".");
+   else out.push(routeNoticeText("unknownLocation",lang));
    return out;
  }
  const path=bfs(start,target),labels=PAV_LABELS[lang]||PAV_LABELS.en||{},special=specialRouteSteps(start,target,lang);
  if(special&&special.length){out.push(...special);}
  else if(start===target){out.push(t.stay+" "+(labels[target]||pavilionFor(target,lang))+".");}
  else if(path){out.push(t.follow+" "+path.map(x=>labels[x]||pavilionFor(x,lang)).join(" → ")+".");}
- else{
-   const msg=lang==="fr"?"Aucun itinéraire intérieur public n’est encore validé dans WayWey entre ce point de départ et cette destination. Suivez la signalisation actuelle de l’hôpital.":"WayWey does not yet have a validated public indoor route between this starting point and destination. Follow current hospital signage.";
-   out.push(msg);
- }
- if(d.loc)out.push(t.final+" "+d.loc+"."); else out.push(t.final+" "+destinationName(d,lang)+".");
+ else{out.push(routeNoticeText("noRoute",lang));}
+ if(d.loc)out.push(t.final+" "+locationFor(d,lang)+"."); else out.push(t.final+" "+destinationName(d,lang)+".");
  return out;
 }
 function score(d,q){
@@ -460,7 +475,7 @@ function renderVisitor(){
  p.dir=(lang==="ar"||lang==="he")?"rtl":"ltr";
  $("vName").textContent=destinationName(selected,lang);
  $("vWhere").textContent=displayWhere(selected,lang);
- $("vSteps").innerHTML=localizedSteps(selected,lang).map(s=>"<li>"+s+"</li>").join("");
+ $("vSteps").innerHTML=localizedSteps(selected,lang).map(s=>"<li dir=\"auto\">"+s+"</li>").join("");
  const qrt=QR_UI[lang]||QR_UI.en;$("showQr").textContent="▦ "+qrt.button;$("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
 }
 async function bootstrap(){
