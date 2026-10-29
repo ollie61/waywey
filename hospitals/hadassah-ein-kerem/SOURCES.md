@@ -84,10 +84,10 @@ Hadassah's official Ein Kerem page describes an approximately 800-bed tertiary h
 
 - **Campus:** Hadassah Ein Kerem only. Mount Scopus is excluded; campus-combined pages were parsed using their **Ein Kerem** location fields only.
 - **Starting inventory:** 55 destination records.
-- **New entries:** 91 source-backed destination records across adult and pediatric services, outpatient subspecialties, dental specialties, diagnostics, women's health, oncology, and public amenities.
-- **Current inventory:** **146 searchable destinations**, of which **122 are marked official-source** and **24 are marked Verify**. “Official-source” means the published source identifies the destination and location, **not** that an on-site staff member independently confirmed the current signage, opening hours, or room.
+- **New entries:** 100 source-backed destination records across adult and pediatric services, outpatient subspecialties, dental specialties, diagnostics, women's health, oncology, and public amenities.
+- **Current inventory:** **155 searchable destinations**, of which **123 are marked official-source** and **32 are marked Verify**. “Official-source” means the published source identifies the destination and location, **not** that an on-site staff member independently confirmed the current signage, opening hours, or room.
 - **Building/area nodes:** 11 named nodes: MAIN, MC, ER, DAVIDSON, SHARETT, CLINICS, DENTAL, OLD, LABS, MALL, BERMAN. This is **not** a complete inventory of the campus's 28+ buildings. Additional named campus structures (e.g., school of nursing, HR building, parking facilities) were identified but not assigned unverified public connectors.
-- **Important distinction:** 146 searchable destination records do **not** mean all 130+ official departments/clinics have been exhaustively enumerated or individually verified. Several records are subclinics, service desks, or amenities; some official units still lack independently verifiable public-facing building/floor information.
+- **Important distinction:** 155 searchable destination records do **not** mean all 130+ official departments/clinics have been exhaustively enumerated or individually verified. Several records are subclinics, service desks, or amenities; some official units still lack independently verifiable public-facing building/floor information.
 - **Source review date:** 2026-10-29. Some Hadassah English pages contain visibly historical staffing or dates; the presence of a page on the current site does not prove its location text was recently updated.
 
 ### New evidence and location corrections
@@ -105,6 +105,11 @@ Hadassah's official Ein Kerem page describes an approximately 800-bed tertiary h
 - **Public AED locations:** a Hebrew official list identifies AEDs in Davidson entrance, Emergency Building, Yisphro Mall, and Berman entrance. Equipment may be relocated, so all are **Verify**. The same page mentions a **technical** junction between buildings; this must **not** be interpreted as a public connector. [AED list](https://he.hadassah.org.il/news-and-events/defi-event-page22/).
 - **Campus scale:** the official Ein Kerem overview still describes **130+ departments/clinics and 28+ buildings**. An older children's page mentions 22+ buildings and visibly dated chronology. Use the campus overview for the scale estimate, not the older children's page. [Campus overview](https://www.hadassah.org.il/en/hadassahuniversityhospitaleinkerem/) · [older children's page](https://www.hadassah.org.il/en/hadassah_children_site_about_hadassah_ein_karem/).
 
+- **Additional diagnostic coverage:** the Nuclear Medicine department's own official page places it at Sharett Institute, Floor 2 and confirms PET/CT services. The PET/CT scanner's own public reception remains **Verify**; the general Imaging Division confirms CT but does not give the CT reception location. [Nuclear Medicine](https://www.hadassah.org.il/en/nuclear_medicine/) · [Imaging Division](https://www.hadassah.org.il/en/imaging_division_einkerem/).
+- **Pediatric ICU:** an official pediatric critical-care page lists Davidson Tower, Floor 2 but refers to a planned expansion in 2008. Added **Verify** rather than treating that floor as current. [Pediatric Critical Care](https://www.hadassah.org.il/en/hadassahchildren_pediatric_critical_care/).
+- **Nephrology subspecialty clinics:** official Nephrology material names the outpatient, pre-dialysis, kidney-transplant follow-up and dialysis services but does not independently establish each public reception building/floor. Added **Verify** records rather than inheriting the department's Main Building Floor 6. [Nephrology](https://www.hadassah.org.il/en/nephrology_and_hypertension/).
+- **Breast Cancer Center:** the Sharett Institute page names this center without its own reception floor. Added **Verify**, not an inferred Floor -3. [Sharett Institute](https://www.hadassah.org.il/en/sharett_institute_of_oncology/).
+
 ### Routing validation and restrictions
 
 - **Encoded public cross-building instruction:** Main Entrance **→** Mother and Child Building, based on the official directions “after security, turn right.” [Official directions](https://www.hadassah.org.il/en/how_to_get_here_obstetrics-and_gynecology/).
@@ -121,10 +126,10 @@ Hadassah's official Ein Kerem page describes an approximately 800-bed tertiary h
 - Visitor-mode **unavailable-route**, **unmapped-destination**, and **unknown-location** notices are now localized to the selected visitor language rather than falling back to English for Hebrew/Arabic.
 - **Verify** flags and explanatory notes are now included in visitor-facing directions as well as the ambassador view.
 - Standard floor labels are localized for Hebrew/Arabic without altering source floor numbers.
-- Regression checks completed: JavaScript syntax; all 146 multilingual records; valid status flags; graph-node integrity; unique visitor slugs; exclusion of Mount Scopus records; Hebrew/Arabic/English search; query-language notices; Hebrew/Arabic visitor warnings and unavailable-route text; floor-label localization; and the one supported directed route.
+- Regression checks completed: JavaScript syntax; all 155 multilingual records; valid status flags; graph-node integrity; unique visitor slugs; exclusion of Mount Scopus records; Hebrew/Arabic/English search; query-language notices; Hebrew/Arabic visitor warnings and unavailable-route text; floor-label localization; and the one supported directed route.
 - **Testing limitation:** these are static/logic tests. Live on-device browser, screen-reader, QR handoff, speech-synthesis and physical campus walking tests still require a separate end-to-end check.
 
-### New source-backed records (91)
+### New source-backed records (100)
 
 Every newly added record also stores its exact official `sourceUrl` in `destinations.json`.
 
@@ -255,7 +260,19 @@ Every newly added record also stores its exact official `sourceUrl` in `destinat
 
 - **Automated External Defibrillator — Berman Building** — Floor 0 — entrance to Berman A; [Hadassah source](https://he.hadassah.org.il/news-and-events/defi-event-page22/) — **Verify**
 
-### Records requiring human confirmation (24)
+### Further official services — 9 additions
+
+- **Nuclear Medicine Department** — Floor 2; [Hadassah source](https://www.hadassah.org.il/en/nuclear_medicine/)
+- **PET/CT — Nuclear Medicine** — Nuclear Medicine Department, Floor 2; PET/CT suite unverified; [Hadassah source](https://www.hadassah.org.il/en/nuclear_medicine/) — **Verify**
+- **CT / Computed Tomography — Reception to Verify** — Ein Kerem Imaging Division — exact CT reception not published; [Hadassah source](https://www.hadassah.org.il/en/imaging_division_einkerem/) — **Verify**
+- **Pediatric Intensive Care Unit (PICU) — Verify** — Floor 2 (historical official page; verify); [Hadassah source](https://www.hadassah.org.il/en/hadassahchildren_pediatric_critical_care/) — **Verify**
+- **Nephrology and Hypertension Outpatient Clinic** — Ein Kerem — outpatient clinic floor not separately confirmed; [Hadassah source](https://www.hadassah.org.il/en/nephrology_and_hypertension/) — **Verify**
+- **Pre-Dialysis Clinic** — Ein Kerem — exact outpatient reception not confirmed; [Hadassah source](https://www.hadassah.org.il/en/nephrology_and_hypertension/) — **Verify**
+- **Kidney Transplant Follow-up Clinic** — Ein Kerem — exact outpatient reception not confirmed; [Hadassah source](https://www.hadassah.org.il/en/nephrology_and_hypertension/) — **Verify**
+- **Dialysis Treatment — Ein Kerem** — Ein Kerem campus — dialysis unit entrance not confirmed; [Hadassah source](https://www.hadassah.org.il/en/nephrology_and_hypertension/) — **Verify**
+- **Breast Cancer Center — Reception to Verify** — Sharett Institute — clinic reception/floor not confirmed; [Hadassah source](https://www.hadassah.org.il/en/sharett_institute_of_oncology/) — **Verify**
+
+### Records requiring human confirmation (32)
 
 - **Neurology — Inpatient Department** — The current department page lists Davidson Building, Floor 9. An older patient-information page says Floor 6; verify against current signage.
 - **Ophthalmology** — English division page says Main Building, mezzanine. Hebrew clinical-services page says old building, Floor 0. These may use different floor/building conventions; confirm current signage. [Source](https://www.hadassah.org.il/en/ophthalmology_division/)
@@ -282,11 +299,21 @@ Every newly added record also stores its exact official `sourceUrl` in `destinat
 - **Automated External Defibrillator — Mall** — Official AED list identifies this location; emergency equipment can be moved. Follow current signs. [Source](https://he.hadassah.org.il/news-and-events/defi-event-page22/)
 - **Automated External Defibrillator — Berman Building** — Official AED list identifies this location; emergency equipment can be moved. Follow current signs. [Source](https://he.hadassah.org.il/news-and-events/defi-event-page22/)
 
+- **PET/CT — Nuclear Medicine** — Hadassah confirms PET/CT in Nuclear Medicine and the department in Sharett Floor 2, but the PET/CT scanner's own public reception and floor are not explicitly stated. [Source](https://www.hadassah.org.il/en/nuclear_medicine/)
+- **CT / Computed Tomography — Reception to Verify** — The official Ein Kerem Imaging Division page confirms CT services but does not specify the CT suite's building or floor. Do not assume it is at the division office. [Source](https://www.hadassah.org.il/en/imaging_division_einkerem/)
+- **Pediatric Intensive Care Unit (PICU) — Verify** — The official pediatric critical care page lists Davidson Tower Floor 2 but contains outdated references to planned 2008 expansion. Verify current location with the unit. [Source](https://www.hadassah.org.il/en/hadassahchildren_pediatric_critical_care/)
+- **Nephrology and Hypertension Outpatient Clinic** — The department page lists Main Building Floor 6 for the department and describes outpatient clinics but does not independently identify the outpatient clinic floor. [Source](https://www.hadassah.org.il/en/nephrology_and_hypertension/)
+- **Pre-Dialysis Clinic** — The official Nephrology page names a pre-dialysis clinic but does not provide a separate building/floor. [Source](https://www.hadassah.org.il/en/nephrology_and_hypertension/)
+- **Kidney Transplant Follow-up Clinic** — The official Nephrology page describes a kidney transplant follow-up clinic without a separately confirmed public floor. [Source](https://www.hadassah.org.il/en/nephrology_and_hypertension/)
+- **Dialysis Treatment — Ein Kerem** — The official Nephrology page confirms dialysis treatment at Ein Kerem but does not identify a single public unit entrance; it also mentions an off-campus dialysis unit, which is excluded. [Source](https://www.hadassah.org.il/en/nephrology_and_hypertension/)
+- **Breast Cancer Center — Reception to Verify** — The official Sharett Institute overview lists the Breast Cancer Center but does not specify the center's public reception floor. Do not substitute the institute's general Floor -3. [Source](https://www.hadassah.org.il/en/sharett_institute_of_oncology/)
+
 ### Remaining completeness gaps and next verification actions
 
 1. Obtain the **current official Ein Kerem building directory/campus map**, including the full 28+ building inventory, public entrances, elevators, level designations and accessible public connectors. None of these should be extrapolated from staff-only or technical corridors.
 2. Ask Hadassah information/security staff to confirm the **conflicting women's health / IVF building**, **pediatric endocrinology clinic location**, **ophthalmology floor convention**, **gynecology emergency reception floor**, and **current Neurology inpatient floor**.
 3. Verify **Blood Bank, blood donation, Chagall Synagogue, Yad Sarah, Kivunim and other service desks** at their actual public entrances. Historical guides do not guarantee current tenants or opening hours.
-4. Reconcile the entire official **130+ department/clinic census** against WayWey one unit at a time. The current 146-record inventory is materially broader than the starting 55, but includes subclinics and amenities and is **not** a certified complete census.
-5. Conduct **on-site Hebrew/Arabic/English ambassador testing**, including destination ambiguity, signage, RTL, floor numbering, QR/visitor mode, after-hours entry and accessible routes.
+4. Obtain the precise public reception for PET/CT, CT, pediatric ICU, renal clinics/dialysis, and Breast Cancer Center before providing floor-specific directions.
+5. Reconcile the entire official **130+ department/clinic census** against WayWey one unit at a time. The current 155-record inventory is materially broader than the starting 55, but includes subclinics and amenities and is **not** a certified complete census.
+6. Conduct **on-site Hebrew/Arabic/English ambassador testing**, including destination ambiguity, signage, RTL, floor numbering, QR/visitor mode, after-hours entry and accessible routes.
 
