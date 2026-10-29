@@ -109,12 +109,12 @@
     }
   ],
   "datasetStrength": {
-    "level": 2,
+    "level": 3,
     "label": {
-      "he": "בפיתוח",
-      "en": "Developing",
-      "ar": "قيد التطوير"
+      "he": "מורחב — אימות מסלולים נדרש",
+      "en": "Expanded — route validation needed",
+      "ar": "موسّع — يلزم التحقق من المسارات"
     },
-    "basis": "Initial official-source package for a 28+ building, 130+ department/clinic campus. Cross-building routing remains deliberately conservative."
+    "basis": "Official-source expanded Ein Kerem destination inventory; not a complete campus map. No additional public connectors inferred."
   }
 }
