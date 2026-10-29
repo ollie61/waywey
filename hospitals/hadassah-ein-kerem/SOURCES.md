@@ -128,9 +128,8 @@ Hadassah's official Ein Kerem page describes an approximately 800-bed tertiary h
 
 Every newly added record also stores its exact official `sourceUrl` in `destinations.json`.
 
-### MC — 14 additions
+### MC — 13 additions
 
-- **Maternity Wards A and B** — Floor B (elevator designation); [Hadassah source](https://www.hadassah.org.il/en/how_to_get_here_obstetrics-and_gynecology/)
 - **Obstetric Ultrasound Institute — Delivery Rooms** — Floor -1 — next to Delivery Rooms; [Hadassah source](https://www.hadassah.org.il/en/ultrasound_institute/)
 - **Gestational Diabetes Clinic** — Floor 1; [Hadassah source](https://www.hadassah.org.il/en/gestational_diabetes_clinic/)
 - **Pediatric Diabetes and Endocrinology — Mother and Child** — Ground floor (conflicting official location); [Hadassah source](https://www.hadassah.org.il/en/pediatric_diabetes_and_endocrinology_clinic_ein_kerem/) — **Verify**
