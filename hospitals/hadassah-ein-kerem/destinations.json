@@ -2573,5 +2573,201 @@
       "he": "הרשימה הרשמית מציינת מיקום זה; ציוד חירום עשוי לעבור. יש לבדוק שילוט עדכני.",
       "ar": "تحدد القائمة الرسمية هذا الموقع؛ قد تُنقل معدات الطوارئ. تحقق من اللافتات الحالية."
     }
+  },
+  {
+    "en": "Nuclear Medicine Department",
+    "he": "המחלקה לרפואה גרעינית",
+    "ar": "قسم الطب النووي",
+    "p": "SHARETT",
+    "loc": "Floor 2",
+    "aliases": [
+      "nuclear medicine",
+      "SPECT",
+      "מיפוי",
+      "רפואה גרעינית",
+      "طب نووي",
+      "التصوير الومضاني"
+    ],
+    "status": "official",
+    "source": "https://www.hadassah.org.il/en/nuclear_medicine/",
+    "sourceUrl": "https://www.hadassah.org.il/en/nuclear_medicine/"
+  },
+  {
+    "en": "PET/CT — Nuclear Medicine",
+    "he": "בדיקת PET/CT — רפואה גרעינית",
+    "ar": "فحص PET/CT — الطب النووي",
+    "p": "SHARETT",
+    "loc": "Nuclear Medicine Department, Floor 2; PET/CT suite unverified",
+    "aliases": [
+      "PET CT",
+      "PET-CT",
+      "PET scan",
+      "פט סיטי",
+      "בדיקת פט",
+      "تصوير بيت سي تي"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/nuclear_medicine/",
+    "sourceUrl": "https://www.hadassah.org.il/en/nuclear_medicine/",
+    "notes": {
+      "en": "Hadassah confirms PET/CT in Nuclear Medicine and the department in Sharett Floor 2, but the PET/CT scanner's own public reception and floor are not explicitly stated.",
+      "he": "הדסה מאשרת PET/CT ברפואה גרעינית ואת המחלקה במכון שרת קומה 2, אך קומת קבלת הבדיקה אינה מצוינת במפורש.",
+      "ar": "تؤكد هداسا وجود PET/CT في الطب النووي وقسم الطب النووي في معهد شاريت، الطابق 2، لكن موقع استقبال الفحص غير محدد."
+    }
+  },
+  {
+    "en": "CT / Computed Tomography — Reception to Verify",
+    "he": "בדיקת CT / סיטי — מיקום לאימות",
+    "ar": "فحص الأشعة المقطعية CT — الموقع بحاجة للتحقق",
+    "p": "",
+    "loc": "Ein Kerem Imaging Division — exact CT reception not published",
+    "aliases": [
+      "CT",
+      "CT scan",
+      "computed tomography",
+      "סיטי",
+      "טומוגרפיה ממוחשבת",
+      "أشعة مقطعية",
+      "تصوير طبقي"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/imaging_division_einkerem/",
+    "sourceUrl": "https://www.hadassah.org.il/en/imaging_division_einkerem/",
+    "notes": {
+      "en": "The official Ein Kerem Imaging Division page confirms CT services but does not specify the CT suite's building or floor. Do not assume it is at the division office.",
+      "he": "דף אגף הדימות מאשר בדיקות CT אך אינו מציין את בניין/קומת קבלת ה-CT. אין להניח שהבדיקה במשרד האגף.",
+      "ar": "تؤكد صفحة التصوير وجود فحوص CT دون تحديد مبنى أو طابق الاستقبال. لا تفترض أنها في مكتب القسم."
+    }
+  },
+  {
+    "en": "Pediatric Intensive Care Unit (PICU) — Verify",
+    "he": "טיפול נמרץ ילדים (PICU) — לאימות",
+    "ar": "العناية المركزة للأطفال PICU — بحاجة للتحقق",
+    "p": "DAVIDSON",
+    "loc": "Floor 2 (historical official page; verify)",
+    "aliases": [
+      "PICU",
+      "pediatric ICU",
+      "טיפול נמרץ ילדים",
+      "عناية مركزة أطفال"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_critical_care/",
+    "sourceUrl": "https://www.hadassah.org.il/en/hadassahchildren_pediatric_critical_care/",
+    "notes": {
+      "en": "The official pediatric critical care page lists Davidson Tower Floor 2 but contains outdated references to planned 2008 expansion. Verify current location with the unit.",
+      "he": "הדף הרשמי מציין דוידסון קומה 2 אך כולל מידע מיושן על הרחבה שתוכננה ל-2008. יש לאמת עם המחלקה.",
+      "ar": "تذكر الصفحة الرسمية برج ديفيدسون، الطابق 2، لكنها تتضمن معلومات قديمة عن توسعة عام 2008. تحقق مع الوحدة."
+    }
+  },
+  {
+    "en": "Nephrology and Hypertension Outpatient Clinic",
+    "he": "מרפאת נפרולוגיה ויתר לחץ דם",
+    "ar": "عيادة الكلى وارتفاع ضغط الدم",
+    "p": "",
+    "loc": "Ein Kerem — outpatient clinic floor not separately confirmed",
+    "aliases": [
+      "nephrology outpatient",
+      "hypertension clinic",
+      "מרפאת כליות",
+      "מרפאת יתר לחץ דם",
+      "عيادة الكلى",
+      "عيادة الضغط"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/nephrology_and_hypertension/",
+    "sourceUrl": "https://www.hadassah.org.il/en/nephrology_and_hypertension/",
+    "notes": {
+      "en": "The department page lists Main Building Floor 6 for the department and describes outpatient clinics but does not independently identify the outpatient clinic floor.",
+      "he": "דף המחלקה מציין בניין ראשי קומה 6 למחלקה, אך אינו מציין בנפרד את מיקום מרפאת החוץ.",
+      "ar": "تذكر صفحة القسم المبنى الرئيسي، الطابق 6، لكنها لا تحدد طابق العيادة الخارجية على حدة."
+    }
+  },
+  {
+    "en": "Pre-Dialysis Clinic",
+    "he": "מרפאה טרום דיאליזה",
+    "ar": "عيادة ما قبل غسيل الكلى",
+    "p": "",
+    "loc": "Ein Kerem — exact outpatient reception not confirmed",
+    "aliases": [
+      "pre dialysis",
+      "kidney failure clinic",
+      "טרום דיאליזה",
+      "قبل غسيل الكلى"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/nephrology_and_hypertension/",
+    "sourceUrl": "https://www.hadassah.org.il/en/nephrology_and_hypertension/",
+    "notes": {
+      "en": "The official Nephrology page names a pre-dialysis clinic but does not provide a separate building/floor.",
+      "he": "דף הנפרולוגיה מציין מרפאה טרום דיאליזה אך אינו מפרט בניין או קומה.",
+      "ar": "تذكر صفحة الكلى عيادة ما قبل الغسيل دون مبنى أو طابق محدد."
+    }
+  },
+  {
+    "en": "Kidney Transplant Follow-up Clinic",
+    "he": "מרפאת מעקב מושתלי כליה",
+    "ar": "عيادة متابعة زراعة الكلى",
+    "p": "",
+    "loc": "Ein Kerem — exact outpatient reception not confirmed",
+    "aliases": [
+      "renal transplant follow up",
+      "kidney transplant clinic",
+      "מושתלי כליה",
+      "השתלת כליה",
+      "متابعة زراعة الكلى"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/nephrology_and_hypertension/",
+    "sourceUrl": "https://www.hadassah.org.il/en/nephrology_and_hypertension/",
+    "notes": {
+      "en": "The official Nephrology page describes a kidney transplant follow-up clinic without a separately confirmed public floor.",
+      "he": "דף הנפרולוגיה מתאר מרפאת מעקב מושתלי כליה ללא מיקום קומה נפרד.",
+      "ar": "تصف صفحة الكلى عيادة متابعة زراعة الكلى دون طابق استقبال مؤكد."
+    }
+  },
+  {
+    "en": "Dialysis Treatment — Ein Kerem",
+    "he": "דיאליזה — הדסה עין כרם",
+    "ar": "غسيل الكلى — هداسا عين كارم",
+    "p": "",
+    "loc": "Ein Kerem campus — dialysis unit entrance not confirmed",
+    "aliases": [
+      "dialysis",
+      "hemodialysis",
+      "דיאליזה",
+      "המודיאליזה",
+      "غسيل الكلى"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/nephrology_and_hypertension/",
+    "sourceUrl": "https://www.hadassah.org.il/en/nephrology_and_hypertension/",
+    "notes": {
+      "en": "The official Nephrology page confirms dialysis treatment at Ein Kerem but does not identify a single public unit entrance; it also mentions an off-campus dialysis unit, which is excluded.",
+      "he": "דף הנפרולוגיה מאשר טיפולי דיאליזה בעין כרם אך אינו מזהה כניסה אחת ליחידה. יחידת דיאליזה מחוץ לקמפוס אינה נכללת.",
+      "ar": "تؤكد صفحة الكلى علاج غسيل الكلى في عين كارم دون مدخل محدد؛ ولا تُدرج وحدة الغسيل خارج الحرم."
+    }
+  },
+  {
+    "en": "Breast Cancer Center — Reception to Verify",
+    "he": "מרכז סרטן השד — קבלה לאימות",
+    "ar": "مركز سرطان الثدي — الاستقبال بحاجة للتحقق",
+    "p": "SHARETT",
+    "loc": "Sharett Institute — clinic reception/floor not confirmed",
+    "aliases": [
+      "breast oncology",
+      "breast cancer clinic",
+      "מרכז סרטן השד",
+      "סרטן השד",
+      "سرطان الثدي"
+    ],
+    "status": "verify",
+    "source": "https://www.hadassah.org.il/en/sharett_institute_of_oncology/",
+    "sourceUrl": "https://www.hadassah.org.il/en/sharett_institute_of_oncology/",
+    "notes": {
+      "en": "The official Sharett Institute overview lists the Breast Cancer Center but does not specify the center's public reception floor. Do not substitute the institute's general Floor -3.",
+      "he": "דף מכון שרת מציין מרכז לסרטן השד ללא קומת קבלה נפרדת. אין להניח שקומת המכון הכללית ‎-3 היא קומת המרכז.",
+      "ar": "تذكر صفحة معهد شاريت مركز سرطان الثدي دون طابق استقبال مستقل. لا تفترض أن الطابق -3 العام هو طابق المركز."
+    }
   }
 ]
