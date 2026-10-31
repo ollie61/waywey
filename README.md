@@ -113,6 +113,7 @@ Hospital JSON is protected by schemas and cross-file checks.
 python -m pip install "jsonschema==4.23.0"
 python scripts/validate_hospitals.py
 node --test tests/*.test.mjs
+node scripts/audit_search_all_hospitals.mjs
 ```
 
 GitHub Actions also checks hospital schemas, JavaScript syntax, service-worker syntax and the regression tests on relevant code/data changes.
@@ -142,4 +143,5 @@ The hospital-data workflow, source precedence rules, `official` versus `verify` 
 - [Hospital maintenance workflow](docs/HOSPITAL-MAINTENANCE.md)
 - [Hospital package contract](hospitals/README.md)
 - [Release checklist](docs/RELEASE-CHECKLIST.md)
+- [Search quality and all-hospital audit](docs/SEARCH-QUALITY.md)
 
