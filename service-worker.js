@@ -1,4 +1,4 @@
-const SHELL_CACHE="waywey-cache-16";
+const SHELL_CACHE="waywey-cache-17";
 const DATA_CACHE="waywey-hospital-data-1";
 
 const SHELL_ASSETS=[

@@ -59,3 +59,20 @@ Used cloud Chrome with a raw.githack.com preview pinned to the tested commit. Th
 7. Production remains v0.1.0. The passing release-candidate results must not be presented as proof that the live version contains these fixes.
 
 Release decision: automated gates pass; partial real-browser smoke coverage passes. Do not mark the complete release checklist finished.
+
+## Follow-up: guide repair and cache behaviour tests
+
+Local repair commit: 4d5a29f (fix/rc3-release-gaps).
+
+- Restored the French Hadassah quick guide as a translation of the English guide.
+- Guide navigation now lists the languages actually supplied by the guide data, independently of ambassador search languages. Reading French does not imply French destination search support.
+- Guide language and RTL/LTR direction follow the chosen guide; keyboard focus is retained on the selected language button.
+- A guide=fr deep link requests the French guide instead of silently falling back to the ambassador language.
+- Shell cache revision advanced from 16 to 17. Product milestone remains v0.2.0; this is an unreleased correction within that milestone.
+- Regression suite: 49/49 passed, including guide rendering for all four languages and four service-worker behavioural tests.
+- Cache tests execute the real service-worker handlers in a Node VM with simulated network and Cache Storage. They cover fresh online data, online refresh, cached offline data, failure for an unvisited hospital, offline navigation shell fallback, on-demand hospital cache scope, explicit update activation, and preservation of hospital/unrelated caches.
+- These simulations do not certify browser service-worker installation, physical-device offline operation, or actual audio handling.
+- Hospital schema validation: 0 errors, the same 7 mapping warnings. Release invariants, modularisation smoke checks, JavaScript syntax and whitespace checks passed.
+- No search or route dataset changes were made; the prior search audit remains applicable to the unchanged search engine and destination data.
+- Updated-code browser verification is pending publication of the test branch. Automatic approval review rejected the git push as external publication beyond testing authorization. No bypass was attempted.
+- Production was not changed. This repair remains committed locally and is not yet published.

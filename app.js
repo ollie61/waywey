@@ -327,17 +327,23 @@ function noteFor(d){
  const translated=NOTE_TRANSLATIONS[appLang]&&NOTE_TRANSLATIONS[appLang][d.en];
  return translated||d.note||"";
 }
-function renderQuickGuide(){
- const g=QUICK_GUIDE[appLang]||QUICK_GUIDE.en;
- const langs=hospitalLanguages().filter(l=>QUICK_GUIDE[l]);
- $("guideDialog").dir=appIsRtl(appLang)?"rtl":"ltr";
+function renderQuickGuide(lang=appLang){
+ const guideLang=QUICK_GUIDE[lang]?lang:(QUICK_GUIDE.en?"en":Object.keys(QUICK_GUIDE)[0]);
+ const g=QUICK_GUIDE[guideLang];
+ const langs=Object.keys(QUICK_GUIDE);
+ $("guideDialog").lang=guideLang;
+ $("guideDialog").dir=appIsRtl(guideLang)?"rtl":"ltr";
  $("guideTitle").textContent=g.title;
- const nav=langs.length>1?'<div class="guide-lang-nav" aria-label="Guide language">'+langs.map(l=>'<button type="button" class="guide-lang-btn'+(l===appLang?' active':'')+'" data-guide-lang="'+l+'">'+(LANGUAGE_NAMES[l]||l)+'</button>').join("")+'</div>':"";
+ const nav=langs.length>1?'<div class="guide-lang-nav" aria-label="Guide language">'+langs.map(l=>'<button type="button" class="guide-lang-btn'+(l===guideLang?' active':'')+'" data-guide-lang="'+l+'">'+(LANGUAGE_NAMES[l]||l)+'</button>').join("")+'</div>':"";
  $("guideContent").innerHTML=nav+g.html;
- [...$("guideContent").querySelectorAll("[data-guide-lang]")].forEach(b=>b.onclick=()=>setAppLanguage(b.dataset.guideLang));
- $("closeGuide").setAttribute("aria-label",(APP_UI[appLang]&&APP_UI[appLang].close)||"Close");
+ [...$("guideContent").querySelectorAll("[data-guide-lang]")].forEach(b=>b.onclick=()=>{
+   const next=b.dataset.guideLang;
+   renderQuickGuide(next);
+   $("guideContent").querySelector('[data-guide-lang="'+next+'"]').focus();
+ });
+ $("closeGuide").setAttribute("aria-label",(APP_UI[guideLang]&&APP_UI[guideLang].close)||"Close");
 }
-function openQuickGuide(){renderQuickGuide();openDialog($("guideDialog"),{initialFocus:".guide-lang-btn, #closeGuide"});}
+function openQuickGuide(lang=appLang){renderQuickGuide(typeof lang==="string"?lang:appLang);openDialog($("guideDialog"),{initialFocus:".guide-lang-btn, #closeGuide"});}
 function setAppLanguage(lang){
  if(voiceController&&voiceController.isActive())voiceController.stop();
  const allowed=hospitalLanguages();
@@ -570,7 +576,7 @@ async function bootstrap(){
  const requestedGuideLang=urlParams.get("guide");
  setAppLanguage(hospitalLanguages().includes(requestedGuideLang)?requestedGuideLang:(hospitalLanguages().includes(savedLang)?savedLang:(HOSPITAL.defaultAppLanguage||hospitalLanguages()[0]||"en")));
  $("station").onchange=()=>{try{localStorage.setItem(storageKey("station"),$("station").value)}catch(e){};if(selected)choose(selected,false)};
- if(requestedGuideLang&&QUICK_GUIDE[appLang])setTimeout(()=>{try{openQuickGuide()}catch(e){}},60);
+ if(requestedGuideLang&&QUICK_GUIDE[requestedGuideLang])setTimeout(()=>{try{openQuickGuide(requestedGuideLang)}catch(e){}},60);
 
  const p=urlParams;
  if(p.get("visitor")==="1"){
