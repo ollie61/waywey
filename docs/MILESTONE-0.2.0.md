@@ -34,7 +34,8 @@ Each major step should:
 6. Accessibility and mobile UX pass.
 7. Maintenance/documentation layer: multi-hospital README, hospital audit workflow and release checklist.
 8. Outdoor-map handoff for explicit unrouted/off-site destinations.
-9. Optional enhancements (voice search, location assistance and other product features).
+9. Optional single-shot browser voice search.
+10. Optional location assistance and other product features.
 
 The order may be adjusted after review, but later steps should not be started before the preceding major step is accepted.
 
@@ -142,3 +143,18 @@ The order may be adjusted after review, but later steps should not be started be
 - Added automated tests proving map links require explicit metadata and encode the address safely.
 - Updated hospital-maintenance, package-contract, architecture and release documentation to prohibit inferred outdoor map destinations or embedded third-party tracking.
 - Working milestone remains `v0.2.0`; shared shell cache advanced independently to `waywey-cache-13`.
+
+
+### Step 9 — Optional browser voice search — COMPLETE
+- Added `js/voice-search.js` as a progressive-enhancement controller for the standard/WebKit browser speech-recognition API.
+- Voice search is always user-initiated, single-shot, non-continuous and limited to one recognition result.
+- Recognized speech is inserted into the existing search field and processed by the same fuzzy/ranking engine as typed text.
+- Added explicit speech locales for English (Canada), French (Canada), Hebrew (Israel) and Arabic (Israel).
+- The microphone button is hidden when browser speech recognition is unavailable, leaving normal typed search unchanged.
+- Added Stop behavior, listening/recognized/error status messages and screen-reader announcements.
+- Added localized voice-search UI and privacy disclosure in English, French, Hebrew and Arabic.
+- The UI explicitly states that browser/provider audio handling may vary and that WayWey does not store the recording.
+- Changing the application language stops any active voice capture before switching recognition language.
+- Added voice-search tests covering browser support detection, locale mapping, single-shot settings, transcript trimming and error propagation.
+- Updated architecture, privacy and release documentation.
+- Working milestone remains `v0.2.0`; shared shell cache advanced independently to `waywey-cache-14`.
