@@ -198,7 +198,21 @@ Therefore:
 - bump the user-visible version when the change is a real product release/milestone according to the release plan;
 - change `DATA_CACHE` only when its format/semantics require invalidating existing cached hospital data.
 
-## 6. `official` versus `verify`
+## 6. Outdoor map handoff
+
+Outdoor map links are a deliberate exception to indoor routing and must remain evidence-based.
+
+- Add `outdoorMap.query` only for a published street address, parking location, off-site clinic or other explicit outdoor destination.
+- Do not generate it automatically from `loc`.
+- Do not infer a street location from campus-map proximity.
+- Prefer not to expose an outdoor-map link on a `verify` record unless the outdoor address itself is confirmed.
+- WayWey does not request GPS permission for this feature.
+- The external map service may independently offer its own location/directions features after the user leaves WayWey.
+- The handoff must remain user-initiated; do not embed third-party map trackers in the WayWey page.
+
+Representative regression test: an unrouted destination with no `outdoorMap.query` must show no external-map button.
+
+## 7. `official` versus `verify`
 
 Use `official` only when the displayed location is explicitly supported by a sufficiently current official source.
 
@@ -215,7 +229,7 @@ Use `verify` when:
 
 A `verify` record is not a failure. It is an explicit trust state.
 
-## 7. Source documentation
+## 8. Source documentation
 
 Each substantial package should maintain `SOURCES.md` with:
 
@@ -230,7 +244,7 @@ Each substantial package should maintain `SOURCES.md` with:
 
 Do not claim “complete” simply because the destination count exceeds the hospital's published department count: a WayWey inventory can contain subclinics, diagnostic desks and amenities as separate searchable records.
 
-## 8. Validation and regression
+## 9. Validation and regression
 
 Before review:
 
@@ -259,7 +273,7 @@ For routing, test:
 - directional `specialRoutes` where used;
 - off-site/null node aliases.
 
-## 9. Human review checklist
+## 10. Human review checklist
 
 Before approving a hospital audit:
 
@@ -277,6 +291,6 @@ Before approving a hospital audit:
 - [ ] Recovery point exists.
 - [ ] Production is not changed until the review step is accepted.
 
-## 10. Release handoff
+## 11. Release handoff
 
 When a hospital/data step is approved, follow [`RELEASE-CHECKLIST.md`](RELEASE-CHECKLIST.md) before merging to production.
