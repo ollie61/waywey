@@ -10,6 +10,7 @@ Current development milestone: **v0.2.0**.
 
 - Lets an ambassador select and remember a starting station.
 - Searches department/service names, aliases and room numbers with typo-tolerant ranking.
+- Offers optional single-shot voice search when the browser exposes a compatible speech-recognition API.
 - Keeps hospital data separate from the shared application engine.
 - Shows indoor directions only when the public route has been validated.
 - Clearly flags uncertain locations as **Verify / À vérifier / לאימות / بحاجة للتحقق**.
@@ -131,6 +132,8 @@ Before a major code or data step, create a recovery branch or equivalent immutab
 ## Privacy and deployment posture
 
 WayWey does not require a visitor account or patient identity to provide directions. QR/deep links contain navigation context, not a patient record. Avoid introducing patient data, condition-based targeting, third-party trackers or other unnecessary sensitive-data collection.
+
+Voice search is user-initiated and single-shot. WayWey does not store the microphone recording, but the browser or speech-recognition provider may process audio according to its own implementation/privacy rules. The voice button is hidden when compatible browser support is unavailable.
 
 ## Maintenance
 
