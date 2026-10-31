@@ -74,5 +74,7 @@ Local repair commit: 4d5a29f (fix/rc3-release-gaps).
 - These simulations do not certify browser service-worker installation, physical-device offline operation, or actual audio handling.
 - Hospital schema validation: 0 errors, the same 7 mapping warnings. Release invariants, modularisation smoke checks, JavaScript syntax and whitespace checks passed.
 - No search or route dataset changes were made; the prior search audit remains applicable to the unchanged search engine and destination data.
-- Updated-code browser verification is pending publication of the test branch. Automatic approval review rejected the git push as external publication beyond testing authorization. No bypass was attempted.
-- Production was not changed. This repair remains committed locally and is not yet published.
+- After explicit user approval, the repair was published through the connected GitHub API as commit 13da915f849ca9cc7e768385da9d9732219307d2 on fix/rc3-release-gaps. Shell git push lacked credentials; the connected API succeeded.
+- Browser verification on the exact published commit passed: the clean Hadassah path preserved guide=fr and opened the French guide; all four guide buttons displayed the correct content; French was LTR and Arabic RTL; ambassador language remained Hebrew when changing guide language.
+- Guide keyboard checks passed: Tab wraps from the final language button to Close, Shift+Tab wraps back, Escape closes the dialog, and closing a guide opened by its button returns focus to Quick Guide.
+- Production was not changed. Physical-device, actual audio and browser-offline checks remain outstanding as described above.
