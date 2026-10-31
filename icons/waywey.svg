@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="WayWey">
+  <rect width="512" height="512" rx="112" fill="#173f4b"/>
+  <path d="M112 154 170 356 256 222 342 356 400 154" fill="none" stroke="#fff" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="256" cy="222" r="25" fill="#fff"/>
+</svg>
