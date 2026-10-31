@@ -188,7 +188,9 @@ The order may be adjusted after review, but later steps should not be started be
 - Replaced ad-hoc search spot checks with a data-driven audit across all 636 current destinations in all five hospital packages.
 - The audit checks all localized canonical names, all configured aliases, unique short acronyms, unique locations, compact room-number forms and negative garbage queries.
 - Fuzzy logic is tested using one-character deletion, substitution and adjacent transposition.
-- Current audit surface includes 1,465 generated fuzzy ranking checks: 487 deletion, 489 substitution and 489 transposition cases.
+- Current audit surface includes 1,954 generated fuzzy ranking checks: 487 deletion, 489 insertion, 489 substitution and 489 transposition cases.
+- The audit also includes 293 accent-folding checks and 369 unique-prefix checks for partial typing.
+- Across all categories, the current suite performs 7,407 automated search checks/assertions.
 - Every hospital must achieve at least 35% destination coverage for every fuzzy typo class; current coverage ranges from approximately 56% at Glen to 94% at Verdun.
 - Generated typo tests reject genuinely ambiguous mutations when another destination has an equally close legitimate token.
 - The audit initially exposed two useful classes of issue:
