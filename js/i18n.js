@@ -98,3 +98,11 @@ export function routeNoticeText(key,lang){
  const set=table[lang]||table.en;
  return set[key]||table.en[key];
 }
+
+
+export const PWA_UI={
+en:{offline:"Offline — using cached data",updateReady:"A WayWey update is ready.",updateButton:"Update"},
+fr:{offline:"Hors ligne — utilisation des données en cache",updateReady:"Une mise à jour de WayWey est prête.",updateButton:"Mettre à jour"},
+he:{offline:"לא מקוון — נעשה שימוש בנתונים שמורים",updateReady:"עדכון של WayWey מוכן.",updateButton:"עדכון"},
+ar:{offline:"غير متصل — يتم استخدام البيانات المحفوظة",updateReady:"تحديث WayWey جاهز.",updateButton:"تحديث"}
+};
