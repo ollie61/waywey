@@ -339,6 +339,7 @@ function renderQuickGuide(){
 }
 function openQuickGuide(){renderQuickGuide();openDialog($("guideDialog"),{initialFocus:".guide-lang-btn, #closeGuide"});}
 function setAppLanguage(lang){
+ if(voiceController&&voiceController.isActive())voiceController.stop();
  const allowed=hospitalLanguages();
  appLang=allowed.includes(lang)?lang:(HOSPITAL.defaultAppLanguage&&allowed.includes(HOSPITAL.defaultAppLanguage)?HOSPITAL.defaultAppLanguage:allowed[0]||"en");
  document.documentElement.lang=appLang;
