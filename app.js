@@ -1,5 +1,5 @@
 import {I18N,QR_UI,APP_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
-import {norm,score,inferQueryLanguage} from "./js/search.js";
+import {norm,rankResults,inferQueryLanguage} from "./js/search.js";
 import {findRoute,resolveTargetNode} from "./js/routing.js";
 import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,strengthBadge} from "./js/ui.js";
 import {hospitalIdFromUrl,fetchJson} from "./js/data.js";
@@ -229,7 +229,7 @@ function localizedSteps(d,lang){
 function search(){
  const q=$("q").value.trim(),box=$("results");box.innerHTML="";
  if(!q)return;
- const hits=DATA.map(d=>[d,score(d,q)]).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]).slice(0,12);
+ const hits=rankResults(DATA,q,12);
  if(!hits.length){box.innerHTML='<div class="status">'+APP_UI[appLang].noMatch+'</div>';return}
  hits.forEach(([d])=>{const el=document.createElement("div");el.className="result";const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);el.innerHTML="<strong>"+primary+"</strong>"+(secondary?"<small>"+secondary+"</small>":"")+"<div class='where'>"+displayWhere(d)+"</div>";el.onclick=()=>choose(d,true,queryLanguage(q,d));box.appendChild(el)});
 }
