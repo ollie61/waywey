@@ -257,7 +257,7 @@ function showHospitalLanding(){
        <strong dir="rtl">הדסה עין כרם</strong>
        <span>Hadassah Ein Kerem</span>
        <span dir="rtl">هداسا عين كارم</span>
-       ${strengthBadge(2,"En développement","Developing")}
+       ${strengthBadge(3,"Élargi — validation des itinéraires requise","Expanded — route validation needed")}
        <small>ירושלים · Jerusalem · القدس</small>
      </a>
    </section>
