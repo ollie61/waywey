@@ -72,6 +72,12 @@ Hospital-specific guides and labels stay in hospital packages.
 - dialog-to-dialog transition handling;
 - screen-reader announcements.
 
+### `js/outdoor-map.js`
+- validates the presence of explicit destination outdoor-map metadata;
+- generates an encoded, user-initiated Google Maps search handoff;
+- never derives a map destination from an indoor room/building string;
+- requests no GPS/location permission inside WayWey.
+
 ## Hospital packages
 
 Each hospital lives under:
