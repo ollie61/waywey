@@ -81,6 +81,12 @@ Use at least one LTR hospital and Hadassah for RTL/multilingual coverage.
 - [ ] Plausible typo.
 - [ ] Verify result is visually obvious.
 - [ ] Search works in every configured ambassador language for the sampled hospital.
+- [ ] Voice search appears only when the browser exposes compatible speech recognition.
+- [ ] Voice capture starts only after the user activates the microphone control.
+- [ ] A spoken query populates the existing search field/results rather than bypassing ranking.
+- [ ] Voice capture is single-shot/non-continuous and can be stopped.
+- [ ] The microphone/browser-provider privacy notice is visible when voice search is available.
+- [ ] Unsupported browsers retain normal typed search without an error or dead microphone control.
 
 ### Routing
 
