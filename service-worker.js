@@ -1,4 +1,4 @@
-const SHELL_CACHE="waywey-cache-11";
+const SHELL_CACHE="waywey-cache-12";
 const DATA_CACHE="waywey-hospital-data-1";
 
 const SHELL_ASSETS=[
@@ -15,7 +15,8 @@ const SHELL_ASSETS=[
   "./js/ui.js",
   "./js/data.js",
   "./js/pwa.js",
-  "./js/provenance.js"
+  "./js/provenance.js",
+  "./js/accessibility.js"
 ];
 
 self.addEventListener("install",event=>{
