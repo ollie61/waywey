@@ -7,11 +7,13 @@ on:
       - "schemas/**"
       - "scripts/validate_hospitals.py"
       - "scripts/refactor_smoke.mjs"
+      - "scripts/release_candidate_check.py"
       - ".github/workflows/validate-data.yml"
       - "app.js"
       - "js/**"
       - "tests/**"
       - "index.html"
+      - "styles.css"
       - "service-worker.js"
       - "manifest.webmanifest"
       - "icons/**"
@@ -21,11 +23,13 @@ on:
       - "schemas/**"
       - "scripts/validate_hospitals.py"
       - "scripts/refactor_smoke.mjs"
+      - "scripts/release_candidate_check.py"
       - ".github/workflows/validate-data.yml"
       - "app.js"
       - "js/**"
       - "tests/**"
       - "index.html"
+      - "styles.css"
       - "service-worker.js"
       - "manifest.webmanifest"
       - "icons/**"
@@ -59,5 +63,7 @@ jobs:
           node --check service-worker.js
       - name: Run modularisation smoke checks
         run: node scripts/refactor_smoke.mjs
-      - name: Run search and routing unit tests
+      - name: Run regression tests
         run: node --test tests/*.test.mjs
+      - name: Check release-candidate invariants
+        run: python scripts/release_candidate_check.py
