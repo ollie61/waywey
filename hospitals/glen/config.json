@@ -98,5 +98,12 @@
   "ambassadorLanguages": [
     "fr",
     "en"
+  ],
+  "lastSourceAudit": "2026-10-27",
+  "sourceLinks": [
+    {
+      "label": "MUHC Glen site",
+      "url": "https://muhc.ca/glen-site"
+    }
   ]
 }
