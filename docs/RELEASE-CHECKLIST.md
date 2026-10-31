@@ -97,6 +97,9 @@ Use at least one LTR hospital and Hadassah for RTL/multilingual coverage.
 - [ ] QR opens the same destination/start station/language.
 - [ ] Share/deep link works.
 - [ ] Text-to-speech starts with the selected visitor language where the browser supports it.
+- [ ] Outdoor-map handoff appears only for a destination with explicit `outdoorMap.query`.
+- [ ] A similar unrouted destination without outdoor-map metadata does not show the map action.
+- [ ] The external map opens only after the user activates the link.
 
 ### RTL and accessibility
 
