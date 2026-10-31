@@ -118,3 +118,6 @@ header .guide-btn:focus-visible,header .app-lang:focus-visible{outline-color:#ff
   .card,.result,.field,.route-sources,.dataset-meta{border-color:#7a8b90}
   .verify-result,.verify-alert,.route.verify-active{border-width:3px}
 }
+
+.btn{min-height:44px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.btn[hidden]{display:none!important}
