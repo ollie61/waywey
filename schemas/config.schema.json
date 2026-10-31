@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waywey.gobleuer.com/schemas/config.schema.json",
+  "title": "WayWey hospital configuration",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "shortName",
+    "defaultAppLanguage",
+    "defaultVisitorLanguage",
+    "pageTitle",
+    "description",
+    "entrances",
+    "ambassadorLanguages",
+    "datasetStrength"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "minLength": 1
+    },
+    "name": {
+      "$ref": "#/$defs/localizedStrings"
+    },
+    "shortName": {
+      "$ref": "#/$defs/localizedStrings"
+    },
+    "defaultAppLanguage": {
+      "type": "string",
+      "minLength": 2
+    },
+    "defaultVisitorLanguage": {
+      "type": "string",
+      "minLength": 2
+    },
+    "pageTitle": {
+      "$ref": "#/$defs/localizedStrings"
+    },
+    "description": {
+      "$ref": "#/$defs/localizedStrings"
+    },
+    "ui": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      }
+    },
+    "entrances": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "node",
+          "labels"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "node": {
+            "type": "string",
+            "minLength": 1
+          },
+          "labels": {
+            "$ref": "#/$defs/localizedStrings"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "nodeAliases": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "specialPavilionLabels": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/localizedStrings"
+      }
+    },
+    "datasetStrength": {
+      "type": "object",
+      "required": [
+        "level",
+        "label",
+        "basis"
+      ],
+      "properties": {
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "label": {
+          "$ref": "#/$defs/localizedStrings"
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "ambassadorLanguages": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 2
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "localizedStrings": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}
