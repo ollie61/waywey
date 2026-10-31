@@ -171,3 +171,14 @@ The order may be adjusted after review, but later steps should not be started be
 - Target product version remains `v0.2.0`; shell cache advanced independently to `waywey-cache-15`.
 - Location/nearest-entrance assistance remains intentionally deferred from v0.2.0.
 - RC1 is suitable for final browser/device smoke testing before production merge.
+
+
+### RC1 smoke-test finding — Glen MRI — FIXED
+- Real-device testing on the live v0.1.0 Glen site exposed that the simple query `MRI` returned no result.
+- Repository inspection confirmed this was not merely an old-production search-engine issue: the v0.2.0 Glen dataset itself had no adult MRI destination or MRI/IRM alias.
+- Current official MUHC Medical Imaging information confirms MRI at the Glen site — Royal Victoria Hospital and locates adult Medical Imaging at Block C, Level 2, room C02.5022.
+- Added a dedicated adult MRI destination with MRI, magnetic resonance and French IRM aliases plus the direct official source URL.
+- Glen now contains 106 destinations and its source-audit date is 2026-10-31.
+- Added dataset-level regression tests requiring both `MRI` and `IRM` to resolve directly to the Glen MRI record.
+- The validator now checks any explicit “N destinations” count at the start of `datasetStrength.basis` against the actual record count.
+- This is treated as an RC1 release blocker found by device smoke testing; the corrected candidate should be promoted as RC2 after CI passes.
