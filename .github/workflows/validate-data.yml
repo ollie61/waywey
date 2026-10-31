@@ -13,6 +13,8 @@ on:
       - "tests/**"
       - "index.html"
       - "service-worker.js"
+      - "manifest.webmanifest"
+      - "icons/**"
   pull_request:
     paths:
       - "hospitals/**"
@@ -25,6 +27,8 @@ on:
       - "tests/**"
       - "index.html"
       - "service-worker.js"
+      - "manifest.webmanifest"
+      - "icons/**"
 
 permissions:
   contents: read
@@ -51,6 +55,8 @@ jobs:
             echo "Checking $file"
             node --input-type=module --check < "$file"
           done
+          echo "Checking service-worker.js"
+          node --check service-worker.js
       - name: Run modularisation smoke checks
         run: node scripts/refactor_smoke.mjs
       - name: Run search and routing unit tests
