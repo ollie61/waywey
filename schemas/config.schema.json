@@ -79,7 +79,14 @@
     "nodeAliases": {
       "type": "object",
       "additionalProperties": {
-        "type": "string"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
       }
     },
     "specialPavilionLabels": {
