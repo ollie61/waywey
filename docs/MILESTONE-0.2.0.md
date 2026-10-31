@@ -70,3 +70,18 @@ The order may be adjusted after review, but later steps should not be started be
 - Added formal Node unit tests for shortest-path routing, missing-route safety, aliases, null/unmapped nodes and slash-separated pavilion resolution.
 - CI runs all new tests with no added runtime or testing framework dependency.
 - Working milestone remains `v0.2.0`; service-worker cache advanced independently to `waywey-cache-9`.
+
+
+### Step 4 — PWA caching, offline state and updates — COMPLETE
+- Replaced all-hospital precaching with a small shared application-shell cache.
+- Hospital JSON is now network-first and stored in a separate persistent data cache only after that hospital is used.
+- The selected hospital package is explicitly warmed after load so first-time online use prepares it for later offline use.
+- Clean hospital redirect pages are cached with the selected hospital package for offline return visits.
+- Added a visible localized offline indicator in English, French, Hebrew and Arabic.
+- Added controlled service-worker update handling: new workers wait until the user chooses Update, then activate and reload once.
+- Removed automatic install-time `skipWaiting()` to avoid silently replacing code mid-session.
+- Added a generic multi-hospital PWA manifest and WayWey install icon.
+- Added PWA regression tests confirming hospital datasets are not in the shell precache, dynamic hospital caching exists, update activation is explicit and the manifest contains an icon.
+- CI now syntax-checks the service worker as well as application modules.
+- Working milestone remains `v0.2.0`.
+- Shared shell cache advanced to `waywey-cache-10`; hospital data uses the independent `waywey-hospital-data-1` cache so app-shell updates do not discard already visited hospital data.
