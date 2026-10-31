@@ -61,7 +61,8 @@
         "type": "string"
       },
       "sourceUrl": {
-        "type": "string"
+        "type": "string",
+        "format": "uri"
       },
       "outdoorMap": {
         "type": "object",
