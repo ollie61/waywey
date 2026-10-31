@@ -154,3 +154,17 @@ ar:{
  destinationSelected:"الوجهة المحددة: {name}."
 }
 };
+
+
+export const OUTDOOR_UI={
+en:{open:"Open outdoor map"},
+fr:{open:"Ouvrir la carte extérieure"},
+he:{open:"פתיחת מפה חיצונית"},
+ar:{open:"فتح الخريطة الخارجية"},
+es:{open:"Abrir mapa exterior"},
+pt:{open:"Abrir mapa externo"},
+ru:{open:"Открыть внешнюю карту"},
+vi:{open:"Mở bản đồ bên ngoài"},
+sw:{open:"Fungua ramani ya nje"},
+bg:{open:"Отвори външна карта"}
+};
