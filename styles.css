@@ -121,3 +121,13 @@ header .guide-btn:focus-visible,header .app-lang:focus-visible{outline-color:#ff
 
 .btn{min-height:44px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
 .btn[hidden]{display:none!important}
+
+.search-row{grid-template-columns:minmax(0,1fr) auto auto}
+.voice-btn[aria-pressed="true"]{background:var(--teal2);color:#fff}
+.voice-status:empty{display:none}
+.voice-privacy{margin-top:7px;color:var(--muted);font-size:.76rem;line-height:1.4;max-width:720px}
+@media(max-width:540px){
+  .search-row{grid-template-columns:1fr 1fr}
+  .search-row .field{grid-column:1/-1}
+  .search-row .btn{width:100%}
+}
