@@ -168,3 +168,35 @@ vi:{open:"Mở bản đồ bên ngoài"},
 sw:{open:"Fungua ramani ya nje"},
 bg:{open:"Отвори външна карта"}
 };
+
+
+export const VOICE_UI={
+en:{
+ button:"Voice",stop:"Stop",listening:"Listening…",recognized:"Heard: {text}",
+ denied:"Microphone permission was not granted.",noSpeech:"No speech detected. Try again.",
+ audio:"No microphone is available.",network:"Speech recognition could not reach the browser service.",
+ error:"Voice search could not start.",
+ privacy:"Voice search uses your browser’s speech-recognition service. Audio handling is controlled by the browser/provider; WayWey does not store the recording."
+},
+fr:{
+ button:"Voix",stop:"Arrêter",listening:"Écoute en cours…",recognized:"Entendu : {text}",
+ denied:"L’autorisation d’utiliser le microphone n’a pas été accordée.",noSpeech:"Aucune parole détectée. Réessayez.",
+ audio:"Aucun microphone n’est disponible.",network:"La reconnaissance vocale n’a pas pu joindre le service du navigateur.",
+ error:"La recherche vocale n’a pas pu démarrer.",
+ privacy:"La recherche vocale utilise le service de reconnaissance vocale de votre navigateur. Le traitement audio dépend du navigateur/fournisseur; WayWey ne conserve pas l’enregistrement."
+},
+he:{
+ button:"קול",stop:"עצירה",listening:"מקשיב…",recognized:"נקלט: {text}",
+ denied:"לא ניתנה הרשאה להשתמש במיקרופון.",noSpeech:"לא זוהה דיבור. נסו שוב.",
+ audio:"לא נמצא מיקרופון זמין.",network:"זיהוי הדיבור לא הצליח להתחבר לשירות הדפדפן.",
+ error:"לא ניתן היה להפעיל חיפוש קולי.",
+ privacy:"החיפוש הקולי משתמש בשירות זיהוי הדיבור של הדפדפן. הטיפול באודיו תלוי בדפדפן/בספק; WayWey אינו שומר את ההקלטה."
+},
+ar:{
+ button:"صوت",stop:"إيقاف",listening:"جارٍ الاستماع…",recognized:"تم سماع: {text}",
+ denied:"لم يتم منح إذن استخدام الميكروفون.",noSpeech:"لم يتم اكتشاف كلام. حاول مرة أخرى.",
+ audio:"لا يتوفر ميكروفون.",network:"تعذر على التعرف الصوتي الوصول إلى خدمة المتصفح.",
+ error:"تعذر بدء البحث الصوتي.",
+ privacy:"يستخدم البحث الصوتي خدمة التعرف على الكلام في المتصفح. يتحكم المتصفح/المزوّد في معالجة الصوت؛ لا يحتفظ WayWey بالتسجيل."
+}
+};
