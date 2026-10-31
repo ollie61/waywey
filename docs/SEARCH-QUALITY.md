@@ -20,14 +20,17 @@ For every destination record, the audit exercises:
 - unique short aliases/acronyms;
 - unique exact locations;
 - compact room-number forms with spaces/punctuation removed;
+- Latin-diacritic folding for localized canonical names;
+- unique four-character prefixes for partial typing;
 - deterministic one-edit fuzzy typos;
 - negative garbage queries in Latin, Hebrew and Arabic scripts.
 
-Fuzzy testing uses three independent typo classes:
+Fuzzy testing uses four independent typo classes:
 
 1. one-character deletion;
-2. one-character substitution;
-3. adjacent-character transposition.
+2. one-character insertion;
+3. one-character substitution;
+4. adjacent-character transposition.
 
 A generated typo is used for ranking only when the intended token is uniquely
 closest. If another destination has an equally close legitimate token, the
@@ -71,17 +74,19 @@ to guess arbitrary two- or three-character input.
 
 Current dataset size: **636 destinations across 5 hospitals**.
 
-| Hospital | Destinations | Canonical checks | Alias checks | Acronym checks | Unique locations | Compact rooms | Fuzzy delete | Fuzzy substitute | Fuzzy transpose |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| JGH | 190 | 380 | 654 | 50 | 112 | 107 | 152 | 153 | 153 |
-| CHUM | 119 | 238 | 412 | 29 | 40 | 31 | 85 | 85 | 85 |
-| Glen | 106 | 212 | 383 | 38 | 89 | 89 | 59 | 59 | 59 |
-| Verdun | 66 | 132 | 338 | 39 | 26 | 17 | 62 | 62 | 62 |
-| Hadassah Ein Kerem | 155 | 465 | 801 | 24 | 45 | 25 | 129 | 130 | 130 |
-| **Total** | **636** | **1,427** | **2,588** | **180** | **312** | **269** | **487** | **489** | **489** |
+| Hospital | Dest. | Canonical | Aliases | Acronyms | Accent-fold | Prefix | Locations | Compact rooms | Delete | Insert | Substitute | Transpose |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| JGH | 190 | 380 | 654 | 50 | 102 | 100 | 112 | 107 | 152 | 153 | 153 | 153 |
+| CHUM | 119 | 238 | 412 | 29 | 74 | 68 | 40 | 31 | 85 | 85 | 85 | 85 |
+| Glen | 106 | 212 | 383 | 38 | 82 | 42 | 89 | 89 | 59 | 59 | 59 | 59 |
+| Verdun | 66 | 132 | 338 | 39 | 35 | 56 | 26 | 17 | 62 | 62 | 62 | 62 |
+| Hadassah Ein Kerem | 155 | 465 | 801 | 24 | 0 | 103 | 45 | 25 | 129 | 130 | 130 | 130 |
+| **Total** | **636** | **1,427** | **2,588** | **180** | **293** | **369** | **312** | **269** | **487** | **489** | **489** | **489** |
 
-This corresponds to **1,465 fuzzy-mutation ranking checks**, plus the canonical,
-alias, acronym, location, compact-room and negative-query checks.
+This corresponds to **1,954 fuzzy-mutation ranking checks** across the four typo
+classes. Including canonical names, aliases, acronyms, accent folding, unique
+prefixes, locations, compact-room forms and negative garbage queries, the
+current audit performs **7,407 automated search checks/assertions**.
 
 The audit is data-driven. Adding or changing a hospital automatically expands
 the search test surface; it does not depend on somebody remembering to add a
