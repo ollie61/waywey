@@ -8,6 +8,7 @@ on:
       - "scripts/validate_hospitals.py"
       - "scripts/refactor_smoke.mjs"
       - "scripts/release_candidate_check.py"
+      - "scripts/audit_search_all_hospitals.mjs"
       - ".github/workflows/validate-data.yml"
       - "app.js"
       - "js/**"
@@ -24,6 +25,7 @@ on:
       - "scripts/validate_hospitals.py"
       - "scripts/refactor_smoke.mjs"
       - "scripts/release_candidate_check.py"
+      - "scripts/audit_search_all_hospitals.mjs"
       - ".github/workflows/validate-data.yml"
       - "app.js"
       - "js/**"
@@ -65,5 +67,7 @@ jobs:
         run: node scripts/refactor_smoke.mjs
       - name: Run regression tests
         run: node --test tests/*.test.mjs
+      - name: Audit search and fuzzy matching across all hospitals
+        run: node scripts/audit_search_all_hospitals.mjs
       - name: Check release-candidate invariants
         run: python scripts/release_candidate_check.py
