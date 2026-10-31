@@ -1,4 +1,4 @@
-import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
+import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,VOICE_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
 import {norm,rankResults,inferQueryLanguage} from "./js/search.js";
 import {findRoute,resolveTargetNode} from "./js/routing.js";
 import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,strengthBadge} from "./js/ui.js";
@@ -7,6 +7,7 @@ import {initPwa} from "./js/pwa.js";
 import {formatAuditDate,sourceLinks,hospitalSourceLinks} from "./js/provenance.js";
 import {setupDialog,openDialog,closeDialog,announce} from "./js/accessibility.js";
 import {outdoorMapUrl} from "./js/outdoor-map.js";
+import {createVoiceSearch} from "./js/voice-search.js";
 
 const APP_VERSION="0.2.0";
 let HOSPITAL={};
@@ -121,11 +122,78 @@ let selected=null;
 let selectedQueryLang=null;
 let appLang="en";
 let pwaController=null;
+let voiceController=null;
 function pwaLabels(){return PWA_UI[appLang]||PWA_UI.en;}
 function ensurePwa(){
   if(!pwaController)pwaController=initPwa({labels:pwaLabels});
   else pwaController.refreshLabels();
   return pwaController;
+}
+function voiceText(){return VOICE_UI[appLang]||VOICE_UI.en;}
+
+function voiceErrorMessage(code){
+  const t=voiceText();
+  if(code==="not-allowed"||code==="service-not-allowed")return t.denied;
+  if(code==="no-speech")return t.noSpeech;
+  if(code==="audio-capture")return t.audio;
+  if(code==="network")return t.network;
+  return t.error;
+}
+
+function renderVoiceButton(state="idle"){
+  const btn=$("voiceSearch");if(!btn||!voiceController||!voiceController.supported)return;
+  const active=state==="starting"||state==="listening"||voiceController.isActive();
+  btn.hidden=false;
+  btn.setAttribute("aria-pressed",active?"true":"false");
+  btn.textContent=active?"■ "+voiceText().stop:"🎙 "+voiceText().button;
+}
+
+function refreshVoiceUi(){
+  const btn=$("voiceSearch"),privacy=$("voicePrivacy");
+  if(!btn||!privacy)return;
+  if(!voiceController||!voiceController.supported){
+    btn.hidden=true;privacy.hidden=true;return;
+  }
+  privacy.hidden=false;
+  privacy.textContent=voiceText().privacy;
+  renderVoiceButton(voiceController.isActive()?"listening":"idle");
+}
+
+function initVoiceSearch(){
+  const btn=$("voiceSearch"),status=$("voiceStatus");
+  if(!btn||!status)return;
+  voiceController=createVoiceSearch({
+    getLanguage:()=>appLang,
+    onState:state=>{
+      renderVoiceButton(state);
+      if(state==="starting"||state==="listening"){
+        status.textContent=voiceText().listening;
+        announce(voiceText().listening);
+      }
+    },
+    onResult:transcript=>{
+      $("q").value=transcript;
+      search();
+      const message=templateText(voiceText().recognized,{text:transcript});
+      status.textContent=message;
+      announce(message);
+      $("q").focus();
+    },
+    onError:code=>{
+      const message=voiceErrorMessage(code);
+      status.textContent=message;
+      announce(message);
+    }
+  });
+  refreshVoiceUi();
+  btn.onclick=()=>{
+    if(!voiceController||!voiceController.supported)return;
+    if(voiceController.isActive())voiceController.stop();
+    else{
+      status.textContent="";
+      voiceController.start();
+    }
+  };
 }
 
 function showHospitalLanding(){
@@ -293,6 +361,7 @@ function setAppLanguage(lang){
  if(selected)choose(selected,false);
  if($("guideDialog").open)renderQuickGuide();
  renderDatasetProvenance();
+ refreshVoiceUi();
  if(pwaController)pwaController.refreshLabels();
 }
 
@@ -471,6 +540,7 @@ async function bootstrap(){
  }
 
  ["guideDialog","visitorDialog","qrDialog"].forEach(id=>setupDialog($(id)));
+ initVoiceSearch();
  $("appLang").onchange=()=>setAppLanguage($("appLang").value);
  $("quickGuideBtn").onclick=openQuickGuide;
  $("closeGuide").onclick=()=>closeDialog($("guideDialog"));
