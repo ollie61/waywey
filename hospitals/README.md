@@ -72,6 +72,15 @@ Optional evidence fields:
 - `sourceUrl` — direct source URL for the specific destination;
 - `note` — general note;
 - `notes` — localized notes.
+- `outdoorMap.query` — an explicit source-backed street address or outdoor landmark query used for external-map handoff.
+
+### Outdoor map handoff
+
+Do not derive an outdoor map destination from `loc`, pavilion adjacency or an indoor route failure.
+
+Add `outdoorMap.query` only when the dataset has a sufficiently clear published outdoor address/landmark. The current shared engine opens a Google Maps search link only after the user chooses the map action; WayWey itself does not request GPS permission.
+
+For a `verify` destination, do not add outdoor map metadata unless the outdoor address itself is independently safe to present. A prominent Verify warning does not make an uncertain street address safe.
 
 ### Status meaning
 
