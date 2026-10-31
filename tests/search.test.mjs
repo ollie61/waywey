@@ -60,3 +60,16 @@ test("query language detection preserves Hebrew Arabic and English behaviour",()
   assert.equal(s.inferQueryLanguage("أعصاب",{},["he","en","ar"],"he"),"ar");
   assert.equal(s.inferQueryLanguage("neurology",{},["he","en","ar"],"he"),"en");
 });
+
+
+test("adjacent transpositions count as one fuzzy edit",()=>{
+  assert.equal(s.editDistance("cancer","cancre",1),1);
+  assert.equal(s.editDistance("cardiology","cardioloyg",2),1);
+});
+
+test("exact service aliases outrank alphabetic location labels",()=>{
+  const institute={en:"Institute of Community & Family Psychiatry",p:"ICFP",loc:"",aliases:["ICFP"],status:"official"};
+  const roomOnly={en:"Psychiatry Outpatients",p:"ICFP",loc:"ICFP",aliases:[],status:"official"};
+  const ranked=s.rankResults([roomOnly,institute],"ICFP",12);
+  assert.equal(ranked[0][0],institute);
+});
