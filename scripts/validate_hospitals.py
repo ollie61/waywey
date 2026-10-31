@@ -75,6 +75,16 @@ def validate_cross_files(folder: Path, config, destinations, routes, guide, erro
                 f"{rel}/config.json: entrance {entrance['id']!r} resolves to unknown routing node {resolved!r}"
             )
 
+    # If the dataset-strength basis begins with an explicit destination count,
+    # keep that human-readable count synchronized with the actual dataset.
+    basis = config.get("datasetStrength", {}).get("basis", "")
+    count_match = __import__("re").match(r"^(\d+)\s+destinations\b", basis)
+    if count_match and int(count_match.group(1)) != len(destinations):
+        errors.append(
+            f"{rel}/config.json: datasetStrength basis destination count "
+            f"{count_match.group(1)} does not match {len(destinations)} records"
+        )
+
     # Catch accidental duplicate canonical records without rejecting legitimate
     # same-name departments at different locations.
     seen = {}
