@@ -182,3 +182,21 @@ The order may be adjusted after review, but later steps should not be started be
 - Added dataset-level regression tests requiring both `MRI` and `IRM` to resolve directly to the Glen MRI record.
 - The validator now checks any explicit “N destinations” count at the start of `datasetStrength.basis` against the actual record count.
 - This is treated as an RC1 release blocker found by device smoke testing; the corrected candidate should be promoted as RC2 after CI passes.
+
+
+### RC2 search-quality audit — promoted to RC3
+- Replaced ad-hoc search spot checks with a data-driven audit across all 636 current destinations in all five hospital packages.
+- The audit checks all localized canonical names, all configured aliases, unique short acronyms, unique locations, compact room-number forms and negative garbage queries.
+- Fuzzy logic is tested using one-character deletion, substitution and adjacent transposition.
+- Current audit surface includes 1,465 generated fuzzy ranking checks: 487 deletion, 489 substitution and 489 transposition cases.
+- Every hospital must achieve at least 35% destination coverage for every fuzzy typo class; current coverage ranges from approximately 56% at Glen to 94% at Verdun.
+- Generated typo tests reject genuinely ambiguous mutations when another destination has an equally close legitimate token.
+- The audit initially exposed two useful classes of issue:
+  - alphabetic location labels such as ICFP could outrank a direct service alias;
+  - standard Levenshtein distance treated an adjacent transposition as two edits.
+- Search ranking was corrected so numeric room/address matches retain strong priority while pure alphabetic location labels do not overpower exact names/aliases.
+- Fuzzy edit distance now treats a single adjacent transposition as one edit.
+- Full all-hospital audit now passes together with the existing regression suite and release-candidate invariants.
+- Search quality methodology and current coverage metrics are documented in `docs/SEARCH-QUALITY.md`.
+- Product version remains `v0.2.0`; shell cache advanced to `waywey-cache-16` because the shared search module changed.
+- This corrected candidate supersedes RC2 and should be frozen as RC3.
