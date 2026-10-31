@@ -10,6 +10,7 @@ on:
       - ".github/workflows/validate-data.yml"
       - "app.js"
       - "js/**"
+      - "tests/**"
       - "index.html"
       - "service-worker.js"
   pull_request:
@@ -21,6 +22,7 @@ on:
       - ".github/workflows/validate-data.yml"
       - "app.js"
       - "js/**"
+      - "tests/**"
       - "index.html"
       - "service-worker.js"
 
@@ -51,3 +53,5 @@ jobs:
           done
       - name: Run modularisation smoke checks
         run: node scripts/refactor_smoke.mjs
+      - name: Run search and routing unit tests
+        run: node --test tests/*.test.mjs
