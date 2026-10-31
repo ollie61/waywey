@@ -58,10 +58,19 @@ function mutationCandidates(token,type){
   return out;
 }
 
-function variantAmbiguous(variant,target,tokenOwners){
+function variantAmbiguous(variant,originalToken,target,tokenOwners){
+  // A generated typo is only a fair ranking test when the intended token is
+  // uniquely closest. If another destination has an equally-close token (for
+  // example French "cour" can be one edit from "jour"), the query is genuinely
+  // ambiguous and should not be used to judge fuzzy ranking quality.
+  const intendedDistance=search.editDistance(originalToken,variant,3);
   for(const [token,owners] of tokenOwners){
-    if(!token.includes(variant))continue;
-    for(const owner of owners)if(owner!==target)return true;
+    let hasOtherOwner=false;
+    for(const owner of owners)if(owner!==target){hasOtherOwner=true;break;}
+    if(!hasOtherOwner)continue;
+
+    if(token.includes(variant))return true;
+    if(search.editDistance(token,variant,intendedDistance)<=intendedDistance)return true;
   }
   return false;
 }
@@ -213,7 +222,7 @@ for(const id of entries){
       for(const token of unique){
         for(const typo of mutationCandidates(token,type)){
           if(holderCount(tokens,typo)>0)continue;
-          if(variantAmbiguous(typo,d,tokens))continue;
+          if(variantAmbiguous(typo,token,d,tokens))continue;
           stats[statKey]++;
           const rank=rankOf(typo,d);
           if(rank>5)fail(`${id}: fuzzy ${type} ranks #${rank}: ${token} -> ${typo} -> ${d.en}`,failures);
