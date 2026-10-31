@@ -32,7 +32,8 @@ Each major step should:
 4. PWA caching/update/offline improvements.
 5. Trust/data provenance UI (audit dates, source links, Verify treatment).
 6. Accessibility and mobile UX pass.
-7. Optional enhancements (voice search, outdoor maps, location assistance).
+7. Maintenance/documentation layer: multi-hospital README, hospital audit workflow and release checklist.
+8. Optional enhancements (voice search, outdoor maps, location assistance).
 
 The order may be adjusted after review, but later steps should not be started before the preceding major step is accepted.
 
@@ -115,3 +116,15 @@ The order may be adjusted after review, but later steps should not be started be
 - Darkened the shared muted-text colour from `#64777d` to `#5d7076` so normal text on the application background clears WCAG AA contrast.
 - Added accessibility regression checks for landmarks, dialog naming, semantic search controls, keyboard-native search results, touch targets, focus styling, focus trapping and core text-colour contrast.
 - Working milestone remains `v0.2.0`; shared shell cache advanced independently to `waywey-cache-12`.
+
+
+### Step 7 — Maintenance and documentation layer — COMPLETE
+- Rewrote the root README around the current multi-hospital v0.2 architecture rather than the original JGH-only prototype.
+- Documented all current hospital package IDs, ambassador languages, repository structure, local development, validation, privacy posture and version/cache policy.
+- Replaced the outdated hospital-package README with the current package contract, including required audit metadata, official/verify meaning, routing evidence rules, multilingual guides, clean paths and PWA data caching.
+- Added `docs/HOSPITAL-MAINTENANCE.md` as the operating procedure for adding, auditing and updating hospitals.
+- Defined official-source precedence, conflict handling, completeness limits, alias/translation rules, conservative routing, human review and data-only version/cache rules.
+- Added `docs/RELEASE-CHECKLIST.md` covering rollback points, semantic product versioning, independent cache revisions, automated validation, manual smoke testing, production deployment and post-release tagging.
+- Updated `docs/ARCHITECTURE.md` through the search, PWA, provenance and accessibility modules introduced during this milestone.
+- No runtime application code or hospital data was changed in Step 7.
+- Working milestone remains `v0.2.0`; shell cache remains `waywey-cache-12`.
