@@ -1,8 +1,9 @@
-import {I18N,QR_UI,APP_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
+import {I18N,QR_UI,APP_UI,PWA_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
 import {norm,rankResults,inferQueryLanguage} from "./js/search.js";
 import {findRoute,resolveTargetNode} from "./js/routing.js";
 import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,strengthBadge} from "./js/ui.js";
 import {hospitalIdFromUrl,fetchJson} from "./js/data.js";
+import {initPwa} from "./js/pwa.js";
 
 const APP_VERSION="0.2.0";
 let HOSPITAL={};
@@ -29,6 +30,13 @@ const $=id=>document.getElementById(id);
 let selected=null;
 let selectedQueryLang=null;
 let appLang="en";
+let pwaController=null;
+function pwaLabels(){return PWA_UI[appLang]||PWA_UI.en;}
+function ensurePwa(){
+  if(!pwaController)pwaController=initPwa({labels:pwaLabels});
+  else pwaController.refreshLabels();
+  return pwaController;
+}
 
 function showHospitalLanding(){
  document.documentElement.lang="fr";
@@ -186,6 +194,7 @@ function setAppLanguage(lang){
  if($("q").value.trim())search();
  if(selected)choose(selected,false);
  if($("guideDialog").open)renderQuickGuide();
+ if(pwaController)pwaController.refreshLabels();
 }
 
 function displayWhere(d,lang=appLang){return [d.p?pavilionFor(d.p,lang):"",locationFor(d,lang)].filter(Boolean).join(" · ")}
@@ -306,9 +315,10 @@ async function bootstrap(){
  const requestedHospital=hospitalIdFromUrl();
  if(!requestedHospital){
    showHospitalLanding();
-   if("serviceWorker" in navigator)navigator.serviceWorker.register("./service-worker.js").catch(()=>{});
+   ensurePwa();
    return;
  }
+ ensurePwa();
  try{
    await loadHospital();
  }catch(e){
@@ -357,7 +367,7 @@ async function bootstrap(){
    if(d){selected=d;setTimeout(()=>{try{$("visitorDialog").showModal();renderVisitor()}catch(e){}},60);}
  }
 
- if("serviceWorker" in navigator)navigator.serviceWorker.register("./service-worker.js").catch(()=>{});
+ ensurePwa().cacheHospital(HOSPITAL.id||requestedHospital);
 }
 bootstrap();
 
