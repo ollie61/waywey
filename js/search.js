@@ -36,21 +36,27 @@ export function inferQueryLanguage(q,d,languages,appLang){
 function compact(s){return norm(s).replace(/\s+/g,"");}
 
 export function editDistance(a,b,maxDistance=Infinity){
+  // Optimal-string-alignment Damerau-Levenshtein distance. Treating one
+  // adjacent transposition as one edit matches common typing errors such as
+  // "cancre" for "cancer" without making short-query fuzzy matching broader.
   const aa=Array.from(a||""),bb=Array.from(b||"");
   if(Math.abs(aa.length-bb.length)>maxDistance)return maxDistance+1;
+  let prevPrev=null;
   let prev=Array.from({length:bb.length+1},(_,i)=>i);
   for(let i=1;i<=aa.length;i++){
     const cur=[i];
-    let rowMin=cur[0];
     for(let j=1;j<=bb.length;j++){
       const cost=aa[i-1]===bb[j-1]?0:1;
-      cur[j]=Math.min(cur[j-1]+1,prev[j]+1,prev[j-1]+cost);
-      rowMin=Math.min(rowMin,cur[j]);
+      let value=Math.min(cur[j-1]+1,prev[j]+1,prev[j-1]+cost);
+      if(prevPrev&&i>1&&j>1&&aa[i-1]===bb[j-2]&&aa[i-2]===bb[j-1]){
+        value=Math.min(value,prevPrev[j-2]+1);
+      }
+      cur[j]=value;
     }
-    if(rowMin>maxDistance)return maxDistance+1;
+    prevPrev=prev;
     prev=cur;
   }
-  return prev[bb.length];
+  return prev[bb.length]>maxDistance?maxDistance+1:prev[bb.length];
 }
 
 function fuzzyThreshold(n){
@@ -118,8 +124,26 @@ function literalScore(value,q,kind){
 
 function locationScore(location,q){
   if(!location)return 0;
-  let score=literalScore(location,q,"location");
-  const n=norm(q);
+  const f=norm(location),n=norm(q);
+  if(!f||!n)return 0;
+
+  // Numeric room/address queries deserve very strong weighting. Alphabetic
+  // area labels (for example "ICFP") do not: an exact service name/alias
+  // should outrank a destination merely because its location field is ICFP.
+  const numeric=/\d/.test(n)||/\d/.test(f);
+  let score;
+  if(numeric){
+    score=literalScore(location,q,"location");
+  }else if(f===n){
+    score=85;
+  }else if(f.startsWith(n)){
+    score=60;
+  }else if(f.includes(n)){
+    score=40;
+  }else{
+    score=0;
+  }
+
   // Room numbers are commonly typed without punctuation or spaces (E959,
   // N1612, B1404). Compact comparison preserves that intent.
   if(/\d/.test(n)){
