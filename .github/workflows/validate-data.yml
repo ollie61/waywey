@@ -1,4 +1,4 @@
-name: Validate hospital data
+name: Validate WayWey
 
 on:
   push:
@@ -7,12 +7,20 @@ on:
       - "schemas/**"
       - "scripts/validate_hospitals.py"
       - ".github/workflows/validate-data.yml"
+      - "app.js"
+      - "js/**"
+      - "index.html"
+      - "service-worker.js"
   pull_request:
     paths:
       - "hospitals/**"
       - "schemas/**"
       - "scripts/validate_hospitals.py"
       - ".github/workflows/validate-data.yml"
+      - "app.js"
+      - "js/**"
+      - "index.html"
+      - "service-worker.js"
 
 permissions:
   contents: read
@@ -31,3 +39,11 @@ jobs:
         run: python -m pip install --disable-pip-version-check "jsonschema==4.23.0"
       - name: Validate hospital packages
         run: python scripts/validate_hospitals.py
+      - name: Check JavaScript module syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in app.js js/*.js; do
+            echo "Checking $file"
+            node --input-type=module --check < "$file"
+          done
