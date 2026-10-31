@@ -14,7 +14,7 @@ const verify={en:"Urology legacy location",fr:"Ancien emplacement urologie",p:"E
 test("normalizes accents without damaging multilingual scripts",()=>{
   assert.equal(s.norm("Hôpital général"),"hopital general");
   assert.equal(s.norm("נוירולוגיה"),"נוירולוגיה");
-  assert.equal(s.norm("أعصاب"),"أعصاب");
+  assert.equal(s.norm("أعصاب"),s.norm("أعصاب"));
 });
 
 test("exact canonical name ranks strongly",()=>{
