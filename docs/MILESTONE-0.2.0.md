@@ -33,7 +33,8 @@ Each major step should:
 5. Trust/data provenance UI (audit dates, source links, Verify treatment).
 6. Accessibility and mobile UX pass.
 7. Maintenance/documentation layer: multi-hospital README, hospital audit workflow and release checklist.
-8. Optional enhancements (voice search, outdoor maps, location assistance).
+8. Outdoor-map handoff for explicit unrouted/off-site destinations.
+9. Optional enhancements (voice search, location assistance and other product features).
 
 The order may be adjusted after review, but later steps should not be started before the preceding major step is accepted.
 
@@ -128,3 +129,16 @@ The order may be adjusted after review, but later steps should not be started be
 - Updated `docs/ARCHITECTURE.md` through the search, PWA, provenance and accessibility modules introduced during this milestone.
 - No runtime application code or hospital data was changed in Step 7.
 - Working milestone remains `v0.2.0`; shell cache remains `waywey-cache-12`.
+
+
+### Step 8 — Explicit outdoor-map handoff — COMPLETE
+- Added `js/outdoor-map.js` to generate external map links only from explicit `outdoorMap.query` metadata.
+- Added optional `outdoorMap.query` support to the destination schema.
+- Added ambassador and visitor map actions; they remain hidden for ordinary indoor destinations and for unrouted destinations without explicit map metadata.
+- The handoff is user-initiated, opens an external Google Maps search, and does not request device GPS permission inside WayWey.
+- Added multilingual outdoor-map labels for all current visitor languages.
+- Added source-backed outdoor map metadata to eight confirmed-address destinations across JGH, Glen and Verdun, including off-site clinics and exterior parking.
+- No map metadata was added to uncertain/Verify street locations.
+- Added automated tests proving map links require explicit metadata and encode the address safely.
+- Updated hospital-maintenance, package-contract, architecture and release documentation to prohibit inferred outdoor map destinations or embedded third-party tracking.
+- Working milestone remains `v0.2.0`; shared shell cache advanced independently to `waywey-cache-13`.
