@@ -85,3 +85,17 @@ The order may be adjusted after review, but later steps should not be started be
 - CI now syntax-checks the service worker as well as application modules.
 - Working milestone remains `v0.2.0`.
 - Shared shell cache advanced to `waywey-cache-10`; hospital data uses the independent `waywey-hospital-data-1` cache so app-shell updates do not discard already visited hospital data.
+
+
+### Step 5 — Trust, audit provenance and Verify presentation — COMPLETE
+- Every hospital configuration now records a required `lastSourceAudit` date and at least one official `sourceLinks` entry.
+- The hospital UI shows the last source-audit date and official source links.
+- Selected destinations show destination-specific source URLs when the dataset contains them, then fall back to hospital-level official sources.
+- Added a dedicated provenance module to extract, deduplicate and safely expose HTTP(S) source links.
+- Added localized provenance labels and Verify guidance in English, French, Hebrew and Arabic.
+- Verify search results now have a distinct warning border and badge.
+- Selected Verify destinations now show a prominent warning panel and stronger route-card treatment.
+- Existing visitor-facing Verify warnings remain in place.
+- Configuration schema now requires audit metadata for all future hospital packages.
+- Added provenance unit tests for date handling, source extraction, deduplication and web-link filtering.
+- Working milestone remains `v0.2.0`; shared shell cache advanced independently to `waywey-cache-11`.
