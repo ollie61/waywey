@@ -1,9 +1,10 @@
-import {I18N,QR_UI,APP_UI,PWA_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
+import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
 import {norm,rankResults,inferQueryLanguage} from "./js/search.js";
 import {findRoute,resolveTargetNode} from "./js/routing.js";
 import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,strengthBadge} from "./js/ui.js";
 import {hospitalIdFromUrl,fetchJson} from "./js/data.js";
 import {initPwa} from "./js/pwa.js";
+import {formatAuditDate,sourceLinks,hospitalSourceLinks} from "./js/provenance.js";
 
 const APP_VERSION="0.2.0";
 let HOSPITAL={};
@@ -19,6 +20,70 @@ function queryLanguage(q,d){return inferQueryLanguage(q,d,hospitalLanguages(),ap
 function pavilionFor(p,lang){return formatPavilion(p,lang,HOSPITAL,PAV_LABELS);}
 function bfs(a,b){return findRoute(GRAPH,a,b);}
 function targetNode(d){return resolveTargetNode(d,HOSPITAL,GRAPH);}
+
+function provenanceText(){return PROVENANCE_UI[appLang]||PROVENANCE_UI.en;}
+
+function appendSourceLinks(container,links,destinationOnly=false){
+  container.innerHTML="";
+  const t=provenanceText();
+  links.forEach((link,index)=>{
+    if(index)container.appendChild(document.createTextNode(" · "));
+    const a=document.createElement("a");
+    a.href=link.url;
+    a.target="_blank";
+    a.rel="noopener noreferrer";
+    a.textContent=link.label||(destinationOnly?t.destinationSource:(link.kind==="destination"?t.destinationSource:link.url));
+    container.appendChild(a);
+  });
+}
+
+function renderDatasetProvenance(){
+  const box=$("datasetMeta");if(!box)return;
+  const t=provenanceText();
+  box.innerHTML="";
+  const audit=document.createElement("span");
+  audit.className="dataset-audit";
+  const formatted=formatAuditDate(HOSPITAL.lastSourceAudit,appLang);
+  audit.textContent=t.auditLabel+": "+(formatted||HOSPITAL.lastSourceAudit||"—");
+  box.appendChild(audit);
+  const links=hospitalSourceLinks(HOSPITAL);
+  if(links.length){
+    const sources=document.createElement("span");
+    sources.className="dataset-sources";
+    const label=document.createElement("strong");
+    label.textContent=t.sourcesLabel+": ";
+    sources.appendChild(label);
+    appendSourceLinks(sources,links);
+    box.appendChild(sources);
+  }
+}
+
+function renderRouteProvenance(d){
+  const t=provenanceText();
+  const verify=$("verifyAlert");
+  const route=$("route");
+  const isVerify=d&&d.status==="verify";
+  route.classList.toggle("verify-active",isVerify);
+  verify.hidden=!isVerify;
+  verify.textContent=isVerify?"⚠ "+t.verifyAlert:"";
+
+  const box=$("routeSources");
+  const links=sourceLinks(d,HOSPITAL);
+  box.hidden=!links.length;
+  box.innerHTML="";
+  if(links.length){
+    const label=document.createElement("strong");
+    label.textContent=t.sourcesLabel+": ";
+    box.appendChild(label);
+    links.forEach((link,index)=>{
+      if(index)box.appendChild(document.createTextNode(" · "));
+      const a=document.createElement("a");
+      a.href=link.url;a.target="_blank";a.rel="noopener noreferrer";
+      a.textContent=link.label||(link.kind==="destination"?t.destinationSource:link.url);
+      box.appendChild(a);
+    });
+  }
+}
 
 function populateAppLanguages(){
  const sel=$("appLang");if(!sel)return;sel.innerHTML="";
@@ -194,6 +259,7 @@ function setAppLanguage(lang){
  if($("q").value.trim())search();
  if(selected)choose(selected,false);
  if($("guideDialog").open)renderQuickGuide();
+ renderDatasetProvenance();
  if(pwaController)pwaController.refreshLabels();
 }
 
@@ -240,14 +306,15 @@ function search(){
  if(!q)return;
  const hits=rankResults(DATA,q,12);
  if(!hits.length){box.innerHTML='<div class="status">'+APP_UI[appLang].noMatch+'</div>';return}
- hits.forEach(([d])=>{const el=document.createElement("div");el.className="result";const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);el.innerHTML="<strong>"+primary+"</strong>"+(secondary?"<small>"+secondary+"</small>":"")+"<div class='where'>"+displayWhere(d)+"</div>";el.onclick=()=>choose(d,true,queryLanguage(q,d));box.appendChild(el)});
+ hits.forEach(([d])=>{const el=document.createElement("div");el.className="result"+(d.status==="verify"?" verify-result":"");const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);el.innerHTML="<strong>"+primary+"</strong>"+(d.status==="verify"?"<span class=\'verify-badge\'>⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"")+(secondary?"<small>"+secondary+"</small>":"")+"<div class=\'where\'>"+displayWhere(d)+"</div>";el.onclick=()=>choose(d,true,queryLanguage(q,d));box.appendChild(el)});
 }
 function choose(d,scroll=true,queryLang=null){
  selected=d;if(queryLang)selectedQueryLang=queryLang;const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
  $("destName").textContent=primary+(secondary&&secondary!==primary?" / "+secondary:"");$("destWhere").textContent=displayWhere(d);
- $("pills").innerHTML=(d.p?"<span class='pill'>"+pavilionFor(d.p,appLang)+"</span>":"")+(d.loc?"<span class='pill'>"+d.loc+"</span>":"")+(d.status==="verify"?"<span class='pill'>"+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"");
+ $("pills").innerHTML=(d.p?"<span class=\'pill\'>"+pavilionFor(d.p,appLang)+"</span>":"")+(d.loc?"<span class=\'pill\'>"+d.loc+"</span>":"")+(d.status==="verify"?"<span class=\'pill verify-pill\'>⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"");
  $("steps").innerHTML=ambassadorSteps(d).map(s=>"<li dir=\"auto\">"+s+"</li>").join("");
  const note=noteFor(d);$("note").style.display=note?"block":"none";$("note").textContent=note;
+ renderRouteProvenance(d);
  $("route").classList.add("active");if(scroll)$("route").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function slugFor(d){return norm(d.en+" "+(d.loc||"")).replace(/ /g,"-")}
