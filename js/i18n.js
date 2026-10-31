@@ -106,3 +106,23 @@ fr:{offline:"Hors ligne — utilisation des données en cache",updateReady:"Une 
 he:{offline:"לא מקוון — נעשה שימוש בנתונים שמורים",updateReady:"עדכון של WayWey מוכן.",updateButton:"עדכון"},
 ar:{offline:"غير متصل — يتم استخدام البيانات المحفوظة",updateReady:"تحديث WayWey جاهز.",updateButton:"تحديث"}
 };
+
+
+export const PROVENANCE_UI={
+en:{
+ auditLabel:"Last source audit",sourcesLabel:"Official sources",destinationSource:"Destination source",
+ verifyAlert:"Verify this location before directing the visitor. Current source information is conflicting, older, or incomplete."
+},
+fr:{
+ auditLabel:"Dernière vérification des sources",sourcesLabel:"Sources officielles",destinationSource:"Source de la destination",
+ verifyAlert:"Vérifiez cet emplacement avant d’orienter le visiteur. Les sources actuelles sont contradictoires, anciennes ou incomplètes."
+},
+he:{
+ auditLabel:"בדיקת מקורות אחרונה",sourcesLabel:"מקורות רשמיים",destinationSource:"מקור ליעד",
+ verifyAlert:"יש לאמת את המיקום לפני שמכוונים את המבקר. המידע במקורות הנוכחיים סותר, ישן או חלקי."
+},
+ar:{
+ auditLabel:"آخر تدقيق للمصادر",sourcesLabel:"المصادر الرسمية",destinationSource:"مصدر الوجهة",
+ verifyAlert:"يجب التحقق من هذا الموقع قبل توجيه الزائر. معلومات المصادر الحالية متعارضة أو قديمة أو غير مكتملة."
+}
+};
