@@ -126,3 +126,31 @@ ar:{
  verifyAlert:"يجب التحقق من هذا الموقع قبل توجيه الزائر. معلومات المصادر الحالية متعارضة أو قديمة أو غير مكتملة."
 }
 };
+
+
+export const ACCESSIBILITY_UI={
+en:{
+ skip:"Skip to main content",appLanguage:"Application language",visitorLanguage:"Visitor language",
+ searchResults:"Search results",qrCode:"QR code for visitor directions",
+ noResults:"No search results.",resultsFound:"{count} search results found.",
+ destinationSelected:"Selected destination: {name}."
+},
+fr:{
+ skip:"Aller au contenu principal",appLanguage:"Langue de l’application",visitorLanguage:"Langue du visiteur",
+ searchResults:"Résultats de recherche",qrCode:"Code QR pour les indications du visiteur",
+ noResults:"Aucun résultat de recherche.",resultsFound:"{count} résultats de recherche trouvés.",
+ destinationSelected:"Destination sélectionnée : {name}."
+},
+he:{
+ skip:"דלג לתוכן הראשי",appLanguage:"שפת היישום",visitorLanguage:"שפת המבקר",
+ searchResults:"תוצאות חיפוש",qrCode:"קוד QR להוראות למבקר",
+ noResults:"לא נמצאו תוצאות חיפוש.",resultsFound:"נמצאו {count} תוצאות חיפוש.",
+ destinationSelected:"היעד שנבחר: {name}."
+},
+ar:{
+ skip:"انتقل إلى المحتوى الرئيسي",appLanguage:"لغة التطبيق",visitorLanguage:"لغة الزائر",
+ searchResults:"نتائج البحث",qrCode:"رمز QR لإرشادات الزائر",
+ noResults:"لا توجد نتائج بحث.",resultsFound:"تم العثور على {count} نتيجة بحث.",
+ destinationSelected:"الوجهة المحددة: {name}."
+}
+};
