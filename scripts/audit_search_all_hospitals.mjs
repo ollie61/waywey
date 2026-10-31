@@ -3,8 +3,9 @@
 //
 // Unlike a small hand-written smoke suite, this derives queries from the full
 // destination inventories. It checks all canonical names and aliases, unique
-// locations/room codes, short acronyms, and three deterministic typo classes:
-// deletion, substitution and adjacent transposition.
+// locations/room codes, short acronyms, accent folding, unique prefixes, and
+// four deterministic typo classes: deletion, insertion, substitution and
+// adjacent transposition.
 
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -23,6 +24,10 @@ function addOwner(map,key,d){
   map.get(key).add(d);
 }
 function holderCount(map,key){return map.get(key)?.size||0;}
+
+function stripLatinDiacritics(value){
+  return (value||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").normalize("NFC");
+}
 
 function substitutionChar(token,current){
   if(/[\u0590-\u05ff]/u.test(token))return current==="ז"?"ט":"ז";
@@ -46,6 +51,8 @@ function mutationCandidates(token,type){
     const copy=[...chars];
     if(type==="delete"){
       copy.splice(i,1);
+    }else if(type==="insert"){
+      copy.splice(i,0,substitutionChar(token,copy[i]));
     }else if(type==="substitute"){
       copy[i]=substitutionChar(token,copy[i]);
     }else if(type==="transpose"){
@@ -104,9 +111,12 @@ function summaryLine(s){
     String(s.canonicalChecks).padStart(5)+" canonical",
     String(s.aliasChecks).padStart(5)+" aliases",
     String(s.acronymChecks).padStart(4)+" acronyms",
+    String(s.accentChecks).padStart(4)+" accents",
+    String(s.prefixChecks).padStart(4)+" prefixes",
     String(s.locationChecks).padStart(4)+" locations",
     String(s.compactRoomChecks).padStart(4)+" rooms",
     String(s.fuzzyDelete).padStart(4)+" del",
+    String(s.fuzzyInsert).padStart(4)+" ins",
     String(s.fuzzySubstitute).padStart(4)+" sub",
     String(s.fuzzyTranspose).padStart(4)+" swap"
   ].join(" | ");
@@ -121,11 +131,17 @@ const entries=(await fs.readdir(hospitalRoot,{withFileTypes:true}))
 const allFailures=[];
 const summaries=[];
 let totalDestinations=0;
-const totalFuzzy={delete:0,substitute:0,transpose:0};
+const totalFuzzy={delete:0,insert:0,substitute:0,transpose:0};
 
 for(const id of entries){
   const data=JSON.parse(await fs.readFile(path.join(hospitalRoot,id,"destinations.json"),"utf8"));
   const {names,aliases,locations,tokens,compactLocations}=exactFieldOwners(data);
+  const prefixOwners=new Map();
+  for(const [token,owners] of tokens){
+    if(Array.from(token).length<6)continue;
+    const prefix=Array.from(token).slice(0,4).join("");
+    for(const owner of owners)addOwner(prefixOwners,prefix,owner);
+  }
   const failures=[];
   const rankCache=new Map();
 
@@ -141,9 +157,9 @@ for(const id of entries){
 
   const stats={
     id,destinations:data.length,
-    canonicalChecks:0,aliasChecks:0,acronymChecks:0,
+    canonicalChecks:0,aliasChecks:0,acronymChecks:0,accentChecks:0,prefixChecks:0,
     locationChecks:0,compactRoomChecks:0,
-    fuzzyDelete:0,fuzzySubstitute:0,fuzzyTranspose:0
+    fuzzyDelete:0,fuzzyInsert:0,fuzzySubstitute:0,fuzzyTranspose:0
   };
 
   for(const d of data){
@@ -156,6 +172,13 @@ for(const id of entries){
       const rank=rankOf(q,d);
       const allowed=Math.max(3,holderCount(names,search.norm(q)));
       if(rank>allowed)fail(`${id}: canonical query ranks #${rank} (allowed #${allowed}): ${q} -> ${d.en}`,failures);
+
+      const folded=stripLatinDiacritics(q);
+      if(folded!==q){
+        stats.accentChecks++;
+        const foldedRank=rankOf(folded,d);
+        if(foldedRank>allowed)fail(`${id}: accent-folded canonical ranks #${foldedRank}: ${folded} -> ${d.en}`,failures);
+      }
     }
 
     // Every alias must score. A unique alias should rank in the top 3.
@@ -196,11 +219,30 @@ for(const id of entries){
     }
   }
 
+  // Prefix audit: one unique four-character prefix per destination where
+  // possible. This covers fast partial typing without confusing it with fuzzy
+  // spelling correction.
+  for(const d of data){
+    const candidates=[];
+    for(const field of LANG_FIELDS)if(d[field])candidates.push(...words(d[field]));
+    for(const alias of d.aliases||[])candidates.push(...words(alias));
+    const unique=[...new Set(candidates)]
+      .filter(t=>Array.from(t).length>=6)
+      .map(t=>Array.from(t).slice(0,4).join(""))
+      .find(prefix=>holderCount(prefixOwners,prefix)===1);
+    if(unique){
+      stats.prefixChecks++;
+      const rank=rankOf(unique,d);
+      if(rank>5)fail(`${id}: unique prefix ranks #${rank}: ${unique} -> ${d.en}`,failures);
+    }
+  }
+
   // Fuzzy audit: use one unique long token per destination where possible, and
-  // test three one-edit typo classes. Ambiguous generated mutations are skipped
-  // rather than treating a legitimate competing literal match as a fuzzy bug.
+  // test four one-edit typo classes. Ambiguous generated mutations are skipped
+  // rather than treating a legitimate competing token as a fuzzy bug.
   const mutationTypes=[
     ["delete","fuzzyDelete"],
+    ["insert","fuzzyInsert"],
     ["substitute","fuzzySubstitute"],
     ["transpose","fuzzyTranspose"]
   ];
@@ -249,6 +291,7 @@ for(const id of entries){
 
   totalDestinations+=data.length;
   totalFuzzy.delete+=stats.fuzzyDelete;
+  totalFuzzy.insert+=stats.fuzzyInsert;
   totalFuzzy.substitute+=stats.fuzzySubstitute;
   totalFuzzy.transpose+=stats.fuzzyTranspose;
   summaries.push(stats);
@@ -261,7 +304,7 @@ for(const s of summaries)console.log(summaryLine(s));
 console.log("=".repeat(170));
 console.log(
   `Total: ${totalDestinations} destinations; fuzzy checks — `+
-  `delete ${totalFuzzy.delete}, substitute ${totalFuzzy.substitute}, transpose ${totalFuzzy.transpose}.`
+  `delete ${totalFuzzy.delete}, insert ${totalFuzzy.insert}, substitute ${totalFuzzy.substitute}, transpose ${totalFuzzy.transpose}.`
 );
 
 if(allFailures.length){
