@@ -78,6 +78,15 @@ Hospital-specific guides and labels stay in hospital packages.
 - never derives a map destination from an indoor room/building string;
 - requests no GPS/location permission inside WayWey.
 
+### `js/voice-search.js`
+- detects standard or WebKit-prefixed browser speech recognition;
+- maps ambassador languages to explicit speech locales;
+- performs single-shot, non-continuous recognition only after a user action;
+- returns the recognized text into the existing search/ranking pipeline;
+- fails closed and leaves the voice control hidden when browser support is unavailable.
+
+Voice recognition is progressive enhancement rather than a required dependency. WayWey does not store recordings; browser/provider audio processing is outside WayWey and is disclosed in the UI.
+
 ## Hospital packages
 
 Each hospital lives under:
