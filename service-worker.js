@@ -1,6 +1,6 @@
-const CACHE="waywey-cache-7";
+const CACHE="waywey-cache-8";
 const ASSETS=[
- "./","./index.html","./manifest.webmanifest","./qrcode.min.js","./styles.css","./app.js",
+ "./","./index.html","./manifest.webmanifest","./qrcode.min.js","./styles.css","./app.js","./js/i18n.js","./js/search.js","./js/routing.js","./js/ui.js","./js/data.js",
  "./hospitals/jgh/config.json","./hospitals/jgh/destinations.json","./hospitals/jgh/routes.json","./hospitals/jgh/guide.json",
  "./hospitals/chum/config.json","./hospitals/chum/destinations.json","./hospitals/chum/routes.json","./hospitals/chum/guide.json",
  "./hospitals/glen/config.json","./hospitals/glen/destinations.json","./hospitals/glen/routes.json","./hospitals/glen/guide.json",
