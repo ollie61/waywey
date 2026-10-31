@@ -58,3 +58,15 @@ The order may be adjusted after review, but later steps should not be started be
 - JavaScript module syntax and dependency-free refactor smoke checks added to CI.
 - Working milestone version set to `v0.2.0`.
 - Production `main` remains unchanged pending review.
+
+
+### Step 3 — Search quality and formal routing/search tests — COMPLETE
+- Added conservative typo-tolerant fuzzy matching.
+- Added weighted ranking for canonical names, aliases and locations.
+- Room/location codes now match even when punctuation/spaces are omitted (for example, E-959 vs E959).
+- Official records receive only a small tie-break preference; an exact Verify match still outranks an unrelated official fuzzy match.
+- Stable ranking preserves dataset order when scores are equal.
+- Added formal Node unit tests for search normalization, aliases, fuzzy matching, room numbers, status ranking and query-language detection.
+- Added formal Node unit tests for shortest-path routing, missing-route safety, aliases, null/unmapped nodes and slash-separated pavilion resolution.
+- CI runs all new tests with no added runtime or testing framework dependency.
+- Working milestone remains `v0.2.0`; service-worker cache advanced independently to `waywey-cache-9`.
