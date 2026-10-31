@@ -54,19 +54,21 @@ test("recognition is single-shot and returns transcript",()=>{
 });
 
 test("errors are surfaced without inventing a transcript",()=>{
+  let instance=null;
   function MockRecognition(){
+    instance=this;
     this.start=()=>{};
     this.stop=()=>{};
   }
   let error=null;
+  let transcript=null;
   const controller=voice.createVoiceSearch({
     scope:{SpeechRecognition:MockRecognition},
-    onError:e=>{error=e;}
+    onError:e=>{error=e;},
+    onResult:t=>{transcript=t;}
   });
   controller.start();
-  // The created instance is not externally visible, so inspect implementation
-  // contract instead: the module must forward SpeechRecognition error values.
-  const source=await fs.readFile(new URL("../js/voice-search.js",import.meta.url),"utf8");
-  assert.match(source,/onError\(\(event&&event\.error\)\|\|"unknown"\)/);
-  assert.equal(error,null);
+  instance.onerror({error:"not-allowed"});
+  assert.equal(error,"not-allowed");
+  assert.equal(transcript,null);
 });
