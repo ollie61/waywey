@@ -1,10 +1,11 @@
-import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
+import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
 import {norm,rankResults,inferQueryLanguage} from "./js/search.js";
 import {findRoute,resolveTargetNode} from "./js/routing.js";
 import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,strengthBadge} from "./js/ui.js";
 import {hospitalIdFromUrl,fetchJson} from "./js/data.js";
 import {initPwa} from "./js/pwa.js";
 import {formatAuditDate,sourceLinks,hospitalSourceLinks} from "./js/provenance.js";
+import {setupDialog,openDialog,closeDialog,announce} from "./js/accessibility.js";
 
 const APP_VERSION="0.2.0";
 let HOSPITAL={};
@@ -22,6 +23,13 @@ function bfs(a,b){return findRoute(GRAPH,a,b);}
 function targetNode(d){return resolveTargetNode(d,HOSPITAL,GRAPH);}
 
 function provenanceText(){return PROVENANCE_UI[appLang]||PROVENANCE_UI.en;}
+function a11yText(){return ACCESSIBILITY_UI[appLang]||ACCESSIBILITY_UI.en;}
+function templateText(value,vars={}){
+  return Object.entries(vars).reduce((text,[key,replacement])=>text.replace("{"+key+"}",replacement),value||"");
+}
+function motionBehavior(){
+  return window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth";
+}
 
 function appendSourceLinks(container,links,destinationOnly=false){
   const t=provenanceText();
@@ -109,6 +117,8 @@ function showHospitalLanding(){
  const meta=document.querySelector('meta[name="description"]');
  if(meta)meta.content="WayWey — choisissez un hôpital / select a hospital";
  document.body.innerHTML=`
+ <a class="skip-link" href="#mainContent">Skip to main content / Aller au contenu principal</a>
+ <div id="srStatus" class="sr-only" aria-live="polite" aria-atomic="true"></div>
  <header class="landing-header">
    <div class="landing-wrap">
      <div>
@@ -117,7 +127,7 @@ function showHospitalLanding(){
      </div>
    </div>
  </header>
- <main class="landing-wrap landing-main">
+ <main id="mainContent" class="landing-wrap landing-main" tabindex="-1">
    <section class="landing-intro">
      <h1>Choisir un hôpital</h1>
      <p class="landing-en">Select a hospital</p>
@@ -241,13 +251,19 @@ function renderQuickGuide(){
  [...$("guideContent").querySelectorAll("[data-guide-lang]")].forEach(b=>b.onclick=()=>setAppLanguage(b.dataset.guideLang));
  $("closeGuide").setAttribute("aria-label",(APP_UI[appLang]&&APP_UI[appLang].close)||"Close");
 }
-function openQuickGuide(){renderQuickGuide();$("guideDialog").showModal();}
+function openQuickGuide(){renderQuickGuide();openDialog($("guideDialog"),{initialFocus:".guide-lang-btn, #closeGuide"});}
 function setAppLanguage(lang){
  const allowed=hospitalLanguages();
  appLang=allowed.includes(lang)?lang:(HOSPITAL.defaultAppLanguage&&allowed.includes(HOSPITAL.defaultAppLanguage)?HOSPITAL.defaultAppLanguage:allowed[0]||"en");
  document.documentElement.lang=appLang;
  document.documentElement.dir=appIsRtl(appLang)?"rtl":"ltr";
  const t=APP_UI[appLang]||APP_UI.en;
+ const a=a11yText();
+ if($("skipLink"))$("skipLink").textContent=a.skip;
+ if($("appLang"))$("appLang").setAttribute("aria-label",a.appLanguage);
+ if($("visitorLangLabel"))$("visitorLangLabel").textContent=a.visitorLanguage;
+ if($("results"))$("results").setAttribute("aria-label",a.searchResults);
+ if($("qrCode"))$("qrCode").setAttribute("aria-label",a.qrCode);
  $("brandSubtitle").textContent=t.brand+" · "+DATA.length+" destinations · v"+APP_VERSION;$("quickGuideBtn").textContent=t.quickGuide;
  $("stationHeading").textContent=t.stationHeading;$("stationLabel").textContent=t.stationLabel;$("stationStatus").textContent=t.stationStatus;
  $("searchHeading").textContent=t.searchHeading;$("searchLabel").textContent=t.searchLabel;$("q").placeholder=t.placeholder;$("clear").textContent=t.clear;
@@ -302,19 +318,60 @@ function localizedSteps(d,lang){
 }
 function search(){
  const q=$("q").value.trim(),box=$("results");box.innerHTML="";
- if(!q)return;
+ const a=a11yText();
+ if(!q){announce("");return;}
  const hits=rankResults(DATA,q,12);
- if(!hits.length){box.innerHTML='<div class="status">'+APP_UI[appLang].noMatch+'</div>';return}
- hits.forEach(([d])=>{const el=document.createElement("div");el.className="result"+(d.status==="verify"?" verify-result":"");const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);el.innerHTML="<strong>"+primary+"</strong>"+(d.status==="verify"?"<span class=\'verify-badge\'>⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"")+(secondary?"<small>"+secondary+"</small>":"")+"<div class=\'where\'>"+displayWhere(d)+"</div>";el.onclick=()=>choose(d,true,queryLanguage(q,d));box.appendChild(el)});
+ if(!hits.length){
+   const empty=document.createElement("div");
+   empty.className="status";
+   empty.textContent=APP_UI[appLang].noMatch;
+   box.appendChild(empty);
+   announce(a.noResults);
+   return;
+ }
+ announce(templateText(a.resultsFound,{count:String(hits.length)}));
+ hits.forEach(([d])=>{
+   const el=document.createElement("button");
+   el.type="button";
+   el.className="result"+(d.status==="verify"?" verify-result":"");
+   const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
+
+   const title=document.createElement("strong");
+   title.textContent=primary;
+   el.appendChild(title);
+
+   if(d.status==="verify"){
+     const badge=document.createElement("span");
+     badge.className="verify-badge";
+     badge.textContent="⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify);
+     el.appendChild(badge);
+   }
+
+   if(secondary){
+     const alt=document.createElement("small");
+     alt.textContent=secondary;
+     el.appendChild(alt);
+   }
+
+   const where=document.createElement("div");
+   where.className="where";
+   where.textContent=displayWhere(d);
+   el.appendChild(where);
+
+   el.onclick=()=>choose(d,true,queryLanguage(q,d));
+   box.appendChild(el);
+ });
 }
 function choose(d,scroll=true,queryLang=null){
  selected=d;if(queryLang)selectedQueryLang=queryLang;const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
  $("destName").textContent=primary+(secondary&&secondary!==primary?" / "+secondary:"");$("destWhere").textContent=displayWhere(d);
- $("pills").innerHTML=(d.p?"<span class=\'pill\'>"+pavilionFor(d.p,appLang)+"</span>":"")+(d.loc?"<span class=\'pill\'>"+d.loc+"</span>":"")+(d.status==="verify"?"<span class=\'pill verify-pill\'>⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"");
+ $("pills").innerHTML=(d.p?"<span class='pill'>"+pavilionFor(d.p,appLang)+"</span>":"")+(d.loc?"<span class='pill'>"+d.loc+"</span>":"")+(d.status==="verify"?"<span class='pill verify-pill'>⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"");
  $("steps").innerHTML=ambassadorSteps(d).map(s=>"<li dir=\"auto\">"+s+"</li>").join("");
  const note=noteFor(d);$("note").style.display=note?"block":"none";$("note").textContent=note;
  renderRouteProvenance(d);
- $("route").classList.add("active");if(scroll)$("route").scrollIntoView({behavior:"smooth",block:"start"});
+ $("route").classList.add("active");
+ announce(templateText(a11yText().destinationSelected,{name:primary}));
+ if(scroll)$("route").scrollIntoView({behavior:motionBehavior(),block:"start"});
 }
 function slugFor(d){return norm(d.en+" "+(d.loc||"")).replace(/ /g,"-")}
 function makeVisitorUrl(){
@@ -338,12 +395,12 @@ function showVisitorQr(){
  $("qrCode").innerHTML="";
  try{new QRCode($("qrCode"),{text:url,width:250,height:250,correctLevel:QRCode.CorrectLevel.M});}
  catch(e){$("qrCode").textContent=url;}
- $("visitorDialog").close();
- $("qrDialog").showModal();
+ closeDialog($("visitorDialog"),{restoreFocus:false});
+ openDialog($("qrDialog"),{initialFocus:"#closeQr"});
 }
 function closeVisitorQr(){
- $("qrDialog").close();
- try{$("visitorDialog").showModal();renderVisitor();}catch(e){}
+ closeDialog($("qrDialog"),{restoreFocus:false});
+ try{openDialog($("visitorDialog"),{initialFocus:"#visitorLang",preserveReturnFocus:true});renderVisitor();}catch(e){}
 }
 
 async function shareVisitorDirections(){
@@ -367,7 +424,7 @@ function showVisitor(){
  if(!selected)return;
  const preferred=HOSPITAL.defaultVisitorLanguage||HOSPITAL.defaultAppLanguage||"en";
  if([...$("visitorLang").options].some(o=>o.value===preferred))$("visitorLang").value=preferred;
- $("visitorDialog").showModal();renderVisitor();
+ openDialog($("visitorDialog"),{initialFocus:"#visitorLang"});renderVisitor();
 }
 function renderVisitor(){
  const lang=$("visitorLang").value,t=I18N[lang]||I18N.en,p=$("visitorPanel");
@@ -394,20 +451,21 @@ async function bootstrap(){
    return;
  }
 
+ ["guideDialog","visitorDialog","qrDialog"].forEach(id=>setupDialog($(id)));
  $("appLang").onchange=()=>setAppLanguage($("appLang").value);
  $("quickGuideBtn").onclick=openQuickGuide;
- $("closeGuide").onclick=()=>$("guideDialog").close();
+ $("closeGuide").onclick=()=>closeDialog($("guideDialog"));
  $("q").addEventListener("input",search);
  $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
- $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");selectedQueryLang=null;$("q").focus();window.scrollTo({top:0,behavior:"smooth"})};
+ $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");selectedQueryLang=null;$("q").focus();window.scrollTo({top:0,behavior:motionBehavior()})};
  $("showVisitor").onclick=showVisitor;
  $("visitorLang").onchange=renderVisitor;
  $("showQr").onclick=showVisitorQr;
  $("shareVisitor").onclick=shareVisitorDirections;
  $("closeQr").onclick=closeVisitorQr;
  $("qrBack").onclick=closeVisitorQr;
- $("closeVisitor").onclick=()=>$("visitorDialog").close();
- $("back").onclick=()=>$("visitorDialog").close();
+ $("closeVisitor").onclick=()=>closeDialog($("visitorDialog"));
+ $("back").onclick=()=>closeDialog($("visitorDialog"));
  $("listen").onclick=()=>{if(!selected||!("speechSynthesis" in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(localizedSteps(selected,$("visitorLang").value).join(" "));u.lang=$("visitorLang").value;u.rate=0.78;u.pitch=1;speechSynthesis.speak(u)};
 
  let saved=null,savedLang=null;
@@ -430,7 +488,7 @@ async function bootstrap(){
    if(from&&[...$("station").options].some(o=>o.value===from))$("station").value=from;
    if([...$("visitorLang").options].some(o=>o.value===lang))$("visitorLang").value=lang;
    const d=DATA.find(x=>slugFor(x)===dest||norm(x.en).replace(/ /g,"-")===dest);
-   if(d){selected=d;setTimeout(()=>{try{$("visitorDialog").showModal();renderVisitor()}catch(e){}},60);}
+   if(d){selected=d;setTimeout(()=>{try{openDialog($("visitorDialog"),{initialFocus:"#visitorLang"});renderVisitor()}catch(e){}},60);}
  }
 
  ensurePwa().cacheHospital(HOSPITAL.id||requestedHospital);
