@@ -99,3 +99,19 @@ The order may be adjusted after review, but later steps should not be started be
 - Configuration schema now requires audit metadata for all future hospital packages.
 - Added provenance unit tests for date handling, source extraction, deduplication and web-link filtering.
 - Working milestone remains `v0.2.0`; shared shell cache advanced independently to `waywey-cache-11`.
+
+
+### Step 6 — Accessibility and mobile/touch UX — COMPLETE
+- Added a visible keyboard skip link and an explicit main-content landmark target.
+- Added a polite screen-reader announcement region for search-result counts and selected destinations.
+- Search results are now native buttons rather than clickable divs, preserving pointer behavior while adding keyboard activation automatically.
+- Search input now exposes search semantics, result relationships and mobile search-key hints.
+- Dialogs now have accessible names, explicit Tab focus trapping, initial focus placement and focus return to the invoking control.
+- Dialog-to-dialog transitions (visitor directions ↔ QR) suppress incorrect intermediate focus restoration.
+- Added localized accessibility labels and screen-reader announcements in English, French, Hebrew and Arabic.
+- Increased core touch targets to at least 44px and primary mobile actions to 50px.
+- Improved one-handed phone layout by stacking action controls at narrow widths and widening visitor controls.
+- Added strong visible keyboard focus indicators, reduced-motion handling and higher-contrast mode support.
+- Darkened the shared muted-text colour from `#64777d` to `#5d7076` so normal text on the application background clears WCAG AA contrast.
+- Added accessibility regression checks for landmarks, dialog naming, semantic search controls, keyboard-native search results, touch targets, focus styling, focus trapping and core text-colour contrast.
+- Working milestone remains `v0.2.0`; shared shell cache advanced independently to `waywey-cache-12`.
