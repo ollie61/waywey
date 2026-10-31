@@ -18,6 +18,7 @@ Current development milestone: **v0.2.0**.
 - Supports RTL interfaces for Hebrew and Arabic.
 - Works as a PWA and caches only the hospital that has actually been used.
 - Shows dataset audit dates and official source links.
+- Hands off to an external outdoor map only for destinations with explicit source-backed outdoor address metadata.
 - Includes keyboard, screen-reader, reduced-motion, contrast and mobile/touch accessibility work.
 
 ## Safety model
