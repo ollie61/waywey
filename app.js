@@ -24,7 +24,6 @@ function targetNode(d){return resolveTargetNode(d,HOSPITAL,GRAPH);}
 function provenanceText(){return PROVENANCE_UI[appLang]||PROVENANCE_UI.en;}
 
 function appendSourceLinks(container,links,destinationOnly=false){
-  container.innerHTML="";
   const t=provenanceText();
   links.forEach((link,index)=>{
     if(index)container.appendChild(document.createTextNode(" · "));
