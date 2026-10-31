@@ -1906,7 +1906,10 @@
       "4333",
       "Entrée de l’Institut de psychiatrie communautaire et familiale"
     ],
-    "status": "official"
+    "status": "official",
+    "outdoorMap": {
+      "query": "4333 Chemin de la Côte-Sainte-Catherine, Montréal, QC, Canada"
+    }
   },
   {
     "en": "Centre for Child Development and Mental Health Entrance",
@@ -1918,7 +1921,10 @@
       "4335",
       "Entrée du Centre de développement de l’enfant et de santé mentale"
     ],
-    "status": "official"
+    "status": "official",
+    "outdoorMap": {
+      "query": "4335 Chemin de la Côte-Sainte-Catherine, Montréal, QC, Canada"
+    }
   },
   {
     "en": "Lady Davis Institute for Medical Research",
@@ -1931,7 +1937,10 @@
       "3999",
       "Institut Lady Davis de recherches médicales"
     ],
-    "status": "official"
+    "status": "official",
+    "outdoorMap": {
+      "query": "3999 Chemin de la Côte-Sainte-Catherine, Montréal, QC, Canada"
+    }
   },
   {
     "en": "Hope & Cope Cancer Wellness Centre",
@@ -1958,7 +1967,10 @@
       "Centre sans rendez-vous Herzl CRIU"
     ],
     "status": "official",
-    "note": "Current Clinics and Testing page lists the Herzl Walk-In Centre at 5858 Côte-des-Neiges, 5th floor."
+    "note": "Current Clinics and Testing page lists the Herzl Walk-In Centre at 5858 Côte-des-Neiges, 5th floor.",
+    "outdoorMap": {
+      "query": "5858 Chemin de la Côte-des-Neiges, Montréal, QC, Canada"
+    }
   },
   {
     "en": "Airways Centre",

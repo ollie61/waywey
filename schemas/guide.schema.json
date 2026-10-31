@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waywey.gobleuer.com/schemas/guide.schema.json",
+  "title": "WayWey hospital quick guides",
+  "type": "object",
+  "minProperties": 1,
+  "additionalProperties": {
+    "type": "object",
+    "required": [
+      "title",
+      "html"
+    ],
+    "properties": {
+      "title": {
+        "type": "string",
+        "minLength": 1
+      },
+      "html": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "additionalProperties": false
+  }
+}

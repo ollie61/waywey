@@ -1,4 +1,15 @@
-const APP_VERSION="0.1.0";
+import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,VOICE_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
+import {norm,rankResults,inferQueryLanguage} from "./js/search.js";
+import {findRoute,resolveTargetNode} from "./js/routing.js";
+import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,strengthBadge} from "./js/ui.js";
+import {hospitalIdFromUrl,fetchJson} from "./js/data.js";
+import {initPwa} from "./js/pwa.js";
+import {formatAuditDate,sourceLinks,hospitalSourceLinks} from "./js/provenance.js";
+import {setupDialog,openDialog,closeDialog,announce} from "./js/accessibility.js";
+import {outdoorMapUrl} from "./js/outdoor-map.js";
+import {createVoiceSearch} from "./js/voice-search.js";
+
+const APP_VERSION="0.2.0";
 let HOSPITAL={};
 let DATA=[];
 let GRAPH={};
@@ -6,85 +17,100 @@ let PAV_LABELS={en:{},fr:{}};
 let NOTE_TRANSLATIONS={};
 let QUICK_GUIDE={};
 
-const I18N={
-en:{to:"Go to",room:"Room",floor:"Floor",from:"From",stay:"Stay in",elev:"Use the elevators to reach",follow:"Follow the indoor signs through",hk1:"Take the Pavilion H elevators to the 3rd floor.",hk2:"Use the indoor H–K connector to the Pavilion K lobby.",kh1:"From the Pavilion K lobby, use the indoor H–K connector to Pavilion H, 3rd floor.",final:"Then follow signs to",listen:"Listen",back:"Back to Ambassador"},
-fr:{to:"Rendez-vous à",room:"Salle",floor:"Étage",from:"À partir de",stay:"Restez dans",elev:"Prenez les ascenseurs jusqu'à",follow:"Suivez les indications intérieures en passant par",hk1:"Prenez les ascenseurs du pavillon H jusqu'au 3e étage.",hk2:"Empruntez le passage intérieur H–K jusqu'au hall du pavillon K.",kh1:"Depuis le hall du pavillon K, empruntez le passage intérieur H–K jusqu'au pavillon H, 3e étage.",final:"Suivez ensuite les indications vers",listen:"Écouter",back:"Retour à l'ambassadeur"},
-es:{to:"Vaya a",room:"Sala",floor:"Piso",from:"Desde",stay:"Permanezca en",elev:"Use los ascensores para llegar a",follow:"Siga las señales interiores pasando por",hk1:"Tome los ascensores del Pabellón H hasta el 3.er piso.",hk2:"Use el pasillo interior H–K hasta el vestíbulo del Pabellón K.",kh1:"Desde el vestíbulo del Pabellón K, use el pasillo interior H–K hasta el Pabellón H, 3.er piso.",final:"Luego siga las señales hacia",listen:"Escuchar",back:"Volver al embajador"},
-pt:{to:"Vá para",room:"Sala",floor:"Andar",from:"A partir de",stay:"Permaneça no",elev:"Use os elevadores para chegar ao",follow:"Siga as placas internas passando por",hk1:"Pegue os elevadores do Pavilhão H até o 3º andar.",hk2:"Use a passagem interna H–K até o saguão do Pavilhão K.",kh1:"Do saguão do Pavilhão K, use a passagem interna H–K até o Pavilhão H, 3º andar.",final:"Depois, siga as placas para",listen:"Ouvir",back:"Voltar ao embaixador"},
-ar:{to:"اذهب إلى",room:"الغرفة",floor:"الطابق",from:"من",stay:"ابقَ في",elev:"استخدم المصاعد للوصول إلى",follow:"اتبع اللافتات الداخلية مروراً بـ",hk1:"استخدم مصاعد الجناح H إلى الطابق الثالث.",hk2:"استخدم الممر الداخلي H–K للوصول إلى بهو الجناح K.",kh1:"من بهو الجناح K، استخدم الممر الداخلي H–K إلى الجناح H، الطابق الثالث.",final:"ثم اتبع اللافتات إلى",listen:"استمع",back:"العودة إلى السفير"},
-he:{to:"גשו אל",room:"חדר",floor:"קומה",from:"מ־",stay:"הישארו ב",elev:"השתמשו במעליות כדי להגיע אל",follow:"עקבו אחר השילוט הפנימי דרך",hk1:"עלו במעליות של בניין H לקומה 3.",hk2:"השתמשו במעבר הפנימי H–K אל הלובי של בניין K.",kh1:"מהלובי של בניין K השתמשו במעבר הפנימי H–K אל בניין H, קומה 3.",final:"לאחר מכן עקבו אחר השילוט אל",listen:"האזנה",back:"חזרה לשגריר"},
-ru:{to:"Идите в",room:"Кабинет",floor:"Этаж",from:"От",stay:"Оставайтесь в",elev:"Поднимитесь на лифте на",follow:"Следуйте указателям внутри здания через",hk1:"Поднимитесь на лифте павильона H на 3-й этаж.",hk2:"По внутреннему переходу H–K пройдите в вестибюль павильона K.",kh1:"Из вестибюля павильона K по переходу H–K пройдите в павильон H, на 3-й этаж.",final:"Затем следуйте указателям к",listen:"Прослушать",back:"Назад к волонтёру"},
-vi:{to:"Đi đến",room:"Phòng",floor:"Tầng",from:"Từ",stay:"Ở lại",elev:"Dùng thang máy để đến",follow:"Đi theo biển chỉ dẫn bên trong qua",hk1:"Đi thang máy của Khu H lên tầng 3.",hk2:"Dùng lối nối trong nhà H–K để đến sảnh Khu K.",kh1:"Từ sảnh Khu K, dùng lối nối trong nhà H–K đến Khu H, tầng 3.",final:"Sau đó đi theo biển chỉ dẫn đến",listen:"Nghe",back:"Quay lại tình nguyện viên"},
-sw:{to:"Nenda",room:"Chumba",floor:"Ghorofa",from:"Kutoka",stay:"Baki katika",elev:"Tumia lifti kufika",follow:"Fuata alama za ndani kupitia",hk1:"Tumia lifti za Jengo H hadi ghorofa ya 3.",hk2:"Tumia njia ya ndani ya H–K hadi ukumbi wa Jengo K.",kh1:"Kutoka ukumbi wa Jengo K, tumia njia ya ndani ya H–K hadi Jengo H, ghorofa ya 3.",final:"Kisha fuata alama kuelekea",listen:"Sikiliza",back:"Rudi kwa balozi"},
-bg:{to:"Отидете до",room:"Стая",floor:"Етаж",from:"От",stay:"Останете в",elev:"Използвайте асансьора до",follow:"Следвайте вътрешните указателни табели през",hk1:"Вземете асансьора в павилион H до 3-тия етаж.",hk2:"Използвайте вътрешната връзка H–K до фоайето на павилион K.",kh1:"От фоайето на павилион K използвайте връзката H–K до павилион H, 3-ти етаж.",final:"След това следвайте табелите към",listen:"Слушай",back:"Назад към посланика"}
-};
-
-const QR_UI={
-en:{button:"Show QR",title:"Scan for directions",instruction:"Scan this QR code with your phone to open these directions.",back:"Back to directions"},
-fr:{button:"Afficher le QR",title:"Scanner pour obtenir les directions",instruction:"Scannez ce code QR avec votre téléphone pour ouvrir ces directions.",back:"Retour aux directions"},
-ar:{button:"إظهار رمز QR",title:"امسح للحصول على الاتجاهات",instruction:"امسح رمز QR هذا بهاتفك لفتح هذه الاتجاهات.",back:"العودة إلى الاتجاهات"},
-he:{button:"הצג קוד QR",title:"סרקו לקבלת הוראות",instruction:"סרקו את קוד ה-QR בטלפון כדי לפתוח את ההוראות.",back:"חזרה להוראות"},
-es:{button:"Mostrar QR",title:"Escanee para ver las indicaciones",instruction:"Escanee este código QR con su teléfono para abrir estas indicaciones.",back:"Volver a las indicaciones"},
-pt:{button:"Mostrar QR",title:"Escaneie para ver as direções",instruction:"Escaneie este código QR com o seu telefone para abrir estas direções.",back:"Voltar às direções"},
-ru:{button:"Показать QR",title:"Сканируйте для маршрута",instruction:"Отсканируйте этот QR-код телефоном, чтобы открыть эти указания.",back:"Назад к указаниям"},
-vi:{button:"Hiện mã QR",title:"Quét để xem chỉ đường",instruction:"Quét mã QR này bằng điện thoại để mở các chỉ dẫn này.",back:"Quay lại chỉ dẫn"},
-sw:{button:"Onyesha QR",title:"Changanua kupata maelekezo",instruction:"Changanua msimbo huu wa QR kwa simu yako ili kufungua maelekezo haya.",back:"Rudi kwenye maelekezo"},
-bg:{button:"Покажи QR",title:"Сканирайте за указания",instruction:"Сканирайте този QR код с телефона си, за да отворите указанията.",back:"Назад към указанията"}
-};
-
-const APP_UI={
-en:{
- brand:"Ambassador Wayfinding Tool · Unofficial",quickGuide:"Quick Guide",
- stationHeading:"1. Your ambassador station",stationLabel:"Starting point",stationStatus:"Your selection is remembered on this device.",
- searchHeading:"2. Search for a department or service",searchLabel:"English or French",placeholder:"e.g. urology, cancer, dentiste, MRI, accouchement",clear:"Clear",
- resultHeading:"3. Check the result",showVisitor:"Show Visitor",newSearch:"New Search",
- noMatch:"No match found. Try a shorter term, French/English equivalent, or room number.",
- disclaimer:"Prototype reference for ambassadors. Verify appointment paperwork or current hospital signage when an exact room is uncertain.",
- pavilion:"Pavilion",remain:"Remain in",appropriate:"Use the appropriate elevator or level access for",followRoom:"Follow signs to room",followDest:"Follow signs to",
- indoor:"Follow the indoor signs:",outsideMapped:"Destination is outside the mapped indoor route. Address / location: ",unknownLocation:"The current source does not state an exact location. Check appointment paperwork or signage.",noRoute:"WayWey does not yet have a validated public indoor route between this starting point and destination. Follow current hospital signage.",verify:"Verify",close:"Close",hToK1:"Take the Pavilion H elevators to the 3rd floor.",hToK2:"Use the indoor H–K connector to the Pavilion K lobby.",kToH:"From the Pavilion K lobby, use the indoor H–K connector to Pavilion H, 3rd floor."
-},
-fr:{
- brand:"Outil d’orientation des ambassadeurs · Non officiel",quickGuide:"Guide rapide",
- stationHeading:"1. Votre poste d’ambassadeur",stationLabel:"Point de départ",stationStatus:"Votre sélection est mémorisée sur cet appareil.",
- searchHeading:"2. Rechercher un service ou un département",searchLabel:"Anglais ou français",placeholder:"p. ex. urologie, cancer, dentiste, IRM, accouchement",clear:"Effacer",
- resultHeading:"3. Vérifier le résultat",showVisitor:"Montrer au visiteur",newSearch:"Nouvelle recherche",
- noMatch:"Aucun résultat. Essayez un terme plus court, l’équivalent français/anglais ou un numéro de local.",
- disclaimer:"Outil de référence prototype pour les ambassadeurs. Vérifiez les documents de rendez-vous ou la signalisation actuelle de l’hôpital lorsqu’un local précis est incertain.",
- pavilion:"Pavillon",remain:"Restez dans",appropriate:"Utilisez l’ascenseur ou l’accès de niveau approprié pour",followRoom:"Suivez les indications jusqu’au local",followDest:"Suivez les indications vers",
- indoor:"Suivez les indications intérieures :",outsideMapped:"Destination hors du parcours intérieur cartographié. Adresse / emplacement : ",unknownLocation:"Le site exact n’est pas indiqué dans la source actuelle. Vérifiez les documents du rendez-vous ou la signalisation.",noRoute:"Aucun itinéraire intérieur public n’est encore validé dans WayWey entre ce point de départ et cette destination. Suivez la signalisation actuelle de l’hôpital.",verify:"À vérifier",close:"Fermer",
- hToK1:"Prenez les ascenseurs du pavillon H jusqu’au 3e étage.",hToK2:"Empruntez le passage intérieur H–K jusqu’au hall du pavillon K.",kToH:"Depuis le hall du pavillon K, empruntez le passage intérieur H–K jusqu’au pavillon H, 3e étage."
-},
-he:{
- brand:"כלי הכוונה לשגרירי בית החולים · לא רשמי",quickGuide:"מדריך מהיר",
- stationHeading:"1. עמדת השגריר שלך",stationLabel:"נקודת התחלה",stationStatus:"הבחירה נשמרת במכשיר זה.",
- searchHeading:"2. חיפוש מחלקה או שירות",searchLabel:"עברית, אנגלית או ערבית",placeholder:"לדוגמה: מיון, לב, MRI, ילדים, אונקולוגיה",clear:"ניקוי",
- resultHeading:"3. בדיקת התוצאה",showVisitor:"הצג למבקר",newSearch:"חיפוש חדש",
- noMatch:"לא נמצאה התאמה. נסו מונח קצר יותר, שפה אחרת או מספר חדר.",
- disclaimer:"כלי אב-טיפוס לשגרירי בית החולים. כאשר מיקום מדויק אינו ודאי, יש לבדוק את מסמכי התור או את השילוט העדכני בבית החולים.",
- pavilion:"בניין",remain:"הישארו ב",appropriate:"השתמשו במעלית או בגישה המתאימה לקומה עבור",followRoom:"עקבו אחר השילוט לחדר",followDest:"עקבו אחר השילוט אל",
- indoor:"עקבו אחר השילוט בתוך בית החולים:",outsideMapped:"היעד נמצא מחוץ למסלול הפנימי שמופה. כתובת / מיקום: ",unknownLocation:"המיקום המדויק אינו מצוין במקור הנוכחי. בדקו את מסמכי התור או את השילוט.",noRoute:"ב-WayWey עדיין אין מסלול פנימי ציבורי מאומת בין נקודת ההתחלה ליעד. עקבו אחר השילוט העדכני בבית החולים.",verify:"לאימות",close:"סגירה"
-},
-ar:{
- brand:"أداة إرشاد سفراء المستشفى · غير رسمية",quickGuide:"دليل سريع",
- stationHeading:"1. موقع السفير",stationLabel:"نقطة البداية",stationStatus:"يتم حفظ اختيارك على هذا الجهاز.",
- searchHeading:"2. ابحث عن قسم أو خدمة",searchLabel:"العبرية أو الإنجليزية أو العربية",placeholder:"مثال: الطوارئ، القلب، MRI، الأطفال، الأورام",clear:"مسح",
- resultHeading:"3. تحقق من النتيجة",showVisitor:"اعرض للزائر",newSearch:"بحث جديد",
- noMatch:"لم يتم العثور على نتيجة. جرّب مصطلحاً أقصر أو لغة أخرى أو رقم الغرفة.",
- disclaimer:"أداة تجريبية لدعم سفراء المستشفى. عند عدم التأكد من الموقع الدقيق، تحقّق من مستندات الموعد أو من لافتات المستشفى الحالية.",
- pavilion:"المبنى",remain:"ابقَ في",appropriate:"استخدم المصعد أو الوصول المناسب للطابق لـ",followRoom:"اتبع اللافتات إلى الغرفة",followDest:"اتبع اللافتات إلى",
- indoor:"اتبع اللافتات داخل المستشفى:",outsideMapped:"الوجهة خارج المسار الداخلي المرسوم. العنوان / الموقع: ",unknownLocation:"الموقع الدقيق غير مذكور في المصدر الحالي. تحقّق من مستندات الموعد أو اللافتات.",noRoute:"لا يوجد في WayWey حتى الآن مسار داخلي عام موثّق بين نقطة البداية والوجهة. اتبع لافتات المستشفى الحالية.",verify:"بحاجة للتحقق",close:"إغلاق"
-}
-};
-const LANGUAGE_NAMES={en:"English",fr:"Français",he:"עברית",ar:"العربية"};
 function hospitalLanguages(){return (HOSPITAL.ambassadorLanguages&&HOSPITAL.ambassadorLanguages.length)?HOSPITAL.ambassadorLanguages:["en","fr"];}
-function destinationName(d,lang){return (d&&d[lang])||d.en||d.he||d.ar||d.fr||"";}
-function destinationSecondary(d,lang){
- const primary=destinationName(d,lang);
- const preferred=[...hospitalLanguages(),"en","he","ar","fr"];
- for(const l of [...new Set(preferred)]){if(l!==lang&&d[l]&&d[l]!==primary)return d[l];}
- return "";
+function destinationSecondary(d,lang){return getDestinationSecondary(d,lang,hospitalLanguages());}
+function queryLanguage(q,d){return inferQueryLanguage(q,d,hospitalLanguages(),appLang);}
+function pavilionFor(p,lang){return formatPavilion(p,lang,HOSPITAL,PAV_LABELS);}
+function bfs(a,b){return findRoute(GRAPH,a,b);}
+function targetNode(d){return resolveTargetNode(d,HOSPITAL,GRAPH);}
+
+function provenanceText(){return PROVENANCE_UI[appLang]||PROVENANCE_UI.en;}
+function a11yText(){return ACCESSIBILITY_UI[appLang]||ACCESSIBILITY_UI.en;}
+function templateText(value,vars={}){
+  return Object.entries(vars).reduce((text,[key,replacement])=>text.replace("{"+key+"}",replacement),value||"");
 }
-function appIsRtl(lang=appLang){return lang==="he"||lang==="ar";}
+function motionBehavior(){
+  return window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth";
+}
+function outdoorText(lang=appLang){return OUTDOOR_UI[lang]||OUTDOOR_UI.en;}
+
+function renderOutdoorMapLink(d){
+  const link=$("openMap");if(!link)return;
+  const url=d&&!targetNode(d)?outdoorMapUrl(d):null;
+  link.hidden=!url;
+  if(url){link.href=url;link.textContent="↗ "+outdoorText(appLang).open;}
+  else link.removeAttribute("href");
+}
+
+function renderVisitorOutdoorMapLink(d,lang){
+  const link=$("openVisitorMap");if(!link)return;
+  const url=d&&!targetNode(d)?outdoorMapUrl(d):null;
+  link.hidden=!url;
+  if(url){link.href=url;link.textContent="↗ "+outdoorText(lang).open;}
+  else link.removeAttribute("href");
+}
+
+function appendSourceLinks(container,links,destinationOnly=false){
+  const t=provenanceText();
+  links.forEach((link,index)=>{
+    if(index)container.appendChild(document.createTextNode(" · "));
+    const a=document.createElement("a");
+    a.href=link.url;
+    a.target="_blank";
+    a.rel="noopener noreferrer";
+    a.textContent=link.label||(destinationOnly?t.destinationSource:(link.kind==="destination"?t.destinationSource:link.url));
+    container.appendChild(a);
+  });
+}
+
+function renderDatasetProvenance(){
+  const box=$("datasetMeta");if(!box)return;
+  const t=provenanceText();
+  box.innerHTML="";
+  const audit=document.createElement("span");
+  audit.className="dataset-audit";
+  const formatted=formatAuditDate(HOSPITAL.lastSourceAudit,appLang);
+  audit.textContent=t.auditLabel+": "+(formatted||HOSPITAL.lastSourceAudit||"—");
+  box.appendChild(audit);
+  const links=hospitalSourceLinks(HOSPITAL);
+  if(links.length){
+    const sources=document.createElement("span");
+    sources.className="dataset-sources";
+    const label=document.createElement("strong");
+    label.textContent=t.sourcesLabel+": ";
+    sources.appendChild(label);
+    appendSourceLinks(sources,links);
+    box.appendChild(sources);
+  }
+}
+
+function renderRouteProvenance(d){
+  const t=provenanceText();
+  const verify=$("verifyAlert");
+  const route=$("route");
+  const isVerify=d&&d.status==="verify";
+  route.classList.toggle("verify-active",isVerify);
+  verify.hidden=!isVerify;
+  verify.textContent=isVerify?"⚠ "+t.verifyAlert:"";
+
+  const box=$("routeSources");
+  const links=sourceLinks(d,HOSPITAL);
+  box.hidden=!links.length;
+  box.innerHTML="";
+  if(links.length){
+    const label=document.createElement("strong");
+    label.textContent=t.sourcesLabel+": ";
+    box.appendChild(label);
+    links.forEach((link,index)=>{
+      if(index)box.appendChild(document.createTextNode(" · "));
+      const a=document.createElement("a");
+      a.href=link.url;a.target="_blank";a.rel="noopener noreferrer";
+      a.textContent=link.label||(link.kind==="destination"?t.destinationSource:link.url);
+      box.appendChild(a);
+    });
+  }
+}
+
 function populateAppLanguages(){
  const sel=$("appLang");if(!sel)return;sel.innerHTML="";
  for(const lang of hospitalLanguages()){
@@ -95,21 +121,81 @@ const $=id=>document.getElementById(id);
 let selected=null;
 let selectedQueryLang=null;
 let appLang="en";
+let pwaController=null;
+let voiceController=null;
+function pwaLabels(){return PWA_UI[appLang]||PWA_UI.en;}
+function ensurePwa(){
+  if(!pwaController)pwaController=initPwa({labels:pwaLabels});
+  else pwaController.refreshLabels();
+  return pwaController;
+}
+function voiceText(){return VOICE_UI[appLang]||VOICE_UI.en;}
 
-function hospitalIdFromUrl(){
- const p=new URLSearchParams(window.location.search);
- const q=p.get("hospital");
- if(q&&/^[a-z0-9-]+$/i.test(q))return q.toLowerCase();
- // Backward compatibility for older JGH visitor links created before hospital datasets.
- if(p.get("visitor")==="1")return "jgh";
- return null;
+function voiceErrorMessage(code){
+  const t=voiceText();
+  if(code==="not-allowed"||code==="service-not-allowed")return t.denied;
+  if(code==="no-speech")return t.noSpeech;
+  if(code==="audio-capture")return t.audio;
+  if(code==="network")return t.network;
+  return t.error;
 }
-function strengthBadge(level,labelFr,labelEn){
- const n=Math.max(1,Math.min(4,Number(level)||1));
- let bars="";
- for(let i=1;i<=4;i++)bars+='<span class="strength-bar '+(i<=n?'on':'')+'"></span>';
- return '<div class="dataset-strength" aria-label="Force du jeu de données : '+labelFr+' / Dataset strength: '+labelEn+'"><span class="strength-icon" aria-hidden="true">'+bars+'</span><span><strong>'+labelFr+'</strong><small>'+labelEn+'</small></span></div>';
+
+function renderVoiceButton(state="idle"){
+  const btn=$("voiceSearch");if(!btn||!voiceController||!voiceController.supported)return;
+  const active=state==="starting"||state==="listening"||voiceController.isActive();
+  btn.hidden=false;
+  btn.setAttribute("aria-pressed",active?"true":"false");
+  btn.textContent=active?"■ "+voiceText().stop:"🎙 "+voiceText().button;
 }
+
+function refreshVoiceUi(){
+  const btn=$("voiceSearch"),privacy=$("voicePrivacy");
+  if(!btn||!privacy)return;
+  if(!voiceController||!voiceController.supported){
+    btn.hidden=true;privacy.hidden=true;return;
+  }
+  privacy.hidden=false;
+  privacy.textContent=voiceText().privacy;
+  renderVoiceButton(voiceController.isActive()?"listening":"idle");
+}
+
+function initVoiceSearch(){
+  const btn=$("voiceSearch"),status=$("voiceStatus");
+  if(!btn||!status)return;
+  voiceController=createVoiceSearch({
+    getLanguage:()=>appLang,
+    onState:state=>{
+      renderVoiceButton(state);
+      if(state==="starting"||state==="listening"){
+        status.textContent=voiceText().listening;
+        announce(voiceText().listening);
+      }
+    },
+    onResult:transcript=>{
+      $("q").value=transcript;
+      search();
+      const message=templateText(voiceText().recognized,{text:transcript});
+      status.textContent=message;
+      announce(message);
+      $("q").focus();
+    },
+    onError:code=>{
+      const message=voiceErrorMessage(code);
+      status.textContent=message;
+      announce(message);
+    }
+  });
+  refreshVoiceUi();
+  btn.onclick=()=>{
+    if(!voiceController||!voiceController.supported)return;
+    if(voiceController.isActive())voiceController.stop();
+    else{
+      status.textContent="";
+      voiceController.start();
+    }
+  };
+}
+
 function showHospitalLanding(){
  document.documentElement.lang="fr";
  document.documentElement.dir="ltr";
@@ -117,6 +203,8 @@ function showHospitalLanding(){
  const meta=document.querySelector('meta[name="description"]');
  if(meta)meta.content="WayWey — choisissez un hôpital / select a hospital";
  document.body.innerHTML=`
+ <a class="skip-link" href="#mainContent">Skip to main content / Aller au contenu principal</a>
+ <div id="srStatus" class="sr-only" aria-live="polite" aria-atomic="true"></div>
  <header class="landing-header">
    <div class="landing-wrap">
      <div>
@@ -125,7 +213,7 @@ function showHospitalLanding(){
      </div>
    </div>
  </header>
- <main class="landing-wrap landing-main">
+ <main id="mainContent" class="landing-wrap landing-main" tabindex="-1">
    <section class="landing-intro">
      <h1>Choisir un hôpital</h1>
      <p class="landing-en">Select a hospital</p>
@@ -169,7 +257,7 @@ function showHospitalLanding(){
        <strong dir="rtl">הדסה עין כרם</strong>
        <span>Hadassah Ein Kerem</span>
        <span dir="rtl">هداسا عين كارم</span>
-       ${strengthBadge(2,"En développement","Developing")}
+       ${strengthBadge(3,"Élargi — validation des itinéraires requise","Expanded — route validation needed")}
        <small>ירושלים · Jerusalem · القدس</small>
      </a>
    </section>
@@ -182,11 +270,6 @@ function showHospitalLanding(){
  </main>`;
 }
 function storageKey(name){return "waywey."+(HOSPITAL.id||hospitalIdFromUrl())+"."+name}
-async function fetchJson(url){
- const r=await fetch(url,{cache:"no-cache"});
- if(!r.ok)throw new Error("Could not load "+url+" ("+r.status+")");
- return r.json();
-}
 function populateStations(){
  const sel=$("station");sel.innerHTML="";
  for(const s of (HOSPITAL.entrances||[])){
@@ -237,19 +320,6 @@ async function loadHospital(){
 }
 
 
-function floorFor(f,lang){
- if(!f||lang!=="fr")return f;
- const map={"1st floor":"1er étage","2nd floor":"2e étage","3rd floor":"3e étage","4th floor":"4e étage","5th floor":"5e étage","6th floor":"6e étage","7th floor":"7e étage","8th floor":"8e étage","9th floor":"9e étage","10th floor":"10e étage","8th or 9th floor":"8e ou 9e étage"};
- return map[f]||f;
-}
-function pavilionFor(p,lang){
- if(!p)return "";
- const special=HOSPITAL.specialPavilionLabels||{};
- if(special[p])return special[p][lang]||special[p].en||special[p].he||special[p].ar||special[p].fr||p;
- if(p.includes("/"))return p.split("/").map(x=>pavilionFor(x.trim(),lang)).join(" / ");
- const labels=PAV_LABELS[lang]||PAV_LABELS.en||{};
- return labels[p]||((lang==="fr"?"Pavillon ":"Pavilion ")+p);
-}
 function noteFor(d){
  if(d.notes&&d.notes[appLang])return d.notes[appLang];
  const direct=d["note"+appLang.charAt(0).toUpperCase()+appLang.slice(1)];
@@ -267,13 +337,20 @@ function renderQuickGuide(){
  [...$("guideContent").querySelectorAll("[data-guide-lang]")].forEach(b=>b.onclick=()=>setAppLanguage(b.dataset.guideLang));
  $("closeGuide").setAttribute("aria-label",(APP_UI[appLang]&&APP_UI[appLang].close)||"Close");
 }
-function openQuickGuide(){renderQuickGuide();$("guideDialog").showModal();}
+function openQuickGuide(){renderQuickGuide();openDialog($("guideDialog"),{initialFocus:".guide-lang-btn, #closeGuide"});}
 function setAppLanguage(lang){
+ if(voiceController&&voiceController.isActive())voiceController.stop();
  const allowed=hospitalLanguages();
  appLang=allowed.includes(lang)?lang:(HOSPITAL.defaultAppLanguage&&allowed.includes(HOSPITAL.defaultAppLanguage)?HOSPITAL.defaultAppLanguage:allowed[0]||"en");
  document.documentElement.lang=appLang;
  document.documentElement.dir=appIsRtl(appLang)?"rtl":"ltr";
  const t=APP_UI[appLang]||APP_UI.en;
+ const a=a11yText();
+ if($("skipLink"))$("skipLink").textContent=a.skip;
+ if($("appLang"))$("appLang").setAttribute("aria-label",a.appLanguage);
+ if($("visitorLangLabel"))$("visitorLangLabel").textContent=a.visitorLanguage;
+ if($("results"))$("results").setAttribute("aria-label",a.searchResults);
+ if($("qrCode"))$("qrCode").setAttribute("aria-label",a.qrCode);
  $("brandSubtitle").textContent=t.brand+" · "+DATA.length+" destinations · v"+APP_VERSION;$("quickGuideBtn").textContent=t.quickGuide;
  $("stationHeading").textContent=t.stationHeading;$("stationLabel").textContent=t.stationLabel;$("stationStatus").textContent=t.stationStatus;
  $("searchHeading").textContent=t.searchHeading;$("searchLabel").textContent=t.searchLabel;$("q").placeholder=t.placeholder;$("clear").textContent=t.clear;
@@ -284,80 +361,12 @@ function setAppLanguage(lang){
  if($("q").value.trim())search();
  if(selected)choose(selected,false);
  if($("guideDialog").open)renderQuickGuide();
+ renderDatasetProvenance();
+ refreshVoiceUi();
+ if(pwaController)pwaController.refreshLabels();
 }
 
-function norm(s){return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9\u0400-\u04ff\u0590-\u05ff\u0600-\u06ff]+/g," ").trim()}
-function fieldMatchScore(value,q){
- const f=norm(value),n=norm(q);if(!f||!n)return 0;
- if(f===n)return 100;if(f.startsWith(n))return 70;if(f.includes(n))return 45;return 0;
-}
-function queryLanguage(q,d){
- if(/[\u0590-\u05ff]/.test(q))return "he";
- if(/[\u0600-\u06ff]/.test(q))return "ar";
- const langs=hospitalLanguages();
- // In Israeli datasets, Latin-script queries are English by definition.
- if(langs.includes("he")&&langs.includes("ar")&&langs.includes("en"))return "en";
- if(/[àâçéèêëîïôûùüÿœæ]/i.test(q)&&langs.includes("fr"))return "fr";
- if(d&&langs.includes("fr")&&langs.includes("en")){
-   const fr=fieldMatchScore(d.fr,q),en=fieldMatchScore(d.en,q);
-   if(fr>en)return "fr";if(en>fr)return "en";
- }
- return langs.includes(appLang)?appLang:(langs[0]||"en");
-}
-function routeNoticeText(key,lang){
- const table={
-   en:{
-     outsideMapped:"Destination is outside the mapped indoor route. Address / location: ",
-     unknownLocation:"The current source does not state an exact location. Check appointment paperwork or signage.",
-     noRoute:"WayWey does not yet have a validated public indoor route between this starting point and destination. Follow current hospital signage."
-   },
-   fr:{
-     outsideMapped:"Destination hors du parcours intérieur cartographié. Adresse / emplacement : ",
-     unknownLocation:"Le site exact n’est pas indiqué dans la source actuelle. Vérifiez les documents du rendez-vous ou la signalisation.",
-     noRoute:"Aucun itinéraire intérieur public n’est encore validé dans WayWey entre ce point de départ et cette destination. Suivez la signalisation actuelle de l’hôpital."
-   },
-   he:{
-     outsideMapped:"היעד נמצא מחוץ למסלול הפנימי שמופה. כתובת / מיקום: ",
-     unknownLocation:"המיקום המדויק אינו מצוין במקור הנוכחי. בדקו את מסמכי התור או את השילוט.",
-     noRoute:"ב-WayWey עדיין אין מסלול פנימי ציבורי מאומת בין נקודת ההתחלה ליעד. עקבו אחר השילוט העדכני בבית החולים."
-   },
-   ar:{
-     outsideMapped:"الوجهة خارج المسار الداخلي المرسوم. العنوان / الموقع: ",
-     unknownLocation:"الموقع الدقيق غير مذكور في المصدر الحالي. تحقّق من مستندات الموعد أو اللافتات.",
-     noRoute:"لا يوجد في WayWey حتى الآن مسار داخلي عام موثّق بين نقطة البداية والوجهة. اتبع لافتات المستشفى الحالية."
-   }
- };
- const set=table[lang]||table.en;
- return set[key]||table.en[key];
-}
-function locationFor(d,lang){
- const key="loc"+lang.charAt(0).toUpperCase()+lang.slice(1);
- if(d[key])return d[key];
- let s=d.loc||"";
- if(lang==="he"||lang==="ar"){
-   const words=lang==="he"?{floor:"קומה",ground:"קומת קרקע",entrance:"קומת כניסה",mezzanine:"קומת ביניים",middle:"קומת ביניים",lobby:"לובי"}:{floor:"الطابق",ground:"الطابق الأرضي",entrance:"طابق المدخل",mezzanine:"الطابق النصفي",middle:"الطابق النصفي",lobby:"البهو"};
-   s=s.replace(/\bGround floor\b/gi,words.ground).replace(/\bEntrance floor\b/gi,words.entrance)
-      .replace(/\bMezzanine floor\b/gi,words.mezzanine).replace(/\bMiddle floor\b/gi,words.middle)
-      .replace(/\bFloor\s+(-?\d+[A-Za-z½]?|B)\b/gi,(_,n)=>words.floor+" "+n)
-      .replace(/^Lobby\b/i,words.lobby);
- }
- return s;
-}
 function displayWhere(d,lang=appLang){return [d.p?pavilionFor(d.p,lang):"",locationFor(d,lang)].filter(Boolean).join(" · ")}
-function bfs(a,b){
- if(a===b)return[a];
- let q=[[a]],seen=new Set([a]);
- while(q.length){let path=q.shift(),n=path[path.length-1];for(const x of (GRAPH[n]||[])){if(seen.has(x))continue;let p=[...path,x];if(x===b)return p;seen.add(x);q.push(p)}}
- return null;
-}
-function targetNode(d){
- const p=(d.p||"").trim();
- const aliases=HOSPITAL.nodeAliases||{};
- if(Object.prototype.hasOwnProperty.call(aliases,p))return aliases[p];
- if(GRAPH[p])return p;
- if(p.includes("/")){for(const x of p.split("/").map(s=>s.trim()))if(GRAPH[x])return x;}
- return null;
-}
 function ambassadorSteps(d){
  const t=APP_UI[appLang]||APP_UI.en,start=stationNode(),target=targetNode(d),out=[],labels=PAV_LABELS[appLang]||PAV_LABELS.en||{};
  const noticeLang=selectedQueryLang||appLang;
@@ -395,27 +404,63 @@ function localizedSteps(d,lang){
  if(d.loc)out.push(t.final+" "+locationFor(d,lang)+"."); else out.push(t.final+" "+destinationName(d,lang)+".");
  return out;
 }
-function score(d,q){
- const n=norm(q); if(!n)return 0;
- const fields=[d.en,d.fr,d.he,d.ar,d.loc,...(d.aliases||[])].filter(Boolean).map(norm);
- let s=0; for(const f of fields){if(f===n)s=Math.max(s,100);else if(f.startsWith(n))s=Math.max(s,70);else if(f.includes(n))s=Math.max(s,45);}
- for(const part of n.split(" ")){if(part.length>2&&fields.some(f=>f.includes(part)))s+=5}
- return s;
-}
 function search(){
  const q=$("q").value.trim(),box=$("results");box.innerHTML="";
- if(!q)return;
- const hits=DATA.map(d=>[d,score(d,q)]).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]).slice(0,12);
- if(!hits.length){box.innerHTML='<div class="status">'+APP_UI[appLang].noMatch+'</div>';return}
- hits.forEach(([d])=>{const el=document.createElement("div");el.className="result";const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);el.innerHTML="<strong>"+primary+"</strong>"+(secondary?"<small>"+secondary+"</small>":"")+"<div class='where'>"+displayWhere(d)+"</div>";el.onclick=()=>choose(d,true,queryLanguage(q,d));box.appendChild(el)});
+ const a=a11yText();
+ if(!q){announce("");return;}
+ const hits=rankResults(DATA,q,12);
+ if(!hits.length){
+   const empty=document.createElement("div");
+   empty.className="status";
+   empty.textContent=APP_UI[appLang].noMatch;
+   box.appendChild(empty);
+   announce(a.noResults);
+   return;
+ }
+ announce(templateText(a.resultsFound,{count:String(hits.length)}));
+ hits.forEach(([d])=>{
+   const el=document.createElement("button");
+   el.type="button";
+   el.className="result"+(d.status==="verify"?" verify-result":"");
+   const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
+
+   const title=document.createElement("strong");
+   title.textContent=primary;
+   el.appendChild(title);
+
+   if(d.status==="verify"){
+     const badge=document.createElement("span");
+     badge.className="verify-badge";
+     badge.textContent="⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify);
+     el.appendChild(badge);
+   }
+
+   if(secondary){
+     const alt=document.createElement("small");
+     alt.textContent=secondary;
+     el.appendChild(alt);
+   }
+
+   const where=document.createElement("div");
+   where.className="where";
+   where.textContent=displayWhere(d);
+   el.appendChild(where);
+
+   el.onclick=()=>choose(d,true,queryLanguage(q,d));
+   box.appendChild(el);
+ });
 }
 function choose(d,scroll=true,queryLang=null){
  selected=d;if(queryLang)selectedQueryLang=queryLang;const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
  $("destName").textContent=primary+(secondary&&secondary!==primary?" / "+secondary:"");$("destWhere").textContent=displayWhere(d);
- $("pills").innerHTML=(d.p?"<span class='pill'>"+pavilionFor(d.p,appLang)+"</span>":"")+(d.loc?"<span class='pill'>"+d.loc+"</span>":"")+(d.status==="verify"?"<span class='pill'>"+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"");
+ $("pills").innerHTML=(d.p?"<span class='pill'>"+pavilionFor(d.p,appLang)+"</span>":"")+(d.loc?"<span class='pill'>"+d.loc+"</span>":"")+(d.status==="verify"?"<span class='pill verify-pill'>⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"");
  $("steps").innerHTML=ambassadorSteps(d).map(s=>"<li dir=\"auto\">"+s+"</li>").join("");
  const note=noteFor(d);$("note").style.display=note?"block":"none";$("note").textContent=note;
- $("route").classList.add("active");if(scroll)$("route").scrollIntoView({behavior:"smooth",block:"start"});
+ renderRouteProvenance(d);
+ renderOutdoorMapLink(d);
+ $("route").classList.add("active");
+ announce(templateText(a11yText().destinationSelected,{name:primary}));
+ if(scroll)$("route").scrollIntoView({behavior:motionBehavior(),block:"start"});
 }
 function slugFor(d){return norm(d.en+" "+(d.loc||"")).replace(/ /g,"-")}
 function makeVisitorUrl(){
@@ -439,12 +484,12 @@ function showVisitorQr(){
  $("qrCode").innerHTML="";
  try{new QRCode($("qrCode"),{text:url,width:250,height:250,correctLevel:QRCode.CorrectLevel.M});}
  catch(e){$("qrCode").textContent=url;}
- $("visitorDialog").close();
- $("qrDialog").showModal();
+ closeDialog($("visitorDialog"),{restoreFocus:false});
+ openDialog($("qrDialog"),{initialFocus:"#closeQr"});
 }
 function closeVisitorQr(){
- $("qrDialog").close();
- try{$("visitorDialog").showModal();renderVisitor();}catch(e){}
+ closeDialog($("qrDialog"),{restoreFocus:false});
+ try{openDialog($("visitorDialog"),{initialFocus:"#visitorLang",preserveReturnFocus:true});renderVisitor();}catch(e){}
 }
 
 async function shareVisitorDirections(){
@@ -468,7 +513,7 @@ function showVisitor(){
  if(!selected)return;
  const preferred=HOSPITAL.defaultVisitorLanguage||HOSPITAL.defaultAppLanguage||"en";
  if([...$("visitorLang").options].some(o=>o.value===preferred))$("visitorLang").value=preferred;
- $("visitorDialog").showModal();renderVisitor();
+ openDialog($("visitorDialog"),{initialFocus:"#visitorLang"});renderVisitor();
 }
 function renderVisitor(){
  const lang=$("visitorLang").value,t=I18N[lang]||I18N.en,p=$("visitorPanel");
@@ -476,15 +521,16 @@ function renderVisitor(){
  $("vName").textContent=destinationName(selected,lang);
  $("vWhere").textContent=displayWhere(selected,lang);
  $("vSteps").innerHTML=localizedSteps(selected,lang).map(s=>"<li dir=\"auto\">"+s+"</li>").join("");
- const qrt=QR_UI[lang]||QR_UI.en;$("showQr").textContent="▦ "+qrt.button;$("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
+ const qrt=QR_UI[lang]||QR_UI.en;renderVisitorOutdoorMapLink(selected,lang);$("showQr").textContent="▦ "+qrt.button;$("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
 }
 async function bootstrap(){
  const requestedHospital=hospitalIdFromUrl();
  if(!requestedHospital){
    showHospitalLanding();
-   if("serviceWorker" in navigator)navigator.serviceWorker.register("./service-worker.js").catch(()=>{});
+   ensurePwa();
    return;
  }
+ ensurePwa();
  try{
    await loadHospital();
  }catch(e){
@@ -494,20 +540,22 @@ async function bootstrap(){
    return;
  }
 
+ ["guideDialog","visitorDialog","qrDialog"].forEach(id=>setupDialog($(id)));
+ initVoiceSearch();
  $("appLang").onchange=()=>setAppLanguage($("appLang").value);
  $("quickGuideBtn").onclick=openQuickGuide;
- $("closeGuide").onclick=()=>$("guideDialog").close();
+ $("closeGuide").onclick=()=>closeDialog($("guideDialog"));
  $("q").addEventListener("input",search);
  $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
- $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");selectedQueryLang=null;$("q").focus();window.scrollTo({top:0,behavior:"smooth"})};
+ $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");selectedQueryLang=null;$("q").focus();window.scrollTo({top:0,behavior:motionBehavior()})};
  $("showVisitor").onclick=showVisitor;
  $("visitorLang").onchange=renderVisitor;
  $("showQr").onclick=showVisitorQr;
  $("shareVisitor").onclick=shareVisitorDirections;
  $("closeQr").onclick=closeVisitorQr;
  $("qrBack").onclick=closeVisitorQr;
- $("closeVisitor").onclick=()=>$("visitorDialog").close();
- $("back").onclick=()=>$("visitorDialog").close();
+ $("closeVisitor").onclick=()=>closeDialog($("visitorDialog"));
+ $("back").onclick=()=>closeDialog($("visitorDialog"));
  $("listen").onclick=()=>{if(!selected||!("speechSynthesis" in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(localizedSteps(selected,$("visitorLang").value).join(" "));u.lang=$("visitorLang").value;u.rate=0.78;u.pitch=1;speechSynthesis.speak(u)};
 
  let saved=null,savedLang=null;
@@ -530,10 +578,10 @@ async function bootstrap(){
    if(from&&[...$("station").options].some(o=>o.value===from))$("station").value=from;
    if([...$("visitorLang").options].some(o=>o.value===lang))$("visitorLang").value=lang;
    const d=DATA.find(x=>slugFor(x)===dest||norm(x.en).replace(/ /g,"-")===dest);
-   if(d){selected=d;setTimeout(()=>{try{$("visitorDialog").showModal();renderVisitor()}catch(e){}},60);}
+   if(d){selected=d;setTimeout(()=>{try{openDialog($("visitorDialog"),{initialFocus:"#visitorLang"});renderVisitor()}catch(e){}},60);}
  }
 
- if("serviceWorker" in navigator)navigator.serviceWorker.register("./service-worker.js").catch(()=>{});
+ ensurePwa().cacheHospital(HOSPITAL.id||requestedHospital);
 }
 bootstrap();
 

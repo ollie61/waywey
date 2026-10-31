@@ -93,10 +93,17 @@
       "fr": "Forte",
       "en": "Strong"
     },
-    "basis": "105 destinations; broad official MUHC coverage with conservative routing and several current-source conflict resolutions."
+    "basis": "106 destinations; broad official MUHC coverage with conservative routing and several current-source conflict resolutions."
   },
   "ambassadorLanguages": [
     "fr",
     "en"
+  ],
+  "lastSourceAudit": "2026-10-31",
+  "sourceLinks": [
+    {
+      "label": "MUHC Glen site",
+      "url": "https://muhc.ca/glen-site"
+    }
   ]
 }

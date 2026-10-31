@@ -59,5 +59,12 @@
   "ambassadorLanguages": [
     "fr",
     "en"
+  ],
+  "lastSourceAudit": "2026-10-27",
+  "sourceLinks": [
+    {
+      "label": "CHUM",
+      "url": "https://www.chumontreal.qc.ca/"
+    }
   ]
 }
