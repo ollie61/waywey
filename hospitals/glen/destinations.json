@@ -1528,6 +1528,9 @@
     ],
     "status": "official",
     "note": "MUHC lists the adult ophthalmology clinic at 5252 boul. de Maisonneuve Ouest, outside the Glen hospital building.",
-    "source": "MUHC Glen site / McGill Academic Eye Centre"
+    "source": "MUHC Glen site / McGill Academic Eye Centre",
+    "outdoorMap": {
+      "query": "5252 Boulevard de Maisonneuve Ouest, Montréal, QC, Canada"
+    }
   }
 ]
