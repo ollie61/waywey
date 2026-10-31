@@ -12,7 +12,7 @@ import json
 import sys
 from pathlib import Path
 
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[1]
 HOSPITALS = ROOT / "hospitals"
@@ -38,7 +38,7 @@ def path_text(error_path) -> str:
 
 
 def validate_schema(data, schema, filename: Path, errors: list[str]) -> None:
-    validator = Draft202012Validator(schema)
+    validator = Draft202012Validator(schema, format_checker=FormatChecker())
     for err in sorted(validator.iter_errors(data), key=lambda e: list(e.absolute_path)):
         errors.append(
             f"{filename.relative_to(ROOT)} {path_text(err.absolute_path)}: {err.message}"
