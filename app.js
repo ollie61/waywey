@@ -1,4 +1,4 @@
-import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
+import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
 import {norm,rankResults,inferQueryLanguage} from "./js/search.js";
 import {findRoute,resolveTargetNode} from "./js/routing.js";
 import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,strengthBadge} from "./js/ui.js";
@@ -6,6 +6,7 @@ import {hospitalIdFromUrl,fetchJson} from "./js/data.js";
 import {initPwa} from "./js/pwa.js";
 import {formatAuditDate,sourceLinks,hospitalSourceLinks} from "./js/provenance.js";
 import {setupDialog,openDialog,closeDialog,announce} from "./js/accessibility.js";
+import {outdoorMapUrl} from "./js/outdoor-map.js";
 
 const APP_VERSION="0.2.0";
 let HOSPITAL={};
@@ -29,6 +30,23 @@ function templateText(value,vars={}){
 }
 function motionBehavior(){
   return window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth";
+}
+function outdoorText(lang=appLang){return OUTDOOR_UI[lang]||OUTDOOR_UI.en;}
+
+function renderOutdoorMapLink(d){
+  const link=$("openMap");if(!link)return;
+  const url=d&&!targetNode(d)?outdoorMapUrl(d):null;
+  link.hidden=!url;
+  if(url){link.href=url;link.textContent="↗ "+outdoorText(appLang).open;}
+  else link.removeAttribute("href");
+}
+
+function renderVisitorOutdoorMapLink(d,lang){
+  const link=$("openVisitorMap");if(!link)return;
+  const url=d&&!targetNode(d)?outdoorMapUrl(d):null;
+  link.hidden=!url;
+  if(url){link.href=url;link.textContent="↗ "+outdoorText(lang).open;}
+  else link.removeAttribute("href");
 }
 
 function appendSourceLinks(container,links,destinationOnly=false){
@@ -369,6 +387,7 @@ function choose(d,scroll=true,queryLang=null){
  $("steps").innerHTML=ambassadorSteps(d).map(s=>"<li dir=\"auto\">"+s+"</li>").join("");
  const note=noteFor(d);$("note").style.display=note?"block":"none";$("note").textContent=note;
  renderRouteProvenance(d);
+ renderOutdoorMapLink(d);
  $("route").classList.add("active");
  announce(templateText(a11yText().destinationSelected,{name:primary}));
  if(scroll)$("route").scrollIntoView({behavior:motionBehavior(),block:"start"});
@@ -432,7 +451,7 @@ function renderVisitor(){
  $("vName").textContent=destinationName(selected,lang);
  $("vWhere").textContent=displayWhere(selected,lang);
  $("vSteps").innerHTML=localizedSteps(selected,lang).map(s=>"<li dir=\"auto\">"+s+"</li>").join("");
- const qrt=QR_UI[lang]||QR_UI.en;$("showQr").textContent="▦ "+qrt.button;$("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
+ const qrt=QR_UI[lang]||QR_UI.en;renderVisitorOutdoorMapLink(selected,lang);$("showQr").textContent="▦ "+qrt.button;$("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
 }
 async function bootstrap(){
  const requestedHospital=hospitalIdFromUrl();
