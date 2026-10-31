@@ -158,3 +158,16 @@ The order may be adjusted after review, but later steps should not be started be
 - Added voice-search tests covering browser support detection, locale mapping, single-shot settings, transcript trimming and error propagation.
 - Updated architecture, privacy and release documentation.
 - Working milestone remains `v0.2.0`; shared shell cache advanced independently to `waywey-cache-14`.
+
+
+### Release candidate review — RC1
+- Added a static release-candidate invariant checker covering product version documentation, hospital selector completeness, clean hospital redirects, query-parameter preservation, service-worker shell assets, imported module caching and manifest icon presence.
+- Enabled JSON Schema format checking so configured audit dates and URI fields are actually validated, rather than treated as annotations only.
+- Destination `sourceUrl` fields now require valid URI format.
+- CI now also triggers on `styles.css`-only changes and uses a general regression-test step name.
+- The RC checker caught a real drift issue before release: Hadassah Ein Kerem was level 3 in its audited configuration but still displayed level 2 on the hospital selector.
+- Corrected the Hadassah selector to level 3 with the explicit label “Expanded — route validation needed”.
+- Full CI then passed, including hospital validation, JS/service-worker syntax, all regression tests and the new release-candidate invariants.
+- Target product version remains `v0.2.0`; shell cache advanced independently to `waywey-cache-15`.
+- Location/nearest-entrance assistance remains intentionally deferred from v0.2.0.
+- RC1 is suitable for final browser/device smoke testing before production merge.
