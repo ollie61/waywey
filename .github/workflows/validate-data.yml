@@ -6,6 +6,7 @@ on:
       - "hospitals/**"
       - "schemas/**"
       - "scripts/validate_hospitals.py"
+      - "scripts/refactor_smoke.mjs"
       - ".github/workflows/validate-data.yml"
       - "app.js"
       - "js/**"
@@ -16,6 +17,7 @@ on:
       - "hospitals/**"
       - "schemas/**"
       - "scripts/validate_hospitals.py"
+      - "scripts/refactor_smoke.mjs"
       - ".github/workflows/validate-data.yml"
       - "app.js"
       - "js/**"
@@ -47,3 +49,5 @@ jobs:
             echo "Checking $file"
             node --input-type=module --check < "$file"
           done
+      - name: Run modularisation smoke checks
+        run: node scripts/refactor_smoke.mjs
