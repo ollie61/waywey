@@ -83,5 +83,11 @@
     "fr",
     "en"
   ],
-  "lastSourceAudit": "2026-10-28"
+  "lastSourceAudit": "2026-10-28",
+  "sourceLinks": [
+    {
+      "label": "Hôpital de Verdun",
+      "url": "https://ciusss-centresudmtl.gouv.qc.ca/etablissement/hopital-de-verdun"
+    }
+  ]
 }

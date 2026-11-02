@@ -1528,6 +1528,28 @@
     ],
     "status": "official",
     "note": "MUHC lists the adult ophthalmology clinic at 5252 boul. de Maisonneuve Ouest, outside the Glen hospital building.",
-    "source": "MUHC Glen site / McGill Academic Eye Centre"
+    "source": "MUHC Glen site / McGill Academic Eye Centre",
+    "outdoorMap": {
+      "query": "5252 Boulevard de Maisonneuve Ouest, Montréal, QC, Canada"
+    }
+  },
+  {
+    "en": "MRI / Magnetic Resonance Imaging — Adult",
+    "fr": "IRM / Imagerie par résonance magnétique — Adultes",
+    "p": "C",
+    "loc": "C 02.5022",
+    "aliases": [
+      "MRI",
+      "magnetic resonance imaging",
+      "magnetic resonance",
+      "IRM",
+      "imagerie par résonance magnétique",
+      "resonance scan",
+      "MRI scan"
+    ],
+    "status": "official",
+    "note": "MUHC lists MRI at the Glen site — Royal Victoria Hospital. The current MUHC Medical Imaging page locates Glen adult Medical Imaging in Block C, Level 2, room C02.5022.",
+    "source": "MUHC Medical Imaging",
+    "sourceUrl": "https://muhc.ca/medical-imaging"
   }
 ]

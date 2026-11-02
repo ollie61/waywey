@@ -989,7 +989,10 @@
     ],
     "status": "official",
     "note": "Official hospital page lists lots 433 and 434 next to Aréna Denis-Savard at 4110 boulevard Gaétan-Laberge. These are exterior parking areas, not indoor destinations.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/etablissement/hopital-de-verdun"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/etablissement/hopital-de-verdun",
+    "outdoorMap": {
+      "query": "4110 Boulevard Gaétan-Laberge, Montréal, QC, Canada"
+    }
   },
   {
     "en": "Visitor Parking — Gravel Lot",
@@ -1005,7 +1008,10 @@
     ],
     "status": "official",
     "note": "Official hospital page lists the gravel visitor lot at rue Hickson / boulevard Gaétan-Laberge. Exterior location only.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/etablissement/hopital-de-verdun"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/etablissement/hopital-de-verdun",
+    "outdoorMap": {
+      "query": "Rue Hickson & Boulevard Gaétan-Laberge, Montréal, QC, Canada"
+    }
   },
   {
     "en": "Medical Records / Patient File Requests",
@@ -1045,7 +1051,10 @@
     ],
     "status": "official",
     "note": "Current official address directory lists the CUMF-GMF de Verdun at 55 rue de l’Église. Do NOT direct visitors to the historical 3950 boulevard LaSalle / Door 4 hospital entrance.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/adresses-et-coordonnees"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/adresses-et-coordonnees",
+    "outdoorMap": {
+      "query": "55 Rue de l’Église, Verdun, QC, Canada"
+    }
   },
   {
     "en": "Atrium — Public Access to Verify",

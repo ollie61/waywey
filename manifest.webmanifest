@@ -1,9 +1,19 @@
 {
-  "name": "WayWey — JGH Ambassador Wayfinding",
+  "name": "WayWey — Hospital Wayfinding",
   "short_name": "WayWey",
+  "id": "./",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f3f7f8",
   "theme_color": "#173f4b",
-  "description": "Unofficial multilingual JGH ambassador wayfinding tool"
+  "description": "Unofficial multilingual hospital wayfinding support tool",
+  "icons": [
+    {
+      "src": "./icons/waywey.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }

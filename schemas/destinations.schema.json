@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waywey.gobleuer.com/schemas/destinations.schema.json",
+  "title": "WayWey hospital destinations",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "en",
+      "p",
+      "loc",
+      "aliases",
+      "status"
+    ],
+    "properties": {
+      "en": {
+        "type": "string",
+        "minLength": 1
+      },
+      "fr": {
+        "type": "string",
+        "minLength": 1
+      },
+      "he": {
+        "type": "string",
+        "minLength": 1
+      },
+      "ar": {
+        "type": "string",
+        "minLength": 1
+      },
+      "p": {
+        "type": "string"
+      },
+      "loc": {
+        "type": "string"
+      },
+      "aliases": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "status": {
+        "enum": [
+          "official",
+          "verify"
+        ]
+      },
+      "note": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "source": {
+        "type": "string"
+      },
+      "sourceUrl": {
+        "type": "string",
+        "format": "uri"
+      },
+      "outdoorMap": {
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "properties": {
+          "query": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "additionalProperties": false
+  }
+}
