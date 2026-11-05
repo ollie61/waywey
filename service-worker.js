@@ -1,4 +1,4 @@
-const SHELL_CACHE="waywey-cache-17";
+const SHELL_CACHE="waywey-cache-18";
 const DATA_CACHE="waywey-hospital-data-1";
 
 const SHELL_ASSETS=[
@@ -22,7 +22,7 @@ const SHELL_ASSETS=[
 ];
 
 self.addEventListener("install",event=>{
-  event.waitUntil(caches.open(SHELL_CACHE).then(cache=>cache.addAll(SHELL_ASSETS)));
+  event.waitUntil(caches.open(SHELL_CACHE).then(cache=>cache.addAll(SHELL_ASSETS)).then(()=>self.skipWaiting()));
 });
 
 self.addEventListener("activate",event=>{
@@ -98,9 +98,19 @@ async function navigationResponse(request){
 }
 
 async function shellResponse(request){
-  const cached=await caches.match(request);
-  if(cached)return cached;
-  return fetch(request);
+  // Prefer deployed code so a cached PWA module cannot trap users on old update UI.
+  try{
+    const response=await fetch(request,{cache:"no-cache"});
+    if(response.ok){
+      const cache=await caches.open(SHELL_CACHE);
+      await cache.put(request,response.clone());
+    }
+    return response;
+  }catch(e){
+    const cached=await caches.match(request);
+    if(cached)return cached;
+    throw e;
+  }
 }
 
 self.addEventListener("fetch",event=>{

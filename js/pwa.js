@@ -128,7 +128,8 @@ export function initPwa({labels}={}){
 
   if("serviceWorker" in navigator){
     navigator.serviceWorker.addEventListener("controllerchange",()=>{
-      if(updateRequested&&!reloading){
+      hideUpdate();
+      if(!reloading){
         reloading=true;
         window.location.reload();
       }
