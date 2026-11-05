@@ -47,6 +47,11 @@ export function initPwa({labels}={}){
     offline.hidden=navigator.onLine!==false;
   }
 
+  function hideUpdate(){
+    const notice=document.getElementById("updateNotice");
+    if(notice)notice.hidden=true;
+  }
+
   function showUpdate(){
     ensureUi();
     const notice=document.getElementById("updateNotice");
@@ -69,6 +74,7 @@ export function initPwa({labels}={}){
       registration=await navigator.serviceWorker.register("./service-worker.js");
 
       if(registration.waiting&&navigator.serviceWorker.controller)showUpdate();
+      else hideUpdate();
 
       registration.addEventListener("updatefound",()=>{
         const worker=registration.installing;
@@ -87,10 +93,37 @@ export function initPwa({labels}={}){
   window.addEventListener("online",renderNetworkState);
   window.addEventListener("offline",renderNetworkState);
 
-  document.getElementById("applyUpdate").addEventListener("click",()=>{
-    if(!registration||!registration.waiting)return;
-    updateRequested=true;
-    registration.waiting.postMessage({type:"SKIP_WAITING"});
+  document.getElementById("applyUpdate").addEventListener("click",async()=>{
+    const button=document.getElementById("applyUpdate");
+    if(button.disabled)return;
+    button.disabled=true;
+    try{
+      if(!registration)registration=await navigator.serviceWorker.getRegistration("./");
+      if(registration)await registration.update();
+      if(!registration||!registration.waiting){
+        hideUpdate();
+        return;
+      }
+      updateRequested=true;
+      registration.waiting.postMessage({type:"SKIP_WAITING"});
+      // A worker can fail to activate; do not leave a permanently inert button.
+      setTimeout(()=>{
+        if(!reloading){
+          updateRequested=false;
+          button.disabled=false;
+          if(!registration.waiting)hideUpdate();
+          else {
+            const status=document.getElementById("updateText");
+            if(status)status.textContent="Update could not finish. Please try again.";
+          }
+        }
+      },8000);
+    }catch(e){
+      updateRequested=false;
+      const status=document.getElementById("updateText");
+      if(status)status.textContent="Update check failed. Check your connection and try again.";
+      button.disabled=false;
+    }
   });
 
   if("serviceWorker" in navigator){
