@@ -120,6 +120,7 @@ function populateAppLanguages(){
 const $=id=>document.getElementById(id);
 let selected=null;
 let selectedQueryLang=null;
+let visitorLanguagePreference=null;
 let appLang="en";
 let pwaController=null;
 let voiceController=null;
@@ -369,7 +370,7 @@ function setAppLanguage(lang){
 function displayWhere(d,lang=appLang){return [d.p?pavilionFor(d.p,lang):"",locationFor(d,lang)].filter(Boolean).join(" · ")}
 function ambassadorSteps(d){
  const t=APP_UI[appLang]||APP_UI.en,start=stationNode(),target=targetNode(d),out=[],labels=PAV_LABELS[appLang]||PAV_LABELS.en||{};
- const noticeLang=selectedQueryLang||appLang;
+ const noticeLang=appLang;
  if(!target){
    if(d.loc)out.push(routeNoticeText("outsideMapped",noticeLang)+locationFor(d,noticeLang)+".");
    else out.push(routeNoticeText("unknownLocation",noticeLang));
@@ -511,7 +512,7 @@ async function shareVisitorDirections(){
 }
 function showVisitor(){
  if(!selected)return;
- const preferred=HOSPITAL.defaultVisitorLanguage||HOSPITAL.defaultAppLanguage||"en";
+ const preferred=visitorLanguagePreference||HOSPITAL.defaultVisitorLanguage||HOSPITAL.defaultAppLanguage||"en";
  if([...$("visitorLang").options].some(o=>o.value===preferred))$("visitorLang").value=preferred;
  openDialog($("visitorDialog"),{initialFocus:"#visitorLang"});renderVisitor();
 }
@@ -549,7 +550,7 @@ async function bootstrap(){
  $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
  $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");selectedQueryLang=null;$("q").focus();window.scrollTo({top:0,behavior:motionBehavior()})};
  $("showVisitor").onclick=showVisitor;
- $("visitorLang").onchange=renderVisitor;
+ $("visitorLang").onchange=()=>{visitorLanguagePreference=$("visitorLang").value;renderVisitor();};
  $("showQr").onclick=showVisitorQr;
  $("shareVisitor").onclick=shareVisitorDirections;
  $("closeQr").onclick=closeVisitorQr;
@@ -576,7 +577,7 @@ async function bootstrap(){
  if(p.get("visitor")==="1"){
    const from=p.get("from"),lang=p.get("lang")||"en",dest=p.get("dest");
    if(from&&[...$("station").options].some(o=>o.value===from))$("station").value=from;
-   if([...$("visitorLang").options].some(o=>o.value===lang))$("visitorLang").value=lang;
+   if([...$("visitorLang").options].some(o=>o.value===lang)){$("visitorLang").value=lang;visitorLanguagePreference=lang;}
    const d=DATA.find(x=>slugFor(x)===dest||norm(x.en).replace(/ /g,"-")===dest);
    if(d){selected=d;setTimeout(()=>{try{openDialog($("visitorDialog"),{initialFocus:"#visitorLang"});renderVisitor()}catch(e){}},60);}
  }
