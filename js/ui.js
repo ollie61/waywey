@@ -26,6 +26,13 @@ export function locationFor(d,lang){
   const key="loc"+lang.charAt(0).toUpperCase()+lang.slice(1);
   if(d[key])return d[key];
   let s=d.loc||"";
+  if(lang==="fr")return s
+    .replace(/\b(-?\d+)(?:st|nd|rd|th)?\s+floor\b/ig,(_,n)=>n+(n==="1"?"er":"e")+" étage")
+    .replace(/\bFloor\s*(-?\d+)\b/ig,(_,n)=>n+(n==="1"?"er":"e")+" étage")
+    .replace(/\bGround floor\b/ig,"Rez-de-chaussée")
+    .replace(/\bEntrance floor\b/ig,"Niveau de l’entrée")
+    .replace(/\bMezzanine floor\b/ig,"Mezzanine")
+    .replace(/\bLobby\b/ig,"Hall");
   if(lang!=="he"&&lang!=="ar")return s;
   const words=lang==="he"
     ?{floor:"קומה",ground:"קומת קרקע",entrance:"קומת כניסה",mezzanine:"קומת ביניים",middle:"קומת ביניים",lobby:"לובי"}
