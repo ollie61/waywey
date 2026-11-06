@@ -40,3 +40,11 @@ test("resolveTargetNode can resolve a slash-separated mapped pavilion",()=>{
 test("resolveTargetNode never invents an unknown graph node",()=>{
   assert.equal(r.resolveTargetNode({p:"UNKNOWN"},{nodeAliases:{}},{A:[]}),null);
 });
+
+test('documented connector instructions compose only along complete directed paths',()=>{
+  const edges={'A>B':{en:['Floor 1 from A to B']},'B>C':{en:['Basement from B to C']}};
+  assert.deepEqual(r.routeInstructions(['A','B','C'],edges,'fr'),['Floor 1 from A to B','Basement from B to C']);
+  assert.equal(r.routeInstructions(['C','B','A'],edges,'en'),null);
+  assert.equal(r.routeInstructions(['A','B','D'],edges,'en'),null);
+  assert.equal(r.routeInstructions(['A'],edges,'en'),null);
+});

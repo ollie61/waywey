@@ -87,6 +87,17 @@ def validate_cross_files(folder: Path, config, destinations, routes, guide, erro
 
     # Catch accidental duplicate canonical records without rejecting legitimate
     # same-name departments at different locations.
+    seen_ids = set()
+    for dest in destinations:
+        if dest.get("id") in seen_ids:
+            errors.append(f"{rel}/destinations.json: duplicate destination id {dest.get('id')!r}")
+        seen_ids.add(dest.get("id"))
+
+    for edge in routes.get("edgeInstructions", {}):
+        parts = edge.split(">")
+        if len(parts) != 2 or parts[1] not in graph.get(parts[0], []):
+            errors.append(f"{rel}/routes.json: instructions for unvalidated edge {edge!r}")
+
     seen = {}
     for i, dest in enumerate(destinations):
         key = (dest["en"].strip().casefold(), dest["p"].strip().casefold(), dest["loc"].strip().casefold())

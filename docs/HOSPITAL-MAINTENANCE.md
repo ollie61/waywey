@@ -294,3 +294,21 @@ Before approving a hospital audit:
 ## 11. Release handoff
 
 When a hospital/data step is approved, follow [`RELEASE-CHECKLIST.md`](RELEASE-CHECKLIST.md) before merging to production.
+
+## Permanent visitor links and connector instructions
+
+Every destination has an `id` that stays with the department when its name,
+location, aliases or translations change. Assign a new unique `dest-...` ID only
+when creating a genuinely new destination; never regenerate IDs from row order,
+name or location. Preserve `legacySlugs` when editing a record so existing QR
+codes continue to resolve. Ambiguous older department-only links ask the user to
+search again rather than choosing an arbitrary location. IDs are unique within
+a hospital and are checked by the validator.
+
+Optional `edgeInstructions` in `routes.json` maps directed keys such as `C>D` to
+language-specific arrays of documented steps. Each edge must already exist in
+the validated public graph. Reverse directions require a separate entry backed
+by the source. The app uses these steps only when every edge of the chosen path
+has instructions; otherwise it retains the generic graph path. Full
+`specialRoutes` take precedence. Add source evidence to `SOURCES.md` and never
+infer accessible or after-hours access from the presence of a connector.

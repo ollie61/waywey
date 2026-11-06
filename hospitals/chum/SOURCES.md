@@ -43,3 +43,11 @@ WayWey should never infer a public route from building adjacency alone.
 ## Current coverage
 
 The initial CHUM package contains 119 searchable destinations. It is suitable for prototype testing, but it is not yet a complete transcription of all 202 entries in the CHUM online directory. Additional entries should be added only after their locations are confirmed from current official sources.
+
+### Connector presentation
+
+The application now displays the existing January 2026 guide evidence as
+per-edge instructions: C–D public connectors on floors 1, 2 and 8, and the D–R
+public underground passage at basement level 1. This changes presentation only;
+no graph edges or access guarantees have been added. This is not a new source
+audit and does not change the recorded audit date.

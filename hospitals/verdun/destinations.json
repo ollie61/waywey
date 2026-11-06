@@ -11,7 +11,12 @@
     ],
     "status": "official",
     "note": "Current Accueil clinique page: Black Block, N1 612. Door 26 is recommended for direct access.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-5c2d5770539458fc",
+    "legacySlugs": [
+      "clinical-access-accueil-clinique-n1-612",
+      "clinical-access-accueil-clinique"
+    ]
   },
   {
     "en": "External Clinics",
@@ -33,7 +38,12 @@
     ],
     "status": "official",
     "note": "Current specialty pages identify the external-clinic registration area at N1 612, counters A, B, C or D.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique",
+    "id": "dest-0f8b21179d4d55a0",
+    "legacySlugs": [
+      "external-clinics-n1-612",
+      "external-clinics"
+    ]
   },
   {
     "en": "Internal Medicine — Clinic",
@@ -46,7 +56,12 @@
     ],
     "status": "official",
     "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-a567e2b7c1ca5b16",
+    "legacySlugs": [
+      "internal-medicine-clinic-n1-612",
+      "internal-medicine-clinic"
+    ]
   },
   {
     "en": "Endocrinology — Clinic",
@@ -62,7 +77,12 @@
     ],
     "status": "official",
     "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-b0eb96f327825b22",
+    "legacySlugs": [
+      "endocrinology-clinic-n1-612",
+      "endocrinology-clinic"
+    ]
   },
   {
     "en": "Gynecology — Clinic",
@@ -76,7 +96,12 @@
     ],
     "status": "official",
     "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-02ea7526b7db5412",
+    "legacySlugs": [
+      "gynecology-clinic-n1-612",
+      "gynecology-clinic"
+    ]
   },
   {
     "en": "Neurology — Clinic",
@@ -91,7 +116,12 @@
     ],
     "status": "official",
     "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-1cad975dd45259d5",
+    "legacySlugs": [
+      "neurology-clinic-n1-612",
+      "neurology-clinic"
+    ]
   },
   {
     "en": "ENT / Otolaryngology — Clinic",
@@ -107,7 +137,12 @@
     ],
     "status": "official",
     "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-d01eaaf03121598d",
+    "legacySlugs": [
+      "ent-otolaryngology-clinic-n1-612",
+      "ent-otolaryngology-clinic"
+    ]
   },
   {
     "en": "Pulmonology — Clinic",
@@ -123,7 +158,12 @@
     ],
     "status": "official",
     "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-abe3cba719375229",
+    "legacySlugs": [
+      "pulmonology-clinic-n1-612",
+      "pulmonology-clinic"
+    ]
   },
   {
     "en": "General and Vascular Surgery — Clinic",
@@ -138,7 +178,12 @@
     ],
     "status": "official",
     "note": "Current Hôpital de Verdun specialty page lists the external clinics in the new Black Block, room N1 612, with direct access via Door 26.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-664084b90fa357cf",
+    "legacySlugs": [
+      "general-and-vascular-surgery-clinic-n1-612",
+      "general-and-vascular-surgery-clinic"
+    ]
   },
   {
     "en": "Day Medicine",
@@ -152,7 +197,12 @@
     ],
     "status": "official",
     "note": "Current Hôpital de Verdun Day Medicine page: Black Block, N1 638.1 and N1 638.2.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-581ac04366545f0f",
+    "legacySlugs": [
+      "day-medicine-n1-638-1-n1-638-2",
+      "day-medicine"
+    ]
   },
   {
     "en": "Microbiology — Day Medicine",
@@ -166,7 +216,12 @@
     ],
     "status": "official",
     "note": "Current Hôpital de Verdun Microbiology page lists the Day Medicine service in the Black Block at N1 638.1 and N1 638.2.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-69424576155f55c3",
+    "legacySlugs": [
+      "microbiology-day-medicine-n1-638-1-n1-638-2",
+      "microbiology-day-medicine"
+    ]
   },
   {
     "en": "Nuclear Medicine",
@@ -183,7 +238,12 @@
     ],
     "status": "official",
     "note": "Official imaging page specifies Nuclear Medicine reception at N1-661 (Black Block), accessible via Door 26. Specific examination rooms may differ.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-97ca8c8eb29f5afb",
+    "legacySlugs": [
+      "nuclear-medicine-n1-661",
+      "nuclear-medicine"
+    ]
   },
   {
     "en": "Surgery Inpatient Unit — Black Block",
@@ -201,7 +261,12 @@
     ],
     "status": "official",
     "note": "Surgical inpatient unit N5 on floor 5; opened and moved patients on 17 February 2026. Individual patient rooms are not indexed.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/actualite/un-transfert-de-patients-et-patientes-historique-pour-lhopital-de-verdun ; https://ciusss-centresudmtl.gouv.qc.ca/revergrand"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/actualite/un-transfert-de-patients-et-patientes-historique-pour-lhopital-de-verdun ; https://ciusss-centresudmtl.gouv.qc.ca/revergrand",
+    "id": "dest-ef28d502ea485ad4",
+    "legacySlugs": [
+      "surgery-inpatient-unit-black-block-n5-5th-floor",
+      "surgery-inpatient-unit-black-block"
+    ]
   },
   {
     "en": "Appointment Centre",
@@ -219,7 +284,12 @@
     ],
     "status": "official",
     "note": "Current specialty pages list the Appointment Centre at J1 354 in the Yellow Block, near Emergency.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique",
+    "id": "dest-45215b8d7e3553c6",
+    "legacySlugs": [
+      "appointment-centre-j1-354",
+      "appointment-centre"
+    ]
   },
   {
     "en": "Medical Imaging / Radiology / X-ray",
@@ -240,7 +310,12 @@
     ],
     "status": "official",
     "note": "Official imaging page identifies B1-404 as the radiology reception/appointment location; the precise examination rooms for MRI, CT, ultrasound, etc. are not separately published.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-37f901d0e9965fc2",
+    "legacySlugs": [
+      "medical-imaging-radiology-x-ray-b1-404",
+      "medical-imaging-radiology-x-ray"
+    ]
   },
   {
     "en": "Physiotherapy",
@@ -255,7 +330,12 @@
     ],
     "status": "official",
     "note": "Current Physiotherapy page: Green Block, 4th floor, V4-264; use elevator 4.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-eafbd9589368561b",
+    "legacySlugs": [
+      "physiotherapy-v4-264",
+      "physiotherapy"
+    ]
   },
   {
     "en": "Occupational Therapy",
@@ -269,7 +349,12 @@
     ],
     "status": "official",
     "note": "Current Occupational Therapy page: Green Block, 4th floor, V4-261.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-bff72ecf086c5594",
+    "legacySlugs": [
+      "occupational-therapy-v4-261",
+      "occupational-therapy"
+    ]
   },
   {
     "en": "Clinical Nutrition",
@@ -284,7 +369,12 @@
     ],
     "status": "official",
     "note": "Current Nutrition page: Green Block, V4-264.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-b24674a2c3da5a02",
+    "legacySlugs": [
+      "clinical-nutrition-v4-264",
+      "clinical-nutrition"
+    ]
   },
   {
     "en": "Preoperative Clinic",
@@ -299,7 +389,12 @@
     ],
     "status": "official",
     "note": "Official expansion project says the preoperative clinic is on the ground floor near the 4000 boulevard LaSalle main entrance. Exact room and present route remain unverified.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand",
+    "id": "dest-6d4c9ac84c3c5264",
+    "legacySlugs": [
+      "preoperative-clinic-ground-floor-near-4000-boulevard-lasalle-entrance",
+      "preoperative-clinic"
+    ]
   },
   {
     "en": "Patient Accounts / Cashier",
@@ -318,7 +413,12 @@
     ],
     "status": "official",
     "note": "Specific official billing page updated 15 May 2026 gives V1-277, superseding the less-specific project description 'ground floor near the 4000 boulevard LaSalle entrance'.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/informations-pratiques/frais-de-soins-et-services-pour-les-personnes-non-assurees-par-la-ramq"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/informations-pratiques/frais-de-soins-et-services-pour-les-personnes-non-assurees-par-la-ramq",
+    "id": "dest-5ac750ef3e975184",
+    "legacySlugs": [
+      "patient-accounts-cashier-v1-277",
+      "patient-accounts-cashier"
+    ]
   },
   {
     "en": "Day Surgery",
@@ -332,7 +432,12 @@
     ],
     "status": "verify",
     "note": "Official expansion project confirms renovation of day surgery in the existing hospital but does not publish a current block/room; remains Verify.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand",
+    "id": "dest-68712f3d98675af8",
+    "legacySlugs": [
+      "day-surgery-existing-hospital-renovated-area-exact-room-to-verify",
+      "day-surgery"
+    ]
   },
   {
     "en": "Emergency Department",
@@ -347,7 +452,12 @@
     ],
     "status": "official",
     "note": "Current hospital access information identifies the Emergency entrance on boulevard Gaétan-Laberge.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-bdbf82453047579d",
+    "legacySlugs": [
+      "emergency-department-emergency-entrance-boulevard-gaetan-laberge",
+      "emergency-department"
+    ]
   },
   {
     "en": "Blood Collection / Test Centre",
@@ -366,7 +476,12 @@
     ],
     "status": "verify",
     "note": "Official blood collection page updated 15 May 2026 confirms appointment-only service at Hôpital de Verdun, weekdays 07:00–14:45, but does not publish a current room or block. Do not infer N1 or B1.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/prises-de-sang-prelevements-et-depistage"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/prises-de-sang-prelevements-et-depistage",
+    "id": "dest-2034e9d7c40a5ef4",
+    "legacySlugs": [
+      "blood-collection-test-centre-hopital-de-verdun-exact-current-room-to-verify",
+      "blood-collection-test-centre"
+    ]
   },
   {
     "en": "Spiritual Care",
@@ -383,7 +498,12 @@
     ],
     "status": "verify",
     "note": "Current CCSMTL Spiritual Care page confirms the service at Hôpital de Verdun but does not publish a room number.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-ca9868c74adb5b67",
+    "legacySlugs": [
+      "spiritual-care-hopital-de-verdun-exact-room-to-verify",
+      "spiritual-care"
+    ]
   },
   {
     "en": "Cardiology — Clinic",
@@ -398,7 +518,12 @@
     ],
     "status": "verify",
     "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-c52aef73e6395ce6",
+    "legacySlugs": [
+      "cardiology-clinic-hopital-de-verdun-exact-current-room-to-verify",
+      "cardiology-clinic"
+    ]
   },
   {
     "en": "Plastic Surgery — Clinic",
@@ -412,7 +537,12 @@
     ],
     "status": "verify",
     "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-5a8dce981e805ad0",
+    "legacySlugs": [
+      "plastic-surgery-clinic-hopital-de-verdun-exact-current-room-to-verify",
+      "plastic-surgery-clinic"
+    ]
   },
   {
     "en": "Dermatology — Clinic",
@@ -427,7 +557,12 @@
     ],
     "status": "verify",
     "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-ea59852fddae505e",
+    "legacySlugs": [
+      "dermatology-clinic-hopital-de-verdun-exact-current-room-to-verify",
+      "dermatology-clinic"
+    ]
   },
   {
     "en": "Gastroenterology — Clinic",
@@ -442,7 +577,12 @@
     ],
     "status": "verify",
     "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-7330afec023353c0",
+    "legacySlugs": [
+      "gastroenterology-clinic-hopital-de-verdun-exact-current-room-to-verify",
+      "gastroenterology-clinic"
+    ]
   },
   {
     "en": "Nephrology — Clinic",
@@ -457,7 +597,12 @@
     ],
     "status": "verify",
     "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-cb7f708e9a7359ba",
+    "legacySlugs": [
+      "nephrology-clinic-hopital-de-verdun-exact-current-room-to-verify",
+      "nephrology-clinic"
+    ]
   },
   {
     "en": "Ophthalmology — Clinic",
@@ -472,7 +617,12 @@
     ],
     "status": "verify",
     "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-b3c79f5005675b04",
+    "legacySlugs": [
+      "ophthalmology-clinic-hopital-de-verdun-exact-current-room-to-verify",
+      "ophthalmology-clinic"
+    ]
   },
   {
     "en": "Orthopedics — Clinic",
@@ -488,7 +638,12 @@
     ],
     "status": "verify",
     "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-7809a4248fda5d99",
+    "legacySlugs": [
+      "orthopedics-clinic-hopital-de-verdun-exact-current-room-to-verify",
+      "orthopedics-clinic"
+    ]
   },
   {
     "en": "Respiratory Physiology",
@@ -507,7 +662,12 @@
     ],
     "status": "official",
     "note": "Current official respiratory physiology page directs visitors to 2nd floor corridor V2 via elevator 4 near the main entrance; register at the kiosk opposite elevator 4. No individual examination room is stated.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/physiologie-respiratoire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/physiologie-respiratoire",
+    "id": "dest-272bf2621147504b",
+    "legacySlugs": [
+      "respiratory-physiology-v2-corridor-2nd-floor-elevator-4-exact-room-not-published",
+      "respiratory-physiology"
+    ]
   },
   {
     "en": "Urology — Clinic",
@@ -525,7 +685,12 @@
     ],
     "status": "official",
     "note": "The dedicated official urology page identifies the integrated urology clinic at V4-242 in the Green Block; do not substitute the general N1 external-clinic counter.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/urologie"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/urologie",
+    "id": "dest-e31ca2333ddd53b4",
+    "legacySlugs": [
+      "urology-clinic-v4-242",
+      "urology-clinic"
+    ]
   },
   {
     "en": "Nutrition — other hospital services",
@@ -537,7 +702,12 @@
     ],
     "status": "verify",
     "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-845693f1339858d5",
+    "legacySlugs": [
+      "nutrition-other-hospital-services-hopital-de-verdun-exact-current-room-to-verify",
+      "nutrition-other-hospital-services"
+    ]
   },
   {
     "en": "Palliative Care — Inpatient Unit N3",
@@ -552,7 +722,12 @@
     ],
     "status": "official",
     "note": "Official expansion project identifies the N2–N5 clinical assignments; 9 October 2026 works notice refers to hospitalized patients in N2–N5. Exact bed and room numbers are not published.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand ; https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand ; https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26",
+    "id": "dest-d81fb2a081085ffa",
+    "legacySlugs": [
+      "palliative-care-inpatient-unit-n3-n3-3rd-floor",
+      "palliative-care-inpatient-unit-n3"
+    ]
   },
   {
     "en": "Hemato-Oncology",
@@ -568,7 +743,12 @@
     ],
     "status": "verify",
     "note": "Hôpital de Verdun currently offers this service. The exact location in the new 2026 layout is still being audited against current official sources.",
-    "source": "CCSMTL / Hôpital de Verdun current public information"
+    "source": "CCSMTL / Hôpital de Verdun current public information",
+    "id": "dest-dc8d043353945c31",
+    "legacySlugs": [
+      "hemato-oncology-hopital-de-verdun-exact-current-room-to-verify",
+      "hemato-oncology"
+    ]
   },
   {
     "en": "Former External Clinic Counter — Mauve Block",
@@ -584,7 +764,12 @@
     ],
     "status": "verify",
     "note": "Older specialty pages (e.g. Cardiology, Dermatology, Nephrology, Orthopedics) still cite M1-252, whereas current detailed external-clinic pages give Black Block N1 612. M1-252 is a historical/transition reference, NOT a validated current check-in location.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/cardiologie ; https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/dermatologie ; https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/nephrologie ; https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/orthopedie ; https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/cardiologie ; https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/dermatologie ; https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/nephrologie ; https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/consultation-avec-un-medecin-ou-une-infirmiere/consultation-avec-un-medecin-specialiste/orthopedie ; https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique",
+    "id": "dest-9ba7bce3d6515aa9",
+    "legacySlugs": [
+      "former-external-clinic-counter-mauve-block-m1-252",
+      "former-external-clinic-counter-mauve-block"
+    ]
   },
   {
     "en": "Main Entrance — 4000 boulevard LaSalle",
@@ -598,7 +783,12 @@
     ],
     "status": "official",
     "note": "Current 9 October 2026 works notice explicitly identifies the main entrance at 4000 boulevard LaSalle as the diversion from Door 26. The main entrance and Emergency are separate starting stations.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26",
+    "id": "dest-ae876b09867f551d",
+    "legacySlugs": [
+      "main-entrance-4000-boulevard-lasalle-4000-boulevard-lasalle",
+      "main-entrance-4000-boulevard-lasalle"
+    ]
   },
   {
     "en": "New Pavilion Entrance — Door 26",
@@ -617,7 +807,12 @@
     ],
     "status": "official",
     "note": "Official 9 October 2026 notice locates Door 26 at boulevard LaSalle and rue de l’Église. It was closed temporarily on 13 October 2026 from 08:00 to 12:00 for ice-breaker installation; this was not a permanent closure.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26",
+    "id": "dest-d81fa32b16875927",
+    "legacySlugs": [
+      "new-pavilion-entrance-door-26-boulevard-lasalle-at-rue-de-l-eglise",
+      "new-pavilion-entrance-door-26"
+    ]
   },
   {
     "en": "Emergency Entrance",
@@ -631,7 +826,12 @@
     ],
     "status": "official",
     "note": "Official Accueil clinique directions direct visitors entering at Emergency through the Yellow Block J1 corridor toward N1. Emergency is on boulevard Gaétan-Laberge, distinct from the main entrance.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique",
+    "id": "dest-200ebbf216f85a19",
+    "legacySlugs": [
+      "emergency-entrance-boulevard-gaetan-laberge",
+      "emergency-entrance"
+    ]
   },
   {
     "en": "3950 Boulevard LaSalle / Door 4 — Current Role Unverified",
@@ -648,7 +848,12 @@
     ],
     "status": "verify",
     "note": "Former construction-era hospital entrance at 3950 boulevard LaSalle. Current public use has not been established. The GMF de Verdun is listed separately at 55 rue de l’Église, not at this entrance.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/adresses-et-coordonnees"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/adresses-et-coordonnees",
+    "id": "dest-933c236aa92453d4",
+    "legacySlugs": [
+      "3950-boulevard-lasalle-door-4-current-role-unverified-3950-boulevard-lasalle-door-4",
+      "3950-boulevard-lasalle-door-4-current-role-unverified"
+    ]
   },
   {
     "en": "Internal Medicine — Inpatient Unit N2",
@@ -664,7 +869,12 @@
     ],
     "status": "official",
     "note": "Official expansion project identifies the N2–N5 clinical assignments; 9 October 2026 works notice refers to hospitalized patients in N2–N5. Exact bed and room numbers are not published.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand ; https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand ; https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26",
+    "id": "dest-d87ade7512845e63",
+    "legacySlugs": [
+      "internal-medicine-inpatient-unit-n2-n2-2nd-floor",
+      "internal-medicine-inpatient-unit-n2"
+    ]
   },
   {
     "en": "Clinical Teaching Unit — N3",
@@ -680,7 +890,12 @@
     ],
     "status": "official",
     "note": "Official expansion project identifies the N2–N5 clinical assignments; 9 October 2026 works notice refers to hospitalized patients in N2–N5. Exact bed and room numbers are not published.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand ; https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand ; https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26",
+    "id": "dest-ee1bd6589d0b56f4",
+    "legacySlugs": [
+      "clinical-teaching-unit-n3-n3-3rd-floor",
+      "clinical-teaching-unit-n3"
+    ]
   },
   {
     "en": "Geriatric Medicine — Inpatient Unit N4",
@@ -696,7 +911,12 @@
     ],
     "status": "official",
     "note": "Official expansion project identifies the N2–N5 clinical assignments; 9 October 2026 works notice refers to hospitalized patients in N2–N5. Exact bed and room numbers are not published.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand ; https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand ; https://ciusss-centresudmtl.gouv.qc.ca/actualite/hopital-de-verdun-fermeture-temporaire-de-lentree-du-nouveau-pavillon-porte-26",
+    "id": "dest-8f079b796a855554",
+    "legacySlugs": [
+      "geriatric-medicine-inpatient-unit-n4-n4-4th-floor",
+      "geriatric-medicine-inpatient-unit-n4"
+    ]
   },
   {
     "en": "MRI — Radiology Reception",
@@ -712,7 +932,12 @@
     ],
     "status": "official",
     "note": "Official 2026 imaging service list confirms this exam at Verdun. B1-404 is the radiology registration / requisition desk; the exact procedure room is not published. Confirm with the appointment slip.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-f9e77a413b705153",
+    "legacySlugs": [
+      "mri-radiology-reception-b1-404-radiology-reception-examination-room-to-confirm",
+      "mri-radiology-reception"
+    ]
   },
   {
     "en": "CT Scan — Radiology Reception",
@@ -730,7 +955,12 @@
     ],
     "status": "official",
     "note": "Official 2026 imaging service list confirms this exam at Verdun. B1-404 is the radiology registration / requisition desk; the exact procedure room is not published. Confirm with the appointment slip.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-e6d68bdc9284566b",
+    "legacySlugs": [
+      "ct-scan-radiology-reception-b1-404-radiology-reception-examination-room-to-confirm",
+      "ct-scan-radiology-reception"
+    ]
   },
   {
     "en": "Ultrasound — Radiology Reception",
@@ -747,7 +977,12 @@
     ],
     "status": "official",
     "note": "Official 2026 imaging service list confirms this exam at Verdun. B1-404 is the radiology registration / requisition desk; the exact procedure room is not published. Confirm with the appointment slip.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-54322ca67cf451ab",
+    "legacySlugs": [
+      "ultrasound-radiology-reception-b1-404-radiology-reception-examination-room-to-confirm",
+      "ultrasound-radiology-reception"
+    ]
   },
   {
     "en": "Fluoroscopy and Guided Injections — Radiology Reception",
@@ -763,7 +998,12 @@
     ],
     "status": "official",
     "note": "Official 2026 imaging service list confirms this exam at Verdun. B1-404 is the radiology registration / requisition desk; the exact procedure room is not published. Confirm with the appointment slip.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-53731133ba5b59c5",
+    "legacySlugs": [
+      "fluoroscopy-and-guided-injections-radiology-reception-b1-404-radiology-reception-examination-room-to-confirm",
+      "fluoroscopy-and-guided-injections-radiology-reception"
+    ]
   },
   {
     "en": "Image-guided Biopsy and Intervention — Radiology Reception",
@@ -779,7 +1019,12 @@
     ],
     "status": "official",
     "note": "Official 2026 imaging service list confirms this exam at Verdun. B1-404 is the radiology registration / requisition desk; the exact procedure room is not published. Confirm with the appointment slip.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-2fd6c38b42405a12",
+    "legacySlugs": [
+      "image-guided-biopsy-and-intervention-radiology-reception-b1-404-radiology-reception-examination-room-to-confirm",
+      "image-guided-biopsy-and-intervention-radiology-reception"
+    ]
   },
   {
     "en": "Cardiac MIBI / Myocardial Scintigraphy",
@@ -795,7 +1040,12 @@
     ],
     "status": "official",
     "note": "Official Nuclear Medicine list confirms the procedure. N1-661 is the Nuclear Medicine reception, not necessarily the examination room; enter via Door 26 and confirm the assigned room.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-aef2cb39dad25a71",
+    "legacySlugs": [
+      "cardiac-mibi-myocardial-scintigraphy-n1-661-nuclear-medicine-reception-examination-room-to-confirm",
+      "cardiac-mibi-myocardial-scintigraphy"
+    ]
   },
   {
     "en": "Bone Scan / Bone Scintigraphy",
@@ -809,7 +1059,12 @@
     ],
     "status": "official",
     "note": "Official Nuclear Medicine list confirms the procedure. N1-661 is the Nuclear Medicine reception, not necessarily the examination room; enter via Door 26 and confirm the assigned room.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-8accd900cde55dac",
+    "legacySlugs": [
+      "bone-scan-bone-scintigraphy-n1-661-nuclear-medicine-reception-examination-room-to-confirm",
+      "bone-scan-bone-scintigraphy"
+    ]
   },
   {
     "en": "Thyroid / Parathyroid Nuclear Scan",
@@ -824,7 +1079,12 @@
     ],
     "status": "official",
     "note": "Official Nuclear Medicine list confirms the procedure. N1-661 is the Nuclear Medicine reception, not necessarily the examination room; enter via Door 26 and confirm the assigned room.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-e5fe026eedf25496",
+    "legacySlugs": [
+      "thyroid-parathyroid-nuclear-scan-n1-661-nuclear-medicine-reception-examination-room-to-confirm",
+      "thyroid-parathyroid-nuclear-scan"
+    ]
   },
   {
     "en": "Renal Nuclear Scan",
@@ -839,7 +1099,12 @@
     ],
     "status": "official",
     "note": "Official Nuclear Medicine list confirms the procedure. N1-661 is the Nuclear Medicine reception, not necessarily the examination room; enter via Door 26 and confirm the assigned room.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-657ff47cd69e5989",
+    "legacySlugs": [
+      "renal-nuclear-scan-n1-661-nuclear-medicine-reception-examination-room-to-confirm",
+      "renal-nuclear-scan"
+    ]
   },
   {
     "en": "Lung V/Q Scan",
@@ -854,7 +1119,12 @@
     ],
     "status": "official",
     "note": "Official Nuclear Medicine list confirms the procedure. N1-661 is the Nuclear Medicine reception, not necessarily the examination room; enter via Door 26 and confirm the assigned room.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-be2c898cd3ad56a1",
+    "legacySlugs": [
+      "lung-v-q-scan-n1-661-nuclear-medicine-reception-examination-room-to-confirm",
+      "lung-v-q-scan"
+    ]
   },
   {
     "en": "Nuclear Medicine MUGA / Ventriculography",
@@ -868,7 +1138,12 @@
     ],
     "status": "official",
     "note": "Official Nuclear Medicine list confirms the procedure. N1-661 is the Nuclear Medicine reception, not necessarily the examination room; enter via Door 26 and confirm the assigned room.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-2d0d3d307d6752fa",
+    "legacySlugs": [
+      "nuclear-medicine-muga-ventriculography-n1-661-nuclear-medicine-reception-examination-room-to-confirm",
+      "nuclear-medicine-muga-ventriculography"
+    ]
   },
   {
     "en": "Nuclear Medicine HIDA / Hepatobiliary Scan",
@@ -882,7 +1157,12 @@
     ],
     "status": "official",
     "note": "Official Nuclear Medicine list confirms the procedure. N1-661 is the Nuclear Medicine reception, not necessarily the examination room; enter via Door 26 and confirm the assigned room.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-3e46fe247946566d",
+    "legacySlugs": [
+      "nuclear-medicine-hida-hepatobiliary-scan-n1-661-nuclear-medicine-reception-examination-room-to-confirm",
+      "nuclear-medicine-hida-hepatobiliary-scan"
+    ]
   },
   {
     "en": "Nuclear Medicine Gastric Emptying Study",
@@ -896,7 +1176,12 @@
     ],
     "status": "official",
     "note": "Official Nuclear Medicine list confirms the procedure. N1-661 is the Nuclear Medicine reception, not necessarily the examination room; enter via Door 26 and confirm the assigned room.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/imagerie-medicale-radiologie-rayons-x-et-medecine-nucleaire",
+    "id": "dest-5c21b514ff615db9",
+    "legacySlugs": [
+      "nuclear-medicine-gastric-emptying-study-n1-661-nuclear-medicine-reception-examination-room-to-confirm",
+      "nuclear-medicine-gastric-emptying-study"
+    ]
   },
   {
     "en": "External Clinics — Registration Kiosks",
@@ -913,7 +1198,12 @@
     ],
     "status": "official",
     "note": "Current external-clinic instructions require visitors to scan their health card at a kiosk and take a numbered ticket before proceeding to the designated counter.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique ; https://ciusss-centresudmtl.gouv.qc.ca/revergrand"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique ; https://ciusss-centresudmtl.gouv.qc.ca/revergrand",
+    "id": "dest-c0cd3e204eb65d4b",
+    "legacySlugs": [
+      "external-clinics-registration-kiosks-n1-612",
+      "external-clinics-registration-kiosks"
+    ]
   },
   {
     "en": "External Clinics — Counters A, B, C and D",
@@ -933,7 +1223,12 @@
     ],
     "status": "official",
     "note": "Specialty clinic instructions explicitly identify counters A–D at N1 612. The ticket determines which counter to use.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/accueil-clinique",
+    "id": "dest-256e561dbef05faf",
+    "legacySlugs": [
+      "external-clinics-counters-a-b-c-and-d-n1-612",
+      "external-clinics-counters-a-b-c-and-d"
+    ]
   },
   {
     "en": "Cafeteria",
@@ -950,7 +1245,12 @@
     ],
     "status": "verify",
     "note": "Official hospital page confirms cafeteria hours (Mon–Fri 07:00–19:15; weekends 09:30–19:15) but does not identify its block or room. Ask reception for the current route.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/etablissement/hopital-de-verdun"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/etablissement/hopital-de-verdun",
+    "id": "dest-6302c8b0423f5c7f",
+    "legacySlugs": [
+      "cafeteria-hopital-de-verdun-exact-current-room-block-not-published",
+      "cafeteria"
+    ]
   },
   {
     "en": "Patient and Family Lounges — Black Block",
@@ -970,7 +1270,12 @@
     ],
     "status": "verify",
     "note": "The official expansion project specifies one patient/family lounge per floor N2–N5. Exact lounge rooms and visitor access policy are not published.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand",
+    "id": "dest-b295f9cf85b45e25",
+    "legacySlugs": [
+      "patient-and-family-lounges-black-block-n2-n5-one-lounge-on-each-inpatient-floor",
+      "patient-and-family-lounges-black-block"
+    ]
   },
   {
     "en": "Visitor Parking — Lots 433 and 434",
@@ -992,7 +1297,12 @@
     "source": "https://ciusss-centresudmtl.gouv.qc.ca/etablissement/hopital-de-verdun",
     "outdoorMap": {
       "query": "4110 Boulevard Gaétan-Laberge, Montréal, QC, Canada"
-    }
+    },
+    "id": "dest-f1c21c7b24a0516e",
+    "legacySlugs": [
+      "visitor-parking-lots-433-and-434-4110-boulevard-gaetan-laberge-beside-arena-denis-savard",
+      "visitor-parking-lots-433-and-434"
+    ]
   },
   {
     "en": "Visitor Parking — Gravel Lot",
@@ -1011,7 +1321,12 @@
     "source": "https://ciusss-centresudmtl.gouv.qc.ca/etablissement/hopital-de-verdun",
     "outdoorMap": {
       "query": "Rue Hickson & Boulevard Gaétan-Laberge, Montréal, QC, Canada"
-    }
+    },
+    "id": "dest-9c294c8e64d95dca",
+    "legacySlugs": [
+      "visitor-parking-gravel-lot-corner-of-rue-hickson-and-boulevard-gaetan-laberge",
+      "visitor-parking-gravel-lot"
+    ]
   },
   {
     "en": "Medical Records / Patient File Requests",
@@ -1029,7 +1344,12 @@
     ],
     "status": "verify",
     "note": "Official archives page updated 3 August 2026 confirms records requests through the Verdun hospital (514 362-1000 ext. 762064; hv.archives.medicales.ccsmtl@ssss.gouv.qc.ca) but no public room is specified.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/demande-dacces-au-dossier-de-lusager-et-registre-de-vaccination"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/soins-et-services/demande-dacces-au-dossier-de-lusager-et-registre-de-vaccination",
+    "id": "dest-5aa596de7934500c",
+    "legacySlugs": [
+      "medical-records-patient-file-requests-hopital-de-verdun-exact-public-service-counter-room-not-published",
+      "medical-records-patient-file-requests"
+    ]
   },
   {
     "en": "Family Medicine University Clinic — GMF de Verdun (off campus)",
@@ -1054,7 +1374,12 @@
     "source": "https://ciusss-centresudmtl.gouv.qc.ca/adresses-et-coordonnees",
     "outdoorMap": {
       "query": "55 Rue de l’Église, Verdun, QC, Canada"
-    }
+    },
+    "id": "dest-d44b7f357ef45380",
+    "legacySlugs": [
+      "family-medicine-university-clinic-gmf-de-verdun-off-campus-55-rue-de-l-eglise-verdun-separate-facility-not-inside-hopital-de-verdun",
+      "family-medicine-university-clinic-gmf-de-verdun-off-campus"
+    ]
   },
   {
     "en": "Atrium — Public Access to Verify",
@@ -1070,6 +1395,11 @@
     ],
     "status": "verify",
     "note": "Official expansion project describes an atrium and three elevators, but the public project page does not confirm a fully open visitor route as of October 2026. No indoor graph edge is created.",
-    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand"
+    "source": "https://ciusss-centresudmtl.gouv.qc.ca/revergrand",
+    "id": "dest-e2ca5bec40415934",
+    "legacySlugs": [
+      "atrium-public-access-to-verify-hospital-central-atrium-current-public-opening-route-not-verified",
+      "atrium-public-access-to-verify"
+    ]
   }
 ]

@@ -1,4 +1,4 @@
-const SHELL_CACHE="waywey-cache-18";
+const SHELL_CACHE="waywey-cache-19";
 const DATA_CACHE="waywey-hospital-data-1";
 
 const SHELL_ASSETS=[
@@ -18,11 +18,12 @@ const SHELL_ASSETS=[
   "./js/provenance.js",
   "./js/accessibility.js",
   "./js/outdoor-map.js",
-  "./js/voice-search.js"
+  "./js/voice-search.js",
+  "./js/visitor-links.js"
 ];
 
 self.addEventListener("install",event=>{
-  event.waitUntil(caches.open(SHELL_CACHE).then(cache=>cache.addAll(SHELL_ASSETS)).then(()=>self.skipWaiting()));
+  event.waitUntil(caches.open(SHELL_CACHE).then(cache=>cache.addAll(SHELL_ASSETS)));
 });
 
 self.addEventListener("activate",event=>{
@@ -88,6 +89,12 @@ async function networkFirstHospital(request){
 }
 
 async function navigationResponse(request){
+  const url=new URL(request.url),scope=new URL(self.registration.scope);
+  if(url.pathname===scope.pathname||url.pathname===scope.pathname+"index.html"){
+    const cache=await caches.open(SHELL_CACHE);
+    const shell=await cache.match("./index.html");
+    if(shell)return shell;
+  }
   try{
     return await fetch(request);
   }catch(e){
@@ -98,7 +105,14 @@ async function navigationResponse(request){
 }
 
 async function shellResponse(request){
-  // Prefer deployed code so a cached PWA module cannot trap users on old update UI.
+  // Keep a shell revision coherent until the user activates its replacement.
+  const url=new URL(request.url);
+  const asset=SHELL_ASSETS.some(path=>new URL(path,self.registration.scope).pathname===url.pathname);
+  if(asset){
+    const cache=await caches.open(SHELL_CACHE);
+    const cached=await cache.match(request,{ignoreSearch:true});
+    if(cached)return cached;
+  }
   try{
     const response=await fetch(request,{cache:"no-cache"});
     if(response.ok){

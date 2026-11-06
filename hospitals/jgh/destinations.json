@@ -12,7 +12,12 @@
       "Urgence"
     ],
     "status": "official",
-    "note": "Official JGH Emergency page: Pavilion K, level S2; Emergency entrance is 5777 Légaré."
+    "note": "Official JGH Emergency page: Pavilion K, level S2; Emergency entrance is 5777 Légaré.",
+    "id": "dest-089411d3a2e850c8",
+    "legacySlugs": [
+      "emergency-department-s2",
+      "emergency-department"
+    ]
   },
   {
     "en": "Care Unit (Acute Geriatrics)",
@@ -24,7 +29,12 @@
       "Unité de soins — Gériatrie aiguë"
     ],
     "status": "verify",
-    "note": "JGH Department List says one C6 geriatrics unit relocated to Hôtel-Dieu (HD-6) and also lists Geriatrics D6 in C-6. Confirm the patient's unit before routing."
+    "note": "JGH Department List says one C6 geriatrics unit relocated to Hôtel-Dieu (HD-6) and also lists Geriatrics D6 in C-6. Confirm the patient's unit before routing.",
+    "id": "dest-3d1e6237441c5a30",
+    "legacySlugs": [
+      "care-unit-acute-geriatrics-6th-floor",
+      "care-unit-acute-geriatrics"
+    ]
   },
   {
     "en": "Care Unit (Antepartum / High Risk)",
@@ -37,7 +47,12 @@
       "Unité de soins — Grossesse à risque / antépartum"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-561573a8b3385f7f",
+    "legacySlugs": [
+      "care-unit-antepartum-high-risk-3rd-floor",
+      "care-unit-antepartum-high-risk"
+    ]
   },
   {
     "en": "Care Unit (Cardiovascular - CVU)",
@@ -50,7 +65,12 @@
       "Unité de soins cardiovasculaires (CVU)"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-c9b6722a9fad5cc8",
+    "legacySlugs": [
+      "care-unit-cardiovascular-cvu-2nd-floor",
+      "care-unit-cardiovascular-cvu"
+    ]
   },
   {
     "en": "Care Unit (Cardiovascular Intensive Care - CVICU)",
@@ -64,7 +84,12 @@
       "Soins intensifs cardiovasculaires (CVICU)"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-9a0460da70335790",
+    "legacySlugs": [
+      "care-unit-cardiovascular-intensive-care-cvicu-2nd-floor",
+      "care-unit-cardiovascular-intensive-care-cvicu"
+    ]
   },
   {
     "en": "Care Unit (Family Medicine CJ)",
@@ -76,7 +101,12 @@
       "Unité de soins de médecine familiale"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-92bcef5f6ac95b4d",
+    "legacySlugs": [
+      "care-unit-family-medicine-cj-3rd-floor",
+      "care-unit-family-medicine-cj"
+    ]
   },
   {
     "en": "Care Unit (Medicine C5)",
@@ -88,7 +118,12 @@
       "Unité de soins — Médecine C5"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-55196fd617b05e72",
+    "legacySlugs": [
+      "care-unit-medicine-c5-5th-floor",
+      "care-unit-medicine-c5"
+    ]
   },
   {
     "en": "Care Unit (Medical and Surgical Intensive Care - MSICU)",
@@ -102,7 +137,12 @@
       "Soins intensifs médicaux et chirurgicaux"
     ],
     "status": "official",
-    "note": "Current Department List lists the Intensive Care Unit in Pavilion K, 1st floor."
+    "note": "Current Department List lists the Intensive Care Unit in Pavilion K, 1st floor.",
+    "id": "dest-19512a6b62495640",
+    "legacySlugs": [
+      "care-unit-medical-and-surgical-intensive-care-msicu-1st-floor",
+      "care-unit-medical-and-surgical-intensive-care-msicu"
+    ]
   },
   {
     "en": "Care Unit (Medicine)",
@@ -114,7 +154,12 @@
       "Unité de soins — Médecine"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-9a2a3718c75157ce",
+    "legacySlugs": [
+      "care-unit-medicine-6th-floor",
+      "care-unit-medicine"
+    ]
   },
   {
     "en": "Care Unit (Medicine)",
@@ -126,7 +171,12 @@
       "Unité de soins — Médecine"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-65e0c145700f50aa",
+    "legacySlugs": [
+      "care-unit-medicine-7th-floor",
+      "care-unit-medicine"
+    ]
   },
   {
     "en": "Care Unit (Mental Health and Addiction Unit)",
@@ -139,7 +189,12 @@
       "Unité de santé mentale et dépendance"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-9475f890ac435bb7",
+    "legacySlugs": [
+      "care-unit-mental-health-and-addiction-unit-3rd-floor",
+      "care-unit-mental-health-and-addiction-unit"
+    ]
   },
   {
     "en": "Care Unit (Neonatal Intensive Care - NICU)",
@@ -152,7 +207,12 @@
       "Soins intensifs néonatals (USIN)"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-fdd536d7d31e5f06",
+    "legacySlugs": [
+      "care-unit-neonatal-intensive-care-nicu-5th-floor",
+      "care-unit-neonatal-intensive-care-nicu"
+    ]
   },
   {
     "en": "Care Unit (Neurosciences)",
@@ -164,7 +224,12 @@
       "Unité de soins — Neurosciences"
     ],
     "status": "verify",
-    "note": "Photo baseline says K, 10th floor; the current Department List separately lists Neuroscience at 4C. Confirm whether the visitor needs the inpatient unit or the department."
+    "note": "Photo baseline says K, 10th floor; the current Department List separately lists Neuroscience at 4C. Confirm whether the visitor needs the inpatient unit or the department.",
+    "id": "dest-7c3a64a33aea5512",
+    "legacySlugs": [
+      "care-unit-neurosciences-10th-floor",
+      "care-unit-neurosciences"
+    ]
   },
   {
     "en": "Care Unit (Orthopedics)",
@@ -176,7 +241,12 @@
       "Unité de soins — Orthopédie"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-4654dae78fe65193",
+    "legacySlugs": [
+      "care-unit-orthopedics-4th-floor",
+      "care-unit-orthopedics"
+    ]
   },
   {
     "en": "Care Unit (Palliative Care)",
@@ -188,7 +258,12 @@
       "Unité de soins palliatifs"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-dfcf04e51c1357c6",
+    "legacySlugs": [
+      "care-unit-palliative-care-4th-floor",
+      "care-unit-palliative-care"
+    ]
   },
   {
     "en": "Care Unit (Postpartum)",
@@ -201,7 +276,12 @@
       "Unité de soins post-partum"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-4fb7c07e17d15078",
+    "legacySlugs": [
+      "care-unit-postpartum-8th-floor",
+      "care-unit-postpartum"
+    ]
   },
   {
     "en": "Care Unit (Psychiatry High and Intermediate Care Units)",
@@ -213,7 +293,12 @@
       "Psychiatrie — soins intensifs et intermédiaires"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-64b25dbc6b045f70",
+    "legacySlugs": [
+      "care-unit-psychiatry-high-and-intermediate-care-units-3rd-floor",
+      "care-unit-psychiatry-high-and-intermediate-care-units"
+    ]
   },
   {
     "en": "Care Unit (Surgery)",
@@ -225,7 +310,12 @@
       "Unité de soins — Chirurgie"
     ],
     "status": "official",
-    "note": "Current Department List lists Surgery in Pavilion K, 8th and 9th floors."
+    "note": "Current Department List lists Surgery in Pavilion K, 8th and 9th floors.",
+    "id": "dest-2a5b5510a66953d1",
+    "legacySlugs": [
+      "care-unit-surgery-8th-and-9th-floors",
+      "care-unit-surgery"
+    ]
   },
   {
     "en": "Care Unit (Surgical Short Stay)",
@@ -237,7 +327,12 @@
       "Court séjour chirurgical"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-198336d9713b5354",
+    "legacySlugs": [
+      "care-unit-surgical-short-stay-5th-floor",
+      "care-unit-surgical-short-stay"
+    ]
   },
   {
     "en": "Admitting Office and Patient Accounts",
@@ -250,7 +345,12 @@
       "Admissions et comptes des patients"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-120dd63f48a25241",
+    "legacySlugs": [
+      "admitting-office-and-patient-accounts-b-114",
+      "admitting-office-and-patient-accounts"
+    ]
   },
   {
     "en": "Allergy and Immunology",
@@ -265,7 +365,12 @@
       "Allergie et immunologie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-5790394ed3ba531d",
+    "legacySlugs": [
+      "allergy-and-immunology-c-204",
+      "allergy-and-immunology"
+    ]
   },
   {
     "en": "Anna & Peter Brojde Lung Cancer Centre",
@@ -278,7 +383,12 @@
       "Centre du cancer du poumon Anna & Peter Brojde"
     ],
     "status": "official",
-    "note": "Current JGH Department List places the Peter Brojde Lung Cancer Centre in Pavilion E, 7th floor."
+    "note": "Current JGH Department List places the Peter Brojde Lung Cancer Centre in Pavilion E, 7th floor.",
+    "id": "dest-a00090ee40c05984",
+    "legacySlugs": [
+      "anna-peter-brojde-lung-cancer-centre-7th-floor",
+      "anna-peter-brojde-lung-cancer-centre"
+    ]
   },
   {
     "en": "Arthritis Clinic",
@@ -291,7 +401,12 @@
       "Clinique d’arthrite"
     ],
     "status": "official",
-    "note": "Current JGH Clinics and Testing page lists Arthritis at C-003.10."
+    "note": "Current JGH Clinics and Testing page lists Arthritis at C-003.10.",
+    "id": "dest-1b9d3bf469cd5e63",
+    "legacySlugs": [
+      "arthritis-clinic-c-003-10",
+      "arthritis-clinic"
+    ]
   },
   {
     "en": "Audiology",
@@ -305,7 +420,12 @@
       "Audiologie"
     ],
     "status": "official",
-    "note": "Dedicated Audiology and Speech Pathology page: Audiology is E-932."
+    "note": "Dedicated Audiology and Speech Pathology page: Audiology is E-932.",
+    "id": "dest-fe6d66723b97545e",
+    "legacySlugs": [
+      "audiology-e-932",
+      "audiology"
+    ]
   },
   {
     "en": "Auditorium",
@@ -316,7 +436,12 @@
       "Auditorium"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-117df21861c05d22",
+    "legacySlugs": [
+      "auditorium-a-102",
+      "auditorium"
+    ]
   },
   {
     "en": "Auxiliary Office",
@@ -328,7 +453,12 @@
       "Bureau de l’Auxiliaire"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-8f7c8a7e71695fb3",
+    "legacySlugs": [
+      "auxiliary-office-a-018",
+      "auxiliary-office"
+    ]
   },
   {
     "en": "Breast Centre",
@@ -343,7 +473,12 @@
       "Centre du sein"
     ],
     "status": "official",
-    "note": "Current JGH Department List lists CRID Radiologie / breast imaging at E-1004, 10th floor."
+    "note": "Current JGH Department List lists CRID Radiologie / breast imaging at E-1004, 10th floor.",
+    "id": "dest-19ddb181219c595d",
+    "legacySlugs": [
+      "breast-centre-e-1004-10th-floor",
+      "breast-centre"
+    ]
   },
   {
     "en": "Breastfeeding Clinic",
@@ -356,7 +491,12 @@
       "allaitement",
       "Clinique d'allaitement"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-7cd0f6b57e9e51ad",
+    "legacySlugs": [
+      "breastfeeding-clinic-b-556",
+      "breastfeeding-clinic"
+    ]
   },
   {
     "en": "C.T. Scan (Computed Tomography)",
@@ -370,7 +510,12 @@
       "Tomodensitométrie (TDM / CT)"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-9a31aeedc18f50e1",
+    "legacySlugs": [
+      "c-t-scan-computed-tomography-d-205",
+      "c-t-scan-computed-tomography"
+    ]
   },
   {
     "en": "Cancer Information Centre",
@@ -382,7 +527,12 @@
       "Centre d’information sur le cancer"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-c8e743c6f29e5062",
+    "legacySlugs": [
+      "cancer-information-centre-e-771",
+      "cancer-information-centre"
+    ]
   },
   {
     "en": "Cancer Nutrition Rehabilitation Program (CNR)",
@@ -394,7 +544,12 @@
       "cancer nutrition",
       "Programme de réadaptation nutritionnelle en oncologie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-0e68392f737f5c2a",
+    "legacySlugs": [
+      "cancer-nutrition-rehabilitation-program-cnr-e-809",
+      "cancer-nutrition-rehabilitation-program-cnr"
+    ]
   },
   {
     "en": "Cancer Prevention Centre",
@@ -405,7 +560,12 @@
       "Cancer prevention",
       "Centre de prévention du cancer"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-7c8a6e8262d852aa",
+    "legacySlugs": [
+      "cancer-prevention-centre-e-740",
+      "cancer-prevention-centre"
+    ]
   },
   {
     "en": "Cardiac Surgery",
@@ -417,7 +577,12 @@
       "Chirurgie cardiaque"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-446c02f8a2d45c14",
+    "legacySlugs": [
+      "cardiac-surgery-5th-floor",
+      "cardiac-surgery"
+    ]
   },
   {
     "en": "Cardiology",
@@ -434,7 +599,12 @@
       "cœur",
       "Cardiologie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-c3b2bcb9f8485bb7",
+    "legacySlugs": [
+      "cardiology-e-206",
+      "cardiology"
+    ]
   },
   {
     "en": "Cardiovascular Prevention Centre",
@@ -447,7 +617,12 @@
       "Centre de prévention cardiovasculaire"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-367a322a6154547b",
+    "legacySlugs": [
+      "cardiovascular-prevention-centre-h-132",
+      "cardiovascular-prevention-centre"
+    ]
   },
   {
     "en": "Centre for Child Development and Mental Health",
@@ -460,7 +635,11 @@
       "Centre de développement de l’enfant et de santé mentale"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-c46524ee25895bab",
+    "legacySlugs": [
+      "centre-for-child-development-and-mental-health"
+    ]
   },
   {
     "en": "Centre of Excellence in Thrombosis and Anticoagulation Care (CETAC)",
@@ -474,7 +653,12 @@
       "Centre d’excellence en thrombose et anticoagulation (CETAC)"
     ],
     "status": "official",
-    "note": "Current JGH Clinics and Testing page lists thrombosis/coagulation-anticoagulant services at B-304."
+    "note": "Current JGH Clinics and Testing page lists thrombosis/coagulation-anticoagulant services at B-304.",
+    "id": "dest-847379d9c0805c50",
+    "legacySlugs": [
+      "centre-of-excellence-in-thrombosis-and-anticoagulation-care-cetac-b-304",
+      "centre-of-excellence-in-thrombosis-and-anticoagulation-care-cetac"
+    ]
   },
   {
     "en": "Clinical Research Unit - Pavilion E",
@@ -486,7 +670,12 @@
       "Unité de recherche clinique — Pavillon E"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-2095cf41309655f2",
+    "legacySlugs": [
+      "clinical-research-unit-pavilion-e-6th-floor",
+      "clinical-research-unit-pavilion-e"
+    ]
   },
   {
     "en": "Colonoscopy",
@@ -499,7 +688,12 @@
       "Coloscopie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-9a23d9b5f5605ee5",
+    "legacySlugs": [
+      "colonoscopy-g-304",
+      "colonoscopy"
+    ]
   },
   {
     "en": "Colorectal Surgery",
@@ -512,7 +706,12 @@
       "Chirurgie colorectale"
     ],
     "status": "official",
-    "note": "Dedicated Colorectal Surgery page and current Clinics page list G-300; Department List shows G-304."
+    "note": "Dedicated Colorectal Surgery page and current Clinics page list G-300; Department List shows G-304.",
+    "id": "dest-1a1d3b6c3ef257c9",
+    "legacySlugs": [
+      "colorectal-surgery-g-300",
+      "colorectal-surgery"
+    ]
   },
   {
     "en": "Colposcopy",
@@ -523,7 +722,12 @@
       "Colposcopy",
       "Colposcopie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-c7cf517ede7c51f8",
+    "legacySlugs": [
+      "colposcopy-h-334-1",
+      "colposcopy"
+    ]
   },
   {
     "en": "Communications and Media Relations",
@@ -536,7 +740,12 @@
       "Communications et relations médias"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-6d34dd17d29955ed",
+    "legacySlugs": [
+      "communications-and-media-relations-a-811",
+      "communications-and-media-relations"
+    ]
   },
   {
     "en": "Cystoscopy",
@@ -548,7 +757,12 @@
       "Cystoscopie"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-248552e6c47050ed",
+    "legacySlugs": [
+      "cystoscopy-e-959-1",
+      "cystoscopy"
+    ]
   },
   {
     "en": "Dentistry",
@@ -563,7 +777,12 @@
       "Dentisterie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-120a56fa9cd65fcc",
+    "legacySlugs": [
+      "dentistry-a-024",
+      "dentistry"
+    ]
   },
   {
     "en": "Dermatology",
@@ -578,7 +797,12 @@
       "Dermatologie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-a32e2a805a3f5d42",
+    "legacySlugs": [
+      "dermatology-g-026",
+      "dermatology"
+    ]
   },
   {
     "en": "Dermatology Oncology",
@@ -591,7 +815,12 @@
       "Dermato-oncologie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-51f608e4a6f85b71",
+    "legacySlugs": [
+      "dermatology-oncology-e-1085",
+      "dermatology-oncology"
+    ]
   },
   {
     "en": "Diagnostic and Therapeutic Clinic",
@@ -604,7 +833,12 @@
       "Clinique diagnostique et thérapeutique"
     ],
     "status": "official",
-    "note": "Dedicated current JGH Diagnostic and Therapeutic Clinic page lists Pavilion G, room G-050."
+    "note": "Dedicated current JGH Diagnostic and Therapeutic Clinic page lists Pavilion G, room G-050.",
+    "id": "dest-e46faa443b815207",
+    "legacySlugs": [
+      "diagnostic-and-therapeutic-clinic-g-050",
+      "diagnostic-and-therapeutic-clinic"
+    ]
   },
   {
     "en": "Diagnostic Medicine and Core Lab",
@@ -617,7 +851,12 @@
       "Médecine diagnostique et laboratoire central"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-bb73c15910a45892",
+    "legacySlugs": [
+      "diagnostic-medicine-and-core-lab-d-123",
+      "diagnostic-medicine-and-core-lab"
+    ]
   },
   {
     "en": "Dietetics",
@@ -630,7 +869,12 @@
       "Diététique"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-097c063b8b18511e",
+    "legacySlugs": [
+      "dietetics-b-001-1",
+      "dietetics"
+    ]
   },
   {
     "en": "Ear, Nose and Throat (ENT)",
@@ -644,7 +888,12 @@
       "Oto-rhino-laryngologie (ORL)"
     ],
     "status": "official",
-    "note": "Dedicated ENT page: General ENT is E-903; Head & Neck Oncology is E-904."
+    "note": "Dedicated ENT page: General ENT is E-903; Head & Neck Oncology is E-904.",
+    "id": "dest-0c40cd07c2cc53af",
+    "legacySlugs": [
+      "ear-nose-and-throat-ent-e-903",
+      "ear-nose-and-throat-ent"
+    ]
   },
   {
     "en": "Elspeth McConnell Mental Health and Wellness Centre",
@@ -656,7 +905,12 @@
       "Centre de santé mentale et de mieux-être Elspeth McConnell"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-56323273007a522e",
+    "legacySlugs": [
+      "elspeth-mcconnell-mental-health-and-wellness-centre-6th-floor",
+      "elspeth-mcconnell-mental-health-and-wellness-centre"
+    ]
   },
   {
     "en": "Endocrinology / Diabetes",
@@ -671,7 +925,12 @@
       "diabete",
       "Endocrinologie / Diabète"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-dad894d4bb585c8e",
+    "legacySlugs": [
+      "endocrinology-diabetes-e-104",
+      "endocrinology-diabetes"
+    ]
   },
   {
     "en": "Endoscopy",
@@ -683,7 +942,12 @@
       "Endoscopie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-825eb8c92d285d39",
+    "legacySlugs": [
+      "endoscopy-g-304",
+      "endoscopy"
+    ]
   },
   {
     "en": "Enterostomal Therapy Clinic",
@@ -696,7 +960,12 @@
       "Clinique de stomothérapie"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-9e47d5c553325b78",
+    "legacySlugs": [
+      "enterostomal-therapy-clinic-e-102-1",
+      "enterostomal-therapy-clinic"
+    ]
   },
   {
     "en": "Epidemiology",
@@ -708,7 +977,12 @@
       "Épidémiologie"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-79b75fe07a9a55ed",
+    "legacySlugs": [
+      "epidemiology-h-485",
+      "epidemiology"
+    ]
   },
   {
     "en": "Food Court (Carrefour Lea Polansky)",
@@ -722,7 +996,12 @@
       "Aire de restauration (Carrefour Lea Polansky)"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-4510913eb2bf5f20",
+    "legacySlugs": [
+      "food-court-carrefour-lea-polansky-1st-floor",
+      "food-court-carrefour-lea-polansky"
+    ]
   },
   {
     "en": "Foundation",
@@ -734,7 +1013,12 @@
       "Fondation"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-1fe8c12c47f95d88",
+    "legacySlugs": [
+      "foundation-a-107",
+      "foundation"
+    ]
   },
   {
     "en": "Foundation - Satellite Office",
@@ -746,7 +1030,12 @@
       "Fondation — bureau satellite"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-733823ad62d550e7",
+    "legacySlugs": [
+      "foundation-satellite-office-floor-s1",
+      "foundation-satellite-office"
+    ]
   },
   {
     "en": "Gastroenterology",
@@ -761,7 +1050,12 @@
       "Gastroentérologie"
     ],
     "status": "official",
-    "note": "Current Clinics and Testing page lists E-110; Department List shows E-110.1."
+    "note": "Current Clinics and Testing page lists E-110; Department List shows E-110.1.",
+    "id": "dest-f648c6299a225b70",
+    "legacySlugs": [
+      "gastroenterology-e-110",
+      "gastroenterology"
+    ]
   },
   {
     "en": "Genetics / Medical Genetics",
@@ -775,7 +1069,12 @@
       "Génétique / Génétique médicale"
     ],
     "status": "official",
-    "note": "Dedicated Genetics page lists A-805; Department List shows A-802."
+    "note": "Dedicated Genetics page lists A-805; Department List shows A-802.",
+    "id": "dest-20d26c42597c58c6",
+    "legacySlugs": [
+      "genetics-medical-genetics-a-805",
+      "genetics-medical-genetics"
+    ]
   },
   {
     "en": "Geriatrics",
@@ -789,7 +1088,12 @@
       "Gériatrie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-f5df722c91bd5802",
+    "legacySlugs": [
+      "geriatrics-e-0012",
+      "geriatrics"
+    ]
   },
   {
     "en": "Goldman Herzl Family Practice Centre",
@@ -802,7 +1106,12 @@
       "Centre de médecine familiale Goldman Herzl"
     ],
     "status": "official",
-    "note": "Current Clinics and Testing page places Herzl Family Practice Centre in Pavilion H, 2nd floor. Department List says B, 2nd floor."
+    "note": "Current Clinics and Testing page places Herzl Family Practice Centre in Pavilion H, 2nd floor. Department List says B, 2nd floor.",
+    "id": "dest-8eaaeb95a89d5651",
+    "legacySlugs": [
+      "goldman-herzl-family-practice-centre-2nd-floor",
+      "goldman-herzl-family-practice-centre"
+    ]
   },
   {
     "en": "Head and Neck Surgery / Oncology",
@@ -815,7 +1124,12 @@
       "Chirurgie / oncologie de la tête et du cou"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-8ce04932bedb5993",
+    "legacySlugs": [
+      "head-and-neck-surgery-oncology-e-904",
+      "head-and-neck-surgery-oncology"
+    ]
   },
   {
     "en": "Heart Function Clinic",
@@ -828,7 +1142,12 @@
       "Clinique de fonction cardiaque"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-1ff649aebf645c1a",
+    "legacySlugs": [
+      "heart-function-clinic-e-208",
+      "heart-function-clinic"
+    ]
   },
   {
     "en": "Hematology",
@@ -843,7 +1162,12 @@
       "Hématologie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-616cf944b1c6512f",
+    "legacySlugs": [
+      "hematology-e-103",
+      "hematology"
+    ]
   },
   {
     "en": "Hemodialysis",
@@ -856,7 +1180,12 @@
       "Hémodialyse"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-e04970170ae55217",
+    "legacySlugs": [
+      "hemodialysis-d-001",
+      "hemodialysis"
+    ]
   },
   {
     "en": "Hemodynamic Laboratory",
@@ -869,7 +1198,12 @@
       "Laboratoire d’hémodynamie"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-25fd1198c6635091",
+    "legacySlugs": [
+      "hemodynamic-laboratory-k-2400",
+      "hemodynamic-laboratory"
+    ]
   },
   {
     "en": "Hope & Cope (Main Office)",
@@ -881,7 +1215,12 @@
       "L’Espoir, c’est la vie (bureau principal)"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-f95721b1c35f5d0f",
+    "legacySlugs": [
+      "hope-cope-main-office-e-730-1",
+      "hope-cope-main-office"
+    ]
   },
   {
     "en": "Hospital Cards",
@@ -894,7 +1233,12 @@
       "Cartes d’hôpital"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-f0bcf413d4d75b2b",
+    "legacySlugs": [
+      "hospital-cards-e-0014-s1",
+      "hospital-cards"
+    ]
   },
   {
     "en": "Human Resources",
@@ -907,7 +1251,12 @@
       "Ressources humaines"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-b65f812ad57758df",
+    "legacySlugs": [
+      "human-resources-a-112",
+      "human-resources"
+    ]
   },
   {
     "en": "Infectious Diseases",
@@ -920,7 +1269,12 @@
       "Maladies infectieuses"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-4ae67c7349485fd0",
+    "legacySlugs": [
+      "infectious-diseases-g-200",
+      "infectious-diseases"
+    ]
   },
   {
     "en": "Infection Prevention and Control",
@@ -932,7 +1286,12 @@
       "Prévention et contrôle des infections"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-a466593496bb55dc",
+    "legacySlugs": [
+      "infection-prevention-and-control-g-070",
+      "infection-prevention-and-control"
+    ]
   },
   {
     "en": "Institute of Community & Family Psychiatry (ICFP)",
@@ -945,7 +1304,11 @@
       "Institut de psychiatrie communautaire et familiale (IPCF)"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-6d4dc051a4765542",
+    "legacySlugs": [
+      "institute-of-community-family-psychiatry-icfp"
+    ]
   },
   {
     "en": "Internal Medicine",
@@ -958,7 +1321,12 @@
       "medecine interne",
       "Médecine interne"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-8af8ae97ec3f522d",
+    "legacySlugs": [
+      "internal-medicine-g-050",
+      "internal-medicine"
+    ]
   },
   {
     "en": "Interventional Radiology",
@@ -971,7 +1339,12 @@
       "Radiologie interventionnelle"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-316c215c2a555566",
+    "legacySlugs": [
+      "interventional-radiology-g-018",
+      "interventional-radiology"
+    ]
   },
   {
     "en": "Library, Health Sciences Library",
@@ -983,7 +1356,12 @@
       "Bibliothèque des sciences de la santé"
     ],
     "status": "official",
-    "note": "Current Department List places the CCOMTL library at I-202."
+    "note": "Current Department List places the CCOMTL library at I-202.",
+    "id": "dest-060c71fa5f455d2a",
+    "legacySlugs": [
+      "library-health-sciences-library-i-202",
+      "library-health-sciences-library"
+    ]
   },
   {
     "en": "Long COVID Clinic",
@@ -995,7 +1373,12 @@
       "Clinique COVID longue"
     ],
     "status": "verify",
-    "note": "Current Clinics and Testing page confirms a Long COVID referral clinic but does not state a room; H-132 is retained from the hospital directory baseline and should be verified."
+    "note": "Current Clinics and Testing page confirms a Long COVID referral clinic but does not state a room; H-132 is retained from the hospital directory baseline and should be verified.",
+    "id": "dest-2218b63dc332501d",
+    "legacySlugs": [
+      "long-covid-clinic-h-132",
+      "long-covid-clinic"
+    ]
   },
   {
     "en": "M.R.I. (Magnetic Resonance Imaging)",
@@ -1008,7 +1391,12 @@
       "irm",
       "IRM (imagerie par résonance magnétique)"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-7103c4980b07553a",
+    "legacySlugs": [
+      "m-r-i-magnetic-resonance-imaging-d-205",
+      "m-r-i-magnetic-resonance-imaging"
+    ]
   },
   {
     "en": "Medical Day Hospital",
@@ -1020,7 +1408,12 @@
       "day hospital",
       "Hôpital de jour médical"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-ef5ee59386bc514e",
+    "legacySlugs": [
+      "medical-day-hospital-ks1-101",
+      "medical-day-hospital"
+    ]
   },
   {
     "en": "Medical Devices Reprocessing Unit (MDR)",
@@ -1033,7 +1426,12 @@
       "Unité de retraitement des dispositifs médicaux"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-05e333e3ff0350b9",
+    "legacySlugs": [
+      "medical-devices-reprocessing-unit-mdr-s4400",
+      "medical-devices-reprocessing-unit-mdr"
+    ]
   },
   {
     "en": "Medical Records",
@@ -1047,7 +1445,12 @@
       "Archives médicales"
     ],
     "status": "verify",
-    "note": "Current JGH Department List includes Medical Records but does not state a room; C-110 is retained from the posted hospital directory baseline."
+    "note": "Current JGH Department List includes Medical Records but does not state a room; C-110 is retained from the posted hospital directory baseline.",
+    "id": "dest-286cefac6c94556c",
+    "legacySlugs": [
+      "medical-records-c-110",
+      "medical-records"
+    ]
   },
   {
     "en": "Memory Clinic",
@@ -1062,7 +1465,12 @@
       "Clinique de la mémoire"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-36d18c8dd05a5344",
+    "legacySlugs": [
+      "memory-clinic-e-s1100",
+      "memory-clinic"
+    ]
   },
   {
     "en": "Methadone Maintenance Program",
@@ -1074,7 +1482,12 @@
       "Programme de maintien à la méthadone"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-70327eff6ba6580c",
+    "legacySlugs": [
+      "methadone-maintenance-program-h-234",
+      "methadone-maintenance-program"
+    ]
   },
   {
     "en": "Microbiology Laboratory",
@@ -1086,7 +1499,12 @@
       "Laboratoire de microbiologie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-cc7268091f155f2a",
+    "legacySlugs": [
+      "microbiology-laboratory-c-111",
+      "microbiology-laboratory"
+    ]
   },
   {
     "en": "Multi-Faith Room",
@@ -1100,7 +1518,12 @@
       "Salle multiconfessionnelle"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-fce672621bbf51f6",
+    "legacySlugs": [
+      "multi-faith-room-e-0006-s1",
+      "multi-faith-room"
+    ]
   },
   {
     "en": "Neonatal Follow-Up Clinic",
@@ -1112,7 +1535,12 @@
       "Clinique de suivi néonatal"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-1a4df9d515a4560c",
+    "legacySlugs": [
+      "neonatal-follow-up-clinic-a-209",
+      "neonatal-follow-up-clinic"
+    ]
   },
   {
     "en": "Nephrology",
@@ -1129,7 +1557,12 @@
       "Néphrologie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-78859efef6c85c95",
+    "legacySlugs": [
+      "nephrology-d-070-main-floor-rc",
+      "nephrology"
+    ]
   },
   {
     "en": "Neurology",
@@ -1141,7 +1574,12 @@
       "neurologie",
       "Neurologie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-c40a44af26235f18",
+    "legacySlugs": [
+      "neurology-e-005",
+      "neurology"
+    ]
   },
   {
     "en": "Neurophysiology",
@@ -1153,7 +1591,12 @@
       "Neurophysiologie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-7f0e472aab97519d",
+    "legacySlugs": [
+      "neurophysiology-e-221",
+      "neurophysiology"
+    ]
   },
   {
     "en": "Neurosurgery",
@@ -1165,7 +1608,12 @@
       "Neurochirurgie"
     ],
     "status": "official",
-    "note": "Current JGH Department List lists Neurosurgery at E-931 and E-929; Clinics and Testing summarizes it as E-9."
+    "note": "Current JGH Department List lists Neurosurgery at E-931 and E-929; Clinics and Testing summarizes it as E-9.",
+    "id": "dest-29f62511184e5081",
+    "legacySlugs": [
+      "neurosurgery-e-931-e-929",
+      "neurosurgery"
+    ]
   },
   {
     "en": "Nuclear Medicine",
@@ -1179,7 +1627,12 @@
       "Médecine nucléaire"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-58eaa14289495309",
+    "legacySlugs": [
+      "nuclear-medicine-g-19-s1",
+      "nuclear-medicine"
+    ]
   },
   {
     "en": "Nurses Lecture Hall",
@@ -1191,7 +1644,12 @@
       "lecture hall"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-e76619d8d9e7533a",
+    "legacySlugs": [
+      "nurses-lecture-hall-a-119",
+      "nurses-lecture-hall"
+    ]
   },
   {
     "en": "Antepartum",
@@ -1204,7 +1662,12 @@
       "Antépartum"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-7e2d845eaa31551e",
+    "legacySlugs": [
+      "antepartum-3rd-floor",
+      "antepartum"
+    ]
   },
   {
     "en": "Family Birthing Centre (FBC)",
@@ -1228,7 +1691,12 @@
       "maternité",
       "Centre familial des naissances"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-3ff98deab02a59cc",
+    "legacySlugs": [
+      "family-birthing-centre-fbc-3rd-floor",
+      "family-birthing-centre-fbc"
+    ]
   },
   {
     "en": "Obstetrical Ultrasound",
@@ -1240,7 +1708,12 @@
       "obstetric ultrasound",
       "Échographie obstétricale"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-c6511e2390425805",
+    "legacySlugs": [
+      "obstetrical-ultrasound-h-318-3rd-floor",
+      "obstetrical-ultrasound"
+    ]
   },
   {
     "en": "Obstetrics and Gynecology",
@@ -1258,7 +1731,12 @@
       "gynecologie",
       "Obstétrique et gynécologie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-8610859fb748570b",
+    "legacySlugs": [
+      "obstetrics-and-gynecology-3rd-floor",
+      "obstetrics-and-gynecology"
+    ]
   },
   {
     "en": "Perinatal Centre",
@@ -1270,7 +1748,12 @@
       "Centre périnatal"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-00e4de01f8a55773",
+    "legacySlugs": [
+      "perinatal-centre-h-308",
+      "perinatal-centre"
+    ]
   },
   {
     "en": "Postpartum Care Unit",
@@ -1283,7 +1766,12 @@
       "Unité de soins post-partum"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-cca58ea9f91c519c",
+    "legacySlugs": [
+      "postpartum-care-unit-8th-floor",
+      "postpartum-care-unit"
+    ]
   },
   {
     "en": "Women's Health Centre",
@@ -1296,7 +1784,12 @@
       "Centre de santé des femmes"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-85b98373d14751fa",
+    "legacySlugs": [
+      "women-s-health-centre-3rd-floor",
+      "women-s-health-centre"
+    ]
   },
   {
     "en": "Occupational Therapy",
@@ -1311,7 +1804,12 @@
       "Ergothérapie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-cfd8ba13daae5b24",
+    "legacySlugs": [
+      "occupational-therapy-d-0002-s1",
+      "occupational-therapy"
+    ]
   },
   {
     "en": "Ombudsman",
@@ -1323,7 +1821,12 @@
       "ombudsman",
       "Commissaire aux plaintes / Ombudsman"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-0f47ea1ea4885931",
+    "legacySlugs": [
+      "ombudsman-a-440",
+      "ombudsman"
+    ]
   },
   {
     "en": "Oncology / Segal Cancer Centre",
@@ -1337,7 +1840,12 @@
       "Oncologie / Centre du cancer Segal"
     ],
     "status": "official",
-    "note": "Current Department List lists Segal Cancer Centre at E-776.4; other oncology listings may show E-776."
+    "note": "Current Department List lists Segal Cancer Centre at E-776.4; other oncology listings may show E-776.",
+    "id": "dest-8dd9ed7221c65c94",
+    "legacySlugs": [
+      "oncology-segal-cancer-centre-e-776-4",
+      "oncology-segal-cancer-centre"
+    ]
   },
   {
     "en": "Ophthalmology",
@@ -1351,7 +1859,12 @@
       "yeux",
       "Ophtalmologie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-b93078bc866755b6",
+    "legacySlugs": [
+      "ophthalmology-e-008",
+      "ophthalmology"
+    ]
   },
   {
     "en": "OROT",
@@ -1362,7 +1875,12 @@
       "OROT"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-6b030068e0cb5bd5",
+    "legacySlugs": [
+      "orot-a-200",
+      "orot"
+    ]
   },
   {
     "en": "Orthopedics",
@@ -1376,7 +1894,12 @@
       "orthopedie",
       "Orthopédie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-0b4b1e03b79e5eb7",
+    "legacySlugs": [
+      "orthopedics-e-003",
+      "orthopedics"
+    ]
   },
   {
     "en": "Osteoporosis Clinic",
@@ -1388,7 +1911,12 @@
       "Clinique d’ostéoporose"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-4a86767af4e457b8",
+    "legacySlugs": [
+      "osteoporosis-clinic-g-050-e-104",
+      "osteoporosis-clinic"
+    ]
   },
   {
     "en": "P.A.C.U. (Post-Anesthesia Care Unit)",
@@ -1401,7 +1929,12 @@
       "Unité de soins post-anesthésiques (USPA)"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-d996e6a31d665552",
+    "legacySlugs": [
+      "p-a-c-u-post-anesthesia-care-unit-s1801",
+      "p-a-c-u-post-anesthesia-care-unit"
+    ]
   },
   {
     "en": "Pacemaker Clinic",
@@ -1413,7 +1946,12 @@
       "Clinique de stimulateurs cardiaques"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-1b3c479f0e575c37",
+    "legacySlugs": [
+      "pacemaker-clinic-e-206",
+      "pacemaker-clinic"
+    ]
   },
   {
     "en": "Pastoral Services",
@@ -1426,7 +1964,12 @@
       "Services spirituels"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-296ad5752fb158d3",
+    "legacySlugs": [
+      "pastoral-services-b-151-9",
+      "pastoral-services"
+    ]
   },
   {
     "en": "Pathology",
@@ -1439,7 +1982,12 @@
       "Pathologie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-123992e277d45f29",
+    "legacySlugs": [
+      "pathology-g-102",
+      "pathology"
+    ]
   },
   {
     "en": "Perioperative Unit",
@@ -1451,7 +1999,12 @@
       "Unité périopératoire"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-878671b341025fea",
+    "legacySlugs": [
+      "perioperative-unit-k-1601",
+      "perioperative-unit"
+    ]
   },
   {
     "en": "Peritoneal Dialysis",
@@ -1464,7 +2017,12 @@
       "Dialyse péritonéale"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-4f0a707365a451f3",
+    "legacySlugs": [
+      "peritoneal-dialysis-d-070",
+      "peritoneal-dialysis"
+    ]
   },
   {
     "en": "Pharmacy",
@@ -1477,7 +2035,12 @@
       "Pharmacie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-d03aef10b20b551c",
+    "legacySlugs": [
+      "pharmacy-c-005",
+      "pharmacy"
+    ]
   },
   {
     "en": "Physiotherapy",
@@ -1495,7 +2058,12 @@
       "Physiothérapie"
     ],
     "status": "official",
-    "note": "Dedicated Physiotherapy page: Pavilion D, basement level S1, room D-0002."
+    "note": "Dedicated Physiotherapy page: Pavilion D, basement level S1, room D-0002.",
+    "id": "dest-cfec61a085355ddc",
+    "legacySlugs": [
+      "physiotherapy-d-0002-s1",
+      "physiotherapy"
+    ]
   },
   {
     "en": "Plastic and Reconstructive Surgery",
@@ -1508,7 +2076,12 @@
       "Chirurgie plastique et reconstructive"
     ],
     "status": "official",
-    "note": "Dedicated Plastic and Reconstructive Surgery page lists A-500; Clinics and Testing has a separate 'Surgery, Plastic' listing at A-509."
+    "note": "Dedicated Plastic and Reconstructive Surgery page lists A-500; Clinics and Testing has a separate 'Surgery, Plastic' listing at A-509.",
+    "id": "dest-f6925f5b63205110",
+    "legacySlugs": [
+      "plastic-and-reconstructive-surgery-a-500",
+      "plastic-and-reconstructive-surgery"
+    ]
   },
   {
     "en": "Presurgical Screening Clinic (PSS)",
@@ -1522,7 +2095,12 @@
       "Clinique d’évaluation préchirurgicale"
     ],
     "status": "official",
-    "note": "Current Surgery page places final pre-surgery testing/instructions at Pavilion A-600; Clinics and Testing describes PSS as Pavilion A, 6th floor."
+    "note": "Current Surgery page places final pre-surgery testing/instructions at Pavilion A-600; Clinics and Testing describes PSS as Pavilion A, 6th floor.",
+    "id": "dest-2a322546020350ff",
+    "legacySlugs": [
+      "presurgical-screening-clinic-pss-6th-floor-a-600-area",
+      "presurgical-screening-clinic-pss"
+    ]
   },
   {
     "en": "Professional Services",
@@ -1534,7 +2112,12 @@
       "Services professionnels"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-bbdee254fe8c55a8",
+    "legacySlugs": [
+      "professional-services-a-142",
+      "professional-services"
+    ]
   },
   {
     "en": "Psychiatry (Main Office)",
@@ -1546,7 +2129,12 @@
       "Psychiatrie (bureau principal)"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-6656f5b7ebfe5b03",
+    "legacySlugs": [
+      "psychiatry-main-office-a-529",
+      "psychiatry-main-office"
+    ]
   },
   {
     "en": "Psychogeriatrics",
@@ -1560,7 +2148,12 @@
       "Psychogériatrie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-ff9a10ff0f855bff",
+    "legacySlugs": [
+      "psychogeriatrics-icfp-152",
+      "psychogeriatrics"
+    ]
   },
   {
     "en": "Pulmonary",
@@ -1576,7 +2169,12 @@
       "Pneumologie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-bcab4aff903457b6",
+    "legacySlugs": [
+      "pulmonary-g-203",
+      "pulmonary"
+    ]
   },
   {
     "en": "Pulmonary Hypertension",
@@ -1588,7 +2186,12 @@
       "Hypertension pulmonaire"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-5a682f93351f5a46",
+    "legacySlugs": [
+      "pulmonary-hypertension-e-206",
+      "pulmonary-hypertension"
+    ]
   },
   {
     "en": "Quality, Innovation, Evaluation, Performance and Ethics Directorate",
@@ -1601,7 +2204,12 @@
       "performance"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-7042984fd1eb5062",
+    "legacySlugs": [
+      "quality-innovation-evaluation-performance-and-ethics-directorate-a-909",
+      "quality-innovation-evaluation-performance-and-ethics-directorate"
+    ]
   },
   {
     "en": "Radiation Oncology (Clinic)",
@@ -1612,7 +2220,12 @@
       "Radiation oncology",
       "Radio-oncologie (clinique)"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-a3ab2ea904fe55f4",
+    "legacySlugs": [
+      "radiation-oncology-clinic-g-002",
+      "radiation-oncology-clinic"
+    ]
   },
   {
     "en": "Radiation Oncology (Treatments)",
@@ -1624,7 +2237,12 @@
       "treatments",
       "Radio-oncologie (traitements)"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-0ae51665f61a5e9b",
+    "legacySlugs": [
+      "radiation-oncology-treatments-g-18",
+      "radiation-oncology-treatments"
+    ]
   },
   {
     "en": "Radiology (general)",
@@ -1639,7 +2257,12 @@
       "Radiologie"
     ],
     "status": "verify",
-    "note": "Current JGH Department List includes Radiology but does not state a general reception room; C-202 is retained from the posted hospital directory baseline."
+    "note": "Current JGH Department List includes Radiology but does not state a general reception room; C-202 is retained from the posted hospital directory baseline.",
+    "id": "dest-554d01576f8c57e3",
+    "legacySlugs": [
+      "radiology-general-c-202",
+      "radiology-general"
+    ]
   },
   {
     "en": "Rheumatology",
@@ -1651,7 +2274,12 @@
       "rhumatologie",
       "Rhumatologie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-0ac8fe6fcf8e5d88",
+    "legacySlugs": [
+      "rheumatology-a-725",
+      "rheumatology"
+    ]
   },
   {
     "en": "Social Services",
@@ -1666,7 +2294,12 @@
       "Services sociaux"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-5edcb62ed7ff5ade",
+    "legacySlugs": [
+      "social-services-a-300",
+      "social-services"
+    ]
   },
   {
     "en": "Speech Pathology",
@@ -1681,7 +2314,12 @@
       "Orthophonie"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-bda72aa760735169",
+    "legacySlugs": [
+      "speech-pathology-a-730",
+      "speech-pathology"
+    ]
   },
   {
     "en": "Surgery Clinic",
@@ -1692,7 +2330,12 @@
       "General surgery clinic",
       "Clinique de chirurgie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-45cb4fffaa7e5cdc",
+    "legacySlugs": [
+      "surgery-clinic-a-500",
+      "surgery-clinic"
+    ]
   },
   {
     "en": "Surgical Suites",
@@ -1705,7 +2348,12 @@
       "Salles d’opération"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-62142bf0303c5571",
+    "legacySlugs": [
+      "surgical-suites-s1314",
+      "surgical-suites"
+    ]
   },
   {
     "en": "Test Centre",
@@ -1723,7 +2371,12 @@
       "Centre de prélèvements / tests"
     ],
     "status": "official",
-    "note": "Current Clinics and Testing page (May 2026) lists the Test Centre at E-109. Department List (July 2025) lists E-102."
+    "note": "Current Clinics and Testing page (May 2026) lists the Test Centre at E-109. Department List (July 2025) lists E-102.",
+    "id": "dest-364793e3106e58e3",
+    "legacySlugs": [
+      "test-centre-e-109-1st-floor",
+      "test-centre"
+    ]
   },
   {
     "en": "Thoracic Surgery",
@@ -1736,7 +2389,12 @@
       "Chirurgie thoracique"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline lists E-1055. Current JGH Department List lists Pulmonary Oncology at E-1055; confirm whether the visitor needs Thoracic Surgery or Pulmonary Oncology."
+    "note": "Directory/photo baseline lists E-1055. Current JGH Department List lists Pulmonary Oncology at E-1055; confirm whether the visitor needs Thoracic Surgery or Pulmonary Oncology.",
+    "id": "dest-145704b53f2456e0",
+    "legacySlugs": [
+      "thoracic-surgery-e-1055",
+      "thoracic-surgery"
+    ]
   },
   {
     "en": "Transfusion Service",
@@ -1749,7 +2407,12 @@
       "Service de transfusion"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-f95500ac201b5f8c",
+    "legacySlugs": [
+      "transfusion-service-k1-101",
+      "transfusion-service"
+    ]
   },
   {
     "en": "Ultrasound (general)",
@@ -1764,7 +2427,12 @@
       "Échographie générale"
     ],
     "status": "official",
-    "note": "Posted sign appears to list D-240; official Department List search result lists B-240. Use B-240 unless appointment paperwork says otherwise."
+    "note": "Posted sign appears to list D-240; official Department List search result lists B-240. Use B-240 unless appointment paperwork says otherwise.",
+    "id": "dest-dd0d5bc1ca055fb2",
+    "legacySlugs": [
+      "ultrasound-general-b-240",
+      "ultrasound-general"
+    ]
   },
   {
     "en": "Urology",
@@ -1781,7 +2449,12 @@
       "Urologie"
     ],
     "status": "official",
-    "note": "Dedicated Urology page (updated Jan 2026) and Clinics and Testing list E-959; older Department List shows E-941."
+    "note": "Dedicated Urology page (updated Jan 2026) and Clinics and Testing list E-959; older Department List shows E-941.",
+    "id": "dest-cfc371f81c755ddc",
+    "legacySlugs": [
+      "urology-e-959-9th-floor",
+      "urology"
+    ]
   },
   {
     "en": "Users' Committee",
@@ -1794,7 +2467,12 @@
       "Comité des usagers"
     ],
     "status": "verify",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-e7333ac0e1c15e57",
+    "legacySlugs": [
+      "users-committee-a-418",
+      "users-committee"
+    ]
   },
   {
     "en": "Vascular Lab and Vascular Surgery Clinics",
@@ -1809,7 +2487,12 @@
       "Laboratoire vasculaire et cliniques de chirurgie vasculaire"
     ],
     "status": "official",
-    "note": "Posted sign appears to list B-368; official Department List search result lists B-268. Use B-268 unless appointment paperwork says otherwise."
+    "note": "Posted sign appears to list B-368; official Department List search result lists B-268. Use B-268 unless appointment paperwork says otherwise.",
+    "id": "dest-9366498e7a865fe4",
+    "legacySlugs": [
+      "vascular-lab-and-vascular-surgery-clinics-b-268",
+      "vascular-lab-and-vascular-surgery-clinics"
+    ]
   },
   {
     "en": "Volunteer Department",
@@ -1821,7 +2504,12 @@
       "Service des bénévoles"
     ],
     "status": "official",
-    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs."
+    "note": "Directory/photo baseline — verify the exact room if appointment paperwork or current signage differs.",
+    "id": "dest-955b6a493f7b561a",
+    "legacySlugs": [
+      "volunteer-department-b-151",
+      "volunteer-department"
+    ]
   },
   {
     "en": "Main Entrance",
@@ -1833,7 +2521,12 @@
       "3755",
       "Entrée principale"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-d714de014c625e72",
+    "legacySlugs": [
+      "main-entrance-3755-cote-sainte-catherine-road",
+      "main-entrance"
+    ]
   },
   {
     "en": "Pavilion A Entrance",
@@ -1845,7 +2538,12 @@
       "5750",
       "Entrée du pavillon A"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-1238a06b83f05dda",
+    "legacySlugs": [
+      "pavilion-a-entrance-5750-cote-des-neiges",
+      "pavilion-a-entrance"
+    ]
   },
   {
     "en": "Pavilion E / Légaré Entrance",
@@ -1857,7 +2555,12 @@
       "5757",
       "Entrée du pavillon E / Légaré"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-bd0bf9fa02965889",
+    "legacySlugs": [
+      "pavilion-e-legare-entrance-5757-legare",
+      "pavilion-e-legare-entrance"
+    ]
   },
   {
     "en": "Pavilion K Entrance",
@@ -1869,7 +2572,12 @@
       "5767",
       "Entrée du pavillon K"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-54401bee9f845bb0",
+    "legacySlugs": [
+      "pavilion-k-entrance-5767-legare",
+      "pavilion-k-entrance"
+    ]
   },
   {
     "en": "Emergency Entrance",
@@ -1882,7 +2590,12 @@
       "5777",
       "Entrée de l’Urgence"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-a056756ea3235fc6",
+    "legacySlugs": [
+      "emergency-entrance-5777-legare",
+      "emergency-entrance"
+    ]
   },
   {
     "en": "Pavilion H Entrance",
@@ -1894,7 +2607,12 @@
       "5790",
       "Entrée du pavillon H"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-2d6f0a206ad45e27",
+    "legacySlugs": [
+      "pavilion-h-entrance-5790-cote-des-neiges",
+      "pavilion-h-entrance"
+    ]
   },
   {
     "en": "Institute of Community & Family Psychiatry (ICFP) Entrance",
@@ -1909,7 +2627,12 @@
     "status": "official",
     "outdoorMap": {
       "query": "4333 Chemin de la Côte-Sainte-Catherine, Montréal, QC, Canada"
-    }
+    },
+    "id": "dest-2cfdcaa708cc5de3",
+    "legacySlugs": [
+      "institute-of-community-family-psychiatry-icfp-entrance-4333-cote-sainte-catherine",
+      "institute-of-community-family-psychiatry-icfp-entrance"
+    ]
   },
   {
     "en": "Centre for Child Development and Mental Health Entrance",
@@ -1924,7 +2647,12 @@
     "status": "official",
     "outdoorMap": {
       "query": "4335 Chemin de la Côte-Sainte-Catherine, Montréal, QC, Canada"
-    }
+    },
+    "id": "dest-b2c6327bf0d75404",
+    "legacySlugs": [
+      "centre-for-child-development-and-mental-health-entrance-4335-cote-sainte-catherine",
+      "centre-for-child-development-and-mental-health-entrance"
+    ]
   },
   {
     "en": "Lady Davis Institute for Medical Research",
@@ -1940,7 +2668,12 @@
     "status": "official",
     "outdoorMap": {
       "query": "3999 Chemin de la Côte-Sainte-Catherine, Montréal, QC, Canada"
-    }
+    },
+    "id": "dest-2c4eeb62931d5ba7",
+    "legacySlugs": [
+      "lady-davis-institute-for-medical-research-3999-cote-sainte-catherine",
+      "lady-davis-institute-for-medical-research"
+    ]
   },
   {
     "en": "Hope & Cope Cancer Wellness Centre",
@@ -1953,7 +2686,12 @@
       "Centre de mieux-être du cancer L’Espoir, c’est la vie"
     ],
     "status": "verify",
-    "note": "Posted hospital directory baseline lists 4635 Côte-Sainte-Catherine; verify current appointment details if exact location is critical."
+    "note": "Posted hospital directory baseline lists 4635 Côte-Sainte-Catherine; verify current appointment details if exact location is critical.",
+    "id": "dest-749d1cb4fa265019",
+    "legacySlugs": [
+      "hope-cope-cancer-wellness-centre-4635-cote-sainte-catherine",
+      "hope-cope-cancer-wellness-centre"
+    ]
   },
   {
     "en": "Herzl CRIU Walk-in Centre",
@@ -1970,7 +2708,12 @@
     "note": "Current Clinics and Testing page lists the Herzl Walk-In Centre at 5858 Côte-des-Neiges, 5th floor.",
     "outdoorMap": {
       "query": "5858 Chemin de la Côte-des-Neiges, Montréal, QC, Canada"
-    }
+    },
+    "id": "dest-b9cadb7c7e635058",
+    "legacySlugs": [
+      "herzl-criu-walk-in-centre-5858-cote-des-neiges-5th-floor",
+      "herzl-criu-walk-in-centre"
+    ]
   },
   {
     "en": "Airways Centre",
@@ -1983,7 +2726,12 @@
       "voies respiratoires",
       "Centre des voies respiratoires"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-e905525b99fb5014",
+    "legacySlugs": [
+      "airways-centre-g-203",
+      "airways-centre"
+    ]
   },
   {
     "en": "Anesthesia",
@@ -1995,7 +2743,12 @@
       "anesthésie",
       "Anesthésie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-f5276c1e680152e7",
+    "legacySlugs": [
+      "anesthesia-k1-400",
+      "anesthesia"
+    ]
   },
   {
     "en": "Audiology and Speech Pathology",
@@ -2009,7 +2762,12 @@
       "audiologie",
       "Audiologie et orthophonie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-4744dfc163a55083",
+    "legacySlugs": [
+      "audiology-and-speech-pathology-audiology-e-932-speech-pathology-a-730",
+      "audiology-and-speech-pathology"
+    ]
   },
   {
     "en": "Behavioural Psychotherapy and Research Unit",
@@ -2022,7 +2780,12 @@
       "psychothérapie",
       "Unité de psychothérapie comportementale et de recherche"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-838bdd2188455971",
+    "legacySlugs": [
+      "behavioural-psychotherapy-and-research-unit-icfp-b-09",
+      "behavioural-psychotherapy-and-research-unit"
+    ]
   },
   {
     "en": "Biochemistry",
@@ -2034,7 +2797,12 @@
       "biochimie",
       "Biochimie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-2effb9eef534555b",
+    "legacySlugs": [
+      "biochemistry-d-136",
+      "biochemistry"
+    ]
   },
   {
     "en": "Child Psychiatry",
@@ -2047,7 +2815,12 @@
       "psychiatrie enfant",
       "Psychiatrie de l’enfant"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-f36b40f784015d5f",
+    "legacySlugs": [
+      "child-psychiatry-m-011",
+      "child-psychiatry"
+    ]
   },
   {
     "en": "Couple and Family Therapy Training Program",
@@ -2060,7 +2833,12 @@
       "thérapie familiale",
       "Programme de formation en thérapie conjugale et familiale"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-5e6c4330cad55fd3",
+    "legacySlugs": [
+      "couple-and-family-therapy-training-program-icfp",
+      "couple-and-family-therapy-training-program"
+    ]
   },
   {
     "en": "CRID Radiologie / Breast Imaging",
@@ -2075,7 +2853,12 @@
       "mammographie",
       "CRID Radiologie / Imagerie du sein"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-9f3e4496c19f5e03",
+    "legacySlugs": [
+      "crid-radiologie-breast-imaging-e-1004-10th-floor",
+      "crid-radiologie-breast-imaging"
+    ]
   },
   {
     "en": "Ethics",
@@ -2087,7 +2870,12 @@
       "éthique",
       "Éthique"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-45d35785c0035acd",
+    "legacySlugs": [
+      "ethics-a-910",
+      "ethics"
+    ]
   },
   {
     "en": "Library — Patient and Family Resource Centre",
@@ -2100,7 +2888,12 @@
       "bibliothèque patients",
       "Bibliothèque — Centre de ressources pour les patients et les familles"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-349ce37eb97a5b98",
+    "legacySlugs": [
+      "library-patient-and-family-resource-centre-a-200-1",
+      "library-patient-and-family-resource-centre"
+    ]
   },
   {
     "en": "Medicine — Department Office",
@@ -2113,7 +2906,12 @@
       "médecine",
       "Médecine — bureau du département"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-b2d84db534b05a68",
+    "legacySlugs": [
+      "medicine-department-office-b-127",
+      "medicine-department-office"
+    ]
   },
   {
     "en": "Microbiology / Infectious Diseases / Tuberculosis Clinic",
@@ -2126,7 +2924,12 @@
       "tuberculose",
       "Microbiologie / Maladies infectieuses / Clinique de tuberculose"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-3f7f664868455123",
+    "legacySlugs": [
+      "microbiology-infectious-diseases-tuberculosis-clinic-g-200",
+      "microbiology-infectious-diseases-tuberculosis-clinic"
+    ]
   },
   {
     "en": "Music Therapy",
@@ -2139,7 +2942,11 @@
       "Musicothérapie"
     ],
     "status": "verify",
-    "note": "Current JGH Department List includes Music Therapy but does not provide a room."
+    "note": "Current JGH Department List includes Music Therapy but does not provide a room.",
+    "id": "dest-37a2625b124454e9",
+    "legacySlugs": [
+      "music-therapy"
+    ]
   },
   {
     "en": "Neonatology",
@@ -2152,7 +2959,12 @@
       "néonatologie",
       "Néonatologie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-06736c820d805deb",
+    "legacySlugs": [
+      "neonatology-3rd-floor",
+      "neonatology"
+    ]
   },
   {
     "en": "Nursing",
@@ -2164,7 +2976,12 @@
       "soins infirmiers",
       "Soins infirmiers"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-fc168dff22ed5d5a",
+    "legacySlugs": [
+      "nursing-b-109",
+      "nursing"
+    ]
   },
   {
     "en": "Occupational Therapy — Mental Health",
@@ -2176,7 +2993,12 @@
       "ergothérapie santé mentale",
       "Ergothérapie — santé mentale"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-d49f830340aa5c79",
+    "legacySlugs": [
+      "occupational-therapy-mental-health-icfp",
+      "occupational-therapy-mental-health"
+    ]
   },
   {
     "en": "Psychiatry — Outpatients",
@@ -2189,7 +3011,12 @@
       "psychiatrie externe",
       "Psychiatrie — consultation externe"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-daa4e287c15c53a1",
+    "legacySlugs": [
+      "psychiatry-outpatients-icfp",
+      "psychiatry-outpatients"
+    ]
   },
   {
     "en": "Psychology",
@@ -2204,7 +3031,11 @@
       "Psychologie"
     ],
     "status": "verify",
-    "note": "Current JGH Department List includes Psychology under ICFP services but does not specify a room."
+    "note": "Current JGH Department List includes Psychology under ICFP services but does not specify a room.",
+    "id": "dest-629aa5bb06ca5bbe",
+    "legacySlugs": [
+      "psychology"
+    ]
   },
   {
     "en": "Pulmonary Oncology",
@@ -2217,7 +3048,12 @@
       "oncologie pulmonaire",
       "Oncologie pulmonaire"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-430eea6fd99a5a9c",
+    "legacySlugs": [
+      "pulmonary-oncology-e-1055",
+      "pulmonary-oncology"
+    ]
   },
   {
     "en": "Respiratory Physiology",
@@ -2230,7 +3066,12 @@
       "physiologie respiratoire",
       "Physiologie respiratoire"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-cbee8da5d1f152fc",
+    "legacySlugs": [
+      "respiratory-physiology-g-207",
+      "respiratory-physiology"
+    ]
   },
   {
     "en": "Respiratory Therapy",
@@ -2243,7 +3084,12 @@
       "inhalothérapie",
       "Inhalothérapie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-24d780673b0550a5",
+    "legacySlugs": [
+      "respiratory-therapy-k-1314",
+      "respiratory-therapy"
+    ]
   },
   {
     "en": "Security",
@@ -2255,7 +3101,12 @@
       "sécurité",
       "Sécurité"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-b0263e8efa8a5342",
+    "legacySlugs": [
+      "security-main-entrance-pavilion-k-legare-entrance",
+      "security"
+    ]
   },
   {
     "en": "Angiogram / Cardiac Catheterization",
@@ -2269,7 +3120,12 @@
       "angiographie",
       "Angiographie / Cathétérisme cardiaque"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-6135eb5576d751d4",
+    "legacySlugs": [
+      "angiogram-cardiac-catheterization-d-215",
+      "angiogram-cardiac-catheterization"
+    ]
   },
   {
     "en": "Echocardiography Laboratory",
@@ -2282,7 +3138,12 @@
       "échocardiographie",
       "Laboratoire d’échocardiographie"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-c7d32ada26b654d1",
+    "legacySlugs": [
+      "echocardiography-laboratory-e-206",
+      "echocardiography-laboratory"
+    ]
   },
   {
     "en": "Holter Monitoring",
@@ -2293,7 +3154,12 @@
       "holter",
       "Monitorage Holter"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-a82f33ad3c5a57cb",
+    "legacySlugs": [
+      "holter-monitoring-e-206",
+      "holter-monitoring"
+    ]
   },
   {
     "en": "Cardiovascular Laboratory",
@@ -2305,7 +3171,12 @@
       "laboratoire cardiovasculaire",
       "Laboratoire cardiovasculaire"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-62ed509a03b05c48",
+    "legacySlugs": [
+      "cardiovascular-laboratory-d-226",
+      "cardiovascular-laboratory"
+    ]
   },
   {
     "en": "Congestive Heart Failure Clinic",
@@ -2318,7 +3189,12 @@
       "insuffisance cardiaque",
       "Clinique d’insuffisance cardiaque"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-c0d239feaa655326",
+    "legacySlugs": [
+      "congestive-heart-failure-clinic-e-208",
+      "congestive-heart-failure-clinic"
+    ]
   },
   {
     "en": "Electrocardiography Laboratory (ECG/EKG)",
@@ -2332,7 +3208,12 @@
       "électrocardiogramme",
       "Laboratoire d’électrocardiographie (ECG)"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-0af31312302e5250",
+    "legacySlugs": [
+      "electrocardiography-laboratory-ecg-ekg-e-206",
+      "electrocardiography-laboratory-ecg-ekg"
+    ]
   },
   {
     "en": "Stress Test Laboratory",
@@ -2345,7 +3226,12 @@
       "épreuve d'effort",
       "Laboratoire d’épreuve d’effort"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-4729625cbf235e72",
+    "legacySlugs": [
+      "stress-test-laboratory-e-206",
+      "stress-test-laboratory"
+    ]
   },
   {
     "en": "Coronary Care Unit (CCU)",
@@ -2358,7 +3244,12 @@
       "soins coronariens",
       "Unité de soins coronariens"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-80a4cf0181a8537d",
+    "legacySlugs": [
+      "coronary-care-unit-ccu-b-268",
+      "coronary-care-unit-ccu"
+    ]
   },
   {
     "en": "Coagulation / Anticoagulant Clinic",
@@ -2371,7 +3262,12 @@
       "anticoagulation",
       "Clinique de coagulation / anticoagulants"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-b255485bc8775975",
+    "legacySlugs": [
+      "coagulation-anticoagulant-clinic-b-304",
+      "coagulation-anticoagulant-clinic"
+    ]
   },
   {
     "en": "Family Planning",
@@ -2384,7 +3280,12 @@
       "planification familiale",
       "Planification familiale"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-9e4414daecbd52e2",
+    "legacySlugs": [
+      "family-planning-a-619",
+      "family-planning"
+    ]
   },
   {
     "en": "Kidney Treatment Centre",
@@ -2397,7 +3298,12 @@
       "rein",
       "Centre de traitement rénal"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-cfb53d4bab125334",
+    "legacySlugs": [
+      "kidney-treatment-centre-d-070",
+      "kidney-treatment-centre"
+    ]
   },
   {
     "en": "Pain Clinic",
@@ -2409,7 +3315,12 @@
       "douleur",
       "Clinique de la douleur"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-317444c4488c5b89",
+    "legacySlugs": [
+      "pain-clinic-a-420",
+      "pain-clinic"
+    ]
   },
   {
     "en": "Parkinson Clinic",
@@ -2420,7 +3331,12 @@
       "parkinson",
       "Clinique Parkinson"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-f2db07d9bd9e5bbe",
+    "legacySlugs": [
+      "parkinson-clinic-e-005",
+      "parkinson-clinic"
+    ]
   },
   {
     "en": "Registration",
@@ -2434,7 +3350,12 @@
       "carte d'hôpital",
       "Inscription"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-3ce68cdd113d5d39",
+    "legacySlugs": [
+      "registration-e-0014",
+      "registration"
+    ]
   },
   {
     "en": "Renal Clinic",
@@ -2447,7 +3368,12 @@
       "clinique rénale",
       "Clinique rénale"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-3a5fc7d3c99851de",
+    "legacySlugs": [
+      "renal-clinic-g-225",
+      "renal-clinic"
+    ]
   },
   {
     "en": "Rhogam",
@@ -2458,7 +3384,12 @@
       "rhogam",
       "Rhogam"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-d6bc46f3775a51c6",
+    "legacySlugs": [
+      "rhogam-h-308",
+      "rhogam"
+    ]
   },
   {
     "en": "Minor Surgery",
@@ -2470,7 +3401,12 @@
       "chirurgie mineure",
       "Chirurgie mineure"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-e624d6906a835703",
+    "legacySlugs": [
+      "minor-surgery-g-300",
+      "minor-surgery"
+    ]
   },
   {
     "en": "Thrombosis Clinic",
@@ -2482,7 +3418,12 @@
       "thrombose",
       "Clinique de thrombose"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-526c096114545553",
+    "legacySlugs": [
+      "thrombosis-clinic-b-304",
+      "thrombosis-clinic"
+    ]
   },
   {
     "en": "Blood Oncology Clinic",
@@ -2495,6 +3436,11 @@
       "oncologie hématologique",
       "Clinique d’oncologie hématologique"
     ],
-    "status": "official"
+    "status": "official",
+    "id": "dest-f3f29ed9337259db",
+    "legacySlugs": [
+      "blood-oncology-clinic-7th-floor",
+      "blood-oncology-clinic"
+    ]
   }
 ]

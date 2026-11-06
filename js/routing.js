@@ -25,3 +25,16 @@ export function resolveTargetNode(d,hospital,graph){
   }
   return null;
 }
+
+// Only replace the generic path when every directed edge has documented steps.
+export function routeInstructions(path,instructions,lang){
+  if(!path||path.length<2)return null;
+  const steps=[];
+  for(let i=1;i<path.length;i++){
+    const edge=instructions[path[i-1]+">"+path[i]];
+    const text=edge&&(edge[lang]||edge.en);
+    if(!text||!text.length)return null;
+    steps.push(...text);
+  }
+  return steps;
+}

@@ -14,7 +14,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Admitting Office page lists the Montreal Children's Hospital admitting office at C RC.0036.",
-    "source": "MUHC Admitting Office"
+    "source": "MUHC Admitting Office",
+    "id": "dest-4554e77f1df555c5",
+    "legacySlugs": [
+      "admitting-montreal-children-s-hospital-c-rc-0036",
+      "admitting-montreal-children-s-hospital"
+    ]
   },
   {
     "en": "Pediatric Emergency",
@@ -31,7 +36,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-a78b285a67995997",
+    "legacySlugs": [
+      "pediatric-emergency-b-s1-3300",
+      "pediatric-emergency"
+    ]
   },
   {
     "en": "Audiology — Montreal Children's Hospital",
@@ -46,7 +56,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-337343015c8159d2",
+    "legacySlugs": [
+      "audiology-montreal-children-s-hospital-a-rc-4227",
+      "audiology-montreal-children-s-hospital"
+    ]
   },
   {
     "en": "Interventional Cardiology — Pediatric",
@@ -60,7 +75,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-c659e791f6015860",
+    "legacySlugs": [
+      "interventional-cardiology-pediatric-b-03-7200",
+      "interventional-cardiology-pediatric"
+    ]
   },
   {
     "en": "Cardiology Centre — Pediatric",
@@ -75,7 +95,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-d0a1858257625db1",
+    "legacySlugs": [
+      "cardiology-centre-pediatric-b-rc-3219",
+      "cardiology-centre-pediatric"
+    ]
   },
   {
     "en": "Surgery and Intervention Centre — Pediatric",
@@ -89,7 +114,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-78351ecc708e596b",
+    "legacySlugs": [
+      "surgery-and-intervention-centre-pediatric-b-03-3103",
+      "surgery-and-intervention-centre-pediatric"
+    ]
   },
   {
     "en": "Hematology-Oncology Day Treatment — Pediatric",
@@ -104,7 +134,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-d102c03f3362545f",
+    "legacySlugs": [
+      "hematology-oncology-day-treatment-pediatric-b-07-5350",
+      "hematology-oncology-day-treatment-pediatric"
+    ]
   },
   {
     "en": "Complex Care Service — Pediatric",
@@ -117,7 +152,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-f1ababa567ea55df",
+    "legacySlugs": [
+      "complex-care-service-pediatric-b-rc-2238",
+      "complex-care-service-pediatric"
+    ]
   },
   {
     "en": "Test Centre — Pediatric",
@@ -133,7 +173,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-2e67f37c03ba586e",
+    "legacySlugs": [
+      "test-centre-pediatric-b-02-5118",
+      "test-centre-pediatric"
+    ]
   },
   {
     "en": "Patient-Family Resource Centre",
@@ -148,7 +193,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Patient Resource Centres page lists the Patient Resource Centre at B RC.0078.",
-    "source": "MUHC Patient Resource Centres"
+    "source": "MUHC Patient Resource Centres",
+    "id": "dest-678616c47acf5ca1",
+    "legacySlugs": [
+      "patient-family-resource-centre-b-rc-0078",
+      "patient-family-resource-centre"
+    ]
   },
   {
     "en": "Brain, Development and Behaviour",
@@ -162,7 +212,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-f265fec0226d5c92",
+    "legacySlugs": [
+      "brain-development-and-behaviour-a-03-3138-a-04-3140",
+      "brain-development-and-behaviour"
+    ]
   },
   {
     "en": "Chapel — Montreal Children's Hospital",
@@ -177,7 +232,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-baa4513678285ca6",
+    "legacySlugs": [
+      "chapel-montreal-children-s-hospital-a-02-0045",
+      "chapel-montreal-children-s-hospital"
+    ]
   },
   {
     "en": "Clinics — North (Pediatric)",
@@ -190,7 +250,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-bddba9ab93ea5260",
+    "legacySlugs": [
+      "clinics-north-pediatric-a-rc-3334-a-02-3343",
+      "clinics-north-pediatric"
+    ]
   },
   {
     "en": "Clinics — South (Pediatric)",
@@ -203,7 +268,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-077c1af263ae5372",
+    "legacySlugs": [
+      "clinics-south-pediatric-a-02-2227",
+      "clinics-south-pediatric"
+    ]
   },
   {
     "en": "Neuro Diagnostics — Pediatric",
@@ -217,7 +287,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-94221ddaab315016",
+    "legacySlugs": [
+      "neuro-diagnostics-pediatric-b-02-3227",
+      "neuro-diagnostics-pediatric"
+    ]
   },
   {
     "en": "Occupational Therapy — Pediatric",
@@ -231,7 +306,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-ad013702882f568e",
+    "legacySlugs": [
+      "occupational-therapy-pediatric-a-03-3138",
+      "occupational-therapy-pediatric"
+    ]
   },
   {
     "en": "Medical Genetics — Pediatric",
@@ -245,7 +325,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-ca810cb63ef35754",
+    "legacySlugs": [
+      "medical-genetics-pediatric-a-04-3140",
+      "medical-genetics-pediatric"
+    ]
   },
   {
     "en": "Medical Imaging — Pediatric",
@@ -260,7 +345,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-17b31166f2ca5b4a",
+    "legacySlugs": [
+      "medical-imaging-pediatric-b-02-2018",
+      "medical-imaging-pediatric"
+    ]
   },
   {
     "en": "Centre for Innovative Medicine — Pediatric",
@@ -274,7 +364,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-c4b89612aa6d5205",
+    "legacySlugs": [
+      "centre-for-innovative-medicine-pediatric-b-04-3310",
+      "centre-for-innovative-medicine-pediatric"
+    ]
   },
   {
     "en": "Sleep Lab — Pediatric",
@@ -288,7 +383,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-a468cd315f255c4b",
+    "legacySlugs": [
+      "sleep-lab-pediatric-a-s1-2335",
+      "sleep-lab-pediatric"
+    ]
   },
   {
     "en": "Clinical Nutrition — Pediatric",
@@ -302,7 +402,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-f29dfcabb55b5234",
+    "legacySlugs": [
+      "clinical-nutrition-pediatric-b-s1-2238",
+      "clinical-nutrition-pediatric"
+    ]
   },
   {
     "en": "Speech Language Pathology — Pediatric",
@@ -316,7 +421,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-03f8875d48535ceb",
+    "legacySlugs": [
+      "speech-language-pathology-pediatric-a-04-3140",
+      "speech-language-pathology-pediatric"
+    ]
   },
   {
     "en": "Otolaryngology / ENT — Pediatric",
@@ -332,7 +442,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-19df0fd32d42581e",
+    "legacySlugs": [
+      "otolaryngology-ent-pediatric-a-rc-4221",
+      "otolaryngology-ent-pediatric"
+    ]
   },
   {
     "en": "Physiotherapy — Pediatric",
@@ -346,7 +461,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-5d6b57f6aa825e6a",
+    "legacySlugs": [
+      "physiotherapy-pediatric-a-03-3138",
+      "physiotherapy-pediatric"
+    ]
   },
   {
     "en": "Psychology — Pediatric",
@@ -360,7 +480,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-2440a3ca8f38530b",
+    "legacySlugs": [
+      "psychology-pediatric-a-03-3138",
+      "psychology-pediatric"
+    ]
   },
   {
     "en": "Interventional Radiology — Pediatric",
@@ -373,7 +498,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-a5a86ed75ab75bd2",
+    "legacySlugs": [
+      "interventional-radiology-pediatric-b-03-7200",
+      "interventional-radiology-pediatric"
+    ]
   },
   {
     "en": "Social Service — Pediatric",
@@ -387,7 +517,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-918fbf2d7d1a552a",
+    "legacySlugs": [
+      "social-service-pediatric-b-s1-2018",
+      "social-service-pediatric"
+    ]
   },
   {
     "en": "Child Life Services",
@@ -401,7 +536,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-c8389c637a8f5ff8",
+    "legacySlugs": [
+      "child-life-services-b-s1-2707",
+      "child-life-services"
+    ]
   },
   {
     "en": "Respiratory Services — Pediatric",
@@ -415,7 +555,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-423f1395d8285365",
+    "legacySlugs": [
+      "respiratory-services-pediatric-a-s1-3333",
+      "respiratory-services-pediatric"
+    ]
   },
   {
     "en": "Spiritual Care — Pediatric",
@@ -430,7 +575,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Spiritual Care page lists pediatric spiritual care / prayer space at A 02.0045.",
-    "source": "MUHC Spiritual Care"
+    "source": "MUHC Spiritual Care",
+    "id": "dest-b3fdf00aa66b56ea",
+    "legacySlugs": [
+      "spiritual-care-pediatric-a-02-0045",
+      "spiritual-care-pediatric"
+    ]
   },
   {
     "en": "Child Psychiatry Unit",
@@ -444,7 +594,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-8c6f91d3e1bf5be6",
+    "legacySlugs": [
+      "child-psychiatry-unit-b-07-2006",
+      "child-psychiatry-unit"
+    ]
   },
   {
     "en": "Inpatient Unit B8",
@@ -458,7 +613,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-99e15104aaa559af",
+    "legacySlugs": [
+      "inpatient-unit-b8-b-08-1100",
+      "inpatient-unit-b8"
+    ]
   },
   {
     "en": "Inpatient Unit B9",
@@ -472,7 +632,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-24126579a9b45889",
+    "legacySlugs": [
+      "inpatient-unit-b9-b-09-1100",
+      "inpatient-unit-b9"
+    ]
   },
   {
     "en": "Hematology-Oncology & Transplant — Pediatric Inpatient",
@@ -485,7 +650,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-dde5e1cdc6c25b94",
+    "legacySlugs": [
+      "hematology-oncology-transplant-pediatric-inpatient-b-07-3528",
+      "hematology-oncology-transplant-pediatric-inpatient"
+    ]
   },
   {
     "en": "Neonatal Intensive Care Unit (NICU)",
@@ -500,7 +670,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-0a37c62e13545d4c",
+    "legacySlugs": [
+      "neonatal-intensive-care-unit-nicu-b-06-1124",
+      "neonatal-intensive-care-unit-nicu"
+    ]
   },
   {
     "en": "Pediatric Intensive Care Unit (PICU)",
@@ -515,7 +690,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-92e53508072e5721",
+    "legacySlugs": [
+      "pediatric-intensive-care-unit-picu-b-06-3718",
+      "pediatric-intensive-care-unit-picu"
+    ]
   },
   {
     "en": "Admitting — Adult Glen",
@@ -532,7 +712,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Admitting Office page: adult Glen admitting near the Royal Victoria main entrance, C RC.0046.",
-    "source": "MUHC Admitting Office"
+    "source": "MUHC Admitting Office",
+    "id": "dest-57b6573441155a4e",
+    "legacySlugs": [
+      "admitting-adult-glen-c-rc-0046",
+      "admitting-adult-glen"
+    ]
   },
   {
     "en": "Medical Records / Access to Health Information",
@@ -547,7 +732,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-cdf6602c3e215e2f",
+    "legacySlugs": [
+      "medical-records-access-to-health-information-c-rc-7121",
+      "medical-records-access-to-health-information"
+    ]
   },
   {
     "en": "Audiology — Adult",
@@ -561,7 +751,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-ac7e089a8b225f08",
+    "legacySlugs": [
+      "audiology-adult-d-04-7510",
+      "audiology-adult"
+    ]
   },
   {
     "en": "Non-invasive Cardiology",
@@ -576,7 +771,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-46b51e29128e59ac",
+    "legacySlugs": [
+      "non-invasive-cardiology-c-rc-3418",
+      "non-invasive-cardiology"
+    ]
   },
   {
     "en": "Surgery and Intervention Centre — Adult",
@@ -589,7 +789,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-464b32b070a258d9",
+    "legacySlugs": [
+      "surgery-and-intervention-centre-adult-c-03-7158",
+      "surgery-and-intervention-centre-adult"
+    ]
   },
   {
     "en": "Test Centre / Blood Collection — Adult",
@@ -606,7 +811,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Test Centres page lists the adult Glen Test Centre at D 02.2307 (Block D, Level 2 South).",
-    "source": "MUHC Test Centres"
+    "source": "MUHC Test Centres",
+    "id": "dest-1fbf8be776105dbd",
+    "legacySlugs": [
+      "test-centre-blood-collection-adult-d-02-2307",
+      "test-centre-blood-collection-adult"
+    ]
   },
   {
     "en": "McConnell Resource Centre",
@@ -620,7 +830,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-cee5196064f05166",
+    "legacySlugs": [
+      "mcconnell-resource-centre-b-rc-0000",
+      "mcconnell-resource-centre"
+    ]
   },
   {
     "en": "Birthing Centre",
@@ -640,7 +855,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-a4afdbd07321547c",
+    "legacySlugs": [
+      "birthing-centre-c-06-2143",
+      "birthing-centre"
+    ]
   },
   {
     "en": "Breast Centre",
@@ -655,7 +875,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-40d2a0a3e0fc5417",
+    "legacySlugs": [
+      "breast-centre-c-06-3155",
+      "breast-centre"
+    ]
   },
   {
     "en": "Gynecology Clinic",
@@ -669,7 +894,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-fd6c98b2a8d05b50",
+    "legacySlugs": [
+      "gynecology-clinic-c-06-4152",
+      "gynecology-clinic"
+    ]
   },
   {
     "en": "Obstetrics Clinic",
@@ -684,7 +914,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-303726fe7e6b501d",
+    "legacySlugs": [
+      "obstetrics-clinic-c-06-5218",
+      "obstetrics-clinic"
+    ]
   },
   {
     "en": "Pre-operative Clinic",
@@ -699,7 +934,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-b335d500ea1856c1",
+    "legacySlugs": [
+      "pre-operative-clinic-c-s1-2428",
+      "pre-operative-clinic"
+    ]
   },
   {
     "en": "Cardiovascular Clinics",
@@ -713,7 +953,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-48196777150c56cd",
+    "legacySlugs": [
+      "cardiovascular-clinics-c-rc-2017",
+      "cardiovascular-clinics"
+    ]
   },
   {
     "en": "Surgical Clinics — North",
@@ -726,7 +971,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-9728a69b43325554",
+    "legacySlugs": [
+      "surgical-clinics-north-d-s1-3310",
+      "surgical-clinics-north"
+    ]
   },
   {
     "en": "Surgical Clinics — South",
@@ -739,7 +989,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-ad9ff18ba3495884",
+    "legacySlugs": [
+      "surgical-clinics-south-c-s1-2833",
+      "surgical-clinics-south"
+    ]
   },
   {
     "en": "Medical Clinics",
@@ -753,7 +1008,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-a9d79e8b80ae56e7",
+    "legacySlugs": [
+      "medical-clinics-d-02-3312",
+      "medical-clinics"
+    ]
   },
   {
     "en": "Dialysis",
@@ -767,7 +1027,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-e8a0c848c8b65bfd",
+    "legacySlugs": [
+      "dialysis-d-04-4332",
+      "dialysis"
+    ]
   },
   {
     "en": "Obstetrics and Gynecology Ultrasound",
@@ -782,7 +1047,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-b3ad6a65e5fe5e7b",
+    "legacySlugs": [
+      "obstetrics-and-gynecology-ultrasound-c-06-4351",
+      "obstetrics-and-gynecology-ultrasound"
+    ]
   },
   {
     "en": "Occupational Therapy — Adult",
@@ -796,7 +1066,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-5b5c298aa3bc5213",
+    "legacySlugs": [
+      "occupational-therapy-adult-d-rc-4108",
+      "occupational-therapy-adult"
+    ]
   },
   {
     "en": "Medical Day Hospital and CVIS",
@@ -811,7 +1086,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-0c5b57fb4ad3504a",
+    "legacySlugs": [
+      "medical-day-hospital-and-cvis-d-02-4306",
+      "medical-day-hospital-and-cvis"
+    ]
   },
   {
     "en": "Centre for Innovative Medicine — Adult",
@@ -825,7 +1105,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-4fd80a2e4eb3578e",
+    "legacySlugs": [
+      "centre-for-innovative-medicine-adult-c-04-0119",
+      "centre-for-innovative-medicine-adult"
+    ]
   },
   {
     "en": "Sleep Laboratory — Adult",
@@ -840,7 +1125,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-a2d7916d45dd5851",
+    "legacySlugs": [
+      "sleep-laboratory-adult-c-rc-4208",
+      "sleep-laboratory-adult"
+    ]
   },
   {
     "en": "Nuclear Medicine",
@@ -855,7 +1145,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-9e0fd4042071580b",
+    "legacySlugs": [
+      "nuclear-medicine-c-02-8711",
+      "nuclear-medicine"
+    ]
   },
   {
     "en": "Clinical Nutrition — Adult",
@@ -870,7 +1165,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-0ad44f2da08c5862",
+    "legacySlugs": [
+      "clinical-nutrition-adult-c-rc-8521",
+      "clinical-nutrition-adult"
+    ]
   },
   {
     "en": "Speech Language Pathology — Adult",
@@ -884,7 +1184,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-8da8b078b5db53ef",
+    "legacySlugs": [
+      "speech-language-pathology-adult-d-04-7510",
+      "speech-language-pathology-adult"
+    ]
   },
   {
     "en": "Central Pharmacy",
@@ -897,7 +1202,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-ce7b1bdc188859ae",
+    "legacySlugs": [
+      "central-pharmacy-c-rc-6004",
+      "central-pharmacy"
+    ]
   },
   {
     "en": "Physiotherapy — Adult",
@@ -912,7 +1222,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-6fcadf1871db53ed",
+    "legacySlugs": [
+      "physiotherapy-adult-d-rc-4108",
+      "physiotherapy-adult"
+    ]
   },
   {
     "en": "Radiology — Ultrasound",
@@ -928,7 +1243,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-7b7c1e1e99ae526d",
+    "legacySlugs": [
+      "radiology-ultrasound-c-02-5022-1",
+      "radiology-ultrasound"
+    ]
   },
   {
     "en": "Occupational Health and Safety",
@@ -942,7 +1262,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-41b109b9ddb85d28",
+    "legacySlugs": [
+      "occupational-health-and-safety-d-04-6011",
+      "occupational-health-and-safety"
+    ]
   },
   {
     "en": "Chronic Viral Illness Service",
@@ -958,7 +1283,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-acaed027496b5626",
+    "legacySlugs": [
+      "chronic-viral-illness-service-d-02-4110",
+      "chronic-viral-illness-service"
+    ]
   },
   {
     "en": "Social Service — Adult",
@@ -972,7 +1302,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-34d03d546ac2524a",
+    "legacySlugs": [
+      "social-service-adult-c-rc-8448",
+      "social-service-adult"
+    ]
   },
   {
     "en": "Spiritual Care / Prayer and Meditation — Adult",
@@ -989,7 +1324,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Spiritual Care page lists adult Glen spiritual care at C 02.0310.4.",
-    "source": "MUHC Spiritual Care"
+    "source": "MUHC Spiritual Care",
+    "id": "dest-fc0ecae647d55000",
+    "legacySlugs": [
+      "spiritual-care-prayer-and-meditation-adult-c-02-0310-4",
+      "spiritual-care-prayer-and-meditation-adult"
+    ]
   },
   {
     "en": "Coronary Care Unit",
@@ -1003,7 +1343,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-c1d1f0760f8b556b",
+    "legacySlugs": [
+      "coronary-care-unit-c-07-4612",
+      "coronary-care-unit"
+    ]
   },
   {
     "en": "Inpatient Unit C7",
@@ -1017,7 +1362,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-0e1def8a509f5e9a",
+    "legacySlugs": [
+      "inpatient-unit-c7-c-07-1200",
+      "inpatient-unit-c7"
+    ]
   },
   {
     "en": "Inpatient Unit C8",
@@ -1031,7 +1381,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-041605b3744958df",
+    "legacySlugs": [
+      "inpatient-unit-c8-c-08-1200",
+      "inpatient-unit-c8"
+    ]
   },
   {
     "en": "Inpatient Unit C9",
@@ -1045,7 +1400,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-3fbe799851ec54e5",
+    "legacySlugs": [
+      "inpatient-unit-c9-c-09-1200",
+      "inpatient-unit-c9"
+    ]
   },
   {
     "en": "Inpatient Unit C10",
@@ -1059,7 +1419,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-bdb79f3c2c295684",
+    "legacySlugs": [
+      "inpatient-unit-c10-c-10-1200",
+      "inpatient-unit-c10"
+    ]
   },
   {
     "en": "Maternity Care Unit D6",
@@ -1075,7 +1440,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-f6ea80d0937e5ff8",
+    "legacySlugs": [
+      "maternity-care-unit-d6-d-06-1100",
+      "maternity-care-unit-d6"
+    ]
   },
   {
     "en": "Inpatient Unit D7",
@@ -1089,7 +1459,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-ffd7f36d39335a54",
+    "legacySlugs": [
+      "inpatient-unit-d7-d-07-1100",
+      "inpatient-unit-d7"
+    ]
   },
   {
     "en": "Inpatient Unit D9",
@@ -1103,7 +1478,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-cc71006a57e6582d",
+    "legacySlugs": [
+      "inpatient-unit-d9-d-09-1100",
+      "inpatient-unit-d9"
+    ]
   },
   {
     "en": "Hematology-Oncology Inpatient Unit D10",
@@ -1117,7 +1497,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-bfa97a49d8c75733",
+    "legacySlugs": [
+      "hematology-oncology-inpatient-unit-d10-d-10-1100",
+      "hematology-oncology-inpatient-unit-d10"
+    ]
   },
   {
     "en": "Intensive Care Unit — Adult",
@@ -1132,7 +1517,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-f29061e41e5759cd",
+    "legacySlugs": [
+      "intensive-care-unit-adult-d-03-7036",
+      "intensive-care-unit-adult"
+    ]
   },
   {
     "en": "Palliative Care Unit",
@@ -1145,7 +1535,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-a453874f17145287",
+    "legacySlugs": [
+      "palliative-care-unit-d-09-3000",
+      "palliative-care-unit"
+    ]
   },
   {
     "en": "Adult Emergency Department",
@@ -1161,7 +1556,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-60bf0463a6f25b38",
+    "legacySlugs": [
+      "adult-emergency-department-c-s1-3300",
+      "adult-emergency-department"
+    ]
   },
   {
     "en": "Cedars Cancer Centre — Administration",
@@ -1174,7 +1574,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-cb754ac0eaa65b36",
+    "legacySlugs": [
+      "cedars-cancer-centre-administration-d-s1-4500-d-02-8100",
+      "cedars-cancer-centre-administration"
+    ]
   },
   {
     "en": "Cedars Test Centre",
@@ -1189,7 +1594,12 @@
     ],
     "status": "official",
     "note": "Current Cedars Cancer Centre page lists its dedicated Test Centre at D RC.1306.",
-    "source": "MUHC Cedars Cancer Centre"
+    "source": "MUHC Cedars Cancer Centre",
+    "id": "dest-f42ae3206e7e5af4",
+    "legacySlugs": [
+      "cedars-test-centre-d-rc-1306",
+      "cedars-test-centre"
+    ]
   },
   {
     "en": "Cedars CanSupport Resource Centre",
@@ -1203,7 +1613,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-395b87ffa6ed59d6",
+    "legacySlugs": [
+      "cedars-cansupport-resource-centre-d-rc-1329",
+      "cedars-cansupport-resource-centre"
+    ]
   },
   {
     "en": "Cedars Urgent Care Centre",
@@ -1217,7 +1632,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-7700c15e903354ab",
+    "legacySlugs": [
+      "cedars-urgent-care-centre-d-rc-6100",
+      "cedars-urgent-care-centre"
+    ]
   },
   {
     "en": "Cedars Treatment Centre",
@@ -1231,7 +1651,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-af7ffdc43e605ccd",
+    "legacySlugs": [
+      "cedars-treatment-centre-d-rc-8013",
+      "cedars-treatment-centre"
+    ]
   },
   {
     "en": "Cancer Care Clinics — Cedars",
@@ -1251,7 +1676,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-b0fd441e97cd5f72",
+    "legacySlugs": [
+      "cancer-care-clinics-cedars-d-rc-9019-d-rc-9031-d-rc-9043",
+      "cancer-care-clinics-cedars"
+    ]
   },
   {
     "en": "Oncology Supportive Care Clinics",
@@ -1264,7 +1694,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-abbd17a1b0015aa2",
+    "legacySlugs": [
+      "oncology-supportive-care-clinics-d-02-9005",
+      "oncology-supportive-care-clinics"
+    ]
   },
   {
     "en": "Oncology Pharmacy — Cedars",
@@ -1277,7 +1712,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-ef9b44d8244a55ba",
+    "legacySlugs": [
+      "oncology-pharmacy-cedars-d-rc-8019",
+      "oncology-pharmacy-cedars"
+    ]
   },
   {
     "en": "Medical Physics — Cedars",
@@ -1290,7 +1730,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-882a2a951f86574d",
+    "legacySlugs": [
+      "medical-physics-cedars-d-s1-7000",
+      "medical-physics-cedars"
+    ]
   },
   {
     "en": "Radiation Oncology — Cedars",
@@ -1306,7 +1751,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-56dc998778eb5367",
+    "legacySlugs": [
+      "radiation-oncology-cedars-d-s1-1620",
+      "radiation-oncology-cedars"
+    ]
   },
   {
     "en": "Psychosocial Oncology",
@@ -1319,7 +1769,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-358899143a56574c",
+    "legacySlugs": [
+      "psychosocial-oncology-d-02-9005",
+      "psychosocial-oncology"
+    ]
   },
   {
     "en": "Montreal Chest Institute Clinics",
@@ -1334,7 +1789,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-bf2f36201fa85d59",
+    "legacySlugs": [
+      "montreal-chest-institute-clinics-d-rc-3314",
+      "montreal-chest-institute-clinics"
+    ]
   },
   {
     "en": "Montreal Chest Institute Sleep Laboratory",
@@ -1348,7 +1808,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-c2685ea9443c5d3b",
+    "legacySlugs": [
+      "montreal-chest-institute-sleep-laboratory-d-04-3302",
+      "montreal-chest-institute-sleep-laboratory"
+    ]
   },
   {
     "en": "Montreal Chest Institute Inpatient Unit D8",
@@ -1362,7 +1827,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-153628b40ad45437",
+    "legacySlugs": [
+      "montreal-chest-institute-inpatient-unit-d8-d-08-3036",
+      "montreal-chest-institute-inpatient-unit-d8"
+    ]
   },
   {
     "en": "Montreal Chest Institute Day Hospital",
@@ -1375,7 +1845,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-c7c393a28b665770",
+    "legacySlugs": [
+      "montreal-chest-institute-day-hospital-d-rc-3315",
+      "montreal-chest-institute-day-hospital"
+    ]
   },
   {
     "en": "Pulmonary Function — Montreal Chest Institute",
@@ -1391,7 +1866,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-5d8cc2bf4e18584a",
+    "legacySlugs": [
+      "pulmonary-function-montreal-chest-institute-d-rc-2110",
+      "pulmonary-function-montreal-chest-institute"
+    ]
   },
   {
     "en": "Intensive Care and Weaning — Montreal Chest Institute",
@@ -1406,7 +1886,12 @@
     ],
     "status": "official",
     "note": "Current official MUHC Glen wayfinding information.",
-    "source": "MUHC current Glen wayfinding directory"
+    "source": "MUHC current Glen wayfinding directory",
+    "id": "dest-999cd4e357125cd5",
+    "legacySlugs": [
+      "intensive-care-and-weaning-montreal-chest-institute-d-08-4133",
+      "intensive-care-and-weaning-montreal-chest-institute"
+    ]
   },
   {
     "en": "Glen Cafeteria",
@@ -1422,7 +1907,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Food Services page: Glen cafeteria is on Level S1 in Block C.",
-    "source": "MUHC Food Services"
+    "source": "MUHC Food Services",
+    "id": "dest-14342872a7e15c50",
+    "legacySlugs": [
+      "glen-cafeteria-level-s1-niveau-s1",
+      "glen-cafeteria"
+    ]
   },
   {
     "en": "Retail Pharmacy / La Petite Pharma",
@@ -1437,7 +1927,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Commercial Venues page lists La Petite Pharma at B01.0044.",
-    "source": "MUHC Commercial Venues"
+    "source": "MUHC Commercial Venues",
+    "id": "dest-72318aca8a655f74",
+    "legacySlugs": [
+      "retail-pharmacy-la-petite-pharma-b01-0044",
+      "retail-pharmacy-la-petite-pharma"
+    ]
   },
   {
     "en": "Presse Café — Children's side",
@@ -1451,7 +1946,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Commercial Venues page.",
-    "source": "MUHC Commercial Venues"
+    "source": "MUHC Commercial Venues",
+    "id": "dest-18fae174a3185fe6",
+    "legacySlugs": [
+      "presse-cafe-children-s-side-as1-0000-1",
+      "presse-cafe-children-s-side"
+    ]
   },
   {
     "en": "Presse Café — Research Institute",
@@ -1465,7 +1965,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Commercial Venues page.",
-    "source": "MUHC Commercial Venues"
+    "source": "MUHC Commercial Venues",
+    "id": "dest-e00aad5ab5f0513a",
+    "legacySlugs": [
+      "presse-cafe-research-institute-es1-0040",
+      "presse-cafe-research-institute"
+    ]
   },
   {
     "en": "ATM / RBC Bank Machine",
@@ -1481,7 +1986,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Commercial Venues page lists RBC ATMs at several Glen locations.",
-    "source": "MUHC Commercial Venues"
+    "source": "MUHC Commercial Venues",
+    "id": "dest-5b7925d9dac35549",
+    "legacySlugs": [
+      "atm-rbc-bank-machine-c01-0122-as1-0100-2-cs1-0100-1",
+      "atm-rbc-bank-machine"
+    ]
   },
   {
     "en": "Subway",
@@ -1495,7 +2005,12 @@
     ],
     "status": "official",
     "note": "Current MUHC Commercial Venues page.",
-    "source": "MUHC Commercial Venues"
+    "source": "MUHC Commercial Venues",
+    "id": "dest-3258871854b957c8",
+    "legacySlugs": [
+      "subway-ds1-8064",
+      "subway"
+    ]
   },
   {
     "en": "Vendôme Metro / Hospital Tunnel",
@@ -1512,7 +2027,12 @@
     ],
     "status": "official",
     "note": "Current MUHC access information confirms Vendôme station is directly connected to the Glen by an accessible tunnel.",
-    "source": "MUHC How to get to the Glen"
+    "source": "MUHC How to get to the Glen",
+    "id": "dest-523ec81b750c58c6",
+    "legacySlugs": [
+      "vendome-metro-hospital-tunnel-level-s1-niveau-s1",
+      "vendome-metro-hospital-tunnel"
+    ]
   },
   {
     "en": "Adult Ophthalmology Clinic — Off-site",
@@ -1531,7 +2051,12 @@
     "source": "MUHC Glen site / McGill Academic Eye Centre",
     "outdoorMap": {
       "query": "5252 Boulevard de Maisonneuve Ouest, Montréal, QC, Canada"
-    }
+    },
+    "id": "dest-fede0241fe7d5854",
+    "legacySlugs": [
+      "adult-ophthalmology-clinic-off-site-5252-boul-de-maisonneuve-ouest",
+      "adult-ophthalmology-clinic-off-site"
+    ]
   },
   {
     "en": "MRI / Magnetic Resonance Imaging — Adult",
@@ -1550,6 +2075,11 @@
     "status": "official",
     "note": "MUHC lists MRI at the Glen site — Royal Victoria Hospital. The current MUHC Medical Imaging page locates Glen adult Medical Imaging in Block C, Level 2, room C02.5022.",
     "source": "MUHC Medical Imaging",
-    "sourceUrl": "https://muhc.ca/medical-imaging"
+    "sourceUrl": "https://muhc.ca/medical-imaging",
+    "id": "dest-751ff1b65e845d2c",
+    "legacySlugs": [
+      "mri-magnetic-resonance-imaging-adult-c-02-5022",
+      "mri-magnetic-resonance-imaging-adult"
+    ]
   }
 ]

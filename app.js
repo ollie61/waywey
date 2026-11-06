@@ -1,12 +1,13 @@
-import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,VOICE_UI,LANGUAGE_NAMES,routeNoticeText} from "./js/i18n.js";
-import {norm,rankResults,inferQueryLanguage} from "./js/search.js";
-import {findRoute,resolveTargetNode} from "./js/routing.js";
+import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,VOICE_UI,LANGUAGE_NAMES,VISITOR_LINK_UI,routeNoticeText} from "./js/i18n.js";
+import {rankResults,inferQueryLanguage} from "./js/search.js";
+import {findRoute,resolveTargetNode,routeInstructions} from "./js/routing.js";
 import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,strengthBadge} from "./js/ui.js";
 import {hospitalIdFromUrl,fetchJson} from "./js/data.js";
 import {initPwa} from "./js/pwa.js";
 import {formatAuditDate,sourceLinks,hospitalSourceLinks} from "./js/provenance.js";
 import {setupDialog,openDialog,closeDialog,announce} from "./js/accessibility.js";
 import {outdoorMapUrl} from "./js/outdoor-map.js";
+import {visitorDestinationKey,resolveVisitorDestination} from "./js/visitor-links.js";
 import {createVoiceSearch} from "./js/voice-search.js";
 
 const APP_VERSION="0.2.0";
@@ -16,6 +17,8 @@ let GRAPH={};
 let PAV_LABELS={en:{},fr:{}};
 let NOTE_TRANSLATIONS={};
 let QUICK_GUIDE={};
+let EDGE_INSTRUCTIONS={};
+let pendingVisitor=null;
 
 function hospitalLanguages(){return (HOSPITAL.ambassadorLanguages&&HOSPITAL.ambassadorLanguages.length)?HOSPITAL.ambassadorLanguages:["en","fr"];}
 function destinationSecondary(d,lang){return getDestinationSecondary(d,lang,hospitalLanguages());}
@@ -305,6 +308,7 @@ async function loadHospital(){
  NOTE_TRANSLATIONS=routes.noteTranslations||{};
  QUICK_GUIDE=guide||{};
  HOSPITAL.specialRoutes=routes.specialRoutes||{};
+ EDGE_INSTRUCTIONS=routes.edgeInstructions||{};
  populateAppLanguages();
  if(cfg.ui){
    for(const lang of Object.keys(cfg.ui)){
@@ -376,7 +380,9 @@ function ambassadorSteps(d){
    return out;
  }
  const path=bfs(start,target),special=specialRouteSteps(start,target,appLang);
+ const detailed=routeInstructions(path,EDGE_INSTRUCTIONS,appLang);
  if(special&&special.length){out.push(...special);}
+ else if(detailed){out.push(...detailed);}
  else if(start===target){out.push(t.remain+" "+(labels[target]||pavilionFor(target,appLang))+".");}
  else if(path){out.push(t.indoor+" "+path.map(x=>labels[x]||pavilionFor(x,appLang)).join(" → ")+".");}
  else{out.push(routeNoticeText("noRoute",noticeLang));}
@@ -397,7 +403,9 @@ function localizedSteps(d,lang){
    return out;
  }
  const path=bfs(start,target),labels=PAV_LABELS[lang]||PAV_LABELS.en||{},special=specialRouteSteps(start,target,lang);
+ const detailed=routeInstructions(path,EDGE_INSTRUCTIONS,lang);
  if(special&&special.length){out.push(...special);}
+ else if(detailed){out.push(...detailed);}
  else if(start===target){out.push(t.stay+" "+(labels[target]||pavilionFor(target,lang))+".");}
  else if(path){out.push(t.follow+" "+path.map(x=>labels[x]||pavilionFor(x,lang)).join(" → ")+".");}
  else{out.push(routeNoticeText("noRoute",lang));}
@@ -450,11 +458,15 @@ function search(){
    box.appendChild(el);
  });
 }
+function renderSteps(id,steps){
+ const items=steps.map(text=>{const li=document.createElement("li");li.dir="auto";li.textContent=text;return li;});
+ $(id).replaceChildren(...items);
+}
 function choose(d,scroll=true,queryLang=null){
- selected=d;if(queryLang)selectedQueryLang=queryLang;const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
+ pendingVisitor=null;$("visitorLinkNotice").hidden=true;selected=d;if(queryLang)selectedQueryLang=queryLang;const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
  $("destName").textContent=primary+(secondary&&secondary!==primary?" / "+secondary:"");$("destWhere").textContent=displayWhere(d);
  $("pills").innerHTML=(d.p?"<span class='pill'>"+pavilionFor(d.p,appLang)+"</span>":"")+(d.loc?"<span class='pill'>"+d.loc+"</span>":"")+(d.status==="verify"?"<span class='pill verify-pill'>⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"");
- $("steps").innerHTML=ambassadorSteps(d).map(s=>"<li dir=\"auto\">"+s+"</li>").join("");
+ renderSteps("steps",ambassadorSteps(d));
  const note=noteFor(d);$("note").style.display=note?"block":"none";$("note").textContent=note;
  renderRouteProvenance(d);
  renderOutdoorMapLink(d);
@@ -462,14 +474,13 @@ function choose(d,scroll=true,queryLang=null){
  announce(templateText(a11yText().destinationSelected,{name:primary}));
  if(scroll)$("route").scrollIntoView({behavior:motionBehavior(),block:"start"});
 }
-function slugFor(d){return norm(d.en+" "+(d.loc||"")).replace(/ /g,"-")}
 function makeVisitorUrl(){
  if(!selected)return window.location.href;
  const u=new URL(window.location.href);
  u.search="";u.hash="";
  u.searchParams.set("hospital",HOSPITAL.id||hospitalIdFromUrl());
  u.searchParams.set("visitor","1");
- u.searchParams.set("dest",slugFor(selected));
+ u.searchParams.set("dest",visitorDestinationKey(selected));
  u.searchParams.set("from",$("station").value);
  u.searchParams.set("lang",$("visitorLang").value);
  return u.toString();
@@ -517,12 +528,29 @@ function showVisitor(){
 }
 function renderVisitor(){
  const lang=$("visitorLang").value,t=I18N[lang]||I18N.en,p=$("visitorPanel");
+ p.lang=lang;
  p.dir=(lang==="ar"||lang==="he")?"rtl":"ltr";
  $("vName").textContent=destinationName(selected,lang);
  $("vWhere").textContent=displayWhere(selected,lang);
- $("vSteps").innerHTML=localizedSteps(selected,lang).map(s=>"<li dir=\"auto\">"+s+"</li>").join("");
+ renderSteps("vSteps",localizedSteps(selected,lang));
  const qrt=QR_UI[lang]||QR_UI.en;renderVisitorOutdoorMapLink(selected,lang);$("showQr").textContent="▦ "+qrt.button;$("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
 }
+function renderVisitorLinkNotice(kind,lang){
+ const t=VISITOR_LINK_UI[lang]||VISITOR_LINK_UI.en;
+ const box=$("visitorLinkNotice");box.hidden=false;box.lang=VISITOR_LINK_UI[lang]?lang:"en";box.dir=appIsRtl(box.lang)?"rtl":"ltr";
+ $("visitorLinkMessage").textContent=t[kind];
+ const button=$("recoverVisitor");button.textContent=t.open;button.hidden=kind!=="station";button.disabled=true;
+ if(kind==="station"){
+   const option=document.createElement("option");option.value="";option.disabled=true;option.textContent=t.choose;
+   $("station").prepend(option);$("station").value="";$("showVisitor").disabled=true;
+   $("station").focus();
+ }
+}
+function openLinkedVisitor(d){
+ selected=d;pendingVisitor=null;$("visitorLinkNotice").hidden=true;
+ openDialog($("visitorDialog"),{initialFocus:"#visitorLang"});renderVisitor();
+}
+
 async function bootstrap(){
  const requestedHospital=hospitalIdFromUrl();
  if(!requestedHospital){
@@ -547,7 +575,7 @@ async function bootstrap(){
  $("closeGuide").onclick=()=>closeDialog($("guideDialog"));
  $("q").addEventListener("input",search);
  $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
- $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");selectedQueryLang=null;$("q").focus();window.scrollTo({top:0,behavior:motionBehavior()})};
+ $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");selected=null;selectedQueryLang=null;$("q").focus();window.scrollTo({top:0,behavior:motionBehavior()})};
  $("showVisitor").onclick=showVisitor;
  $("visitorLang").onchange=renderVisitor;
  $("showQr").onclick=showVisitorQr;
@@ -569,16 +597,19 @@ async function bootstrap(){
  const urlParams=new URLSearchParams(window.location.search);
  const requestedGuideLang=urlParams.get("guide");
  setAppLanguage(hospitalLanguages().includes(requestedGuideLang)?requestedGuideLang:(hospitalLanguages().includes(savedLang)?savedLang:(HOSPITAL.defaultAppLanguage||hospitalLanguages()[0]||"en")));
- $("station").onchange=()=>{try{localStorage.setItem(storageKey("station"),$("station").value)}catch(e){};if(selected)choose(selected,false)};
+ $("station").onchange=()=>{try{localStorage.setItem(storageKey("station"),$("station").value)}catch(e){};$("showVisitor").disabled=!$("station").value;if(selected)choose(selected,false);if(pendingVisitor)$("recoverVisitor").disabled=!$("station").value};
+ $("recoverVisitor").onclick=()=>{if(pendingVisitor&&$("station").value)openLinkedVisitor(pendingVisitor)};
  if(requestedGuideLang&&QUICK_GUIDE[appLang])setTimeout(()=>{try{openQuickGuide()}catch(e){}},60);
 
  const p=urlParams;
  if(p.get("visitor")==="1"){
    const from=p.get("from"),lang=p.get("lang")||"en",dest=p.get("dest");
-   if(from&&[...$("station").options].some(o=>o.value===from))$("station").value=from;
    if([...$("visitorLang").options].some(o=>o.value===lang))$("visitorLang").value=lang;
-   const d=DATA.find(x=>slugFor(x)===dest||norm(x.en).replace(/ /g,"-")===dest);
-   if(d){selected=d;setTimeout(()=>{try{openDialog($("visitorDialog"),{initialFocus:"#visitorLang"});renderVisitor()}catch(e){}},60);}
+   const d=resolveVisitorDestination(DATA,dest);
+   const validFrom=from&&[...$("station").options].some(o=>o.value===from);
+   if(!d)renderVisitorLinkNotice("missing",$("visitorLang").value);
+   else if(!validFrom){pendingVisitor=d;renderVisitorLinkNotice("station",$("visitorLang").value);}
+   else{$("station").value=from;openLinkedVisitor(d);}
  }
 
  ensurePwa().cacheHospital(HOSPITAL.id||requestedHospital);
