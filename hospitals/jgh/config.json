@@ -8,7 +8,7 @@
     "en": "JGH",
     "fr": "HGJ"
   },
-  "defaultAppLanguage": "en",
+  "defaultAppLanguage": "fr",
   "pageTitle": {
     "en": "WayWey — JGH Ambassador Wayfinding",
     "fr": "WayWey — Orientation des ambassadeurs de l’HGJ"
@@ -95,7 +95,7 @@
       "fr": "IPCF"
     }
   },
-  "defaultVisitorLanguage": "en",
+  "defaultVisitorLanguage": "fr",
   "datasetStrength": {
     "level": 4,
     "label": {

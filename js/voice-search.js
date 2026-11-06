@@ -36,6 +36,7 @@ export function createVoiceSearch({
       supported:false,
       start:()=>false,
       stop:()=>{},
+      cancel:()=>{},
       isActive:()=>false
     };
   }
@@ -57,17 +58,34 @@ export function createVoiceSearch({
     recognition.interimResults=false;
     recognition.maxAlternatives=1;
 
-    recognition.onstart=()=>setState("listening");
+    const session=recognition;
+    let receivedResult=false;
+    let receivedError=false;
+    recognition.onstart=()=>{if(recognition===session)setState("listening");};
     recognition.onresult=event=>{
-      const transcript=event&&event.results&&event.results[0]&&event.results[0][0]&&event.results[0][0].transcript;
-      if(typeof transcript==="string"&&transcript.trim())onResult(transcript.trim());
+      if(recognition!==session)return;
+      const results=event&&event.results;
+      if(!results)return;
+      for(let i=event.resultIndex||0;i<results.length;i++){
+        const result=results[i];
+        if(result.isFinal===false)continue;
+        const transcript=result[0]&&result[0].transcript;
+        if(typeof transcript==="string"&&transcript.trim()){
+          receivedResult=true;
+          onResult(transcript.trim());
+        }
+      }
     };
     recognition.onerror=event=>{
+      if(recognition!==session)return;
+      receivedError=true;
       onError((event&&event.error)||"unknown");
     };
     recognition.onend=()=>{
+      if(recognition!==session)return;
       recognition=null;
       setState("idle");
+      if(!receivedResult&&!receivedError)onError("no-speech");
     };
 
     try{
@@ -87,10 +105,20 @@ export function createVoiceSearch({
     try{recognition.stop();}catch(error){}
   }
 
+  function cancel(){
+    const previous=recognition;
+    recognition=null;
+    if(!previous)return;
+    previous.onstart=previous.onresult=previous.onerror=previous.onend=null;
+    try{previous.abort();}catch(error){}
+    setState("idle");
+  }
+
   return {
     supported:true,
     start,
     stop,
+    cancel,
     isActive:()=>active
   };
 }

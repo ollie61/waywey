@@ -1,6 +1,19 @@
 // WayWey shared language resources.
 // Keep hospital-specific labels and guides in each hospital data package.
 
+export const PLAYBACK_UI={
+ en:{stop:"Stop",unavailable:"Audio is unavailable in this language. Please read the directions or ask an ambassador."},
+ fr:{stop:"Arrêter",unavailable:"La lecture audio est indisponible dans cette langue. Consultez les indications ou demandez de l’aide à un ambassadeur."},
+ es:{stop:"Detener",unavailable:"El audio no está disponible en este idioma. Lea las indicaciones o pida ayuda a un embajador."},
+ pt:{stop:"Parar",unavailable:"O áudio não está disponível neste idioma. Leia as instruções ou peça ajuda a um embaixador."},
+ ar:{stop:"إيقاف",unavailable:"الصوت غير متاح بهذه اللغة. يرجى قراءة التعليمات أو طلب المساعدة من السفير."},
+ he:{stop:"עצירה",unavailable:"השמע אינו זמין בשפה זו. קראו את ההוראות או בקשו עזרה משגריר."},
+ ru:{stop:"Остановить",unavailable:"Аудио на этом языке недоступно. Прочитайте указания или обратитесь к волонтёру."},
+ vi:{stop:"Dừng",unavailable:"Không có âm thanh bằng ngôn ngữ này. Vui lòng đọc chỉ dẫn hoặc nhờ tình nguyện viên hỗ trợ."},
+ sw:{stop:"Simamisha",unavailable:"Sauti haipatikani katika lugha hii. Tafadhali soma maelekezo au omba msaada kwa balozi."},
+ bg:{stop:"Спиране",unavailable:"Аудиото не е налично на този език. Прочетете указанията или помолете посланик за помощ."}
+};
+
 export const I18N={
 en:{to:"Go to",room:"Room",floor:"Floor",from:"From",stay:"Stay in",elev:"Use the elevators to reach",follow:"Follow the indoor signs through",hk1:"Take the Pavilion H elevators to the 3rd floor.",hk2:"Use the indoor H–K connector to the Pavilion K lobby.",kh1:"From the Pavilion K lobby, use the indoor H–K connector to Pavilion H, 3rd floor.",final:"Then follow signs to",listen:"Listen",back:"Back to Ambassador"},
 fr:{to:"Rendez-vous à",room:"Salle",floor:"Étage",from:"À partir de",stay:"Restez dans",elev:"Prenez les ascenseurs jusqu'à",follow:"Suivez les indications intérieures en passant par",hk1:"Prenez les ascenseurs du pavillon H jusqu'au 3e étage.",hk2:"Empruntez le passage intérieur H–K jusqu'au hall du pavillon K.",kh1:"Depuis le hall du pavillon K, empruntez le passage intérieur H–K jusqu'au pavillon H, 3e étage.",final:"Suivez ensuite les indications vers",listen:"Écouter",back:"Retour à l'ambassadeur"},
@@ -172,6 +185,7 @@ bg:{open:"Отвори външна карта"}
 
 export const VOICE_UI={
 en:{
+ language:"Spoken language",sameLanguage:"Same as interface",
  button:"Voice",stop:"Stop",listening:"Listening…",recognized:"Heard: {text}",
  denied:"Microphone permission was not granted.",noSpeech:"No speech detected. Try again.",
  audio:"No microphone is available.",network:"Speech recognition could not reach the browser service.",
@@ -179,6 +193,7 @@ en:{
  privacy:"Voice search uses your browser’s speech-recognition service. Audio handling is controlled by the browser/provider; WayWey does not store the recording."
 },
 fr:{
+ language:"Langue parlée",sameLanguage:"Comme l’interface",
  button:"Voix",stop:"Arrêter",listening:"Écoute en cours…",recognized:"Entendu : {text}",
  denied:"L’autorisation d’utiliser le microphone n’a pas été accordée.",noSpeech:"Aucune parole détectée. Réessayez.",
  audio:"Aucun microphone n’est disponible.",network:"La reconnaissance vocale n’a pas pu joindre le service du navigateur.",
@@ -186,6 +201,7 @@ fr:{
  privacy:"La recherche vocale utilise le service de reconnaissance vocale de votre navigateur. Le traitement audio dépend du navigateur/fournisseur; WayWey ne conserve pas l’enregistrement."
 },
 he:{
+ language:"שפת הדיבור",sameLanguage:"כמו שפת הממשק",
  button:"קול",stop:"עצירה",listening:"מקשיב…",recognized:"נקלט: {text}",
  denied:"לא ניתנה הרשאה להשתמש במיקרופון.",noSpeech:"לא זוהה דיבור. נסו שוב.",
  audio:"לא נמצא מיקרופון זמין.",network:"זיהוי הדיבור לא הצליח להתחבר לשירות הדפדפן.",
@@ -193,6 +209,7 @@ he:{
  privacy:"החיפוש הקולי משתמש בשירות זיהוי הדיבור של הדפדפן. הטיפול באודיו תלוי בדפדפן/בספק; WayWey אינו שומר את ההקלטה."
 },
 ar:{
+ language:"لغة الكلام",sameLanguage:"مثل لغة الواجهة",
  button:"صوت",stop:"إيقاف",listening:"جارٍ الاستماع…",recognized:"تم سماع: {text}",
  denied:"لم يتم منح إذن استخدام الميكروفون.",noSpeech:"لم يتم اكتشاف كلام. حاول مرة أخرى.",
  audio:"لا يتوفر ميكروفون.",network:"تعذر على التعرف الصوتي الوصول إلى خدمة المتصفح.",

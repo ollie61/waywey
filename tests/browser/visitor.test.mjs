@@ -7,7 +7,8 @@ import {chromium} from 'playwright';
 
 const root=path.resolve(import.meta.dirname,'../..');
 let server,browser,origin;
-let workerRevision=19;
+const baseRevision=Number((await fs.readFile(path.join(root,'service-worker.js'),'utf8')).match(/waywey-cache-(\d+)/)[1]);
+let workerRevision=baseRevision;
 const chum=JSON.parse(await fs.readFile(path.join(root,'hospitals/chum/destinations.json')));
 const destination=chum.find(d=>d.p==='D'&&d.status==='official');
 const mime={'.js':'text/javascript','.json':'application/json','.html':'text/html','.css':'text/css','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
@@ -19,7 +20,7 @@ before(async()=>{
       if((await fs.stat(file)).isDirectory())file=path.join(file,'index.html');
       res.setHeader('Content-Type',mime[path.extname(file)]||'text/plain');
       let content=await fs.readFile(file);
-      if(file===path.join(root,'service-worker.js'))content=Buffer.from(content.toString().replace('waywey-cache-19',`waywey-cache-${workerRevision}`));
+      if(file===path.join(root,'service-worker.js'))content=Buffer.from(content.toString().replace(`waywey-cache-${baseRevision}`,`waywey-cache-${workerRevision}`));
       res.end(content);
     }catch{res.writeHead(404).end();}
   });
@@ -36,6 +37,134 @@ async function contextTest(run){
   page.on('pageerror',e=>errors.push(e.message));
   try{await run(page,context);assert.deepEqual(errors,[]);}finally{await context.close();}
 }
+
+for(const constructorName of ['SpeechRecognition','webkitSpeechRecognition']){
+test(`Voix fills JGH search after recognition with ${constructorName}`,async()=>contextTest(async page=>{
+  await page.addInitScript(name=>{
+    window.recognitionTest={instances:[],aborts:0};
+    const Recognition=class{
+      constructor(){window.recognitionTest.instances.push(this);}
+      start(){this.onstart();}
+      stop(){this.onend();}
+      abort(){window.recognitionTest.aborts++;}
+    };
+    Object.defineProperty(window,'SpeechRecognition',{value:name==='SpeechRecognition'?Recognition:undefined});
+    Object.defineProperty(window,'webkitSpeechRecognition',{value:name==='webkitSpeechRecognition'?Recognition:undefined});
+  },constructorName);
+  await page.goto(origin+'/?hospital=jgh');await ready(page);
+  await page.fill('#q','existing search');await page.click('#voiceSearch');
+  assert.equal(await page.evaluate(()=>window.recognitionTest.instances[0].lang),'fr-CA');
+  await page.evaluate(()=>{
+    Object.defineProperty(document,'hidden',{configurable:true,value:true});
+    document.dispatchEvent(new Event('visibilitychange'));
+    Object.defineProperty(document,'hidden',{configurable:true,value:false});
+    document.dispatchEvent(new Event('visibilitychange'));
+    const r=window.recognitionTest.instances[0];
+    r.onresult({resultIndex:0,results:[Object.assign([{transcript:'cardiologie'}],{isFinal:true})]});
+    r.onend();
+  });
+  assert.equal(await page.evaluate(()=>window.recognitionTest.aborts),0);
+  assert.equal(await page.locator('#q').inputValue(),'cardiologie');
+  assert.ok(await page.locator('#results button').count()>0);
+  assert.match(await page.locator('#voiceStatus').innerText(),/Entendu : cardiologie/);
+  await page.click('#voiceSearch');
+  await page.evaluate(()=>window.recognitionTest.instances.at(-1).onend());
+  assert.match(await page.locator('#voiceStatus').innerText(),/Aucune parole/);
+  assert.equal(await page.locator('#q').inputValue(),'cardiologie');
+  assert.equal(await page.locator('#voiceSearch').getAttribute('aria-pressed'),'false');
+  await page.click('#voiceSearch');
+  await page.evaluate(()=>{const r=window.recognitionTest.instances.at(-1);r.onerror({error:'not-allowed'});r.onend();});
+  assert.match(await page.locator('#voiceStatus').innerText(),/autorisation/);
+  await page.selectOption('#appLang','en');await page.click('#voiceSearch');
+  assert.equal(await page.evaluate(()=>window.recognitionTest.instances.at(-1).lang),'en-CA');
+  await page.evaluate(()=>{const r=window.recognitionTest.instances.at(-1);r.onresult({results:[[{transcript:'cardiology'}]]});r.onend();});
+  assert.equal(await page.locator('#q').inputValue(),'cardiology');
+  await page.selectOption('#appLang','fr');
+  await page.selectOption('#voiceLanguage','en');await page.click('#voiceSearch');
+  assert.equal(await page.evaluate(()=>window.recognitionTest.instances.at(-1).lang),'en-CA');
+  assert.equal(await page.locator('#appLang').inputValue(),'fr');
+  await page.evaluate(()=>{const r=window.recognitionTest.instances.at(-1);r.onresult({results:[[{transcript:'cancer'}]]});r.onend();});
+  assert.equal(await page.locator('#q').inputValue(),'cancer');
+  assert.ok(await page.locator('#results button').count()>0);
+  // Fuzzy ranking must be identical for speech and typing, regardless of
+  // interface or microphone language; never restrict it to literal matches.
+  await page.fill('#q','cancre');
+  const typedFuzzy=await page.locator('#results button').allTextContents();
+  assert.ok(typedFuzzy.length>0);
+  await page.click('#voiceSearch');
+  await page.evaluate(()=>{const r=window.recognitionTest.instances.at(-1);r.onresult({results:[[{transcript:'cancre'}]]});r.onend();});
+  assert.deepEqual(await page.locator('#results button').allTextContents(),typedFuzzy);
+  assert.equal(await page.locator('#q').inputValue(),'cancre');
+  await page.click('#voiceSearch');
+  const aborts=await page.evaluate(()=>window.recognitionTest.aborts);
+  await page.selectOption('#voiceLanguage','fr');
+  assert.equal(await page.evaluate(()=>window.recognitionTest.aborts),aborts+1);
+  await page.click('#voiceSearch');
+  assert.equal(await page.evaluate(()=>window.recognitionTest.instances.at(-1).lang),'fr-CA');
+  await page.evaluate(()=>{const r=window.recognitionTest.instances.at(-1);r.onresult({results:[[{transcript:'cancer'}]]});r.onend();});
+  assert.equal(await page.locator('#q').inputValue(),'cancer');
+  await page.selectOption('#appLang','en');
+  assert.equal(await page.locator('#voiceLanguage').inputValue(),'fr');
+  await page.selectOption('#voiceLanguage','');await page.click('#voiceSearch');
+  assert.equal(await page.evaluate(()=>window.recognitionTest.instances.at(-1).lang),'en-CA');
+}));
+}
+
+test('spoken language control stays hidden without browser recognition',async()=>contextTest(async page=>{
+  await page.addInitScript(()=>{
+    Object.defineProperty(window,'SpeechRecognition',{value:undefined});
+    Object.defineProperty(window,'webkitSpeechRecognition',{value:undefined});
+  });
+  await page.goto(origin+'/?hospital=jgh');await ready(page);
+  assert.equal(await page.locator('#voiceLanguageControl').isVisible(),false);
+  assert.equal(await page.locator('#voiceSearch').isVisible(),false);
+}));
+
+test('visitor playback selects French and stops on language change, Stop, QR and Escape',async()=>contextTest(async page=>{
+  await page.addInitScript(()=>{
+    const voices=[{lang:'en-US',default:true},{lang:'fr-FR'},{lang:'fr-CA'}];
+    window.voiceTest={spoken:[],cancelled:0};
+    Object.defineProperty(window,'SpeechSynthesisUtterance',{value:class{constructor(text){this.text=text;}}});
+    Object.defineProperty(window,'speechSynthesis',{value:{
+      getVoices:()=>voices,addEventListener(){},cancel(){window.voiceTest.cancelled++;},
+      speak(u){window.voiceTest.spoken.push(u);}
+    }});
+  });
+  await page.goto(link({lang:'fr'}));await page.locator('#visitorDialog[open]').waitFor();
+  const steps=await page.locator('#vSteps li').allTextContents();
+  await page.click('#listen');
+  assert.equal(await page.locator('#listen').innerText(),'■ Arrêter');
+  assert.deepEqual(await page.evaluate(()=>{
+    const u=window.voiceTest.spoken[0];return {text:u.text,lang:u.lang,rate:u.rate};
+  }),{text:steps.join(' '),lang:'fr-CA',rate:0.95});
+  await page.selectOption('#visitorLang','en');
+  assert.equal(await page.evaluate(()=>window.voiceTest.cancelled),1);
+  await page.click('#listen');await page.click('#listen');
+  assert.equal(await page.locator('#listen').getAttribute('aria-pressed'),'false');
+  await page.click('#listen');await page.click('#showQr');
+  assert.equal(await page.evaluate(()=>window.voiceTest.cancelled),3);
+  await page.click('#qrBack');await page.click('#listen');await page.keyboard.press('Escape');
+  await page.waitForFunction(()=>window.voiceTest.cancelled===4);
+}));
+
+test('missing French voice and speech errors leave directions visible with feedback',async()=>contextTest(async page=>{
+  await page.addInitScript(()=>{
+    window.voiceTest={voices:[{lang:'en-US'}],spoken:[]};
+    Object.defineProperty(window,'SpeechSynthesisUtterance',{value:class{constructor(text){this.text=text;}}});
+    Object.defineProperty(window,'speechSynthesis',{value:{getVoices:()=>window.voiceTest.voices,
+      addEventListener(){},cancel(){},speak(u){window.voiceTest.spoken.push(u);}}});
+  });
+  await page.goto(link({lang:'fr'}));await page.locator('#visitorDialog[open]').waitFor();
+  const before=await page.locator('#vSteps').innerText();
+  await page.click('#listen');
+  assert.match(await page.locator('#playbackStatus').innerText(),/indisponible/);
+  assert.equal(await page.evaluate(()=>window.voiceTest.spoken.length),0);
+  await page.evaluate(()=>window.voiceTest.voices=[{lang:'fr-CA'}]);
+  await page.click('#listen');await page.evaluate(()=>window.voiceTest.spoken[0].onerror());
+  assert.equal(await page.locator('#listen').getAttribute('aria-pressed'),'false');
+  assert.match(await page.locator('#playbackStatus').innerText(),/indisponible/);
+  assert.equal(await page.locator('#vSteps').innerText(),before);
+}));
 
 test('keyboard search, station changes, QR generation and language changes',async()=>contextTest(async page=>{
   await page.goto(origin+'/?hospital=chum');await ready(page);
@@ -57,6 +186,33 @@ test('keyboard search, station changes, QR generation and language changes',asyn
   await page.click('#qrBack');
   await page.keyboard.press('Escape');
   await page.waitForFunction(()=>document.activeElement.id==='showVisitor');
+}));
+
+test('JGH keeps French visitor directions across reopening, QR handoff and a different destination',async()=>contextTest(async page=>{
+  const jgh=JSON.parse(await fs.readFile(path.join(root,'hospitals/jgh/destinations.json')));
+  const d=jgh.find(d=>d.loc==='3rd floor');
+  await page.goto(origin+'/?hospital=jgh');await ready(page);
+  assert.equal(await page.locator('#appLang').inputValue(),'fr');
+  assert.equal(await page.locator('html').getAttribute('lang'),'fr');
+  await page.fill('#q',d.fr);await page.locator('#results button').first().click();
+  await page.click('#showVisitor');
+  assert.equal(await page.locator('#visitorLang').inputValue(),'fr');
+  assert.match(await page.locator('#vSteps').innerText(),/3e étage/);
+  assert.doesNotMatch(await page.locator('#vSteps').innerText(),/3rd floor/);
+  await page.click('#closeVisitor');await page.selectOption('#appLang','en');
+  await page.click('#showVisitor');
+  assert.equal(await page.locator('#visitorLang').inputValue(),'fr');
+  await page.selectOption('#visitorLang','es');await page.click('#closeVisitor');await page.click('#showVisitor');
+  assert.equal(await page.locator('#visitorLang').inputValue(),'es');
+  await page.selectOption('#visitorLang','fr');await page.click('#showQr');
+  const url=await page.locator('#qrCode').getAttribute('title');
+  assert.equal(new URL(url).searchParams.get('lang'),'fr');
+  await page.goto(url);await page.locator('#visitorDialog[open]').waitFor();
+  await page.click('#closeVisitor');
+  const next=jgh.find(x=>x.id!==d.id&&x.status==='official');
+  await page.fill('#q',next.en);await page.locator('#results button').first().click();
+  await page.click('#showVisitor');
+  assert.equal(await page.locator('#visitorLang').inputValue(),'fr');
 }));
 
 test('permanent and old QR links open the intended department and starting station',async()=>contextTest(async page=>{
@@ -108,7 +264,7 @@ test('first service-worker activation preserves directions and offline links reo
 
 
 test('updates wait for consent and only the requesting tab reloads',async()=>contextTest(async(page,context)=>{
-  workerRevision=19;
+  workerRevision=baseRevision;
   await page.goto(link());await page.locator('#visitorDialog[open]').waitFor();
   await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
   const other=await context.newPage();await other.goto(link());
@@ -116,18 +272,18 @@ test('updates wait for consent and only the requesting tab reloads',async()=>con
   let navigations=0,otherNavigations=0;
   page.on('framenavigated',frame=>{if(frame===page.mainFrame())navigations++;});
   other.on('framenavigated',frame=>{if(frame===other.mainFrame())otherNavigations++;});
-  workerRevision=20;
+  workerRevision=baseRevision+1;
   await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update();});
   await page.waitForFunction(async()=>!!(await navigator.serviceWorker.getRegistration()).waiting);
   assert.equal(navigations,0);
   assert.equal(await page.locator('#visitorDialog').evaluate(d=>d.open),true);
   await page.click('#closeVisitor');await page.click('#applyUpdate');
-  await page.waitForFunction(async()=>(await caches.keys()).includes('waywey-cache-20'));
+  await page.waitForFunction(async revision=>(await caches.keys()).includes(`waywey-cache-${revision}`),workerRevision);
   await page.locator('#visitorDialog[open]').waitFor();
   assert.equal(navigations,1);
   assert.equal(otherNavigations,0);
   assert.equal(await other.locator('#visitorDialog').evaluate(d=>d.open),true);
-  workerRevision=19;
+  workerRevision=baseRevision;
 }));
 
 test('Hebrew hospital interface and Arabic visitor directions retain RTL and verification warnings',async()=>contextTest(async page=>{

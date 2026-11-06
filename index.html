@@ -33,6 +33,14 @@
       <button id="voiceSearch" class="btn secondary voice-btn" type="button" aria-pressed="false" hidden>🎙 Voice</button>
       <button id="clear" class="btn secondary" type="button">Clear</button>
     </div>
+    <div id="voiceLanguageControl" class="row" hidden>
+      <label id="voiceLanguageLabel" for="voiceLanguage">Spoken language</label>
+      <select id="voiceLanguage" class="field" style="max-width:230px">
+        <option value="">Same as interface</option>
+        <option value="fr">Français</option><option value="en">English</option>
+        <option value="he">עברית</option><option value="ar">العربية</option>
+      </select>
+    </div>
     <div id="voiceStatus" class="status voice-status" role="status" aria-live="polite"></div>
     <div id="voicePrivacy" class="voice-privacy" hidden></div>
     <div id="results" class="results" role="region" aria-live="polite" aria-labelledby="searchHeading"></div>
@@ -82,6 +90,7 @@
     <h2 id="vName"></h2>
     <div id="vWhere" class="bigwhere"></div>
     <ol id="vSteps"></ol>
+    <div id="playbackStatus" class="status" role="status" aria-live="polite"></div>
     <div class="visitor-actions">
       <a id="openVisitorMap" class="btn secondary" href="#" target="_blank" rel="noopener noreferrer" hidden>↗ Open outdoor map</a>
       <button id="showQr" class="btn primary" type="button">▦ Show QR</button>

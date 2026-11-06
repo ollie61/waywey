@@ -9,8 +9,10 @@ import {setupDialog,openDialog,closeDialog,announce} from "./js/accessibility.js
 import {outdoorMapUrl} from "./js/outdoor-map.js";
 import {visitorDestinationKey,resolveVisitorDestination} from "./js/visitor-links.js";
 import {createVoiceSearch} from "./js/voice-search.js";
+import {createVoicePlayback} from "./js/voice-playback.js";
+import {PLAYBACK_UI} from "./js/i18n.js";
 
-const APP_VERSION="0.2.0";
+const APP_VERSION="0.3.0";
 let HOSPITAL={};
 let DATA=[];
 let GRAPH={};
@@ -126,6 +128,35 @@ let selectedQueryLang=null;
 let appLang="en";
 let pwaController=null;
 let voiceController=null;
+let playbackController=null;
+let visitorLanguageChosen=false;
+function refreshPlaybackUi(){
+ const lang=$("visitorLang").value,t=PLAYBACK_UI[lang]||PLAYBACK_UI.en;
+ const active=playbackController&&playbackController.isActive();
+ $("listen").textContent=active?"■ "+t.stop:"🔊 "+(I18N[lang]||I18N.en).listen;
+ $("listen").setAttribute("aria-pressed",active?"true":"false");
+}
+function stopPlayback(){
+ playbackController?.stop();
+ $("playbackStatus").textContent="";
+ refreshPlaybackUi();
+}
+function initVoicePlayback(){
+ playbackController=createVoicePlayback({
+   scope:window,
+   onState:refreshPlaybackUi,
+   onError:()=>{
+     const lang=$("visitorLang").value;
+     $("playbackStatus").textContent=(PLAYBACK_UI[lang]||PLAYBACK_UI.en).unavailable;
+   }
+ });
+ $("visitorDialog").addEventListener("close",stopPlayback);
+ $("visitorDialog").addEventListener("cancel",stopPlayback);
+ window.addEventListener("pagehide",()=>{stopPlayback();voiceController?.cancel();});
+ // A native speech/permission surface may temporarily hide the page. Keep
+ // recognition alive so its result can still populate search on return.
+ document.addEventListener("visibilitychange",()=>{if(document.hidden)stopPlayback();});
+}
 function pwaLabels(){return PWA_UI[appLang]||PWA_UI.en;}
 function ensurePwa(){
   if(!pwaController)pwaController=initPwa({labels:pwaLabels});
@@ -155,8 +186,11 @@ function refreshVoiceUi(){
   const btn=$("voiceSearch"),privacy=$("voicePrivacy");
   if(!btn||!privacy)return;
   if(!voiceController||!voiceController.supported){
-    btn.hidden=true;privacy.hidden=true;return;
+    btn.hidden=true;privacy.hidden=true;$("voiceLanguageControl").hidden=true;return;
   }
+  $("voiceLanguageControl").hidden=false;
+  $("voiceLanguageLabel").textContent=voiceText().language;
+  $("voiceLanguage").options[0].textContent=voiceText().sameLanguage;
   privacy.hidden=false;
   privacy.textContent=voiceText().privacy;
   renderVoiceButton(voiceController.isActive()?"listening":"idle");
@@ -166,7 +200,7 @@ function initVoiceSearch(){
   const btn=$("voiceSearch"),status=$("voiceStatus");
   if(!btn||!status)return;
   voiceController=createVoiceSearch({
-    getLanguage:()=>appLang,
+    getLanguage:()=>$("voiceLanguage").value||appLang,
     onState:state=>{
       renderVoiceButton(state);
       if(state==="starting"||state==="listening"){
@@ -189,10 +223,15 @@ function initVoiceSearch(){
     }
   });
   refreshVoiceUi();
+  $("voiceLanguage").onchange=()=>{
+    voiceController.cancel();
+    status.textContent="";
+  };
   btn.onclick=()=>{
     if(!voiceController||!voiceController.supported)return;
     if(voiceController.isActive())voiceController.stop();
     else{
+      stopPlayback();
       status.textContent="";
       voiceController.start();
     }
@@ -343,7 +382,8 @@ function renderQuickGuide(){
 }
 function openQuickGuide(){renderQuickGuide();openDialog($("guideDialog"),{initialFocus:".guide-lang-btn, #closeGuide"});}
 function setAppLanguage(lang){
- if(voiceController&&voiceController.isActive())voiceController.stop();
+ stopPlayback();
+ voiceController?.cancel();
  const allowed=hospitalLanguages();
  appLang=allowed.includes(lang)?lang:(HOSPITAL.defaultAppLanguage&&allowed.includes(HOSPITAL.defaultAppLanguage)?HOSPITAL.defaultAppLanguage:allowed[0]||"en");
  document.documentElement.lang=appLang;
@@ -463,6 +503,7 @@ function renderSteps(id,steps){
  $(id).replaceChildren(...items);
 }
 function choose(d,scroll=true,queryLang=null){
+ stopPlayback();
  pendingVisitor=null;$("visitorLinkNotice").hidden=true;selected=d;if(queryLang)selectedQueryLang=queryLang;const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
  $("destName").textContent=primary+(secondary&&secondary!==primary?" / "+secondary:"");$("destWhere").textContent=displayWhere(d);
  $("pills").innerHTML=(d.p?"<span class='pill'>"+pavilionFor(d.p,appLang)+"</span>":"")+(d.loc?"<span class='pill'>"+d.loc+"</span>":"")+(d.status==="verify"?"<span class='pill verify-pill'>⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"");
@@ -522,11 +563,16 @@ async function shareVisitorDirections(){
 }
 function showVisitor(){
  if(!selected)return;
- const preferred=HOSPITAL.defaultVisitorLanguage||HOSPITAL.defaultAppLanguage||"en";
- if([...$("visitorLang").options].some(o=>o.value===preferred))$("visitorLang").value=preferred;
+ voiceController?.cancel();
+ if(!visitorLanguageChosen){
+   const preferred=appLang||HOSPITAL.defaultVisitorLanguage||HOSPITAL.defaultAppLanguage||"en";
+   if([...$("visitorLang").options].some(o=>o.value===preferred))$("visitorLang").value=preferred;
+   visitorLanguageChosen=true;
+ }
  openDialog($("visitorDialog"),{initialFocus:"#visitorLang"});renderVisitor();
 }
 function renderVisitor(){
+ stopPlayback();
  const lang=$("visitorLang").value,t=I18N[lang]||I18N.en,p=$("visitorPanel");
  p.lang=lang;
  p.dir=(lang==="ar"||lang==="he")?"rtl":"ltr";
@@ -570,6 +616,7 @@ async function bootstrap(){
 
  ["guideDialog","visitorDialog","qrDialog"].forEach(id=>setupDialog($(id)));
  initVoiceSearch();
+ initVoicePlayback();
  $("appLang").onchange=()=>setAppLanguage($("appLang").value);
  $("quickGuideBtn").onclick=openQuickGuide;
  $("closeGuide").onclick=()=>closeDialog($("guideDialog"));
@@ -577,14 +624,20 @@ async function bootstrap(){
  $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
  $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");selected=null;selectedQueryLang=null;$("q").focus();window.scrollTo({top:0,behavior:motionBehavior()})};
  $("showVisitor").onclick=showVisitor;
- $("visitorLang").onchange=renderVisitor;
+ $("visitorLang").onchange=()=>{visitorLanguageChosen=true;renderVisitor();};
  $("showQr").onclick=showVisitorQr;
  $("shareVisitor").onclick=shareVisitorDirections;
  $("closeQr").onclick=closeVisitorQr;
  $("qrBack").onclick=closeVisitorQr;
  $("closeVisitor").onclick=()=>closeDialog($("visitorDialog"));
  $("back").onclick=()=>closeDialog($("visitorDialog"));
- $("listen").onclick=()=>{if(!selected||!("speechSynthesis" in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(localizedSteps(selected,$("visitorLang").value).join(" "));u.lang=$("visitorLang").value;u.rate=0.78;u.pitch=1;speechSynthesis.speak(u)};
+ $("listen").onclick=()=>{
+   if(!selected)return;
+   if(playbackController.isActive()){stopPlayback();return;}
+   voiceController?.cancel();
+   $("playbackStatus").textContent="";
+   playbackController.speak(localizedSteps(selected,$("visitorLang").value).join(" "),$("visitorLang").value);
+ };
 
  let saved=null,savedLang=null;
  try{saved=localStorage.getItem(storageKey("station"));savedLang=localStorage.getItem(storageKey("appLang"))}catch(e){}
@@ -604,7 +657,9 @@ async function bootstrap(){
  const p=urlParams;
  if(p.get("visitor")==="1"){
    const from=p.get("from"),lang=p.get("lang")||"en",dest=p.get("dest");
-   if([...$("visitorLang").options].some(o=>o.value===lang))$("visitorLang").value=lang;
+   if([...$("visitorLang").options].some(o=>o.value===lang)){
+     $("visitorLang").value=lang;visitorLanguageChosen=true;
+   }
    const d=resolveVisitorDestination(DATA,dest);
    const validFrom=from&&[...$("station").options].some(o=>o.value===from);
    if(!d)renderVisitorLinkNotice("missing",$("visitorLang").value);

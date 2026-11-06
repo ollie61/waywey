@@ -4,7 +4,11 @@
 
 WayWey is a browser-first, multilingual hospital wayfinding platform designed for ambassador-assisted navigation. One shared application engine can support many hospitals while each hospital keeps its own destinations, languages, source history and validated routing data.
 
-Current development milestone: **v0.2.0**.
+Current release: **v0.3.0**.
+
+Version 0.3.0 improves French visitor speech, preserves visitor language choices,
+defaults JGH to French, and separates spoken search language from interface
+language. See [release notes and rollback](docs/MILESTONE-0.3.0.md).
 
 ## What WayWey does
 
