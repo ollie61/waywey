@@ -13,7 +13,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-48164cceeb425277",
+    "legacySlugs": [
+      "reception-admission-archives-d-01",
+      "reception-admission-archives"
+    ]
   },
   {
     "en": "Therapeutic Apheresis",
@@ -26,7 +31,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-70b8016d56d75b05",
+    "legacySlugs": [
+      "therapeutic-apheresis-d-14",
+      "therapeutic-apheresis"
+    ]
   },
   {
     "en": "Audiology",
@@ -40,7 +50,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-b4b059af1a06595a",
+    "legacySlugs": [
+      "audiology-c-09",
+      "audiology"
+    ]
   },
   {
     "en": "Cardiology and Cardiac Surgery — Clinic",
@@ -56,7 +71,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-c78b72b1eae65ed2",
+    "legacySlugs": [
+      "cardiology-and-cardiac-surgery-clinic-c-08",
+      "cardiology-and-cardiac-surgery-clinic"
+    ]
   },
   {
     "en": "Preventive Cardiology Centre",
@@ -70,7 +90,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-44d9038ab3675c6f",
+    "legacySlugs": [
+      "preventive-cardiology-centre-c-08",
+      "preventive-cardiology-centre"
+    ]
   },
   {
     "en": "Test Centre / Blood Collection",
@@ -89,7 +114,12 @@
     ],
     "status": "official",
     "note": "Official CHUM Test Centre page: Pavilion D, 1st floor, D.01.4100.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-82c2620cc8b95e9c",
+    "legacySlugs": [
+      "test-centre-blood-collection-d-01-4100",
+      "test-centre-blood-collection"
+    ]
   },
   {
     "en": "Integrated Cancer Centre (CICC)",
@@ -106,7 +136,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-0eaa19e4e8345b6d",
+    "legacySlugs": [
+      "integrated-cancer-centre-cicc-c-14-15",
+      "integrated-cancer-centre-cicc"
+    ]
   },
   {
     "en": "Day Surgery",
@@ -120,7 +155,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-aee187720d085653",
+    "legacySlugs": [
+      "day-surgery-c-04",
+      "day-surgery"
+    ]
   },
   {
     "en": "Oncologic, Digestive, Hepatobiliary and Pancreatic Surgery",
@@ -136,7 +176,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-40a8bb5d282d5f6c",
+    "legacySlugs": [
+      "oncologic-digestive-hepatobiliary-and-pancreatic-surgery-c-12",
+      "oncologic-digestive-hepatobiliary-and-pancreatic-surgery"
+    ]
   },
   {
     "en": "Thoracic Surgery — Clinic",
@@ -150,7 +195,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-02694d86409e5339",
+    "legacySlugs": [
+      "thoracic-surgery-clinic-c-03",
+      "thoracic-surgery-clinic"
+    ]
   },
   {
     "en": "Vascular Surgery — Clinic",
@@ -163,7 +213,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-d0faf08b2c215fe1",
+    "legacySlugs": [
+      "vascular-surgery-clinic-c-03",
+      "vascular-surgery-clinic"
+    ]
   },
   {
     "en": "Pain Clinic",
@@ -178,7 +233,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-7077980788a25232",
+    "legacySlugs": [
+      "pain-clinic-c-05",
+      "pain-clinic"
+    ]
   },
   {
     "en": "Dental Clinic",
@@ -193,7 +253,12 @@
     ],
     "status": "official",
     "note": "Official CHUM Dental Clinic page: Pavilion C, 3rd floor, C0362.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-89a187b5abda56f0",
+    "legacySlugs": [
+      "dental-clinic-c0362",
+      "dental-clinic"
+    ]
   },
   {
     "en": "Dermatology Clinic",
@@ -208,7 +273,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-2dd57d98e42c5328",
+    "legacySlugs": [
+      "dermatology-clinic-d-02",
+      "dermatology-clinic"
+    ]
   },
   {
     "en": "Preoperative Clinic",
@@ -223,7 +293,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-087bfa43d4795019",
+    "legacySlugs": [
+      "preoperative-clinic-d-01",
+      "preoperative-clinic"
+    ]
   },
   {
     "en": "Dialysis",
@@ -237,7 +312,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-2b81a51867bd5f48",
+    "legacySlugs": [
+      "dialysis-c-10",
+      "dialysis"
+    ]
   },
   {
     "en": "Cardiac Electrophysiology",
@@ -251,7 +331,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-24e5f3887ae85608",
+    "legacySlugs": [
+      "cardiac-electrophysiology-c-08",
+      "cardiac-electrophysiology"
+    ]
   },
   {
     "en": "Neurological Electrophysiology",
@@ -266,7 +351,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-f565ca8c73bc550c",
+    "legacySlugs": [
+      "neurological-electrophysiology-c-13",
+      "neurological-electrophysiology"
+    ]
   },
   {
     "en": "Endocrinology",
@@ -281,7 +371,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-ff2d36d8d0775829",
+    "legacySlugs": [
+      "endocrinology-c-10",
+      "endocrinology"
+    ]
   },
   {
     "en": "Endoscopy",
@@ -295,7 +390,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-9e9099f0421b53c7",
+    "legacySlugs": [
+      "endoscopy-d-02",
+      "endoscopy"
+    ]
   },
   {
     "en": "Occupational Therapy",
@@ -309,7 +409,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-8f8908da5f485277",
+    "legacySlugs": [
+      "occupational-therapy-c-05",
+      "occupational-therapy"
+    ]
   },
   {
     "en": "Fertility Clinic",
@@ -324,7 +429,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-d877c6e95428547d",
+    "legacySlugs": [
+      "fertility-clinic-r-07",
+      "fertility-clinic"
+    ]
   },
   {
     "en": "Cystic Fibrosis",
@@ -338,7 +448,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-84a90a6db65c5daa",
+    "legacySlugs": [
+      "cystic-fibrosis-c-12",
+      "cystic-fibrosis"
+    ]
   },
   {
     "en": "Gastroenterology — Clinic",
@@ -353,7 +468,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-c5042449e23e5acd",
+    "legacySlugs": [
+      "gastroenterology-clinic-c-02",
+      "gastroenterology-clinic"
+    ]
   },
   {
     "en": "Geriatrics — Clinic",
@@ -367,7 +487,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-7b98ca30b0dc593b",
+    "legacySlugs": [
+      "geriatrics-clinic-c-12",
+      "geriatrics-clinic"
+    ]
   },
   {
     "en": "Gynecology and Colposcopy",
@@ -383,7 +508,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-4e7f3f7c52f2553e",
+    "legacySlugs": [
+      "gynecology-and-colposcopy-c-02",
+      "gynecology-and-colposcopy"
+    ]
   },
   {
     "en": "Hemodynamics and Invasive Cardiac Electrophysiology",
@@ -398,7 +528,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-5297a3fdc3fe59d4",
+    "legacySlugs": [
+      "hemodynamics-and-invasive-cardiac-electrophysiology-d-08",
+      "hemodynamics-and-invasive-cardiac-electrophysiology"
+    ]
   },
   {
     "en": "Immunology / Allergy",
@@ -413,7 +548,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-03017ada1f56598d",
+    "legacySlugs": [
+      "immunology-allergy-c-04",
+      "immunology-allergy"
+    ]
   },
   {
     "en": "Chronic Viral Infectious Diseases",
@@ -430,7 +570,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-c860e7f549325219",
+    "legacySlugs": [
+      "chronic-viral-infectious-diseases-c-11",
+      "chronic-viral-infectious-diseases"
+    ]
   },
   {
     "en": "Sleep Laboratory",
@@ -446,7 +591,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-5e10cc77a59f5155",
+    "legacySlugs": [
+      "sleep-laboratory-c-12",
+      "sleep-laboratory"
+    ]
   },
   {
     "en": "Day Medicine",
@@ -459,7 +609,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-577115ddda2e502e",
+    "legacySlugs": [
+      "day-medicine-c-04",
+      "day-medicine"
+    ]
   },
   {
     "en": "Addiction Medicine",
@@ -474,7 +629,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-d881e9e8123e5cd9",
+    "legacySlugs": [
+      "addiction-medicine-c-11",
+      "addiction-medicine"
+    ]
   },
   {
     "en": "Occupational and Environmental Medicine",
@@ -488,7 +648,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-fe233a0e5eff5d0e",
+    "legacySlugs": [
+      "occupational-and-environmental-medicine-c-12",
+      "occupational-and-environmental-medicine"
+    ]
   },
   {
     "en": "Gene Medicine Clinic",
@@ -502,7 +667,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-28e0394937f85595",
+    "legacySlugs": [
+      "gene-medicine-clinic-c-05",
+      "gene-medicine-clinic"
+    ]
   },
   {
     "en": "Internal Medicine and Infectious Diseases — Clinic",
@@ -517,7 +687,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-34929761b1cc55a6",
+    "legacySlugs": [
+      "internal-medicine-and-infectious-diseases-clinic-c-03",
+      "internal-medicine-and-infectious-diseases-clinic"
+    ]
   },
   {
     "en": "Nuclear Medicine",
@@ -532,7 +707,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-9c4f75f7859c5d4c",
+    "legacySlugs": [
+      "nuclear-medicine-c-08",
+      "nuclear-medicine"
+    ]
   },
   {
     "en": "Nephrology — Clinic",
@@ -547,7 +727,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-5819363964bf5749",
+    "legacySlugs": [
+      "nephrology-clinic-c-10",
+      "nephrology-clinic"
+    ]
   },
   {
     "en": "Neurology and Neurosurgery — Clinic",
@@ -563,7 +748,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-426f1b64b15b5c3a",
+    "legacySlugs": [
+      "neurology-and-neurosurgery-clinic-c-13",
+      "neurology-and-neurosurgery-clinic"
+    ]
   },
   {
     "en": "Obstetrics",
@@ -578,7 +768,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-fffee2e86e3f5d2b",
+    "legacySlugs": [
+      "obstetrics-d-09",
+      "obstetrics"
+    ]
   },
   {
     "en": "Ophthalmology",
@@ -593,7 +788,12 @@
     ],
     "status": "official",
     "note": "Official CHUM Ophthalmology page: Pavilion D, 1st floor, D0120.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-88473b518b865e40",
+    "legacySlugs": [
+      "ophthalmology-d0120",
+      "ophthalmology"
+    ]
   },
   {
     "en": "ENT / Otolaryngology — Clinic",
@@ -608,7 +808,12 @@
     ],
     "status": "official",
     "note": "Official CHUM ENT page: Pavilion C, 9th floor, C0961.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-38d3b2a4238a52cc",
+    "legacySlugs": [
+      "ent-otolaryngology-clinic-c0961",
+      "ent-otolaryngology-clinic"
+    ]
   },
   {
     "en": "Orthopedics — Clinic",
@@ -623,7 +828,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-eec2bbc53524539a",
+    "legacySlugs": [
+      "orthopedics-clinic-c-03",
+      "orthopedics-clinic"
+    ]
   },
   {
     "en": "Speech Therapy and SAL-PAC",
@@ -637,7 +847,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-281085e0a4cd5774",
+    "legacySlugs": [
+      "speech-therapy-and-sal-pac-c-09",
+      "speech-therapy-and-sal-pac"
+    ]
   },
   {
     "en": "Respiratory Physiology",
@@ -652,7 +867,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-8825be0d3c5956a0",
+    "legacySlugs": [
+      "respiratory-physiology-c-12",
+      "respiratory-physiology"
+    ]
   },
   {
     "en": "Physiotherapy",
@@ -667,7 +887,12 @@
     ],
     "status": "official",
     "note": "Official CHUM Physiotherapy page: Pavilion C, 5th floor, C0562.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-0727ea15dd525d2b",
+    "legacySlugs": [
+      "physiotherapy-c0562",
+      "physiotherapy"
+    ]
   },
   {
     "en": "Plastic Surgery, Burn Centre and Hand Centre — Clinic",
@@ -684,7 +909,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-57ca5d8db38455dc",
+    "legacySlugs": [
+      "plastic-surgery-burn-centre-and-hand-centre-clinic-c-05",
+      "plastic-surgery-burn-centre-and-hand-centre-clinic"
+    ]
   },
   {
     "en": "Pulmonology — Clinic",
@@ -700,7 +930,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-6d556fd1dfe3556a",
+    "legacySlugs": [
+      "pulmonology-clinic-c-12",
+      "pulmonology-clinic"
+    ]
   },
   {
     "en": "Post-Exposure Prophylaxis (PEP)",
@@ -715,7 +950,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-6ce018166f9d54d5",
+    "legacySlugs": [
+      "post-exposure-prophylaxis-pep-c-12",
+      "post-exposure-prophylaxis-pep"
+    ]
   },
   {
     "en": "Radiology",
@@ -739,7 +979,12 @@
     ],
     "status": "official",
     "note": "Official CHUM Radiology page: Pavilion D, 3rd floor, D0350. CHUM instructs visitors to access Radiology through Pavilion C because Pavilion D elevators do not provide access.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-d862ce8b822b5695",
+    "legacySlugs": [
+      "radiology-d0350",
+      "radiology"
+    ]
   },
   {
     "en": "Radiation Oncology",
@@ -755,7 +1000,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-7c4e37ecc6935702",
+    "legacySlugs": [
+      "radiation-oncology-c-s3-s4",
+      "radiation-oncology"
+    ]
   },
   {
     "en": "Rheumatology",
@@ -770,7 +1020,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-5790c4a35f125e07",
+    "legacySlugs": [
+      "rheumatology-c-05",
+      "rheumatology"
+    ]
   },
   {
     "en": "Mental Health and Concurrent Disorders — Clinic",
@@ -786,7 +1041,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-06c6d87cf7835203",
+    "legacySlugs": [
+      "mental-health-and-concurrent-disorders-clinic-c-11",
+      "mental-health-and-concurrent-disorders-clinic"
+    ]
   },
   {
     "en": "Stomatology and Maxillofacial Prosthodontics",
@@ -801,7 +1061,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-dfdae477870654ae",
+    "legacySlugs": [
+      "stomatology-and-maxillofacial-prosthodontics-c-03",
+      "stomatology-and-maxillofacial-prosthodontics"
+    ]
   },
   {
     "en": "Stomatherapy",
@@ -816,7 +1081,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-928143719c745fb7",
+    "legacySlugs": [
+      "stomatherapy-c-12",
+      "stomatherapy"
+    ]
   },
   {
     "en": "Transplantation and Hepatology — Clinic",
@@ -832,7 +1102,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-6c0e289242af51ed",
+    "legacySlugs": [
+      "transplantation-and-hepatology-clinic-c-04",
+      "transplantation-and-hepatology-clinic"
+    ]
   },
   {
     "en": "Movement Disorders",
@@ -847,7 +1122,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-4b08c3a788115749",
+    "legacySlugs": [
+      "movement-disorders-c-13",
+      "movement-disorders"
+    ]
   },
   {
     "en": "Urology — Clinic",
@@ -862,7 +1142,12 @@
     ],
     "status": "official",
     "note": "Official CHUM Urology page: Pavilion C, 2nd floor, C0261.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-befe71e50412508a",
+    "legacySlugs": [
+      "urology-clinic-c0261",
+      "urology-clinic"
+    ]
   },
   {
     "en": "Emergency Department",
@@ -878,7 +1163,12 @@
     ],
     "status": "official",
     "note": "Official CHUM Emergency page: Pavilion D, ground floor, RC20; emergency entrance at 1001 rue Sanguinet.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-dede58c9cf8b5a12",
+    "legacySlugs": [
+      "emergency-department-rc20",
+      "emergency-department"
+    ]
   },
   {
     "en": "Dining Areas",
@@ -892,7 +1182,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-ac7c43eee4405697",
+    "legacySlugs": [
+      "dining-areas-d-01-02",
+      "dining-areas"
+    ]
   },
   {
     "en": "Volunteer, Recreation and Leisure Service",
@@ -907,7 +1202,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-74c5a722b09858c4",
+    "legacySlugs": [
+      "volunteer-recreation-and-leisure-service-d-01",
+      "volunteer-recreation-and-leisure-service"
+    ]
   },
   {
     "en": "Library",
@@ -921,7 +1221,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 guide: Pavilion B, 1st floor, B.01.8006.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-c6e141251c365e70",
+    "legacySlugs": [
+      "library-b-01-8006",
+      "library"
+    ]
   },
   {
     "en": "Access Management Office",
@@ -935,7 +1240,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-d5e01fbfe1a55b6a",
+    "legacySlugs": [
+      "access-management-office-c-01-6123",
+      "access-management-office"
+    ]
   },
   {
     "en": "Parking Office",
@@ -949,7 +1259,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-9546f1cf35b85fe4",
+    "legacySlugs": [
+      "parking-office-c-01",
+      "parking-office"
+    ]
   },
   {
     "en": "Cafeteria",
@@ -964,7 +1279,12 @@
     ],
     "status": "official",
     "note": "Official CHUM directory: Pavilion D, 2nd floor, D0240.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-557e3dd4652a5fa8",
+    "legacySlugs": [
+      "cafeteria-d0240",
+      "cafeteria"
+    ]
   },
   {
     "en": "Users' Committee",
@@ -977,7 +1297,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-43c3333c4bdd53fa",
+    "legacySlugs": [
+      "users-committee-c-01",
+      "users-committee"
+    ]
   },
   {
     "en": "Service Quality and Complaints Commissioner",
@@ -992,7 +1317,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-7057507bf35c5406",
+    "legacySlugs": [
+      "service-quality-and-complaints-commissioner-c-01",
+      "service-quality-and-complaints-commissioner"
+    ]
   },
   {
     "en": "Patient Accounts",
@@ -1007,7 +1337,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-e9edeb0b9f4d585e",
+    "legacySlugs": [
+      "patient-accounts-d-01",
+      "patient-accounts"
+    ]
   },
   {
     "en": "Main Entrance",
@@ -1021,7 +1356,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-12d8c6df68895f03",
+    "legacySlugs": [
+      "main-entrance-c-01",
+      "main-entrance"
+    ]
   },
   {
     "en": "CHUM Foundation",
@@ -1034,7 +1374,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-f0fcebf26add502a",
+    "legacySlugs": [
+      "chum-foundation-d-01",
+      "chum-foundation"
+    ]
   },
   {
     "en": "Pharmacy",
@@ -1048,7 +1393,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 guide: Pavilion D, ground floor, DRC3213.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-98fe67af0edb5a22",
+    "legacySlugs": [
+      "pharmacy-drc3213",
+      "pharmacy"
+    ]
   },
   {
     "en": "Restaurants and Shops",
@@ -1063,7 +1413,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-533b995a2ed85881",
+    "legacySlugs": [
+      "restaurants-and-shops-c-01-d-rc-01",
+      "restaurants-and-shops"
+    ]
   },
   {
     "en": "Breastfeeding Room",
@@ -1077,7 +1432,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-9deed5043b5c5db6",
+    "legacySlugs": [
+      "breastfeeding-room-d-02",
+      "breastfeeding-room"
+    ]
   },
   {
     "en": "Arrival and Departure Lounge",
@@ -1092,7 +1452,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-69debb0977f15934",
+    "legacySlugs": [
+      "arrival-and-departure-lounge-c-01",
+      "arrival-and-departure-lounge"
+    ]
   },
   {
     "en": "Security",
@@ -1105,7 +1470,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-384b3fc4fb9a58db",
+    "legacySlugs": [
+      "security-c-d-01",
+      "security"
+    ]
   },
   {
     "en": "Public Parking Access",
@@ -1119,7 +1489,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-f73d3864461e5d34",
+    "legacySlugs": [
+      "public-parking-access-acces-c-d-01",
+      "public-parking-access"
+    ]
   },
   {
     "en": "Reflection / Prayer Room",
@@ -1135,7 +1510,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-f01b09e4e1d651d0",
+    "legacySlugs": [
+      "reflection-prayer-room-d-02",
+      "reflection-prayer-room"
+    ]
   },
   {
     "en": "Cultural Display",
@@ -1148,7 +1528,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-7582ddc5ce065066",
+    "legacySlugs": [
+      "cultural-display-b-01",
+      "cultural-display"
+    ]
   },
   {
     "en": "Cardiology — Inpatient Unit",
@@ -1161,7 +1546,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-792b792252465d8f",
+    "legacySlugs": [
+      "cardiology-inpatient-unit-d17-nord",
+      "cardiology-inpatient-unit"
+    ]
   },
   {
     "en": "Cardiac Surgery — Inpatient Unit",
@@ -1174,7 +1564,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-a0cdb4e1c9905463",
+    "legacySlugs": [
+      "cardiac-surgery-inpatient-unit-d17-nord-sud",
+      "cardiac-surgery-inpatient-unit"
+    ]
   },
   {
     "en": "Digestive Surgery — Inpatient Unit",
@@ -1187,7 +1582,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-29e2a53e6bed508b",
+    "legacySlugs": [
+      "digestive-surgery-inpatient-unit-d11-sud",
+      "digestive-surgery-inpatient-unit"
+    ]
   },
   {
     "en": "Hepatobiliary Surgery — Inpatient Unit",
@@ -1199,7 +1599,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-9ded6dbdb34d5048",
+    "legacySlugs": [
+      "hepatobiliary-surgery-inpatient-unit-d14-sud",
+      "hepatobiliary-surgery-inpatient-unit"
+    ]
   },
   {
     "en": "Oncologic Surgery — Inpatient Unit",
@@ -1212,7 +1617,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-b40e9844698f5a2e",
+    "legacySlugs": [
+      "oncologic-surgery-inpatient-unit-d14-nord",
+      "oncologic-surgery-inpatient-unit"
+    ]
   },
   {
     "en": "Plastic Surgery — Inpatient Unit",
@@ -1225,7 +1635,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-2fce330504945d4e",
+    "legacySlugs": [
+      "plastic-surgery-inpatient-unit-d15-sud",
+      "plastic-surgery-inpatient-unit"
+    ]
   },
   {
     "en": "Thoracic Surgery — Inpatient Unit",
@@ -1237,7 +1652,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-2cf68ef589405c3f",
+    "legacySlugs": [
+      "thoracic-surgery-inpatient-unit-d15-sud",
+      "thoracic-surgery-inpatient-unit"
+    ]
   },
   {
     "en": "Vascular Surgery — Inpatient Unit",
@@ -1249,7 +1669,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-f12bb7d89f385d2d",
+    "legacySlugs": [
+      "vascular-surgery-inpatient-unit-d17-sud",
+      "vascular-surgery-inpatient-unit"
+    ]
   },
   {
     "en": "Gastroenterology — Inpatient Unit",
@@ -1262,7 +1687,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-d606bc9f45c15149",
+    "legacySlugs": [
+      "gastroenterology-inpatient-unit-d12-nord",
+      "gastroenterology-inpatient-unit"
+    ]
   },
   {
     "en": "Geriatrics — Inpatient Unit",
@@ -1275,7 +1705,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-e40e26b9c2c25b1e",
+    "legacySlugs": [
+      "geriatrics-inpatient-unit-d12-nord",
+      "geriatrics-inpatient-unit"
+    ]
   },
   {
     "en": "Burn Unit",
@@ -1289,7 +1724,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-ed4e9d0540e358a0",
+    "legacySlugs": [
+      "burn-unit-d09-nord",
+      "burn-unit"
+    ]
   },
   {
     "en": "Gynecology — Inpatient Unit",
@@ -1302,7 +1742,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-60ac15fc672050f5",
+    "legacySlugs": [
+      "gynecology-inpatient-unit-d12-sud",
+      "gynecology-inpatient-unit"
+    ]
   },
   {
     "en": "Gynecologic Oncology — Inpatient Unit",
@@ -1315,7 +1760,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-3eb21be1b6945d86",
+    "legacySlugs": [
+      "gynecologic-oncology-inpatient-unit-d12-sud",
+      "gynecologic-oncology-inpatient-unit"
+    ]
   },
   {
     "en": "Hematology-Oncology — Inpatient Unit",
@@ -1328,7 +1778,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-297987f3a1dc561d",
+    "legacySlugs": [
+      "hematology-oncology-inpatient-unit-d14-nord",
+      "hematology-oncology-inpatient-unit"
+    ]
   },
   {
     "en": "Hepatology — Inpatient Unit",
@@ -1341,7 +1796,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-77b33c0d75065014",
+    "legacySlugs": [
+      "hepatology-inpatient-unit-d18-sud",
+      "hepatology-inpatient-unit"
+    ]
   },
   {
     "en": "Epilepsy Laboratory — Inpatient",
@@ -1354,7 +1814,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-fe7bce63052f5152",
+    "legacySlugs": [
+      "epilepsy-laboratory-inpatient-d13-nord",
+      "epilepsy-laboratory-inpatient"
+    ]
   },
   {
     "en": "Addiction Medicine — Inpatient Unit",
@@ -1367,7 +1832,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-cad1874d02b65fbc",
+    "legacySlugs": [
+      "addiction-medicine-inpatient-unit-d11-nord",
+      "addiction-medicine-inpatient-unit"
+    ]
   },
   {
     "en": "Internal Medicine — Inpatient Unit",
@@ -1380,7 +1850,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-77ed65362f895d27",
+    "legacySlugs": [
+      "internal-medicine-inpatient-unit-d18-nord-d19-nord",
+      "internal-medicine-inpatient-unit"
+    ]
   },
   {
     "en": "Birth Centre / Mother-Child Unit",
@@ -1401,7 +1876,12 @@
     ],
     "status": "official",
     "note": "Official CHUM Birth Centre page: Pavilion D, 9th floor South. Patients in labour are directed to the parking entrance at 1115 rue Sanguinet.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-37a4c7a558a851b6",
+    "legacySlugs": [
+      "birth-centre-mother-child-unit-d09-sud",
+      "birth-centre-mother-child-unit"
+    ]
   },
   {
     "en": "Neonatology / NICU",
@@ -1416,7 +1896,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-d50e4e7b66115959",
+    "legacySlugs": [
+      "neonatology-nicu-d09-sud",
+      "neonatology-nicu"
+    ]
   },
   {
     "en": "Nephrology — Inpatient Unit",
@@ -1429,7 +1914,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-3d87a3744bbc58a7",
+    "legacySlugs": [
+      "nephrology-inpatient-unit-d18-sud",
+      "nephrology-inpatient-unit"
+    ]
   },
   {
     "en": "Neurosurgery — Inpatient Unit",
@@ -1442,7 +1932,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-2971d07b7bab55dd",
+    "legacySlugs": [
+      "neurosurgery-inpatient-unit-d13-sud",
+      "neurosurgery-inpatient-unit"
+    ]
   },
   {
     "en": "Neurology — Inpatient Unit",
@@ -1455,7 +1950,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-1e897da5ba0b5d6e",
+    "legacySlugs": [
+      "neurology-inpatient-unit-d13-nord",
+      "neurology-inpatient-unit"
+    ]
   },
   {
     "en": "ENT — Inpatient Unit",
@@ -1468,7 +1968,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-6d5104f8dbc3545e",
+    "legacySlugs": [
+      "ent-inpatient-unit-d16-sud",
+      "ent-inpatient-unit"
+    ]
   },
   {
     "en": "Orthopedics — Inpatient Unit",
@@ -1481,7 +1986,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-59342e1c632250af",
+    "legacySlugs": [
+      "orthopedics-inpatient-unit-d16-nord",
+      "orthopedics-inpatient-unit"
+    ]
   },
   {
     "en": "Pulmonology — Inpatient Unit",
@@ -1494,7 +2004,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-bf2f399078fa5b41",
+    "legacySlugs": [
+      "pulmonology-inpatient-unit-d19-sud",
+      "pulmonology-inpatient-unit"
+    ]
   },
   {
     "en": "Psychiatry — Inpatient Unit",
@@ -1507,7 +2022,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-3943baa2d55d50eb",
+    "legacySlugs": [
+      "psychiatry-inpatient-unit-d11-nord",
+      "psychiatry-inpatient-unit"
+    ]
   },
   {
     "en": "Mental Health — Inpatient Unit",
@@ -1520,7 +2040,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-85203ed9012853e4",
+    "legacySlugs": [
+      "mental-health-inpatient-unit-d11-nord",
+      "mental-health-inpatient-unit"
+    ]
   },
   {
     "en": "Intensive Care Unit (ICU)",
@@ -1535,7 +2060,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-f5728ba945245983",
+    "legacySlugs": [
+      "intensive-care-unit-icu-d10-nord-sud",
+      "intensive-care-unit-icu"
+    ]
   },
   {
     "en": "Cardiac Intensive Care Unit",
@@ -1549,7 +2079,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-35c2145176165aff",
+    "legacySlugs": [
+      "cardiac-intensive-care-unit-d08-nord",
+      "cardiac-intensive-care-unit"
+    ]
   },
   {
     "en": "Palliative Care Unit",
@@ -1562,7 +2097,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-71467765e4355f37",
+    "legacySlugs": [
+      "palliative-care-unit-d08-sud",
+      "palliative-care-unit"
+    ]
   },
   {
     "en": "Transplantation — Inpatient Unit",
@@ -1575,7 +2115,12 @@
     ],
     "status": "official",
     "note": "Official CHUM January 2026 services/resources guide.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-e9220623a75b5597",
+    "legacySlugs": [
+      "transplantation-inpatient-unit-d15-nord",
+      "transplantation-inpatient-unit"
+    ]
   },
   {
     "en": "Urology — Inpatient Unit",
@@ -1588,7 +2133,12 @@
     ],
     "status": "official",
     "note": "Official CHUM Urology inpatient page: Pavilion D, 16th floor North and South.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-00ef08cf383f57b7",
+    "legacySlugs": [
+      "urology-inpatient-unit-d16-nord-sud",
+      "urology-inpatient-unit"
+    ]
   },
   {
     "en": "Epilepsy Clinic",
@@ -1602,7 +2152,12 @@
     ],
     "status": "official",
     "note": "Official CHUM Epilepsy Clinic page: Pavilion C, 13th floor.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-809de1d89ee45743",
+    "legacySlugs": [
+      "epilepsy-clinic-c-13",
+      "epilepsy-clinic"
+    ]
   },
   {
     "en": "Tuberous Sclerosis Clinic",
@@ -1617,7 +2172,12 @@
     ],
     "status": "official",
     "note": "Official CHUM clinic page: Pavilion C, 13th floor.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-2e06149011275cb3",
+    "legacySlugs": [
+      "tuberous-sclerosis-clinic-c-13",
+      "tuberous-sclerosis-clinic"
+    ]
   },
   {
     "en": "Interstitial Lung Disease Clinic",
@@ -1632,7 +2192,12 @@
     ],
     "status": "official",
     "note": "Official CHUM clinic page: Pavilion C, 12th floor.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-fe46b916e1fd511d",
+    "legacySlugs": [
+      "interstitial-lung-disease-clinic-c-12",
+      "interstitial-lung-disease-clinic"
+    ]
   },
   {
     "en": "Scleroderma Clinic",
@@ -1645,7 +2210,12 @@
     ],
     "status": "official",
     "note": "Official CHUM clinic page: Pavilion C, 5th floor.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-096986d4a6a05095",
+    "legacySlugs": [
+      "scleroderma-clinic-c-05",
+      "scleroderma-clinic"
+    ]
   },
   {
     "en": "Sarcoidosis Clinic",
@@ -1658,7 +2228,12 @@
     ],
     "status": "official",
     "note": "Official CHUM clinic page: Pavilion C, 5th and 12th floors.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-d20409fab85d591b",
+    "legacySlugs": [
+      "sarcoidosis-clinic-c-05-c-12",
+      "sarcoidosis-clinic"
+    ]
   },
   {
     "en": "Psychiatry Department",
@@ -1672,7 +2247,12 @@
     ],
     "status": "official",
     "note": "Official CHUM Psychiatry page: outpatient clinics in Pavilion C, 11th floor; inpatient unit in Pavilion D, 11th floor.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-c87f3d6510fb596c",
+    "legacySlugs": [
+      "psychiatry-department-c-11-cliniques-d-11-hospitalisation",
+      "psychiatry-department"
+    ]
   },
   {
     "en": "Pregnancy and Disability Clinic",
@@ -1685,7 +2265,12 @@
     ],
     "status": "official",
     "note": "Official CHUM clinic page: Pavilion D, 9th floor.",
-    "source": "CHUM Guide des services et des ressources — janvier 2026"
+    "source": "CHUM Guide des services et des ressources — janvier 2026",
+    "id": "dest-e4feb4b49c5d546b",
+    "legacySlugs": [
+      "pregnancy-and-disability-clinic-d-09",
+      "pregnancy-and-disability-clinic"
+    ]
   },
   {
     "en": "MRI / Magnetic Resonance Imaging",
@@ -1702,7 +2287,12 @@
     ],
     "status": "official",
     "note": "Current CHUM MRI patient information directs patients to Radiology, Pavilion D, 3rd floor, room 350 (D0350). Access is through Pavilion C.",
-    "source": "CHUM MRI patient information — revised March 2025; current Radiology directory"
+    "source": "CHUM MRI patient information — revised March 2025; current Radiology directory",
+    "id": "dest-6101bac27d1f575c",
+    "legacySlugs": [
+      "mri-magnetic-resonance-imaging-d0350",
+      "mri-magnetic-resonance-imaging"
+    ]
   },
   {
     "en": "Pre-admission",
@@ -1718,6 +2308,11 @@
     ],
     "status": "official",
     "note": "Official CHUM Pre-admission directory page: Pavilion D, 1st floor, D0140.",
-    "source": "CHUM directory"
+    "source": "CHUM directory",
+    "id": "dest-cae07b13346451df",
+    "legacySlugs": [
+      "pre-admission-d0140",
+      "pre-admission"
+    ]
   }
 ]

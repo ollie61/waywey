@@ -10,7 +10,8 @@
       "p",
       "loc",
       "aliases",
-      "status"
+      "status",
+      "id"
     ],
     "properties": {
       "en": {
@@ -76,6 +77,18 @@
           }
         },
         "additionalProperties": false
+      },
+      "id": {
+        "type": "string",
+        "pattern": "^dest-[a-z0-9-]+$"
+      },
+      "legacySlugs": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
       }
     },
     "additionalProperties": false

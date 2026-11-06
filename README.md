@@ -114,6 +114,9 @@ python -m pip install "jsonschema==4.23.0"
 python scripts/validate_hospitals.py
 node --test tests/*.test.mjs
 node scripts/audit_search_all_hospitals.mjs
+npm ci
+npx playwright install --with-deps chromium
+npm run test:browser
 ```
 
 GitHub Actions also checks hospital schemas, JavaScript syntax, service-worker syntax and the regression tests on relevant code/data changes.
@@ -145,3 +148,12 @@ The hospital-data workflow, source precedence rules, `official` versus `verify` 
 - [Release checklist](docs/RELEASE-CHECKLIST.md)
 - [Search quality and all-hospital audit](docs/SEARCH-QUALITY.md)
 
+
+Visitor links now use permanent destination IDs, while stored legacy slugs keep
+older QR codes working. Missing destinations show recovery guidance; missing or
+retired starting points require an explicit station selection. CHUM routes show
+public connector floors documented in the existing January 2026 source notes.
+PWA updates wait for the Update action and preserve other tabs' active sessions.
+Browser tests cover handoff, keyboard use, language changes, invalid links,
+offline reopening and update activation. To use a system Chromium locally, set
+`CHROMIUM_PATH` when running `npm run test:browser`.

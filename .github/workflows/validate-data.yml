@@ -18,6 +18,8 @@ on:
       - "service-worker.js"
       - "manifest.webmanifest"
       - "icons/**"
+      - "package.json"
+      - "package-lock.json"
   pull_request:
     paths:
       - "hospitals/**"
@@ -35,6 +37,8 @@ on:
       - "service-worker.js"
       - "manifest.webmanifest"
       - "icons/**"
+      - "package.json"
+      - "package-lock.json"
 
 permissions:
   contents: read
@@ -45,6 +49,15 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install browser test dependencies
+        run: npm ci
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -71,3 +84,5 @@ jobs:
         run: node scripts/audit_search_all_hospitals.mjs
       - name: Check release-candidate invariants
         run: python scripts/release_candidate_check.py
+      - name: Test browser visitor journeys
+        run: npm run test:browser

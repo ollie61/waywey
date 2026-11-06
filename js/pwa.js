@@ -102,6 +102,7 @@ export function initPwa({labels}={}){
       if(registration)await registration.update();
       if(!registration||!registration.waiting){
         hideUpdate();
+        button.disabled=false;
         return;
       }
       updateRequested=true;
@@ -129,7 +130,7 @@ export function initPwa({labels}={}){
   if("serviceWorker" in navigator){
     navigator.serviceWorker.addEventListener("controllerchange",()=>{
       hideUpdate();
-      if(!reloading){
+      if(updateRequested&&!reloading){
         reloading=true;
         window.location.reload();
       }

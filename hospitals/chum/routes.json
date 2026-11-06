@@ -42,5 +42,39 @@
     "D-R": "CHUM January 2026 guide states the underground passage at basement level 1 between Pavilions D and R is accessible to all and provides access to Champ-de-Mars métro.",
     "C-F": "Not included in public graph: the 5th-floor walkway is staff-only and the basement-2 passage is staff/physician/logistics only.",
     "E-F": "Not included in public graph: the underground passage is staff/physician and escorted-patient only."
+  },
+  "edgeInstructions": {
+    "C>D": {
+      "en": [
+        "Use a public connector from Pavilion C to Pavilion D on floor 1, 2 or 8."
+      ],
+      "fr": [
+        "Empruntez une liaison publique du pavillon C vers le pavillon D au 1er, 2e ou 8e étage."
+      ]
+    },
+    "D>C": {
+      "en": [
+        "Use a public connector from Pavilion D to Pavilion C on floor 1, 2 or 8."
+      ],
+      "fr": [
+        "Empruntez une liaison publique du pavillon D vers le pavillon C au 1er, 2e ou 8e étage."
+      ]
+    },
+    "D>R": {
+      "en": [
+        "Go to basement level 1 in Pavilion D and use the public underground passage to Pavilion R."
+      ],
+      "fr": [
+        "Rendez-vous au sous-sol 1 du pavillon D et empruntez le passage souterrain public vers le pavillon R."
+      ]
+    },
+    "R>D": {
+      "en": [
+        "Go to basement level 1 in Pavilion R and use the public underground passage to Pavilion D."
+      ],
+      "fr": [
+        "Rendez-vous au sous-sol 1 du pavillon R et empruntez le passage souterrain public vers le pavillon D."
+      ]
+    }
   }
 }

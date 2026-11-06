@@ -200,3 +200,10 @@ ar:{
  privacy:"يستخدم البحث الصوتي خدمة التعرف على الكلام في المتصفح. يتحكم المتصفح/المزوّد في معالجة الصوت؛ لا يحتفظ WayWey بالتسجيل."
 }
 };
+
+export const VISITOR_LINK_UI={
+ en:{missing:"These directions are unavailable or the link is incomplete. Search for the department again, or ask an ambassador for help.",station:"This link’s starting point is missing or no longer available. Select where you are before opening directions.",choose:"Select your starting point",open:"Open directions"},
+ fr:{missing:"Ces indications sont indisponibles ou le lien est incomplet. Recherchez le service ou demandez de l’aide à un ambassadeur.",station:"Le point de départ de ce lien est absent ou indisponible. Sélectionnez votre position avant d’ouvrir les indications.",choose:"Sélectionnez votre point de départ",open:"Ouvrir les indications"},
+ he:{missing:"ההוראות אינן זמינות או שהקישור אינו שלם. חפשו שוב את המחלקה או בקשו עזרה מנציג.",station:"נקודת ההתחלה בקישור חסרה או אינה זמינה עוד. בחרו היכן אתם נמצאים לפני פתיחת ההוראות.",choose:"בחרו נקודת התחלה",open:"פתיחת הוראות"},
+ ar:{missing:"الاتجاهات غير متاحة أو الرابط غير مكتمل. ابحث عن القسم مجددًا أو اطلب المساعدة من أحد المرشدين.",station:"نقطة البداية في هذا الرابط مفقودة أو لم تعد متاحة. اختر مكانك قبل فتح الاتجاهات.",choose:"اختر نقطة البداية",open:"فتح الاتجاهات"}
+};
