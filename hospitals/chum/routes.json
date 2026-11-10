@@ -50,6 +50,9 @@
       ],
       "fr": [
         "Empruntez une liaison publique du pavillon C vers le pavillon D au 1er, 2e ou 8e étage."
+      ],
+      "es": [
+        "Utilice una conexión pública del pabellón C al pabellón D en la planta 1, 2 u 8."
       ]
     },
     "D>C": {
@@ -58,6 +61,9 @@
       ],
       "fr": [
         "Empruntez une liaison publique du pavillon D vers le pavillon C au 1er, 2e ou 8e étage."
+      ],
+      "es": [
+        "Utilice una conexión pública del pabellón D al pabellón C en la planta 1, 2 u 8."
       ]
     },
     "D>R": {
@@ -66,6 +72,9 @@
       ],
       "fr": [
         "Rendez-vous au sous-sol 1 du pavillon D et empruntez le passage souterrain public vers le pavillon R."
+      ],
+      "es": [
+        "Vaya al sótano 1 del pabellón D y utilice el pasaje subterráneo público hasta el pabellón R."
       ]
     },
     "R>D": {
@@ -74,6 +83,9 @@
       ],
       "fr": [
         "Rendez-vous au sous-sol 1 du pavillon R et empruntez le passage souterrain public vers le pavillon D."
+      ],
+      "es": [
+        "Vaya al sótano 1 del pabellón R y utilice el pasaje subterráneo público hasta el pabellón D."
       ]
     }
   }
