@@ -32,7 +32,9 @@ export function routeInstructions(path,instructions,lang){
   const steps=[];
   for(let i=1;i<path.length;i++){
     const edge=instructions[path[i-1]+">"+path[i]];
-    const text=edge&&(edge[lang]||edge.en);
+    // Never show English detailed steps inside a non-English visitor route.
+    // If an edge lacks the requested translation, use the generic localized route instead.
+    const text=edge&&(edge[lang]||(lang==="en"?edge.en:null));
     if(!text||!text.length)return null;
     steps.push(...text);
   }
