@@ -639,8 +639,8 @@ async function bootstrap(){
    playbackController.speak(localizedSteps(selected,$("visitorLang").value).join(" "),$("visitorLang").value);
  };
 
- let saved=null,savedLang=null;
- try{saved=localStorage.getItem(storageKey("station"));savedLang=localStorage.getItem(storageKey("appLang"))}catch(e){}
+ let saved=null;
+ try{saved=localStorage.getItem(storageKey("station"))}catch(e){}
  if(saved&&[...$("station").options].some(o=>o.value===saved)){
    $("station").value=saved;
  }else if(saved){
@@ -649,7 +649,9 @@ async function bootstrap(){
  }
  const urlParams=new URLSearchParams(window.location.search);
  const requestedGuideLang=urlParams.get("guide");
- setAppLanguage(hospitalLanguages().includes(requestedGuideLang)?requestedGuideLang:(hospitalLanguages().includes(savedLang)?savedLang:(HOSPITAL.defaultAppLanguage||hospitalLanguages()[0]||"en")));
+ // New hospital entry uses the configured default, not a previously saved ambassador language.
+ // Explicit guide language links remain supported.
+ setAppLanguage(hospitalLanguages().includes(requestedGuideLang)?requestedGuideLang:(HOSPITAL.defaultAppLanguage||hospitalLanguages()[0]||"en"));
  $("station").onchange=()=>{try{localStorage.setItem(storageKey("station"),$("station").value)}catch(e){};$("showVisitor").disabled=!$("station").value;if(selected)choose(selected,false);if(pendingVisitor)$("recoverVisitor").disabled=!$("station").value};
  $("recoverVisitor").onclick=()=>{if(pendingVisitor&&$("station").value)openLinkedVisitor(pendingVisitor)};
  if(requestedGuideLang&&QUICK_GUIDE[appLang])setTimeout(()=>{try{openQuickGuide()}catch(e){}},60);
