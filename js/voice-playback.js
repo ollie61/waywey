@@ -8,6 +8,20 @@ export function selectVoice(voices, lang) {
     || matching.find(v => v.default) || matching[0] || null;
 }
 
+// Route arrows are visual separators, not words for a screen reader-style TTS voice.
+// Preserve the displayed route verbatim and describe only its existing sequence;
+// do not infer turns, landmarks, or floors from the arrow.
+const SPOKEN_SEQUENCE={
+  en:"then",fr:"puis",es:"luego",pt:"depois",ar:"ثم",
+  he:"ואז",ru:"затем",vi:"sau đó",sw:"kisha",bg:"след това"
+};
+
+export function prepareSpeechText(text,lang){
+  const sequence=SPOKEN_SEQUENCE[String(lang||"").toLowerCase().split("-")[0]];
+  if(!sequence)return text;
+  return text.replace(/\\s*→\\s*/g,`, ${sequence} `);
+}
+
 export function createVoicePlayback({scope = globalThis, enhancedFrench = ENHANCED_FRENCH, onState = () => {}, onError = () => {}} = {}) {
   const synth = scope.speechSynthesis;
   const supported = Boolean(synth && scope.SpeechSynthesisUtterance);
@@ -39,7 +53,7 @@ export function createVoicePlayback({scope = globalThis, enhancedFrench = ENHANC
     // resolve the requested locale; surface any language-unavailable error.
     if (voices.length && !voice) { onError('unavailable'); return false; }
     try {
-      const utterance = new scope.SpeechSynthesisUtterance(text);
+      const utterance = new scope.SpeechSynthesisUtterance(prepareSpeechText(text, lang));
       utterance.lang = enhanced ? 'fr-CA' : lang;
       if (voice && (lang !== 'fr' || enhanced)) {
         utterance.voice = voice;
