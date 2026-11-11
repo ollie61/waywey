@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createVoicePlayback, selectVoice} from '../js/voice-playback.js';
+import {createVoicePlayback, selectVoice, prepareSpeechText} from '../js/voice-playback.js';
 import {I18N, PLAYBACK_UI} from '../js/i18n.js';
 
 function mock(voices = []) {
@@ -97,4 +97,30 @@ test('French enhancement can be rolled back to legacy voice selection and rate',
   assert.equal(utterance.lang, 'fr');
   assert.equal(utterance.voice, undefined);
   assert.equal(utterance.rate, 0.78);
+});
+
+test('spoken route arrows become localized sequence words without modifying visible route data',()=>{
+  const route='Pavillon A → Pavillon B → Urologie.';
+  assert.equal(prepareSpeechText(route,'fr'),'Pavillon A, puis Pavillon B, puis Urologie.');
+  assert.equal(route,'Pavillon A → Pavillon B → Urologie.');
+  const link='Continuez tout droit puis tournez à droite.';
+  assert.equal(prepareSpeechText(link,'fr'),link);
+  const transitions={en:'then',fr:'puis',es:'luego',pt:'depois',ar:'ثم',he:'ואז',ru:'затем',vi:'sau đó',sw:'kisha',bg:'след това'};
+  assert.deepEqual(Object.keys(transitions).sort(),Object.keys(I18N).sort());
+  for(const [lang,transition] of Object.entries(transitions)){
+    const result=prepareSpeechText('A → B',lang);
+    assert.equal(result,`A, ${transition} B`,lang);
+    assert.equal(result.includes('→'),false,lang);
+  }
+  assert.equal(prepareSpeechText('A → B','fr-CA'),'A, puis B');
+});
+
+test('speech engine receives natural French wording, not the displayed arrow symbol',()=>{
+  const m=mock([canadian]);
+  const visible='Suivez les indications : pavillon A → pavillon B.';
+  m.controller.speak(visible,'fr');
+  assert.equal(m.spoken[0].text,'Suivez les indications : pavillon A, puis pavillon B.');
+  assert.equal(m.spoken[0].voice,canadian);
+  assert.equal(m.spoken[0].rate,0.95);
+  assert.equal(visible,'Suivez les indications : pavillon A → pavillon B.');
 });
