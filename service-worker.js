@@ -1,4 +1,4 @@
-const SHELL_CACHE="waywey-cache-26";
+const SHELL_CACHE="waywey-cache-27";
 const DATA_CACHE="waywey-hospital-data-1";
 
 const SHELL_ASSETS=[
@@ -18,7 +18,6 @@ const SHELL_ASSETS=[
   "./js/provenance.js",
   "./js/accessibility.js",
   "./js/outdoor-map.js",
-  "./js/voice-search.js",
   "./js/voice-playback.js",
   "./js/visitor-links.js"
 ];
