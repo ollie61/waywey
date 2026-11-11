@@ -1,4 +1,4 @@
-import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,VOICE_UI,LANGUAGE_NAMES,VISITOR_LINK_UI,routeNoticeText} from "./js/i18n.js";
+import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,LANGUAGE_NAMES,VISITOR_LINK_UI,routeNoticeText} from "./js/i18n.js";
 import {rankResults,inferQueryLanguage} from "./js/search.js";
 import {findRoute,resolveTargetNode,routeInstructions} from "./js/routing.js";
 import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,strengthBadge} from "./js/ui.js";
@@ -8,7 +8,6 @@ import {formatAuditDate,sourceLinks,hospitalSourceLinks} from "./js/provenance.j
 import {setupDialog,openDialog,closeDialog,announce} from "./js/accessibility.js";
 import {outdoorMapUrl} from "./js/outdoor-map.js";
 import {visitorDestinationKey,resolveVisitorDestination} from "./js/visitor-links.js";
-import {createVoiceSearch} from "./js/voice-search.js";
 import {createVoicePlayback} from "./js/voice-playback.js";
 import {PLAYBACK_UI} from "./js/i18n.js";
 
@@ -127,7 +126,6 @@ let selected=null;
 let selectedQueryLang=null;
 let appLang="en";
 let pwaController=null;
-let voiceController=null;
 let playbackController=null;
 let visitorLanguageChosen=false;
 function refreshPlaybackUi(){
@@ -152,9 +150,7 @@ function initVoicePlayback(){
  });
  $("visitorDialog").addEventListener("close",stopPlayback);
  $("visitorDialog").addEventListener("cancel",stopPlayback);
- window.addEventListener("pagehide",()=>{stopPlayback();voiceController?.cancel();});
- // A native speech/permission surface may temporarily hide the page. Keep
- // recognition alive so its result can still populate search on return.
+ window.addEventListener("pagehide",()=>{stopPlayback();});
  document.addEventListener("visibilitychange",()=>{if(document.hidden)stopPlayback();});
 }
 function pwaLabels(){return PWA_UI[appLang]||PWA_UI.en;}
@@ -163,81 +159,6 @@ function ensurePwa(){
   else pwaController.refreshLabels();
   return pwaController;
 }
-function voiceText(){return VOICE_UI[appLang]||VOICE_UI.en;}
-
-function voiceErrorMessage(code){
-  const t=voiceText();
-  if(code==="not-allowed"||code==="service-not-allowed")return t.denied;
-  if(code==="no-speech")return t.noSpeech;
-  if(code==="audio-capture")return t.audio;
-  if(code==="network")return t.network;
-  return t.error;
-}
-
-function renderVoiceButton(state="idle"){
-  const btn=$("voiceSearch");if(!btn||!voiceController||!voiceController.supported)return;
-  const active=state==="starting"||state==="listening"||voiceController.isActive();
-  btn.hidden=false;
-  btn.setAttribute("aria-pressed",active?"true":"false");
-  btn.textContent=active?"■ "+voiceText().stop:"🎙 "+voiceText().button;
-}
-
-function refreshVoiceUi(){
-  const btn=$("voiceSearch"),privacy=$("voicePrivacy");
-  if(!btn||!privacy)return;
-  if(!voiceController||!voiceController.supported){
-    btn.hidden=true;privacy.hidden=true;$("voiceLanguageControl").hidden=true;return;
-  }
-  $("voiceLanguageControl").hidden=false;
-  $("voiceLanguageLabel").textContent=voiceText().language;
-  $("voiceLanguage").options[0].textContent=voiceText().sameLanguage;
-  privacy.hidden=false;
-  privacy.textContent=voiceText().privacy;
-  renderVoiceButton(voiceController.isActive()?"listening":"idle");
-}
-
-function initVoiceSearch(){
-  const btn=$("voiceSearch"),status=$("voiceStatus");
-  if(!btn||!status)return;
-  voiceController=createVoiceSearch({
-    getLanguage:()=>$("voiceLanguage").value||appLang,
-    onState:state=>{
-      renderVoiceButton(state);
-      if(state==="starting"||state==="listening"){
-        status.textContent=voiceText().listening;
-        announce(voiceText().listening);
-      }
-    },
-    onResult:transcript=>{
-      $("q").value=transcript;
-      search();
-      const message=templateText(voiceText().recognized,{text:transcript});
-      status.textContent=message;
-      announce(message);
-      $("q").focus();
-    },
-    onError:code=>{
-      const message=voiceErrorMessage(code);
-      status.textContent=message;
-      announce(message);
-    }
-  });
-  refreshVoiceUi();
-  $("voiceLanguage").onchange=()=>{
-    voiceController.cancel();
-    status.textContent="";
-  };
-  btn.onclick=()=>{
-    if(!voiceController||!voiceController.supported)return;
-    if(voiceController.isActive())voiceController.stop();
-    else{
-      stopPlayback();
-      status.textContent="";
-      voiceController.start();
-    }
-  };
-}
-
 function showHospitalLanding(){
  document.documentElement.lang="fr";
  document.documentElement.dir="ltr";
@@ -383,7 +304,7 @@ function renderQuickGuide(){
 function openQuickGuide(){renderQuickGuide();openDialog($("guideDialog"),{initialFocus:".guide-lang-btn, #closeGuide"});}
 function setAppLanguage(lang){
  stopPlayback();
- voiceController?.cancel();
+ 
  const allowed=hospitalLanguages();
  appLang=allowed.includes(lang)?lang:(HOSPITAL.defaultAppLanguage&&allowed.includes(HOSPITAL.defaultAppLanguage)?HOSPITAL.defaultAppLanguage:allowed[0]||"en");
  document.documentElement.lang=appLang;
@@ -406,7 +327,6 @@ function setAppLanguage(lang){
  if(selected)choose(selected,false);
  if($("guideDialog").open)renderQuickGuide();
  renderDatasetProvenance();
- refreshVoiceUi();
  if(pwaController)pwaController.refreshLabels();
 }
 
@@ -563,7 +483,7 @@ async function shareVisitorDirections(){
 }
 function showVisitor(){
  if(!selected)return;
- voiceController?.cancel();
+ 
  if(!visitorLanguageChosen){
    const preferred=appLang||HOSPITAL.defaultVisitorLanguage||HOSPITAL.defaultAppLanguage||"en";
    if([...$("visitorLang").options].some(o=>o.value===preferred))$("visitorLang").value=preferred;
@@ -615,7 +535,6 @@ async function bootstrap(){
  }
 
  ["guideDialog","visitorDialog","qrDialog"].forEach(id=>setupDialog($(id)));
- initVoiceSearch();
  initVoicePlayback();
  $("appLang").onchange=()=>setAppLanguage($("appLang").value);
  $("quickGuideBtn").onclick=openQuickGuide;
@@ -634,7 +553,7 @@ async function bootstrap(){
  $("listen").onclick=()=>{
    if(!selected)return;
    if(playbackController.isActive()){stopPlayback();return;}
-   voiceController?.cancel();
+   
    $("playbackStatus").textContent="";
    playbackController.speak(localizedSteps(selected,$("visitorLang").value).join(" "),$("visitorLang").value);
  };
