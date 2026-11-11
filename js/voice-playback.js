@@ -19,7 +19,7 @@ const SPOKEN_SEQUENCE={
 export function prepareSpeechText(text,lang){
   const sequence=SPOKEN_SEQUENCE[String(lang||"").toLowerCase().split("-")[0]];
   if(!sequence)return text;
-  return text.replace(/\\s*→\\s*/g,`, ${sequence} `);
+  return text.replace(/\s*→\s*/g,`, ${sequence} `);
 }
 
 export function createVoicePlayback({scope = globalThis, enhancedFrench = ENHANCED_FRENCH, onState = () => {}, onError = () => {}} = {}) {
