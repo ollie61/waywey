@@ -98,6 +98,20 @@ def validate_cross_files(folder: Path, config, destinations, routes, guide, erro
         if len(parts) != 2 or parts[1] not in graph.get(parts[0], []):
             errors.append(f"{rel}/routes.json: instructions for unvalidated edge {edge!r}")
 
+    # Explicit station-to-destination directions must reference real starting
+    # stations and canonical destination IDs; unknown records are unsafe.
+    entrance_ids = {e["id"] for e in config["entrances"]}
+    destination_ids = {d["id"] for d in destinations}
+    for key, translations in routes.get("stationDestinationDirections", {}).items():
+        station_id, separator, destination_id = key.partition(">")
+        if not separator or station_id not in entrance_ids or destination_id not in destination_ids:
+            errors.append(f"{rel}/routes.json: invalid station-to-destination key {key!r}")
+        for language, steps in translations.items():
+            if language not in {"en", "fr", "es", "pt", "he", "ar", "ru", "vi", "sw", "bg"}:
+                errors.append(f"{rel}/routes.json: unknown route language {language!r} in {key!r}")
+            if not steps or any(not step.strip() for step in steps):
+                errors.append(f"{rel}/routes.json: empty instructions for {key!r}/{language}")
+
     seen = {}
     for i, dest in enumerate(destinations):
         key = (dest["en"].strip().casefold(), dest["p"].strip().casefold(), dest["loc"].strip().casefold())
