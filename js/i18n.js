@@ -23,7 +23,7 @@ ar:{to:"اذهب إلى",room:"الغرفة",floor:"الطابق",from:"من",st
 he:{to:"גשו אל",room:"חדר",floor:"קומה",from:"מ־",stay:"הישארו ב",elev:"השתמשו במעליות כדי להגיע אל",follow:"עקבו אחר השילוט הפנימי דרך",hk1:"עלו במעליות של בניין H לקומה 3.",hk2:"השתמשו במעבר הפנימי H–K אל הלובי של בניין K.",kh1:"מהלובי של בניין K השתמשו במעבר הפנימי H–K אל בניין H, קומה 3.",final:"לאחר מכן עקבו אחר השילוט אל",listen:"האזנה",back:"חזרה לשגריר"},
 ru:{to:"Идите в",room:"Кабинет",floor:"Этаж",from:"От",stay:"Оставайтесь в",elev:"Поднимитесь на лифте на",follow:"Следуйте указателям внутри здания через",hk1:"Поднимитесь на лифте павильона H на 3-й этаж.",hk2:"По внутреннему переходу H–K пройдите в вестибюль павильона K.",kh1:"Из вестибюля павильона K по переходу H–K пройдите в павильон H, на 3-й этаж.",final:"Затем следуйте указателям к",listen:"Прослушать",back:"Назад к волонтёру"},
 vi:{to:"Đi đến",room:"Phòng",floor:"Tầng",from:"Từ",stay:"Ở lại",elev:"Dùng thang máy để đến",follow:"Đi theo biển chỉ dẫn bên trong qua",hk1:"Đi thang máy của Khu H lên tầng 3.",hk2:"Dùng lối nối trong nhà H–K để đến sảnh Khu K.",kh1:"Từ sảnh Khu K, dùng lối nối trong nhà H–K đến Khu H, tầng 3.",final:"Sau đó đi theo biển chỉ dẫn đến",listen:"Nghe",back:"Quay lại tình nguyện viên"},
-sw:{to:"Nenda",room:"Chumba",floor:"Ghorofa",from:"Kutoka",stay:"Baki katika",elev:"Tumia lifti kufika",follow:"Fuata alama za ndani kupitia",hk1:"Tumia lifti za Jengo H hadi ghorofa ya 3.",hk2:"Tumia njia ya ndani ya H–K hadi ukumbi wa Jengo K.",kh1:"Kutoka ukumbi wa Jengo K, tumia njia ya ndani ya H–K hadi Jengo H, ghorofa ya 3.",final:"Kisha fuata alama kuelekea",listen:"Sikiliza",back:"Rudi kwa balozi"},
+fa:{"stop":"توقف","unavailable":"صدای فارسی در این دستگاه در دسترس نیست. لطفاً راهنما را بخوانید یا از راهنمای بیمارستان کمک بگیرید."},
 bg:{to:"Отидете до",room:"Стая",floor:"Етаж",from:"От",stay:"Останете в",elev:"Използвайте асансьора до",follow:"Следвайте вътрешните указателни табели през",hk1:"Вземете асансьора в павилион H до 3-тия етаж.",hk2:"Използвайте вътрешната връзка H–K до фоайето на павилион K.",kh1:"От фоайето на павилион K използвайте връзката H–K до павилион H, 3-ти етаж.",final:"След това следвайте табелите към",listen:"Слушай",back:"Назад към посланика"}
 };
 
@@ -36,7 +36,7 @@ es:{button:"Mostrar QR",title:"Escanee para ver las indicaciones",instruction:"E
 pt:{button:"Mostrar QR",title:"Escaneie para ver as direções",instruction:"Escaneie este código QR com o seu telefone para abrir estas direções.",back:"Voltar às direções"},
 ru:{button:"Показать QR",title:"Сканируйте для маршрута",instruction:"Отсканируйте этот QR-код телефоном, чтобы открыть эти указания.",back:"Назад к указаниям"},
 vi:{button:"Hiện mã QR",title:"Quét để xem chỉ đường",instruction:"Quét mã QR này bằng điện thoại để mở các chỉ dẫn này.",back:"Quay lại chỉ dẫn"},
-sw:{button:"Onyesha QR",title:"Changanua kupata maelekezo",instruction:"Changanua msimbo huu wa QR kwa simu yako ili kufungua maelekezo haya.",back:"Rudi kwenye maelekezo"},
+fa:{"to":"بروید به","room":"اتاق","floor":"طبقه","from":"از","stay":"در همان محل بمانید","elev":"برای رسیدن به این طبقه از آسانسور استفاده کنید:","follow":"تابلوهای داخل ساختمان را دنبال کنید و از این بخش‌ها عبور کنید:","hk1":"با آسانسورهای ساختمان H به طبقه سوم بروید.","hk2":"از راهروی ارتباطی داخلی H–K به لابی ساختمان K بروید.","kh1":"از لابی ساختمان K از راهروی داخلی H–K به ساختمان H، طبقه سوم بروید.","final":"سپس تابلوهای راهنما را به سوی این مقصد دنبال کنید:","listen":"گوش دادن","back":"بازگشت به راهنمای بیمارستان"},
 bg:{button:"Покажи QR",title:"Сканирайте за указания",instruction:"Сканирайте този QR код с телефона си, за да отворите указанията.",back:"Назад към указанията"}
 };
 
@@ -108,6 +108,7 @@ export function routeNoticeText(key,lang){
      noRoute:"لا يوجد في WayWey حتى الآن مسار داخلي عام موثّق بين نقطة البداية والوجهة. اتبع لافتات المستشفى الحالية."
    }
  };
+ table.fa={outsideMapped:'مقصد خارج از مسیر داخلی نقشه‌برداری‌شده است. نشانی / محل: ',unknownLocation:'محل دقیق در منبع فعلی مشخص نشده است. مدارک نوبت یا تابلوها را بررسی کنید.',noRoute:'WayWey هنوز مسیر داخلی عمومی تأییدشده‌ای از این نقطه شروع تا مقصد ندارد. تابلوهای فعلی بیمارستان را دنبال کنید.'};
  const set=table[lang]||table.en;
  return set[key]||table.en[key];
 }
@@ -178,7 +179,7 @@ es:{open:"Abrir mapa exterior"},
 pt:{open:"Abrir mapa externo"},
 ru:{open:"Открыть внешнюю карту"},
 vi:{open:"Mở bản đồ bên ngoài"},
-sw:{open:"Fungua ramani ya nje"},
+fa:{"button":"نمایش کد QR","title":"اسکن برای دریافت مسیر","instruction":"این کد QR را با تلفن خود اسکن کنید تا مسیر را ببینید.","back":"بازگشت به مسیر"},
 bg:{open:"Отвори външна карта"}
 };
 
