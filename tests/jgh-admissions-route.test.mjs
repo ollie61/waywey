@@ -14,5 +14,9 @@ test("JGH Admissions B-114 directions are specific and multilingual",()=>{
  }
  assert.match(item.en.join(" "),/turn right/i);
  assert.match(item.fr.join(" "),/tournez à droite/i);
+ assert.match(item.en[1],/on your left/i);
+ assert.match(item.fr[1],/à votre gauche/i);
+ assert.doesNotMatch(item.en[1],/on your right/i);
+ assert.doesNotMatch(item.fr[1],/à votre droite/i);
  assert.equal(routes.stationDestinationDirections["a>"+d.id],undefined);
 });
