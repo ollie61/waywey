@@ -12,7 +12,7 @@ import {createVoiceSearch} from "./js/voice-search.js";
 import {createVoicePlayback} from "./js/voice-playback.js";
 import {PLAYBACK_UI} from "./js/i18n.js";
 
-const APP_VERSION="0.3.2";
+const APP_VERSION="0.3.3";
 let HOSPITAL={};
 let DATA=[];
 let GRAPH={};
