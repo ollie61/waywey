@@ -20,6 +20,7 @@ let PAV_LABELS={en:{},fr:{}};
 let NOTE_TRANSLATIONS={};
 let QUICK_GUIDE={};
 let EDGE_INSTRUCTIONS={};
+let STATION_DESTINATION_DIRECTIONS={};
 let pendingVisitor=null;
 
 function hospitalLanguages(){return (HOSPITAL.ambassadorLanguages&&HOSPITAL.ambassadorLanguages.length)?HOSPITAL.ambassadorLanguages:["en","fr"];}
@@ -328,6 +329,11 @@ function stationNode(){
  const o=$("station").selectedOptions[0];
  return o?(o.dataset.node||o.value):"";
 }
+function stationDestinationSteps(d,lang){
+ const key=$("station").value+">"+d.id;
+ const route=STATION_DESTINATION_DIRECTIONS[key];
+ return route?(route[lang]||route.en||null):null;
+}
 function specialRouteSteps(start,target,lang){
  const key=start+">"+target;
  const r=HOSPITAL.specialRoutes&&HOSPITAL.specialRoutes[key];
@@ -348,6 +354,7 @@ async function loadHospital(){
  QUICK_GUIDE=guide||{};
  HOSPITAL.specialRoutes=routes.specialRoutes||{};
  EDGE_INSTRUCTIONS=routes.edgeInstructions||{};
+ STATION_DESTINATION_DIRECTIONS=routes.stationDestinationDirections||{};
  populateAppLanguages();
  if(cfg.ui){
    for(const lang of Object.keys(cfg.ui)){
@@ -419,6 +426,8 @@ function ambassadorSteps(d){
    else out.push(routeNoticeText("unknownLocation",noticeLang));
    return out;
  }
+ const verified=stationDestinationSteps(d,appLang);
+ if(verified)return [...out,...verified];
  const path=bfs(start,target),special=specialRouteSteps(start,target,appLang);
  const detailed=routeInstructions(path,EDGE_INSTRUCTIONS,appLang);
  if(special&&special.length){out.push(...special);}
@@ -442,6 +451,8 @@ function localizedSteps(d,lang){
    else out.push(routeNoticeText("unknownLocation",lang));
    return out;
  }
+ const verified=stationDestinationSteps(d,lang);
+ if(verified)return [...out,...verified];
  const path=bfs(start,target),labels=PAV_LABELS[lang]||PAV_LABELS.en||{},special=specialRouteSteps(start,target,lang);
  const detailed=routeInstructions(path,EDGE_INSTRUCTIONS,lang);
  if(special&&special.length){out.push(...special);}
