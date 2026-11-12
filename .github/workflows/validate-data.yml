@@ -1,6 +1,7 @@
 name: Validate WayWey
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - "hospitals/**"
