@@ -11,6 +11,7 @@ export const PLAYBACK_UI={
  ru:{stop:"Остановить",unavailable:"Аудио на этом языке недоступно. Прочитайте указания или обратитесь к волонтёру."},
  vi:{stop:"Dừng",unavailable:"Không có âm thanh bằng ngôn ngữ này. Vui lòng đọc chỉ dẫn hoặc nhờ tình nguyện viên hỗ trợ."},
  sw:{stop:"Simamisha",unavailable:"Sauti haipatikani katika lugha hii. Tafadhali soma maelekezo au omba msaada kwa balozi."},
+ fa:{stop:"توقف",unavailable:"صدای فارسی در این دستگاه در دسترس نیست. لطفاً راهنما را بخوانید یا از راهنمای بیمارستان کمک بگیرید."},
  bg:{stop:"Спиране",unavailable:"Аудиото не е налично на този език. Прочетете указанията или помолете посланик за помощ."}
 };
 
