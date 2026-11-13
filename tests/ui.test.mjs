@@ -1,6 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {locationFor} from '../js/ui.js';
+import {locationFor,appIsRtl,destinationName} from '../js/ui.js';
+
+test('Persian is RTL and missing destinations have no invented label',()=>{
+  assert.equal(appIsRtl('fa'),true);
+  assert.equal(appIsRtl('fr'),false);
+  assert.equal(destinationName(null,'fa'),'');
+});
 
 test('French formats English floor labels without changing room codes or explicit translations',()=>{
   for(const [loc,fr] of [['3rd floor','3e étage'],['1st floor','1er étage'],['6th floor','6e étage'],['Floor 2','2e étage'],['Ground floor','Rez-de-chaussée'],['K-123','K-123']]){

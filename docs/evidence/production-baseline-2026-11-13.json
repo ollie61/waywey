@@ -1,0 +1,274 @@
+{
+  "checkedAt": "2026-11-13T20:59:36.891Z",
+  "site": "https://waywey.gobleuer.com/",
+  "commit": "bfd4ddedc5354371895e87f969d7f1f2f6b9e2c9",
+  "checked": 44,
+  "passed": 44,
+  "failures": [],
+  "results": [
+    {
+      "file": "app.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "150a2920b9a3fe8a231a53c160e256043e7f099fa376109eb81579832b73bced"
+    },
+    {
+      "file": "chum/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "32bd133c18087cc5100f2398a631a431a8eb54cc9eb558a786038e7a638df128"
+    },
+    {
+      "file": "glen/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "6db48b08bb5cb634ec73dd1e8d82201ba2c5bf19f14cce4f807331489dc67f2d"
+    },
+    {
+      "file": "hadassah-ein-kerem/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "270fb41fc8966646639c6e587069ed99c0d4fcdc1f8d0f1afd95996cb0e74ebe"
+    },
+    {
+      "file": "hospitals/chum/config.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "29ac820ed0caf9989dd9c66833f3aa080effe4e2ac1a881b23e7d355ee50836d"
+    },
+    {
+      "file": "hospitals/chum/destinations.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "3c2e2de52f870c32ae2956b33d58993f4826ca089ee6398aa6599938cf0e8fcc"
+    },
+    {
+      "file": "hospitals/chum/guide.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "48335f0cc76c89bd81dc5830599a706800ff51f834bf59299bac43552ff34166"
+    },
+    {
+      "file": "hospitals/chum/routes.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "966ac605da76beaecdbcafc095b8e02e100ab1df64e6b650e2349245c36a1bcd"
+    },
+    {
+      "file": "hospitals/glen/config.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "dfae49b671eb5605bc84f7c133cc1804cb0ea124a1d616c7a0a381e93c4677f9"
+    },
+    {
+      "file": "hospitals/glen/destinations.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "c7c68332aa24a6129ad73ea07186720d59baea375981d2aa11aa6b453ff93634"
+    },
+    {
+      "file": "hospitals/glen/guide.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "e13c968089f3b740eb886c78b93edf1f68b27543e8c8b504aa73b6ce8307c8ff"
+    },
+    {
+      "file": "hospitals/glen/routes.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "0a40a1b93f6774c3c497f9258a32b6194061d5b7ac90219afac1f026dbba16a8"
+    },
+    {
+      "file": "hospitals/hadassah-ein-kerem/config.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "a63024168aee1697369fe71efa72c4921bb40555b215db4421a0e2ecd275928c"
+    },
+    {
+      "file": "hospitals/hadassah-ein-kerem/destinations.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "143da4fba581f08f77f59595e3d4be62d3e8376531242ebc89b37b8be2c1959f"
+    },
+    {
+      "file": "hospitals/hadassah-ein-kerem/guide.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "788bf19202882733f85775e76bfa88909e6e31e89d5f03c2147ae40fb8ed5a9c"
+    },
+    {
+      "file": "hospitals/hadassah-ein-kerem/routes.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "1f5e029d9e03b0cc69bf7b850c453befe5cbf3db6ecfe89de371a40b7caf3980"
+    },
+    {
+      "file": "hospitals/jgh/config.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "a5dcdd636d5fb9f3d47131db70b0a6603dafacb1c8efbe3880262ad592317903"
+    },
+    {
+      "file": "hospitals/jgh/destinations.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "980031882f7a613144b9a29b037d57c54c25448725ec7fc0b25a049c781f88d9"
+    },
+    {
+      "file": "hospitals/jgh/guide.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "c77435353d6e2a47f1e6c8dde53d743bbcdfb8c0efaadf25f6ede6179c51a644"
+    },
+    {
+      "file": "hospitals/jgh/routes.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "8d954affed49d843201d40498204d6e28591878113203733e289c0995b148e84"
+    },
+    {
+      "file": "hospitals/verdun/config.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "88b2872546808ba6cd89b694402676f10eb22102c495c19f1601051f82f9b5f6"
+    },
+    {
+      "file": "hospitals/verdun/destinations.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "108a7a757abd26be7d87a4bf3e858209317c076d731a581d004a2b220c309d37"
+    },
+    {
+      "file": "hospitals/verdun/guide.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "6b8abe5c15fac73eb477221ceeec7569f44a77c250a9aa83806834008c526ad4"
+    },
+    {
+      "file": "hospitals/verdun/routes.json",
+      "status": 200,
+      "matches": true,
+      "sha256": "5f4988243444c858cc96da92c17acb3292c4cda24466c0d1277aefb997e6c198"
+    },
+    {
+      "file": "icons/waywey.svg",
+      "status": 200,
+      "matches": true,
+      "sha256": "c5989a3f90f477d4658baedf61a06ab4d132302ab9c60a88834952b8e8f1b70e"
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "feb62cbbd6d96e18292d6a213cf7c34ed7c12a6ef9a23dcae4b1e28e5b70fff5"
+    },
+    {
+      "file": "jgh/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "5a0d6ab4e5ebd65b68d75b4d904f65e3147d383714008d081e6e88b4c8784039"
+    },
+    {
+      "file": "js/accessibility.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "269d660487eba5cba73b0ccbe01836909a0326990a4d6f041577992a6bd80792"
+    },
+    {
+      "file": "js/data.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "db3564357682f10b55f834f80e5d46a97189c007c79a54feb3ea132fe9947165"
+    },
+    {
+      "file": "js/i18n.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "b740097996c85ff6eecc56b5c0cfde60322b5275a0ca67d10f4cf331ad10248e"
+    },
+    {
+      "file": "js/outdoor-map.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "7201d5270f51177310dd3ccbc2f83e7525b40fdb186c0e58a6f3f554ad6bdc55"
+    },
+    {
+      "file": "js/provenance.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "c9cf55362d09317164fd0449efc9b47a1ff84f4252c38586052213cd31a5d571"
+    },
+    {
+      "file": "js/pwa.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "b506ad5348da2701ff70e1dea10d64c327e82f8252c172d4ec540dd61a82c29d"
+    },
+    {
+      "file": "js/routing.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "3eeb72d53f1ad7f260dbd4c8dc72dfb9bd70cb6ac94811c448287e3e090c746a"
+    },
+    {
+      "file": "js/search.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "13cf38b8aa8d1d11b9298684e9b3ed68c9ef4e1b422da439947dc935a62627f0"
+    },
+    {
+      "file": "js/ui.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "7473708d9aaeb44595fa2da2d0fb1e2ff33cc3e0ec3a809917a75ba740e54c93"
+    },
+    {
+      "file": "js/visitor-links.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "58ab5bd17f5469cf540911a4585d3e40cd5902939cd86ea16245dc393c83b93c"
+    },
+    {
+      "file": "js/voice-playback.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "dadea88565b6b9552d5de91bb59613689e4cc750e027f4e15bd3db35c8c1e138"
+    },
+    {
+      "file": "js/voice-search.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "efaa2bf561a797f157c4acf19e88b1447ca0faf8b3cab4551aff9fdf35de9401"
+    },
+    {
+      "file": "manifest.webmanifest",
+      "status": 200,
+      "matches": true,
+      "sha256": "70fc490c07a192b74b8f62c101ddfb6117a99877b50eb5586c1a435c4771ee41"
+    },
+    {
+      "file": "qrcode.min.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "c541ef06327885a8415bca8df6071e14189b4855336def4f36db54bde8484f36"
+    },
+    {
+      "file": "service-worker.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "2a6ff0bf8da2fab7cdf050afb6a9182a3ef6b7cf7acb83cf08920647a18f3c23"
+    },
+    {
+      "file": "styles.css",
+      "status": 200,
+      "matches": true,
+      "sha256": "3f4b2f784f4cd1c6fcb650e70171d1c8c92134b2df38bfa8d5a81f95244c8dac"
+    },
+    {
+      "file": "verdun/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "b1c5da1b1817014a92c40406ad776f34b06152b3aac30f84e98ffeecb916c4f8"
+    }
+  ]
+}

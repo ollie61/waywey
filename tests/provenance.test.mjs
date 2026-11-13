@@ -12,6 +12,10 @@ test("audit dates format only valid ISO-like dates",()=>{
   const formatted=p.formatAuditDate("2026-10-29","en");
   assert.ok(formatted&&formatted.includes("2026"));
   assert.equal(p.formatAuditDate("unknown","en"),null);
+  for(const date of ['2026-02-30','2026-13-01','2026-00-01','2026-04-31','2026-02-29']){
+    assert.equal(p.formatAuditDate(date,'en'),null,date);
+  }
+  assert.ok(p.formatAuditDate('2024-02-29','en'));
 });
 
 test("destination sources extract and deduplicate URLs",()=>{

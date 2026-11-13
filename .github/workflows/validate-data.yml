@@ -9,12 +9,18 @@ on:
       - "scripts/validate_hospitals.py"
       - "scripts/refactor_smoke.mjs"
       - "scripts/release_candidate_check.py"
+      - "scripts/verify_deployment.mjs"
       - "scripts/audit_search_all_hospitals.mjs"
       - ".github/workflows/validate-data.yml"
       - "app.js"
       - "js/**"
       - "tests/**"
       - "index.html"
+      - "jgh/**"
+      - "chum/**"
+      - "glen/**"
+      - "verdun/**"
+      - "hadassah-ein-kerem/**"
       - "styles.css"
       - "service-worker.js"
       - "manifest.webmanifest"
@@ -28,12 +34,18 @@ on:
       - "scripts/validate_hospitals.py"
       - "scripts/refactor_smoke.mjs"
       - "scripts/release_candidate_check.py"
+      - "scripts/verify_deployment.mjs"
       - "scripts/audit_search_all_hospitals.mjs"
       - ".github/workflows/validate-data.yml"
       - "app.js"
       - "js/**"
       - "tests/**"
       - "index.html"
+      - "jgh/**"
+      - "chum/**"
+      - "glen/**"
+      - "verdun/**"
+      - "hadassah-ein-kerem/**"
       - "styles.css"
       - "service-worker.js"
       - "manifest.webmanifest"
@@ -77,10 +89,13 @@ jobs:
           done
           echo "Checking service-worker.js"
           node --check service-worker.js
+          node --check scripts/verify_deployment.mjs
       - name: Run modularisation smoke checks
         run: node scripts/refactor_smoke.mjs
       - name: Run regression tests
         run: node --test tests/*.test.mjs
+      - name: Test validator failure handling
+        run: python -m unittest discover -s tests -p 'test_*.py'
       - name: Audit search and fuzzy matching across all hospitals
         run: node scripts/audit_search_all_hospitals.mjs
       - name: Check release-candidate invariants

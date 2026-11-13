@@ -1,4 +1,4 @@
-# WayWey application architecture — v0.2
+# WayWey application architecture — 1.0 candidate
 
 WayWey is a browser-first static application. Shared application behaviour is separated from hospital-specific data so the same engine can support multiple hospitals and languages without embedding hospital facts in code.
 
@@ -78,14 +78,21 @@ Hospital-specific guides and labels stay in hospital packages.
 - never derives a map destination from an indoor room/building string;
 - requests no GPS/location permission inside WayWey.
 
-### `js/voice-search.js`
-- detects standard or WebKit-prefixed browser speech recognition;
-- maps ambassador languages to explicit speech locales;
-- performs single-shot, non-continuous recognition only after a user action;
-- returns the recognized text into the existing search/ranking pipeline;
-- fails closed and leaves the voice control hidden when browser support is unavailable.
+### `js/voice-playback.js`
+Optional user-initiated visitor speech synthesis, preferred locale selection,
+bounded startup retry and cancellation-safe lifecycle. Device audio requires
+physical-device verification. Microphone recognition is removed in 1.0.
 
-Voice recognition is progressive enhancement rather than a required dependency. WayWey does not store recordings; browser/provider audio processing is outside WayWey and is disclosed in the UI.
+### `js/photo-capture.js`
+JGH local photo collection, IndexedDB transaction confirmation and compatible
+backup exports. Images are not published automatically.
+
+### Entry and language state
+Root and PWA start open JGH. Explicit hospital redirects and stable/legacy QR
+links remain compatible. French is JGH's new-session default; per-hospital
+ambassador and visitor language choices use separate session-storage keys.
+QR language overrides the remembered visitor choice. Station storage retains
+the existing per-hospital local-storage key.
 
 ## Hospital packages
 

@@ -3,14 +3,26 @@ import assert from 'node:assert/strict';
 import {createVoicePlayback, selectVoice, prepareSpeechText} from '../js/voice-playback.js';
 import {I18N, PLAYBACK_UI} from '../js/i18n.js';
 
-function mock(voices = []) {
+function mock(voices = [], {autoStart = true} = {}) {
   const events = {}, spoken = [], states = [], errors = [];
   let cancelled = 0;
+  const timers = new Map();
+  let now = 0, nextTimer = 0;
   const synth = {getVoices: () => voices, addEventListener: (name, fn) => events[name] = fn,
-    cancel: () => cancelled++, speak: u => spoken.push(u)};
-  const controller = createVoicePlayback({scope: {speechSynthesis: synth, SpeechSynthesisUtterance: class {constructor(text) {this.text = text;}}},
+    cancel: () => cancelled++, speak: u => {spoken.push(u); if (autoStart) u.onstart();}};
+  const controller = createVoicePlayback({scope: {
+    speechSynthesis: synth, SpeechSynthesisUtterance: class {constructor(text) {this.text = text;}},
+    setTimeout(fn, delay) {const id = nextTimer++; timers.set(id, {fn, at: now + delay}); return id;},
+    clearTimeout(id) {timers.delete(id);}
+  },
     onState: s => states.push(s), onError: e => errors.push(e)});
   return {controller, synth, spoken, states, errors, events, cancelled: () => cancelled,
+    timers, advance(ms) {
+      now += ms;
+      for (const [id, timer] of [...timers]) {
+        if (timer.at <= now && timers.delete(id)) timer.fn();
+      }
+    },
     setVoices: list => {voices = list; events.voiceschanged();}};
 }
 const french = {lang: 'fr-FR', name: 'French', default: true};
@@ -46,7 +58,7 @@ test('missing matching voices do not select an unrelated language', () => {
   assert.deepEqual(m.errors, ['unavailable']);
 });
 
-test('delayed voices are used on the next user request without automatic playback', () => {
+test('voices arriving after speech starts do not replay the directions', () => {
   const m = mock();
   m.controller.speak('Bonjour', 'fr');
   assert.equal(m.spoken[0].lang, 'fr-CA');
@@ -97,6 +109,7 @@ test('French enhancement can be rolled back to legacy voice selection and rate',
   assert.equal(utterance.lang, 'fr');
   assert.equal(utterance.voice, undefined);
   assert.equal(utterance.rate, 0.78);
+  c.stop();
 });
 
 test('spoken route arrows become localized sequence words without modifying visible route data',()=>{
@@ -134,4 +147,89 @@ test('Arabic prefers ar-SA, Persian prefers fa-IR, and both preserve speech loca
  assert.equal(m.spoken[0].lang,'ar-SA');
  const p=mock([fa]);assert.equal(p.controller.speak('مسیر را دنبال کنید','fa'),true);
  assert.equal(p.spoken[0].lang,'fa-IR');
+});
+
+test('a silent locale attempt retries once when delayed Android voices arrive', () => {
+  const m = mock([], {autoStart: false});
+  m.controller.speak('اتبع الإشارات', 'ar');
+  const first = m.spoken[0];
+  assert.equal(first.lang, 'ar-SA');
+  assert.equal(m.states.at(-1), 'loading');
+  m.setVoices([{lang: 'ar-SA'}]);
+  assert.equal(m.spoken.length, 2);
+  assert.equal(m.cancelled(), 1);
+  first.onstart(); first.onerror(); first.onend();
+  assert.equal(m.states.at(-1), 'loading');
+  assert.equal(m.controller.isActive(), true);
+  assert.deepEqual(m.errors, []);
+  m.setVoices([{lang: 'ar-SA'}]);
+  assert.equal(m.spoken.length, 2);
+  m.spoken[1].onstart();
+  m.advance(6000);
+  assert.equal(m.controller.isActive(), true);
+  assert.equal(m.timers.size, 0);
+  m.spoken[1].onend();
+  assert.equal(m.controller.isActive(), false);
+});
+
+test('an early unavailable error can recover after voiceschanged', () => {
+  const m = mock([], {autoStart: false});
+  m.controller.speak('راهنما', 'fa');
+  m.spoken[0].onerror();
+  m.setVoices([{lang: 'fa-IR'}]);
+  assert.equal(m.spoken.length, 2);
+  m.spoken[1].onstart();
+  assert.deepEqual(m.errors, []);
+  assert.equal(m.timers.size, 0);
+});
+
+test('silent startup expires once and late voices cannot restart cancelled speech', () => {
+  for (const voices of [[], [{lang: 'ar-SA'}]]) {
+    const m = mock(voices, {autoStart: false});
+    m.controller.speak('اتبع الإشارات', 'ar');
+    m.advance(5000);
+    assert.equal(m.controller.isActive(), false);
+    assert.deepEqual(m.errors, ['unavailable']);
+    m.setVoices([{lang: 'ar-SA'}]);
+    m.spoken[0].onstart(); m.spoken[0].onerror(); m.spoken[0].onend();
+    m.advance(10000);
+    assert.equal(m.spoken.length, 1);
+    assert.deepEqual(m.errors, ['unavailable']);
+  }
+});
+
+test('Stop and replacement invalidate pending retries and watchdogs', () => {
+  const m = mock([], {autoStart: false});
+  m.controller.speak('old', 'ar');
+  m.controller.stop();
+  m.setVoices([{lang: 'ar-SA'}]);
+  assert.equal(m.spoken.length, 1);
+  assert.equal(m.timers.size, 0);
+  m.controller.speak('new', 'ar');
+  m.spoken[0].onstart(); m.spoken[0].onerror();
+  m.advance(5000);
+  assert.deepEqual(m.errors, ['unavailable']);
+  assert.equal(m.controller.isActive(), false);
+});
+
+test('retries do not extend the startup deadline and voices-list errors are contained', () => {
+  const m = mock([], {autoStart: false});
+  m.synth.getVoices = () => {throw Error('engine initializing');};
+  assert.equal(m.controller.speak('راهنما', 'fa'), true);
+  m.advance(4000);
+  m.synth.getVoices = () => [{lang: 'fa-IR'}];
+  m.events.voiceschanged();
+  assert.equal(m.spoken.length, 2);
+  m.advance(1000);
+  assert.deepEqual(m.errors, ['unavailable']);
+});
+
+test('synchronous start clears the watchdog and locale tags are normalized', () => {
+  const voice = {lang: 'ar_SA'};
+  const m = mock([voice]);
+  assert.equal(selectVoice([voice], 'AR_sa'), voice);
+  m.controller.speak('اتبع الإشارات', 'AR_sa');
+  assert.equal(m.timers.size, 0);
+  m.advance(6000);
+  assert.deepEqual(m.errors, []);
 });

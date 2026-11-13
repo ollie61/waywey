@@ -8,7 +8,7 @@ test("JGH Admissions B-114 directions are specific and multilingual",()=>{
  assert.equal(d.loc,"B-114");
  const item=routes.stationDestinationDirections["main>"+d.id];
  assert.ok(item);
- for(const lang of ["en","fr","es","pt","he","ar","ru","vi","sw","bg"]){
+ for(const lang of ["en","fr","es","pt","he","ar","ru","vi","fa","sw","bg"]){
   assert.ok(Array.isArray(item[lang]) && item[lang].length===2,lang);
   assert.match(item[lang].join(" "),/B-114/,lang);
  }
@@ -16,6 +16,8 @@ test("JGH Admissions B-114 directions are specific and multilingual",()=>{
  assert.match(item.fr.join(" "),/tournez à droite/i);
  assert.match(item.en[1],/on your left/i);
  assert.match(item.fr[1],/à votre gauche/i);
+ assert.match(item.fa[0],/راست/);
+ assert.match(item.fa[1],/چپ/);
  assert.doesNotMatch(item.en[1],/on your right/i);
  assert.doesNotMatch(item.fr[1],/à votre droite/i);
  assert.equal(routes.stationDestinationDirections["a>"+d.id],undefined);

@@ -87,25 +87,14 @@ def main() -> int:
             if "location.search.slice(1)" not in redirect:
                 errors.append(f"{hospital_id}/index.html: redirect does not preserve query parameters")
 
-        link_token = f'href="./{hospital_id}/"'
-        pos = app.find(link_token)
-        if pos < 0:
-            errors.append(f"app.js: landing selector missing hospital {hospital_id}")
-            continue
-
-        card_end = app.find("</a>", pos)
-        card = app[pos:card_end if card_end >= 0 else pos + 1000]
-        badge = re.search(r"strengthBadge\((\d+),", card)
-        if not badge:
-            errors.append(f"app.js: landing selector {hospital_id} has no dataset-strength badge")
-        else:
-            landing_level = int(badge.group(1))
-            config_level = int(config["datasetStrength"]["level"])
-            if landing_level != config_level:
-                errors.append(
-                    f"app.js: landing selector {hospital_id} strength {landing_level} "
-                    f"does not match config level {config_level}"
-                )
+    data_module = read("js/data.js")
+    if 'return "jgh";' not in data_module:
+        errors.append("js/data.js: JGH default entry missing")
+    for obsolete in ("createVoiceSearch", "voiceController", "VOICE_UI", "showHospitalLanding"):
+        if obsolete in app:
+            errors.append(f"app.js: obsolete {obsolete} remains")
+    if "voice-search.js" in sw or 'id="voiceSearch"' in read("index.html"):
+        errors.append("Microphone recognition must not be shipped")
 
     if errors:
         for error in errors:
