@@ -1,7 +1,7 @@
 // Shared presentation helpers. DOM orchestration remains in app.js.
 
 export function destinationName(d,lang){
-  return (d&&d[lang])||d.en||d.he||d.ar||d.fr||"";
+  return d?.[lang]||d?.en||d?.he||d?.ar||d?.fr||"";
 }
 
 export function destinationSecondary(d,lang,languages){
@@ -13,7 +13,7 @@ export function destinationSecondary(d,lang,languages){
   return "";
 }
 
-export function appIsRtl(lang){return lang==="he"||lang==="ar";}
+export function appIsRtl(lang){return ["he","ar","fa"].includes(lang);}
 
 export function strengthBadge(level,labelFr,labelEn){
   const n=Math.max(1,Math.min(4,Number(level)||1));

@@ -24,7 +24,7 @@ ar:{to:"اذهب إلى",room:"الغرفة",floor:"الطابق",from:"من",st
 he:{to:"גשו אל",room:"חדר",floor:"קומה",from:"מ־",stay:"הישארו ב",elev:"השתמשו במעליות כדי להגיע אל",follow:"עקבו אחר השילוט הפנימי דרך",hk1:"עלו במעליות של בניין H לקומה 3.",hk2:"השתמשו במעבר הפנימי H–K אל הלובי של בניין K.",kh1:"מהלובי של בניין K השתמשו במעבר הפנימי H–K אל בניין H, קומה 3.",final:"לאחר מכן עקבו אחר השילוט אל",listen:"האזנה",back:"חזרה לשגריר"},
 ru:{to:"Идите в",room:"Кабинет",floor:"Этаж",from:"От",stay:"Оставайтесь в",elev:"Поднимитесь на лифте на",follow:"Следуйте указателям внутри здания через",hk1:"Поднимитесь на лифте павильона H на 3-й этаж.",hk2:"По внутреннему переходу H–K пройдите в вестибюль павильона K.",kh1:"Из вестибюля павильона K по переходу H–K пройдите в павильон H, на 3-й этаж.",final:"Затем следуйте указателям к",listen:"Прослушать",back:"Назад к волонтёру"},
 vi:{to:"Đi đến",room:"Phòng",floor:"Tầng",from:"Từ",stay:"Ở lại",elev:"Dùng thang máy để đến",follow:"Đi theo biển chỉ dẫn bên trong qua",hk1:"Đi thang máy của Khu H lên tầng 3.",hk2:"Dùng lối nối trong nhà H–K để đến sảnh Khu K.",kh1:"Từ sảnh Khu K, dùng lối nối trong nhà H–K đến Khu H, tầng 3.",final:"Sau đó đi theo biển chỉ dẫn đến",listen:"Nghe",back:"Quay lại tình nguyện viên"},
-fa:{"stop":"توقف","unavailable":"صدای فارسی در این دستگاه در دسترس نیست. لطفاً راهنما را بخوانید یا از راهنمای بیمارستان کمک بگیرید."},
+fa:{"to":"بروید به","room":"اتاق","floor":"طبقه","from":"از","stay":"در همان محل بمانید","elev":"برای رسیدن به این طبقه از آسانسور استفاده کنید:","follow":"تابلوهای داخل ساختمان را دنبال کنید و از این بخش‌ها عبور کنید:","hk1":"با آسانسورهای ساختمان H به طبقه سوم بروید.","hk2":"از راهروی ارتباطی داخلی H–K به لابی ساختمان K بروید.","kh1":"از لابی ساختمان K از راهروی داخلی H–K به ساختمان H، طبقه سوم بروید.","final":"سپس تابلوهای راهنما را به سوی این مقصد دنبال کنید:","listen":"گوش دادن","back":"بازگشت به راهنمای بیمارستان"},
 bg:{to:"Отидете до",room:"Стая",floor:"Етаж",from:"От",stay:"Останете в",elev:"Използвайте асансьора до",follow:"Следвайте вътрешните указателни табели през",hk1:"Вземете асансьора в павилион H до 3-тия етаж.",hk2:"Използвайте вътрешната връзка H–K до фоайето на павилион K.",kh1:"От фоайето на павилион K използвайте връзката H–K до павилион H, 3-ти етаж.",final:"След това следвайте табелите към",listen:"Слушай",back:"Назад към посланика"}
 };
 
@@ -37,7 +37,7 @@ es:{button:"Mostrar QR",title:"Escanee para ver las indicaciones",instruction:"E
 pt:{button:"Mostrar QR",title:"Escaneie para ver as direções",instruction:"Escaneie este código QR com o seu telefone para abrir estas direções.",back:"Voltar às direções"},
 ru:{button:"Показать QR",title:"Сканируйте для маршрута",instruction:"Отсканируйте этот QR-код телефоном, чтобы открыть эти указания.",back:"Назад к указаниям"},
 vi:{button:"Hiện mã QR",title:"Quét để xem chỉ đường",instruction:"Quét mã QR này bằng điện thoại để mở các chỉ dẫn này.",back:"Quay lại chỉ dẫn"},
-fa:{"to":"بروید به","room":"اتاق","floor":"طبقه","from":"از","stay":"در همان محل بمانید","elev":"برای رسیدن به این طبقه از آسانسور استفاده کنید:","follow":"تابلوهای داخل ساختمان را دنبال کنید و از این بخش‌ها عبور کنید:","hk1":"با آسانسورهای ساختمان H به طبقه سوم بروید.","hk2":"از راهروی ارتباطی داخلی H–K به لابی ساختمان K بروید.","kh1":"از لابی ساختمان K از راهروی داخلی H–K به ساختمان H، طبقه سوم بروید.","final":"سپس تابلوهای راهنما را به سوی این مقصد دنبال کنید:","listen":"گوش دادن","back":"بازگشت به راهنمای بیمارستان"},
+fa:{"button":"نمایش کد QR","title":"اسکن برای دریافت مسیر","instruction":"این کد QR را با تلفن خود اسکن کنید تا مسیر را ببینید.","back":"بازگشت به مسیر"},
 bg:{button:"Покажи QR",title:"Сканирайте за указания",instruction:"Сканирайте този QR код с телефона си, за да отворите указанията.",back:"Назад към указанията"}
 };
 
@@ -180,7 +180,7 @@ es:{open:"Abrir mapa exterior"},
 pt:{open:"Abrir mapa externo"},
 ru:{open:"Открыть внешнюю карту"},
 vi:{open:"Mở bản đồ bên ngoài"},
-fa:{"button":"نمایش کد QR","title":"اسکن برای دریافت مسیر","instruction":"این کد QR را با تلفن خود اسکن کنید تا مسیر را ببینید.","back":"بازگشت به مسیر"},
+fa:{"open":"باز کردن نقشهٔ بیرونی"},
 bg:{open:"Отвори външна карта"}
 };
 
@@ -221,6 +221,7 @@ ar:{
 };
 
 export const VISITOR_LINK_UI={
+ fa:{missing:"این راهنما در دسترس نیست یا پیوند ناقص است. دوباره بخش مورد نظر را جست‌وجو کنید یا از راهنمای بیمارستان کمک بگیرید.",station:"نقطهٔ شروع این پیوند مشخص نیست یا دیگر در دسترس نیست. پیش از باز کردن راهنما، محل فعلی خود را انتخاب کنید.",choose:"نقطهٔ شروع خود را انتخاب کنید",open:"باز کردن راهنمای مسیر"},
  en:{missing:"These directions are unavailable or the link is incomplete. Search for the department again, or ask an ambassador for help.",station:"This link’s starting point is missing or no longer available. Select where you are before opening directions.",choose:"Select your starting point",open:"Open directions"},
  fr:{missing:"Ces indications sont indisponibles ou le lien est incomplet. Recherchez le service ou demandez de l’aide à un ambassadeur.",station:"Le point de départ de ce lien est absent ou indisponible. Sélectionnez votre position avant d’ouvrir les indications.",choose:"Sélectionnez votre point de départ",open:"Ouvrir les indications"},
  he:{missing:"ההוראות אינן זמינות או שהקישור אינו שלם. חפשו שוב את המחלקה או בקשו עזרה מנציג.",station:"נקודת ההתחלה בקישור חסרה או אינה זמינה עוד. בחרו היכן אתם נמצאים לפני פתיחת ההוראות.",choose:"בחרו נקודת התחלה",open:"פתיחת הוראות"},

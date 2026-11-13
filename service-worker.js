@@ -1,4 +1,4 @@
-const SHELL_CACHE="waywey-cache-29";
+const SHELL_CACHE="waywey-cache-30";
 const DATA_CACHE="waywey-hospital-data-1";
 
 const SHELL_ASSETS=[
@@ -20,6 +20,7 @@ const SHELL_ASSETS=[
   "./js/outdoor-map.js",
   "./js/voice-search.js",
   "./js/voice-playback.js",
+  "./js/photo-capture.js",
   "./js/visitor-links.js"
 ];
 
@@ -57,7 +58,8 @@ function hospitalAssets(id){
     `./hospitals/${id}/routes.json`,
     `./hospitals/${id}/guide.json`,
     `./${id}/`,
-    `./${id}/index.html`
+    `./${id}/index.html`,
+    ...(id==="jgh"?["./jgh/photos.html"]:[])
   ];
 }
 
@@ -80,7 +82,9 @@ async function networkFirstHospital(request){
   const cache=await caches.open(DATA_CACHE);
   try{
     const response=await fetch(request);
-    if(response.ok)await cache.put(request,response.clone());
+    // Storage/quota failures must not replace a fresh network response with
+    // older hospital data (or fail a request that already succeeded).
+    if(response.ok)await cache.put(request,response.clone()).catch(()=>{});
     return response;
   }catch(e){
     const cached=await cache.match(request);
@@ -117,8 +121,10 @@ async function shellResponse(request){
   try{
     const response=await fetch(request,{cache:"no-cache"});
     if(response.ok){
-      const cache=await caches.open(SHELL_CACHE);
-      await cache.put(request,response.clone());
+      try{
+        const cache=await caches.open(SHELL_CACHE);
+        await cache.put(request,response.clone());
+      }catch(e){}
     }
     return response;
   }catch(e){

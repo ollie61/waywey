@@ -52,11 +52,18 @@ export function createVoiceSearch({
   function start(){
     if(active)return false;
 
-    recognition=new Ctor();
-    recognition.lang=voiceLocale(getLanguage());
-    recognition.continuous=false;
-    recognition.interimResults=false;
-    recognition.maxAlternatives=1;
+    try{
+      recognition=new Ctor();
+      recognition.lang=voiceLocale(getLanguage());
+      recognition.continuous=false;
+      recognition.interimResults=false;
+      recognition.maxAlternatives=1;
+    }catch(error){
+      recognition=null;
+      setState("idle");
+      onError("start");
+      return false;
+    }
 
     const session=recognition;
     let receivedResult=false;

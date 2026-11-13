@@ -327,18 +327,19 @@ function populateStations(){
 }
 function stationNode(){
  const o=$("station").selectedOptions[0];
- return o?(o.dataset.node||o.value):"";
+ const node=o?(o.dataset.node||o.value):"";
+ return Object.hasOwn(HOSPITAL.nodeAliases||{},node)?HOSPITAL.nodeAliases[node]:node;
 }
 function stationDestinationSteps(d,lang){
  const key=$("station").value+">"+d.id;
  const route=STATION_DESTINATION_DIRECTIONS[key];
- return route?(route[lang]||route.en||null):null;
+ return route?.[lang]||null;
 }
 function specialRouteSteps(start,target,lang){
  const key=start+">"+target;
  const r=HOSPITAL.specialRoutes&&HOSPITAL.specialRoutes[key];
  if(!r)return null;
- return r[lang]||r.en||null;
+ return r[lang]||null;
 }
 async function loadHospital(){
  const id=hospitalIdFromUrl(),base="./hospitals/"+id+"/";
@@ -517,7 +518,11 @@ function choose(d,scroll=true,queryLang=null){
  stopPlayback();
  pendingVisitor=null;$("visitorLinkNotice").hidden=true;selected=d;if(queryLang)selectedQueryLang=queryLang;const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
  $("destName").textContent=primary+(secondary&&secondary!==primary?" / "+secondary:"");$("destWhere").textContent=displayWhere(d);
- $("pills").innerHTML=(d.p?"<span class='pill'>"+pavilionFor(d.p,appLang)+"</span>":"")+(d.loc?"<span class='pill'>"+d.loc+"</span>":"")+(d.status==="verify"?"<span class='pill verify-pill'>⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify)+"</span>":"");
+ $("pills").replaceChildren();
+ for(const [text,verify] of [[d.p&&pavilionFor(d.p,appLang),false],[d.loc,false],[d.status==="verify"&&"⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify),true]]){
+   if(!text)continue;
+   const pill=document.createElement("span");pill.className="pill"+(verify?" verify-pill":"");pill.textContent=text;$("pills").append(pill);
+ }
  renderSteps("steps",ambassadorSteps(d));
  const note=noteFor(d);$("note").style.display=note?"block":"none";$("note").textContent=note;
  renderRouteProvenance(d);
@@ -540,6 +545,7 @@ function makeVisitorUrl(){
 function showVisitorQr(){
  if(!selected)return;
  const lang=$("visitorLang").value,qrt=QR_UI[lang]||QR_UI.en,url=makeVisitorUrl();
+ $("qrDialog").lang=lang;$("qrDialog").dir=appIsRtl(lang)?"rtl":"ltr";
  $("qrTitle").textContent=qrt.title;
  $("qrInstruction").textContent=qrt.instruction;
  $("qrBack").textContent=qrt.back;
@@ -586,7 +592,7 @@ function renderVisitor(){
  stopPlayback();
  const lang=$("visitorLang").value,t=I18N[lang]||I18N.en,p=$("visitorPanel");
  p.lang=lang;
- p.dir=(lang==="ar"||lang==="he"||lang==="fa")?"rtl":"ltr";
+ p.dir=appIsRtl(lang)?"rtl":"ltr";
  $("vName").textContent=destinationName(selected,lang);
  $("vWhere").textContent=displayWhere(selected,lang);
  renderSteps("vSteps",localizedSteps(selected,lang));
@@ -604,7 +610,7 @@ function renderVisitorLinkNotice(kind,lang){
  }
 }
 function openLinkedVisitor(d){
- selected=d;pendingVisitor=null;$("visitorLinkNotice").hidden=true;
+ choose(d,false);
  openDialog($("visitorDialog"),{initialFocus:"#visitorLang"});renderVisitor();
 }
 
