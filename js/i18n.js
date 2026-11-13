@@ -84,7 +84,7 @@ ar:{
  indoor:"اتبع اللافتات داخل المستشفى:",outsideMapped:"الوجهة خارج المسار الداخلي المرسوم. العنوان / الموقع: ",unknownLocation:"الموقع الدقيق غير مذكور في المصدر الحالي. تحقّق من مستندات الموعد أو اللافتات.",noRoute:"لا يوجد في WayWey حتى الآن مسار داخلي عام موثّق بين نقطة البداية والوجهة. اتبع لافتات المستشفى الحالية.",verify:"بحاجة للتحقق",close:"إغلاق"
 }
 };
-export const LANGUAGE_NAMES={en:"English",fr:"Français",he:"עברית",ar:"العربية"};
+export const LANGUAGE_NAMES={"en":"English","fr":"French — Français","ar":"Arabic — العربية","he":"Hebrew — עברית","es":"Spanish — Español","pt":"Portuguese — Português","ru":"Russian — Русский","vi":"Vietnamese — Tiếng Việt","fa":"Persian — فارسی","bg":"Bulgarian — Български"};
 
 export function routeNoticeText(key,lang){
  const table={
