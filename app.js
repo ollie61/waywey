@@ -1,18 +1,17 @@
-import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,VOICE_UI,LANGUAGE_NAMES,VISITOR_LINK_UI,routeNoticeText} from "./js/i18n.js";
+import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,LANGUAGE_NAMES,VISITOR_LINK_UI,routeNoticeText} from "./js/i18n.js";
 import {rankResults,inferQueryLanguage} from "./js/search.js";
 import {findRoute,resolveTargetNode,routeInstructions} from "./js/routing.js";
-import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,strengthBadge} from "./js/ui.js";
+import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion} from "./js/ui.js";
 import {hospitalIdFromUrl,fetchJson} from "./js/data.js";
 import {initPwa} from "./js/pwa.js";
 import {formatAuditDate,sourceLinks,hospitalSourceLinks} from "./js/provenance.js";
 import {setupDialog,openDialog,closeDialog,announce} from "./js/accessibility.js";
 import {outdoorMapUrl} from "./js/outdoor-map.js";
 import {visitorDestinationKey,resolveVisitorDestination} from "./js/visitor-links.js";
-import {createVoiceSearch} from "./js/voice-search.js";
 import {createVoicePlayback} from "./js/voice-playback.js";
 import {PLAYBACK_UI} from "./js/i18n.js";
 
-const APP_VERSION="0.3.3";
+const APP_VERSION="1.0.0-rc.1";
 let HOSPITAL={};
 let DATA=[];
 let GRAPH={};
@@ -128,7 +127,6 @@ let selected=null;
 let selectedQueryLang=null;
 let appLang="en";
 let pwaController=null;
-let voiceController=null;
 let playbackController=null;
 let visitorLanguageChosen=false;
 function refreshPlaybackUi(){
@@ -153,9 +151,7 @@ function initVoicePlayback(){
  });
  $("visitorDialog").addEventListener("close",stopPlayback);
  $("visitorDialog").addEventListener("cancel",stopPlayback);
- window.addEventListener("pagehide",()=>{stopPlayback();voiceController?.cancel();});
- // A native speech/permission surface may temporarily hide the page. Keep
- // recognition alive so its result can still populate search on return.
+ window.addEventListener("pagehide",()=>{stopPlayback();});
  document.addEventListener("visibilitychange",()=>{if(document.hidden)stopPlayback();});
 }
 function pwaLabels(){return PWA_UI[appLang]||PWA_UI.en;}
@@ -163,154 +159,6 @@ function ensurePwa(){
   if(!pwaController)pwaController=initPwa({labels:pwaLabels});
   else pwaController.refreshLabels();
   return pwaController;
-}
-function voiceText(){return VOICE_UI[appLang]||VOICE_UI.en;}
-
-function voiceErrorMessage(code){
-  const t=voiceText();
-  if(code==="not-allowed"||code==="service-not-allowed")return t.denied;
-  if(code==="no-speech")return t.noSpeech;
-  if(code==="audio-capture")return t.audio;
-  if(code==="network")return t.network;
-  return t.error;
-}
-
-function renderVoiceButton(state="idle"){
-  const btn=$("voiceSearch");if(!btn||!voiceController||!voiceController.supported)return;
-  const active=state==="starting"||state==="listening"||voiceController.isActive();
-  btn.hidden=false;
-  btn.setAttribute("aria-pressed",active?"true":"false");
-  btn.textContent=active?"■ "+voiceText().stop:"🎙 "+voiceText().button;
-}
-
-function refreshVoiceUi(){
-  const btn=$("voiceSearch"),privacy=$("voicePrivacy");
-  if(!btn||!privacy)return;
-  if(!voiceController||!voiceController.supported){
-    btn.hidden=true;privacy.hidden=true;$("voiceLanguageControl").hidden=true;return;
-  }
-  $("voiceLanguageControl").hidden=false;
-  $("voiceLanguageLabel").textContent=voiceText().language;
-  $("voiceLanguage").options[0].textContent=voiceText().sameLanguage;
-  privacy.hidden=false;
-  privacy.textContent=voiceText().privacy;
-  renderVoiceButton(voiceController.isActive()?"listening":"idle");
-}
-
-function initVoiceSearch(){
-  const btn=$("voiceSearch"),status=$("voiceStatus");
-  if(!btn||!status)return;
-  voiceController=createVoiceSearch({
-    getLanguage:()=>$("voiceLanguage").value||appLang,
-    onState:state=>{
-      renderVoiceButton(state);
-      if(state==="starting"||state==="listening"){
-        status.textContent=voiceText().listening;
-        announce(voiceText().listening);
-      }
-    },
-    onResult:transcript=>{
-      $("q").value=transcript;
-      search();
-      const message=templateText(voiceText().recognized,{text:transcript});
-      status.textContent=message;
-      announce(message);
-      $("q").focus();
-    },
-    onError:code=>{
-      const message=voiceErrorMessage(code);
-      status.textContent=message;
-      announce(message);
-    }
-  });
-  refreshVoiceUi();
-  $("voiceLanguage").onchange=()=>{
-    voiceController.cancel();
-    status.textContent="";
-  };
-  btn.onclick=()=>{
-    if(!voiceController||!voiceController.supported)return;
-    if(voiceController.isActive())voiceController.stop();
-    else{
-      stopPlayback();
-      status.textContent="";
-      voiceController.start();
-    }
-  };
-}
-
-function showHospitalLanding(){
- document.documentElement.lang="fr";
- document.documentElement.dir="ltr";
- document.title="WayWey — Choisir un hôpital / Select a hospital";
- const meta=document.querySelector('meta[name="description"]');
- if(meta)meta.content="WayWey — choisissez un hôpital / select a hospital";
- document.body.innerHTML=`
- <a class="skip-link" href="#mainContent">Skip to main content / Aller au contenu principal</a>
- <div id="srStatus" class="sr-only" aria-live="polite" aria-atomic="true"></div>
- <header class="landing-header">
-   <div class="landing-wrap">
-     <div>
-       <div class="landing-brand">WayWey</div>
-       <div class="landing-kicker">Orientation hospitalière · Hospital wayfinding · v${APP_VERSION}</div>
-     </div>
-   </div>
- </header>
- <main id="mainContent" class="landing-wrap landing-main" tabindex="-1">
-   <section class="landing-intro">
-     <h1>Choisir un hôpital</h1>
-     <p class="landing-en">Select a hospital</p>
-     <p>Sélectionnez l’établissement où vous travaillez. / Select the hospital where you are working.</p>
-   </section>
-   <h2 class="region-heading">Canada · Montréal</h2>
-   <section class="hospital-grid" aria-label="Hôpitaux disponibles à Montréal / Available hospitals in Montréal">
-     <a class="hospital-card" href="./jgh/">
-       <span class="hospital-code">HGJ · JGH</span>
-       <strong>Hôpital général juif</strong>
-       <span>Jewish General Hospital</span>
-       ${strengthBadge(4,"Très forte","Very strong")}
-       <small>Montréal</small>
-     </a>
-     <a class="hospital-card" href="./chum/">
-       <span class="hospital-code">CHUM</span>
-       <strong>Centre hospitalier de l’Université de Montréal</strong>
-       <span>Centre hospitalier de l’Université de Montréal</span>
-       ${strengthBadge(3,"Forte","Strong")}
-       <small>Montréal</small>
-     </a>
-     <a class="hospital-card" href="./glen/">
-       <span class="hospital-code">CUSM · MUHC</span>
-       <strong>Site Glen</strong>
-       <span>Glen site</span>
-       ${strengthBadge(3,"Forte","Strong")}
-       <small>Montréal</small>
-     </a>
-     <a class="hospital-card" href="./verdun/">
-       <span class="hospital-code">VERDUN</span>
-       <strong>Hôpital de Verdun</strong>
-       <span>Verdun Hospital</span>
-       ${strengthBadge(2,"En développement","Developing")}
-       <small>Montréal</small>
-     </a>
-   </section>
-   <h2 class="region-heading" dir="ltr">ישראל · Israel · إسرائيل</h2>
-   <section class="hospital-grid" aria-label="Hospitals in Israel">
-     <a class="hospital-card" href="./hadassah-ein-kerem/">
-       <span class="hospital-code">HADASSAH · EIN KEREM</span>
-       <strong dir="rtl">הדסה עין כרם</strong>
-       <span>Hadassah Ein Kerem</span>
-       <span dir="rtl">هداسا عين كارم</span>
-       ${strengthBadge(3,"Élargi — validation des itinéraires requise","Expanded — route validation needed")}
-       <small>ירושלים · Jerusalem · القدس</small>
-     </a>
-   </section>
-   <div class="strength-legend">
-     <span><strong>Force du jeu de données / Dataset strength</strong></span>
-     <span>▮ = initial · ▮▮ = en développement · ▮▮▮ = forte · ▮▮▮▮ = très forte</span>
-     <small>Indique la couverture, le niveau de vérification et la maturité du routage — pas une garantie absolue d’exactitude.</small>
-   </div>
-   <div class="landing-note">WayWey est actuellement un outil non officiel de soutien à l’orientation. / WayWey is currently an unofficial wayfinding support tool.</div>
- </main>`;
 }
 function storageKey(name){return "waywey."+(HOSPITAL.id||hospitalIdFromUrl())+"."+name}
 function populateStations(){
@@ -391,7 +239,6 @@ function renderQuickGuide(){
 function openQuickGuide(){renderQuickGuide();openDialog($("guideDialog"),{initialFocus:".guide-lang-btn, #closeGuide"});}
 function setAppLanguage(lang){
  stopPlayback();
- voiceController?.cancel();
  const allowed=hospitalLanguages();
  appLang=allowed.includes(lang)?lang:(HOSPITAL.defaultAppLanguage&&allowed.includes(HOSPITAL.defaultAppLanguage)?HOSPITAL.defaultAppLanguage:allowed[0]||"en");
  document.documentElement.lang=appLang;
@@ -409,12 +256,11 @@ function setAppLanguage(lang){
  $("resultHeading").textContent=t.resultHeading;$("showVisitor").textContent=t.showVisitor;$("newSearch").textContent=t.newSearch;$("disclaimer").textContent=t.disclaimer;
  [...$("station").options].forEach(o=>o.textContent=o.dataset[appLang]||o.dataset.en||o.textContent);
  $("appLang").value=appLang;
- try{localStorage.setItem(storageKey("appLang"),appLang)}catch(e){}
+ try{sessionStorage.setItem(storageKey("appLang"),appLang)}catch(e){}
  if($("q").value.trim())search();
  if(selected)choose(selected,false);
  if($("guideDialog").open)renderQuickGuide();
  renderDatasetProvenance();
- refreshVoiceUi();
  if(pwaController)pwaController.refreshLabels();
 }
 
@@ -580,7 +426,6 @@ async function shareVisitorDirections(){
 }
 function showVisitor(){
  if(!selected)return;
- voiceController?.cancel();
  if(!visitorLanguageChosen){
    const preferred=appLang||HOSPITAL.defaultVisitorLanguage||HOSPITAL.defaultAppLanguage||"en";
    if([...$("visitorLang").options].some(o=>o.value===preferred))$("visitorLang").value=preferred;
@@ -616,11 +461,6 @@ function openLinkedVisitor(d){
 
 async function bootstrap(){
  const requestedHospital=hospitalIdFromUrl();
- if(!requestedHospital){
-   showHospitalLanding();
-   ensurePwa();
-   return;
- }
  ensurePwa();
  try{
    await loadHospital();
@@ -632,7 +472,6 @@ async function bootstrap(){
  }
 
  ["guideDialog","visitorDialog","qrDialog"].forEach(id=>setupDialog($(id)));
- initVoiceSearch();
  initVoicePlayback();
  $("appLang").onchange=()=>setAppLanguage($("appLang").value);
  $("quickGuideBtn").onclick=openQuickGuide;
@@ -641,7 +480,7 @@ async function bootstrap(){
  $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
  $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");selected=null;selectedQueryLang=null;$("q").focus();window.scrollTo({top:0,behavior:motionBehavior()})};
  $("showVisitor").onclick=showVisitor;
- $("visitorLang").onchange=()=>{visitorLanguageChosen=true;renderVisitor();};
+ $("visitorLang").onchange=()=>{visitorLanguageChosen=true;try{sessionStorage.setItem(storageKey("visitorLang"),$("visitorLang").value)}catch(e){};renderVisitor();};
  $("showQr").onclick=showVisitorQr;
  $("shareVisitor").onclick=shareVisitorDirections;
  $("closeQr").onclick=closeVisitorQr;
@@ -651,8 +490,7 @@ async function bootstrap(){
  $("listen").onclick=()=>{
    if(!selected)return;
    if(playbackController.isActive()){stopPlayback();return;}
-   voiceController?.cancel();
-   $("playbackStatus").textContent="";
+     $("playbackStatus").textContent="";
    playbackController.speak(localizedSteps(selected,$("visitorLang").value).join(" "),$("visitorLang").value);
  };
 
@@ -666,9 +504,13 @@ async function bootstrap(){
  }
  const urlParams=new URLSearchParams(window.location.search);
  const requestedGuideLang=urlParams.get("guide");
- // New hospital entry uses the configured default, not a previously saved ambassador language.
- // Explicit guide language links remain supported.
- setAppLanguage(hospitalLanguages().includes(requestedGuideLang)?requestedGuideLang:(HOSPITAL.defaultAppLanguage||hospitalLanguages()[0]||"en"));
+ // Keep each shift's interface choice; a fresh session starts in French at JGH.
+ let savedAppLang=null,savedVisitorLang=null;
+ try{savedAppLang=sessionStorage.getItem(storageKey("appLang"));savedVisitorLang=sessionStorage.getItem(storageKey("visitorLang"))}catch(e){}
+ setAppLanguage(hospitalLanguages().includes(requestedGuideLang)?requestedGuideLang:(hospitalLanguages().includes(savedAppLang)?savedAppLang:(HOSPITAL.defaultAppLanguage||hospitalLanguages()[0]||"en")));
+ if([...$("visitorLang").options].some(o=>o.value===savedVisitorLang)){
+   $("visitorLang").value=savedVisitorLang;visitorLanguageChosen=true;
+ }
  $("station").onchange=()=>{try{localStorage.setItem(storageKey("station"),$("station").value)}catch(e){};$("showVisitor").disabled=!$("station").value;if(selected)choose(selected,false);if(pendingVisitor)$("recoverVisitor").disabled=!$("station").value};
  $("recoverVisitor").onclick=()=>{if(pendingVisitor&&$("station").value)openLinkedVisitor(pendingVisitor)};
  if(requestedGuideLang&&QUICK_GUIDE[appLang])setTimeout(()=>{try{openQuickGuide()}catch(e){}},60);

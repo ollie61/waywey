@@ -9,6 +9,7 @@ on:
       - "scripts/validate_hospitals.py"
       - "scripts/refactor_smoke.mjs"
       - "scripts/release_candidate_check.py"
+      - "scripts/verify_deployment.mjs"
       - "scripts/audit_search_all_hospitals.mjs"
       - ".github/workflows/validate-data.yml"
       - "app.js"
@@ -33,6 +34,7 @@ on:
       - "scripts/validate_hospitals.py"
       - "scripts/refactor_smoke.mjs"
       - "scripts/release_candidate_check.py"
+      - "scripts/verify_deployment.mjs"
       - "scripts/audit_search_all_hospitals.mjs"
       - ".github/workflows/validate-data.yml"
       - "app.js"
@@ -87,6 +89,7 @@ jobs:
           done
           echo "Checking service-worker.js"
           node --check service-worker.js
+          node --check scripts/verify_deployment.mjs
       - name: Run modularisation smoke checks
         run: node scripts/refactor_smoke.mjs
       - name: Run regression tests

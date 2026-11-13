@@ -1,4 +1,4 @@
-const SHELL_CACHE="waywey-cache-30";
+const SHELL_CACHE="waywey-cache-31";
 const DATA_CACHE="waywey-hospital-data-1";
 
 const SHELL_ASSETS=[
@@ -18,7 +18,6 @@ const SHELL_ASSETS=[
   "./js/provenance.js",
   "./js/accessibility.js",
   "./js/outdoor-map.js",
-  "./js/voice-search.js",
   "./js/voice-playback.js",
   "./js/photo-capture.js",
   "./js/visitor-links.js"
@@ -79,15 +78,17 @@ function isHospitalJson(url){
 }
 
 async function networkFirstHospital(request){
-  const cache=await caches.open(DATA_CACHE);
+  // Private browsing or device storage failures can reject open(), not just put().
+  // Online navigation must still get fresh hospital data in that case.
+  const cache=await caches.open(DATA_CACHE).catch(()=>null);
   try{
     const response=await fetch(request);
     // Storage/quota failures must not replace a fresh network response with
     // older hospital data (or fail a request that already succeeded).
-    if(response.ok)await cache.put(request,response.clone()).catch(()=>{});
+    if(response.ok&&cache)await cache.put(request,response.clone()).catch(()=>{});
     return response;
   }catch(e){
-    const cached=await cache.match(request);
+    const cached=cache&&await cache.match(request);
     if(cached)return cached;
     throw e;
   }
@@ -96,8 +97,8 @@ async function networkFirstHospital(request){
 async function navigationResponse(request){
   const url=new URL(request.url),scope=new URL(self.registration.scope);
   if(url.pathname===scope.pathname||url.pathname===scope.pathname+"index.html"){
-    const cache=await caches.open(SHELL_CACHE);
-    const shell=await cache.match("./index.html");
+    const cache=await caches.open(SHELL_CACHE).catch(()=>null);
+    const shell=cache&&await cache.match("./index.html").catch(()=>null);
     if(shell)return shell;
   }
   try{
@@ -114,8 +115,8 @@ async function shellResponse(request){
   const url=new URL(request.url);
   const asset=SHELL_ASSETS.some(path=>new URL(path,self.registration.scope).pathname===url.pathname);
   if(asset){
-    const cache=await caches.open(SHELL_CACHE);
-    const cached=await cache.match(request,{ignoreSearch:true});
+    const cache=await caches.open(SHELL_CACHE).catch(()=>null);
+    const cached=cache&&await cache.match(request,{ignoreSearch:true}).catch(()=>null);
     if(cached)return cached;
   }
   try{

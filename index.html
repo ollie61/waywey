@@ -30,19 +30,8 @@
     <label id="searchLabel" for="q">English or French</label>
     <div class="row search-row">
       <input id="q" class="field" type="search" autocomplete="off" enterkeyhint="search" aria-controls="results" aria-autocomplete="list" placeholder="e.g. urology, cancer, dentiste, MRI, accouchement">
-      <button id="voiceSearch" class="btn secondary voice-btn" type="button" aria-pressed="false" hidden>🎙 Voice</button>
       <button id="clear" class="btn secondary" type="button">Clear</button>
     </div>
-    <div id="voiceLanguageControl" class="row" hidden>
-      <label id="voiceLanguageLabel" for="voiceLanguage">Spoken language</label>
-      <select id="voiceLanguage" class="field" style="max-width:230px">
-        <option value="">Same as interface</option>
-        <option value="fr">Français</option><option value="en">English</option>
-        <option value="he">עברית</option><option value="ar">العربية</option>
-      </select>
-    </div>
-    <div id="voiceStatus" class="status voice-status" role="status" aria-live="polite"></div>
-    <div id="voicePrivacy" class="voice-privacy" hidden></div>
     <div id="results" class="results" role="region" aria-live="polite" aria-labelledby="searchHeading"></div>
   </section>
 

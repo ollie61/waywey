@@ -38,86 +38,36 @@ async function contextTest(run){
   try{await run(page,context);assert.deepEqual(errors,[]);}finally{await context.close();}
 }
 
-for(const constructorName of ['SpeechRecognition','webkitSpeechRecognition']){
-test(`Voix fills JGH search after recognition with ${constructorName}`,async()=>contextTest(async page=>{
-  await page.addInitScript(name=>{
-    window.recognitionTest={instances:[],aborts:0};
-    const Recognition=class{
-      constructor(){window.recognitionTest.instances.push(this);}
-      start(){this.onstart();}
-      stop(){this.onend();}
-      abort(){window.recognitionTest.aborts++;}
-    };
-    Object.defineProperty(window,'SpeechRecognition',{value:name==='SpeechRecognition'?Recognition:undefined});
-    Object.defineProperty(window,'webkitSpeechRecognition',{value:name==='webkitSpeechRecognition'?Recognition:undefined});
-  },constructorName);
-  await page.goto(origin+'/?hospital=jgh');await ready(page);
-  await page.fill('#q','existing search');await page.click('#voiceSearch');
-  assert.equal(await page.evaluate(()=>window.recognitionTest.instances[0].lang),'fr-CA');
-  await page.evaluate(()=>{
-    Object.defineProperty(document,'hidden',{configurable:true,value:true});
-    document.dispatchEvent(new Event('visibilitychange'));
-    Object.defineProperty(document,'hidden',{configurable:true,value:false});
-    document.dispatchEvent(new Event('visibilitychange'));
-    const r=window.recognitionTest.instances[0];
-    r.onresult({resultIndex:0,results:[Object.assign([{transcript:'cardiologie'}],{isFinal:true})]});
-    r.onend();
-  });
-  assert.equal(await page.evaluate(()=>window.recognitionTest.aborts),0);
-  assert.equal(await page.locator('#q').inputValue(),'cardiologie');
-  assert.ok(await page.locator('#results button').count()>0);
-  assert.match(await page.locator('#voiceStatus').innerText(),/Entendu : cardiologie/);
-  await page.click('#voiceSearch');
-  await page.evaluate(()=>window.recognitionTest.instances.at(-1).onend());
-  assert.match(await page.locator('#voiceStatus').innerText(),/Aucune parole/);
-  assert.equal(await page.locator('#q').inputValue(),'cardiologie');
-  assert.equal(await page.locator('#voiceSearch').getAttribute('aria-pressed'),'false');
-  await page.click('#voiceSearch');
-  await page.evaluate(()=>{const r=window.recognitionTest.instances.at(-1);r.onerror({error:'not-allowed'});r.onend();});
-  assert.match(await page.locator('#voiceStatus').innerText(),/autorisation/);
-  await page.selectOption('#appLang','en');await page.click('#voiceSearch');
-  assert.equal(await page.evaluate(()=>window.recognitionTest.instances.at(-1).lang),'en-CA');
-  await page.evaluate(()=>{const r=window.recognitionTest.instances.at(-1);r.onresult({results:[[{transcript:'cardiology'}]]});r.onend();});
-  assert.equal(await page.locator('#q').inputValue(),'cardiology');
-  await page.selectOption('#appLang','fr');
-  await page.selectOption('#voiceLanguage','en');await page.click('#voiceSearch');
-  assert.equal(await page.evaluate(()=>window.recognitionTest.instances.at(-1).lang),'en-CA');
-  assert.equal(await page.locator('#appLang').inputValue(),'fr');
-  await page.evaluate(()=>{const r=window.recognitionTest.instances.at(-1);r.onresult({results:[[{transcript:'cancer'}]]});r.onend();});
-  assert.equal(await page.locator('#q').inputValue(),'cancer');
-  assert.ok(await page.locator('#results button').count()>0);
-  // Fuzzy ranking must be identical for speech and typing, regardless of
-  // interface or microphone language; never restrict it to literal matches.
-  await page.fill('#q','cancre');
-  const typedFuzzy=await page.locator('#results button').allTextContents();
-  assert.ok(typedFuzzy.length>0);
-  await page.click('#voiceSearch');
-  await page.evaluate(()=>{const r=window.recognitionTest.instances.at(-1);r.onresult({results:[[{transcript:'cancre'}]]});r.onend();});
-  assert.deepEqual(await page.locator('#results button').allTextContents(),typedFuzzy);
-  assert.equal(await page.locator('#q').inputValue(),'cancre');
-  await page.click('#voiceSearch');
-  const aborts=await page.evaluate(()=>window.recognitionTest.aborts);
-  await page.selectOption('#voiceLanguage','fr');
-  assert.equal(await page.evaluate(()=>window.recognitionTest.aborts),aborts+1);
-  await page.click('#voiceSearch');
-  assert.equal(await page.evaluate(()=>window.recognitionTest.instances.at(-1).lang),'fr-CA');
-  await page.evaluate(()=>{const r=window.recognitionTest.instances.at(-1);r.onresult({results:[[{transcript:'cancer'}]]});r.onend();});
-  assert.equal(await page.locator('#q').inputValue(),'cancer');
-  await page.selectOption('#appLang','en');
-  assert.equal(await page.locator('#voiceLanguage').inputValue(),'fr');
-  await page.selectOption('#voiceLanguage','');await page.click('#voiceSearch');
-  assert.equal(await page.evaluate(()=>window.recognitionTest.instances.at(-1).lang),'en-CA');
-}));
-}
-
-test('spoken language control stays hidden without browser recognition',async()=>contextTest(async page=>{
+test('JGH root opens directly without accessing microphone recognition',async()=>contextTest(async page=>{
   await page.addInitScript(()=>{
-    Object.defineProperty(window,'SpeechRecognition',{value:undefined});
-    Object.defineProperty(window,'webkitSpeechRecognition',{value:undefined});
+    for(const name of ['SpeechRecognition','webkitSpeechRecognition']){
+      Object.defineProperty(window,name,{get(){throw Error('Recognition must not be accessed');}});
+    }
   });
-  await page.goto(origin+'/?hospital=jgh');await ready(page);
-  assert.equal(await page.locator('#voiceLanguageControl').isVisible(),false);
-  assert.equal(await page.locator('#voiceSearch').isVisible(),false);
+  await page.goto(origin+'/');await ready(page);
+  assert.equal(await page.locator('#appLang').inputValue(),'fr');
+  assert.equal(await page.locator('#voiceSearch,#voiceLanguageControl,#voiceStatus').count(),0);
+  assert.equal(await page.locator('.hospital-card').count(),0);
+  await page.fill('#q','cardiologie');
+  assert.ok(await page.locator('#results button').count()>0);
+}));
+
+test('shift language choices survive reload independently and QR language wins',async()=>contextTest(async page=>{
+  await page.goto(origin+'/');await ready(page);
+  await page.selectOption('#appLang','en');
+  await page.fill('#q','urology');await page.locator('#results button').first().click();
+  await page.click('#showVisitor');await page.selectOption('#visitorLang','fa');
+  await page.reload();await ready(page);
+  assert.equal(await page.locator('#appLang').inputValue(),'en');
+  await page.fill('#q','urology');await page.locator('#results button').first().click();
+  await page.click('#showVisitor');
+  assert.equal(await page.locator('#visitorLang').inputValue(),'fa');
+  await page.selectOption('#visitorLang','ar');await page.click('#showQr');
+  const qr=await page.locator('#qrCode').getAttribute('title');
+  await page.evaluate(()=>sessionStorage.setItem('waywey.jgh.visitorLang','es'));
+  await page.goto(qr);await page.locator('#visitorDialog[open]').waitFor();
+  assert.equal(await page.locator('#visitorLang').inputValue(),'ar');
+  assert.equal(await page.locator('#appLang').inputValue(),'en');
 }));
 
 test('visitor playback selects French and stops on language change, Stop, QR and Escape',async()=>contextTest(async page=>{

@@ -29,9 +29,9 @@ class ValidatorTests(unittest.TestCase):
     @staticmethod
     def edit(package, filename, mutate):
         file = package / filename
-        data = json.loads(file.read_text())
+        data = json.loads(file.read_text(encoding='utf-8'))
         mutate(data)
-        file.write_text(json.dumps(data))
+        file.write_text(json.dumps(data), encoding='utf-8')
 
     def test_schema_failure_reports_errors_without_cross_file_crash(self):
         code, output = self.run_package(lambda p: self.edit(p, 'config.json', lambda d: d.pop('entrances')))
