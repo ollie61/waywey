@@ -4,7 +4,9 @@ export const ENHANCED_FRENCH = true;
 export function selectVoice(voices, lang) {
   const base = lang.toLowerCase().split('-')[0];
   const matching = voices.filter(v => v.lang.toLowerCase().replaceAll('_', '-').split('-')[0] === base);
-  return (base === 'fr' && matching.find(v => v.lang.toLowerCase().replaceAll('_', '-') === 'fr-ca'))
+  return (base === 'ar' && matching.find(v => v.lang.toLowerCase().replaceAll('_', '-') === 'ar-sa'))
+    || (base === 'fa' && matching.find(v => v.lang.toLowerCase().replaceAll('_', '-') === 'fa-ir'))
+    || (base === 'fr' && matching.find(v => v.lang.toLowerCase().replaceAll('_', '-') === 'fr-ca'))
     || matching.find(v => v.default) || matching[0] || null;
 }
 
@@ -13,7 +15,7 @@ export function selectVoice(voices, lang) {
 // do not infer turns, landmarks, or floors from the arrow.
 const SPOKEN_SEQUENCE={
   en:"then",fr:"puis",es:"luego",pt:"depois",ar:"ثم",
-  he:"ואז",ru:"затем",vi:"sau đó",sw:"kisha",bg:"след това"
+  he:"ואז",ru:"затем",vi:"sau đó",fa:"سپس",bg:"след това"
 };
 
 export function prepareSpeechText(text,lang){
@@ -54,7 +56,7 @@ export function createVoicePlayback({scope = globalThis, enhancedFrench = ENHANC
     if (voices.length && !voice) { onError('unavailable'); return false; }
     try {
       const utterance = new scope.SpeechSynthesisUtterance(prepareSpeechText(text, lang));
-      utterance.lang = enhanced ? 'fr-CA' : lang;
+      utterance.lang = enhanced ? 'fr-CA' : (lang === 'ar' ? 'ar-SA' : lang === 'fa' ? 'fa-IR' : lang);
       if (voice && (lang !== 'fr' || enhanced)) {
         utterance.voice = voice;
         utterance.lang = voice.lang;

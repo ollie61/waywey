@@ -586,7 +586,7 @@ function renderVisitor(){
  stopPlayback();
  const lang=$("visitorLang").value,t=I18N[lang]||I18N.en,p=$("visitorPanel");
  p.lang=lang;
- p.dir=(lang==="ar"||lang==="he")?"rtl":"ltr";
+ p.dir=(lang==="ar"||lang==="he"||lang==="fa")?"rtl":"ltr";
  $("vName").textContent=destinationName(selected,lang);
  $("vWhere").textContent=displayWhere(selected,lang);
  renderSteps("vSteps",localizedSteps(selected,lang));

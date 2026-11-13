@@ -105,7 +105,7 @@ test('spoken route arrows become localized sequence words without modifying visi
   assert.equal(route,'Pavillon A → Pavillon B → Urologie.');
   const link='Continuez tout droit puis tournez à droite.';
   assert.equal(prepareSpeechText(link,'fr'),link);
-  const transitions={en:'then',fr:'puis',es:'luego',pt:'depois',ar:'ثم',he:'ואז',ru:'затем',vi:'sau đó',sw:'kisha',bg:'след това'};
+  const transitions={en:'then',fr:'puis',es:'luego',pt:'depois',ar:'ثم',he:'ואז',ru:'затем',vi:'sau đó',fa:'سپس',bg:'след това'};
   assert.deepEqual(Object.keys(transitions).sort(),Object.keys(I18N).sort());
   for(const [lang,transition] of Object.entries(transitions)){
     const result=prepareSpeechText('A → B',lang);
@@ -123,4 +123,15 @@ test('speech engine receives natural French wording, not the displayed arrow sym
   assert.equal(m.spoken[0].voice,canadian);
   assert.equal(m.spoken[0].rate,0.95);
   assert.equal(visible,'Suivez les indications : pavillon A → pavillon B.');
+});
+
+
+test('Arabic prefers ar-SA, Persian prefers fa-IR, and both preserve speech locale',()=>{
+ const ar={lang:'ar-SA'},other={lang:'ar-EG'},fa={lang:'fa-IR'};
+ assert.equal(selectVoice([other,ar],'ar'),ar);
+ assert.equal(selectVoice([fa],'fa'),fa);
+ const m=mock([ar]);assert.equal(m.controller.speak('اتبع الإشارات','ar'),true);
+ assert.equal(m.spoken[0].lang,'ar-SA');
+ const p=mock([fa]);assert.equal(p.controller.speak('مسیر را دنبال کنید','fa'),true);
+ assert.equal(p.spoken[0].lang,'fa-IR');
 });
