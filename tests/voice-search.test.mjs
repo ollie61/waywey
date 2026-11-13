@@ -8,6 +8,15 @@ async function load(path){
 }
 const voice=await load("js/voice-search.js");
 
+test('recognition constructor failures report an error without breaking typed search',()=>{
+  const errors=[];
+  class Recognition{constructor(){throw Error('unavailable');}}
+  const controller=voice.createVoiceSearch({scope:{SpeechRecognition:Recognition},onError:e=>errors.push(e)});
+  assert.equal(controller.start(),false);
+  assert.equal(controller.isActive(),false);
+  assert.deepEqual(errors,['start']);
+});
+
 test("cancel discards late microphone events before playback or language changes",()=>{
   let instance,aborted=false,result=null;
   class Recognition{

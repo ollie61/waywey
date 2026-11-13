@@ -43,8 +43,24 @@ test("resolveTargetNode never invents an unknown graph node",()=>{
 
 test('documented connector instructions compose only along complete directed paths',()=>{
   const edges={'A>B':{en:['Floor 1 from A to B']},'B>C':{en:['Basement from B to C']}};
-  assert.deepEqual(r.routeInstructions(['A','B','C'],edges,'fr'),['Floor 1 from A to B','Basement from B to C']);
+  assert.deepEqual(r.routeInstructions(['A','B','C'],edges,'en'),['Floor 1 from A to B','Basement from B to C']);
+  assert.equal(r.routeInstructions(['A','B','C'],edges,'fr'),null);
   assert.equal(r.routeInstructions(['C','B','A'],edges,'en'),null);
   assert.equal(r.routeInstructions(['A','B','D'],edges,'en'),null);
   assert.equal(r.routeInstructions(['A'],edges,'en'),null);
+});
+
+test('unknown endpoints and aliases cannot create a validated route',()=>{
+  const graph={A:['missing'],B:[]};
+  assert.equal(r.findRoute(graph,'missing','missing'),null);
+  assert.equal(r.findRoute(graph,'A','missing'),null);
+  assert.equal(r.findRoute(graph,'toString','A'),null);
+  assert.equal(r.resolveTargetNode({p:'X'},{nodeAliases:{X:'missing'}},graph),null);
+  assert.equal(r.resolveTargetNode({p:'toString'},{},graph),null);
+  assert.equal(r.resolveTargetNode({p:'OFF/MAIN'},{nodeAliases:{OFF:null,MAIN:'B'}},graph),'B');
+});
+
+test('one untranslated connector falls back for the entire path',()=>{
+  const edges={'A>B':{fr:['De A à B']},'B>C':{en:['From B to C']}};
+  assert.equal(r.routeInstructions(['A','B','C'],edges,'fr'),null);
 });

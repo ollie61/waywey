@@ -299,3 +299,143 @@ test('Hebrew hospital interface and Arabic visitor directions retain RTL and ver
   assert.ok((await page.locator('#vSteps li').first().innerText()).length>0);
   assert.equal(await page.locator('#vName').innerText(),d.ar||d.en);
 }));
+
+test('Persian directions and QR controls work across all five hospitals',async()=>contextTest(async page=>{
+  for(const id of ['jgh','chum','glen','verdun','hadassah-ein-kerem']){
+    const config=JSON.parse(await fs.readFile(path.join(root,`hospitals/${id}/config.json`)));
+    const data=JSON.parse(await fs.readFile(path.join(root,`hospitals/${id}/destinations.json`)));
+    const d=data.find(d=>d.status==='official'&&d.p);
+    await page.goto(origin+'/?'+new URLSearchParams({hospital:id,visitor:'1',dest:d.id,from:config.entrances[0].id,lang:'fa'}));
+    await page.locator('#visitorDialog[open]').waitFor();
+    assert.equal(await page.locator('#visitorPanel').getAttribute('dir'),'rtl');
+    assert.equal(await page.locator('#listen').innerText(),'🔊 گوش دادن');
+    assert.equal(await page.locator('#showQr').innerText(),'▦ نمایش کد QR');
+    assert.doesNotMatch(await page.locator('#vSteps').innerText(),/undefined|Take the|Follow the|Use a public|From the/);
+    await page.click('#showQr');
+    assert.equal(await page.locator('#qrDialog').getAttribute('dir'),'rtl');
+    assert.equal(await page.locator('#qrDialog').getAttribute('lang'),'fa');
+    assert.equal(await page.locator('#qrTitle').innerText(),'اسکن برای دریافت مسیر');
+    assert.match(await page.locator('#qrInstruction').innerText(),/تلفن/);
+    const url=await page.locator('#qrCode').getAttribute('title');
+    assert.equal(new URL(url).searchParams.get('lang'),'fa');
+  }
+}));
+
+test('all visitor languages render complete controls in every hospital',async()=>contextTest(async page=>{
+  for(const id of ['jgh','chum','glen','verdun','hadassah-ein-kerem']){
+    const config=JSON.parse(await fs.readFile(path.join(root,`hospitals/${id}/config.json`)));
+    const data=JSON.parse(await fs.readFile(path.join(root,`hospitals/${id}/destinations.json`)));
+    const d=data.find(d=>d.status==='official'&&d.p);
+    await page.goto(origin+'/?'+new URLSearchParams({hospital:id,visitor:'1',dest:d.id,from:config.entrances[0].id,lang:'en'}));
+    await page.locator('#visitorDialog[open]').waitFor();
+    for(const lang of ['en','fr','ar','he','es','pt','ru','vi','fa','bg']){
+      await page.selectOption('#visitorLang',lang);
+      assert.doesNotMatch(await page.locator('#visitorPanel').innerText(),/undefined|\bNaN\b/,`${id}/${lang}`);
+      for(const selector of ['#listen','#showQr','#back','#vSteps']){
+        assert.ok((await page.locator(selector).innerText()).trim(),`${id}/${lang}/${selector}`);
+      }
+    }
+  }
+}));
+
+async function mockDelayedPlayback(page){
+  await page.clock.install();
+  await page.addInitScript(()=>{
+    window.voiceTest={voices:[],spoken:[],events:{},cancelled:0};
+    Object.defineProperty(window,'SpeechSynthesisUtterance',{value:class{constructor(text){this.text=text;}}});
+    Object.defineProperty(window,'speechSynthesis',{value:{
+      getVoices:()=>window.voiceTest.voices,
+      addEventListener:(name,fn)=>window.voiceTest.events[name]=fn,
+      cancel:()=>window.voiceTest.cancelled++,
+      speak:u=>window.voiceTest.spoken.push(u)
+    }});
+  });
+  await page.goto(link({lang:'ar'}));
+  await page.locator('#visitorDialog[open]').waitFor();
+}
+
+test('Android-style delayed voices retry once and successful start survives the timeout',async()=>contextTest(async page=>{
+  await mockDelayedPlayback(page);
+  await page.click('#listen');
+  assert.equal(await page.evaluate(()=>window.voiceTest.spoken[0].lang),'ar-SA');
+  await page.evaluate(()=>{
+    const t=window.voiceTest;t.voices=[{lang:'ar-SA'}];t.events.voiceschanged();
+    t.spoken[0].onerror();t.spoken[0].onend();t.spoken[1].onstart();
+    t.events.voiceschanged();
+  });
+  await page.clock.fastForward(6000);
+  assert.equal(await page.evaluate(()=>window.voiceTest.spoken.length),2);
+  assert.equal(await page.locator('#listen').getAttribute('aria-pressed'),'true');
+  assert.equal(await page.locator('#playbackStatus').innerText(),'');
+  await page.click('#listen');
+  assert.equal(await page.locator('#listen').getAttribute('aria-pressed'),'false');
+}));
+
+test('silent Android-style speech surfaces feedback and Stop cancels delayed retries',async()=>contextTest(async page=>{
+  await mockDelayedPlayback(page);
+  const before=await page.locator('#vSteps').innerText();
+  await page.click('#listen');await page.clock.fastForward(5000);
+  assert.match(await page.locator('#playbackStatus').innerText(),/الصوت/);
+  assert.equal(await page.locator('#listen').getAttribute('aria-pressed'),'false');
+  assert.equal(await page.locator('#vSteps').innerText(),before);
+  await page.click('#listen');await page.click('#listen');
+  await page.evaluate(()=>{
+    const t=window.voiceTest;t.voices=[{lang:'ar-SA'}];t.events.voiceschanged();
+  });
+  await page.clock.fastForward(6000);
+  assert.equal(await page.evaluate(()=>window.voiceTest.spoken.length),2);
+  assert.equal(await page.locator('#playbackStatus').innerText(),'');
+}));
+
+test('visitor Tab order excludes controls inside hidden ancestors',async()=>contextTest(async page=>{
+  await page.goto(link());await page.locator('#visitorDialog[open]').waitFor();
+  await page.evaluate(()=>{
+    const back=document.getElementById('back'),hidden=document.createElement('div');
+    hidden.hidden=true;back.before(hidden);hidden.append(back);
+  });
+  await page.locator('#shareVisitor').focus();await page.keyboard.press('Tab');
+  assert.equal(await page.evaluate(()=>document.activeElement.id),'visitorLang');
+}));
+
+const photoFile={name:'sign.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aX1kAAAAASUVORK5CYII=','base64')};
+test('photo saves commit once, survive reload and require a new file for replacement',async()=>contextTest(async page=>{
+  await page.goto(origin+'/jgh/photos.html');
+  await page.waitForFunction(()=>document.getElementById('status').textContent.includes('Local storage ready'));
+  await page.setInputFiles('#uploadInput',photoFile);
+  await page.fill('#room','B-114');
+  await page.evaluate(()=>{const button=document.getElementById('accept');button.click();button.click();});
+  await page.waitForFunction(()=>document.getElementById('status').textContent.includes('Photo saved'));
+  assert.match(await page.locator('#counter').innerText(),/^1 accepted photos/);
+  await page.reload();
+  await page.waitForFunction(()=>document.querySelectorAll('#gallery .thumb').length===1);
+  assert.match(await page.locator('#gallery').innerText(),/B-114/);
+  await page.setInputFiles('#uploadInput',{...photoFile,name:'unrelated.png'});
+  assert.equal(await page.locator('#accept').isEnabled(),true);
+  await page.locator('#gallery button').click();
+  assert.equal(await page.locator('#accept').isDisabled(),true);
+  assert.equal(await page.locator('#preview').isHidden(),true);
+  await page.setInputFiles('#uploadInput',{...photoFile,name:'replacement.png'});
+  await page.fill('#room','B-115');await page.click('#accept');
+  await page.waitForFunction(()=>document.getElementById('status').textContent.includes('Photo saved'));
+  assert.match(await page.locator('#counter').innerText(),/^1 accepted photos/);
+  assert.match(await page.locator('#gallery').innerText(),/B-115/);
+}));
+
+test('aborted photo transactions keep the preview and never report a saved photo',async()=>contextTest(async page=>{
+  await page.addInitScript(()=>{
+    const put=IDBObjectStore.prototype.put;
+    IDBObjectStore.prototype.put=function(...args){
+      const request=put.apply(this,args);
+      if(this.name==='photos')request.addEventListener('success',()=>this.transaction.abort());
+      return request;
+    };
+  });
+  await page.goto(origin+'/jgh/photos.html');
+  await page.waitForFunction(()=>document.getElementById('status').textContent.includes('Local storage ready'));
+  await page.setInputFiles('#uploadInput',photoFile);await page.click('#accept');
+  await page.waitForFunction(()=>document.getElementById('status').textContent.includes('Save failed'));
+  assert.match(await page.locator('#counter').innerText(),/^0 accepted photos/);
+  assert.equal(await page.locator('#preview').isVisible(),true);
+  assert.equal(await page.locator('#accept').isEnabled(),true);
+  assert.equal(await page.locator('#gallery .thumb').count(),0);
+}));

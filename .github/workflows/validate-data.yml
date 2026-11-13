@@ -15,6 +15,11 @@ on:
       - "js/**"
       - "tests/**"
       - "index.html"
+      - "jgh/**"
+      - "chum/**"
+      - "glen/**"
+      - "verdun/**"
+      - "hadassah-ein-kerem/**"
       - "styles.css"
       - "service-worker.js"
       - "manifest.webmanifest"
@@ -34,6 +39,11 @@ on:
       - "js/**"
       - "tests/**"
       - "index.html"
+      - "jgh/**"
+      - "chum/**"
+      - "glen/**"
+      - "verdun/**"
+      - "hadassah-ein-kerem/**"
       - "styles.css"
       - "service-worker.js"
       - "manifest.webmanifest"
@@ -81,6 +91,8 @@ jobs:
         run: node scripts/refactor_smoke.mjs
       - name: Run regression tests
         run: node --test tests/*.test.mjs
+      - name: Test validator failure handling
+        run: python -m unittest discover -s tests -p 'test_*.py'
       - name: Audit search and fuzzy matching across all hospitals
         run: node scripts/audit_search_all_hospitals.mjs
       - name: Check release-candidate invariants
