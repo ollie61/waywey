@@ -288,10 +288,11 @@ test('all visitor languages render complete controls in every hospital',async()=
   }
 }));
 
-async function mockDelayedPlayback(page){
+async function mockDelayedPlayback(page, lang='ar'){
   await page.clock.install();
   await page.addInitScript(()=>{
-    window.voiceTest={voices:[],spoken:[],events:{},cancelled:0};
+    window.voiceTest={voices:[],spoken:[],events:{},cancelled:0,warnings:[]};
+    console.warn=(...args)=>window.voiceTest.warnings.push(args);
     Object.defineProperty(window,'SpeechSynthesisUtterance',{value:class{constructor(text){this.text=text;}}});
     Object.defineProperty(window,'speechSynthesis',{value:{
       getVoices:()=>window.voiceTest.voices,
@@ -300,19 +301,21 @@ async function mockDelayedPlayback(page){
       speak:u=>window.voiceTest.spoken.push(u)
     }});
   });
-  await page.goto(link({lang:'ar'}));
+  await page.goto(link({lang}));
   await page.locator('#visitorDialog[open]').waitFor();
 }
 
 test('Android-style delayed voices retry once and successful start survives the timeout',async()=>contextTest(async page=>{
   await mockDelayedPlayback(page);
   await page.click('#listen');
-  assert.equal(await page.evaluate(()=>window.voiceTest.spoken[0].lang),'ar-SA');
+  assert.equal(await page.evaluate(()=>window.voiceTest.spoken[0].lang),'ar');
   await page.evaluate(()=>{
     const t=window.voiceTest;t.voices=[{lang:'ar-SA'}];t.events.voiceschanged();
-    t.spoken[0].onerror();t.spoken[0].onend();t.spoken[1].onstart();
+    t.spoken[0].onerror();t.spoken[0].onend();
     t.events.voiceschanged();
   });
+  await page.clock.fastForward(1);
+  await page.evaluate(()=>window.voiceTest.spoken[1].onstart());
   await page.clock.fastForward(6000);
   assert.equal(await page.evaluate(()=>window.voiceTest.spoken.length),2);
   assert.equal(await page.locator('#listen').getAttribute('aria-pressed'),'true');
@@ -336,6 +339,53 @@ test('silent Android-style speech surfaces feedback and Stop cancels delayed ret
   assert.equal(await page.evaluate(()=>window.voiceTest.spoken.length),2);
   assert.equal(await page.locator('#playbackStatus').innerText(),'');
 }));
+
+for(const lang of ['ar','fa']){
+  test(`${lang}: partial Android voice list attempts locale and end-before-start leaves a visible error`,async()=>contextTest(async page=>{
+    await mockDelayedPlayback(page,lang);
+    await page.evaluate(()=>window.voiceTest.voices=[{lang:'fr-CA',default:true}]);
+    const before=await page.locator('#vSteps').innerText();
+    await page.click('#listen');
+    assert.deepEqual(await page.evaluate(()=>{
+      const u=window.voiceTest.spoken[0];return {lang:u.lang,voice:u.voice||null};
+    }),{lang,voice:null});
+    await page.evaluate(()=>window.voiceTest.spoken[0].onend());
+    assert.equal(await page.locator('#listen').getAttribute('aria-pressed'),'false');
+    assert.equal(await page.locator('#playbackStatus').isVisible(),true);
+    const message=await page.locator('#playbackStatus').innerText();
+    assert.match(message,lang==='ar'?/المتصفح/:/مرورگر/);
+    await page.clock.fastForward(6000);
+    assert.equal(await page.locator('#playbackStatus').innerText(),message);
+    assert.equal(await page.locator('#vSteps').innerText(),before);
+    const warning=await page.evaluate(()=>window.voiceTest.warnings[0]);
+    assert.equal(warning[1].reason,'end-before-start');
+    assert.deepEqual(warning[1].availableLanguages,['fr-ca']);
+    assert.equal(warning[1].language,lang);
+    assert.equal('text' in warning[1],false);
+  }));
+
+  test(`${lang}: listed voice failure tries locale once, blocked retry shows feedback and new tap can recover`,async()=>contextTest(async page=>{
+    await mockDelayedPlayback(page,lang);
+    await page.evaluate(lang=>window.voiceTest.voices=[{lang:lang+'-XX'}],lang);
+    await page.click('#listen');
+    await page.evaluate(()=>window.voiceTest.spoken[0].onerror({error:'voice-unavailable'}));
+    assert.deepEqual(await page.evaluate(()=>{
+      const u=window.voiceTest.spoken[1];return {lang:u.lang,voice:u.voice||null};
+    }),{lang,voice:null});
+    await page.evaluate(()=>window.voiceTest.spoken[1].onerror({error:'not-allowed'}));
+    assert.equal(await page.locator('#listen').getAttribute('aria-pressed'),'false');
+    assert.ok((await page.locator('#playbackStatus').innerText()).length>30);
+    assert.equal(await page.evaluate(()=>window.voiceTest.warnings[0][1].reason),'not-allowed');
+    await page.clock.fastForward(6000);
+    assert.equal(await page.evaluate(()=>window.voiceTest.spoken.length),2);
+    await page.click('#listen');
+    await page.evaluate(()=>window.voiceTest.spoken[2].onstart());
+    await page.clock.fastForward(6000);
+    await page.evaluate(()=>window.voiceTest.spoken[2].onend());
+    assert.equal(await page.locator('#playbackStatus').innerText(),'');
+    assert.equal(await page.locator('#listen').getAttribute('aria-pressed'),'false');
+  }));
+}
 
 test('visitor Tab order excludes controls inside hidden ancestors',async()=>contextTest(async page=>{
   await page.goto(link());await page.locator('#visitorDialog[open]').waitFor();

@@ -4,7 +4,7 @@ import {createVoicePlayback, selectVoice, prepareSpeechText} from '../js/voice-p
 import {I18N, PLAYBACK_UI} from '../js/i18n.js';
 
 function mock(voices = [], {autoStart = true} = {}) {
-  const events = {}, spoken = [], states = [], errors = [];
+  const events = {}, spoken = [], states = [], errors = [], diagnostics = [];
   let cancelled = 0;
   const timers = new Map();
   let now = 0, nextTimer = 0;
@@ -15,15 +15,21 @@ function mock(voices = [], {autoStart = true} = {}) {
     setTimeout(fn, delay) {const id = nextTimer++; timers.set(id, {fn, at: now + delay}); return id;},
     clearTimeout(id) {timers.delete(id);}
   },
-    onState: s => states.push(s), onError: e => errors.push(e)});
-  return {controller, synth, spoken, states, errors, events, cancelled: () => cancelled,
+    onState: s => states.push(s), onError: (e, details) => {errors.push(e); diagnostics.push(details);}});
+  return {controller, synth, spoken, states, errors, diagnostics, events, cancelled: () => cancelled,
     timers, advance(ms) {
       now += ms;
       for (const [id, timer] of [...timers]) {
         if (timer.at <= now && timers.delete(id)) timer.fn();
       }
     },
-    setVoices: list => {voices = list; events.voiceschanged();}};
+    setVoices: list => {
+      voices = list; events.voiceschanged();
+      // Flush only the cancellation-settling task, not the startup deadline.
+      for (const [id, timer] of [...timers]) {
+        if (timer.at <= now && timers.delete(id)) timer.fn();
+      }
+    }};
 }
 const french = {lang: 'fr-FR', name: 'French', default: true};
 const canadian = {lang: 'fr-CA', name: 'Canadian French'};
@@ -153,7 +159,7 @@ test('a silent locale attempt retries once when delayed Android voices arrive', 
   const m = mock([], {autoStart: false});
   m.controller.speak('اتبع الإشارات', 'ar');
   const first = m.spoken[0];
-  assert.equal(first.lang, 'ar-SA');
+  assert.equal(first.lang, 'ar');
   assert.equal(m.states.at(-1), 'loading');
   m.setVoices([{lang: 'ar-SA'}]);
   assert.equal(m.spoken.length, 2);
@@ -219,6 +225,7 @@ test('retries do not extend the startup deadline and voices-list errors are cont
   m.advance(4000);
   m.synth.getVoices = () => [{lang: 'fa-IR'}];
   m.events.voiceschanged();
+  m.advance(0);
   assert.equal(m.spoken.length, 2);
   m.advance(1000);
   assert.deepEqual(m.errors, ['unavailable']);
@@ -232,4 +239,104 @@ test('synchronous start clears the watchdog and locale tags are normalized', () 
   assert.equal(m.timers.size, 0);
   m.advance(6000);
   assert.deepEqual(m.errors, []);
+});
+
+test('a partial browser voice list still attempts Arabic and Persian during the tap', () => {
+  for (const lang of ['ar', 'fa']) {
+    const m = mock([{lang: 'fr-CA', default: true}]);
+    assert.equal(m.controller.speak('Directions', lang), true);
+    assert.equal(m.spoken.length, 1);
+    assert.equal(m.spoken[0].lang, lang);
+    assert.equal(m.spoken[0].voice, undefined);
+    assert.deepEqual(m.errors, []);
+  }
+});
+
+test('a compatible voice arriving after a partial list is retried after cancellation settles', () => {
+  const m = mock([{lang: 'fr-CA'}], {autoStart: false});
+  m.controller.speak('راهنما', 'fa');
+  const first = m.spoken[0];
+  m.synth.getVoices = () => [{lang: 'fr-CA'}, {lang: 'fa_IR'}];
+  m.events.voiceschanged();
+  assert.equal(m.cancelled(), 1);
+  assert.equal(m.spoken.length, 1);
+  first.onend(); first.onerror({error: 'canceled'});
+  m.advance(0);
+  assert.equal(m.spoken.length, 2);
+  assert.equal(m.spoken[1].lang, 'fa-IR');
+  m.spoken[1].onstart(); m.advance(5000);
+  assert.deepEqual(m.errors, []);
+});
+
+test('end without start reports failure instead of silently claiming success', () => {
+  for (const lang of ['ar', 'fa', 'fr']) {
+    const m = mock([{lang}], {autoStart: false});
+    m.controller.speak('Private route text', lang);
+    m.spoken[0].onend();
+    assert.equal(m.controller.isActive(), false);
+    assert.deepEqual(m.errors, ['unavailable']);
+    assert.equal(m.diagnostics[0].reason, 'end-before-start');
+    assert.ok(!JSON.stringify(m.diagnostics).includes('Private route text'));
+    m.advance(10000);
+    assert.equal(m.errors.length, 1);
+  }
+});
+
+test('listed Arabic/Persian voice errors retry locale-only once within the original deadline', () => {
+  for (const lang of ['ar', 'fa']) {
+    for (const error of ['voice-unavailable', 'language-unavailable', 'synthesis-failed', 'synthesis-unavailable']) {
+      const m = mock([{lang: lang + '-XX'}], {autoStart: false});
+      m.controller.speak('Directions', lang);
+      const first = m.spoken[0];
+      m.advance(4000); first.onerror({error});
+      assert.equal(m.spoken.length, 2);
+      assert.equal(m.cancelled(), 0);
+      assert.equal(m.spoken[1].lang, lang);
+      assert.equal(m.spoken[1].voice, undefined);
+      first.onstart(); first.onend(); first.onerror({error});
+      assert.equal(m.states.at(-1), 'loading');
+      m.advance(1000);
+      assert.deepEqual(m.errors, ['unavailable']);
+      assert.equal(m.diagnostics[0].reason, error);
+      assert.equal(m.diagnostics[0].localeOnly, true);
+    }
+  }
+});
+
+test('locale fallback can start and complete, but never retries a post-start error', () => {
+  const m = mock([{lang: 'ar-SA'}], {autoStart: false});
+  m.controller.speak('Directions', 'ar');
+  m.spoken[0].onerror({error: 'voice-unavailable'});
+  m.spoken[1].onstart(); m.advance(6000); m.spoken[1].onend();
+  assert.deepEqual(m.errors, []);
+  assert.equal(m.controller.isActive(), false);
+  m.controller.speak('Directions', 'ar');
+  m.spoken[2].onstart(); m.spoken[2].onerror({error: 'synthesis-failed'});
+  assert.equal(m.spoken.length, 3);
+  assert.deepEqual(m.errors, ['unavailable']);
+});
+
+test('terminal errors are not hidden or retried even while voices are loading', () => {
+  for (const voices of [[], [{lang: 'ar-SA'}]]) {
+    for (const error of ['not-allowed', 'network', 'audio-busy', 'audio-hardware', 'canceled', 'interrupted']) {
+      const m = mock(voices, {autoStart: false});
+      m.controller.speak('Directions', 'ar');
+      m.spoken[0].onerror({error});
+      assert.equal(m.spoken.length, 1);
+      assert.deepEqual(m.errors, ['unavailable']);
+      assert.equal(m.diagnostics[0].reason, error);
+      assert.equal(m.timers.size, 0);
+    }
+  }
+});
+
+test('Stop cancels a queued voice-readiness retry without later replay', () => {
+  const m = mock([], {autoStart: false});
+  m.controller.speak('Directions', 'ar');
+  m.synth.getVoices = () => [{lang: 'ar-SA'}];
+  m.events.voiceschanged();
+  m.controller.stop(); m.advance(0); m.advance(6000);
+  assert.equal(m.spoken.length, 1);
+  assert.deepEqual(m.errors, []);
+  assert.equal(m.timers.size, 0);
 });

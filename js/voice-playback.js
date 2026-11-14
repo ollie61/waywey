@@ -34,6 +34,7 @@ export function createVoicePlayback({scope = globalThis, enhancedFrench = ENHANC
   let current = null;
   let voices = [];
   let startTimer = null;
+  let retryTimer = null;
   const schedule = (scope.setTimeout || globalThis.setTimeout).bind(scope);
   const unschedule = (scope.clearTimeout || globalThis.clearTimeout).bind(scope);
 
@@ -54,36 +55,54 @@ export function createVoicePlayback({scope = globalThis, enhancedFrench = ENHANC
       request.retried = true;
       request.utterance = null; // Ignore cancellation callbacks from the first attempt.
       try { synth.cancel(); } catch {}
-      play(request);
+      // Let cancellation settle before enqueueing a replacement on Android.
+      retryTimer = schedule(() => {
+        retryTimer = null;
+        if (current === request) play(request);
+      }, 0);
     });
   }
   function stop() {
     const wasActive = Boolean(current);
     current = null; // Invalidate the entire request, including delayed voice retries.
     clearStartTimer();
+    if (retryTimer !== null) unschedule(retryTimer);
+    retryTimer = null;
     if (wasActive) {
       try { synth.cancel(); } catch {}
       onState('idle');
     }
   }
-  function fail(request) {
+  function fail(request, reason = request.lastError || 'start-timeout') {
     if (current !== request) return;
+    const details = {
+      reason, language: languageTag(request.lang),
+      availableLanguages: [...new Set(voices.map(v => languageTag(v.lang)))].sort(),
+      selectedLanguage: request.utterance?.lang || null,
+      localeOnly: Boolean(request.localeOnly), started: request.started
+    };
     stop();
-    onError('unavailable');
+    onError('unavailable', details);
   }
   function play(request) {
     const {text, lang} = request;
     const base = languageTag(lang).split('-')[0];
     const enhanced = base === 'fr' && enhancedFrench;
-    const voice = selectVoice(voices, lang);
-    if (voices.length && !voice) { fail(request); return false; }
-    request.awaitingVoices = !voices.length;
+    const selected = selectVoice(voices, lang);
+    // Android Chrome's language enumeration can omit an installed voice.
+    // Give Arabic/Persian one locale-only attempt during the user's tap,
+    // without falling back to an unrelated default voice.
+    const allowLocale = base === 'ar' || base === 'fa';
+    const voice = request.forceLocale ? null : selected;
+    if (voices.length && !voice && !allowLocale) { fail(request, 'language-unavailable'); return false; }
+    request.localeOnly = allowLocale && !voice;
+    request.awaitingVoices = !selected && !request.forceLocale;
     try {
       const utterance = new scope.SpeechSynthesisUtterance(prepareSpeechText(text, lang));
-      utterance.lang = enhanced ? 'fr-CA' : ({ar: 'ar-SA', fa: 'fa-IR'}[base] || lang);
+      utterance.lang = enhanced ? 'fr-CA' : (request.localeOnly ? base : lang);
       if (voice && (base !== 'fr' || enhanced)) {
         utterance.voice = voice;
-        utterance.lang = voice.lang;
+        utterance.lang = String(voice.lang).replaceAll('_', '-');
       }
       utterance.rate = enhanced ? 0.95 : 0.78;
       utterance.pitch = 1;
@@ -96,19 +115,36 @@ export function createVoicePlayback({scope = globalThis, enhancedFrench = ENHANC
       };
       utterance.onend = () => {
         if (!isCurrent()) return;
+        // Some engines finish an unsupported request without ever starting it.
+        // Do not silently clear the button as if directions were spoken.
+        if (!request.started) { fail(request, 'end-before-start'); return; }
         current = null;
         clearStartTimer();
         onState('idle');
       };
-      utterance.onerror = () => {
+      utterance.onerror = event => {
         if (!isCurrent()) return;
-        // An empty initial list may settle after an early engine error. Keep
+        const reason = event?.error || 'synthesis-failed';
+        request.lastError = reason;
+        // A listed voice may be unusable. Retry only a pre-start engine/voice
+        // failure once, without binding that voice. The failed utterance has
+        // ended, so cancel() here would only risk cancelling its replacement.
+        if (allowLocale && voice && !request.started && !request.retried &&
+            ['voice-unavailable', 'language-unavailable', 'synthesis-unavailable', 'synthesis-failed'].includes(reason)) {
+          request.retried = true;
+          request.forceLocale = true;
+          request.utterance = null;
+          play(request);
+          return;
+        }
+        // An incomplete initial list may settle after an early engine error. Keep
         // that one request pending until voices arrive or its deadline expires.
-        if (!request.started && request.awaitingVoices && !request.retried) {
+        if (!request.started && request.awaitingVoices && !request.retried &&
+            !['not-allowed', 'canceled', 'interrupted', 'audio-busy', 'audio-hardware', 'network'].includes(reason)) {
           request.utterance = null;
           return;
         }
-        fail(request);
+        fail(request, reason);
       };
       request.utterance = utterance;
       onState('loading');
@@ -117,7 +153,7 @@ export function createVoicePlayback({scope = globalThis, enhancedFrench = ENHANC
       synth.speak(utterance);
       return true;
     } catch {
-      fail(request);
+      fail(request, 'speak-exception');
       return false;
     }
   }

@@ -144,9 +144,11 @@ function initVoicePlayback(){
  playbackController=createVoicePlayback({
    scope:window,
    onState:refreshPlaybackUi,
-   onError:()=>{
+   onError:(code,details)=>{
      const lang=$("visitorLang").value;
      $("playbackStatus").textContent=(PLAYBACK_UI[lang]||PLAYBACK_UI.en).unavailable;
+     // Local troubleshooting only: never log route text, destination or patient data.
+     console.warn("WayWey speech unavailable",details||{reason:code,language:lang});
    }
  });
  $("visitorDialog").addEventListener("close",stopPlayback);
