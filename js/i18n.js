@@ -2,16 +2,16 @@
 // Keep hospital-specific labels and guides in each hospital data package.
 
 export const PLAYBACK_UI={
- en:{stop:"Stop",unavailable:"Audio is unavailable in this language. Please read the directions or ask an ambassador."},
- fr:{stop:"Arrêter",unavailable:"La lecture audio est indisponible dans cette langue. Consultez les indications ou demandez de l’aide à un ambassadeur."},
+ en:{stop:"Stop",unavailable:"This browser could not play audio in this language. A voice installed on your device may not be available to this browser. Please read the directions or ask an ambassador."},
+ fr:{stop:"Arrêter",unavailable:"La lecture audio est indisponible dans cette langue dans ce navigateur. Une voix installée sur l’appareil peut ne pas être accessible au navigateur. Consultez les indications ou demandez de l’aide à un ambassadeur."},
  es:{stop:"Detener",unavailable:"El audio no está disponible en este idioma. Lea las indicaciones o pida ayuda a un embajador."},
  pt:{stop:"Parar",unavailable:"O áudio não está disponível neste idioma. Leia as instruções ou peça ajuda a um embaixador."},
- ar:{stop:"إيقاف",unavailable:"الصوت غير متاح بهذه اللغة. يرجى قراءة التعليمات أو طلب المساعدة من السفير."},
+ ar:{stop:"إيقاف",unavailable:"تعذّر على هذا المتصفح تشغيل الصوت بهذه اللغة. قد لا يكون الصوت المثبّت على جهازك متاحًا للمتصفح. يرجى قراءة التعليمات أو طلب المساعدة من السفير."},
  he:{stop:"עצירה",unavailable:"השמע אינו זמין בשפה זו. קראו את ההוראות או בקשו עזרה משגריר."},
  ru:{stop:"Остановить",unavailable:"Аудио на этом языке недоступно. Прочитайте указания или обратитесь к волонтёру."},
  vi:{stop:"Dừng",unavailable:"Không có âm thanh bằng ngôn ngữ này. Vui lòng đọc chỉ dẫn hoặc nhờ tình nguyện viên hỗ trợ."},
  sw:{stop:"Simamisha",unavailable:"Sauti haipatikani katika lugha hii. Tafadhali soma maelekezo au omba msaada kwa balozi."},
- fa:{stop:"توقف",unavailable:"صدای فارسی در این دستگاه در دسترس نیست. لطفاً راهنما را بخوانید یا از راهنمای بیمارستان کمک بگیرید."},
+ fa:{stop:"توقف",unavailable:"این مرورگر نتوانست صدا را به این زبان پخش کند. ممکن است صدای نصب‌شده روی دستگاه در این مرورگر در دسترس نباشد. لطفاً راهنما را بخوانید یا از راهنمای بیمارستان کمک بگیرید."},
  bg:{stop:"Спиране",unavailable:"Аудиото не е налично на този език. Прочетете указанията или помолете посланик за помощ."}
 };
 
