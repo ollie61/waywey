@@ -6,7 +6,7 @@ export function formatAuditDate(value,lang="en"){
   if(!/^\d{4}-\d{2}-\d{2}$/.test(value||""))return null;
   const [y,m,d]=value.split("-").map(Number);
   const date=new Date(Date.UTC(y,m-1,d));
-  if(Number.isNaN(date.getTime()))return null;
+  if(Number.isNaN(date.getTime())||date.getUTCFullYear()!==y||date.getUTCMonth()!==m-1||date.getUTCDate()!==d)return null;
   try{
     return new Intl.DateTimeFormat(LOCALES[lang]||LOCALES.en,{
       year:"numeric",month:"short",day:"numeric",timeZone:"UTC"

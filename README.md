@@ -4,17 +4,14 @@
 
 WayWey is a browser-first, multilingual hospital wayfinding platform designed for ambassador-assisted navigation. One shared application engine can support many hospitals while each hospital keeps its own destinations, languages, source history and validated routing data.
 
-Current release candidate: **v0.3.3** (JGH Admissions room-side correction). Previous production milestone: v0.3.2.
+Development candidate: **v1.0.0-rc.1**. Verified public production remains v0.3.3.
 
-Version 0.3.1 refines spoken route separators without changing the displayed route, hospital data or Canadian French voice settings. See [candidate notes and rollback](docs/MILESTONE-0.3.1.md).
-
-Version 0.3.0 improves French visitor speech, preserves visitor language choices, defaults JGH to French, and separates spoken search language from interface language. See [v0.3.0 release notes](docs/MILESTONE-0.3.0.md).
+This candidate opens JGH directly, removes microphone search and retains optional visitor Listen playback. French is the default in a new shift session; interface and visitor choices persist independently during that session. Existing hospital datasets and deep links remain compatible. See [candidate status and release gates](docs/MILESTONE-1.0.0-rc.1.md).
 
 ## What WayWey does
 
 - Lets an ambassador select and remember a starting station.
 - Searches department/service names, aliases and room numbers with typo-tolerant ranking.
-- Offers optional single-shot voice search when the browser exposes a compatible speech-recognition API.
 - Keeps hospital data separate from the shared application engine.
 - Shows indoor directions only when the public route has been validated.
 - Clearly flags uncertain locations as **Verify / À vérifier / לאימות / بحاجة للتحقق**.
@@ -51,7 +48,7 @@ Current hospital packages:
 | `verdun` | Hôpital de Verdun | French, English |
 | `hadassah-ein-kerem` | Hadassah Ein Kerem Medical Center | Hebrew, English, Arabic |
 
-The root URL is the hospital selector. Clean hospital paths such as `/jgh/` and `/hadassah-ein-kerem/` redirect into the shared engine with the appropriate hospital package.
+The root URL opens JGH directly; other hospital packages are retained for existing links and regression coverage. Clean hospital paths such as `/jgh/` and `/hadassah-ein-kerem/` redirect into the shared engine with the appropriate hospital package.
 
 ## Repository structure
 
@@ -141,7 +138,7 @@ Before a major code or data step, create a recovery branch or equivalent immutab
 
 WayWey does not require a visitor account or patient identity to provide directions. QR/deep links contain navigation context, not a patient record. Avoid introducing patient data, condition-based targeting, third-party trackers or other unnecessary sensitive-data collection.
 
-Voice search is user-initiated and single-shot. WayWey does not store the microphone recording, but the browser or speech-recognition provider may process audio according to its own implementation/privacy rules. The voice button is hidden when compatible browser support is unavailable.
+Search is typed. Optional visitor speech uses the browser/system speech-synthesis engine and depends on installed voices.
 
 ## Maintenance
 

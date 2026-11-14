@@ -1,7 +1,7 @@
 // Shared presentation helpers. DOM orchestration remains in app.js.
 
 export function destinationName(d,lang){
-  return (d&&d[lang])||d.en||d.he||d.ar||d.fr||"";
+  return d?.[lang]||d?.en||d?.he||d?.ar||d?.fr||"";
 }
 
 export function destinationSecondary(d,lang,languages){
@@ -13,14 +13,7 @@ export function destinationSecondary(d,lang,languages){
   return "";
 }
 
-export function appIsRtl(lang){return lang==="he"||lang==="ar";}
-
-export function strengthBadge(level,labelFr,labelEn){
-  const n=Math.max(1,Math.min(4,Number(level)||1));
-  let bars="";
-  for(let i=1;i<=4;i++)bars+='<span class="strength-bar '+(i<=n?'on':'')+'"></span>';
-  return '<div class="dataset-strength" aria-label="Force du jeu de données : '+labelFr+' / Dataset strength: '+labelEn+'"><span class="strength-icon" aria-hidden="true">'+bars+'</span><span><strong>'+labelFr+'</strong><small>'+labelEn+'</small></span></div>';
-}
+export function appIsRtl(lang){return ["he","ar","fa"].includes(lang);}
 
 export function locationFor(d,lang){
   const key="loc"+lang.charAt(0).toUpperCase()+lang.slice(1);

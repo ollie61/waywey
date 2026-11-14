@@ -39,7 +39,7 @@ def path_text(error_path) -> str:
 
 def validate_schema(data, schema, filename: Path, errors: list[str]) -> None:
     validator = Draft202012Validator(schema, format_checker=FormatChecker())
-    for err in sorted(validator.iter_errors(data), key=lambda e: list(e.absolute_path)):
+    for err in sorted(validator.iter_errors(data), key=lambda e: path_text(e.absolute_path)):
         errors.append(
             f"{filename.relative_to(ROOT)} {path_text(err.absolute_path)}: {err.message}"
         )
@@ -61,6 +61,14 @@ def validate_cross_files(folder: Path, config, destinations, routes, guide, erro
     graph = routes["graph"]
     aliases = config.get("nodeAliases", {})
     known_nodes = set(graph)
+
+    for alias, node in aliases.items():
+        if node is not None and node not in known_nodes:
+            errors.append(f"{rel}/config.json: alias {alias!r} references unknown routing node {node!r}")
+
+    entrance_ids = [entrance["id"] for entrance in config["entrances"]]
+    if len(entrance_ids) != len(set(entrance_ids)):
+        errors.append(f"{rel}/config.json: duplicate entrance ids")
 
     for node, neighbours in graph.items():
         for neighbour in neighbours:
@@ -107,7 +115,7 @@ def validate_cross_files(folder: Path, config, destinations, routes, guide, erro
         if not separator or station_id not in entrance_ids or destination_id not in destination_ids:
             errors.append(f"{rel}/routes.json: invalid station-to-destination key {key!r}")
         for language, steps in translations.items():
-            if language not in {"en", "fr", "es", "pt", "he", "ar", "ru", "vi", "sw", "bg"}:
+            if language not in {"en", "fr", "es", "pt", "he", "ar", "ru", "vi", "fa", "sw", "bg"}:
                 errors.append(f"{rel}/routes.json: unknown route language {language!r} in {key!r}")
             if not steps or any(not step.strip() for step in steps):
                 errors.append(f"{rel}/routes.json: empty instructions for {key!r}/{language}")
@@ -147,6 +155,7 @@ def main() -> int:
 
     for folder in hospital_dirs:
         loaded = {}
+        schema_errors_before = len(errors)
         for filename in FILES:
             path = folder / filename
             if not path.exists():
@@ -160,7 +169,9 @@ def main() -> int:
             loaded[filename] = data
             validate_schema(data, schemas[filename], path, errors)
 
-        if all(name in loaded for name in FILES):
+        # Cross-file checks assume schema-valid shapes. Report schema errors
+        # instead of crashing with KeyError/TypeError on malformed packages.
+        if all(name in loaded for name in FILES) and len(errors) == schema_errors_before:
             validate_cross_files(
                 folder,
                 loaded["config.json"],

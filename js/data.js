@@ -6,7 +6,7 @@ export function hospitalIdFromUrl(){
   if(q&&/^[a-z0-9-]+$/i.test(q))return q.toLowerCase();
   // Backward compatibility for visitor links created before hospital datasets.
   if(p.get("visitor")==="1")return "jgh";
-  return null;
+  return "jgh";
 }
 
 export async function fetchJson(url){

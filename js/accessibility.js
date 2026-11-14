@@ -13,7 +13,8 @@ const FOCUSABLE=[
 
 function focusables(root){
   return [...root.querySelectorAll(FOCUSABLE)].filter(el=>
-    !el.hidden && el.getAttribute("aria-hidden")!=="true"
+    !el.matches(':disabled') && !el.closest('[hidden], [inert], [aria-hidden="true"]') &&
+    el.getClientRects().length>0 && getComputedStyle(el).visibility!=="hidden"
   );
 }
 
@@ -56,6 +57,7 @@ export function openDialog(dialog,{initialFocus=null,preserveReturnFocus=false}=
   if(!preserveReturnFocus)returnFocus.set(dialog,document.activeElement);
   if(!dialog.open)dialog.showModal();
   requestAnimationFrame(()=>{
+    if(!dialog.open)return;
     const target=(initialFocus&&dialog.querySelector(initialFocus))||focusables(dialog)[0]||dialog;
     if(target===dialog)dialog.setAttribute("tabindex","-1");
     if(typeof target.focus==="function")target.focus();
