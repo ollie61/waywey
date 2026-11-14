@@ -11,7 +11,7 @@ import {visitorDestinationKey,resolveVisitorDestination} from "./js/visitor-link
 import {createVoicePlayback} from "./js/voice-playback.js";
 import {PLAYBACK_UI} from "./js/i18n.js";
 
-const APP_VERSION="1.0.0";
+const APP_VERSION="1.1.0-rc.1";
 let HOSPITAL={};
 let DATA=[];
 let GRAPH={};
@@ -122,7 +122,17 @@ function populateAppLanguages(){
    const o=document.createElement("option");o.value=lang;o.textContent=LANGUAGE_NAMES[lang]||lang;sel.appendChild(o);
  }
 }
+const SIMPLE_UI={
+ fr:{prompt:"Où souhaitez-vous aller?",example:"Service, département ou numéro de salle",change:"Changer",from:"Départ : ",show:"Montrer les indications au visiteur",sources:"Sources et informations",routeSources:"Sources du parcours"},
+ en:{prompt:"Where would you like to go?",example:"Department, service or room number",change:"Change",from:"From: ",show:"Show Visitor Directions",sources:"Sources and information",routeSources:"Route sources"}
+};
+const LISTEN_LABELS={en:"Listen to Directions",fr:"Écouter les indications",ar:"استمع إلى الإرشادات",fa:"گوش دادن به راهنما",he:"האזנה להוראות",es:"Escuchar las indicaciones",pt:"Ouvir as instruções",ru:"Прослушать указания",vi:"Nghe chỉ đường",bg:"Чуйте указанията"};
 const $=id=>document.getElementById(id);
+function refreshStationSummary(){
+ const simple=SIMPLE_UI[appLang]||SIMPLE_UI.en;
+ $("stationSummary").textContent=simple.from+($("station").selectedOptions[0]?.textContent||"");
+ $("stationChange").textContent=simple.change;
+}
 let selected=null;
 let selectedQueryLang=null;
 let appLang="en";
@@ -132,7 +142,7 @@ let visitorLanguageChosen=false;
 function refreshPlaybackUi(){
  const lang=$("visitorLang").value,t=PLAYBACK_UI[lang]||PLAYBACK_UI.en;
  const active=playbackController&&playbackController.isActive();
- $("listen").textContent=active?"■ "+t.stop:"🔊 "+(I18N[lang]||I18N.en).listen;
+ $("listen").textContent=active?"■ "+t.stop:"🔊 "+(LISTEN_LABELS[lang]||(I18N[lang]||I18N.en).listen);
  $("listen").setAttribute("aria-pressed",active?"true":"false");
 }
 function stopPlayback(){
@@ -252,13 +262,25 @@ function setAppLanguage(lang){
  if($("visitorLangLabel"))$("visitorLangLabel").textContent=a.visitorLanguage;
  if($("results"))$("results").setAttribute("aria-label",a.searchResults);
  if($("qrCode"))$("qrCode").setAttribute("aria-label",a.qrCode);
- $("brandSubtitle").textContent=t.brand+" · "+DATA.length+" destinations · v"+APP_VERSION;$("quickGuideBtn").textContent=t.quickGuide;
+ $("brandSubtitle").textContent=(HOSPITAL.name?.[appLang]||HOSPITAL.name?.en||HOSPITAL.id||"WayWey")+" · v"+APP_VERSION;$("quickGuideBtn").textContent=t.quickGuide;
  $("stationHeading").textContent=t.stationHeading;$("stationLabel").textContent=t.stationLabel;$("stationStatus").textContent=t.stationStatus;
  $("searchHeading").textContent=t.searchHeading;$("searchLabel").textContent=t.searchLabel;$("q").placeholder=t.placeholder;$("clear").textContent=t.clear;
  $("resultHeading").textContent=t.resultHeading;$("showVisitor").textContent=t.showVisitor;$("newSearch").textContent=t.newSearch;$("disclaimer").textContent=t.disclaimer;
  [...$("station").options].forEach(o=>o.textContent=o.dataset[appLang]||o.dataset.en||o.textContent);
+ const simple=SIMPLE_UI[appLang]||SIMPLE_UI.en;
+ if(SIMPLE_UI[appLang]){
+   $("searchHeading").textContent=simple.prompt;$("searchLabel").textContent=simple.prompt;
+   $("q").placeholder=simple.example;$("showVisitor").textContent=simple.show;
+ }
+ $("stationHeading").textContent=t.stationLabel;$("resultHeading").textContent="Destination";
+ $("informationLabel").textContent=simple.sources;$("routeSourceLabel").textContent=simple.routeSources;
+ const bilingual=allowed.includes("fr")&&allowed.includes("en");
+ $("appLang").hidden=bilingual;$("languageToggle").hidden=!bilingual;
+ for(const button of document.querySelectorAll("[data-app-lang]"))button.setAttribute("aria-pressed",String(button.dataset.appLang===appLang));
+ refreshStationSummary();
  $("appLang").value=appLang;
  try{sessionStorage.setItem(storageKey("appLang"),appLang)}catch(e){}
+ try{localStorage.setItem(storageKey("appLang"),appLang)}catch(e){}
  if($("q").value.trim())search();
  if(selected)choose(selected,false);
  if($("guideDialog").open)renderQuickGuide();
@@ -365,7 +387,7 @@ function renderSteps(id,steps){
 function choose(d,scroll=true,queryLang=null){
  stopPlayback();
  pendingVisitor=null;$("visitorLinkNotice").hidden=true;selected=d;if(queryLang)selectedQueryLang=queryLang;const primary=destinationName(d,appLang),secondary=destinationSecondary(d,appLang);
- $("destName").textContent=primary+(secondary&&secondary!==primary?" / "+secondary:"");$("destWhere").textContent=displayWhere(d);
+ $("destName").textContent=primary;$("destWhere").textContent=displayWhere(d);
  $("pills").replaceChildren();
  for(const [text,verify] of [[d.p&&pavilionFor(d.p,appLang),false],[d.loc,false],[d.status==="verify"&&"⚠ "+((APP_UI[appLang]&&APP_UI[appLang].verify)||APP_UI.en.verify),true]]){
    if(!text)continue;
@@ -443,7 +465,13 @@ function renderVisitor(){
  $("vName").textContent=destinationName(selected,lang);
  $("vWhere").textContent=displayWhere(selected,lang);
  renderSteps("vSteps",localizedSteps(selected,lang));
- const qrt=QR_UI[lang]||QR_UI.en;renderVisitorOutdoorMapLink(selected,lang);$("showQr").textContent="▦ "+qrt.button;$("listen").textContent="🔊 "+t.listen;$("back").textContent=t.back;
+ const provenance=PROVENANCE_UI[lang]||PROVENANCE_UI.en;
+ $("visitorVerify").hidden=selected.status!=="verify";
+ $("visitorVerify").textContent=selected.status==="verify"?"⚠ "+provenance.verifyAlert:"";
+ $("visitorSourceLabel").textContent=provenance.sourcesLabel;
+ $("visitorSources").replaceChildren(...[...$("routeSources").childNodes].map(node=>node.cloneNode(true)));
+ $("visitorSourceDetails").hidden=$("routeSources").hidden;
+ const qrt=QR_UI[lang]||QR_UI.en;renderVisitorOutdoorMapLink(selected,lang);$("showQr").textContent="▦ "+qrt.button;$("listen").textContent="🔊 "+(LISTEN_LABELS[lang]||t.listen);$("back").textContent=t.back;
 }
 function renderVisitorLinkNotice(kind,lang){
  const t=VISITOR_LINK_UI[lang]||VISITOR_LINK_UI.en;
@@ -453,7 +481,7 @@ function renderVisitorLinkNotice(kind,lang){
  if(kind==="station"){
    const option=document.createElement("option");option.value="";option.disabled=true;option.textContent=t.choose;
    $("station").prepend(option);$("station").value="";$("showVisitor").disabled=true;
-   $("station").focus();
+   $("stationDetails").open=true;$("station").focus();
  }
 }
 function openLinkedVisitor(d){
@@ -475,6 +503,7 @@ async function bootstrap(){
 
  ["guideDialog","visitorDialog","qrDialog"].forEach(id=>setupDialog($(id)));
  initVoicePlayback();
+ for(const button of document.querySelectorAll("[data-app-lang]"))button.onclick=()=>setAppLanguage(button.dataset.appLang);
  $("appLang").onchange=()=>setAppLanguage($("appLang").value);
  $("quickGuideBtn").onclick=openQuickGuide;
  $("closeGuide").onclick=()=>closeDialog($("guideDialog"));
@@ -509,11 +538,12 @@ async function bootstrap(){
  // Keep each shift's interface choice; a fresh session starts in French at JGH.
  let savedAppLang=null,savedVisitorLang=null;
  try{savedAppLang=sessionStorage.getItem(storageKey("appLang"));savedVisitorLang=sessionStorage.getItem(storageKey("visitorLang"))}catch(e){}
+ try{savedAppLang=localStorage.getItem(storageKey("appLang"))||savedAppLang}catch(e){}
  setAppLanguage(hospitalLanguages().includes(requestedGuideLang)?requestedGuideLang:(hospitalLanguages().includes(savedAppLang)?savedAppLang:(HOSPITAL.defaultAppLanguage||hospitalLanguages()[0]||"en")));
  if([...$("visitorLang").options].some(o=>o.value===savedVisitorLang)){
    $("visitorLang").value=savedVisitorLang;visitorLanguageChosen=true;
  }
- $("station").onchange=()=>{try{localStorage.setItem(storageKey("station"),$("station").value)}catch(e){};$("showVisitor").disabled=!$("station").value;if(selected)choose(selected,false);if(pendingVisitor)$("recoverVisitor").disabled=!$("station").value};
+ $("station").onchange=()=>{refreshStationSummary();$("stationDetails").open=false;try{localStorage.setItem(storageKey("station"),$("station").value)}catch(e){};$("showVisitor").disabled=!$("station").value;if(selected)choose(selected,false);if(pendingVisitor)$("recoverVisitor").disabled=!$("station").value};
  $("recoverVisitor").onclick=()=>{if(pendingVisitor&&$("station").value)openLinkedVisitor(pendingVisitor)};
  if(requestedGuideLang&&QUICK_GUIDE[appLang])setTimeout(()=>{try{openQuickGuide()}catch(e){}},60);
 
@@ -527,7 +557,7 @@ async function bootstrap(){
    const validFrom=from&&[...$("station").options].some(o=>o.value===from);
    if(!d)renderVisitorLinkNotice("missing",$("visitorLang").value);
    else if(!validFrom){pendingVisitor=d;renderVisitorLinkNotice("station",$("visitorLang").value);}
-   else{$("station").value=from;openLinkedVisitor(d);}
+   else{$("station").value=from;refreshStationSummary();openLinkedVisitor(d);}
  }
 
  ensurePwa().cacheHospital(HOSPITAL.id||requestedHospital);

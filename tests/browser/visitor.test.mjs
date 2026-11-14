@@ -54,7 +54,7 @@ test('JGH root opens directly without accessing microphone recognition',async()=
 
 test('shift language choices survive reload independently and QR language wins',async()=>contextTest(async page=>{
   await page.goto(origin+'/');await ready(page);
-  await page.selectOption('#appLang','en');
+  await page.getByRole('button',{name:'EN',exact:true}).click();
   await page.fill('#q','urology');await page.locator('#results button').first().click();
   await page.click('#showVisitor');await page.selectOption('#visitorLang','fa');
   await page.reload();await ready(page);
@@ -118,11 +118,11 @@ test('missing French voice and speech errors leave directions visible with feedb
 
 test('keyboard search, station changes, QR generation and language changes',async()=>contextTest(async page=>{
   await page.goto(origin+'/?hospital=chum');await ready(page);
-  await page.selectOption('#appLang','en');
+  await page.getByRole('button',{name:'EN',exact:true}).click();
   await page.fill('#q',destination.en);
   await page.locator('#results button').first().focus();await page.keyboard.press('Enter');
   assert.match(await page.locator('#steps').innerText(),/floor 1, 2 or 8/);
-  await page.selectOption('#station','emergency');
+  if(!(await page.locator('#station').isVisible()))await page.locator('#stationDetails summary').click();await page.selectOption('#station','emergency');
   assert.doesNotMatch(await page.locator('#steps').innerText(),/public connector/);
   await page.click('#showVisitor');
   await page.selectOption('#visitorLang','ar');
@@ -149,7 +149,7 @@ test('JGH keeps French visitor directions across reopening, QR handoff and a dif
   assert.equal(await page.locator('#visitorLang').inputValue(),'fr');
   assert.match(await page.locator('#vSteps').innerText(),/3e étage/);
   assert.doesNotMatch(await page.locator('#vSteps').innerText(),/3rd floor/);
-  await page.click('#closeVisitor');await page.selectOption('#appLang','en');
+  await page.click('#closeVisitor');await page.getByRole('button',{name:'EN',exact:true}).click();
   await page.click('#showVisitor');
   assert.equal(await page.locator('#visitorLang').inputValue(),'fr');
   await page.selectOption('#visitorLang','es');await page.click('#closeVisitor');await page.click('#showVisitor');
@@ -190,7 +190,7 @@ test('invalid or absent starts cannot silently use a saved station',async()=>con
     assert.equal(await page.locator('#station').inputValue(),'');
     assert.equal(await page.locator('#recoverVisitor').isDisabled(),true);
     assert.equal(await page.locator('#visitorDialog').evaluate(d=>d.open),false);
-    await page.selectOption('#station','main');await page.click('#recoverVisitor');
+    if(!(await page.locator('#station').isVisible()))await page.locator('#stationDetails summary').click();await page.selectOption('#station','main');await page.click('#recoverVisitor');
     await page.locator('#visitorDialog[open]').waitFor();
     assert.match(await page.locator('#vSteps').innerText(),/public connector/);
   }
@@ -258,7 +258,7 @@ test('Persian directions and QR controls work across all five hospitals',async()
     await page.goto(origin+'/?'+new URLSearchParams({hospital:id,visitor:'1',dest:d.id,from:config.entrances[0].id,lang:'fa'}));
     await page.locator('#visitorDialog[open]').waitFor();
     assert.equal(await page.locator('#visitorPanel').getAttribute('dir'),'rtl');
-    assert.equal(await page.locator('#listen').innerText(),'🔊 گوش دادن');
+    assert.equal(await page.locator('#listen').innerText(),'🔊 گوش دادن به راهنما');
     assert.equal(await page.locator('#showQr').innerText(),'▦ نمایش کد QR');
     assert.doesNotMatch(await page.locator('#vSteps').innerText(),/undefined|Take the|Follow the|Use a public|From the/);
     await page.click('#showQr');
@@ -438,4 +438,46 @@ test('aborted photo transactions keep the preview and never report a saved photo
   assert.equal(await page.locator('#preview').isVisible(),true);
   assert.equal(await page.locator('#accept').isEnabled(),true);
   assert.equal(await page.locator('#gallery .thumb').count(),0);
+}));
+
+test('1.1 ambassador toggle works by keyboard and persists independently across tabs',async()=>contextTest(async(page,context)=>{
+  await page.goto(origin+'/');await ready(page);
+  assert.equal(await page.locator('#appLang').isVisible(),false);
+  assert.equal(await page.getByRole('button',{name:'FR',exact:true}).getAttribute('aria-pressed'),'true');
+  await page.getByRole('button',{name:'EN',exact:true}).focus();await page.keyboard.press('Space');
+  assert.equal(await page.locator('#searchHeading').innerText(),'Where would you like to go?');
+  const other=await context.newPage();await other.goto(origin+'/');await ready(other);
+  assert.equal(await other.getByRole('button',{name:'EN',exact:true}).getAttribute('aria-pressed'),'true');
+  await other.close();
+  await page.getByRole('button',{name:'FR',exact:true}).click();
+  assert.equal(await page.locator('#searchHeading').innerText(),'Où souhaitez-vous aller?');
+}));
+
+test('1.1 starting point edits with native disclosure and survives reopening',async()=>contextTest(async page=>{
+  await page.goto(origin+'/');await ready(page);
+  assert.equal(await page.locator('#station').isVisible(),false);
+  await page.locator('#stationDetails summary').click();
+  const options=await page.locator('#station option').evaluateAll(nodes=>nodes.map(n=>({value:n.value,text:n.textContent})));
+  await page.selectOption('#station',options[1].value);
+  assert.equal(await page.locator('#stationDetails').getAttribute('open'),null);
+  assert.ok((await page.locator('#stationSummary').innerText()).includes(options[1].text));
+  await page.reload();await ready(page);
+  assert.equal(await page.locator('#station').inputValue(),options[1].value);
+  assert.ok((await page.locator('#stationSummary').innerText()).includes(options[1].text));
+}));
+
+test('1.1 visitor primary action, sources and RTL fit narrow and enlarged layouts',async()=>contextTest(async page=>{
+  for(const width of [320,390,1280]){
+    await page.setViewportSize({width,height:900});
+    await page.goto(link({lang:'fa'}));await page.locator('#visitorDialog[open]').waitFor();
+    assert.equal(await page.locator('#visitorPanel').getAttribute('dir'),'rtl');
+    assert.match(await page.locator('#listen').getAttribute('class'),/primary/);
+    assert.match(await page.locator('#showQr').getAttribute('class'),/secondary/);
+    await page.locator('#visitorSourceDetails summary').click();
+    assert.ok(await page.locator('#visitorSources a').count()>0);
+    await page.evaluate(()=>document.documentElement.style.fontSize='200%');
+    assert.ok(await page.locator('#visitorDialog').evaluate(el=>el.scrollWidth<=el.clientWidth+1));
+    await page.click('#closeVisitor');
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  }
 }));
