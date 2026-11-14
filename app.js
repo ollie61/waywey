@@ -11,7 +11,7 @@ import {visitorDestinationKey,resolveVisitorDestination} from "./js/visitor-link
 import {createVoicePlayback} from "./js/voice-playback.js";
 import {PLAYBACK_UI} from "./js/i18n.js";
 
-const APP_VERSION="1.0.0-rc.1";
+const APP_VERSION="1.0.0";
 let HOSPITAL={};
 let DATA=[];
 let GRAPH={};
