@@ -571,3 +571,15 @@ test('1.1.2 remembered choices stay within their own hospital',async()=>contextT
  assert.equal(await page.locator('#appLang').inputValue(),'en');
  assert.equal(await page.locator('#visitorLang').inputValue(),'fa');
 }));
+
+test('JGH 0## destinations explicitly change to RC after transfer or within the starting pavilion',async()=>contextTest(async page=>{
+ const room=jgh.find(d=>d.en==='Neurology'&&d.loc==='E-005');
+ for(const [from,level] of [['main','01'],['e','S1']]){
+  await page.goto(link({hospital:'jgh',dest:room.id,from,lang:'en'}));
+  await page.locator('#visitorDialog[open]').waitFor();
+  const steps=await page.locator('#vSteps li').allTextContents();
+  assert.match(steps.at(-2),new RegExp('Pavilion E.*\\['+level+'\\].*\\[RC\\]'));
+  assert.match(steps.at(-1),/E-005/);
+  if(from==='e')assert.equal(steps.length,2);
+ }
+}));
