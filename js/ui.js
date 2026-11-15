@@ -15,7 +15,13 @@ export function destinationSecondary(d,lang,languages){
 
 export function appIsRtl(lang){return ["he","ar","fa"].includes(lang);}
 
-export function locationFor(d,lang){
+export function formatFloorLabels(text){
+  return String(text??"").replace(/\[RC\]|\bRC\b/g,"[RC]");
+}
+
+export function locationFor(d,lang){return formatFloorLabels(locationText(d,lang));}
+
+function locationText(d,lang){
   const key="loc"+lang.charAt(0).toUpperCase()+lang.slice(1);
   if(d[key])return d[key];
   let s=d.loc||"";

@@ -15,3 +15,16 @@ test('French formats English floor labels without changing room codes or explici
   }
   assert.equal(locationFor({loc:'3rd floor',locFr:'Troisième étage'},'fr'),'Troisième étage');
 });
+
+test('RC floor references are bracketed once in every location language',async()=>{
+ const {formatFloorLabels}=await import('../js/ui.js');
+ assert.equal(formatFloorLabels('RC'),'[RC]');
+ assert.equal(formatFloorLabels('[RC]'),'[RC]');
+ assert.equal(formatFloorLabels('D-070 (main floor/RC)'),'D-070 (main floor/[RC])');
+ assert.equal(formatFloorLabels('CRC ARC-001'),'CRC ARC-001');
+ for(const lang of ['en','fr','he','ar','es','pt','ru','vi','fa','bg']){
+  assert.equal(locationFor({loc:'RC'},lang),'[RC]',lang);
+  assert.equal(locationFor({loc:'[RC]'},lang),'[RC]',lang);
+ }
+ assert.equal(locationFor({loc:'RC',locFr:'Niveau RC'},'fr'),'Niveau [RC]');
+});

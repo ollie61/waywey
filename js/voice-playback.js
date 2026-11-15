@@ -23,6 +23,8 @@ const SPOKEN_SEQUENCE={
 };
 
 export function prepareSpeechText(text,lang){
+  // Brackets are visual level delimiters, never spoken punctuation in any locale.
+  text=String(text??"").replace(/[\[\]]/g,"");
   const sequence=SPOKEN_SEQUENCE[languageTag(lang).split("-")[0]];
   if(!sequence)return text;
   return text.replace(/\s*→\s*/g,`, ${sequence} `);
