@@ -267,7 +267,7 @@ function setAppLanguage(lang){
  if($("qrCode"))$("qrCode").setAttribute("aria-label",a.qrCode);
  $("brandSubtitle").textContent=(HOSPITAL.name?.[appLang]||HOSPITAL.name?.en||HOSPITAL.id||"WayWey")+" · v"+APP_VERSION;$("quickGuideBtn").setAttribute("aria-label",t.quickGuide);$("quickGuideBtn").setAttribute("title",t.quickGuide);
  $("stationHeading").textContent=t.stationHeading;$("stationLabel").textContent=t.stationLabel;$("stationStatus").textContent=t.stationStatus;
- $("searchHeading").textContent=t.searchHeading;$("searchLabel").textContent=t.searchLabel;$("q").placeholder=t.placeholder;$("clear").textContent=t.clear;
+ $("searchHeading").textContent=t.searchHeading;$("searchLabel").textContent=t.searchLabel;$("q").placeholder=t.placeholder;
  $("resultHeading").textContent=t.resultHeading;$("showVisitor").textContent=t.showVisitor;$("newSearch").textContent=t.newSearch;$("disclaimer").textContent=t.disclaimer;
  [...$("station").options].forEach(o=>o.textContent=o.dataset[appLang]||o.dataset.en||o.textContent);
  const simple=SIMPLE_UI[appLang]||SIMPLE_UI.en;
@@ -527,7 +527,6 @@ async function bootstrap(){
  $("quickGuideBtn").onclick=openQuickGuide;
  $("closeGuide").onclick=()=>closeDialog($("guideDialog"));
  $("q").addEventListener("input",search);
- $("clear").onclick=()=>{$("q").value="";$("results").innerHTML="";$("q").focus()};
  $("newSearch").onclick=()=>{$("q").value="";$("results").innerHTML="";$("route").classList.remove("active");selected=null;selectedQueryLang=null;$("q").focus();window.scrollTo({top:0,behavior:motionBehavior()})};
  $("showVisitor").onclick=showVisitor;
  $("visitorLang").onchange=()=>{visitorLanguageChosen=true;try{sessionStorage.setItem(storageKey("visitorLang"),$("visitorLang").value)}catch(e){};renderVisitor();};
