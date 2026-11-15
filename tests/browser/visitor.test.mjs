@@ -462,7 +462,7 @@ test('1.1 starting point edits with native disclosure and survives reopening',as
   assert.equal(await page.locator('#stationDetails').getAttribute('open'),null);
   const shortName=options[1].text.replace(/\s+[—–-]\s+(?=\d{1,6}\b).*$/u,'').trim();
   assert.equal((await page.locator('#stationSummary').innerText()).trim(),shortName);
-  assert.equal(await page.locator('#station option:checked').innerText(),options[1].text);
+  assert.equal(await page.locator('#station option:checked').textContent(),options[1].text);
   await page.reload();await ready(page);
   assert.equal(await page.locator('#station').inputValue(),options[1].value);
   assert.equal((await page.locator('#stationSummary').innerText()).trim(),shortName);
