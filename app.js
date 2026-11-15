@@ -130,8 +130,8 @@ const LISTEN_LABELS={en:"Listen to Directions",fr:"Écouter les indications",ar:
 const $=id=>document.getElementById(id);
 function refreshStationSummary(){
  const simple=SIMPLE_UI[appLang]||SIMPLE_UI.en;
- $("stationSummary").textContent=simple.from+($("station").selectedOptions[0]?.textContent||"");
- $("stationChange").textContent=simple.change;
+ $("stationSummary").textContent=$("station").selectedOptions[0]?.textContent||"";
+ $("stationDetails").querySelector("summary").setAttribute("aria-label",(simple.change||"Change")+" — "+$("stationSummary").textContent);
 }
 let selected=null;
 let selectedQueryLang=null;
