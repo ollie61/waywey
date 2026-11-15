@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
-import {findRoute,floorAwareSteps} from '../js/routing.js';
+import {findRoute,floorAwareSteps,requiresFloorAccessVerification} from '../js/routing.js';
 const read=p=>JSON.parse(readFileSync(new URL('../'+p,import.meta.url)));
 const config=read('hospitals/jgh/config.json'),routes=read('hospitals/jgh/routes.json');
 const destinations=read('hospitals/jgh/destinations.json');
@@ -88,7 +88,7 @@ test('owner-confirmed JGH 0## rooms, including subrooms, are explicitly on RC',(
 test('RC room instructions include the actual required elevator transition in every route language',()=>{
  const d=destinations.find(d=>d.en==='Neurology'&&d.loc==='E-005');assert.equal(d.floor,'RC');
  for(const lang of languages){
-  const cross=plan('main','E',d.floor,lang);assert.match(cross.at(-1),/\[01\].*\[RC\]/,lang);
+  const cross=plan('main','E',d.floor,lang);assert.match(cross[0],/\[01\].*\[RC\]/,lang);assert.match(cross.at(-1),/D → E/,lang);
   const same=plan('e','E',d.floor,lang);assert.equal(same.length,1,lang);assert.match(same[0],/\[S1\].*\[RC\]/,lang);assert.doesNotMatch(same[0],/\[01\]/,lang);
  }
  assert.deepEqual(plan('h','H','RC'),[]);
@@ -102,4 +102,43 @@ test('owner-confirmed 00## rooms are on S1, distinct from three-digit 0## rooms 
   const cross=plan('main','E','S1',lang);assert.match(cross.at(-1),/\[01\].*\[S1\]/,lang);
   assert.deepEqual(plan('e','E','S1',lang),[],lang);
  }
+});
+
+
+test('confirmed RC transfers use the starting elevator and preserve the existing path',()=>{
+ for(const target of ['D','B','G']){
+  const steps=plan('e',target,'RC');
+  assert.match(steps[0],/Pavilion E.*\[S1\].*\[RC\]/);
+  assert.doesNotMatch(steps.join(' '),/\[01\]/);
+  assert.equal(steps.filter(s=>/elevator/.test(s)).length,1);
+  const path=findRoute(routes.graph,'E',target);
+  assert.equal(steps.length,path.length);
+  for(let i=1;i<path.length;i++)assert.ok(steps[i].includes(path[i-1]+' → '+path[i]));
+ }
+ const reverse=plan('main','E','RC');assert.match(reverse[0],/Pavilion B.*\[01\].*\[RC\]/);
+ assert.doesNotMatch(reverse.join(' '),/Pavilion E, take the elevator/);
+});
+test('RC corridors do not change normal 01 journeys, unknown links or H K exceptions',()=>{
+ assert.match(plan('e','B','03')[0],/\[S1\].*\[01\]/);
+ assert.match(plan('e','C','RC')[0],/\[S1\].*\[01\]/);
+ assert.match(plan('e','C','RC').at(-1),/Pavilion C.*\[01\].*\[RC\]/);
+ const e=plan('main','E','S1');assert.match(e.at(-1),/Pavilion E.*\[01\].*\[S1\]/);
+ assert.ok(plan('h','G','RC').includes(routes.specialRoutes['H>K'].en[1]));
+ const start={id:'synthetic-rc-start',node:'E',entranceLevel:'RC'};
+ const steps=floorAwareSteps({path:findRoute(routes.graph,'E','G'),entrance:start,destination:{floor:'03'},policy:routes.floorRouting,lang:'en'});
+ assert.match(steps.at(-1),/Pavilion G.*\[RC\].*\[03\]/);assert.equal(steps.filter(s=>/elevator/.test(s)).length,1);
+});
+test('Pavilion A RC access requires staff verification without an unverified elevator instruction',()=>{
+ for(const lang of languages){
+  const d=destinations.find(d=>d.loc==='A-018');
+  assert.equal(requiresFloorAccessVerification(d,'A',routes.floorRouting),true);
+  const steps=floorAwareSteps({path:findRoute(routes.graph,'E','A'),entrance:config.entrances.find(e=>e.id==='e'),destination:d,policy:routes.floorRouting,lang});
+  assert.ok(steps.at(-1).startsWith('⚠'),lang);assert.match(steps.at(-1),/A-018/,lang);
+  assert.match(steps[0],/\[S1\].*\[01\]/,lang);
+  assert.equal(steps.filter(s=>s.includes('[RC]')).length,1,lang);
+  if(lang==='en')assert.match(steps.at(-1),/mostly restricted.*confirm public access/);
+  else assert.doesNotMatch(steps.at(-1),/mostly restricted|Ask hospital staff/);
+ }
+ assert.equal(requiresFloorAccessVerification({floor:'01'},'A',routes.floorRouting),false);
+ assert.equal(requiresFloorAccessVerification({floor:'RC'},'B',routes.floorRouting),false);
 });

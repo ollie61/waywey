@@ -204,7 +204,7 @@
   },
   "floorRouting": {
     "transferLevel": "01",
-    "source": "Owner-confirmed JGH transfer rule, 2026-11-15. H–K levels retained from existing specialRoutes; K lobby numbered level is unverified.",
+    "source": "Owner-confirmed JGH transfer rule, 2026-11-15. H–K levels retained from existing specialRoutes; K lobby numbered level is unverified. Owner confirmation: public RC passage connects E, D, B and G along existing graph edges; Pavilion A RC is mostly restricted, 2026-11-15.",
     "exceptions": {
       "H>K": {
         "departureLevel": "03",
@@ -214,6 +214,21 @@
         "departureLevel": null,
         "arrivalLevel": "03"
       }
+    },
+    "floorConnections": {
+      "RC": [
+        "E>D",
+        "D>E",
+        "D>B",
+        "B>D",
+        "B>G",
+        "G>B"
+      ]
+    },
+    "restrictedLevels": {
+      "A": [
+        "RC"
+      ]
     }
   }
 }

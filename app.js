@@ -1,6 +1,6 @@
 import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,LANGUAGE_NAMES,VISITOR_LINK_UI,routeNoticeText} from "./js/i18n.js";
 import {rankResults,inferQueryLanguage} from "./js/search.js";
-import {findRoute,resolveTargetNode,routeInstructions,floorAwareSteps} from "./js/routing.js";
+import {findRoute,resolveTargetNode,routeInstructions,floorAwareSteps,requiresFloorAccessVerification} from "./js/routing.js";
 import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,formatFloorLabels} from "./js/ui.js";
 import {hospitalIdFromUrl,fetchJson} from "./js/data.js";
 import {initPwa} from "./js/pwa.js";
@@ -326,6 +326,7 @@ function ambassadorSteps(d){
    const entrance=HOSPITAL.entrances.find(e=>e.id===$("station").value);
    const plan=floorAwareSteps({path:bfs(start,target),entrance,destination:d,policy:HOSPITAL.floorRouting,specialRoutes:HOSPITAL.specialRoutes,edgeInstructions:EDGE_INSTRUCTIONS,lang:appLang});
    if(plan){
+     if(requiresFloorAccessVerification(d,target,HOSPITAL.floorRouting))return [...out,...plan];
      const verified=stationDestinationSteps(d,appLang);
      return [...out,...plan,...(verified||[(I18N[appLang]||I18N.en).final+" "+(d.loc?locationFor(d,appLang):destinationName(d,appLang))+"."])];
    }
@@ -359,6 +360,7 @@ function localizedSteps(d,lang){
    const entrance=HOSPITAL.entrances.find(e=>e.id===$("station").value);
    const plan=floorAwareSteps({path:bfs(start,target),entrance,destination:d,policy:HOSPITAL.floorRouting,specialRoutes:HOSPITAL.specialRoutes,edgeInstructions:EDGE_INSTRUCTIONS,lang:lang});
    if(plan){
+     if(requiresFloorAccessVerification(d,target,HOSPITAL.floorRouting))return [...out,...plan];
      const verified=stationDestinationSteps(d,lang);
      return [...out,...plan,...(verified||[(I18N[lang]||I18N.en).final+" "+(d.loc?locationFor(d,lang):destinationName(d,lang))+"."])];
    }
@@ -422,7 +424,7 @@ function search(){
  });
 }
 function renderSteps(id,steps){
- const items=steps.map(text=>{const li=document.createElement("li");li.dir="auto";li.textContent=formatFloorLabels(text);return li;});
+ const items=steps.map(text=>{const li=document.createElement("li");li.dir="auto";li.textContent=formatFloorLabels(text);if(text.startsWith("⚠"))li.classList.add("verify-alert");return li;});
  $(id).replaceChildren(...items);
 }
 function choose(d,scroll=true,queryLang=null){

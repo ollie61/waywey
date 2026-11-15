@@ -71,6 +71,21 @@ class ValidatorTests(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertIn('lacks validated special edge', output)
 
+    def test_nonexistent_rc_corridor_is_rejected(self):
+        code, output = self.run_package(lambda p: self.edit(p, 'routes.json', lambda d: d['floorRouting']['floorConnections']['RC'].append('E>G')))
+        self.assertEqual(code, 1)
+        self.assertIn('lacks an existing graph edge', output)
+
+    def test_rc_corridor_into_restricted_a_is_rejected(self):
+        code, output = self.run_package(lambda p: self.edit(p, 'routes.json', lambda d: d['floorRouting']['floorConnections']['RC'].append('B>A')))
+        self.assertEqual(code, 1)
+        self.assertIn('enters restricted level', output)
+
+    def test_rc_corridor_cannot_override_h_k_special_connection(self):
+        code, output = self.run_package(lambda p: self.edit(p, 'routes.json', lambda d: d['floorRouting']['floorConnections']['RC'].append('H>K')))
+        self.assertEqual(code, 1)
+        self.assertIn('must not override special edge', output)
+
 
 if __name__ == '__main__':
     unittest.main()
