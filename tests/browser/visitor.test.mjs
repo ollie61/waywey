@@ -460,10 +460,12 @@ test('1.1 starting point edits with native disclosure and survives reopening',as
   const options=await page.locator('#station option').evaluateAll(nodes=>nodes.map(n=>({value:n.value,text:n.textContent})));
   await page.selectOption('#station',options[1].value);
   assert.equal(await page.locator('#stationDetails').getAttribute('open'),null);
-  assert.ok((await page.locator('#stationSummary').innerText()).includes(options[1].text));
+  const shortName=options[1].text.replace(/\s+[—–-]\s+(?=\d{1,6}\b).*$/u,'').trim();
+  assert.equal((await page.locator('#stationSummary').innerText()).trim(),shortName);
+  assert.equal(await page.locator('#station option:checked').innerText(),options[1].text);
   await page.reload();await ready(page);
   assert.equal(await page.locator('#station').inputValue(),options[1].value);
-  assert.ok((await page.locator('#stationSummary').innerText()).includes(options[1].text));
+  assert.equal((await page.locator('#stationSummary').innerText()).trim(),shortName);
 }));
 
 test('1.1 visitor primary action, sources and RTL fit narrow and enlarged layouts',async()=>contextTest(async page=>{
