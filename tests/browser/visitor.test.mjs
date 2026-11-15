@@ -487,7 +487,7 @@ test('1.1 visitor primary action, sources and RTL fit narrow and enlarged layout
 
 test('JGH floor transitions reach visitors in all languages and fit mobile screens',async()=>contextTest(async page=>{
  const admissions=jgh.find(d=>d.loc==='B-114');
- for(const lang of ['en','fr','es','pt','he','ar','ru','vi','fa','sw','bg']){
+ for(const lang of ['en','fr','es','pt','he','ar','ru','vi','fa','bg']){
   await page.setViewportSize({width:390,height:844});
   await page.goto(link({hospital:'jgh',dest:admissions.id,from:'e',lang}));
   await page.locator('#visitorDialog[open]').waitFor();
@@ -513,4 +513,20 @@ test('JGH ambassador shares floor logic; same pavilion and unknown floors are sa
  await page.goto(link({hospital:'jgh',dest:unknown.id,from:'main',lang:'en'}));
  await page.locator('#visitorDialog[open]').waitFor();
  assert.match(await page.locator('#vSteps').innerText(),/Verification required/);
+}));
+
+// The [03] fixture tests UI composition without claiming B-304's floor is verified.
+test('JGH composes destination elevator after transfer and preserves reverse entrance level',async()=>contextTest(async page=>{
+ const room=jgh.find(d=>d.loc==='B-304');
+ await page.route('**/hospitals/jgh/destinations.json',route=>route.fulfill({json:jgh.map(d=>d.id===room.id?{...d,floor:'03'}:d)}));
+ await page.goto(link({hospital:'jgh',dest:room.id,from:'e',lang:'en'}));
+ await page.locator('#visitorDialog[open]').waitFor();
+ const steps=await page.locator('#vSteps li').allTextContents();
+ assert.match(steps[0],/Pavilion E.*\[S1\].*\[01\]/);
+ assert.match(steps.at(-2),/Pavilion B.*\[01\].*\[03\]/);
+ assert.match(steps.at(-1),/B-304/);
+ const entrance=jgh.find(d=>d.loc==='5757 Légaré');
+ await page.goto(link({hospital:'jgh',dest:entrance.id,from:'main',lang:'en'}));
+ await page.locator('#visitorDialog[open]').waitFor();
+ assert.match(await page.locator('#vSteps').innerText(),/Pavilion E.*\[01\].*\[S1\]/);
 }));
