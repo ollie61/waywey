@@ -586,3 +586,28 @@ test('JGH 0## rooms use RC and 00## rooms use S1 in visitor instructions',async(
  }
  }
 }));
+
+test('floor brackets stay visible but are absent from speech in every visitor language',async()=>contextTest(async page=>{
+ await page.addInitScript(()=>{
+  window.floorSpeech=[];
+  Object.defineProperty(window,'SpeechSynthesisUtterance',{value:class{constructor(text){this.text=text;}}});
+  Object.defineProperty(window,'speechSynthesis',{value:{
+   getVoices:()=>['en','fr','he','ar','es','pt','ru','vi','fa','bg'].map(lang=>({lang})),
+   addEventListener(){},cancel(){},speak(u){window.floorSpeech.push(u.text);u.onstart?.();}
+  }});
+ });
+ const room=jgh.find(d=>d.en==='Neurology'&&d.loc==='E-005');
+ for(const lang of ['en','fr','he','ar','es','pt','ru','vi','fa','bg']){
+  await page.goto(link({hospital:'jgh',dest:room.id,from:'main',lang}));
+  await page.locator('#visitorDialog[open]').waitFor();
+  assert.match(await page.locator('#vSteps').innerText(),/\[RC\]/,lang);
+  await page.click('#listen');
+  const spoken=await page.evaluate(()=>window.floorSpeech.at(-1));
+  assert.ok(spoken,lang);assert.doesNotMatch(spoken,/[\[\]]/,lang);assert.match(spoken,/RC/,lang);
+ }
+ const rc=jgh.find(d=>d.loc==='D-070 (main floor/RC)');
+ await page.goto(link({hospital:'jgh',dest:rc.id,from:'main',lang:'en'}));
+ await page.locator('#visitorDialog[open]').waitFor();
+ assert.match(await page.locator('#vWhere').innerText(),/\[RC\]/);
+ assert.doesNotMatch(await page.locator('#vSteps').innerText(),/\[\[RC\]\]/);
+}));

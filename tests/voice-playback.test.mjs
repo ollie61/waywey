@@ -340,3 +340,15 @@ test('Stop cancels a queued voice-readiness retry without later replay', () => {
   assert.deepEqual(m.errors, []);
   assert.equal(m.timers.size, 0);
 });
+
+test('square brackets are visual only and never reach any speech locale',()=>{
+ const visible='[01] → [RC] → [S1]. [03]';
+ for(const lang of [...Object.keys(I18N),'sw','fr-CA','ar-SA','he-IL','fa-IR','xx']){
+  const text=prepareSpeechText(visible,lang);
+  assert.doesNotMatch(text,/[\[\]]/,lang);
+  for(const level of ['01','RC','S1','03'])assert.ok(text.includes(level),lang);
+  const m=mock([{lang}]);m.controller.speak(visible,lang);
+  assert.equal(m.spoken.length,1,lang);assert.doesNotMatch(m.spoken[0].text,/[\[\]]/,lang);
+ }
+ assert.equal(visible,'[01] → [RC] → [S1]. [03]');
+});

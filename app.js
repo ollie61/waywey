@@ -1,7 +1,7 @@
 import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,LANGUAGE_NAMES,VISITOR_LINK_UI,routeNoticeText} from "./js/i18n.js";
 import {rankResults,inferQueryLanguage} from "./js/search.js";
 import {findRoute,resolveTargetNode,routeInstructions,floorAwareSteps} from "./js/routing.js";
-import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion} from "./js/ui.js";
+import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,formatFloorLabels} from "./js/ui.js";
 import {hospitalIdFromUrl,fetchJson} from "./js/data.js";
 import {initPwa} from "./js/pwa.js";
 import {formatAuditDate,sourceLinks,hospitalSourceLinks} from "./js/provenance.js";
@@ -422,7 +422,7 @@ function search(){
  });
 }
 function renderSteps(id,steps){
- const items=steps.map(text=>{const li=document.createElement("li");li.dir="auto";li.textContent=text;return li;});
+ const items=steps.map(text=>{const li=document.createElement("li");li.dir="auto";li.textContent=formatFloorLabels(text);return li;});
  $(id).replaceChildren(...items);
 }
 function choose(d,scroll=true,queryLang=null){
@@ -435,7 +435,7 @@ function choose(d,scroll=true,queryLang=null){
    const pill=document.createElement("span");pill.className="pill"+(verify?" verify-pill":"");pill.textContent=text;$("pills").append(pill);
  }
  renderSteps("steps",ambassadorSteps(d));
- const note=noteFor(d);$("note").style.display=note?"block":"none";$("note").textContent=note;
+ const note=noteFor(d);$("note").style.display=note?"block":"none";$("note").textContent=formatFloorLabels(note);
  renderRouteProvenance(d);
  renderOutdoorMapLink(d);
  $("route").classList.add("active");
