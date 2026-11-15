@@ -41,10 +41,10 @@
       "id": "a",
       "node": "A",
       "labels": {
-        "en": "Pavilion A [S1] — 5759 Côte-des-Neiges",
-        "fr": "Pavillon A [S1] — 5759, chemin de la Côte-des-Neiges"
+        "en": "Pavilion A [01] — 5759 Côte-des-Neiges",
+        "fr": "Pavillon A [01] — 5759, chemin de la Côte-des-Neiges"
       },
-      "entranceLevel": "S1"
+      "entranceLevel": "01"
     },
     {
       "id": "e",
