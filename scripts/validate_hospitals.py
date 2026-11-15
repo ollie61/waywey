@@ -118,6 +118,18 @@ def validate_cross_files(folder: Path, config, destinations, routes, guide, erro
         for destination in destinations:
             if "floor" not in destination:
                 errors.append(f"{rel}/destinations.json: missing explicit floor or null for {destination['id']!r}")
+        for level, edges in policy.get("floorConnections", {}).items():
+            for edge in edges:
+                a, sep, b = edge.partition(">")
+                if not sep or b not in graph.get(a, []):
+                    errors.append(f"{rel}/routes.json: floor connection {level}/{edge!r} lacks an existing graph edge")
+                if edge in policy["exceptions"]:
+                    errors.append(f"{rel}/routes.json: floor connection must not override special edge {edge!r}")
+                if level in policy.get("restrictedLevels", {}).get(a, []) or level in policy.get("restrictedLevels", {}).get(b, []):
+                    errors.append(f"{rel}/routes.json: public floor connection enters restricted level {level}/{edge!r}")
+        for node in policy.get("restrictedLevels", {}):
+            if node not in graph:
+                errors.append(f"{rel}/routes.json: restriction references unknown pavilion {node!r}")
         for edge in policy["exceptions"]:
             a, sep, b = edge.partition(">")
             if not sep or b not in graph.get(a, []) or edge not in routes.get("specialRoutes", {}):

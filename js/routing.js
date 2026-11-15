@@ -60,12 +60,34 @@ const FLOOR_TEXT={
  sw:{e:'Katika Jengo {p}, tumia lifti kutoka [{a}] hadi [{b}].',r:'Fuata alama za ndani kwenye [{f}]: {a} → {b}.',w:'Uthibitisho unahitajika: hakikisha njia kati ya ghorofa katika Jengo {p} kwa wafanyakazi au alama za sasa.'},
  bg:{e:'В павилион {p} вземете асансьора от ниво [{a}] до [{b}].',r:'Следвайте вътрешните табели на ниво [{f}]: {a} → {b}.',w:'Необходима е проверка: потвърдете връзката между етажите в павилион {p} с персонала или актуалните табели.'}
 };
+const RESTRICTED_FLOOR_TEXT={
+ en:'Level [{f}] in Pavilion {p} is mostly restricted. Ask hospital staff to confirm public access to {d} before continuing.',
+ fr:'Le niveau [{f}] du pavillon {p} est en grande partie à accès restreint. Demandez au personnel de confirmer l’accès public à {d} avant de continuer.',
+ es:'El nivel [{f}] del Pabellón {p} tiene acceso mayormente restringido. Pida al personal que confirme el acceso público a {d} antes de continuar.',
+ pt:'O nível [{f}] do Pavilhão {p} tem acesso principalmente restrito. Peça aos funcionários que confirmem o acesso público a {d} antes de continuar.',
+ he:'הגישה למפלס [{f}] בבניין {p} מוגבלת ברובה. בקשו מהצוות לאשר גישה לציבור אל {d} לפני שתמשיכו.',
+ ar:'الوصول إلى المستوى [{f}] في الجناح {p} مقيّد في معظمه. اطلب من الموظفين تأكيد إمكانية وصول الزوار إلى {d} قبل المتابعة.',
+ ru:'Доступ на уровень [{f}] в павильоне {p} в основном ограничен. Перед продолжением уточните у персонала доступ для посетителей к {d}.',
+ vi:'Tầng [{f}] tại Khu {p} phần lớn bị hạn chế tiếp cận. Hỏi nhân viên để xác nhận lối đi công cộng đến {d} trước khi tiếp tục.',
+ fa:'دسترسی به طبقه [{f}] در ساختمان {p} بیشتر محدود است. پیش از ادامه، از کارکنان بخواهید دسترسی عمومی به {d} را تأیید کنند.',
+ sw:'Ufikiaji wa ghorofa [{f}] katika Jengo {p} umezuiliwa kwa sehemu kubwa. Waulize wafanyakazi kuthibitisha njia ya umma ya kufika {d} kabla ya kuendelea.',
+ bg:'Достъпът до ниво [{f}] в павилион {p} е предимно ограничен. Преди да продължите, попитайте персонала за достъп за посетители до {d}.'
+};
+export function requiresFloorAccessVerification(destination,target,policy){
+ return Boolean(policy?.restrictedLevels?.[target]?.includes(destination.floor));
+}
+
 export function floorAwareSteps({path,entrance,destination,policy,specialRoutes={},edgeInstructions={},lang}){
  if(!policy||!path?.length||!entrance)return null;
  const t=FLOOR_TEXT[lang];
  if(!t)throw new Error('Missing floor translation: '+lang);
  const format=(key,values)=>t[key].replace(/\{(\w+)\}/g,(_,k)=>values[k]);
  const steps=[];let level=entrance.entranceLevel;
+ // Use an alternate transfer level only when every edge of the existing path
+ // is confirmed there. Other paths retain 01 and documented special connectors.
+ const rcEdges=new Set(policy.floorConnections?.RC||[]);
+ const rcPath=path.length>1&&path.every(node=>!policy.restrictedLevels?.[node]?.includes("RC"))&&path.slice(1).every((node,i)=>rcEdges.has(path[i]+">"+node));
+ const transferLevel=rcPath&&(entrance.entranceLevel==="RC"||destination.floor==="RC")?"RC":policy.transferLevel;
  const move=(p,to)=>{
    if(!level||!to)steps.push(format('w',{p}));
    else if(level!==to)steps.push(format('e',{p,a:level,b:to}));
@@ -81,12 +103,16 @@ export function floorAwareSteps({path,entrance,destination,policy,specialRoutes=
      else steps.push(format('w',{p:a+' / '+b}));
      level=exception.arrivalLevel;
    }else{
-     move(a,policy.transferLevel);
-     const documented=edgeInstructions[key]?.[lang];
-     steps.push(...(documented||[format('r',{f:policy.transferLevel,a,b})]));
-     level=policy.transferLevel;
+     move(a,transferLevel);
+     const documented=transferLevel===policy.transferLevel?edgeInstructions[key]?.[lang]:null;
+     steps.push(...(documented||[format('r',{f:transferLevel,a,b})]));
+     level=transferLevel;
    }
  }
- move(path.at(-1),destination.floor);
+ const target=path.at(-1);
+ if(requiresFloorAccessVerification(destination,target,policy)){
+  const values={f:destination.floor,p:target,d:destination.loc||destination[lang]||destination.en||target};
+  steps.push("⚠ "+RESTRICTED_FLOOR_TEXT[lang].replace(/\{(\w+)\}/g,(_,key)=>values[key]));
+ }else move(target,destination.floor);
  return steps;
 }

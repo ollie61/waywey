@@ -580,6 +580,7 @@ test('JGH 0## rooms use RC and 00## rooms use S1 in visitor instructions',async(
   await page.locator('#visitorDialog[open]').waitFor();
   const steps=await page.locator('#vSteps li').allTextContents();
   if(from==='e'&&floor==='S1'){assert.equal(steps.length,1);assert.doesNotMatch(steps[0],/elevator/);}
+  else if(from==='main'&&floor==='RC')assert.match(steps[0],/Pavilion B.*\[01\].*\[RC\]/);
   else assert.match(steps.at(-2),new RegExp('Pavilion E.*\\['+level+'\\].*\\['+floor+'\\]'));
   assert.ok(steps.at(-1).includes(loc));
   if(from==='e'&&floor==='RC')assert.equal(steps.length,2);
@@ -610,4 +611,23 @@ test('floor brackets stay visible but are absent from speech in every visitor la
  await page.locator('#visitorDialog[open]').waitFor();
  assert.match(await page.locator('#vWhere').innerText(),/\[RC\]/);
  assert.doesNotMatch(await page.locator('#vSteps').innerText(),/\[\[RC\]\]/);
+}));
+
+
+test('JGH RC passage starts in E and Pavilion A RC requires verification in all visitor languages',async()=>contextTest(async page=>{
+ const d=jgh.find(d=>d.loc==='D-070 (main floor/RC)'),a=jgh.find(d=>d.loc==='A-018');
+ for(const lang of ['en','fr','he','ar','es','pt','ru','vi','fa','bg']){
+  await page.goto(link({hospital:'jgh',dest:d.id,from:'e',lang}));await page.locator('#visitorDialog[open]').waitFor();
+  const steps=await page.locator('#vSteps li').allTextContents();
+  assert.match(steps[0],/E.*\[S1\].*\[RC\]/,lang);assert.match(steps[1],/E → D/,lang);
+  assert.doesNotMatch(steps.join(' '),/\[01\]/,lang);
+  await page.goto(link({hospital:'jgh',dest:a.id,from:'e',lang}));await page.locator('#visitorDialog[open]').waitFor();
+  const restricted=await page.locator('#vSteps li').allTextContents();
+  assert.ok(restricted.at(-1).startsWith('⚠'),lang);assert.match(restricted.at(-1),/A-018/,lang);
+  assert.equal(await page.locator('#vSteps li.verify-alert').count(),1,lang);
+  assert.equal(restricted.filter(s=>s.includes('[RC]')).length,1,lang);
+ }
+ await page.click('#closeVisitor');await page.getByRole('button',{name:'EN',exact:true}).click();
+ const ambassador=await page.locator('#steps').innerText();assert.match(ambassador,/mostly restricted.*confirm public access/);
+ assert.doesNotMatch(ambassador,/Then follow signs to A-018/);
 }));

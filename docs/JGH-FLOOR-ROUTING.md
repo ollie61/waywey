@@ -11,3 +11,9 @@ H–K retains the existing special instructions in every language. H is reached 
 Validation covers the requested synthetic E[S1]–B[03] transition, actual Admissions B[01], reverse E entrance[S1], same pavilion/floor, all 11 visitor languages and H–K as both a whole journey and intermediate edge. Baseline tests compare every existing data field (excluding new floor metadata), every graph path, special route and entrance ID/node against main commit 2392e102fd783964223280386df060caff3775be.
 
 Hospital checks still required: elevator access from entrances, every unknown destination floor, K lobby connection level, current connector accessibility and signage. Real Samsung speech/cache behaviour requires device testing. Automated browser tests do not establish physical hospital validity.
+
+## Confirmed RC passages — 2026-11-15
+
+The owner confirms public [RC] passage between E, D, B and G. A separate floorConnections overlay records only existing graph edges E–D, D–B and B–G in both directions. For RC destinations within this connected group (or a journey starting on RC within it), take the starting pavilion elevator to RC when needed and follow the existing path on RC. This adds no graph edges or corridors. Normal [01] transfers, S1/03 destinations, unverified RC links and H–K special instructions retain their prior logic.
+
+Pavilion A RC is mostly restricted. It is excluded from the public RC overlay. For an A/RC destination, stop floor instructions with a localized staff-verification warning before taking an elevator or entering that level; do not append an unconditional follow-room instruction. This does not claim every A/RC room is inaccessible. Staff must confirm the public approach.
