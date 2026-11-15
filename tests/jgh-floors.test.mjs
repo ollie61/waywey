@@ -64,3 +64,14 @@ test('IDs, route geometry, special directions and room directions retain main ba
  assert.deepEqual(config.entrances.map(({id,node})=>({id,node})),baseline('hospitals/jgh/config.json').entrances.map(({id,node})=>({id,node})));
  for(const a of Object.keys(routes.graph))for(const b of Object.keys(routes.graph))assert.deepEqual(findRoute(routes.graph,a,b),findRoute(oldRoutes.graph,a,b));
 });
+
+test('Pavilion A entrance is level 01 and needs no elevator before a level 01 transfer',()=>{
+ const entrance=config.entrances.find(e=>e.id==='a');
+ assert.equal(entrance.entranceLevel,'01');
+ for(const label of Object.values(entrance.labels)){
+  assert.match(label,/\[01\]/);assert.doesNotMatch(label,/\[S1\]/);assert.match(label,/5759/);
+ }
+ assert.equal(destinations.find(d=>d.id==='dest-1238a06b83f05dda').floor,'01');
+ const steps=plan('a','B','01');assert.equal(steps.length,1);assert.match(steps[0],/A → B/);assert.doesNotMatch(steps.join(' '),/elevator|\[S1\]/);
+ assert.deepEqual(plan('a','A','01'),[]);
+});
