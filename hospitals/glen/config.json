@@ -105,5 +105,17 @@
       "label": "MUHC Glen site",
       "url": "https://muhc.ca/glen-site"
     }
+  ],
+  "visitorLanguages": [
+    "fr",
+    "en",
+    "ar",
+    "he",
+    "es",
+    "pt",
+    "ru",
+    "vi",
+    "fa",
+    "bg"
   ]
 }

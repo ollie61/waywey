@@ -66,5 +66,17 @@
       "label": "CHUM",
       "url": "https://www.chumontreal.qc.ca/"
     }
+  ],
+  "visitorLanguages": [
+    "fr",
+    "en",
+    "ar",
+    "he",
+    "es",
+    "pt",
+    "ru",
+    "vi",
+    "fa",
+    "bg"
   ]
 }

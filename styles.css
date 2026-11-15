@@ -142,3 +142,26 @@ body > header{background-color:#dff1e6!important;background-image:none!important
 .station-map-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;border:1px solid #bdd9c8;border-radius:12px;background:#e7f5ed;color:var(--teal2);text-decoration:none}
 .station-map-icon svg{display:block;flex:none}
 @media(max-width:540px){body > header{background-color:#dff1e6!important}}
+
+/* 1.1.2: readable, touch-friendly screens with one clear next action. */
+body{line-height:1.5}button,.btn,summary,select{min-height:48px}
+.brand span{line-height:1.4;overflow-wrap:anywhere}.brand-tools{gap:6px}
+.release-version{font-size:.8rem;color:var(--muted);padding-block:8px}
+.search-card h2{margin-bottom:16px}#q{font-size:1.18rem;min-height:58px}
+.result{position:relative;padding-inline-end:42px;line-height:1.45}
+.result::after{content:'›';position:absolute;inset-inline-end:16px;top:50%;transform:translateY(-50%);font-size:1.7rem;color:var(--teal2)}
+html[dir="rtl"] .result::after{content:'‹'}
+.result small{line-height:1.5}.result:hover{background:#f4faf7}.result:active,.btn:active{filter:brightness(.96)}
+.visitor-language .field{min-height:52px;font-size:1rem}.visitor h2{margin-top:0}
+#vSteps{line-height:1.6}#vSteps li{margin-block:10px;padding-block:10px}
+.visitor-head{margin-bottom:22px}.source-details summary{min-height:48px}
+@media(max-width:540px){
+ .language-toggle button{min-width:38px;padding-inline:7px}
+ .brand span{font-size:.72rem}.brand h1{font-size:1.4rem}
+ .search-card{padding:20px 16px}#q{font-size:1.1rem;min-height:56px}
+ .result{min-height:72px;padding-inline-start:14px}
+ #visitorPanel{padding:20px 18px max(22px,env(safe-area-inset-bottom))}
+ .visitor h2{font-size:1.65rem}.visitor .bigwhere{line-height:1.5}
+ #vSteps{font-size:1.15rem;padding-inline-start:1.8em}
+ .visitor-actions .btn{min-height:52px}
+}
