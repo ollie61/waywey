@@ -262,7 +262,7 @@ function setAppLanguage(lang){
  if($("visitorLangLabel"))$("visitorLangLabel").textContent=a.visitorLanguage;
  if($("results"))$("results").setAttribute("aria-label",a.searchResults);
  if($("qrCode"))$("qrCode").setAttribute("aria-label",a.qrCode);
- $("brandSubtitle").textContent=(HOSPITAL.name?.[appLang]||HOSPITAL.name?.en||HOSPITAL.id||"WayWey")+" · v"+APP_VERSION;$("quickGuideBtn").textContent=t.quickGuide;
+ $("brandSubtitle").textContent=(HOSPITAL.name?.[appLang]||HOSPITAL.name?.en||HOSPITAL.id||"WayWey")+" · v"+APP_VERSION;$("quickGuideBtn").setAttribute("aria-label",t.quickGuide);$("quickGuideBtn").setAttribute("title",t.quickGuide);
  $("stationHeading").textContent=t.stationHeading;$("stationLabel").textContent=t.stationLabel;$("stationStatus").textContent=t.stationStatus;
  $("searchHeading").textContent=t.searchHeading;$("searchLabel").textContent=t.searchLabel;$("q").placeholder=t.placeholder;$("clear").textContent=t.clear;
  $("resultHeading").textContent=t.resultHeading;$("showVisitor").textContent=t.showVisitor;$("newSearch").textContent=t.newSearch;$("disclaimer").textContent=t.disclaimer;
