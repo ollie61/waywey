@@ -90,6 +90,49 @@
         }
       },
       "additionalProperties": false
+    },
+    "floorRouting": {
+      "type": "object",
+      "required": [
+        "transferLevel",
+        "source",
+        "exceptions"
+      ],
+      "properties": {
+        "transferLevel": {
+          "const": "01"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exceptions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "departureLevel",
+              "arrivalLevel"
+            ],
+            "properties": {
+              "departureLevel": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "arrivalLevel": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false

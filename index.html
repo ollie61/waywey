@@ -7,7 +7,7 @@
   <meta name="description" content="WayWey multilingual hospital wayfinding">
   <link rel="manifest" href="./manifest.webmanifest">
   <title>WayWey — Hospital Wayfinding</title>
-  <link rel="stylesheet" href="./styles.css?v=39">
+  <link rel="stylesheet" href="./styles.css?v=42">
 </head>
 <body>
 <a id="skipLink" class="skip-link" href="#mainContent">Skip to main content</a>
@@ -33,7 +33,6 @@
     <label id="searchLabel" class="sr-only" for="q">English or French</label>
     <div class="row search-row">
       <input id="q" class="field" type="search" autocomplete="off" enterkeyhint="search" aria-controls="results" aria-autocomplete="list" placeholder="e.g. urology, cancer, dentiste, MRI, accouchement">
-      <button id="clear" class="btn secondary" type="button">Clear</button>
     </div>
     <div id="results" class="results" role="region" aria-live="polite" aria-labelledby="searchHeading"></div>
   </section>
@@ -56,6 +55,7 @@
 
   <details class="source-details site-information"><summary id="informationLabel">Sources et informations</summary>
   <div id="datasetMeta" class="dataset-meta" aria-live="polite"></div>
+  <div id="releaseVersion" class="release-version"></div>
   <div id="disclaimer" class="disclaimer">Prototype reference for ambassadors. Verify appointment paperwork or current JGH signage when an exact room is uncertain.</div>
   </details>
 </main>
@@ -113,6 +113,6 @@
 </dialog>
 
 <script src="./qrcode.min.js" defer></script>
-<script type="module" src="./app.js?v=39"></script>
+<script type="module" src="./app.js?v=42"></script>
 </body>
 </html>

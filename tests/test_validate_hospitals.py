@@ -56,5 +56,21 @@ class ValidatorTests(unittest.TestCase):
         self.assertIn('duplicate entrance ids', output)
 
 
+    def test_missing_entrance_level_is_rejected(self):
+        code, output = self.run_package(lambda p: self.edit(p, 'config.json', lambda d: d['entrances'][0].pop('entranceLevel')))
+        self.assertEqual(code, 1)
+        self.assertIn('missing entranceLevel', output)
+
+    def test_missing_destination_floor_is_rejected(self):
+        code, output = self.run_package(lambda p: self.edit(p, 'destinations.json', lambda d: d[0].pop('floor')))
+        self.assertEqual(code, 1)
+        self.assertIn('missing explicit floor', output)
+
+    def test_undocumented_floor_exception_is_rejected(self):
+        code, output = self.run_package(lambda p: self.edit(p, 'routes.json', lambda d: d['floorRouting']['exceptions'].update({'A>E': {'departureLevel':'01', 'arrivalLevel':'01'}})))
+        self.assertEqual(code, 1)
+        self.assertIn('lacks validated special edge', output)
+
+
 if __name__ == '__main__':
     unittest.main()

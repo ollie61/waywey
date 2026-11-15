@@ -9,6 +9,7 @@ const root=path.resolve(import.meta.dirname,'../..');
 let server,browser,origin;
 const baseRevision=Number((await fs.readFile(path.join(root,'service-worker.js'),'utf8')).match(/waywey-cache-(\d+)/)[1]);
 let workerRevision=baseRevision;
+const jgh=JSON.parse(await fs.readFile(path.join(root,'hospitals/jgh/destinations.json')));
 const chum=JSON.parse(await fs.readFile(path.join(root,'hospitals/chum/destinations.json')));
 const destination=chum.find(d=>d.p==='D'&&d.status==='official');
 const mime={'.js':'text/javascript','.json':'application/json','.html':'text/html','.css':'text/css','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
@@ -31,8 +32,8 @@ before(async()=>{
 after(async()=>{await browser?.close();await new Promise(resolve=>server?.close(resolve));});
 async function ready(page){await page.locator('#station option[value="main"]').waitFor({state:'attached'});}
 function link(extra={}){return origin+'/?'+new URLSearchParams({hospital:'chum',visitor:'1',dest:destination.id,from:'main',lang:'en',...extra});}
-async function contextTest(run){
-  const context=await browser.newContext();
+async function contextTest(run,options={}){
+  const context=await browser.newContext(options);
   const page=await context.newPage();const errors=[];
   page.on('pageerror',e=>errors.push(e.message));
   try{await run(page,context);assert.deepEqual(errors,[]);}finally{await context.close();}
@@ -445,12 +446,12 @@ test('1.1 ambassador toggle works by keyboard and persists independently across 
   assert.equal(await page.locator('#appLang').isVisible(),false);
   assert.equal(await page.getByRole('button',{name:'FR',exact:true}).getAttribute('aria-pressed'),'true');
   await page.getByRole('button',{name:'EN',exact:true}).focus();await page.keyboard.press('Space');
-  assert.equal(await page.locator('#searchHeading').innerText(),'Where would you like to go?');
+  assert.equal(await page.locator('#searchHeading').innerText(),'Where to?');
   const other=await context.newPage();await other.goto(origin+'/');await ready(other);
   assert.equal(await other.getByRole('button',{name:'EN',exact:true}).getAttribute('aria-pressed'),'true');
   await other.close();
   await page.getByRole('button',{name:'FR',exact:true}).click();
-  assert.equal(await page.locator('#searchHeading').innerText(),'Où souhaitez-vous aller?');
+  assert.equal(await page.locator('#searchHeading').innerText(),'Où allez-vous?');
 }));
 
 test('1.1 starting point edits with native disclosure and survives reopening',async()=>contextTest(async page=>{
@@ -482,4 +483,91 @@ test('1.1 visitor primary action, sources and RTL fit narrow and enlarged layout
     await page.click('#closeVisitor');
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   }
+}));
+
+test('JGH floor transitions reach visitors in all languages and fit mobile screens',async()=>contextTest(async page=>{
+ const admissions=jgh.find(d=>d.loc==='B-114');
+ for(const lang of ['en','fr','es','pt','he','ar','ru','vi','fa','bg']){
+  await page.setViewportSize({width:390,height:844});
+  await page.goto(link({hospital:'jgh',dest:admissions.id,from:'e',lang}));
+  await page.locator('#visitorDialog[open]').waitFor();
+  const text=await page.locator('#vSteps').innerText();
+  assert.match(text,/\[S1\].*\[01\]/,lang);
+  assert.match(text,/E → D/,lang);assert.match(text,/D → B/,lang);
+  assert.ok(text.indexOf('[S1]')<text.indexOf('E → D'),lang);
+  assert.ok(await page.locator('#visitorDialog').evaluate(el=>el.scrollWidth<=el.clientWidth+1));
+  await page.click('#closeVisitor');
+ }
+}));
+test('JGH ambassador shares floor logic; same pavilion and unknown floors are safe',async()=>contextTest(async page=>{
+ await page.goto(origin+'/?hospital=jgh');await ready(page);
+ await page.getByRole('button',{name:'EN',exact:true}).click();
+ await page.locator('#stationDetails summary').click();await page.selectOption('#station','e');
+ await page.fill('#q','Admissions');await page.locator('#results button').first().click();
+ assert.match(await page.locator('#steps').innerText(),/Pavilion E.*\[S1\].*\[01\]/);
+ const emergency=jgh.find(d=>d.loc==='S2');
+ await page.goto(link({hospital:'jgh',dest:emergency.id,from:'emergency',lang:'en'}));
+ await page.locator('#visitorDialog[open]').waitFor();
+ assert.doesNotMatch(await page.locator('#vSteps').innerText(),/elevator|\[01\]/);
+ const unknown=jgh.find(d=>d.loc==='B-304');
+ await page.goto(link({hospital:'jgh',dest:unknown.id,from:'main',lang:'en'}));
+ await page.locator('#visitorDialog[open]').waitFor();
+ assert.match(await page.locator('#vSteps').innerText(),/Verification required/);
+}));
+
+// The [03] fixture tests UI composition without claiming B-304's floor is verified.
+test('JGH composes destination elevator after transfer and preserves reverse entrance level',async()=>contextTest(async page=>{
+ const room=jgh.find(d=>d.loc==='B-304');
+ await page.route('**/hospitals/jgh/destinations.json',route=>route.fulfill({json:jgh.map(d=>d.id===room.id?{...d,floor:'03'}:d)}));
+ await page.goto(link({hospital:'jgh',dest:room.id,from:'e',lang:'en'}));
+ await page.locator('#visitorDialog[open]').waitFor();
+ const steps=await page.locator('#vSteps li').allTextContents();
+ assert.match(steps[0],/Pavilion E.*\[S1\].*\[01\]/);
+ assert.match(steps.at(-2),/Pavilion B.*\[01\].*\[03\]/);
+ assert.match(steps.at(-1),/B-304/);
+ const entrance=jgh.find(d=>d.loc==='5757 Légaré');
+ await page.goto(link({hospital:'jgh',dest:entrance.id,from:'main',lang:'en'}));
+ await page.locator('#visitorDialog[open]').waitFor();
+ assert.match(await page.locator('#vSteps').innerText(),/Pavilion E.*\[01\].*\[S1\]/);
+}));
+
+test('1.1.2 short prompts, hospital language buttons and RTL work in Hebrew and Arabic',async()=>contextTest(async page=>{
+ await page.setViewportSize({width:320,height:820});
+ await page.goto(origin+'/?hospital=hadassah-ein-kerem');await ready(page);
+ assert.equal(await page.locator('#searchHeading').innerText(),'לאן?');
+ assert.deepEqual(await page.locator('[data-app-lang]').allTextContents(),['HE','EN','AR']);
+ assert.equal(await page.locator('html').getAttribute('dir'),'rtl');
+ await page.getByRole('button',{name:'AR',exact:true}).click();
+ assert.equal(await page.locator('#searchHeading').innerText(),'إلى أين؟');
+ assert.equal(await page.locator('html').getAttribute('dir'),'rtl');
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+ await page.getByRole('button',{name:'EN',exact:true}).click();
+ assert.equal(await page.locator('#searchHeading').innerText(),'Where to?');
+ assert.equal(await page.locator('html').getAttribute('dir'),'ltr');
+ assert.equal(await page.locator('#clear').count(),0);
+}));
+test('1.1.2 visitor defaults and available languages come from the selected hospital',async()=>contextTest(async page=>{
+ const config=JSON.parse(await fs.readFile(path.join(root,'hospitals/jgh/config.json')));
+ await page.route('**/hospitals/jgh/config.json',route=>route.fulfill({json:{...config,defaultAppLanguage:'en',defaultVisitorLanguage:'fr',visitorLanguages:['fr','en']}}));
+ await page.goto(origin+'/?hospital=jgh');await ready(page);
+ assert.equal(await page.locator('#appLang').inputValue(),'en');
+ assert.deepEqual(await page.locator('#visitorLang option').evaluateAll(nodes=>nodes.map(n=>n.value)),['fr','en']);
+ await page.fill('#q','Admissions');await page.locator('#results button').first().click();
+ await page.click('#showVisitor');
+ assert.equal(await page.locator('#visitorLang').inputValue(),'fr');
+ await page.goto(link({hospital:'jgh',dest:jgh.find(d=>d.loc==='B-114').id,lang:'he'}));
+ await page.locator('#visitorDialog[open]').waitFor();
+ assert.equal(await page.locator('#visitorLang').inputValue(),'fr');
+},{serviceWorkers:'block'}));
+test('1.1.2 remembered choices stay within their own hospital',async()=>contextTest(async page=>{
+ await page.goto(origin+'/?hospital=jgh');await ready(page);
+ await page.getByRole('button',{name:'EN',exact:true}).click();
+ await page.fill('#q','Admissions');await page.locator('#results button').first().click();await page.click('#showVisitor');
+ await page.selectOption('#visitorLang','fa');
+ await page.goto(origin+'/?hospital=hadassah-ein-kerem');await ready(page);
+ assert.equal(await page.locator('#appLang').inputValue(),'he');
+ assert.equal(await page.locator('#visitorLang').inputValue(),'he');
+ await page.goto(origin+'/?hospital=jgh');await ready(page);
+ assert.equal(await page.locator('#appLang').inputValue(),'en');
+ assert.equal(await page.locator('#visitorLang').inputValue(),'fa');
 }));

@@ -17,7 +17,8 @@
     "legacySlugs": [
       "emergency-department-s2",
       "emergency-department"
-    ]
+    ],
+    "floor": "S2"
   },
   {
     "en": "Care Unit (Acute Geriatrics)",
@@ -34,7 +35,8 @@
     "legacySlugs": [
       "care-unit-acute-geriatrics-6th-floor",
       "care-unit-acute-geriatrics"
-    ]
+    ],
+    "floor": "06"
   },
   {
     "en": "Care Unit (Antepartum / High Risk)",
@@ -52,7 +54,8 @@
     "legacySlugs": [
       "care-unit-antepartum-high-risk-3rd-floor",
       "care-unit-antepartum-high-risk"
-    ]
+    ],
+    "floor": "03"
   },
   {
     "en": "Care Unit (Cardiovascular - CVU)",
@@ -70,7 +73,8 @@
     "legacySlugs": [
       "care-unit-cardiovascular-cvu-2nd-floor",
       "care-unit-cardiovascular-cvu"
-    ]
+    ],
+    "floor": "02"
   },
   {
     "en": "Care Unit (Cardiovascular Intensive Care - CVICU)",
@@ -89,7 +93,8 @@
     "legacySlugs": [
       "care-unit-cardiovascular-intensive-care-cvicu-2nd-floor",
       "care-unit-cardiovascular-intensive-care-cvicu"
-    ]
+    ],
+    "floor": "02"
   },
   {
     "en": "Care Unit (Family Medicine CJ)",
@@ -106,7 +111,8 @@
     "legacySlugs": [
       "care-unit-family-medicine-cj-3rd-floor",
       "care-unit-family-medicine-cj"
-    ]
+    ],
+    "floor": "03"
   },
   {
     "en": "Care Unit (Medicine C5)",
@@ -123,7 +129,8 @@
     "legacySlugs": [
       "care-unit-medicine-c5-5th-floor",
       "care-unit-medicine-c5"
-    ]
+    ],
+    "floor": "05"
   },
   {
     "en": "Care Unit (Medical and Surgical Intensive Care - MSICU)",
@@ -142,7 +149,8 @@
     "legacySlugs": [
       "care-unit-medical-and-surgical-intensive-care-msicu-1st-floor",
       "care-unit-medical-and-surgical-intensive-care-msicu"
-    ]
+    ],
+    "floor": "01"
   },
   {
     "en": "Care Unit (Medicine)",
@@ -159,7 +167,8 @@
     "legacySlugs": [
       "care-unit-medicine-6th-floor",
       "care-unit-medicine"
-    ]
+    ],
+    "floor": "06"
   },
   {
     "en": "Care Unit (Medicine)",
@@ -176,7 +185,8 @@
     "legacySlugs": [
       "care-unit-medicine-7th-floor",
       "care-unit-medicine"
-    ]
+    ],
+    "floor": "07"
   },
   {
     "en": "Care Unit (Mental Health and Addiction Unit)",
@@ -194,7 +204,8 @@
     "legacySlugs": [
       "care-unit-mental-health-and-addiction-unit-3rd-floor",
       "care-unit-mental-health-and-addiction-unit"
-    ]
+    ],
+    "floor": "03"
   },
   {
     "en": "Care Unit (Neonatal Intensive Care - NICU)",
@@ -212,7 +223,8 @@
     "legacySlugs": [
       "care-unit-neonatal-intensive-care-nicu-5th-floor",
       "care-unit-neonatal-intensive-care-nicu"
-    ]
+    ],
+    "floor": "05"
   },
   {
     "en": "Care Unit (Neurosciences)",
@@ -229,7 +241,8 @@
     "legacySlugs": [
       "care-unit-neurosciences-10th-floor",
       "care-unit-neurosciences"
-    ]
+    ],
+    "floor": "10"
   },
   {
     "en": "Care Unit (Orthopedics)",
@@ -246,7 +259,8 @@
     "legacySlugs": [
       "care-unit-orthopedics-4th-floor",
       "care-unit-orthopedics"
-    ]
+    ],
+    "floor": "04"
   },
   {
     "en": "Care Unit (Palliative Care)",
@@ -263,7 +277,8 @@
     "legacySlugs": [
       "care-unit-palliative-care-4th-floor",
       "care-unit-palliative-care"
-    ]
+    ],
+    "floor": "04"
   },
   {
     "en": "Care Unit (Postpartum)",
@@ -281,7 +296,8 @@
     "legacySlugs": [
       "care-unit-postpartum-8th-floor",
       "care-unit-postpartum"
-    ]
+    ],
+    "floor": "08"
   },
   {
     "en": "Care Unit (Psychiatry High and Intermediate Care Units)",
@@ -298,7 +314,8 @@
     "legacySlugs": [
       "care-unit-psychiatry-high-and-intermediate-care-units-3rd-floor",
       "care-unit-psychiatry-high-and-intermediate-care-units"
-    ]
+    ],
+    "floor": "03"
   },
   {
     "en": "Care Unit (Surgery)",
@@ -315,7 +332,8 @@
     "legacySlugs": [
       "care-unit-surgery-8th-and-9th-floors",
       "care-unit-surgery"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Care Unit (Surgical Short Stay)",
@@ -332,7 +350,8 @@
     "legacySlugs": [
       "care-unit-surgical-short-stay-5th-floor",
       "care-unit-surgical-short-stay"
-    ]
+    ],
+    "floor": "05"
   },
   {
     "en": "Admitting Office and Patient Accounts",
@@ -350,7 +369,8 @@
     "legacySlugs": [
       "admitting-office-and-patient-accounts-b-114",
       "admitting-office-and-patient-accounts"
-    ]
+    ],
+    "floor": "01"
   },
   {
     "en": "Allergy and Immunology",
@@ -370,7 +390,8 @@
     "legacySlugs": [
       "allergy-and-immunology-c-204",
       "allergy-and-immunology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Anna & Peter Brojde Lung Cancer Centre",
@@ -388,7 +409,8 @@
     "legacySlugs": [
       "anna-peter-brojde-lung-cancer-centre-7th-floor",
       "anna-peter-brojde-lung-cancer-centre"
-    ]
+    ],
+    "floor": "07"
   },
   {
     "en": "Arthritis Clinic",
@@ -406,7 +428,8 @@
     "legacySlugs": [
       "arthritis-clinic-c-003-10",
       "arthritis-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Audiology",
@@ -425,7 +448,8 @@
     "legacySlugs": [
       "audiology-e-932",
       "audiology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Auditorium",
@@ -441,7 +465,8 @@
     "legacySlugs": [
       "auditorium-a-102",
       "auditorium"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Auxiliary Office",
@@ -458,7 +483,8 @@
     "legacySlugs": [
       "auxiliary-office-a-018",
       "auxiliary-office"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Breast Centre",
@@ -478,7 +504,8 @@
     "legacySlugs": [
       "breast-centre-e-1004-10th-floor",
       "breast-centre"
-    ]
+    ],
+    "floor": "10"
   },
   {
     "en": "Breastfeeding Clinic",
@@ -496,7 +523,8 @@
     "legacySlugs": [
       "breastfeeding-clinic-b-556",
       "breastfeeding-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "C.T. Scan (Computed Tomography)",
@@ -515,7 +543,8 @@
     "legacySlugs": [
       "c-t-scan-computed-tomography-d-205",
       "c-t-scan-computed-tomography"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Cancer Information Centre",
@@ -532,7 +561,8 @@
     "legacySlugs": [
       "cancer-information-centre-e-771",
       "cancer-information-centre"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Cancer Nutrition Rehabilitation Program (CNR)",
@@ -549,7 +579,8 @@
     "legacySlugs": [
       "cancer-nutrition-rehabilitation-program-cnr-e-809",
       "cancer-nutrition-rehabilitation-program-cnr"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Cancer Prevention Centre",
@@ -565,7 +596,8 @@
     "legacySlugs": [
       "cancer-prevention-centre-e-740",
       "cancer-prevention-centre"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Cardiac Surgery",
@@ -582,7 +614,8 @@
     "legacySlugs": [
       "cardiac-surgery-5th-floor",
       "cardiac-surgery"
-    ]
+    ],
+    "floor": "05"
   },
   {
     "en": "Cardiology",
@@ -604,7 +637,8 @@
     "legacySlugs": [
       "cardiology-e-206",
       "cardiology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Cardiovascular Prevention Centre",
@@ -622,7 +656,8 @@
     "legacySlugs": [
       "cardiovascular-prevention-centre-h-132",
       "cardiovascular-prevention-centre"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Centre for Child Development and Mental Health",
@@ -639,7 +674,8 @@
     "id": "dest-c46524ee25895bab",
     "legacySlugs": [
       "centre-for-child-development-and-mental-health"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Centre of Excellence in Thrombosis and Anticoagulation Care (CETAC)",
@@ -658,7 +694,8 @@
     "legacySlugs": [
       "centre-of-excellence-in-thrombosis-and-anticoagulation-care-cetac-b-304",
       "centre-of-excellence-in-thrombosis-and-anticoagulation-care-cetac"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Clinical Research Unit - Pavilion E",
@@ -675,7 +712,8 @@
     "legacySlugs": [
       "clinical-research-unit-pavilion-e-6th-floor",
       "clinical-research-unit-pavilion-e"
-    ]
+    ],
+    "floor": "06"
   },
   {
     "en": "Colonoscopy",
@@ -693,7 +731,8 @@
     "legacySlugs": [
       "colonoscopy-g-304",
       "colonoscopy"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Colorectal Surgery",
@@ -711,7 +750,8 @@
     "legacySlugs": [
       "colorectal-surgery-g-300",
       "colorectal-surgery"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Colposcopy",
@@ -727,7 +767,8 @@
     "legacySlugs": [
       "colposcopy-h-334-1",
       "colposcopy"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Communications and Media Relations",
@@ -745,7 +786,8 @@
     "legacySlugs": [
       "communications-and-media-relations-a-811",
       "communications-and-media-relations"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Cystoscopy",
@@ -762,7 +804,8 @@
     "legacySlugs": [
       "cystoscopy-e-959-1",
       "cystoscopy"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Dentistry",
@@ -782,7 +825,8 @@
     "legacySlugs": [
       "dentistry-a-024",
       "dentistry"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Dermatology",
@@ -802,7 +846,8 @@
     "legacySlugs": [
       "dermatology-g-026",
       "dermatology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Dermatology Oncology",
@@ -820,7 +865,8 @@
     "legacySlugs": [
       "dermatology-oncology-e-1085",
       "dermatology-oncology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Diagnostic and Therapeutic Clinic",
@@ -838,7 +884,8 @@
     "legacySlugs": [
       "diagnostic-and-therapeutic-clinic-g-050",
       "diagnostic-and-therapeutic-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Diagnostic Medicine and Core Lab",
@@ -856,7 +903,8 @@
     "legacySlugs": [
       "diagnostic-medicine-and-core-lab-d-123",
       "diagnostic-medicine-and-core-lab"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Dietetics",
@@ -874,7 +922,8 @@
     "legacySlugs": [
       "dietetics-b-001-1",
       "dietetics"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Ear, Nose and Throat (ENT)",
@@ -893,7 +942,8 @@
     "legacySlugs": [
       "ear-nose-and-throat-ent-e-903",
       "ear-nose-and-throat-ent"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Elspeth McConnell Mental Health and Wellness Centre",
@@ -910,7 +960,8 @@
     "legacySlugs": [
       "elspeth-mcconnell-mental-health-and-wellness-centre-6th-floor",
       "elspeth-mcconnell-mental-health-and-wellness-centre"
-    ]
+    ],
+    "floor": "06"
   },
   {
     "en": "Endocrinology / Diabetes",
@@ -930,7 +981,8 @@
     "legacySlugs": [
       "endocrinology-diabetes-e-104",
       "endocrinology-diabetes"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Endoscopy",
@@ -947,7 +999,8 @@
     "legacySlugs": [
       "endoscopy-g-304",
       "endoscopy"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Enterostomal Therapy Clinic",
@@ -965,7 +1018,8 @@
     "legacySlugs": [
       "enterostomal-therapy-clinic-e-102-1",
       "enterostomal-therapy-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Epidemiology",
@@ -982,7 +1036,8 @@
     "legacySlugs": [
       "epidemiology-h-485",
       "epidemiology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Food Court (Carrefour Lea Polansky)",
@@ -1001,7 +1056,8 @@
     "legacySlugs": [
       "food-court-carrefour-lea-polansky-1st-floor",
       "food-court-carrefour-lea-polansky"
-    ]
+    ],
+    "floor": "01"
   },
   {
     "en": "Foundation",
@@ -1018,7 +1074,8 @@
     "legacySlugs": [
       "foundation-a-107",
       "foundation"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Foundation - Satellite Office",
@@ -1035,7 +1092,8 @@
     "legacySlugs": [
       "foundation-satellite-office-floor-s1",
       "foundation-satellite-office"
-    ]
+    ],
+    "floor": "S1"
   },
   {
     "en": "Gastroenterology",
@@ -1055,7 +1113,8 @@
     "legacySlugs": [
       "gastroenterology-e-110",
       "gastroenterology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Genetics / Medical Genetics",
@@ -1074,7 +1133,8 @@
     "legacySlugs": [
       "genetics-medical-genetics-a-805",
       "genetics-medical-genetics"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Geriatrics",
@@ -1093,7 +1153,8 @@
     "legacySlugs": [
       "geriatrics-e-0012",
       "geriatrics"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Goldman Herzl Family Practice Centre",
@@ -1111,7 +1172,8 @@
     "legacySlugs": [
       "goldman-herzl-family-practice-centre-2nd-floor",
       "goldman-herzl-family-practice-centre"
-    ]
+    ],
+    "floor": "02"
   },
   {
     "en": "Head and Neck Surgery / Oncology",
@@ -1129,7 +1191,8 @@
     "legacySlugs": [
       "head-and-neck-surgery-oncology-e-904",
       "head-and-neck-surgery-oncology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Heart Function Clinic",
@@ -1147,7 +1210,8 @@
     "legacySlugs": [
       "heart-function-clinic-e-208",
       "heart-function-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Hematology",
@@ -1167,7 +1231,8 @@
     "legacySlugs": [
       "hematology-e-103",
       "hematology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Hemodialysis",
@@ -1185,7 +1250,8 @@
     "legacySlugs": [
       "hemodialysis-d-001",
       "hemodialysis"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Hemodynamic Laboratory",
@@ -1203,7 +1269,8 @@
     "legacySlugs": [
       "hemodynamic-laboratory-k-2400",
       "hemodynamic-laboratory"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Hope & Cope (Main Office)",
@@ -1220,7 +1287,8 @@
     "legacySlugs": [
       "hope-cope-main-office-e-730-1",
       "hope-cope-main-office"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Hospital Cards",
@@ -1238,7 +1306,8 @@
     "legacySlugs": [
       "hospital-cards-e-0014-s1",
       "hospital-cards"
-    ]
+    ],
+    "floor": "S1"
   },
   {
     "en": "Human Resources",
@@ -1256,7 +1325,8 @@
     "legacySlugs": [
       "human-resources-a-112",
       "human-resources"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Infectious Diseases",
@@ -1274,7 +1344,8 @@
     "legacySlugs": [
       "infectious-diseases-g-200",
       "infectious-diseases"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Infection Prevention and Control",
@@ -1291,7 +1362,8 @@
     "legacySlugs": [
       "infection-prevention-and-control-g-070",
       "infection-prevention-and-control"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Institute of Community & Family Psychiatry (ICFP)",
@@ -1308,7 +1380,8 @@
     "id": "dest-6d4dc051a4765542",
     "legacySlugs": [
       "institute-of-community-family-psychiatry-icfp"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Internal Medicine",
@@ -1326,7 +1399,8 @@
     "legacySlugs": [
       "internal-medicine-g-050",
       "internal-medicine"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Interventional Radiology",
@@ -1344,7 +1418,8 @@
     "legacySlugs": [
       "interventional-radiology-g-018",
       "interventional-radiology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Library, Health Sciences Library",
@@ -1361,7 +1436,8 @@
     "legacySlugs": [
       "library-health-sciences-library-i-202",
       "library-health-sciences-library"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Long COVID Clinic",
@@ -1378,7 +1454,8 @@
     "legacySlugs": [
       "long-covid-clinic-h-132",
       "long-covid-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "M.R.I. (Magnetic Resonance Imaging)",
@@ -1396,7 +1473,8 @@
     "legacySlugs": [
       "m-r-i-magnetic-resonance-imaging-d-205",
       "m-r-i-magnetic-resonance-imaging"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Medical Day Hospital",
@@ -1413,7 +1491,8 @@
     "legacySlugs": [
       "medical-day-hospital-ks1-101",
       "medical-day-hospital"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Medical Devices Reprocessing Unit (MDR)",
@@ -1431,7 +1510,8 @@
     "legacySlugs": [
       "medical-devices-reprocessing-unit-mdr-s4400",
       "medical-devices-reprocessing-unit-mdr"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Medical Records",
@@ -1450,7 +1530,8 @@
     "legacySlugs": [
       "medical-records-c-110",
       "medical-records"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Memory Clinic",
@@ -1470,7 +1551,8 @@
     "legacySlugs": [
       "memory-clinic-e-s1100",
       "memory-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Methadone Maintenance Program",
@@ -1487,7 +1569,8 @@
     "legacySlugs": [
       "methadone-maintenance-program-h-234",
       "methadone-maintenance-program"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Microbiology Laboratory",
@@ -1504,7 +1587,8 @@
     "legacySlugs": [
       "microbiology-laboratory-c-111",
       "microbiology-laboratory"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Multi-Faith Room",
@@ -1523,7 +1607,8 @@
     "legacySlugs": [
       "multi-faith-room-e-0006-s1",
       "multi-faith-room"
-    ]
+    ],
+    "floor": "S1"
   },
   {
     "en": "Neonatal Follow-Up Clinic",
@@ -1540,7 +1625,8 @@
     "legacySlugs": [
       "neonatal-follow-up-clinic-a-209",
       "neonatal-follow-up-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Nephrology",
@@ -1562,7 +1648,8 @@
     "legacySlugs": [
       "nephrology-d-070-main-floor-rc",
       "nephrology"
-    ]
+    ],
+    "floor": "RC"
   },
   {
     "en": "Neurology",
@@ -1579,7 +1666,8 @@
     "legacySlugs": [
       "neurology-e-005",
       "neurology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Neurophysiology",
@@ -1596,7 +1684,8 @@
     "legacySlugs": [
       "neurophysiology-e-221",
       "neurophysiology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Neurosurgery",
@@ -1613,7 +1702,8 @@
     "legacySlugs": [
       "neurosurgery-e-931-e-929",
       "neurosurgery"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Nuclear Medicine",
@@ -1632,7 +1722,8 @@
     "legacySlugs": [
       "nuclear-medicine-g-19-s1",
       "nuclear-medicine"
-    ]
+    ],
+    "floor": "S1"
   },
   {
     "en": "Nurses Lecture Hall",
@@ -1649,7 +1740,8 @@
     "legacySlugs": [
       "nurses-lecture-hall-a-119",
       "nurses-lecture-hall"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Antepartum",
@@ -1667,7 +1759,8 @@
     "legacySlugs": [
       "antepartum-3rd-floor",
       "antepartum"
-    ]
+    ],
+    "floor": "03"
   },
   {
     "en": "Family Birthing Centre (FBC)",
@@ -1696,7 +1789,8 @@
     "legacySlugs": [
       "family-birthing-centre-fbc-3rd-floor",
       "family-birthing-centre-fbc"
-    ]
+    ],
+    "floor": "03"
   },
   {
     "en": "Obstetrical Ultrasound",
@@ -1713,7 +1807,8 @@
     "legacySlugs": [
       "obstetrical-ultrasound-h-318-3rd-floor",
       "obstetrical-ultrasound"
-    ]
+    ],
+    "floor": "03"
   },
   {
     "en": "Obstetrics and Gynecology",
@@ -1736,7 +1831,8 @@
     "legacySlugs": [
       "obstetrics-and-gynecology-3rd-floor",
       "obstetrics-and-gynecology"
-    ]
+    ],
+    "floor": "03"
   },
   {
     "en": "Perinatal Centre",
@@ -1753,7 +1849,8 @@
     "legacySlugs": [
       "perinatal-centre-h-308",
       "perinatal-centre"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Postpartum Care Unit",
@@ -1771,7 +1868,8 @@
     "legacySlugs": [
       "postpartum-care-unit-8th-floor",
       "postpartum-care-unit"
-    ]
+    ],
+    "floor": "08"
   },
   {
     "en": "Women's Health Centre",
@@ -1789,7 +1887,8 @@
     "legacySlugs": [
       "women-s-health-centre-3rd-floor",
       "women-s-health-centre"
-    ]
+    ],
+    "floor": "03"
   },
   {
     "en": "Occupational Therapy",
@@ -1809,7 +1908,8 @@
     "legacySlugs": [
       "occupational-therapy-d-0002-s1",
       "occupational-therapy"
-    ]
+    ],
+    "floor": "S1"
   },
   {
     "en": "Ombudsman",
@@ -1826,7 +1926,8 @@
     "legacySlugs": [
       "ombudsman-a-440",
       "ombudsman"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Oncology / Segal Cancer Centre",
@@ -1845,7 +1946,8 @@
     "legacySlugs": [
       "oncology-segal-cancer-centre-e-776-4",
       "oncology-segal-cancer-centre"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Ophthalmology",
@@ -1864,7 +1966,8 @@
     "legacySlugs": [
       "ophthalmology-e-008",
       "ophthalmology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "OROT",
@@ -1880,7 +1983,8 @@
     "legacySlugs": [
       "orot-a-200",
       "orot"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Orthopedics",
@@ -1899,7 +2003,8 @@
     "legacySlugs": [
       "orthopedics-e-003",
       "orthopedics"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Osteoporosis Clinic",
@@ -1916,7 +2021,8 @@
     "legacySlugs": [
       "osteoporosis-clinic-g-050-e-104",
       "osteoporosis-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "P.A.C.U. (Post-Anesthesia Care Unit)",
@@ -1934,7 +2040,8 @@
     "legacySlugs": [
       "p-a-c-u-post-anesthesia-care-unit-s1801",
       "p-a-c-u-post-anesthesia-care-unit"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Pacemaker Clinic",
@@ -1951,7 +2058,8 @@
     "legacySlugs": [
       "pacemaker-clinic-e-206",
       "pacemaker-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Pastoral Services",
@@ -1969,7 +2077,8 @@
     "legacySlugs": [
       "pastoral-services-b-151-9",
       "pastoral-services"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Pathology",
@@ -1987,7 +2096,8 @@
     "legacySlugs": [
       "pathology-g-102",
       "pathology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Perioperative Unit",
@@ -2004,7 +2114,8 @@
     "legacySlugs": [
       "perioperative-unit-k-1601",
       "perioperative-unit"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Peritoneal Dialysis",
@@ -2022,7 +2133,8 @@
     "legacySlugs": [
       "peritoneal-dialysis-d-070",
       "peritoneal-dialysis"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Pharmacy",
@@ -2040,7 +2152,8 @@
     "legacySlugs": [
       "pharmacy-c-005",
       "pharmacy"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Physiotherapy",
@@ -2063,7 +2176,8 @@
     "legacySlugs": [
       "physiotherapy-d-0002-s1",
       "physiotherapy"
-    ]
+    ],
+    "floor": "S1"
   },
   {
     "en": "Plastic and Reconstructive Surgery",
@@ -2081,7 +2195,8 @@
     "legacySlugs": [
       "plastic-and-reconstructive-surgery-a-500",
       "plastic-and-reconstructive-surgery"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Presurgical Screening Clinic (PSS)",
@@ -2100,7 +2215,8 @@
     "legacySlugs": [
       "presurgical-screening-clinic-pss-6th-floor-a-600-area",
       "presurgical-screening-clinic-pss"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Professional Services",
@@ -2117,7 +2233,8 @@
     "legacySlugs": [
       "professional-services-a-142",
       "professional-services"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Psychiatry (Main Office)",
@@ -2134,7 +2251,8 @@
     "legacySlugs": [
       "psychiatry-main-office-a-529",
       "psychiatry-main-office"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Psychogeriatrics",
@@ -2153,7 +2271,8 @@
     "legacySlugs": [
       "psychogeriatrics-icfp-152",
       "psychogeriatrics"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Pulmonary",
@@ -2174,7 +2293,8 @@
     "legacySlugs": [
       "pulmonary-g-203",
       "pulmonary"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Pulmonary Hypertension",
@@ -2191,7 +2311,8 @@
     "legacySlugs": [
       "pulmonary-hypertension-e-206",
       "pulmonary-hypertension"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Quality, Innovation, Evaluation, Performance and Ethics Directorate",
@@ -2209,7 +2330,8 @@
     "legacySlugs": [
       "quality-innovation-evaluation-performance-and-ethics-directorate-a-909",
       "quality-innovation-evaluation-performance-and-ethics-directorate"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Radiation Oncology (Clinic)",
@@ -2225,7 +2347,8 @@
     "legacySlugs": [
       "radiation-oncology-clinic-g-002",
       "radiation-oncology-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Radiation Oncology (Treatments)",
@@ -2242,7 +2365,8 @@
     "legacySlugs": [
       "radiation-oncology-treatments-g-18",
       "radiation-oncology-treatments"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Radiology (general)",
@@ -2262,7 +2386,8 @@
     "legacySlugs": [
       "radiology-general-c-202",
       "radiology-general"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Rheumatology",
@@ -2279,7 +2404,8 @@
     "legacySlugs": [
       "rheumatology-a-725",
       "rheumatology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Social Services",
@@ -2299,7 +2425,8 @@
     "legacySlugs": [
       "social-services-a-300",
       "social-services"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Speech Pathology",
@@ -2319,7 +2446,8 @@
     "legacySlugs": [
       "speech-pathology-a-730",
       "speech-pathology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Surgery Clinic",
@@ -2335,7 +2463,8 @@
     "legacySlugs": [
       "surgery-clinic-a-500",
       "surgery-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Surgical Suites",
@@ -2353,7 +2482,8 @@
     "legacySlugs": [
       "surgical-suites-s1314",
       "surgical-suites"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Test Centre",
@@ -2376,7 +2506,8 @@
     "legacySlugs": [
       "test-centre-e-109-1st-floor",
       "test-centre"
-    ]
+    ],
+    "floor": "01"
   },
   {
     "en": "Thoracic Surgery",
@@ -2394,7 +2525,8 @@
     "legacySlugs": [
       "thoracic-surgery-e-1055",
       "thoracic-surgery"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Transfusion Service",
@@ -2412,7 +2544,8 @@
     "legacySlugs": [
       "transfusion-service-k1-101",
       "transfusion-service"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Ultrasound (general)",
@@ -2432,7 +2565,8 @@
     "legacySlugs": [
       "ultrasound-general-b-240",
       "ultrasound-general"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Urology",
@@ -2454,7 +2588,8 @@
     "legacySlugs": [
       "urology-e-959-9th-floor",
       "urology"
-    ]
+    ],
+    "floor": "09"
   },
   {
     "en": "Users' Committee",
@@ -2472,7 +2607,8 @@
     "legacySlugs": [
       "users-committee-a-418",
       "users-committee"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Vascular Lab and Vascular Surgery Clinics",
@@ -2492,7 +2628,8 @@
     "legacySlugs": [
       "vascular-lab-and-vascular-surgery-clinics-b-268",
       "vascular-lab-and-vascular-surgery-clinics"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Volunteer Department",
@@ -2509,7 +2646,8 @@
     "legacySlugs": [
       "volunteer-department-b-151",
       "volunteer-department"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Main Entrance",
@@ -2526,7 +2664,8 @@
     "legacySlugs": [
       "main-entrance-3755-cote-sainte-catherine-road",
       "main-entrance"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Pavilion A Entrance",
@@ -2543,7 +2682,8 @@
     "legacySlugs": [
       "pavilion-a-entrance-5750-cote-des-neiges",
       "pavilion-a-entrance"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Pavilion E / Légaré Entrance",
@@ -2560,7 +2700,8 @@
     "legacySlugs": [
       "pavilion-e-legare-entrance-5757-legare",
       "pavilion-e-legare-entrance"
-    ]
+    ],
+    "floor": "S1"
   },
   {
     "en": "Pavilion K Entrance",
@@ -2577,7 +2718,8 @@
     "legacySlugs": [
       "pavilion-k-entrance-5767-legare",
       "pavilion-k-entrance"
-    ]
+    ],
+    "floor": "S1"
   },
   {
     "en": "Emergency Entrance",
@@ -2595,7 +2737,8 @@
     "legacySlugs": [
       "emergency-entrance-5777-legare",
       "emergency-entrance"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Pavilion H Entrance",
@@ -2612,7 +2755,8 @@
     "legacySlugs": [
       "pavilion-h-entrance-5790-cote-des-neiges",
       "pavilion-h-entrance"
-    ]
+    ],
+    "floor": "RC"
   },
   {
     "en": "Institute of Community & Family Psychiatry (ICFP) Entrance",
@@ -2632,7 +2776,8 @@
     "legacySlugs": [
       "institute-of-community-family-psychiatry-icfp-entrance-4333-cote-sainte-catherine",
       "institute-of-community-family-psychiatry-icfp-entrance"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Centre for Child Development and Mental Health Entrance",
@@ -2652,7 +2797,8 @@
     "legacySlugs": [
       "centre-for-child-development-and-mental-health-entrance-4335-cote-sainte-catherine",
       "centre-for-child-development-and-mental-health-entrance"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Lady Davis Institute for Medical Research",
@@ -2673,7 +2819,8 @@
     "legacySlugs": [
       "lady-davis-institute-for-medical-research-3999-cote-sainte-catherine",
       "lady-davis-institute-for-medical-research"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Hope & Cope Cancer Wellness Centre",
@@ -2691,7 +2838,8 @@
     "legacySlugs": [
       "hope-cope-cancer-wellness-centre-4635-cote-sainte-catherine",
       "hope-cope-cancer-wellness-centre"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Herzl CRIU Walk-in Centre",
@@ -2713,7 +2861,8 @@
     "legacySlugs": [
       "herzl-criu-walk-in-centre-5858-cote-des-neiges-5th-floor",
       "herzl-criu-walk-in-centre"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Airways Centre",
@@ -2731,7 +2880,8 @@
     "legacySlugs": [
       "airways-centre-g-203",
       "airways-centre"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Anesthesia",
@@ -2748,7 +2898,8 @@
     "legacySlugs": [
       "anesthesia-k1-400",
       "anesthesia"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Audiology and Speech Pathology",
@@ -2767,7 +2918,8 @@
     "legacySlugs": [
       "audiology-and-speech-pathology-audiology-e-932-speech-pathology-a-730",
       "audiology-and-speech-pathology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Behavioural Psychotherapy and Research Unit",
@@ -2785,7 +2937,8 @@
     "legacySlugs": [
       "behavioural-psychotherapy-and-research-unit-icfp-b-09",
       "behavioural-psychotherapy-and-research-unit"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Biochemistry",
@@ -2802,7 +2955,8 @@
     "legacySlugs": [
       "biochemistry-d-136",
       "biochemistry"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Child Psychiatry",
@@ -2820,7 +2974,8 @@
     "legacySlugs": [
       "child-psychiatry-m-011",
       "child-psychiatry"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Couple and Family Therapy Training Program",
@@ -2838,7 +2993,8 @@
     "legacySlugs": [
       "couple-and-family-therapy-training-program-icfp",
       "couple-and-family-therapy-training-program"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "CRID Radiologie / Breast Imaging",
@@ -2858,7 +3014,8 @@
     "legacySlugs": [
       "crid-radiologie-breast-imaging-e-1004-10th-floor",
       "crid-radiologie-breast-imaging"
-    ]
+    ],
+    "floor": "10"
   },
   {
     "en": "Ethics",
@@ -2875,7 +3032,8 @@
     "legacySlugs": [
       "ethics-a-910",
       "ethics"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Library — Patient and Family Resource Centre",
@@ -2893,7 +3051,8 @@
     "legacySlugs": [
       "library-patient-and-family-resource-centre-a-200-1",
       "library-patient-and-family-resource-centre"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Medicine — Department Office",
@@ -2911,7 +3070,8 @@
     "legacySlugs": [
       "medicine-department-office-b-127",
       "medicine-department-office"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Microbiology / Infectious Diseases / Tuberculosis Clinic",
@@ -2929,7 +3089,8 @@
     "legacySlugs": [
       "microbiology-infectious-diseases-tuberculosis-clinic-g-200",
       "microbiology-infectious-diseases-tuberculosis-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Music Therapy",
@@ -2946,7 +3107,8 @@
     "id": "dest-37a2625b124454e9",
     "legacySlugs": [
       "music-therapy"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Neonatology",
@@ -2964,7 +3126,8 @@
     "legacySlugs": [
       "neonatology-3rd-floor",
       "neonatology"
-    ]
+    ],
+    "floor": "03"
   },
   {
     "en": "Nursing",
@@ -2981,7 +3144,8 @@
     "legacySlugs": [
       "nursing-b-109",
       "nursing"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Occupational Therapy — Mental Health",
@@ -2998,7 +3162,8 @@
     "legacySlugs": [
       "occupational-therapy-mental-health-icfp",
       "occupational-therapy-mental-health"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Psychiatry — Outpatients",
@@ -3016,7 +3181,8 @@
     "legacySlugs": [
       "psychiatry-outpatients-icfp",
       "psychiatry-outpatients"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Psychology",
@@ -3035,7 +3201,8 @@
     "id": "dest-629aa5bb06ca5bbe",
     "legacySlugs": [
       "psychology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Pulmonary Oncology",
@@ -3053,7 +3220,8 @@
     "legacySlugs": [
       "pulmonary-oncology-e-1055",
       "pulmonary-oncology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Respiratory Physiology",
@@ -3071,7 +3239,8 @@
     "legacySlugs": [
       "respiratory-physiology-g-207",
       "respiratory-physiology"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Respiratory Therapy",
@@ -3089,7 +3258,8 @@
     "legacySlugs": [
       "respiratory-therapy-k-1314",
       "respiratory-therapy"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Security",
@@ -3106,7 +3276,8 @@
     "legacySlugs": [
       "security-main-entrance-pavilion-k-legare-entrance",
       "security"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Angiogram / Cardiac Catheterization",
@@ -3125,7 +3296,8 @@
     "legacySlugs": [
       "angiogram-cardiac-catheterization-d-215",
       "angiogram-cardiac-catheterization"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Echocardiography Laboratory",
@@ -3143,7 +3315,8 @@
     "legacySlugs": [
       "echocardiography-laboratory-e-206",
       "echocardiography-laboratory"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Holter Monitoring",
@@ -3159,7 +3332,8 @@
     "legacySlugs": [
       "holter-monitoring-e-206",
       "holter-monitoring"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Cardiovascular Laboratory",
@@ -3176,7 +3350,8 @@
     "legacySlugs": [
       "cardiovascular-laboratory-d-226",
       "cardiovascular-laboratory"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Congestive Heart Failure Clinic",
@@ -3194,7 +3369,8 @@
     "legacySlugs": [
       "congestive-heart-failure-clinic-e-208",
       "congestive-heart-failure-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Electrocardiography Laboratory (ECG/EKG)",
@@ -3213,7 +3389,8 @@
     "legacySlugs": [
       "electrocardiography-laboratory-ecg-ekg-e-206",
       "electrocardiography-laboratory-ecg-ekg"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Stress Test Laboratory",
@@ -3231,7 +3408,8 @@
     "legacySlugs": [
       "stress-test-laboratory-e-206",
       "stress-test-laboratory"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Coronary Care Unit (CCU)",
@@ -3249,7 +3427,8 @@
     "legacySlugs": [
       "coronary-care-unit-ccu-b-268",
       "coronary-care-unit-ccu"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Coagulation / Anticoagulant Clinic",
@@ -3267,7 +3446,8 @@
     "legacySlugs": [
       "coagulation-anticoagulant-clinic-b-304",
       "coagulation-anticoagulant-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Family Planning",
@@ -3285,7 +3465,8 @@
     "legacySlugs": [
       "family-planning-a-619",
       "family-planning"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Kidney Treatment Centre",
@@ -3303,7 +3484,8 @@
     "legacySlugs": [
       "kidney-treatment-centre-d-070",
       "kidney-treatment-centre"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Pain Clinic",
@@ -3320,7 +3502,8 @@
     "legacySlugs": [
       "pain-clinic-a-420",
       "pain-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Parkinson Clinic",
@@ -3336,7 +3519,8 @@
     "legacySlugs": [
       "parkinson-clinic-e-005",
       "parkinson-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Registration",
@@ -3355,7 +3539,8 @@
     "legacySlugs": [
       "registration-e-0014",
       "registration"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Renal Clinic",
@@ -3373,7 +3558,8 @@
     "legacySlugs": [
       "renal-clinic-g-225",
       "renal-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Rhogam",
@@ -3389,7 +3575,8 @@
     "legacySlugs": [
       "rhogam-h-308",
       "rhogam"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Minor Surgery",
@@ -3406,7 +3593,8 @@
     "legacySlugs": [
       "minor-surgery-g-300",
       "minor-surgery"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Thrombosis Clinic",
@@ -3423,7 +3611,8 @@
     "legacySlugs": [
       "thrombosis-clinic-b-304",
       "thrombosis-clinic"
-    ]
+    ],
+    "floor": null
   },
   {
     "en": "Blood Oncology Clinic",
@@ -3441,6 +3630,7 @@
     "legacySlugs": [
       "blood-oncology-clinic-7th-floor",
       "blood-oncology-clinic"
-    ]
+    ],
+    "floor": "07"
   }
 ]

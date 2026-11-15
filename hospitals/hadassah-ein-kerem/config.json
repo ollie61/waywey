@@ -123,5 +123,17 @@
       "label": "Hadassah Ein Kerem",
       "url": "https://www.hadassah.org.il/en/hadassahuniversityhospitaleinkerem/"
     }
+  ],
+  "visitorLanguages": [
+    "he",
+    "en",
+    "ar",
+    "fr",
+    "es",
+    "pt",
+    "ru",
+    "vi",
+    "fa",
+    "bg"
   ]
 }
