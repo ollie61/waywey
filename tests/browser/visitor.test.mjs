@@ -32,8 +32,8 @@ before(async()=>{
 after(async()=>{await browser?.close();await new Promise(resolve=>server?.close(resolve));});
 async function ready(page){await page.locator('#station option[value="main"]').waitFor({state:'attached'});}
 function link(extra={}){return origin+'/?'+new URLSearchParams({hospital:'chum',visitor:'1',dest:destination.id,from:'main',lang:'en',...extra});}
-async function contextTest(run){
-  const context=await browser.newContext();
+async function contextTest(run,options={}){
+  const context=await browser.newContext(options);
   const page=await context.newPage();const errors=[];
   page.on('pageerror',e=>errors.push(e.message));
   try{await run(page,context);assert.deepEqual(errors,[]);}finally{await context.close();}
@@ -558,7 +558,7 @@ test('1.1.2 visitor defaults and available languages come from the selected hosp
  await page.goto(link({hospital:'jgh',dest:jgh.find(d=>d.loc==='B-114').id,lang:'he'}));
  await page.locator('#visitorDialog[open]').waitFor();
  assert.equal(await page.locator('#visitorLang').inputValue(),'fr');
-}));
+},{serviceWorkers:'block'}));
 test('1.1.2 remembered choices stay within their own hospital',async()=>contextTest(async page=>{
  await page.goto(origin+'/?hospital=jgh');await ready(page);
  await page.getByRole('button',{name:'EN',exact:true}).click();
