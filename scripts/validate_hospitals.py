@@ -66,6 +66,10 @@ def validate_cross_files(folder: Path, config, destinations, routes, guide, erro
         if node is not None and node not in known_nodes:
             errors.append(f"{rel}/config.json: alias {alias!r} references unknown routing node {node!r}")
 
+    for key, default in [("ambassadorLanguages", "defaultAppLanguage"), ("visitorLanguages", "defaultVisitorLanguage")]:
+        if config[default] not in config[key]:
+            errors.append(f"{rel}/config.json: {default} must be in {key}")
+
     entrance_ids = [entrance["id"] for entrance in config["entrances"]]
     if len(entrance_ids) != len(set(entrance_ids)):
         errors.append(f"{rel}/config.json: duplicate entrance ids")

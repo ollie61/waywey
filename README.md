@@ -1,3 +1,5 @@
+Current test release: **v1.1.2**. See [release notes](docs/MILESTONE-1.1.2.md).
+
 # WayWey
 
 **The Ambassador Magic**

@@ -15,7 +15,8 @@
     "ambassadorLanguages",
     "datasetStrength",
     "lastSourceAudit",
-    "sourceLinks"
+    "sourceLinks",
+    "visitorLanguages"
   ],
   "properties": {
     "id": {
@@ -158,6 +159,25 @@
         "additionalProperties": false
       },
       "minItems": 1
+    },
+    "visitorLanguages": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "en",
+          "fr",
+          "ar",
+          "he",
+          "es",
+          "pt",
+          "ru",
+          "vi",
+          "fa",
+          "bg"
+        ]
+      }
     }
   },
   "additionalProperties": false,

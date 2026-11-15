@@ -446,12 +446,12 @@ test('1.1 ambassador toggle works by keyboard and persists independently across 
   assert.equal(await page.locator('#appLang').isVisible(),false);
   assert.equal(await page.getByRole('button',{name:'FR',exact:true}).getAttribute('aria-pressed'),'true');
   await page.getByRole('button',{name:'EN',exact:true}).focus();await page.keyboard.press('Space');
-  assert.equal(await page.locator('#searchHeading').innerText(),'Where would you like to go?');
+  assert.equal(await page.locator('#searchHeading').innerText(),'Where to?');
   const other=await context.newPage();await other.goto(origin+'/');await ready(other);
   assert.equal(await other.getByRole('button',{name:'EN',exact:true}).getAttribute('aria-pressed'),'true');
   await other.close();
   await page.getByRole('button',{name:'FR',exact:true}).click();
-  assert.equal(await page.locator('#searchHeading').innerText(),'Où souhaitez-vous aller?');
+  assert.equal(await page.locator('#searchHeading').innerText(),'Où allez-vous?');
 }));
 
 test('1.1 starting point edits with native disclosure and survives reopening',async()=>contextTest(async page=>{
@@ -529,4 +529,45 @@ test('JGH composes destination elevator after transfer and preserves reverse ent
  await page.goto(link({hospital:'jgh',dest:entrance.id,from:'main',lang:'en'}));
  await page.locator('#visitorDialog[open]').waitFor();
  assert.match(await page.locator('#vSteps').innerText(),/Pavilion E.*\[01\].*\[S1\]/);
+}));
+
+test('1.1.2 short prompts, hospital language buttons and RTL work in Hebrew and Arabic',async()=>contextTest(async page=>{
+ await page.setViewportSize({width:320,height:820});
+ await page.goto(origin+'/?hospital=hadassah-ein-kerem');await ready(page);
+ assert.equal(await page.locator('#searchHeading').innerText(),'לאן?');
+ assert.deepEqual(await page.locator('[data-app-lang]').allTextContents(),['HE','EN','AR']);
+ assert.equal(await page.locator('html').getAttribute('dir'),'rtl');
+ await page.getByRole('button',{name:'AR',exact:true}).click();
+ assert.equal(await page.locator('#searchHeading').innerText(),'إلى أين؟');
+ assert.equal(await page.locator('html').getAttribute('dir'),'rtl');
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+ await page.getByRole('button',{name:'EN',exact:true}).click();
+ assert.equal(await page.locator('#searchHeading').innerText(),'Where to?');
+ assert.equal(await page.locator('html').getAttribute('dir'),'ltr');
+ assert.equal(await page.locator('#clear').count(),0);
+}));
+test('1.1.2 visitor defaults and available languages come from the selected hospital',async()=>contextTest(async page=>{
+ const config=JSON.parse(await fs.readFile(path.join(root,'hospitals/jgh/config.json')));
+ await page.route('**/hospitals/jgh/config.json',route=>route.fulfill({json:{...config,defaultAppLanguage:'en',defaultVisitorLanguage:'fr',visitorLanguages:['fr','en']}}));
+ await page.goto(origin+'/?hospital=jgh');await ready(page);
+ assert.equal(await page.locator('#appLang').inputValue(),'en');
+ assert.deepEqual(await page.locator('#visitorLang option').evaluateAll(nodes=>nodes.map(n=>n.value)),['fr','en']);
+ await page.fill('#q','Admissions');await page.locator('#results button').first().click();
+ await page.click('#showVisitor');
+ assert.equal(await page.locator('#visitorLang').inputValue(),'fr');
+ await page.goto(link({hospital:'jgh',dest:jgh.find(d=>d.loc==='B-114').id,lang:'he'}));
+ await page.locator('#visitorDialog[open]').waitFor();
+ assert.equal(await page.locator('#visitorLang').inputValue(),'fr');
+}));
+test('1.1.2 remembered choices stay within their own hospital',async()=>contextTest(async page=>{
+ await page.goto(origin+'/?hospital=jgh');await ready(page);
+ await page.getByRole('button',{name:'EN',exact:true}).click();
+ await page.fill('#q','Admissions');await page.locator('#results button').first().click();await page.click('#showVisitor');
+ await page.selectOption('#visitorLang','fa');
+ await page.goto(origin+'/?hospital=hadassah-ein-kerem');await ready(page);
+ assert.equal(await page.locator('#appLang').inputValue(),'he');
+ assert.equal(await page.locator('#visitorLang').inputValue(),'he');
+ await page.goto(origin+'/?hospital=jgh');await ready(page);
+ assert.equal(await page.locator('#appLang').inputValue(),'en');
+ assert.equal(await page.locator('#visitorLang').inputValue(),'fa');
 }));

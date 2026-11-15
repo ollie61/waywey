@@ -120,5 +120,17 @@
       "label": "Jewish General Hospital",
       "url": "https://www.jgh.ca/"
     }
+  ],
+  "visitorLanguages": [
+    "fr",
+    "en",
+    "ar",
+    "he",
+    "es",
+    "pt",
+    "ru",
+    "vi",
+    "fa",
+    "bg"
   ]
 }
