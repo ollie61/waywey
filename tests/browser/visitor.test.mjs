@@ -571,3 +571,18 @@ test('1.1.2 remembered choices stay within their own hospital',async()=>contextT
  assert.equal(await page.locator('#appLang').inputValue(),'en');
  assert.equal(await page.locator('#visitorLang').inputValue(),'fa');
 }));
+
+test('JGH 0## rooms use RC and 00## rooms use S1 in visitor instructions',async()=>contextTest(async page=>{
+ for(const [loc,floor] of [['E-005','RC'],['E-0012','S1']]){
+ const room=jgh.find(d=>d.loc===loc);
+ for(const [from,level] of [['main','01'],['e','S1']]){
+  await page.goto(link({hospital:'jgh',dest:room.id,from,lang:'en'}));
+  await page.locator('#visitorDialog[open]').waitFor();
+  const steps=await page.locator('#vSteps li').allTextContents();
+  if(from==='e'&&floor==='S1'){assert.equal(steps.length,1);assert.doesNotMatch(steps[0],/elevator/);}
+  else assert.match(steps.at(-2),new RegExp('Pavilion E.*\\['+level+'\\].*\\['+floor+'\\]'));
+  assert.ok(steps.at(-1).includes(loc));
+  if(from==='e'&&floor==='RC')assert.equal(steps.length,2);
+ }
+ }
+}));

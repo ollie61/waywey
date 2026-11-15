@@ -75,3 +75,31 @@ test('Pavilion A entrance is level 01 and needs no elevator before a level 01 tr
  const steps=plan('a','B','01');assert.equal(steps.length,1);assert.match(steps[0],/A → B/);assert.doesNotMatch(steps.join(' '),/elevator|\[S1\]/);
  assert.deepEqual(plan('a','A','01'),[]);
 });
+
+test('owner-confirmed JGH 0## rooms, including subrooms, are explicitly on RC',()=>{
+ const rooms=destinations.filter(d=>/^[A-Z]-0\d{2}(?:\.\d+)?(?: \(main floor\/RC\))?$/.test(d.loc));
+ assert.ok(rooms.length>=20);
+ for(const d of rooms)assert.equal(d.floor,'RC',d.loc);
+ assert.equal(destinations.find(d=>d.loc==='G-050 / E-104').floor,null);
+ assert.equal(destinations.find(d=>d.loc==='E-0014 (S1)').floor,'S1');
+ assert.equal(destinations.find(d=>d.loc==='D-0002 (S1)').floor,'S1');
+ assert.equal(destinations.find(d=>d.loc==='E-0012').floor,'S1');
+});
+test('RC room instructions include the actual required elevator transition in every route language',()=>{
+ const d=destinations.find(d=>d.en==='Neurology'&&d.loc==='E-005');assert.equal(d.floor,'RC');
+ for(const lang of languages){
+  const cross=plan('main','E',d.floor,lang);assert.match(cross.at(-1),/\[01\].*\[RC\]/,lang);
+  const same=plan('e','E',d.floor,lang);assert.equal(same.length,1,lang);assert.match(same[0],/\[S1\].*\[RC\]/,lang);assert.doesNotMatch(same[0],/\[01\]/,lang);
+ }
+ assert.deepEqual(plan('h','H','RC'),[]);
+});
+
+
+test('owner-confirmed 00## rooms are on S1, distinct from three-digit 0## rooms on RC',()=>{
+ const rooms=destinations.filter(d=>/^[A-Z]-00\d{2}(?:\.\d+)?(?: \(S1\))?$/.test(d.loc));assert.ok(rooms.length>=6);
+ for(const d of rooms)assert.equal(d.floor,'S1',d.loc);
+ for(const lang of languages){
+  const cross=plan('main','E','S1',lang);assert.match(cross.at(-1),/\[01\].*\[S1\]/,lang);
+  assert.deepEqual(plan('e','E','S1',lang),[],lang);
+ }
+});

@@ -429,7 +429,7 @@
       "arthritis-clinic-c-003-10",
       "arthritis-clinic"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Audiology",
@@ -484,7 +484,7 @@
       "auxiliary-office-a-018",
       "auxiliary-office"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Breast Centre",
@@ -826,7 +826,7 @@
       "dentistry-a-024",
       "dentistry"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Dermatology",
@@ -847,7 +847,7 @@
       "dermatology-g-026",
       "dermatology"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Dermatology Oncology",
@@ -885,7 +885,7 @@
       "diagnostic-and-therapeutic-clinic-g-050",
       "diagnostic-and-therapeutic-clinic"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Diagnostic Medicine and Core Lab",
@@ -923,7 +923,7 @@
       "dietetics-b-001-1",
       "dietetics"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Ear, Nose and Throat (ENT)",
@@ -1154,7 +1154,7 @@
       "geriatrics-e-0012",
       "geriatrics"
     ],
-    "floor": null
+    "floor": "S1"
   },
   {
     "en": "Goldman Herzl Family Practice Centre",
@@ -1251,7 +1251,7 @@
       "hemodialysis-d-001",
       "hemodialysis"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Hemodynamic Laboratory",
@@ -1363,7 +1363,7 @@
       "infection-prevention-and-control-g-070",
       "infection-prevention-and-control"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Institute of Community & Family Psychiatry (ICFP)",
@@ -1400,7 +1400,7 @@
       "internal-medicine-g-050",
       "internal-medicine"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Interventional Radiology",
@@ -1419,7 +1419,7 @@
       "interventional-radiology-g-018",
       "interventional-radiology"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Library, Health Sciences Library",
@@ -1667,7 +1667,7 @@
       "neurology-e-005",
       "neurology"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Neurophysiology",
@@ -1967,7 +1967,7 @@
       "ophthalmology-e-008",
       "ophthalmology"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "OROT",
@@ -2004,7 +2004,7 @@
       "orthopedics-e-003",
       "orthopedics"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Osteoporosis Clinic",
@@ -2134,7 +2134,7 @@
       "peritoneal-dialysis-d-070",
       "peritoneal-dialysis"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Pharmacy",
@@ -2153,7 +2153,7 @@
       "pharmacy-c-005",
       "pharmacy"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Physiotherapy",
@@ -2348,7 +2348,7 @@
       "radiation-oncology-clinic-g-002",
       "radiation-oncology-clinic"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Radiation Oncology (Treatments)",
@@ -2975,7 +2975,7 @@
       "child-psychiatry-m-011",
       "child-psychiatry"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Couple and Family Therapy Training Program",
@@ -3485,7 +3485,7 @@
       "kidney-treatment-centre-d-070",
       "kidney-treatment-centre"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Pain Clinic",
@@ -3520,7 +3520,7 @@
       "parkinson-clinic-e-005",
       "parkinson-clinic"
     ],
-    "floor": null
+    "floor": "RC"
   },
   {
     "en": "Registration",
@@ -3540,7 +3540,7 @@
       "registration-e-0014",
       "registration"
     ],
-    "floor": null
+    "floor": "S1"
   },
   {
     "en": "Renal Clinic",
