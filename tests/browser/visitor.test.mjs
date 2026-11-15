@@ -9,6 +9,7 @@ const root=path.resolve(import.meta.dirname,'../..');
 let server,browser,origin;
 const baseRevision=Number((await fs.readFile(path.join(root,'service-worker.js'),'utf8')).match(/waywey-cache-(\d+)/)[1]);
 let workerRevision=baseRevision;
+const jgh=JSON.parse(await fs.readFile(path.join(root,'hospitals/jgh/destinations.json')));
 const chum=JSON.parse(await fs.readFile(path.join(root,'hospitals/chum/destinations.json')));
 const destination=chum.find(d=>d.p==='D'&&d.status==='official');
 const mime={'.js':'text/javascript','.json':'application/json','.html':'text/html','.css':'text/css','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
@@ -482,4 +483,34 @@ test('1.1 visitor primary action, sources and RTL fit narrow and enlarged layout
     await page.click('#closeVisitor');
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   }
+}));
+
+test('JGH floor transitions reach visitors in all languages and fit mobile screens',async()=>contextTest(async page=>{
+ const admissions=jgh.find(d=>d.loc==='B-114');
+ for(const lang of ['en','fr','es','pt','he','ar','ru','vi','fa','sw','bg']){
+  await page.setViewportSize({width:390,height:844});
+  await page.goto(link({hospital:'jgh',dest:admissions.id,from:'e',lang}));
+  await page.locator('#visitorDialog[open]').waitFor();
+  const text=await page.locator('#vSteps').innerText();
+  assert.match(text,/\[S1\].*\[01\]/,lang);
+  assert.match(text,/E → D/,lang);assert.match(text,/D → B/,lang);
+  assert.ok(text.indexOf('[S1]')<text.indexOf('E → D'),lang);
+  assert.ok(await page.locator('#visitorDialog').evaluate(el=>el.scrollWidth<=el.clientWidth+1));
+  await page.click('#closeVisitor');
+ }
+}));
+test('JGH ambassador shares floor logic; same pavilion and unknown floors are safe',async()=>contextTest(async page=>{
+ await page.goto(origin+'/?hospital=jgh');await ready(page);
+ await page.getByRole('button',{name:'EN',exact:true}).click();
+ await page.locator('#stationDetails summary').click();await page.selectOption('#station','e');
+ await page.fill('#q','Admissions');await page.locator('#results button').first().click();
+ assert.match(await page.locator('#steps').innerText(),/Pavilion E.*\[S1\].*\[01\]/);
+ const emergency=jgh.find(d=>d.loc==='S2');
+ await page.goto(link({hospital:'jgh',dest:emergency.id,from:'emergency',lang:'en'}));
+ await page.locator('#visitorDialog[open]').waitFor();
+ assert.doesNotMatch(await page.locator('#vSteps').innerText(),/elevator|\[01\]/);
+ const unknown=jgh.find(d=>d.loc==='B-304');
+ await page.goto(link({hospital:'jgh',dest:unknown.id,from:'main',lang:'en'}));
+ await page.locator('#visitorDialog[open]').waitFor();
+ assert.match(await page.locator('#vSteps').innerText(),/Verification required/);
 }));

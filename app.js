@@ -1,6 +1,6 @@
 import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,LANGUAGE_NAMES,VISITOR_LINK_UI,routeNoticeText} from "./js/i18n.js";
 import {rankResults,inferQueryLanguage} from "./js/search.js";
-import {findRoute,resolveTargetNode,routeInstructions} from "./js/routing.js";
+import {findRoute,resolveTargetNode,routeInstructions,floorAwareSteps} from "./js/routing.js";
 import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion} from "./js/ui.js";
 import {hospitalIdFromUrl,fetchJson} from "./js/data.js";
 import {initPwa} from "./js/pwa.js";
@@ -216,6 +216,7 @@ async function loadHospital(){
  NOTE_TRANSLATIONS=routes.noteTranslations||{};
  QUICK_GUIDE=guide||{};
  HOSPITAL.specialRoutes=routes.specialRoutes||{};
+ HOSPITAL.floorRouting=routes.floorRouting;
  EDGE_INSTRUCTIONS=routes.edgeInstructions||{};
  STATION_DESTINATION_DIRECTIONS=routes.stationDestinationDirections||{};
  populateAppLanguages();
@@ -299,6 +300,14 @@ function ambassadorSteps(d){
    else out.push(routeNoticeText("unknownLocation",noticeLang));
    return out;
  }
+ if(HOSPITAL.floorRouting){
+   const entrance=HOSPITAL.entrances.find(e=>e.id===$("station").value);
+   const plan=floorAwareSteps({path:bfs(start,target),entrance,destination:d,policy:HOSPITAL.floorRouting,specialRoutes:HOSPITAL.specialRoutes,edgeInstructions:EDGE_INSTRUCTIONS,lang:appLang});
+   if(plan){
+     const verified=stationDestinationSteps(d,appLang);
+     return [...out,...plan,...(verified||[(I18N[appLang]||I18N.en).final+" "+(d.loc?locationFor(d,appLang):destinationName(d,appLang))+"."])];
+   }
+ }
  const verified=stationDestinationSteps(d,appLang);
  if(verified)return [...out,...verified];
  const path=bfs(start,target),special=specialRouteSteps(start,target,appLang);
@@ -323,6 +332,14 @@ function localizedSteps(d,lang){
    if(d.loc)out.push(routeNoticeText("outsideMapped",lang)+locationFor(d,lang)+".");
    else out.push(routeNoticeText("unknownLocation",lang));
    return out;
+ }
+ if(HOSPITAL.floorRouting){
+   const entrance=HOSPITAL.entrances.find(e=>e.id===$("station").value);
+   const plan=floorAwareSteps({path:bfs(start,target),entrance,destination:d,policy:HOSPITAL.floorRouting,specialRoutes:HOSPITAL.specialRoutes,edgeInstructions:EDGE_INSTRUCTIONS,lang:lang});
+   if(plan){
+     const verified=stationDestinationSteps(d,lang);
+     return [...out,...plan,...(verified||[(I18N[lang]||I18N.en).final+" "+(d.loc?locationFor(d,lang):destinationName(d,lang))+"."])];
+   }
  }
  const verified=stationDestinationSteps(d,lang);
  if(verified)return [...out,...verified];

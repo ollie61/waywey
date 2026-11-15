@@ -32,49 +32,55 @@
       "id": "main",
       "node": "B",
       "labels": {
-        "en": "Main Entrance — 3755 Côte-Sainte-Catherine",
-        "fr": "Entrée principale — 3755, chemin de la Côte-Sainte-Catherine"
-      }
+        "en": "Pavilion B [01] — 3755 Côte-Sainte-Catherine",
+        "fr": "Pavillon B [01] — 3755, chemin de la Côte-Sainte-Catherine"
+      },
+      "entranceLevel": "01"
     },
     {
       "id": "a",
       "node": "A",
       "labels": {
-        "en": "Pavilion A entrance — 5750 Côte-des-Neiges",
-        "fr": "Entrée du pavillon A — 5750, chemin de la Côte-des-Neiges"
-      }
+        "en": "Pavilion A [S1] — 5759 Côte-des-Neiges",
+        "fr": "Pavillon A [S1] — 5759, chemin de la Côte-des-Neiges"
+      },
+      "entranceLevel": "S1"
     },
     {
       "id": "e",
       "node": "E",
       "labels": {
-        "en": "Pavilion E / Légaré entrance — 5757 Légaré",
-        "fr": "Entrée du pavillon E / Légaré — 5757, rue Légaré"
-      }
+        "en": "Pavilion E [S1] — 5757 Légaré",
+        "fr": "Pavillon E [S1] — 5757, rue Légaré"
+      },
+      "entranceLevel": "S1"
     },
     {
       "id": "h",
       "node": "H",
       "labels": {
-        "en": "Pavilion H entrance — 5790 Côte-des-Neiges",
-        "fr": "Entrée du pavillon H — 5790, chemin de la Côte-des-Neiges"
-      }
+        "en": "Pavilion H [RC] — 5790 Côte-des-Neiges",
+        "fr": "Pavillon H [RC] — 5790, chemin de la Côte-des-Neiges"
+      },
+      "entranceLevel": "RC"
     },
     {
       "id": "k",
       "node": "K",
       "labels": {
-        "en": "Pavilion K entrance — 5767 Légaré",
-        "fr": "Entrée du pavillon K — 5767, rue Légaré"
-      }
+        "en": "Pavilion K [S1] — 5767 Légaré",
+        "fr": "Pavillon K [S1] — 5767, rue Légaré"
+      },
+      "entranceLevel": "S1"
     },
     {
       "id": "emergency",
       "node": "K",
       "labels": {
-        "en": "Emergency entrance — 5777 Légaré",
-        "fr": "Entrée de l’Urgence — 5777, rue Légaré"
-      }
+        "en": "Emergency [S2] — 5777 Légaré",
+        "fr": "Urgence [S2] — 5777, rue Légaré"
+      },
+      "entranceLevel": "S2"
     }
   ],
   "nodeAliases": {

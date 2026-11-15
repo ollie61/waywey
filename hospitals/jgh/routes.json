@@ -201,5 +201,19 @@
         "بخش پذیرش و حساب‌های بیماران، اتاق B-114، در سمت چپ شما خواهد بود."
       ]
     }
+  },
+  "floorRouting": {
+    "transferLevel": "01",
+    "source": "Owner-confirmed JGH transfer rule, 2026-11-15. H–K levels retained from existing specialRoutes; K lobby numbered level is unverified.",
+    "exceptions": {
+      "H>K": {
+        "departureLevel": "03",
+        "arrivalLevel": null
+      },
+      "K>H": {
+        "departureLevel": null,
+        "arrivalLevel": "03"
+      }
+    }
   }
 }

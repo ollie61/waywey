@@ -106,6 +106,19 @@ def validate_cross_files(folder: Path, config, destinations, routes, guide, erro
         if len(parts) != 2 or parts[1] not in graph.get(parts[0], []):
             errors.append(f"{rel}/routes.json: instructions for unvalidated edge {edge!r}")
 
+    policy = routes.get("floorRouting")
+    if policy:
+        for entrance in config["entrances"]:
+            if not entrance.get("entranceLevel"):
+                errors.append(f"{rel}/config.json: missing entranceLevel for {entrance['id']!r}")
+        for destination in destinations:
+            if "floor" not in destination:
+                errors.append(f"{rel}/destinations.json: missing explicit floor or null for {destination['id']!r}")
+        for edge in policy["exceptions"]:
+            a, sep, b = edge.partition(">")
+            if not sep or b not in graph.get(a, []) or edge not in routes.get("specialRoutes", {}):
+                errors.append(f"{rel}/routes.json: floor exception lacks validated special edge {edge!r}")
+
     # Explicit station-to-destination directions must reference real starting
     # stations and canonical destination IDs; unknown records are unsafe.
     entrance_ids = {e["id"] for e in config["entrances"]}
