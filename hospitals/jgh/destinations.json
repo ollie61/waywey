@@ -1154,7 +1154,7 @@
       "geriatrics-e-0012",
       "geriatrics"
     ],
-    "floor": null
+    "floor": "S1"
   },
   {
     "en": "Goldman Herzl Family Practice Centre",
@@ -3540,7 +3540,7 @@
       "registration-e-0014",
       "registration"
     ],
-    "floor": null
+    "floor": "S1"
   },
   {
     "en": "Renal Clinic",
