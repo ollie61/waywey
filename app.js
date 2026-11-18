@@ -1,4 +1,4 @@
-import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,LANGUAGE_NAMES,VISITOR_LINK_UI,routeNoticeText} from "./js/i18n.js";
+import {I18N,QR_UI,APP_UI,PWA_UI,PROVENANCE_UI,ACCESSIBILITY_UI,OUTDOOR_UI,LANGUAGE_NAMES,VISITOR_LINK_UI,PLAYBACK_UI,routeNoticeText} from "./js/i18n.js";
 import {rankResults,inferQueryLanguage} from "./js/search.js";
 import {findRoute,resolveTargetNode,routeInstructions,floorAwareSteps,requiresFloorAccessVerification} from "./js/routing.js";
 import {destinationName,destinationSecondary as getDestinationSecondary,appIsRtl,locationFor,formatPavilion,formatFloorLabels} from "./js/ui.js";
@@ -9,7 +9,6 @@ import {setupDialog,openDialog,closeDialog,announce} from "./js/accessibility.js
 import {outdoorMapUrl} from "./js/outdoor-map.js";
 import {visitorDestinationKey,resolveVisitorDestination} from "./js/visitor-links.js";
 import {createVoicePlayback} from "./js/voice-playback.js";
-import {PLAYBACK_UI} from "./js/i18n.js";
 
 const APP_VERSION="1.1.2";
 let HOSPITAL={};
